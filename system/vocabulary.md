@@ -19,6 +19,15 @@ updated: 2026-07-01
 | triaxial-deformation | 三轴形变 | triaxial deformation; gamma deformation; γ deformation | γ 值约定需注明 |
 | gamma-soft-deformation | γ 软形变 | gamma-soft deformation; γ-softness; gamma softness | 不等同于一般三轴形变 |
 | gamma-rigid-deformation | γ 刚性形变 | gamma-rigid deformation; rigid triaxial deformation | 不与 γ-soft 自动合并 |
+| signature-partner-bands | 旋称伙伴带 | signature partner bands; favored/unfavored signature | 不等同于 wobbling bands |
+| transverse-wobbling | 横向摇摆 | transverse wobbling; TW | 按进动锥拓扑分类 |
+| longitudinal-wobbling | 纵向摇摆 | longitudinal wobbling; LW | 不能只凭 Ewob 上升命名 |
+| flip-mode | 翻转模 | flip mode; FM | TW/LW 之间的 separatrix 区域 |
+| gamma-band-energy-staggering | γ 带能量 staggering | γ-band staggering; S(J,J-1,J-2) | 与奇 A signature splitting 区分 |
+| signature-splitting | 旋称劈裂 | signature splitting; S(I) | 原文公式和单位必须随来源记录 |
+| tilted-axis-cranking | 倾斜轴推转 | tilted-axis cranking; TAC | γ 数值必须注明轴约定 |
+| triaxial-particle-rotor-model | 三轴粒子-转子模型 | TPRM; QTR; PTR | 模型 γ 输入不是直接测量 |
+| triaxial-projected-shell-model | 三轴投影壳模型 | TPSM | 与 TPRM 分开 |
 
 ## 禁止自动合并
 
@@ -26,6 +35,8 @@ updated: 2026-07-01
 - `gamma-soft-deformation` 与 `gamma-rigid-deformation`
 - 实验“近简并双重带”与理论“手征双重带”
 - 某条带的观测标签与其组态或物理解读
+- γ 带 staggering 与奇 A signature splitting
+- wobbling energy 的趋势与 TW/LW 的完整拓扑定义
 
 ## 待补充
 
@@ -33,4 +44,3 @@ updated: 2026-07-01
 - 理论模型及缩写；
 - 实验判据、探测器阵列和分析方法；
 - A≈130 区重点核素及带命名规则。
-

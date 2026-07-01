@@ -1,0 +1,98 @@
+---
+type: source
+title: "Signatures of gamma softness or triaxiality in low energy nuclear spectra"
+aliases: []
+created: 2026-07-01
+updated: 2026-07-01
+status: active
+review_status: unreviewed
+source_type: journal-article-phenomenology
+reading_depth: deep-read
+title_original: "Signatures of γ softness or triaxiality in low energy nuclear spectra"
+authors: [N. V. Zamfir, R. F. Casten]
+journal: Physics Letters B
+year: 1991
+volume: 260
+pages: 265-270
+doi: 10.1016/0370-2693(91)91610-8
+arxiv:
+language: en
+canonical_source: doi:10.1016/0370-2693(91)91610-8
+zotero_item_key:
+citation_key:
+zotero_uri:
+library_file:
+raw_file: "raw/papers/1991_Zamfir_Casten_Signatures of γ softness or triaxiality in low energy nuclear spectra.pdf"
+raw_sha256: FAA1B32DFA651FC613A9C4BAC87C2C4B569D1BD725939580EA5EE3744D8C963A
+nuclei: []
+reactions: []
+experiments: []
+models: [gamma-unstable-model, davydov-triaxial-rotor-model, interacting-boson-model]
+observables: [gamma-band-energy-staggering]
+methods: []
+tags: [gamma-softness, gamma-rigidity, triaxiality, low-spin]
+---
+
+# Zamfir 与 Casten（1991）：γ 软与刚性三轴的低能谱判据
+
+## Bibliographic Record
+
+Physics Letters B 260 (1991) 265-270。PDF 正文完整，共 6 页。
+
+## Scope and Reading Depth
+
+全文精读，重点核对 γ 带能量 staggering 的定义、极限模型比较、Fig. 2-4 和结论。PDF 文本提取会把 γ 识别成数字 7，公式和图已回看原页。
+
+## Summary
+
+论文比较 γ-unstable（Wilets-Jean/O(6) 极限）与固定 γ 的 Davydov 刚性三轴转子。两者的大多数低能观测量可能相近，但 γ 带的能级成对方式与能量 staggering 相位相反。作者扫描 48 种低自旋能量组合，指出两类量具有较好的判别力，其中 `S(4,3,2)` 与 `S(6,5,4)` 最实用。对偶偶核数据的系统比较显示，具有较大平均不对称度的 Xe、Ba、Pt 更接近 γ 软势；只需在 γ 平坦势上加入百分之几的弱 γ 依赖，就可显著改变 staggering。
+
+## Experimental or Theoretical Setup
+
+- 使用 Wilets-Jean γ-unstable 几何模型和 Davydov 刚性三轴转子作为两个极限；
+- 使用含三阶项的 IBM 哈密顿量，在 O(6) 基础上连续引入 γ 依赖；
+- 比较 Z≥30 偶偶核的经验低能 γ 带能级；
+- 本文不是新的 γ 谱实验。
+
+## Key Results
+
+| ID | 陈述 | claim_kind | evidence_level | locator | needs_review |
+|---|---|---|---|---|---|
+| ZC91-1 | γ-unstable 极限的 γ 带形成 `(2+), (3+,4+), (5+,6+)...`；γ=30° Davydov 极限形成 `(2+,3+), (4+,5+), (6+,7+)...`，staggering 相位相反。 | model-result | direct | PDF pp.1-2, Fig.1 | false |
+| ZC91-2 | `S(J,J-1,J-2)={[E(J)-E(J-1)]-[E(J-1)-E(J-2)]}/E(2_1+)`；对 `S(4,3,2)`，γ-unstable 极限为 -2，γ=30° Davydov 极限为 +1.67。 | model-result | direct | PDF p.3, Eq.(2) 后 | false |
+| ZC91-3 | 扫描的量中只有两类能量组合能较好区分 γ-soft 与 γ-rigid；最佳实例是 `S(4,3,2)` 和 `S(6,5,4)`。 | author-interpretation | direct | PDF p.4, Eq.(5a,b), Fig.2 | false |
+| ZC91-4 | 中间的经验 S 值不表示势能面同样“中间”；非常弱的 γ 依赖即可使 S 快速变化。 | author-interpretation | direct | PDF p.4, Fig.2 讨论 | false |
+| ZC91-5 | 作者对当时数据的结论是：具有显著不对称度的低能偶偶核表现为 γ soft，未显示 γ rigidity；Xe、Ba、Pt 所需势能偏离 γ independence 只有百分之几。 | author-interpretation | indirect | PDF pp.4-5, Figs.3-4, conclusion | true |
+
+## Nuclear Structure Information
+
+该工作针对偶偶核低自旋集体谱，不针对单一核素。特别讨论 Xe、Ba、Pt 链作为平均 γ 较大的案例。
+
+## Authors' Interpretation
+
+γ 带 staggering 是区分 γ 软势与刚性三轴势的有效低能谱学信号，但判据必须在明确的模型与能级定义下使用。
+
+## Model Results
+
+- γ-unstable/Wilets-Jean 与 O(6) 极限给出 odd-even couplets；
+- Davydov 刚性 γ=30° 转子给出相反的 couplet 顺序；
+- IBM 三阶项说明 staggering 对很弱的 γ 势依赖高度敏感。
+
+## Competing Interpretations and Limitations
+
+- 论文讨论的是低自旋偶偶核；不能不加说明地外推到奇 A 高自旋带；
+- 单个 staggering 指标受带混合、能级指认和模型约定影响；
+- 1991 年数据集不是当前完整数据库，ZC91-5 需要结合后续实验与微观模型复核；
+- “γ soft”与“存在非零平均 γ”并不矛盾。
+
+## Extracted Pages
+
+- Concepts: [[gamma-soft-deformation]], [[gamma-rigid-deformation]], [[triaxial-deformation]]
+- Models: [[gamma-unstable-model]], [[davydov-triaxial-rotor-model]], [[interacting-boson-model]]
+- Observables: [[gamma-band-energy-staggering]]
+- Synthesis: [[gamma-soft-vs-gamma-rigid-diagnostics]]
+
+## Personal Notes
+
+这是建立判据页的核心来源，不应把它简化成“负 S=soft、正 S=rigid”的无条件规则。真正重要的是 staggering 相位、归一化定义以及对弱 γ 依赖的敏感性。
+
