@@ -1,0 +1,28 @@
+# Large and reproducible source artifacts
+*.pdf
+*.zip
+*.7z
+*.root
+*.spe
+*.mat
+*.npy
+
+# Raw data and private working material
+raw/data/*
+!raw/data/.gitkeep
+raw/figures/*
+!raw/figures/.gitkeep
+raw/personal/*
+!raw/personal/.gitkeep
+
+# Temporary and generated caches
+tmp/
+__pycache__/
+*.pyc
+.trash/
+
+# Obsidian machine-local state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
