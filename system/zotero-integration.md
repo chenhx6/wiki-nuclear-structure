@@ -26,6 +26,13 @@ updated: 2026-07-01
 
 `raw/zotero/` 仍由用户和 Zotero/Better BibTeX 管理，Agent 只读。
 
+## 当前状态
+
+- `Wiki Inbox` 已建立；
+- Better BibTeX 自动导出路径为 `raw/zotero/wiki-inbox.bib`；
+- 2026-07-01 导出中只有 `ayangeakaa_2016_Inbeamspectroscopy`；
+- 来源不在导出中时，可以从 PDF 摄入，但 `citation_key`、`zotero_item_key` 和 `zotero_uri` 保持空值，等待后续回填。
+
 ## 来源页映射
 
 | Zotero/Better BibTeX | Source frontmatter |
@@ -39,4 +46,3 @@ updated: 2026-07-01
 ## 标注
 
 第一版不自动同步 1260 条历史标注。后续先选一篇论文试验“Zotero 标注 → Markdown 摘录 → source 页定位”，验证不会丢页码、颜色语义和批注作者后再扩大。
-

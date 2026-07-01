@@ -29,15 +29,18 @@ tags: [deformation, collective-motion]
 
 ## Supporting Evidence
 
-[[chakraborty-2023-131xe-wobbling-origin]] 用较大 signature splitting 和 TPRM 拟合支持 `131Xe` 三轴形变，但同时没有观察到 wobbling。
+[[chakraborty-2023-131xe-wobbling-origin]] 用较大 signature splitting 和 TPRM 拟合支持 `131Xe` 三轴形变，但同时没有观察到 wobbling。[[ayangeakaa-2016-133ce-in-beam]] 的多组态 CNS/TAC-CDFT 与 [[petrache-2020-137nd-multiple-chiral-bands]] 的 CDFT/PRM 也给出中高自旋三轴解。
 
 ## Counter-evidence and Competing Interpretations
 
-带混合、γ-softness 和模型参数相关性可能模拟部分三轴信号。
+带混合、γ-softness 和模型参数相关性可能模拟部分三轴信号。[[ding-2021-131ba-133ce-signature-splitting]] 进一步表明，signature splitting 还可由近邻低-j 轨道的 Coriolis mixing 显著贡献，不能把 S(I) 当作 γ 的单值测量。
 
 ## Related Nuclei and Bands
 
 - [[131xe]]
+- [[131ba]]
+- [[133ce]]
+- [[137nd]]
 - A≈130 Xe-Ba-Ce-Nd 区域
 
 ## Our Current Position
@@ -50,8 +53,10 @@ tags: [deformation, collective-motion]
 - [[frauendorf-meng-1997-tilted-rotation-chirality]]
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
+- [[ayangeakaa-2016-133ce-in-beam]]
+- [[petrache-2020-137nd-multiple-chiral-bands]]
+- [[ding-2021-131ba-133ce-signature-splitting]]
 
 ## Evolution Log
 
-- 2026-07-01（4 sources）：建立形状、动力学模式和刚性之间的层级区分。
-
+- 2026-07-01（7 sources）：加入 Ce-Nd 多组态与 signature-splitting 的模型非唯一性。

@@ -5,7 +5,7 @@ aliases: [131Xe 13/2- 835 keV sequence, 131Xe unresolved negative-parity sequenc
 created: 2026-07-01
 updated: 2026-07-01
 status: active
-review_status: needs-human-review
+review_status: human-reviewed
 nucleus: 131xe
 band_label: yrast-13-2-negative-parity-sequence
 parity: negative
@@ -58,4 +58,4 @@ yrast 17/2- 的实验 `B(M1)/B(E2)=2.54(4)` 约为 TPRM 预测的两倍。
 ## Evolution Log
 
 - 2026-07-01（1 source）：建立开放问题页，避免被误并入 unfavoured partner。
-
+- 2026-07-01（human review）：用户完成轻度科学校准，认可保持“起源未解决”的表述。

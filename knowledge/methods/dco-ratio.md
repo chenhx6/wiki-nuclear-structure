@@ -36,6 +36,8 @@ tags: [multipolarity, gamma-spectroscopy]
 
 R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何有效。
 
+不要把 DCO 与 [[two-point-angular-correlation-ratio]] 混写：后者可设计为对 gating transition 多极性不敏感，但其经验标定仍依赖具体阵列。
+
 ## Examples
 
 [[chakraborty-2023-131xe-wobbling-origin]] 使用 40°、90°、125° INGA 数据约束 671、882、1055 keV 等跃迁。
@@ -47,4 +49,3 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 实验建立。
-

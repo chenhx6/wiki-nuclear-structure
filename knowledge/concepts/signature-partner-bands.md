@@ -29,7 +29,7 @@ tags: [signature, rotational-band, odd-a]
 
 ## Supporting Evidence
 
-`131Xe` 的 yrare 序列由低 mixing ratio、能量/Routhian 系统性和 TPRM 比较支持为 unfavoured νh11/2 signature partner。
+`131Xe` 的 yrare 序列由低 mixing ratio、能量/Routhian 系统性和 TPRM 比较支持为 unfavoured νh11/2 signature partner。[[131ba-band-2]] 与 [[133ce-band-2]] 展示高 Ω `νg7/2[404]7/2+` 强耦合带中两支 signature 序列及明显劈裂。
 
 ## Counter-evidence and Competing Interpretations
 
@@ -39,6 +39,8 @@ tags: [signature, rotational-band, odd-a]
 
 - [[131xe-nu-h11-2-favored-sequence]]
 - [[131xe-negative-parity-yrare-sequence]]
+- [[131ba-band-2]]
+- [[133ce-band-2]]
 
 ## Our Current Position
 
@@ -48,8 +50,8 @@ tags: [signature, rotational-band, odd-a]
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
+- [[ding-2021-131ba-133ce-signature-splitting]]
 
 ## Evolution Log
 
-- 2026-07-01（2 sources）：建立与 wobbling 的判别边界。
-
+- 2026-07-01（3 sources）：加入 N=75 g7/2 强耦合带和多机制 splitting 案例。

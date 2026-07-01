@@ -28,6 +28,11 @@ updated: 2026-07-01
 | tilted-axis-cranking | 倾斜轴推转 | tilted-axis cranking; TAC | γ 数值必须注明轴约定 |
 | triaxial-particle-rotor-model | 三轴粒子-转子模型 | TPRM; QTR; PTR | 模型 γ 输入不是直接测量 |
 | triaxial-projected-shell-model | 三轴投影壳模型 | TPSM | 与 TPRM 分开 |
+| cranked-nilsson-strutinsky-model | 推转 Nilsson-Strutinsky 模型 | CNS; cranked Nilsson-Strutinsky | 当前应用主要面向忽略配对的中高自旋 |
+| cranked-shell-model | 推转壳模型 | CSM; cranked shell model | 与 CNS 不自动视为同一实现 |
+| covariant-density-functional-theory | 协变密度泛函理论 | CDFT; constrained CDFT; TAC-CDFT | 记录泛函、pairing 与约束 |
+| two-point-angular-correlation-ratio | 两点角关联比 | Rac; R_ac; two-point angular-correlation ratio | 与依赖 gate 多极性的 DCO 分开 |
+| multiple-chiral-doublets | 多重手征双重带 | multiple chiral doublets; MχD | 多对候选带不等于独立证据重复 |
 
 ## 禁止自动合并
 
@@ -37,6 +42,8 @@ updated: 2026-07-01
 - 某条带的观测标签与其组态或物理解读
 - γ 带 staggering 与奇 A signature splitting
 - wobbling energy 的趋势与 TW/LW 的完整拓扑定义
+- DCO ratio 与两点角关联比 `R_ac`
+- CSM、CNS 与 TAC-CDFT 的具体计算实现
 
 ## 待补充
 

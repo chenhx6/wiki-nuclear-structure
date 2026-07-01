@@ -32,7 +32,9 @@ tags: [triaxiality, odd-a, wobbling]
 
 ## Inputs and Parameters
 
-[[chakraborty-2023-131xe-wobbling-origin]] 最终采用 `ε2=0.13, γ=33°, ξ=1` 描述 `131Xe`。
+- [[chakraborty-2023-131xe-wobbling-origin]] 最终采用 `ε2=0.13, γ=33°, ξ=1` 描述 `131Xe`；
+- [[petrache-2020-137nd-multiple-chiral-bands]] 为 `137Nd` D2/D3 与 D5/D6 分别采用约 `(β,γ)=(0.20,20.9°)`、`(0.21,23.5°)`；
+- [[ding-2021-131ba-133ce-signature-splitting]] 用 γ=15° 和 10° 分别描述 `131Ba`、`133Ce` 的 S(I)，并扫描 Coriolis attenuation。
 
 ## Predicted Observables
 
@@ -46,6 +48,8 @@ tags: [triaxiality, odd-a, wobbling]
 
 拟合 γ 不是直接测量；转动惯量和 Coriolis attenuation 可引入模型依赖。
 
+QTR 中近邻轨道混合会与 γ 同时改变 S(I)，因此单个最佳 γ 往往不是唯一反演。
+
 ## Related Models
 
 [[particle-rotor-model]]、[[triaxial-projected-shell-model]]
@@ -54,8 +58,10 @@ tags: [triaxiality, odd-a, wobbling]
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
+- [[petrache-2020-137nd-multiple-chiral-bands]]
+- [[ding-2021-131ba-133ce-signature-splitting]]
 
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 试摄入建立。
-
+- 2026-07-01：加入 `137Nd` 手征几何与 N=75 signature-splitting 的参数敏感性。

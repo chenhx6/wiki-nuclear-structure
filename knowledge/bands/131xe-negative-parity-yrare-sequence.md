@@ -5,7 +5,7 @@ aliases: [131Xe unfavoured signature candidate, 131Xe 9/2- 341 keV sequence]
 created: 2026-07-01
 updated: 2026-07-01
 status: active
-review_status: needs-human-review
+review_status: human-reviewed
 nucleus: 131xe
 band_label: negative-parity-yrare-sequence
 parity: negative
@@ -60,4 +60,4 @@ tags: [signature-partner, negative-parity, yrare]
 ## Evolution Log
 
 - 2026-07-01（1 source）：建立为“proposed unfavoured partner”，保留人工复核门。
-
+- 2026-07-01（human review）：用户完成轻度科学校准，整体评价良好；关键 mixing ratio 与 B(M1)/B(E2) 仍保留来源级复核标记。

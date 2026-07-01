@@ -34,6 +34,8 @@ tags: [high-spin, triaxiality, chirality]
 
 单粒子场、形变、配对和转动频率。
 
+[[ayangeakaa-2016-133ce-in-beam]] 对 `133Ce` D3 使用 PC-PK1 TAC-CDFT，并在该计算中忽略 pairing。
+
 ## Predicted Observables
 
 带能量、角动量取向、带内跃迁及 planar/aplanar 几何。
@@ -46,6 +48,8 @@ tags: [high-spin, triaxiality, chirality]
 
 [[frauendorf-meng-1997-tilted-rotation-chirality]] 指出 TAC 不能计算带间跃迁，也不恢复左右手态之间的隧穿。
 
+`133Ce` D3 的 TAC-CDFT 只在中等自旋收敛，且作者没有对全部偶极带实施同等计算。
+
 ## Related Models
 
 [[particle-rotor-model]]
@@ -53,8 +57,9 @@ tags: [high-spin, triaxiality, chirality]
 ## Sources
 
 - [[frauendorf-meng-1997-tilted-rotation-chirality]]
+- [[ayangeakaa-2016-133ce-in-beam]]
 
 ## Evolution Log
 
 - 2026-07-01：建立 planar/aplanar 与手征用途。
-
+- 2026-07-01：加入 TAC-CDFT 的 `133Ce` 实例和收敛边界。
