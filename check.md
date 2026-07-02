@@ -32,7 +32,8 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ## A. 会话记忆与治理
 
-- [ ] 已按 `AGENTS.md` 的顺序读取启动文件。
+- [ ] 已按 `AGENTS.md` 的顺序读取 `README.md`、`PLAN.md`、`system/handoff.md` 及其余启动文件。
+- [ ] `PLAN.md` 未在缺少用户明确要求时被覆盖、重写、删除或重排。
 - [ ] `system/handoff.md` 包含当前状态、未完成事项和明确下一步。
 - [ ] `system/memory.md` 只保存稳定规则与用户确认过的偏好，不保存临时聊天摘要。
 - [ ] 已判断本次是否需要更新 `USER_GUIDE.md`；需要时已经同步。

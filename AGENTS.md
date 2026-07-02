@@ -4,14 +4,23 @@
 
 ## 每次会话的启动顺序
 
-开始任何知识库任务前，依次读取：
+本文件作为行为契约加载后，开始任何知识库任务前依次读取：
 
-1. `AGENTS.md`
-2. `profile.md`
-3. `system/handoff.md`
-4. `system/memory.md`
-5. `knowledge/index.md`
-6. `system/log.md` 最近 10 条记录
+1. `README.md`：了解 Wiki 的稳定入口和研究范围；
+2. `PLAN.md`：了解用户当前阶段计划；
+3. `system/handoff.md`：了解最近一次 Agent 执行交接；
+4. `profile.md`；
+5. `system/memory.md`；
+6. `knowledge/index.md`；
+7. `system/log.md` 最近 10 条记录。
+
+若文件之间存在冲突：
+
+1. 用户当前明确指令优先；
+2. `PLAN.md` 优先于旧的 `system/handoff.md`；
+3. 仍不确定时停止并询问用户，不得猜测。
+
+`PLAN.md` 由用户拥有和维护。未经用户明确要求，Agent 不得覆盖、重写、删除或重排其内容。
 
 若 Git 可用，在开始修改前检查工作树状态，识别并保护用户已有修改。不得假定未提交内容属于 Agent。
 
