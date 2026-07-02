@@ -23,6 +23,7 @@
 | 需要了解的内容 | 入口 |
 | --- | --- |
 | Wiki、Obsidian 和日常使用方法 | [USER_GUIDE.md](USER_GUIDE.md) |
+| 详细使用说明、术语和示例提示词 | [USER_GUIDE_DETAIL.md](USER_GUIDE_DETAIL.md) |
 | 已有核素、能带和主题 | [knowledge/index.md](knowledge/index.md) |
 | 知识库规模和健康状态 | [knowledge/overview.md](knowledge/overview.md) |
 | 尚未解决的科研问题 | [knowledge/questions.md](knowledge/questions.md) |

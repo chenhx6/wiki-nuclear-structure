@@ -4,6 +4,8 @@
 
 当前系统是证据型研究 Wiki 原型，主要服务于知识问答、证据追踪、研究辅助和创新点梳理。它是证据导航系统，不是最终权威；不保证文献完整覆盖，也不能替代原文阅读和人工科学判断。
 
+本文件是快速使用指南。需要了解目录层级、证据术语、人工审阅、project、写作准备和可复制提示词时，请查看 [USER_GUIDE_DETAIL.md](USER_GUIDE_DETAIL.md)。
+
 ## 1. 目录怎么理解
 
 ```text
@@ -188,6 +190,8 @@ source 页 → nucleus/band/concept/model/observable 页
 ```
 
 论文级文字必须先通过 [system/paper-evidence-gate.md](system/paper-evidence-gate.md)。当前阶段不创建写作 Skill；只预留接口，等 source/synthesis 层、citation key、证据门和至少一个真实 project 闭环稳定后再处理。
+
+Project 可以随具体研究问题、阶段性数据处理结果、证据比较任务或写作目标进入工作流，不必等待固定时间点或全部数据处理完成。
 
 现阶段 Skill 只承担证据型知识问答入口。ingest、reflect、lint 等流程继续使用现有 workflow，等真实使用稳定后再决定是否封装；未来写作 Skill 不在当前阶段创建。
 
