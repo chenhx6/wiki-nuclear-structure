@@ -25,6 +25,7 @@ updated: 2026-07-02
 - 页面级 `human-reviewed` 与 claim-level `needs_review` 相互独立。用户看过页面不等于所有待审 claim 自动清零；Codex 只有在用户明确确认具体 claim 或 claim 组后才能改变其待审状态。
 - 日常建设坚持一次摄入一篇论文，并在每次摄入后列出新增 claim、待审 claim、竞争解释和证据缺口。
 - 现阶段 Skill 只保留证据型知识问答入口；ingest/reflect/lint 等流程稳定后再考虑封装，写作 Skill 等数据处理与证据层成熟后再创建。
+- 本仓库采用 bounded initiative：允许与当前任务直接相关的必要最小同步，禁止非必要顺手优化；PowerShell 的 `PATH` 找不到 Git 时，必须先定位 Git 可执行文件并完成同等检查。
 
 ## 用户纠正记录
 

@@ -30,6 +30,67 @@
 
 聊天记录不是长期记忆。未写入仓库的信息，不得假定下一次会话仍然可用。
 
+## Bounded initiative / 有限主动性
+
+以下四条协作原则继续有效，不得放宽为自由发挥：
+
+1. 不确定就问，别猜；
+2. 没要求的不写；
+3. 只改被要求的部分；
+4. 给验收标准，别给步骤。
+
+Codex 可以执行与当前任务直接相关、低风险、可解释、可回滚的最小必要同步，包括：
+
+- 对 index、overview、handoff、log 做必要的最小更新；
+- 更新与本次变更直接相关的 lint/test 期望值；
+- 补充与本次新增 source、concept、observable 或 project 直接相关的 aliases、反链或入口链接；
+- 按已有 schema 补齐能够明确确定的 `citation_key`、`raw_file`、`locator`、`claim_kind` 等字段。
+
+额外修改只有在同时满足以下条件时才可直接执行：
+
+- 直接服务于本轮任务；
+- 修改范围小；
+- 不改变项目治理规则；
+- 不改变科学结论；
+- 不新增 Skill、automation、脚本或调度器；
+- 能在最终复盘中清楚解释必要性；
+- 能在 diff 中单独审查。
+
+某项修改有帮助但并非必要时，只写入最终建议，不在本轮执行。以下修改必须先询问用户或另开任务：
+
+- 修改 schema、evidence-policy 或 workflow 的核心规则；
+- 新增或重写 `system/vocabulary.md` 等治理文件；
+- 批量整理术语或批量重命名页面；
+- 批量修改 `review_status` 或 `needs_review`；
+- 新增 Skill、automation、脚本或调度器；
+- 大规模扩写科学内容；
+- 修改 `PLAN.md`；
+- 修改 `raw/`、论文、数据或图片。
+
+若无法判断某项修改属于必要同步还是顺手优化，停止并询问用户，不得猜测。
+
+## Windows PowerShell Git PATH fallback
+
+Git 边界检查不能因为 PowerShell 的 `PATH` 暂时找不到 `git` 而跳过。普通 `git` 不可用时，依次尝试：
+
+```powershell
+Get-Command git
+where.exe git
+Test-Path 'C:\Program Files\Git\cmd\git.exe'
+Test-Path 'C:\Program Files\Git\bin\git.exe'
+```
+
+找到 Git 后，使用其绝对路径执行同一组检查，例如：
+
+```powershell
+& 'C:\Program Files\Git\cmd\git.exe' status --short
+& 'C:\Program Files\Git\cmd\git.exe' diff --stat
+& 'C:\Program Files\Git\cmd\git.exe' diff --check
+& 'C:\Program Files\Git\cmd\git.exe' log --oneline --decorate -5
+```
+
+若仍找不到 Git，停止并报告执行环境问题；不得假设仓库状态，也不得跳过提交边界审查。不要安装 Git、修改系统 `PATH`，或用其他工具替代 Git 状态检查。
+
 ## 权限边界
 
 - `raw/` 是原始证据层，由人类拥有。Agent 只能读取，不得修改、重命名、移动或删除。
