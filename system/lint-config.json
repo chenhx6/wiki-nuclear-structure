@@ -221,7 +221,8 @@
     "system/schema.md",
     "system/scripts/wiki_lint.py",
     "system/tests/test_wiki_lint.py",
-    "system/vocabulary.md"
+    "system/vocabulary.md",
+    "system/workflows/scheduled-continuation.md"
   ],
   "element_z": {
     "in": 49,

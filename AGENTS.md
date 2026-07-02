@@ -45,6 +45,7 @@
 - 查询与回答：遵循 `system/workflows/query.md`
 - 跨来源综合与反向检验：遵循 `system/workflows/reflect.md`
 - 健康检查：遵循 `system/workflows/lint.md` 和根目录 `check.md`
+- 定时续跑或无人值守任务：遵循 `system/workflows/scheduled-continuation.md`
 
 完成知识页、治理规则、模板或脚本的实质修改后，必须运行：
 
@@ -53,6 +54,14 @@ python system/scripts/wiki_lint.py --fail-on error
 ```
 
 自动 lint 的 error 必须在提交前处理；warning 和 info 必须如实报告，但不得为了消除提示而自动改写科学解释。修改 lint 脚本或配置时，还必须运行 `python -m unittest discover -s system/tests -p "test_*.py" -v`。
+
+## 定时续跑的可靠性边界
+
+- 定时任务是尽力执行的调度手段，不是完成保证。只有生成运行记录并核验产物后，才能写“已执行”或“已完成”。
+- `heartbeat` 只用于短时、同一线程的继续工作；等待超过 1 小时不得使用 heartbeat。较长等待优先使用面向工作区的独立调度，但仍须说明本机应用、调度服务和电脑保持可用的前提。
+- 一次性请求不得以界面显示为“每天”的规则交付。若调度器只能用带 `COUNT=1` 的重复规则表达，必须明确告知界面歧义并优先改用无歧义方案。
+- 配额刷新不会主动唤醒任务。若到期执行依赖本地应用或电脑保持唤醒，必须在承诺前说明；不能确认时，应留下完整 handoff 和续跑命令，请用户在刷新后唤醒会话。
+- 到期后必须核对运行回执、开始/结束时间和输出。没有回执即报告“未触发/未验证”，不得依据预定时间推断已运行。
 
 ## 写回与收尾
 

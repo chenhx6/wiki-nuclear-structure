@@ -38,6 +38,9 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 已判断本次是否需要更新 `USER_GUIDE.md`；需要时已经同步。
 - [ ] 本次规则修改已同步到 `AGENTS.md`、`check.md` 和相应工作流。
 - [ ] `system/log.md` 只追加，没有重写历史记录。
+- [ ] 若使用定时续跑，已遵循 `system/workflows/scheduled-continuation.md`，并说明本机应用、调度服务与电脑可用性前提。
+- [ ] 定时任务的“一次/重复”、时区和下次运行时间在界面中无歧义；一次性请求未显示为“每天”。
+- [ ] 只有在存在运行回执且产物已核验时，才把定时任务报告为“已执行/已完成”；无回执明确写为“未触发/未验证”。
 
 ## B. 原始证据完整性
 
