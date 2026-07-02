@@ -58,7 +58,7 @@ Python 标准库 `unittest` 共 6 项，全部通过：
 
 ## 未执行
 
-- GitHub Actions 首次远端运行：需在本次提交 push 后确认；
+- GitHub Actions 首次远端运行结果：提交已 push，但当前环境无 `gh` 且浏览器未登录私有仓库，暂未核验；
 - qmd 语义检查：未安装，且当前规模不要求。
 
 ## 结论
