@@ -1,12 +1,34 @@
 ---
 type: system-checklist
 graph-excluded: true
-updated: 2026-07-01
+updated: 2026-07-02
 ---
 
 # Wiki 系统核查清单
 
 本文件是人工可读的最高层检查入口。检查必须报告“通过 / 警告 / 失败 / 未执行”，不得把未执行写成通过。
+
+## 自动检查入口
+
+在仓库根目录运行：
+
+```powershell
+python system/scripts/wiki_lint.py --fail-on error
+```
+
+- exit code `0`：没有达到失败阈值的问题；
+- exit code `1`：存在 error，提交前必须处理；
+- `--fail-on warning`：临时采用更严格阈值；
+- `--format json --output outputs/lint-report.json`：生成机器可读报告；
+- GitHub Actions 的 `Wiki lint` 会在相关 push、pull request 和手动触发时运行。
+
+修改 lint 脚本或配置后还要运行：
+
+```powershell
+python -m unittest discover -s system/tests -p "test_*.py" -v
+```
+
+自动 lint 覆盖结构、链接、哈希、字段、A/Z/N、可解析的中子蒸发反应道和 Git 边界；下列清单中涉及科学解释、证据独立性和物理等价性的项目仍需人工判断。
 
 ## A. 会话记忆与治理
 
@@ -80,3 +102,5 @@ updated: 2026-07-01
 - [ ] `raw/` 中的大型 PDF、数据与个人材料未进入普通 Git 跟踪。
 - [ ] 最终 diff 中不存在意外的 raw 修改。
 - [ ] `USER_GUIDE.md` 与当前目录、命令和 Obsidian 工作流一致。
+- [ ] 自动 lint 已运行且 error 为 0；warning/info 已解释。
+- [ ] 修改 lint 实现时，单元与仓库集成测试已通过。

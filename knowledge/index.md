@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 ---
 
 # Wiki Index
@@ -94,3 +94,5 @@ updated: 2026-07-01
 ## Recent Outputs
 
 - `outputs/system-audit-2026-07-01.md` - 初始化历史核查；目录重构后将生成新版核查。
+- `outputs/system-audit-2026-07-01-v2.md` - 第二轮文献摄入后的结构与来源完整性核查。
+- `outputs/system-audit-2026-07-02.md` - 自动 lint 实现、测试与人工复核状态核查。

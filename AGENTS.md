@@ -46,6 +46,14 @@
 - 跨来源综合与反向检验：遵循 `system/workflows/reflect.md`
 - 健康检查：遵循 `system/workflows/lint.md` 和根目录 `check.md`
 
+完成知识页、治理规则、模板或脚本的实质修改后，必须运行：
+
+```text
+python system/scripts/wiki_lint.py --fail-on error
+```
+
+自动 lint 的 error 必须在提交前处理；warning 和 info 必须如实报告，但不得为了消除提示而自动改写科学解释。修改 lint 脚本或配置时，还必须运行 `python -m unittest discover -s system/tests -p "test_*.py" -v`。
+
 ## 写回与收尾
 
 完成有实质内容的任务后：
@@ -56,6 +64,7 @@
 4. 更新 `system/handoff.md`，写明当前状态、未解决问题和下一步；
 5. 若用户纠正了 Agent 的长期行为，更新 `system/memory.md`；
 6. 运行与本次修改相称的 `check.md` 检查。
+7. 实质修改通过自动 lint 后方可提交；自动检查不能替代 `check.md` 中需要科学判断的项目。
 
 ## 强制文档同步门
 

@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "knowledge_types": {
+    "sources": "source",
+    "nuclei": "nucleus",
+    "bands": "band",
+    "concepts": "concept",
+    "experiments": "experiment",
+    "models": "model",
+    "observables": "observable",
+    "methods": "method",
+    "synthesis": "synthesis",
+    "projects": "project",
+    "decisions": "decision",
+    "failures": "failure"
+  },
+  "common_required_fields": [
+    "type",
+    "title",
+    "aliases",
+    "created",
+    "updated",
+    "status",
+    "review_status",
+    "tags"
+  ],
+  "allowed_status": [
+    "ai-draft",
+    "active",
+    "deprecated",
+    "redirect"
+  ],
+  "allowed_review_status": [
+    "unreviewed",
+    "human-reviewed",
+    "verified",
+    "needs-human-review"
+  ],
+  "allowed_reading_depth": [
+    "metadata-only",
+    "skimmed",
+    "read",
+    "deep-read"
+  ],
+  "type_required_fields": {
+    "source": [
+      "source_type",
+      "reading_depth",
+      "title_original",
+      "year",
+      "canonical_source",
+      "raw_file",
+      "raw_sha256"
+    ],
+    "nucleus": [
+      "nuclide",
+      "element",
+      "A",
+      "Z",
+      "N",
+      "mass_region"
+    ],
+    "band": [
+      "nucleus",
+      "band_label",
+      "configuration_status",
+      "interpretation_status"
+    ],
+    "experiment": [
+      "experiment_id",
+      "facility",
+      "beam",
+      "target",
+      "beam_energy",
+      "reaction",
+      "evaporation_channel",
+      "residual_nuclei",
+      "detector_array",
+      "data_status",
+      "sources"
+    ],
+    "model": [
+      "model_family",
+      "degrees_of_freedom",
+      "parameters"
+    ],
+    "observable": [
+      "observable_kind"
+    ],
+    "method": [
+      "method_type"
+    ],
+    "synthesis": [
+      "scope",
+      "confidence",
+      "sources"
+    ],
+    "project": [
+      "project_stage",
+      "confidentiality"
+    ],
+    "decision": [
+      "decision_date"
+    ],
+    "failure": [
+      "failure_date"
+    ]
+  },
+  "required_sections": {
+    "source": [
+      "Bibliographic Record",
+      "Scope and Reading Depth",
+      "Summary",
+      "Key Results",
+      "Competing Interpretations and Limitations",
+      "Extracted Pages"
+    ],
+    "nucleus": [
+      "Identity",
+      "Production Reactions",
+      "Bands",
+      "Competing Interpretations",
+      "Open Questions",
+      "Sources"
+    ],
+    "band": [
+      "Stable Identity",
+      "Level and Transition Data",
+      "Spin-Parity Evidence",
+      "Configuration Assignment",
+      "Proposed Interpretation",
+      "Discriminating Observables",
+      "Competing Interpretations",
+      "Sources"
+    ],
+    "concept": [
+      "Definition",
+      "Necessary Assumptions",
+      "Discriminating Observables",
+      "Supporting Evidence",
+      "Counter-evidence and Competing Interpretations",
+      "Our Current Position",
+      "Sources"
+    ],
+    "experiment": [
+      "Identity",
+      "Beam, Target and Reaction",
+      "Detector Configuration",
+      "Known Limitations",
+      "Sources"
+    ],
+    "model": [
+      "Purpose",
+      "Assumptions",
+      "Predicted Observables",
+      "Known Limitations",
+      "Sources"
+    ],
+    "observable": [
+      "Definition",
+      "How It Is Obtained",
+      "Diagnostic Use",
+      "Model Dependence",
+      "Failure Modes and Ambiguities",
+      "Sources"
+    ],
+    "method": [
+      "Purpose",
+      "Inputs and Assumptions",
+      "What It Can Establish",
+      "What It Cannot Establish Alone",
+      "Sources"
+    ],
+    "synthesis": [
+      "Question and Scope",
+      "Evidence Matrix",
+      "Synthesis",
+      "Counter-evidence",
+      "Model Dependence",
+      "Limitations and Missing Evidence",
+      "Sources"
+    ],
+    "project": [
+      "Research Question",
+      "Current Hypotheses",
+      "Evidence Available",
+      "Risks and Blockers",
+      "Next Actions"
+    ],
+    "decision": [
+      "Context",
+      "Decision",
+      "Evidence",
+      "Alternatives Considered",
+      "Risks",
+      "Revisit Conditions"
+    ],
+    "failure": [
+      "Attempt",
+      "Expected Outcome",
+      "Observed Outcome",
+      "Root Cause",
+      "Evidence",
+      "Lesson",
+      "Revival Conditions"
+    ]
+  },
+  "required_paths": [
+    "AGENTS.md",
+    "USER_GUIDE.md",
+    "check.md",
+    "profile.md",
+    ".github/workflows/wiki-lint.yml",
+    "knowledge/index.md",
+    "knowledge/overview.md",
+    "knowledge/questions.md",
+    "system/handoff.md",
+    "system/lint-config.json",
+    "system/log.md",
+    "system/memory.md",
+    "system/schema.md",
+    "system/scripts/wiki_lint.py",
+    "system/tests/test_wiki_lint.py",
+    "system/vocabulary.md"
+  ],
+  "element_z": {
+    "in": 49,
+    "sn": 50,
+    "sb": 51,
+    "te": 52,
+    "i": 53,
+    "xe": 54,
+    "cs": 55,
+    "ba": 56,
+    "la": 57,
+    "ce": 58,
+    "pr": 59,
+    "nd": 60,
+    "pm": 61,
+    "sm": 62,
+    "eu": 63,
+    "gd": 64,
+    "he": 2,
+    "c": 6,
+    "ne": 10,
+    "ar": 18,
+    "mo": 42,
+    "cd": 48
+  }
+}

@@ -180,7 +180,40 @@ git push -u origin main
 
 若 `git remote -v` 已显示 `origin`，不要重复执行 `remote add`。未发表解释、合作材料与审稿内容应继续留在被忽略的私有目录，不进入远端。
 
-## 8. 常用指令
+## 8. 自动 lint
+
+在 PowerShell 中进入仓库根目录后运行：
+
+```powershell
+python system/scripts/wiki_lint.py --fail-on error
+```
+
+正常结果类似：
+
+```text
+SUMMARY pages=61 wikilinks=372 hashes=7 errors=0 warnings=0 info=0
+```
+
+自动检查包括：
+
+- Markdown frontmatter、必需字段、type 和目录对应；
+- slug、aliases、index 覆盖和 Wikilink；
+- source PDF 路径与 SHA-256；
+- 核素 A/Z/N、元素 Z；
+- 可解析的 `(beam,xn)` 熔合蒸发反应道守恒；
+- `confidence: high` 是否有人类确认记录；
+- `raw/` 工作树变化和知识页是否被 Git 忽略。
+
+需要更严格或机器可读输出时：
+
+```powershell
+python system/scripts/wiki_lint.py --fail-on warning
+python system/scripts/wiki_lint.py --format json --output outputs/lint-report.json
+```
+
+自动 lint 不判断“某带是否真的属于 wobbling/chiral”这类科学结论，也不会自动合并或改写页面。GitHub 仓库的 Actions 页面中会显示 `Wiki lint`；相关 push 和 pull request 会自动运行。由于 PDF 不进入 GitHub，云端缺少 PDF 时只报告 warning；完整哈希核验应在本机运行。
+
+## 9. 常用指令
 
 ```text
 按 check.md 检查本次改动，不自动合并科学概念。
