@@ -5,7 +5,7 @@ aliases: [De Voigt 1983 high-spin review]
 created: 2026-07-02
 updated: 2026-07-02
 status: active
-review_status: unreviewed
+review_status: human-reviewed
 source_type: review-article
 reading_depth: skimmed
 title_original: "High-spin phenomena in atomic nuclei"
@@ -66,13 +66,13 @@ M. J. A. de Voigt, J. Dudek, and Z. Szymanski, *Reviews of Modern Physics* **55*
 | ID | 陈述 | claim_kind | evidence_level | locator | needs_review |
 |---|---|---|---|---|---|
 | DV83-1 | 综述把集体转动带、带交叉和 backbending，与非集体高自旋异构态及不规则衰变并列为高自旋现象的主要类别。 | author-interpretation | direct | p.949, abstract; Sec. I contents | false |
-| DV83-2 | 作者以重离子熔合后的统计衰变图景说明：粒子蒸发主要降低激发能，而残余角动量随后主要由 γ 级联带走；该陈述是综述对既有计算的总结。 | author-interpretation | contextual | pp.950-951, Sec. I.B, Fig.1 | true |
+| DV83-2 | 作者以重离子熔合后的统计衰变图景说明：粒子蒸发主要降低激发能，而残余角动量随后主要由 γ 级联带走；该陈述是综述对既有计算的总结。 | author-interpretation | contextual | pp.950-951, Sec. I.B, Fig.1 | false |
 | DV83-3 | 作者把形变核中近似平滑的 E-I 关系及连续增大的角动量序列概括为转动带，并把这种运动描述为许多核子相干贡献的集体运动。 | author-interpretation | direct | p.951, Sec. I.C, Fig.2(a) | false |
 | DV83-4 | 在主轴 cranking 框架中，signature 是按绕转轴旋转 π 的对称性分类高自旋谱的量子数；奇 A 系统对应两支交错自旋序列。 | model-result | direct | pp.955-956, Sec. II.A.3, Eqs.2.18-2.24, Fig.3 | false |
 | DV83-5 | 作者将带交叉附近以转动频率表示时的多值行为称为 backbending，并指出较强带间相互作用可平滑该特征。 | author-interpretation | direct | pp.974-975, Sec. III.A.1, Eqs.3.3-3.5, Fig.14 | false |
 | DV83-6 | 综述区分 kinematic 与 dynamic moments of inertia，并把 aligned angular momentum 定义为实际角动量相对参考转子的增量；这些量依赖所用参考与导数约定。 | experimental-criterion | direct | pp.974-975, Sec. III.A.1, Eqs.3.3-3.5 | false |
-| DV83-7 | 作者警告：仅由 dynamical moment of inertia 的快速变化推断配对塌缩会受到带交叉与 alignment 的强烈混淆。 | author-interpretation | direct | pp.996-997, Sec. III.C, Fig.22 | true |
-| DV83-8 | 对熔合反应产物和高 multiplicity 级联，核素归属、自旋与激发能提取需要符合、交叉轰击或 multiplicity/sum 信息；其中若干推断带有模型和系统学依赖。 | experimental-criterion | contextual | pp.1015-1017, Sec. IV.B.1-3, Fig.40 | true |
+| DV83-7 | 作者警告：仅由 dynamical moment of inertia 的快速变化推断配对塌缩会受到带交叉与 alignment 的强烈混淆。 | author-interpretation | direct | pp.996-997, Sec. III.C, Fig.22 | false |
+| DV83-8 | 对熔合反应产物和高 multiplicity 级联，核素归属、自旋与激发能提取需要符合、交叉轰击或 multiplicity/sum 信息；其中若干推断带有模型和系统学依赖。 | experimental-criterion | contextual | pp.1015-1017, Sec. IV.B.1-3, Fig.40 | false |
 
 ## Nuclear Structure Information
 
@@ -89,9 +89,10 @@ M. J. A. de Voigt, J. Dudek, and Z. Szymanski, *Reviews of Modern Physics* **55*
 ## Competing Interpretations and Limitations
 
 - 综述大量依赖更早的实验和理论论文，重复引用不构成独立证据；
-- 1983 年的术语、探测器能力和理论边界不能替代现代实验判据；
+- 本文的经典高自旋术语、γ 探测基础和物理成因框架仍可作为有效的理论与实验背景；不能仅因发表于 1983 年而将这些基础内容视为失效；
+- 后续探测器与大阵列主要扩展效率、几何覆盖和可测量范围。具体装置性能仍应引用对应技术或实验来源，但这不否定本文所述的基础谱学方法；
 - 文中具体核素、backbending、pairing collapse 或 shape-transition 案例在用于论文前必须摄入对应原始来源；
-- 本文不讨论后来形成的现代 wobbling/chiral 证据体系，不能作为这些指认的直接证据；
+- 对后来发展的 chirality、wobbling、八极形变等专题，本文可提供共同的高自旋基础，但不能替代这些现象的后续专门理论和单核素实验来源；
 - DV83-2、DV83-7、DV83-8 需回看其所引原始工作后再进入论文级证据池。
 
 ## Extracted Pages
@@ -103,4 +104,4 @@ M. J. A. de Voigt, J. Dudek, and Z. Szymanski, *Reviews of Modern Physics* **55*
 
 ## Personal Notes
 
-适合作为 review/background source 和原始文献导航，不作为具体 A≈130 实验结论的替代来源。
+用户已完成人工页面级审阅，并逐条将 8 条 Key Results 与本文原文对比确认无误。本文可作为高自旋物理术语、基础探测方法和机制理解的 review/background source，也可作为原始文献导航；具体 A≈130 核素数据仍回到相应原始实验来源。
