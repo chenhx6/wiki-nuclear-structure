@@ -3,7 +3,7 @@ type: observable
 title: 旋称劈裂
 aliases: [signature splitting, signature staggering, S(I)]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
 review_status: unreviewed
 observable_kind: band-energy-staggering
@@ -17,6 +17,8 @@ tags: [signature, odd-a, triaxiality]
 ## Definition
 
 同一转动组态的 α=±1/2 两支旋称伙伴带之间随自旋交替的能量劈裂。
+
+[[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] 的 pp.955-956 与 Fig.3 提供 signature 分类和奇 A splitting 的历史性综述示例；本页不把该二手示例作为 A≈130 的原始实验依据。
 
 ## Formula and Conventions
 
@@ -51,8 +53,10 @@ tags: [signature, odd-a, triaxiality]
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[ding-2021-131ba-133ce-signature-splitting]]
+- [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]]
 
 ## Evolution Log
 
 - 2026-07-01：建立三轴性与 wobbling 判别边界。
 - 2026-07-01：加入原文 S(I) 定义及“非轴性 + 低-j mixing”的多机制约束。
+- 2026-07-02：加入 1983 review 的 signature 历史背景，并明确二手证据边界。

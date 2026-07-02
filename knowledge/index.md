@@ -16,6 +16,7 @@ updated: 2026-07-02
 - [[ding-2021-131ba-133ce-signature-splitting]] - N=75 g7/2 强耦合带与 signature splitting 多机制。
 - [[chakraborty-2023-131xe-wobbling-origin]] - `131Xe` 新负宇称序列及 wobbling/signature 判别。
 - [[frauendorf-2024-wobbling-review]] - wobbling 的模型、证据与争议综述。
+- [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] - 高自旋转动、带交叉、alignment 与谱学方法的 review/background。
 
 ## Nuclei
 
@@ -40,6 +41,8 @@ updated: 2026-07-02
 - [[transverse-wobbling]] / [[longitudinal-wobbling]] / [[flip-mode]] - 进动锥拓扑分类。
 - [[signature-partner-bands]] - 奇 A 旋称伙伴关系。
 - [[chiral-doublet-bands]] - Aplanar 转动产生的动态手征双重带。
+- [[high-spin-phenomena]] / [[rotational-bands]] - 高自旋结构范围与集体转动带背景。
+- [[backbending]] / [[angular-momentum-alignment]] - 带交叉的谱学表现与角动量顺排。
 
 ## Experiments
 
@@ -68,6 +71,7 @@ updated: 2026-07-02
 - [[bm1-be2-ratio]] - 组态和带关系约束。
 - [[wobbling-energy]] - 候选 wobbling 带相对激发能。
 - [[interband-transition-strengths]] / [[interband-e2-strengths]] - 手征与 wobbling 的带间电磁证据。
+- [[moments-of-inertia]] - 转动响应、band crossing 与 alignment 的诊断量。
 
 ## Methods
 
@@ -75,6 +79,7 @@ updated: 2026-07-02
 - [[dco-ratio]] / [[linear-polarization-asymmetry]] - 多极性和电磁性质约束。
 - [[spin-coherent-state-map]] / [[spin-squeezed-state-map]] - 模型波函数的角动量几何。
 - [[two-point-angular-correlation-ratio]] - 不同阵列中以 `R_ac` 区分 dipole/quadrupole。
+- [[in-beam-gamma-spectroscopy]] - 熔合蒸发高自旋谱学的实验入口与证据边界。
 
 ## Synthesis
 
@@ -85,7 +90,7 @@ updated: 2026-07-02
 
 ## Projects
 
-尚无正式项目页。
+- [[a130-high-spin-collective-modes-evidence-map]] - 连接现有 8 个 source、竞争解释与后续数据处理结果的轻量工作台。
 
 ## Decisions and Failures
 

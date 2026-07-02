@@ -3,7 +3,7 @@ type: concept
 title: 旋称伙伴带
 aliases: [signature partner bands, favored signature, unfavored signature, signature partners, 旋称劈裂伙伴]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
 review_status: unreviewed
 concept_type: rotational-band-relationship
@@ -18,6 +18,8 @@ tags: [signature, rotational-band, odd-a]
 ## Definition
 
 奇 A 转动带中由旋称量子数 α=±1/2 区分的两支序列。favored/unfavored 指能量上的旋称偏好，不等于 wobbling-phonon 量子数。
+
+[[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] 在 pp.955-956 从主轴 cranking 对称性给出 signature 分类，并以奇 A 谱中的两支交错自旋序列作历史背景；该综述不替代具体核素的原始谱学证据。
 
 ## Necessary Assumptions
 
@@ -51,7 +53,9 @@ tags: [signature, rotational-band, odd-a]
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[ding-2021-131ba-133ce-signature-splitting]]
+- [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]]
 
 ## Evolution Log
 
 - 2026-07-01（3 sources）：加入 N=75 g7/2 强耦合带和多机制 splitting 案例。
+- 2026-07-02（review background）：加入 signature 的历史分类框架，不改变现代 wobbling 判据。
