@@ -18,10 +18,12 @@ updated: 2026-07-02
 - Obsidian 以仓库根目录 `E:\imp\wiki` 为 vault，附件目录为 `raw/figures/`，已启用 Dataview。
 - Zotero 使用 `Wiki Inbox` + Better BibTeX 自动导出 `raw/zotero/wiki-inbox.bib`；Agent 对该文件只读。
 - Markdown 知识库使用私有 GitHub 仓库 `chenhx6/wiki-nuclear-structure` 作为异地远端，PDF 与私有原始材料不进入普通 Git 历史。
+- 用户在仓库根目录维护 README/PLAN 类文件，保存阶段性工作记录、Wiki 使用备忘和下一步计划；这些内容由用户拥有，Agent 读取时不得擅自覆盖。
 
 ## 用户纠正记录
 
 - 2026-07-02：定时续跑必须区分“一次”与“每天”；不得把未生成运行记录的调度写成已执行，也不得承诺未验证的本地定时任务会自动完成。
+- 2026-07-02：03:35 故障发生时 Codex 应用未退出；笔记本持续接电、未断电，并已设置接电时永久不休眠和不息屏。后续复盘不得再把应用退出或电脑休眠列为本次故障候选。
 
 ## 禁止写入
 
