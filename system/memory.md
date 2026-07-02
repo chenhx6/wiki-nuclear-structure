@@ -18,12 +18,20 @@ updated: 2026-07-02
 - Obsidian 以仓库根目录 `E:\imp\wiki` 为 vault，附件目录为 `raw/figures/`，已启用 Dataview。
 - Zotero 使用 `Wiki Inbox` + Better BibTeX 自动导出 `raw/zotero/wiki-inbox.bib`；Agent 对该文件只读。
 - Markdown 知识库使用私有 GitHub 仓库 `chenhx6/wiki-nuclear-structure` 作为异地远端，PDF 与私有原始材料不进入普通 Git 历史。
-- 用户在仓库根目录维护 README/PLAN 类文件，保存阶段性工作记录、Wiki 使用备忘和下一步计划；这些内容由用户拥有，Agent 读取时不得擅自覆盖。
+- 用户在仓库根目录维护 `PLAN.md`，用于宏观阶段计划、个人好奇心备忘和研究方向草稿；它由用户拥有，不是 cite-key 文献清单、执行日志或 Agent 可自由改写的任务列表。
+- `PLAN.md` 按任务条件读取并管理方向与优先级；`system/handoff.md` 管理最近执行事实与交接细节。无法分类的冲突必须询问用户。
+- 执行余量不足且任务无法稳定完成时进入 safe suspend：停止扩大范围、完成 Git 检查、写完整 handoff，并等待用户在额度刷新后发送“继续”；不自动创建 automation 或 commit/push。
+- 当前 Wiki 是证据型研究 Wiki 原型和证据导航系统，主要用于知识问答、证据追踪、研究辅助与创新点梳理；不保证文献完整性，不替代原文阅读或人工科学判断。
+- 页面级 `human-reviewed` 与 claim-level `needs_review` 相互独立。用户看过页面不等于所有待审 claim 自动清零；Codex 只有在用户明确确认具体 claim 或 claim 组后才能改变其待审状态。
+- 日常建设坚持一次摄入一篇论文，并在每次摄入后列出新增 claim、待审 claim、竞争解释和证据缺口。
+- 现阶段 Skill 只保留证据型知识问答入口；ingest/reflect/lint 等流程稳定后再考虑封装，写作 Skill 等数据处理与证据层成熟后再创建。
 
 ## 用户纠正记录
 
 - 2026-07-02：定时续跑必须区分“一次”与“每天”；不得把未生成运行记录的调度写成已执行，也不得承诺未验证的本地定时任务会自动完成。
 - 2026-07-02：03:35 故障发生时 Codex 应用未退出；笔记本持续接电、未断电，并已设置接电时永久不休眠和不息屏。后续复盘不得再把应用退出或电脑休眠列为本次故障候选。
+- 2026-07-02：`PLAN.md` 改为条件读取；其探索性内容不等于立即执行任务。PLAN 管方向，handoff 管最近状态；额度或执行余量不足时使用 safe suspend，而非假定任务会自动恢复。
+- 2026-07-02：用户确认已查看现有 7 个 source 页且未发现明显科学问题；这允许页面级标记为 `human-reviewed`，但不构成逐条清除 claim-level `needs_review: true` 的授权。
 
 ## 禁止写入
 

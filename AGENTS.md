@@ -7,20 +7,24 @@
 本文件作为行为契约加载后，开始任何知识库任务前依次读取：
 
 1. `README.md`：了解 Wiki 的稳定入口和研究范围；
-2. `PLAN.md`：了解用户当前阶段计划；
-3. `system/handoff.md`：了解最近一次 Agent 执行交接；
-4. `profile.md`；
-5. `system/memory.md`；
-6. `knowledge/index.md`；
-7. `system/log.md` 最近 10 条记录。
+2. `system/handoff.md`：了解最近一次 Agent 执行交接；
+3. `profile.md`；
+4. `system/memory.md`；
+5. `knowledge/index.md`；
+6. `system/log.md` 最近 10 条记录。
+
+`PLAN.md` 是条件读取文件，不是每次小任务的强制启动文件。当任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、基于用户好奇点扩充知识库、多步骤知识库建设，或用户明确要求读取 `PLAN.md` 时，必须在读取 `README.md` 后、读取 `system/handoff.md` 前额外读取 `PLAN.md`。
+
+`PLAN.md` 由用户拥有和维护，用于宏观阶段计划、个人好奇心备忘和研究方向草稿，可以记录讨论点、好奇点、未来探索问题以及需要补充的文献类别或问题方向。它通常不写具体 cite key，不是文献清单、执行日志或 Agent 可自由改写的任务列表；其中模糊、大纲式或探索性的内容不等于 Agent 必须立即执行的任务。未经用户明确要求，Agent 不得覆盖、重写、删除、重排或机械整理其内容。
+
+`system/handoff.md` 用于记录最近完成事项、当前具体执行状态、未完成问题、文件修改记录和下一次任务交接细节。简言之：`PLAN.md` answers “where the user may want to go next”; `system/handoff.md` answers “where the last task stopped.”
 
 若文件之间存在冲突：
 
-1. 用户当前明确指令优先；
-2. `PLAN.md` 优先于旧的 `system/handoff.md`；
-3. 仍不确定时停止并询问用户，不得猜测。
-
-`PLAN.md` 由用户拥有和维护。未经用户明确要求，Agent 不得覆盖、重写、删除或重排其内容。
+1. 用户当前明确指令永远最高；
+2. 在阶段目标、研究兴趣、长期探索方向、研究优先级和文献补充方向上，`PLAN.md` 优先于旧的 `system/handoff.md`；
+3. 在最近完成事项、具体执行状态、未完成问题、文件修改记录和下一次任务交接细节上，`system/handoff.md` 优先作为事实记录；
+4. 若冲突无法判断属于哪一类，停止并询问用户，不得猜测。
 
 若 Git 可用，在开始修改前检查工作树状态，识别并保护用户已有修改。不得假定未提交内容属于 Agent。
 
@@ -71,6 +75,18 @@ python system/scripts/wiki_lint.py --fail-on error
 - 一次性请求不得以界面显示为“每天”的规则交付。若调度器只能用带 `COUNT=1` 的重复规则表达，必须明确告知界面歧义并优先改用无歧义方案。
 - 配额刷新不会主动唤醒任务。若到期执行依赖本地应用或电脑保持唤醒，必须在承诺前说明；不能确认时，应留下完整 handoff 和续跑命令，请用户在刷新后唤醒会话。
 - 到期后必须核对运行回执、开始/结束时间和输出。没有回执即报告“未触发/未验证”，不得依据预定时间推断已运行。
+
+## Safe suspend
+
+当 Codex 发现上下文、token、5 小时额度或执行余量不足，且任务无法稳定完成时，不得继续扩大修改范围，必须立即进入 safe suspend：
+
+1. 停止新增大范围修改；
+2. 运行 `git status --short`、`git diff --stat`、`git diff --check`；
+3. 更新 `system/handoff.md`，记录已完成事项、未完成事项、已修改文件、当前风险，以及下一轮可直接执行的续跑提示词；
+4. 不得自动 commit/push，除非用户明确要求；
+5. 告知用户等待额度刷新后发送“继续”。
+
+Safe suspend 不是让当前任务自动睡眠并原地恢复。若用户后续使用 automation，应视为额度刷新后新开一次任务，由新任务按启动规则读取 handoff 后继续；不得因进入 safe suspend 自动创建 automation。
 
 ## 写回与收尾
 

@@ -3,9 +3,9 @@ type: source
 title: "Tilted rotation of triaxial nuclei"
 aliases: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
-review_status: unreviewed
+review_status: human-reviewed
 source_type: journal-article-theory
 reading_depth: deep-read
 title_original: "Tilted rotation of triaxial nuclei"
@@ -19,7 +19,7 @@ arxiv:
 language: en
 canonical_source: doi:10.1016/S0375-9474(97)00004-3
 zotero_item_key:
-citation_key:
+citation_key: frauendorf_1997_Tiltedrotation
 zotero_uri:
 library_file:
 raw_file: "raw/papers/1997_Frauendorf et al_Tilted rotation of triaxial nuclei.pdf"
@@ -97,4 +97,3 @@ Nuclear Physics A 617 (1997) 131-147。理论论文，共 17 页。
 ## Personal Notes
 
 该文是“aplanar TAC → 动态手征性 → 同宇称双带”的奠基来源，但不能被用作某个具体核已证明手征性的实验依据。
-

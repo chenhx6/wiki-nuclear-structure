@@ -28,13 +28,15 @@ python system/scripts/wiki_lint.py --fail-on error
 python -m unittest discover -s system/tests -p "test_*.py" -v
 ```
 
-自动 lint 覆盖结构、链接、哈希、字段、A/Z/N、可解析的中子蒸发反应道和 Git 边界；下列清单中涉及科学解释、证据独立性和物理等价性的项目仍需人工判断。
+自动 lint 覆盖结构、链接、哈希、字段、A/Z/N、可解析的中子蒸发反应道、Git 边界和 claim-level 治理统计。`GOVERNANCE` 行报告页面/source unreviewed、claim 待审、缺 locator/kind、source 缺 raw_file/citation key；涉及科学解释、证据独立性和物理等价性的项目仍需人工判断。
 
 ## A. 会话记忆与治理
 
-- [ ] 已按 `AGENTS.md` 的顺序读取 `README.md`、`PLAN.md`、`system/handoff.md` 及其余启动文件。
-- [ ] `PLAN.md` 未在缺少用户明确要求时被覆盖、重写、删除或重排。
-- [ ] `system/handoff.md` 包含当前状态、未完成事项和明确下一步。
+- [ ] 已按 `AGENTS.md` 的顺序读取固定启动文件；仅在规定触发条件成立或用户明确要求时额外读取 `PLAN.md`。
+- [ ] `PLAN.md` 保持宏观计划、个人好奇心与研究方向草稿性质，未被当作 cite-key 文献清单、执行日志或必须立即执行的任务列表。
+- [ ] `PLAN.md` 未在缺少用户明确要求时被覆盖、重写、删除、重排或机械整理。
+- [ ] `system/handoff.md` 包含最近完成事项、当前状态、未完成事项、修改文件和明确下一步。
+- [ ] PLAN/handoff 冲突已按“方向与优先级看 PLAN、执行事实与交接细节看 handoff”分类；无法分类时已询问用户。
 - [ ] `system/memory.md` 只保存稳定规则与用户确认过的偏好，不保存临时聊天摘要。
 - [ ] 已判断本次是否需要更新 `USER_GUIDE.md`；需要时已经同步。
 - [ ] 本次规则修改已同步到 `AGENTS.md`、`check.md` 和相应工作流。
@@ -42,6 +44,8 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 若使用定时续跑，已遵循 `system/workflows/scheduled-continuation.md`，并说明本机应用、调度服务与电脑可用性前提。
 - [ ] 定时任务的“一次/重复”、时区和下次运行时间在界面中无歧义；一次性请求未显示为“每天”。
 - [ ] 只有在存在运行回执且产物已核验时，才把定时任务报告为“已执行/已完成”；无回执明确写为“未触发/未验证”。
+- [ ] 若执行余量不足且任务无法稳定完成，已停止扩大范围，运行三项 Git 检查并把完整 safe suspend 信息写入 handoff。
+- [ ] Safe suspend 未被表述为自动睡眠/原地恢复，未自动创建 automation，且未在无用户明确要求时 commit/push。
 
 ## B. 原始证据完整性
 
@@ -53,6 +57,10 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ## C. 科学表述与证据
 
+- [ ] 已查看 lint 的 `GOVERNANCE` 统计，页面级 review 状态与 claim-level `needs_review` 没有混为一谈。
+- [ ] `CLAIM_NEEDS_REVIEW` info 已列入人工审阅队列，未因页面为 `human-reviewed` 而自动清除。
+- [ ] `claim_missing_locator` 与 `claim_missing_kind` 均为 0，或已按 error 处理。
+- [ ] `source_missing_raw_file` 与 `source_missing_citation_key` 均为 0，或已解释并处理。
 - [ ] 实验事实、作者解释、模型结果和个人推断已明确区分。
 - [ ] 置信度没有仅凭引用数量自动提高。
 - [ ] `high` 置信度均有用户确认记录。
@@ -107,4 +115,5 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 最终 diff 中不存在意外的 raw 修改。
 - [ ] `USER_GUIDE.md` 与当前目录、命令和 Obsidian 工作流一致。
 - [ ] 自动 lint 已运行且 error 为 0；warning/info 已解释。
+- [ ] `knowledge/overview.md` 的页面级与 claim-level 统计已与最新 lint `GOVERNANCE` 输出同步。
 - [ ] 修改 lint 实现时，单元与仓库集成测试已通过。

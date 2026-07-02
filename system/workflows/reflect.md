@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: reflect
-updated: 2026-07-01
+updated: 2026-07-02
 ---
 
 # REFLECT：综合与反向检验
@@ -48,3 +48,5 @@ updated: 2026-07-01
 ## Stage 4：人工决策
 
 涉及 `confidence: high`、概念合并或研究方向决策时，展示证据矩阵并等待用户确认。
+
+若综合结果将用于论文级主张，还必须通过 `system/paper-evidence-gate.md`：回到原始 source/raw、检查 locator、claim kind、人工复核状态、citation key 和竞争解释。综合页自身不能替代原始文献。

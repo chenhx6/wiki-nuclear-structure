@@ -2,6 +2,12 @@
 
 本 Wiki 是面向个人科研工作的可追溯知识库，用于积累文献事实、竞争性物理解读、研究决策和失败经验，并支持 Obsidian 浏览、AI 辅助整理与科研写作。
 
+## 当前定位
+
+当前 Wiki 是可靠的证据型研究 Wiki 原型，主要用于知识问答、证据追踪、研究辅助和创新点梳理。它是证据导航系统，不是最终权威，也不保证文献完整覆盖，不能替代人工阅读或直接作为论文引用依据。
+
+论文级结论必须回到 `knowledge/sources/`、`raw/` 原文、精确 locator 和人工复核，并遵循 [system/paper-evidence-gate.md](system/paper-evidence-gate.md)。
+
 ## 研究范围
 
 - 基于熔合蒸发反应的低能原子核结构研究；
@@ -29,6 +35,7 @@
 | 字段、页面类型和命名规则 | [system/schema.md](system/schema.md) |
 | 术语和禁止混并的概念 | [system/vocabulary.md](system/vocabulary.md) |
 | Zotero 连接方式 | [system/zotero-integration.md](system/zotero-integration.md) |
+| 论文级证据门 | [system/paper-evidence-gate.md](system/paper-evidence-gate.md) |
 | 完整人工检查 | [check.md](check.md) |
 
 日常主要浏览 `knowledge/`。`raw/` 保存原始证据，`system/` 保存规则与执行交接，`outputs/` 保存审计和写作产物。
@@ -55,10 +62,12 @@ python system/scripts/wiki_lint.py --fail-on error
 ## README、PLAN 与 handoff
 
 - `README.md` 是稳定、简洁的 Wiki 入口，不保存大量阶段性待办。
-- `PLAN.md` 是用户拥有和维护的阶段计划与备忘。
-- `system/handoff.md` 是 Agent 的执行交接，记录最近状态、未解决问题和下一步。
+- `PLAN.md` 是用户拥有和维护的宏观阶段计划、个人好奇心备忘和研究方向草稿，不是执行日志或 cite-key 文献清单。
+- `system/handoff.md` 是 Agent 的执行交接，记录最近完成事项、具体状态、文件修改、未解决问题和下一步。
 
-若三者存在冲突，当前用户明确指令优先，`PLAN.md` 优先于旧的 `system/handoff.md`；仍不确定时，Agent 应停止并询问用户。
+Agent 只在任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索或多步骤知识库建设等场景时读取 `PLAN.md`；普通小任务以 handoff 恢复执行状态。`PLAN.md` 管方向和好奇心，`system/handoff.md` 管状态和交接细节。
+
+若三者存在冲突，当前用户明确指令永远最高；方向与优先级以 `PLAN.md` 为准，最近执行事实与交接细节以 `system/handoff.md` 为准。无法分类时，Agent 应停止并询问用户。
 
 ## Agent 使用规则
 

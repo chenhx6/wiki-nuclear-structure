@@ -3,9 +3,9 @@ type: source
 title: "Signatures of gamma softness or triaxiality in low energy nuclear spectra"
 aliases: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
-review_status: unreviewed
+review_status: human-reviewed
 source_type: journal-article-phenomenology
 reading_depth: deep-read
 title_original: "Signatures of γ softness or triaxiality in low energy nuclear spectra"
@@ -19,7 +19,7 @@ arxiv:
 language: en
 canonical_source: doi:10.1016/0370-2693(91)91610-8
 zotero_item_key:
-citation_key:
+citation_key: zamfir_1991_Signaturessoftness
 zotero_uri:
 library_file:
 raw_file: "raw/papers/1991_Zamfir_Casten_Signatures of γ softness or triaxiality in low energy nuclear spectra.pdf"
@@ -95,4 +95,3 @@ Physics Letters B 260 (1991) 265-270。PDF 正文完整，共 6 页。
 ## Personal Notes
 
 这是建立判据页的核心来源，不应把它简化成“负 S=soft、正 S=rigid”的无条件规则。真正重要的是 staggering 相位、归一化定义以及对弱 γ 依赖的敏感性。
-

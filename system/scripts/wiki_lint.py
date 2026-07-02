@@ -51,12 +51,25 @@ class Page:
 
 
 @dataclass
+class GovernanceMetrics:
+    page_unreviewed: int = 0
+    source_unreviewed: int = 0
+    claims_total: int = 0
+    claim_needs_review: int = 0
+    claim_missing_locator: int = 0
+    claim_missing_kind: int = 0
+    source_missing_raw_file: int = 0
+    source_missing_citation_key: int = 0
+
+
+@dataclass
 class Report:
     root: str
     checked_at: str
     pages: int
     wikilinks: int
     source_hashes_checked: int
+    governance: GovernanceMetrics
     issues: list[Issue]
 
     @property
@@ -160,6 +173,44 @@ def wikilinks(text: str) -> list[str]:
 
 def headings(text: str) -> set[str]:
     return {match.group(1).strip() for match in HEADING_RE.finditer(text)}
+
+
+def markdown_table_cells(line: str) -> list[str] | None:
+    stripped = line.strip()
+    if not stripped.startswith("|") or not stripped.endswith("|"):
+        return None
+    return [cell.strip() for cell in stripped.strip("|").split("|")]
+
+
+def is_markdown_separator(cells: list[str]) -> bool:
+    return bool(cells) and all(re.fullmatch(r":?-{3,}:?", cell) for cell in cells)
+
+
+def claim_rows(body: str, config: dict[str, Any]) -> list[tuple[int, dict[str, str]]]:
+    fields = config["governance_fields"]
+    required_headers = {
+        fields["claim_kind"],
+        fields["locator"],
+        fields["needs_review"],
+    }
+    lines = body.splitlines()
+    rows: list[tuple[int, dict[str, str]]] = []
+    index = 0
+    while index < len(lines):
+        header = markdown_table_cells(lines[index])
+        if header is None or not required_headers.issubset(set(header)):
+            index += 1
+            continue
+        index += 1
+        while index < len(lines):
+            cells = markdown_table_cells(lines[index])
+            if cells is None:
+                break
+            if not is_markdown_separator(cells):
+                padded = cells + [""] * max(0, len(header) - len(cells))
+                rows.append((index + 1, dict(zip(header, padded))))
+            index += 1
+    return rows
 
 
 def value_missing(meta: dict[str, Any], field: str) -> bool:
@@ -437,6 +488,66 @@ def validate_unique_sources(pages: list[Page], issues: list[Issue]) -> None:
                 )
 
 
+def audit_governance(
+    pages: list[Page], config: dict[str, Any], issues: list[Issue]
+) -> GovernanceMetrics:
+    fields = config["governance_fields"]
+    metrics = GovernanceMetrics()
+    for page in pages:
+        if page.meta.get("review_status") == "unreviewed":
+            metrics.page_unreviewed += 1
+        if page.expected_type != "source":
+            continue
+        if page.meta.get("review_status") == "unreviewed":
+            metrics.source_unreviewed += 1
+        if value_missing(page.meta, fields["raw_file"]):
+            metrics.source_missing_raw_file += 1
+        if value_missing(page.meta, fields["citation_key"]):
+            metrics.source_missing_citation_key += 1
+            add(
+                issues,
+                "warning",
+                "CITATION_KEY_MISSING",
+                page.relative,
+                "source has no citation_key",
+            )
+
+        for line_number, row in claim_rows(page.body, config):
+            metrics.claims_total += 1
+            claim_id = row.get("ID", "").strip() or f"line {line_number}"
+            kind = row.get(fields["claim_kind"], "").strip()
+            locator = row.get(fields["locator"], "").strip()
+            needs_review = row.get(fields["needs_review"], "").strip().casefold()
+            if not kind:
+                metrics.claim_missing_kind += 1
+                add(
+                    issues,
+                    "error",
+                    "CLAIM_KIND_MISSING",
+                    page.relative,
+                    f"{claim_id} has no {fields['claim_kind']}",
+                )
+            if not locator:
+                metrics.claim_missing_locator += 1
+                add(
+                    issues,
+                    "error",
+                    "CLAIM_LOCATOR_MISSING",
+                    page.relative,
+                    f"{claim_id} has no locator",
+                )
+            if needs_review == "true":
+                metrics.claim_needs_review += 1
+                add(
+                    issues,
+                    "info",
+                    "CLAIM_NEEDS_REVIEW",
+                    page.relative,
+                    f"{claim_id} awaits human review",
+                )
+    return metrics
+
+
 def find_git() -> str | None:
     discovered = shutil.which("git")
     if discovered:
@@ -539,6 +650,7 @@ def run_lint(root: Path, config_path: Path, check_git: bool = True) -> Report:
 
     validate_aliases(pages, issues)
     validate_unique_sources(pages, issues)
+    governance = audit_governance(pages, config, issues)
     link_count, _ = validate_links(root, pages, issues)
     if check_git:
         validate_git(root, pages, issues)
@@ -552,6 +664,7 @@ def run_lint(root: Path, config_path: Path, check_git: bool = True) -> Report:
         pages=len(pages),
         wikilinks=link_count,
         source_hashes_checked=hashes_checked,
+        governance=governance,
         issues=issues,
     )
 
@@ -563,6 +676,18 @@ def report_as_text(report: Report) -> str:
             f"[{issue.severity.upper():7}] {issue.code:22} {issue.path} - {issue.message}"
         )
     counts = report.counts
+    governance = report.governance
+    lines.append(
+        "GOVERNANCE "
+        f"page_unreviewed={governance.page_unreviewed} "
+        f"source_unreviewed={governance.source_unreviewed} "
+        f"claims={governance.claims_total} "
+        f"claim_needs_review={governance.claim_needs_review} "
+        f"claim_missing_locator={governance.claim_missing_locator} "
+        f"claim_missing_kind={governance.claim_missing_kind} "
+        f"source_missing_raw_file={governance.source_missing_raw_file} "
+        f"source_missing_citation_key={governance.source_missing_citation_key}"
+    )
     lines.append(
         "SUMMARY "
         f"pages={report.pages} wikilinks={report.wikilinks} "
@@ -579,6 +704,7 @@ def report_as_json(report: Report) -> str:
         "pages": report.pages,
         "wikilinks": report.wikilinks,
         "source_hashes_checked": report.source_hashes_checked,
+        "governance": asdict(report.governance),
         "counts": dict(report.counts),
         "issues": [asdict(issue) for issue in report.issues],
     }

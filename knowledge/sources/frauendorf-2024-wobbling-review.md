@@ -3,9 +3,9 @@ type: source
 title: "Wobbling motion in triaxial nuclei"
 aliases: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
-review_status: unreviewed
+review_status: human-reviewed
 source_type: review-preprint
 reading_depth: deep-read
 title_original: "Wobbling motion in triaxial nuclei"
@@ -19,7 +19,7 @@ arxiv: 2405.02747
 language: en
 canonical_source: arxiv:2405.02747
 zotero_item_key: 3YFN5G2A
-citation_key: frauendorf_2024_Wobbling
+citation_key: frauendorf_2024_Wobblingmotion
 zotero_uri: zotero://select/library/items/3YFN5G2A
 library_file: "E:/zetore reference/高自旋/review/2024_Frauendorf_Wobbling motion in triaxial nuclei.pdf"
 raw_file: "raw/papers/2024_Frauendorf_Wobbling motion in triaxial nuclei.pdf"
@@ -106,4 +106,3 @@ arXiv:2405.02747v1，dated 2024-05-07，共 26 页。Zotero 记录日期与 arXi
 ## Personal Notes
 
 此文适合作为索引和术语地图；任何具体核素结论都应继续回到原始实验论文。
-

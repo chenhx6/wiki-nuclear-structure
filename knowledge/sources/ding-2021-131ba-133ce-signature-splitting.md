@@ -3,9 +3,9 @@ type: source
 title: "Signature splitting of the g7/2[404]7/2+ bands in 131Ba and 133Ce"
 aliases: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
-review_status: unreviewed
+review_status: human-reviewed
 source_type: journal-article-experiment-and-model
 reading_depth: deep-read
 title_original: "Signature splitting of the g7/2[404]7/2+ bands in 131Ba and 133Ce"
@@ -19,7 +19,7 @@ arxiv:
 language: en
 canonical_source: doi:10.1103/PhysRevC.104.064304
 zotero_item_key:
-citation_key:
+citation_key: ding_2021_Signaturesplittinga
 zotero_uri:
 library_file:
 raw_file: "raw/papers/2021_Ding et al_Signature splitting of the g 7 - 2 [ 404 ] 7 - 2 + bands in Ba 131 and Ce 133.pdf"
@@ -121,4 +121,3 @@ configuration-constrained PES、cranked shell model（CSM）和 quasiparticle-pl
 ## Personal Notes
 
 这篇论文对知识库的关键贡献不是“用 splitting 测出 γ”，而是说明这一反演通常不唯一：低-j 轨道位置与 Coriolis 混合会和非轴形变共同控制可观测 staggering。
-

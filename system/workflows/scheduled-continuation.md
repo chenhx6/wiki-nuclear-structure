@@ -46,6 +46,25 @@ updated: 2026-07-02
 3. 告知用户在额度刷新后发送“继续”；
 4. 新会话按 `AGENTS.md` 启动顺序恢复。
 
+## Safe suspend
+
+当 Codex 发现上下文、token、5 小时额度或执行余量不足，且当前任务无法稳定完成时，立即执行：
+
+1. 停止新增大范围修改；
+2. 运行：
+
+   ```powershell
+   git status --short
+   git diff --stat
+   git diff --check
+   ```
+
+3. 更新 `system/handoff.md`，写明已完成事项、未完成事项、已修改文件、当前风险，以及下一轮可直接执行的续跑提示词；
+4. 除非用户明确要求，不得自动 commit/push；
+5. 告知用户等待额度刷新后发送“继续”。
+
+Safe suspend 是一次受控停点，不是让当前任务自动睡眠并原地恢复，也不会自动创建 automation。若用户后续选择 automation，应把它视为额度刷新后启动的新任务，由该任务读取 handoff 后继续。
+
 ## 创建前检查
 
 - [ ] 类型与等待时长匹配；

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -80,6 +81,46 @@ class ScientificGuardrailTests(unittest.TestCase):
         wiki_lint.validate_nucleus(page, config, issues)
         self.assertIn("NUCLIDE_SUM", {issue.code for issue in issues})
 
+    def test_claim_level_governance_metrics_and_issues(self) -> None:
+        page = wiki_lint.Page(
+            path=Path("knowledge/sources/example.md"),
+            relative="knowledge/sources/example.md",
+            slug="example",
+            expected_type="source",
+            meta={
+                "review_status": "unreviewed",
+                "raw_file": "",
+                "citation_key": "",
+            },
+            body=(
+                "## Key Results\n\n"
+                "| ID | 陈述 | claim_kind | evidence_level | locator | needs_review |\n"
+                "|---|---|---|---|---|---|\n"
+                "| C1 | observed | experimental-fact | direct | PDF p.1 | true |\n"
+                "| C2 | incomplete | | direct | | false |\n"
+            ),
+        )
+        config = wiki_lint.load_config(REPO_ROOT / "system" / "lint-config.json")
+        issues: list[wiki_lint.Issue] = []
+        metrics = wiki_lint.audit_governance([page], config, issues)
+        self.assertEqual(metrics.page_unreviewed, 1)
+        self.assertEqual(metrics.source_unreviewed, 1)
+        self.assertEqual(metrics.claims_total, 2)
+        self.assertEqual(metrics.claim_needs_review, 1)
+        self.assertEqual(metrics.claim_missing_locator, 1)
+        self.assertEqual(metrics.claim_missing_kind, 1)
+        self.assertEqual(metrics.source_missing_raw_file, 1)
+        self.assertEqual(metrics.source_missing_citation_key, 1)
+        self.assertEqual(
+            {
+                "CLAIM_NEEDS_REVIEW",
+                "CLAIM_LOCATOR_MISSING",
+                "CLAIM_KIND_MISSING",
+                "CITATION_KEY_MISSING",
+            },
+            {issue.code for issue in issues},
+        )
+
 
 class RepositoryIntegrationTests(unittest.TestCase):
     def test_repository_has_no_lint_errors(self) -> None:
@@ -93,6 +134,16 @@ class RepositoryIntegrationTests(unittest.TestCase):
             errors,
             [],
             "\n" + "\n".join(f"{issue.code} {issue.path}: {issue.message}" for issue in errors),
+        )
+        self.assertEqual(
+            sum(issue.code == "CLAIM_NEEDS_REVIEW" for issue in report.issues),
+            report.governance.claim_needs_review,
+        )
+        self.assertIn("GOVERNANCE page_unreviewed=", wiki_lint.report_as_text(report))
+        payload = json.loads(wiki_lint.report_as_json(report))
+        self.assertEqual(
+            payload["governance"]["claim_needs_review"],
+            report.governance.claim_needs_review,
         )
 
 

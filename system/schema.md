@@ -2,7 +2,7 @@
 type: system-schema
 graph-excluded: true
 version: 0.1.0
-updated: 2026-07-01
+updated: 2026-07-02
 ---
 
 # 页面类型与字段规范
@@ -44,15 +44,27 @@ tags: []
 
 `review_status` 可取：`unreviewed`、`human-reviewed`、`verified`、`needs-human-review`。
 
+其中：
+
+- `unreviewed`：页面尚未经过用户页面级检查；
+- `human-reviewed`：用户已查看页面并确认无明显页面级问题，但不自动确认页面内全部 claims；
+- `verified`：已按任务约定完成更严格核验；
+- `needs-human-review`：页面整体存在需要用户判断的问题。
+
+页面级 `review_status` 与 claim-level `needs_review` 独立。页面升级为 `human-reviewed` 时，不得批量改写 claim-level 状态。
+
 ## 科学主张字段
 
 不要求每条主张单独建文件，但重要结论必须在正文或表格中记录：
 
-- `claim_kind`: `experimental-fact`、`author-interpretation`、`model-result`、`our-inference`；
+- `claim_kind`: `experimental-fact`、`experimental-criterion`、`author-interpretation`、`model-result`、`our-inference`、`synthesis`；
 - `evidence_level`: `direct`、`indirect`、`contextual`、`none`；
 - `source_independence`: `single`、`multiple-dependent`、`multiple-independent`；
 - `confidence`: `low`、`medium`、`high`；
 - `locator`: 页码、图号、表号、能级或数据位置。
+- `needs_review`: `true` 或 `false`；`true` 只能在用户明确确认对应 claim 或 claim 组后改为 `false`。
+
+source 页还使用 `citation_key` 连接只读 BibTeX 导出。无法通过 DOI、题名或文件名唯一匹配时保持空值，不得猜测；citation key 缺失影响写作链稳定性，不自动表示科学内容错误。
 
 ## 时效规则
 

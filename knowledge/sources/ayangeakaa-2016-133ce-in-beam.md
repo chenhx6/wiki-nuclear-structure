@@ -3,9 +3,9 @@ type: source
 title: "In-beam spectroscopy of medium- and high-spin states in 133Ce"
 aliases: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
-review_status: unreviewed
+review_status: human-reviewed
 source_type: journal-article-experiment-and-model
 reading_depth: deep-read
 title_original: "In-beam spectroscopy of medium- and high-spin states in 133Ce"
@@ -105,4 +105,3 @@ Physical Review C 93, 054317 (2016)，DOI `10.1103/PhysRevC.93.054317`。Zotero 
 ## Personal Notes
 
 这篇论文适合作为 `133Ce` 的“谱学地图”，但不宜把其所有模型组态一次性固化成确定知识。后续应按具体研究问题回到 Table I 和 Figs.1-2 建立单带页。
-

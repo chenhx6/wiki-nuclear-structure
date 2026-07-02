@@ -1,5 +1,12 @@
 {
-  "version": 1,
+  "version": 2,
+  "governance_fields": {
+    "claim_kind": "claim_kind",
+    "locator": "locator",
+    "needs_review": "needs_review",
+    "citation_key": "citation_key",
+    "raw_file": "raw_file"
+  },
   "knowledge_types": {
     "sources": "source",
     "nuclei": "nucleus",

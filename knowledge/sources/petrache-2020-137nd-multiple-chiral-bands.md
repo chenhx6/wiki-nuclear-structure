@@ -3,9 +3,9 @@ type: source
 title: "Multiple chiral bands in 137Nd"
 aliases: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 status: active
-review_status: unreviewed
+review_status: human-reviewed
 source_type: journal-article-experiment-and-model
 reading_depth: deep-read
 title_original: "Multiple chiral bands in 137Nd"
@@ -19,7 +19,7 @@ arxiv:
 language: en
 canonical_source: doi:10.1140/epja/s10050-020-00218-5
 zotero_item_key:
-citation_key:
+citation_key: petrache_2020_Multiplechirala
 zotero_uri:
 library_file:
 raw_file: "raw/papers/2020_Petrache et al_Multiple chiral bands in $$^{137}$$Nd.pdf"
@@ -106,4 +106,3 @@ European Physical Journal A 56, 208 (2020)，DOI `10.1140/epja/s10050-020-00218-
 ## Personal Notes
 
 该文是“候选手征带证据不对称”的好例子：新伙伴的能级与连接跃迁是直接事实，手征几何主要由与较强带的系统学和 PRM 支撑。
-

@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: ingest
-updated: 2026-07-01
+updated: 2026-07-02
 ---
 
 # INGEST：来源摄入流程
@@ -18,6 +18,8 @@ updated: 2026-07-01
 5. 若有 Zotero/BibTeX 元数据，记录 citation key、Zotero item key 和 select URI。
 6. 检查 `system/vocabulary.md`、现有 aliases 和文件 slug。
 7. 判断来源类型：实验论文、理论论文、综述、学位论文、会议材料、个人笔记或其他。
+
+citation key 只可在 DOI、题名或文件名能够唯一匹配 BibTeX 条目时写入；无法唯一匹配则留空并在复盘中列出，不得猜测或改写 `.bib`。
 
 ## 2. 阅读深度
 
@@ -51,11 +53,14 @@ updated: 2026-07-01
 每条关键主张标记为：
 
 - 实验事实；
+- 实验判据；
 - 作者解释；
 - 模型结果；
-- 我们的推断。
+- 我们的推断或综合判断。
 
 无法核实的内容标记 `needs-human-review`。
+
+新建页面默认 `review_status: unreviewed`。页面级人工审阅与 claim-level `needs_review` 分开维护；Codex 不得因用户浏览过页面而自动清除具体 claim 的待审状态。
 
 ## 5. 更新领域页面
 
@@ -80,6 +85,8 @@ updated: 2026-07-01
 - `confidence: high`；
 - 概念页或能带页的合并。
 
+只有用户明确确认某条 claim 或明确圈定的一组 claims 已完成复核，Codex 才能把相应 `needs_review: true` 改为 `false`。未复核内容可以帮助定位问题，但不能进入论文级证据池。
+
 ## 7. 收尾
 
 - 更新 `knowledge/index.md` 和 `knowledge/overview.md`；
@@ -87,3 +94,4 @@ updated: 2026-07-01
 - 向 `system/log.md` 追加 ingest 记录；
 - 更新 `system/handoff.md`；
 - 执行 `check.md` 中与本次摄入相关的项目。
+- 最终复盘列出：修改文件、新增 claims、待人工复核的文件与 claims、缺失原始文献、竞争解释和仍未解决的证据缺口。
