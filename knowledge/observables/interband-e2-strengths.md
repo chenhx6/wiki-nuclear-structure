@@ -3,7 +3,7 @@ type: observable
 title: 带间集体 E2 强度
 aliases: [interband E2 strength, B(E2)out, B(E2)out/B(E2)in]
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-04
 status: active
 review_status: unreviewed
 observable_kind: reduced-electric-quadrupole-strength
@@ -50,6 +50,8 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 
 [[sensharma-2020-longitudinal-wobbling-187au]] 的 LW→yrast `B(E2)_out/B(E2)_in` 最大约 0.7，并显著高于 SP→yrast；PRM 较好再现 E2 ratios，但 M1 ratios 存在系统偏差。
 
+[[guo-2022-low-spin-wobbling-187au]] 由其小 mixing ratios 与外部文献的 `B(E2)_in=100-200 W.u.` 估计 `B(E2)_out` 仅数 W.u.，作者据此反对 Band 2 的 collective excitation。该量是派生估计，不是本文 lifetime/absolute-`B(E2)` measurement。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -58,6 +60,7 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
 - [[sensharma-2020-longitudinal-wobbling-187au]]
+- [[guo-2022-low-spin-wobbling-187au]]
 
 ## Evolution Log
 
@@ -66,3 +69,4 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - 2026-07-03：加入 Sensharma 2019 的 TW2 相对 E2 ratios 及无绝对寿命的边界。
 - 2026-07-03：加入 Lv 2022 的 747/526 E2-strength counter-test。
 - 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP relative-E2 对照。
+- 2026-07-04：加入 Guo 2022 的数 W.u. `B(E2)_out` 估计及其外部输入边界。

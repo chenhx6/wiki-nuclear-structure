@@ -1,7 +1,7 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-03
+updated: 2026-07-04
 ---
 
 # 跨会话交接
@@ -9,6 +9,24 @@ updated: 2026-07-03
 ## 当前阶段
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
+
+## 当前执行：Guo 2022 `187Au` low-spin wobbling counter-source（待用户审核）
+
+- 2026-07-04 按 `experiment-ingest + project-ingest` 深读 `raw/papers/2022_Guo et al_Probing the nature of the conjectured low-spin wobbling bands in atomic nuclei3.pdf`；citation key 唯一匹配 `guo_2022_Probingnature`，SHA-256 为 `DE541977E4C8402C905EF8268EBC5707303F4B92F244EB4F59405A70C3473206`。
+- 新建 source 与 HIRFL experiment；source 建立 G22-1 至 G22-17，区分 observed facts、experimental criteria、author interpretation 与 QTR model results。用户已审核 G22-3、G22-4、G22-15，其余 14 条保留 `needs_review: true`。
+- 实验链：108 MeV `175Lu(18O,6n)187Au`；8 segmented clovers 垂直束流，16 coaxial HPGe 分布于 `26°/51°/129°/154°`；约 `5×10^10` fold≥2 events；联合 `R_ac` 与 linear polarization。
+- 对 Sensharma 2020 的直接分歧：Guo 对相同 376/462 keV Band 2→Band 1 links 得到约 `δ=-0.26/-0.28` 的 M1-dominated 小解；指出 Sensharma 未测 connecting-transition polarization、未讨论小 `abs(δ)` branch，并主要把大解与 pure M1 比较。
+- Guo 的 QTR 使用 `ε2=0.21, γ=12°`、Harris `J0/J1` 与 9 个近 Fermi 负宇称轨道，把 Bands 1/2 主要联系到最低/次低 `h9/2` 轨道；这是支持 single-particle reinterpretation 的模型结果，不是实验事实。
+- reported Sensharma band (3) 在 Guo 数据中未见；相近 265/405/414/551 keV sequence 被归入 `188Pt`。已把该粉色 sequence 绑定为 `11/2-、15/2-、19/2-、23/2-` 的负宇称 `α=-1/2` unfavored-signature candidate，并明确 Guo Fig.2 的既有正宇称 “Band 3” 与 Sensharma 新建负宇称 band (3) 不是同一标签。
+- 用户确认 Rupnik `187Ag` β-decay study 在覆盖大量 `187Au` states 至 `I=19/2` 时仍未见该 sequence；该自旋范围覆盖其 `11/2-–19/2-` 低段，已接入 project identity-level counter-evidence。
+- 用户确认 G22-15：`J=j+R`，reported low-spin bandhead 的 `J≈j+1` 对应 `R≈1ħ`、极慢 collective rotation，难以形成高自旋小角 wobbling approximation 所需的进动。
+- project 已从 supporting seed 更新为 two-sided evidence map；Guo 标记为 `counter-source or reinterpretation source against the low-spin longitudinal-wobbling interpretation in 187Au`，不裁决争议。
+- Guo 对 `135Pr/133La/105Pd/183Au/127Xe` 等只作为 broader controversy assessment；未扩展摄入其他核素。TiP 仅记录为低自旋替代机制，不冒充本文对 `187Au` 的直接计算。
+- supplementary material 不在当前 `raw/`，polarization procedure、`σ/I` 处理、QTR 细节与 broader-case reanalysis 保留为证据缺口。
+- 审核后 lint：99 pages、856 Wikilinks、14/14 source hash、0 error、10 warning、14 info；14 info 均为其余 G22 待审 claims，warning 为既有/新增未配置元素、`1p4n` 解析和用户已有 BibTeX 修改。
+- 本轮未修改 `PLAN.md`、`USER_GUIDE.md`、schema、vocabulary、lint 或 `raw/`；用户已有 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 修改继续只读保护。
+- 用户已授权本轮检查通过后 commit/push；提交时必须排除 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib`。下一步继续审核 G22-1、G22-2、G22-5 至 G22-14、G22-16、G22-17。
+- umbrella project `low-spin-wobbling-controversies` 建议后续建立、但本轮暂缓：等待 TiP 原始理论/实验来源或第三个核素直接 counter-source 后再建，避免只由二手 broader assessment 支撑空壳 project。
 
 ## 当前执行：Sensharma 2020 `187Au` longitudinal wobbling（审核完成，待提交）
 

@@ -3,7 +3,7 @@ type: model
 title: 三轴粒子-转子模型
 aliases: [triaxial particle rotor model, TPRM, quasiparticle triaxial rotor, QTR]
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-04
 status: active
 review_status: unreviewed
 model_family: core-particle-coupling
@@ -37,6 +37,7 @@ tags: [triaxiality, odd-a, wobbling]
 - [[ding-2021-131ba-133ce-signature-splitting]] 用 γ=15° 和 10° 分别描述 `131Ba`、`133Ce` 的 S(I)，并扫描 Coriolis attenuation。
 - [[matta-2015-transverse-wobbling-135pr]] 的修改 QTR 用 `J_m,J_s,J_l=7.4,5.6,1.8 ħ²/MeV`、`c=0.116` 拟合 `135Pr` zero-/one-phonon 能量。
 - [[sensharma-2019-two-phonon-wobbling-135pr]] 沿用 `135Pr` 的 `ε=0.16, γ=26°`、上述三个转动惯量和尺度因子，扩展比较逐级 wobbling-phonon energy 与相对 E2 ratios。
+- [[guo-2022-low-spin-wobbling-187au]] 使用 `ε2=0.21, γ=12°`、Harris parameters `J0=25 ħ² MeV^-1, J1=8 ħ⁴ MeV^-3`、irrotational-flow-like γ dependence，并纳入 proton Fermi level 附近 9 个负宇称轨道。
 
 ## Predicted Observables
 
@@ -60,6 +61,8 @@ Sensharma 2019 的 QTR 给出
 
 [[lv-2022-evidence-against-wobbling-135pr]] 使用 `ε2=0.16, γ=26°`、irrotational-flow moments of inertia 与 unfrozen single-particle angular momentum。Fig.3(d) 仅示意 single-particle-excitation realignment 机制；p.5 正文报告五条计算带均显著受该机制影响并发生 short-to-intermediate-axis realignment，逐带细节位于 supplementary material。Fig.4(c) 的近恒定 `j_parallel` 只支持 `j` 与 `I` 近乎平行、同步演化，不直接显示主轴分量。作者将低激发带解释为 tilted-precession bands；计算仍高估 bands 2、5 的部分高自旋能量。
 
+[[guo-2022-low-spin-wobbling-187au]] 的 QTR 波函数把 `187Au` Bands 1/2 主要联系到 `h9/2` 来源的最低/次低轨道，并较好比较本文/早期 internal-conversion data 的 energies、mixing ratios 与相对 transition ratios；作者据此提出 dominant single-particle excitation。该模型结果与 Sensharma 2020 的 large-`δ`/LW PRM interpretation 竞争，不能写成实验事实。详细程序位于当前未收录的 supplementary material；本文提到 TiP 只是 broader low-spin alternative，不是该 `187Au` QTR calculation 的直接结论。
+
 ## Related Models
 
 [[particle-rotor-model]]、[[triaxial-projected-shell-model]]
@@ -73,6 +76,7 @@ Sensharma 2019 的 QTR 给出
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
+- [[guo-2022-low-spin-wobbling-187au]]
 
 ## Evolution Log
 
@@ -81,3 +85,4 @@ Sensharma 2019 的 QTR 给出
 - 2026-07-03：加入 Matta 2015 的 `135Pr` QTR 能量/跃迁比较及定量偏差。
 - 2026-07-03：加入 Sensharma 2019 的 TW2 anharmonicity/E2-ratio 比较及参数继承边界。
 - 2026-07-03：加入 Lv 2022 的 standard-input QTR realignment/TiP counter-interpretation。
+- 2026-07-04：加入 Guo 2022 的 `187Au` multi-orbital QTR single-particle reinterpretation 与 supplementary-material 边界。

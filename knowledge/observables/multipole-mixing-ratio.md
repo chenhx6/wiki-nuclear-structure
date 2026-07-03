@@ -3,7 +3,7 @@ type: observable
 title: 多极混合比
 aliases: [multipole mixing ratio, E2/M1 mixing ratio, mixing ratio, δ]
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-04
 status: active
 review_status: unreviewed
 observable_kind: electromagnetic-transition-observable
@@ -38,6 +38,8 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 
 弱跃迁、有限角度覆盖和系统误差可能产生多解或大不确定度。
 
+angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)` 两个局部解。只比较大解与 pure-M1 曲线，或只依据 polarization 符号而不使用其幅度与不确定度，不能证明已唯一选出 E2-dominated branch。
+
 ## Examples
 
 `131Xe` 的 671、882、1055 keV 连接跃迁 δ 很小，构成反对 wobbling 指认的重要证据。
@@ -50,6 +52,8 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 
 [[sensharma-2020-longitudinal-wobbling-187au]] 报告四条 LW→yrast links 的 `δ` 约为 `-2.67` 至 `-3.72`，而两条 SP→yrast links 为 `-0.06(1)`、`-0.10(1)`；本文未报告 connecting-transition polarization。
 
+[[guo-2022-low-spin-wobbling-187au]] 用独立数据联合 `R_ac` 与 linear polarization，对同一 376/462 keV links 得到约 `δ=-0.26/-0.28` 的小 `abs(δ)` branch，并指出该解与早期 internal-conversion data 更一致。两篇结果构成直接实验冲突，不能把任一 branch 当作无争议事实。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -58,6 +62,7 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
 - [[sensharma-2020-longitudinal-wobbling-187au]]
+- [[guo-2022-low-spin-wobbling-187au]]
 
 ## Evolution Log
 
@@ -66,3 +71,4 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 - 2026-07-03：加入 Sensharma 2019 的 TW2→TW1 mixing-ratio 支持案例。
 - 2026-07-03：加入 Lv 2022 的双解问题与联合 polarization/`R_ac` counter-evidence。
 - 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP angular-distribution 对照。
+- 2026-07-04：加入 Guo 2022 的 `R_ac-P` 小 `abs(δ)` branch 与同一 links 的直接冲突。

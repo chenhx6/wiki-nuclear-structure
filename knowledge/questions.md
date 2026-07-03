@@ -2,7 +2,7 @@
 type: system-questions
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-04
 ---
 
 # Research Questions
@@ -18,7 +18,7 @@ updated: 2026-07-03
 - [ ] `135Pr` 低自旋 yrast/side-band pair 的 mixing ratio、偏振和 `E_wob` 是否在后续独立分析中仍支持 transverse wobbling？（opened 2026-07-03；scope: 135pr/wobbling）
 - [ ] 若 `135Pr` 的 one-phonon assignment 被修订，Sensharma 2019 的 TW2→TW1 数据还能支持何种不依赖 phonon-order 的结构解释？（opened 2026-07-03；scope: 135pr/two-phonon-wobbling）
 - [ ] Matta/Lv 对相同 747、813 keV transitions 的 mixing-ratio 解差异来自哪些 polarization、角关联或分析约定？（opened 2026-07-03；scope: 135pr/wobbling-controversy）
-- [ ] `187Au` LW/SP 的 angular-distribution mixing ratios、increasing `E_wobb` 和 PRM geometry 在后续独立分析中是否保持稳健？（opened 2026-07-03；scope: 187au/longitudinal-wobbling）
+- [ ] `187Au` 的 376/462 keV links 为何在 Sensharma/Guo 分析中落入不同 mixing-ratio branch；reported band (3) 的 `187Au/188Pt` identity、increasing `E_wobb` 与 PRM/QTR geometry 能否在统一分析中自洽？（opened 2026-07-03；updated 2026-07-04；scope: 187au/longitudinal-wobbling）
 
 ## Resolved
 

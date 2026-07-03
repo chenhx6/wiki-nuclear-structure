@@ -139,7 +139,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 3. Sensharma 2019 与 Lv 2022 supplementary material，补齐弱 links、逐带 QTR 成分和主轴分量细节。
 4. Lawrie et al. 2020 *Tilted precession and wobbling in triaxial nuclei*，建立 TiP 理论定义与 wobbling 区分。
 5. Lv et al. 2021 `135Nd` tilted-precession 原始工作，作为 TiP 实验/模型案例；不直接替代 `135Pr` 证据。
-6. Guo 2022 仍作为 future extension；`187Au` 支持方已在 [[187au-longitudinal-wobbling-controversy]] 独立摄入，只作跨质量区判据比较，不作为 `135Pr` 直接证据。
+6. Guo 2022 已在 [[187au-longitudinal-wobbling-controversy]] 独立摄入为 counter/reinterpretation source；其 mixing-ratio 双解与低自旋识别范式批评只作跨质量区判据比较，不作为 `135Pr` 直接实验事实。
 
 ## Data-Analysis Bridge
 
@@ -157,7 +157,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 1. 用户审核本 evidence matrix。
 2. 优先摄入 TiP 理论与实验来源，建立其与 wobbling 的判别框架。
 3. 摄入 Garg 原文/erratum 与三篇论文的相关 supplementary material。
-4. 后续摄入 Guo 2022，并通过独立 `187Au` project 比较低自旋 wobbling 判据的跨质量区适用性。
+4. 通过独立 `187Au` project 比较 Guo 2022 所提低自旋 wobbling 判据与 mixing-ratio 双解问题的跨质量区适用性。
 
 ## Related Sources and Pages
 

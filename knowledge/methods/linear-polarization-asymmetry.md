@@ -42,12 +42,16 @@ tags: [multipolarity, electric-magnetic-character]
 
 [[matta-2015-transverse-wobbling-135pr]] 用 INGA clover 得到 747.0、812.8 keV transitions 的正 asymmetry，并以 593.9 keV signature-partner link 的负 asymmetry 作 M1 对照。只有统计足够的 transitions 才报告可靠结果。
 
+[[guo-2022-low-spin-wobbling-187au]] 用 clover 相邻晶体中垂直/平行方向的 Compton scattering，与 `R_ac` 联合约束 376/462 keV links。该文同时强调：偏振通常只利用相邻晶体，统计误差可能很大；选 mixing-ratio branch 时必须使用偏振幅度与可信不确定度，不能只看正负号。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[matta-2015-transverse-wobbling-135pr]]
+- [[guo-2022-low-spin-wobbling-187au]]
 
 ## Evolution Log
 
 - 2026-07-01：记录与 DCO 的互补及统计限制。
 - 2026-07-03：加入 `135Pr` electric/M1 同核素偏振对照。
+- 2026-07-04：加入 Guo 2022 的联合 `P-R_ac` 选解与偏振误差低估风险。

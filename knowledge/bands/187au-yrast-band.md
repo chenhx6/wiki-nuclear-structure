@@ -3,7 +3,7 @@ type: band
 title: "187Au yrast band"
 aliases: [187Au band 1, 187Au nw=0 band]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 status: ai-draft
 review_status: unreviewed
 nucleus: 187au
@@ -32,11 +32,11 @@ bandhead 和部分低能级的自旋宇称来自早期工作；本文用已知 s
 
 ## Configuration Assignment
 
-作者以接近 half-filled `h9/2` shell 的 proton 与 triaxial rotor 耦合描述本带。
+Sensharma 2020 以接近 half-filled `h9/2` shell 的 proton 与 triaxial rotor 耦合描述本带。Guo 2022 的 QTR 则把 Band 1 主要联系到源自 `h9/2` 子壳层的最低能轨道。
 
 ## Proposed Interpretation
 
-作者把本带作为 `n_w=0` reference band；该标签是 [[187au-longitudinal-wobbling-controversy]] 的争议前提。
+Sensharma 2020 把本带作为 `n_w=0` reference band；Guo 2022 保留 Band 1 的实验身份，但不接受它与 Band 2 构成 wobbling-phonon pair。`n_w=0` 标签是 [[187au-longitudinal-wobbling-controversy]] 的争议前提。
 
 ## Discriminating Observables
 
@@ -46,12 +46,14 @@ bandhead 和部分低能级的自旋宇称来自早期工作；本文用已知 s
 
 ## Competing Interpretations
 
-本带的存在和主要 E2 sequence 属于实验结构；`n_w=0` 与 PRM `h9/2` reference 的对应为作者解释。
+本带的存在和主要 E2 sequence 属于实验结构；`n_w=0` 与 PRM/QTR orbital 对应均为模型解释。Guo 2022 对本带本身的身份争议小于对 Band 2 excitation mechanism 的争议。
 
 ## Sources
 
 - [[sensharma-2020-longitudinal-wobbling-187au]]
+- [[guo-2022-low-spin-wobbling-187au]]
 
 ## Evolution Log
 
 - 2026-07-03：由 Sensharma 2020 建立。
+- 2026-07-04：加入 Guo 2022 的 QTR lowest-`h9/2` orbital 对应与非 wobbling reference 边界。
