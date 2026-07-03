@@ -3,7 +3,7 @@ type: observable
 title: 带间集体 E2 强度
 aliases: [interband E2 strength, B(E2)out, B(E2)out/B(E2)in]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-03
 status: active
 review_status: unreviewed
 observable_kind: reduced-electric-quadrupole-strength
@@ -42,12 +42,15 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 
 `131Xe` 新序列的连接跃迁 E2 成分很小，因此不支持 wobbling。
 
+[[matta-2015-transverse-wobbling-135pr]] 的 Table I 给出 `135Pr` side-to-yrast transitions 的 E2 fractions 与相对 `B(E2_out)/B(E2_in)`；作者将其作为 wobbling 支持证据。没有独立寿命时，这些是 mixed-transition 分解后的相对量，不等同于绝对 `B(E2)`。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
+- [[matta-2015-transverse-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：建立 wobbling 的关键电磁判据。
-
+- 2026-07-03：加入 Matta 2015 Table I 的相对 E2 支持链及绝对强度边界。

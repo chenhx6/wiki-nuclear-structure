@@ -44,12 +44,16 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 
 [[domscheit-1999-triaxial-superdeformation-163lu]] 用 Euroball forward/backward 对 near-90° Clover 构造 DCO 矩阵，并在 Table 1 报告 SD1 衰变跃迁的 `R_DCO`。该表没有为每一行单列多极性栏，数值必须结合门条件、能级差和正文指认使用。
 
+[[matta-2015-transverse-wobbling-135pr]] 称 702.7 keV `135Pr` signature-partner link 的 DCO ratio 支持 pure dipole，但 PRL 未列出具体比值；该赋值需在人工审阅时保留信息缺口。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[domscheit-1999-triaxial-superdeformation-163lu]]
+- [[matta-2015-transverse-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 实验建立。
 - 2026-07-03：加入早期 Euroball 几何实例及“不跨阵列套用经验阈值”的限制。
+- 2026-07-03：加入 Matta 2015 的“正文给出结论但未列具体 DCO 数值”案例。

@@ -15,6 +15,7 @@ updated: 2026-07-01
 - [ ] 除三轴形变外，哪些结构条件决定 wobbling 在 Xe-Ba-Ce-Nd 区出现或消失？（opened 2026-07-01；scope: a130）
 - [ ] `137Nd` D3、D6 能否获得寿命和 B(M1)/B(E2)，从而独立检验 chiral-vibration 指认？（opened 2026-07-01；scope: 137nd/chirality）
 - [ ] 如何在统一模型与 γ 约定下定量分离 signature splitting 中的非轴性和低-j Coriolis mixing？（opened 2026-07-01；scope: 131ba/133ce/signature）
+- [ ] `135Pr` 低自旋 yrast/side-band pair 的 mixing ratio、偏振和 `E_wob` 是否在后续独立分析中仍支持 transverse wobbling？（opened 2026-07-03；scope: 135pr/wobbling）
 
 ## Resolved
 

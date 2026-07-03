@@ -3,7 +3,7 @@ type: observable
 title: Wobbling 能量
 aliases: [wobbling energy, Ewob, E_wob]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-03
 status: active
 review_status: unreviewed
 observable_kind: excitation-energy-difference
@@ -40,13 +40,16 @@ tags: [wobbling, rotational-band]
 
 ## Examples
 
-2024 综述比较多个 TW/LW 案例；当前尚未摄入这些案例的原始实验表。
+[[matta-2015-transverse-wobbling-135pr]] 用
+`E_wob(I)=E(I,n_w=1)-[E(I-1,n_w=0)+E(I+1,n_w=0)]/2`
+计算 `135Pr`，Fig.5 inset 显示实验值在低自旋区下降后回升。该趋势依赖 zero-/one-phonon band assignment，不能脱离电磁跃迁单独裁决。
 
 ## Sources
 
 - [[frauendorf-2024-wobbling-review]]
+- [[matta-2015-transverse-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：建立“趋势不是充分判据”的边界。
-
+- 2026-07-03：加入 Matta 2015 的 Eq.1/Fig.5 原始实验案例。

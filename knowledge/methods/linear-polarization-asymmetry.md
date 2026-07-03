@@ -3,7 +3,7 @@ type: method
 title: 线偏振不对称分析
 aliases: [linear polarization asymmetry, polarization asymmetry, Delta asym]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-03
 status: active
 review_status: unreviewed
 method_type: gamma-ray-polarimetry
@@ -40,11 +40,14 @@ tags: [multipolarity, electric-magnetic-character]
 
 `131Xe` 论文明确指出弱连接跃迁的偏振误差较大，因此主要依赖角关联/角分布约束 δ。
 
+[[matta-2015-transverse-wobbling-135pr]] 用 INGA clover 得到 747.0、812.8 keV transitions 的正 asymmetry，并以 593.9 keV signature-partner link 的负 asymmetry 作 M1 对照。只有统计足够的 transitions 才报告可靠结果。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
+- [[matta-2015-transverse-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：记录与 DCO 的互补及统计限制。
-
+- 2026-07-03：加入 `135Pr` electric/M1 同核素偏振对照。

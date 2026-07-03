@@ -18,6 +18,7 @@ updated: 2026-07-03
 - [[frauendorf-2024-wobbling-review]] - wobbling 的模型、证据与争议综述。
 - [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] - 高自旋转动、带交叉、alignment 与谱学方法的 review/background。
 - [[domscheit-1999-triaxial-superdeformation-163lu]] - 非 A≈130 的 `163Lu` SD 带连接、混合与 UC/PES 三轴形变比较案例。
+- [[matta-2015-transverse-wobbling-135pr]] - `135Pr` transverse-wobbling 解释的原始实验支持来源。
 
 ## Nuclei
 
@@ -26,6 +27,7 @@ updated: 2026-07-03
 - [[133ce]] - 中高自旋多带、三轴性及 N=75 signature splitting。
 - [[137nd]] - 两对候选手征双重带及 chiral-vibration 解释。
 - [[163lu]] - 非 A≈130 的三轴超形变与高自旋转动参照核素。
+- [[135pr]] - 低自旋 yrast/side-band wobbling 争议核素。
 
 ## Bands
 
@@ -35,6 +37,8 @@ updated: 2026-07-03
 - [[131ba-band-2]] / [[133ce-band-2]] - N=75 `νg7/2[404]7/2+` 强耦合 signature-partner 带。
 - [[137nd-d2-d3-doublet]] / [[137nd-d5-d6-doublet]] - 正、负宇称候选手征双重带。
 - [[163lu-sd1]] / [[163lu-sd2]] - 已连接的主 SD 带与连接/解释仍未决的第二条 SD 带。
+- [[135pr-yrast-band]] / [[135pr-side-band]] - Matta 2015 的 zero-/one-phonon 候选 band pair。
+- [[135pr-signature-partner-band]] / [[135pr-dipole-band]] - 同核素的 signature-partner 对照与 3qp dipole 序列。
 
 ## Concepts
 
@@ -56,6 +60,8 @@ updated: 2026-07-03
 - [[galileo-131ba-c13-65mev]] - `122Sn(13C,4n)131Ba`、65 MeV、GALILEO。
 - [[afrodite-133ce-c12-57mev]] - `125Te(12C,4n)133Ce`、57 MeV、AFRODITE。
 - [[legnaro-euroball-163lu-si29-145mev]] - 145 MeV `139La(29Si,5n)163Lu`；同实验 4n 道产生的 `164Lu` 另文讨论。
+- [[atlas-gammasphere-135pr-o16-80mev]] - 80 MeV `123Sb(16O,4n)135Pr` 的高统计符合与角分布数据。
+- [[tifr-inga-135pr-o16-80mev]] - 同反应的 INGA clover 偏振数据。
 
 ## Models
 
@@ -96,7 +102,8 @@ updated: 2026-07-03
 
 ## Projects
 
-- [[a130-high-spin-collective-modes-evidence-map]] - 连接现有 8 个 source、竞争解释与后续数据处理结果的轻量工作台。
+- [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
+- [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands wobbling 争议；当前只录入 Matta 2015 支持链。
 
 ## Decisions and Failures
 

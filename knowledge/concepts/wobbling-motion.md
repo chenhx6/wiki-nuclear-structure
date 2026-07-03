@@ -35,6 +35,8 @@ tags: [triaxiality, collective-motion, high-spin]
 
 [[frauendorf-2024-wobbling-review]] 把集体增强 interband E2 作为核心实验标志。
 
+[[matta-2015-transverse-wobbling-135pr]] 报告 `135Pr` 候选带间 ΔI=1 transitions 的较大 E2 fractions 与正 polarization asymmetry，并由此提出 zero-/one-phonon wobbling pair。
+
 ## Counter-evidence and Competing Interpretations
 
 [[chakraborty-2023-131xe-wobbling-origin]] 中，新序列的 ΔI=1 连接跃迁几乎为 M1，因而支持 signature partner 而非 wobbling。
@@ -43,7 +45,7 @@ tags: [triaxiality, collective-motion, high-spin]
 
 ## Related Nuclei and Bands
 
-当前已建立 `131Xe` 反例链，并加入 [[163lu]] SD2 的未决原始实验案例。
+当前已建立 `135Pr` 支持方、`131Xe` 反例链，并加入 [[163lu]] SD2 的未决原始实验案例。
 
 ## Our Current Position
 
@@ -54,8 +56,10 @@ tags: [triaxiality, collective-motion, high-spin]
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[domscheit-1999-triaxial-superdeformation-163lu]]
+- [[matta-2015-transverse-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01（2 sources）：建立综述判据，并加入 `131Xe` 的反证案例。
 - 2026-07-03（3 sources）：加入 `163Lu` SD2；缺少 linking-transition 多极性时保留 wobbling 为推测。
+- 2026-07-03（4 sources）：加入 Matta 2015 的 `135Pr` 原始支持证据，不裁决后续争议。

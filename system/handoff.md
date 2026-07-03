@@ -10,6 +10,16 @@ updated: 2026-07-03
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：Matta 2015 `135Pr`（审核完成，待提交）
+
+- 2026-07-03 按 `experiment-ingest + project-ingest` 深读 `raw/papers/2015_Matta et al_Transverse Wobbling in Pr 135.pdf`；citation key 唯一匹配 `matta_2015_TransverseWobbling`，SHA-256 为 `8DB644705DCCFD58016753B759D19314A65284C48EFC1758F95F1B3CE23551D6`。
+- 新建 source、`135Pr` nucleus、yrast/side/signature-partner/dipole 四条 band、ATLAS-Gammasphere 与 TIFR-INGA 两套 experiment，以及争议 project `knowledge/projects/135pr-wobbling-controversy.md`。
+- source 建立 M15-1 至 M15-15；用户已完成页面级审核并确认全部 Key Results 与原文对照无误，source 为 `human-reviewed`，M15-1 至 M15-15 均为 `needs_review: false`。
+- project 只把 Matta 2015 标为 `supporting source for transverse-wobbling interpretation`；2022 Lv/Guo 等仅列为未来反方摄入候选，未概述其结论，也未裁决争议。
+- 更新 transverse-wobbling、wobbling-motion、wobbling-energy、mixing-ratio、interband-E2、DCO、polarization、TAC、QTR、index、overview 和 questions。
+- 审核后 lint 目标统计为 85 pages、629 Wikilinks、10/10 source hash、0 error、5 warning、0 info。warning 包括用户 `.bib`、既有 Lu 元素配置和新 `16O` 反应元素配置提示；不修改 lint 配置。
+- 用户已授权 commit/push；显式排除 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib`。
+
 ## 最近一次执行：Domscheit 1999 `163Lu`
 
 - 2026-07-03 以 experiment-ingest + project-ingest 深读 `raw/papers/1999_Domscheit et al_Triaxial superdeformation in 163Lu.pdf`；citation key 唯一匹配 `domscheit_1999_Triaxialsuperdeformation`，PDF SHA-256 为 `EDDE41A90870CBA7451DA6D93579017EEB046D060513AA69B24661BA5A72B7C8`。
