@@ -5,8 +5,8 @@ aliases: [135Pr wobbling controversy, 135Pr low-spin bands evidence map]
 created: 2026-07-03
 updated: 2026-07-03
 status: active
-review_status: unreviewed
-project_stage: competing-evidence
+review_status: human-reviewed
+project_stage: competing-evidence-matrix
 confidentiality: private
 nuclei: [135pr]
 tags: [135pr, wobbling, controversy, evidence-map, project]
@@ -16,113 +16,148 @@ tags: [135pr, wobbling, controversy, evidence-map, project]
 
 ## Project Purpose
 
-这是争议型研究工作台，用于跟踪 `135Pr` low-spin bands 是否应解释为 wobbling bands。当前并列 Matta 2015、Sensharma 2019 的支持链与 Lv 2022 的反证，不裁决谁正确。
+这是争议型研究工作台，用于整理 `135Pr` low-spin bands 的 wobbling 支持链、反证链、模型解释和证据缺口。它不是论文草稿，不裁决 Matta 2015、Sensharma 2019 与 Lv 2022 谁最终正确，也不声称已覆盖全部相关文献。
 
 ## Research Question
 
-Matta 2015 中的 [[135pr-yrast-band]] 与 [[135pr-side-band]] 是否满足 transverse-wobbling 的实验与模型判据？Sensharma 2019 的 [[135pr-second-side-band]] 是否在此前提下构成稳健的 two-phonon extension？这些判据在后续独立分析中是否保持稳健？
+Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Sensharma 2019 的 second side band 是否构成稳健的 two-phonon extension？Lv 2022 的联合 polarization/angular-correlation 反证和 TiP 模型是否改变这些指认的证据强度？
 
 ## Current Hypotheses
 
-- H1：Matta 2015 的 yrast/side-band pair 可解释为 `n_w=0/1` transverse-wobbling bands；
-- H1a：若 H1 成立，Sensharma 2019 的 second side band 可解释为 `n_w=2` two-phonon extension；
-- H2：相同能级与连接跃迁可能存在 signature-partner、组态混合或其他非 wobbling 解释；
-- 当前状态：已录入 H1/H1a 的支持来源与 H2 的首篇 counter-source，不比较最终证据权重。
+- H1：yrast/side-band pair 可解释为 `n_w=0/1` transverse-wobbling bands；
+- H1a：若 H1 成立，second side band 可解释为 `n_w=2` extension；
+- H2：相同结构可由 signature-partner、single-particle realignment 或 tilted-precession 等非 wobbling 机制解释；
+- 当前状态：三种来源角色并列，不比较最终胜负。
+
+## Source Roles and Independence
+
+| Source | Project role | Evidence independence |
+|---|---|---|
+| [[matta-2015-transverse-wobbling-135pr]] | supporting source for transverse-wobbling interpretation | ATLAS/Gammasphere 与 TIFR/INGA 原始数据 |
+| [[sensharma-2019-two-phonon-wobbling-135pr]] | supporting source for two-phonon extension | 独立高统计 DGS 数据，但 `n_w=2` hierarchy 继承 Matta 的 `n_w=0/1` assignment |
+| [[lv-2022-evidence-against-wobbling-135pr]] | counter-source against low-spin wobbling interpretation | 独立 JUROGAM II 数据与重新分析；对 Matta/Garg/erratum 的比较仍需回到各原始来源 |
 
 ## Evidence Available
 
-### Supporting Source for Transverse-Wobbling Interpretation
+以下矩阵按证据类型整理，并沿用三篇 source 的 claim ID 与 locator。
 
-[[matta-2015-transverse-wobbling-135pr]] 是既有 transverse-wobbling 核心支持 source。
+## Observed Facts
 
-| Evidence note | Evidence class | Locator | 当前作用 |
+| Observation | Source claim and locator | Evidence role |
+|---|---|---|
+| yrast、side、signature-partner 与 dipole sequences 及其连接关系 | Matta M15-2；pp.2-3, Fig.1 | 建立 one-phonon 争议对象 |
+| 747.0、812.8、754.6 keV links 的 `δ=-1.24(13), -1.54(9), -2.38(37)` 与 60.6%-85.0% E2 fractions | Matta M15-4；pp.3-4, Fig.2, Table I | 支持 E2-rich links |
+| 747.0、812.8 keV 的 polarization asymmetry 为 `0.047(12), 0.054(34)` | Matta M15-5；pp.3-4, Fig.3, Table I | Matta 用正号支持 electric character |
+| 593.9 keV signature-partner link 的 `δ=-0.16(4)`、负 asymmetry 与 2.5% E2 fraction | Matta M15-6；pp.3-4, Figs.2-3, Table I | 同核素 M1-dominated 对照 |
+| Matta 定义的 `E_wob` 在低自旋区从约 0.4 MeV 降至约 0.15 MeV 后回升 | Matta M15-9；pp.3,5, Eq.1, Fig.5 inset | transverse 分类所用能量趋势 |
+| 新侧带通过 450.2、550.5、517.1、571.7 keV links 连接 TW1 | Sensharma S19-2；pp.171-172, Fig.1 | 建立 two-phonon 争议对象 |
+| 450.2、550.5、517.1 keV links 的大 `abs(δ)` 与 78.5%-92.4% E2 fractions | Sensharma S19-4；p.172, Fig.2 | 支持 TW2→TW1 E2-rich links |
+| Sensharma 未测绝对 transition probabilities；Fig.3 为强度与 mixing ratio 导出的相对 E2 ratios | Sensharma S19-5；p.172, text below Figs.2-3 | 限制 collectivity 强度 |
+| Sensharma 的实验 `E_wob(TW2)` 随自旋下降 | Sensharma S19-6；pp.172-173, Fig.4 | two-phonon transverse 分类所用趋势 |
+| Lv 联合 `P-R_ac` 得到 747.3、813.2、450.2 keV 的 `δ=-0.47(+0.09/-0.22), -0.37(+0.10/-0.14), -0.31(+0.10/-0.13)` | Lv L22-4；p.3, Fig.2, Table 1 | 三条关键 links 均为小 `abs(δ)` 解 |
+| Lv 将上述三条 links 的 magnetic character 估计为约 82%、88%、91% | Lv L22-5；p.3, text below Fig.2 | 直接反对 E2-dominated links |
+| 755.1 keV 太弱而无 polarization；其 `R_ac=0.50(6)` 与 813.2 keV 的 `0.48(6)` 接近 | Lv L22-6；p.3, Table 1 | 未完全闭合的 linking-transition 证据 |
+| `B(E2;747)/B(E2;526)=0.7(+0.7/-0.5)` | Lv L22-7；p.3, final left-column paragraph | Lv 用于检验 wobbling-to-yrast 与 signature-partner decay |
+| Lv 不再把 827、764、1009 keV 组成同一 rotational band | Lv L22-2；p.2, Fig.1 and final paragraph | 反对 Sensharma 的 TW2 grouping |
+
+## Experimental Criteria and Core Controversies
+
+| Controversy | Supporting use | Counter-evidence / limitation | Current project status |
 |---|---|---|---|
-| Fig.1 的 yrast 与 side-band 通过 ΔI=1 transitions 相连 | observed fact | Fig.1, pp.2-3 | 建立待解释的 band pair |
-| 747.0、812.8、754.6 keV 的大 `|δ|` 与 60.6%-85.0% E2 fractions | observed fact | Fig.2, Table I | 支持连接跃迁有显著 E2 成分 |
-| 747.0、812.8 keV 的正 polarization asymmetry | observed fact | Fig.3, Table I | 独立支持主要 electric character |
-| 593.9 keV signature-partner link 的小 `|δ|`、负 asymmetry 与 2.5% E2 fraction | observed fact / comparison | Figs.2-3, Table I | 提供主要 M1 的同核素对照 |
-| ΔI=1、E2-dominated interband transitions 区分 wobbling 与普通 signature partners | experimental criterion | p.3 | Matta 2015 采用的核心判据 |
-| Eq.1/Fig.5 的 `E_wob(I)` 在低自旋区下降 | observed fact / criterion | Eq.1, Fig.5 inset | Matta 2015 用于 transverse 分类 |
-| zero-/one-phonon 与 transverse-wobbling 指认 | author interpretation | pp.2-5 | 支持方结论，不是裸观测 |
-| TAC/QTR 对能量、组态、转动惯量和 transition ratios 的比较 | model result | Figs.4-5, Table I | 提供模型一致性及定量偏差 |
+| Connecting transitions 是否 E2 dominated | Matta M15-4/M15-5；Sensharma S19-3/S19-4 | Lv L22-4/L22-5 给出相同 747/813/450 keV links 的小 `abs(δ)` 与 M1 dominance | 核心未决；必须比较拟合、偏振响应和误差处理 |
+| Mixing ratio 是否存在双解 | Matta/Sensharma 采用 angular-distribution 的大 `abs(δ)` 解 | Lv L22-3；pp.2-3, Fig.2：`χ²` 拟合可给出大/小 `abs(δ)` 两解 | 不能只由 angular distribution 选择 |
+| Polarization sign 与 magnitude 如何使用 | Matta M15-5 用正 asymmetry 支持 electric character | Lv L22-8；pp.2-3：正号本身不唯一选择大 `abs(δ)`，应联合 polarization magnitude 与 `R_ac` | 需要方法级复核与相同响应约定下重算 |
+| 是否所有关键 links 都有 polarization | Matta 有 747、813 keV；Sensharma 主要用 angular distribution/DCO-like ratios | Matta 754.6/710.2、Sensharma 450/551/519/571.7 并非都有 polarization；Lv 的 755 keV 仍太弱 | 覆盖不完整，不能把已测两三条外推到全部 links |
+| Wobbling-energy trend | Matta M15-9；Sensharma S19-6 报告低自旋下降 | 趋势依赖 `n_w=0/1/2` band assignment；Lv 重组 TW2 level scheme | 可作条件性判据，不能独立裁决 |
+| Signature partner 与 wobbling band 区分 | Matta M15-6/M15-8：wobbling links E2-rich，signature-partner links M1-rich | Lv 的 band 3 links 也呈 M1 dominance；L22-7 的 747/526 ratio 不符合其 wobbling 预期 | 需要相同数据处理下比较两类 decay |
+| Two-phonon hierarchy | Sensharma S19-8/S19-9：`n_w=0/1/2` assignment | 依赖 Matta one-phonon assignment；Lv L22-2/L22-10 重组能级并反对 450 keV link | 非独立证据链 |
 
-### Supporting Source for Two-Phonon Wobbling Interpretation
+## Author Interpretations
 
-[[sensharma-2019-two-phonon-wobbling-135pr]] 是 two-phonon extension 的支持 source。
+| Interpretation | Source and locator | Evidence boundary |
+|---|---|---|
+| yrast/side bands 为 `n_w=0/1` transverse-wobbling pair | Matta M15-3/M15-10；pp.2-5 | 作者解释；依赖 E2-link 与 `E_wob` 判据 |
+| 新侧带为 `n_w=2` two-phonon transverse wobbling | Sensharma S19-8/S19-9；pp.170-174 | 作者解释；继承 Matta assignment |
+| band 3 与第二个 `19/2-` state 不具有 one-/two-phonon wobbling 性质 | Lv L22-11；p.3 and p.5 Summary | counter-interpretation；不等于 project 裁决 |
+| 低激发带为基于 `πh11/2` 的 tilted-precession bands | Lv L22-13；pp.4-5 and Summary | 模型依赖解释；逐带轴分量细节在 supplementary material |
 
-| Evidence note | Evidence class | Locator | 当前作用 |
-|---|---|---|---|
-| 新的 second side band 通过 450.2、550.5、517.1、571.7 keV 四条 ΔI=1 transitions 连接 TW1 | observed fact | Fig.1, pp.171-172 | 建立待解释的 TW2/TW1 band pair |
-| 450.2、550.5、517.1 keV links 的 DCO-like ratios | observed fact | Table 1 | 约束连接跃迁 multipolarity |
-| 三条 links 的 `δ=-1.91,-2.26,-3.48` 与约 78.5%-92.4% E2 fractions | observed fact | Fig.2 | 支持连接跃迁以 E2 为主 |
-| 由强度与 mixing ratio 得到的相对 `B(E2)_out/B(E2)_in` | observed fact / limitation | Fig.3 | 比较 interband collectivity；不是绝对 `B(E2)` |
-| `E_wob(TW2)` 随自旋下降 | observed fact / criterion | Fig.4 | 支持方用于 transverse 分类 |
-| `n_w=0/1/2` 与 two-phonon 指认 | author interpretation | pp.170-174 | 支持方结论，不是裸观测 |
-| QTR/TPSM 的能量、anharmonicity 与 E2-ratio 比较 | model result | Figs.3-4 | 模型一致性、差异与局限 |
+## Model Results
 
-### Assignment Dependency
+| Model use | Source claim and locator | Limitation |
+|---|---|---|
+| TAC 给出 1qp yrast、3qp dipole、5qp high-spin yrast 组态与短轴稳定转轴 | Matta M15-11/M15-12；pp.3-4, Fig.4 | mean-field 与组态依赖；不是电磁跃迁测量 |
+| 修改 QTR 拟合 zero-/one-phonon energies 和 transition ratios | Matta M15-13/M15-14；pp.4-5, Table I, Fig.5 | 转动惯量经拟合；低估 E2-out、高估 M1-out |
+| QTR/TPSM 给出强 anharmonicity 与相对 E2 ratios | Sensharma S19-10-S19-13；p.173, Figs.3-4 | QTR 继承 Matta 参数；TPSM 未给出 angular-momentum geometry |
+| standard-input QTR 允许 unfrozen single-particle realignment | Lv L22-12/L22-13；pp.4-5, Figs.3-4 | Fig.3(d) 是机制示意；realignment 为 p.5 作者陈述，Fig.4(c) 只显示近恒定 `j_parallel` |
+| Lv QTR 对 bands 1、3、4 energies、747/813 mixing ratios 与 813 transition ratio 给出较好比较 | Lv L22-13；p.5, Fig.4(a,b,d) | bands 2、5 尤其高自旋处能量被高估 |
 
-Sensharma 2019 的证据链不是对 Matta 2015 的独立重复：它把 Matta 的 yrast/TW1 assignment 作为 `n_w=0/1` 基础，再由新带到 TW1 的连接跃迁建立 `n_w=2` hierarchy。若后续分析改变 TW1 的 one-phonon interpretation，TW2 的 two-phonon interpretation 也必须随之重评；新 γ 线和角分布结果本身仍可作为独立观测保留。
+## Counter-Evidence Summary
 
-### Opposition and Alternative Interpretations
+1. 相同 747、813、450 keV links 在支持方与 Lv 中得到相反的 mixing-ratio branch。
+2. Polarization 正号是否足以选择大 `abs(δ)` 是方法学争议，且关键 links 的 polarization 覆盖不完整。
+3. Lv 的相对 E2-strength test 与能级重组同时削弱 one-/two-phonon hierarchy。
+4. Lv 的 standard-input QTR 提供 tilted-precession/realignment 替代解释，但它仍是参数与模型依赖结果。
 
-[[lv-2022-evidence-against-wobbling-135pr]] 标记为 `counter-source against low-spin wobbling interpretation`。
+## Paper Evidence Gate
 
-| Counter-evidence note | Evidence class | Locator | 针对的支持证据 |
-|---|---|---|---|
-| angular-distribution 拟合存在大/小 `abs(δ)` 双解 | experimental criterion | pp.2-3, Fig.2 | Matta/Sensharma 采用的大 `abs(δ)` 解 |
-| 747、813、450 keV 的联合 `P-R_ac` 分析均给出 `abs(δ)<1` | observed fact | p.3, Fig.2, Table 1 | Matta one-phonon links 与 Sensharma 450 keV two-phonon link |
-| 三条 links 被估计为约 82%、88%、91% magnetic | observed fact | p.3 | E2-dominated wobbling criterion |
-| 755 keV 无 polarization；551、519 keV 未有本文的新联合分析 | evidence gap | pp.2-3 | 支持链中未测 polarization 的 links |
-| `B(E2;747)/B(E2;526)=0.7(+0.7/-0.5)` | observed fact | p.3 | wobbling-to-yrast 应显著强于到 signature partner 的预期 |
-| 827、764、1009 keV 不再组成同一 rotational band | observed fact / assignment | p.2, Fig.1 | Sensharma 的 TW2 grouping |
-| 作者在 p.5 正文报告 standard-input QTR 的五条带发生 short-to-intermediate-axis realignment；Fig.3(d) 是机制示意，Fig.4(c) 只显示近恒定 `j_parallel` | model result / evidence boundary | pp.4-5, Fig.3(d), text before Fig.4, Fig.4(c) | frozen short-axis transverse-wobbling 图景 |
+| Material | Gate status | Required use |
+|---|---|---|
+| 三篇 source 中 M15-1-M15-15、S19-1-S19-13、L22-1-L22-13 | eligible evidence pool | source/claim 已人工复核、citation key 与 locator 完整；写作时仍须回到 raw，并保持 claim kind |
+| 能级、transition energy、mixing ratio、polarization、`R_ac`、相对 transition ratio | eligible as reported observation | 必须引用对应原始 source，不能只引用本 project |
+| transverse wobbling、two-phonon wobbling、TiP/realignment | eligible only as attributed interpretation/model result | 必须使用“作者解释/模型计算”，不得写成裸事实 |
+| Lv L22-9 对 Matta/Garg/erratum 的比较 | follow-up lead only | 当前只摄入 Lv 的二手比较；Garg 原文、erratum 与相关质疑尚未分别进入 evidence gate |
+| Lv 逐带 realignment 细节 | incomplete | 正文指向 supplementary material；补充材料未单独摄入前不能扩写主轴分量细节 |
+| 本 project 的矩阵与综合句 | navigation/synthesis only | project `review_status: unreviewed`，且综合页不能替代原始 source |
 
-Lv 2022 将结果解释为 tilted-precession bands；这是 counter-interpretation，不是 project 裁决。Guo 2022 等其他反方来源仍待独立摄入。
+## Needs Review
 
-### Evidence Gaps
+- 三篇 source 的 41 条结构化 claims 当前均为 `needs_review: false`。
+- 用户已审核本 project 的 evidence matrix 与其余章节，页面为 `review_status: human-reviewed`。
+- 没有新增 project-level claim ID；矩阵条目沿用 M15、S19、L22 source claim IDs。
 
-- PRL 未公开完整逐门 coincidence、DCO、angular-distribution 与 asymmetry 分析；
-- 702.7 keV 的 DCO ratio 数值未列出；
-- 710.2 keV 缺直接 mixing ratio 和 polarization；
-- Table I 的 E2 fractions/相对 probability ratios 不是绝对寿命测量；
-- Sensharma 2019 只有三条最低能 TW2→TW1 links 给出完整角分布与 mixing ratio，且未报告 linear polarization；
-- Sensharma 2019 的相对 E2 ratios 同样缺少本文独立寿命测量；
-- two-phonon 指认依赖 Matta 2015 的 one-phonon assignment，证据独立性有限；
-- Lv 2022 未对 755、551、519 keV 全部给出新的联合 polarization/`R_ac` mixing ratios；
-- Matta/Garg/erratum 的 polarization 差异仍需分别摄入原始来源；
-- 需要区分“数据是否成立”“mixing-ratio 提取是否稳健”“这些量是否足以证明 wobbling”三个问题。
+## Unresolved Issues
 
-## Analysis Status
-
-已并列 Matta 2015/Sensharma 2019 支持链与 Lv 2022 counter-evidence，未形成裁决性 synthesis。
-
-## Data-Analysis Bridge
-
-当前没有用户数据处理结果。后续如加入重新拟合的 angular distribution、polarization、DCO、mixing ratio 或 band assignment，应记录输入谱、门条件、响应函数、误差和与 Table I 的逐项差异。
-
-## Decisions
-
-- Matta 2015 标记为 `supporting source for transverse-wobbling interpretation`；
-- Sensharma 2019 标记为 `supporting source for two-phonon wobbling interpretation`；
-- Lv 2022 标记为 `counter-source against low-spin wobbling interpretation`；
-- 明示 Sensharma 的 phonon hierarchy 依赖 Matta 的 `n_w=0/1` assignment；
-- source 中 observed facts、experimental criteria、author interpretation 和 model results 分层；
-- project 不把支持方术语写成最终事实，不预设后续反方结论。
+- 需要在统一的 detector response、polarization convention 与 angular-correlation treatment 下复核 747、813、450 keV 的两组 `δ` 解。
+- 需要区分 polarization sign、magnitude 与 `R_ac` 各自能排除哪些解。
+- 754/755、710、551、519、571.7 keV 等 links 的 polarization/mixing-ratio 证据仍不完整。
+- 缺少统一寿命测量与绝对 `B(E2)`，现有 E2 fractions/ratios 不能完全替代 collectivity 测量。
+- Lv 对 TW2 level grouping 的重组需要逐条 coincidence 与 intensity-balance 对照。
+- TiP 与 wobbling 的角动量几何区分仍需要专门理论来源和更直接的 axis-component observables。
 
 ## Risks and Blockers
 
-- 两篇支持文献共享 band assignment 前提，不能按两条完全独立证据计数；
-- mixing ratio 与 E2 fraction 对角分布拟合、弱跃迁统计和约定敏感；
-- TAC/QTR 参数拟合与 band assignment 之间存在相互依赖；
-- 在反方 source 摄入前，不能进行公平的解释比较。
+- 相同 transition 的 mixing-ratio branch 选择尚未在统一分析链下复算；
+- 支持方两篇论文的 phonon hierarchy 不是完全独立证据；
+- 关键弱 links 缺 polarization，且三篇论文均未提供统一的绝对 `B(E2)` 数据集；
+- TiP 的逐带角动量几何仍依赖尚未摄入的 supplementary material 与理论原始来源；
+- 当前 project matrix 未人工审核，不能替代三篇 source/raw 进入论文正文。
+
+## Follow-Up Sources
+
+1. Garg et al. 2015 `135Pr` polarization 原始论文及其 erratum，用于独立核对 Lv L22-9。
+2. Matta 2015 所称后续完整 coincidence/angular-distribution/asymmetry 分析或 supplementary information。
+3. Sensharma 2019 与 Lv 2022 supplementary material，补齐弱 links、逐带 QTR 成分和主轴分量细节。
+4. Lawrie et al. 2020 *Tilted precession and wobbling in triaxial nuclei*，建立 TiP 理论定义与 wobbling 区分。
+5. Lv et al. 2021 `135Nd` tilted-precession 原始工作，作为 TiP 实验/模型案例；不直接替代 `135Pr` 证据。
+6. Guo 2022 仍作为 future extension；`187Au` 支持方已在 [[187au-longitudinal-wobbling-controversy]] 独立摄入，只作跨质量区判据比较，不作为 `135Pr` 直接证据。
+
+## Data-Analysis Bridge
+
+当前没有用户数据处理结果。后续重新拟合 angular distribution、polarization、DCO/`R_ac` 或 mixing ratio 时，应记录原始谱、gate、角度分组、polarization calibration、响应函数、branch selection、误差面和与三篇论文的逐项差异。
+
+## Decisions
+
+- 保留支持链、反证链和替代模型，不形成最终物理裁决。
+- Matta 2015 与 Sensharma 2019 不是两条完全独立的 phonon-assignment 证据。
+- Lv 2022 的独立实验数据与模型解释分开计入。
+- project 不替代 source/raw，不直接作为论文引用。
 
 ## Next Actions
 
-1. 用户审核 Lv 2022 source 与 L22 claims。
-2. 摄入 2022 Guo et al. 对低自旋 wobbling 候选的理论/判据分析。
-3. 继续并列双方对相同 transitions、mixing ratios、polarization 和 band assignment 的陈述。
-4. 完成更多反方来源后再决定是否建立独立 synthesis；本 project 本身不裁决。
+1. 用户审核本 evidence matrix。
+2. 优先摄入 TiP 理论与实验来源，建立其与 wobbling 的判别框架。
+3. 摄入 Garg 原文/erratum 与三篇论文的相关 supplementary material。
+4. 后续摄入 Guo 2022，并通过独立 `187Au` project 比较低自旋 wobbling 判据的跨质量区适用性。
 
 ## Related Sources and Pages
 
@@ -130,9 +165,9 @@ Lv 2022 将结果解释为 tilted-precession bands；这是 counter-interpretati
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
-- [[135pr-second-side-band]]
+- [[135pr-yrast-band]]、[[135pr-side-band]]、[[135pr-second-side-band]]、[[135pr-signature-partner-band]]
 - [[wobbling-motion]]、[[transverse-wobbling]]、[[signature-partner-bands]]
 - [[multipole-mixing-ratio]]、[[interband-e2-strengths]]、[[wobbling-energy]]
-- [[dco-ratio]]、[[linear-polarization-asymmetry]]
-- [[tilted-axis-cranking]]、[[triaxial-particle-rotor-model]]
-- [[triaxial-projected-shell-model]]
+- [[dco-ratio]]、[[linear-polarization-asymmetry]]、[[two-point-angular-correlation-ratio]]
+- [[tilted-axis-cranking]]、[[triaxial-particle-rotor-model]]、[[triaxial-projected-shell-model]]
+- [[187au-longitudinal-wobbling-controversy]]
