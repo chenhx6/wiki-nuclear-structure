@@ -3,7 +3,7 @@ type: method
 title: DCO 比值分析
 aliases: [DCO ratio, RDCO, directional correlation from oriented states]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-03
 status: active
 review_status: unreviewed
 method_type: gamma-ray-angular-correlation
@@ -42,10 +42,14 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 
 [[chakraborty-2023-131xe-wobbling-origin]] 使用 40°、90°、125° INGA 数据约束 671、882、1055 keV 等跃迁。
 
+[[domscheit-1999-triaxial-superdeformation-163lu]] 用 Euroball forward/backward 对 near-90° Clover 构造 DCO 矩阵，并在 Table 1 报告 SD1 衰变跃迁的 `R_DCO`。该表没有为每一行单列多极性栏，数值必须结合门条件、能级差和正文指认使用。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
+- [[domscheit-1999-triaxial-superdeformation-163lu]]
 
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 实验建立。
+- 2026-07-03：加入早期 Euroball 几何实例及“不跨阵列套用经验阈值”的限制。

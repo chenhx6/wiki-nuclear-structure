@@ -3,7 +3,7 @@ type: observable
 title: 转动惯量
 aliases: [moments of inertia, kinematic moment of inertia, dynamic moment of inertia, J1, J2]
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 status: active
 review_status: unreviewed
 observable_kind: rotational-response
@@ -34,6 +34,13 @@ tags: [rotation, backbending, band-crossing, alignment]
 
 \(J^{(2)}\) 对带交叉和二阶差分很敏感。综述在 pp.996-997 明确警告，带交叉与 alignment 可混淆对 pairing collapse 的推断。
 
+[[domscheit-1999-triaxial-superdeformation-163lu]] 的 Fig.4 给出具体限制：SD1 低频 `J^(2)` 的强波动可由同自旋宇称 SD-ND 态混合造成；校正约 5 keV 的能级排斥后曲线更平滑。SD2 的 `J^(1)` 还依赖最低自旋 `39/2` 的暂定假设。两带相近的转动惯量支持相近形变，但不能单独确定三轴性或 wobbling。
+
 ## Sources
 
 - [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]]
+- [[domscheit-1999-triaxial-superdeformation-163lu]]
+
+## Evolution Log
+
+- 2026-07-03：加入 `163Lu` 的带混合校正和自旋假设依赖案例。

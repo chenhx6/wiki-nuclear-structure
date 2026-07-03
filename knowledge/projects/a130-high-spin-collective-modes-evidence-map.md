@@ -3,7 +3,7 @@ type: project
 title: "A≈130 high-spin collective modes evidence map"
 aliases: [A130 high-spin evidence map, A≈130 高自旋集体模式证据图]
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 status: active
 review_status: unreviewed
 project_stage: seed
@@ -28,7 +28,7 @@ tags: [a130, high-spin, evidence-map, data-analysis, project]
 
 ## Current Scope
 
-当前仅基于 Wiki 已有 7 个 source 和 [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]]。De Voigt 1983 只提供 review/background；具体核素结论仍以原始实验或理论 source 为准。当前集合不代表 A≈130 文献完整覆盖。
+当前核心范围仍仅基于 Wiki 已有 7 个 A≈130 相关 source 和 [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] 的 review/background。另加入 [[domscheit-1999-triaxial-superdeformation-163lu]] 作为非 A≈130 的 deformation 判据比较参照，不计入 A≈130 核心证据。当前集合不代表 A≈130 文献完整覆盖。
 
 ## Current Hypotheses
 
@@ -50,6 +50,12 @@ tags: [a130, high-spin, evidence-map, data-analysis, project]
 | [[chakraborty-2023-131xe-wobbling-origin]] | `131Xe` wobbling/signature 竞争解释实验来源 |
 | [[frauendorf-2024-wobbling-review]] | wobbling 模型、证据与争议的现代综述 |
 | [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] | 转动带、alignment、backbending 与实验方法的历史背景综述 |
+
+### Comparative Non-A≈130 Background
+
+| Source | 当前角色 |
+|---|---|
+| [[domscheit-1999-triaxial-superdeformation-163lu]] | `163Lu` 的 SD-ND linking、四极矩/转动惯量与 UC/PES 三轴极小值；仅用于 deformation 判据和模型-实验边界参照 |
 
 ## Evidence Available
 
@@ -84,6 +90,7 @@ tags: [a130, high-spin, evidence-map, data-analysis, project]
 
 - 当前来源只覆盖少量核素和问题，不构成系统书目；
 - 多个 wobbling/chiral 候选仍缺寿命、绝对跃迁强度或可靠 mixing ratio；
+- `163Lu` 比较案例显示，大四极矩与相近转动惯量仍不能区分 γ 符号；缺少 linking-transition 多极性时也不能识别 wobbling；
 - 1983 综述转述的关键历史实验尚未逐篇摄入，不能作为独立证据计数；
 - 后续数据处理结果尚未写入，本页不预设其内容。
 
@@ -117,6 +124,7 @@ tags: [a130, high-spin, evidence-map, data-analysis, project]
 ## Decisions
 
 - De Voigt 1983 仅作 review/background 和原始文献导航；
+- Domscheit 1999 仅作非 A≈130 比较性背景，不计为本 project 的核心 source 或 A≈130 覆盖；
 - project 不复制 source 事实，不把 synthesis 当作原始证据；
 - 未验证的数据结果不进入当前证据矩阵。
 

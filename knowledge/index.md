@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-03
 ---
 
 # Wiki Index
@@ -17,6 +17,7 @@ updated: 2026-07-02
 - [[chakraborty-2023-131xe-wobbling-origin]] - `131Xe` 新负宇称序列及 wobbling/signature 判别。
 - [[frauendorf-2024-wobbling-review]] - wobbling 的模型、证据与争议综述。
 - [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] - 高自旋转动、带交叉、alignment 与谱学方法的 review/background。
+- [[domscheit-1999-triaxial-superdeformation-163lu]] - 非 A≈130 的 `163Lu` SD 带连接、混合与 UC/PES 三轴形变比较案例。
 
 ## Nuclei
 
@@ -24,6 +25,7 @@ updated: 2026-07-02
 - [[131ba]] - N=75 奇中子核，聚焦 `νg7/2[404]7/2+` 强耦合带。
 - [[133ce]] - 中高自旋多带、三轴性及 N=75 signature splitting。
 - [[137nd]] - 两对候选手征双重带及 chiral-vibration 解释。
+- [[163lu]] - 非 A≈130 的三轴超形变与高自旋转动参照核素。
 
 ## Bands
 
@@ -32,6 +34,7 @@ updated: 2026-07-02
 - [[131xe-negative-parity-yrast-13-2-sequence]] - 起源仍未解决的 yrast 13/2- 序列。
 - [[131ba-band-2]] / [[133ce-band-2]] - N=75 `νg7/2[404]7/2+` 强耦合 signature-partner 带。
 - [[137nd-d2-d3-doublet]] / [[137nd-d5-d6-doublet]] - 正、负宇称候选手征双重带。
+- [[163lu-sd1]] / [[163lu-sd2]] - 已连接的主 SD 带与连接/解释仍未决的第二条 SD 带。
 
 ## Concepts
 
@@ -42,6 +45,7 @@ updated: 2026-07-02
 - [[signature-partner-bands]] - 奇 A 旋称伙伴关系。
 - [[chiral-doublet-bands]] - Aplanar 转动产生的动态手征双重带。
 - [[high-spin-phenomena]] / [[rotational-bands]] - 高自旋结构范围与集体转动带背景。
+- [[superdeformation]] - 大四极形变转动结构及其与三轴性之间的证据边界。
 - [[backbending]] / [[angular-momentum-alignment]] - 带交叉的谱学表现与角动量顺排。
 
 ## Experiments
@@ -51,6 +55,7 @@ updated: 2026-07-02
 - [[jurogam2-137nd-ar40-152mev]] - `100Mo(40Ar,3n)137Nd`、152 MeV、JUROGAM II。
 - [[galileo-131ba-c13-65mev]] - `122Sn(13C,4n)131Ba`、65 MeV、GALILEO。
 - [[afrodite-133ce-c12-57mev]] - `125Te(12C,4n)133Ce`、57 MeV、AFRODITE。
+- [[legnaro-euroball-163lu-si29-145mev]] - 145 MeV `139La(29Si,5n)163Lu`；同实验 4n 道产生的 `164Lu` 另文讨论。
 
 ## Models
 
@@ -72,6 +77,7 @@ updated: 2026-07-02
 - [[wobbling-energy]] - 候选 wobbling 带相对激发能。
 - [[interband-transition-strengths]] / [[interband-e2-strengths]] - 手征与 wobbling 的带间电磁证据。
 - [[moments-of-inertia]] - 转动响应、band crossing 与 alignment 的诊断量。
+- [[transition-quadrupole-moment]] - 寿命/E2 集体性与形变尺度的诊断量。
 
 ## Methods
 

@@ -3,7 +3,7 @@ type: concept
 title: 摇摆运动
 aliases: [wobbling motion, nuclear wobbling, wobbling excitation, wobbling band]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-03
 status: active
 review_status: unreviewed
 concept_type: rotational-collective-mode
@@ -39,9 +39,11 @@ tags: [triaxiality, collective-motion, high-spin]
 
 [[chakraborty-2023-131xe-wobbling-origin]] 中，新序列的 ΔI=1 连接跃迁几乎为 M1，因而支持 signature partner 而非 wobbling。
 
+[[domscheit-1999-triaxial-superdeformation-163lu]] 曾把 `163Lu` SD2 提为 wobbling 的可能解释，但 SD1-SD2 linking transitions 及其多极性未能建立。该文因此是“相近转动惯量与模型三轴形变仍不足以识别 wobbling”的非 A≈130 限制案例。
+
 ## Related Nuclei and Bands
 
-当前已建立 `131Xe` 反例链；其余已报道核素需要回到原始实验来源后再建页。
+当前已建立 `131Xe` 反例链，并加入 [[163lu]] SD2 的未决原始实验案例。
 
 ## Our Current Position
 
@@ -51,8 +53,9 @@ tags: [triaxiality, collective-motion, high-spin]
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
+- [[domscheit-1999-triaxial-superdeformation-163lu]]
 
 ## Evolution Log
 
 - 2026-07-01（2 sources）：建立综述判据，并加入 `131Xe` 的反证案例。
-
+- 2026-07-03（3 sources）：加入 `163Lu` SD2；缺少 linking-transition 多极性时保留 wobbling 为推测。

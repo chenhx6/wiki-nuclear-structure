@@ -1,7 +1,7 @@
 ---
 type: system-vocabulary
 graph-excluded: true
-updated: 2026-07-01
+updated: 2026-07-03
 ---
 
 # 领域术语与别名表
@@ -17,6 +17,9 @@ updated: 2026-07-01
 | wobbling-motion | 摇摆运动 | wobbling motion; nuclear wobbling | 与 chiral doublet 不自动合并 |
 | chiral-doublet-bands | 手征双重带 | chiral doublet bands; chiral bands | “候选手征带”必须保留候选状态 |
 | triaxial-deformation | 三轴形变 | triaxial deformation; gamma deformation; γ deformation | γ 值约定需注明 |
+| superdeformation | 超形变 | superdeformation; superdeformed shape; SD band | 不自动等同于三轴形变 |
+| two-band-mixing | 两能带混合 | two-band mixing calculation; band mixing | 必须写明参与混合的具体两条带或两个同自旋宇称态 |
+| linking-transitions | 连接跃迁 | linking transitions; decay-out transitions | 必须写明连接的是 SD-ND、SD-SD 或其他带结构 |
 | gamma-soft-deformation | γ 软形变 | gamma-soft deformation; γ-softness; gamma softness | 不等同于一般三轴形变 |
 | gamma-rigid-deformation | γ 刚性形变 | gamma-rigid deformation; rigid triaxial deformation | 不与 γ-soft 自动合并 |
 | signature-partner-bands | 旋称伙伴带 | signature partner bands; favored/unfavored signature | 不等同于 wobbling bands |
@@ -25,6 +28,7 @@ updated: 2026-07-01
 | flip-mode | 翻转模 | flip mode; FM | TW/LW 之间的 separatrix 区域 |
 | gamma-band-energy-staggering | γ 带能量 staggering | γ-band staggering; S(J,J-1,J-2) | 与奇 A signature splitting 区分 |
 | signature-splitting | 旋称劈裂 | signature splitting; S(I) | 原文公式和单位必须随来源记录 |
+| transition-quadrupole-moment | 跃迁四极矩 | transition quadrupole moment; Qt; Q_t | 与 spectroscopic quadrupole moment 区分 |
 | tilted-axis-cranking | 倾斜轴推转 | tilted-axis cranking; TAC | γ 数值必须注明轴约定 |
 | triaxial-particle-rotor-model | 三轴粒子-转子模型 | TPRM; QTR; PTR | 模型 γ 输入不是直接测量 |
 | triaxial-projected-shell-model | 三轴投影壳模型 | TPSM | 与 TPRM 分开 |
