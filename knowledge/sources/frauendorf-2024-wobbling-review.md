@@ -63,12 +63,12 @@ arXiv:2405.02747v1，dated 2024-05-07，共 26 页。Zotero 记录日期与 arXi
 | ID | 陈述 | claim_kind | evidence_level | locator | needs_review |
 |---|---|---|---|---|---|
 | F24-1 | 三轴转子的 wobbling 态可按相对 separatrix 的进动轨道拓扑分类，另有 flip-mode 区域。 | author-interpretation | direct | PDF pp.1-4, Figs.3-5 | false |
-| F24-2 | TW 中粒子角动量与进动锥轴沿短轴或长轴，垂直于最大转动惯量的中轴；LW 的进动锥围绕最大转动惯量轴。 | model-result | direct | PDF pp.6-13, Table I | true |
+| F24-2 | TW 中粒子角动量与进动锥轴沿短轴或长轴，垂直于最大转动惯量的中轴；LW 的进动锥围绕最大转动惯量轴。 | model-result | direct | PDF pp.6-13, Table I | false |
 | F24-3 | wobbling 的核心实验信号是相邻 n+1 与 n wobbling bands 之间集体增强的 E2。 | author-interpretation | direct | PDF p.25, Conclusions | false |
-| F24-4 | 高 j 准粒子存在时证据较清楚；TW 案例多于 LW，预期的 mid-shell high-j LW 尚未得到演示。 | author-interpretation | contextual | PDF p.25, Conclusions | true |
+| F24-4 | 高 j 准粒子存在时证据较清楚；TW 案例多于 LW，预期的 mid-shell high-j LW 尚未得到演示。 | author-interpretation | contextual | PDF p.25, Conclusions | false |
 | F24-5 | TW 可在临界角动量处失稳，并通过 FM 转为 LW。 | model-result | direct | PDF pp.12-15, Fig.21; p.25 | false |
 | F24-6 | RPA 是小振幅近似，适用于远离 TW instability 的区域；作者指出它尚未用于正常形变核。 | author-interpretation | direct | PDF p.26 | false |
-| F24-7 | TPSM 能同时描述 wobbling、signature-partner 能量和带间跃迁，并缓解简单 PTR 对转动惯量选择的歧义，但从截断壳模型结果提取物理图像的工具仍需发展。 | author-interpretation | direct | PDF pp.22-26 | true |
+| F24-7 | TPSM 能同时描述 wobbling、signature-partner 能量和带间跃迁，并缓解简单 PTR 对转动惯量选择的歧义，但从截断壳模型结果提取物理图像的工具仍需发展。 | author-interpretation | direct | PDF pp.22-26 | false |
 
 ## Nuclear Structure Information
 

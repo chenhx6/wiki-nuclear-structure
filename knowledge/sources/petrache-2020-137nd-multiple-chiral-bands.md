@@ -62,7 +62,7 @@ European Physical Journal A 56, 208 (2020)，DOI `10.1140/epja/s10050-020-00218-
 | ID | 陈述 | claim_kind | evidence_level | locator | needs_review |
 |---|---|---|---|---|---|
 | P20-1 | 新 D3 为正宇称 ΔI=1 带，包含 31/2+ 至 (41/2+) 六个态，并以 M1/E2、E2 跃迁连接 D2。 | experimental-fact | direct | PDF pp.2-5, Fig.1, Table 1 | false |
-| P20-2 | 新 D6 为负宇称 ΔI=1 带，包含 33/2- 至 41/2- 五个态，并以六条跃迁连接 D5；39/2- 附近的 457/500 keV 顺序未定。 | experimental-fact | direct | PDF pp.2,5-7, Fig.1, Table 1 | true |
+| P20-2 | 新 D6 为负宇称 ΔI=1 带，包含 33/2- 至 41/2- 五个态，并以六条跃迁连接 D5；39/2- 附近的 457/500 keV 顺序未定。 | experimental-fact | direct | PDF pp.2,5-7, Fig.1, Table 1 | false |
 | P20-3 | 作者把 D2/D3 指认为正宇称手征双重带，把 D5/D6 指认为负宇称手征双重带。 | author-interpretation | indirect | PDF pp.8-10, Figs.5-8 | false |
 | P20-4 | CDFT 给出 D2/D3 的 `(β,γ)=(0.20,28.9°)`、D5/D6 的 `(0.21,29.5°)`；PRM 使用的 γ 分别为 20.9° 和 23.5°。 | model-result | direct | PDF p.8, Table 2 | false |
 | P20-5 | D2、D5 的 B(M1)/B(E2) 与 PRM 较一致，但 D3、D6 因过弱而没有实验值。 | experimental-fact | direct | PDF pp.8-9, Fig.6 | false |

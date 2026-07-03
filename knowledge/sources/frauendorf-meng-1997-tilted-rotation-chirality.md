@@ -63,7 +63,7 @@ Nuclear Physics A 617 (1997) 131-147。理论论文，共 17 页。
 | FM97-3 | aplanar 解的两组带具有相反的内禀手征性；planar 解是 achiral。 | model-result | direct | PDF pp.9-10, Figs.5-6 | false |
 | FM97-4 | PRM 中左右手态之间的隧穿可使双带仍有劈裂；只有隧穿足够小时才接近简并。 | model-result | direct | PDF pp.11-12 | false |
 | FM97-5 | 模型计算中，进入 aplanar 区后低多极阶的带间跃迁被抑制；TAC 只定性再现带内跃迁，不能计算带间跃迁。 | model-result | direct | PDF pp.12-13, Fig.7 | false |
-| FM97-6 | 作者认为 A≈130 与 A≈190 是寻找手征双重带的有希望区域，但稳定三轴形变是否足够仍需微观 TAC 判断。 | author-interpretation | contextual | PDF pp.15-16, conclusion | true |
+| FM97-6 | 作者认为 A≈130 与 A≈190 是寻找手征双重带的有希望区域，但稳定三轴形变是否足够仍需微观 TAC 判断。 | author-interpretation | contextual | PDF pp.15-16, conclusion | false |
 
 ## Nuclear Structure Information
 

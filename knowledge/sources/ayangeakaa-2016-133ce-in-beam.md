@@ -62,7 +62,7 @@ Physical Review C 93, 054317 (2016)，DOI `10.1103/PhysRevC.93.054317`。Zotero 
 | ID | 陈述 | claim_kind | evidence_level | locator | needs_review |
 |---|---|---|---|---|---|
 | A16-1 | 能级纲图延伸至约 22.8 MeV 和自旋 93/2；共讨论 11 条四极带及 9 条偶极带，其中 D8、D9 和 Q1-Q3、Q11 为新识别序列。 | experimental-fact | direct | PDF p.1 abstract; pp.2-13, Figs.1-2 | false |
-| A16-2 | 新连接跃迁把此前高自旋 Q 带接入低能结构，从而约束其激发能、自旋和宇称；部分弱带头指认仍依赖理论比较。 | experimental-fact | direct | PDF pp.2-13, Table I | true |
+| A16-2 | 新连接跃迁把此前高自旋 Q 带接入低能结构，从而约束其激发能、自旋和宇称；部分弱带头指认仍依赖理论比较。 | experimental-fact | direct | PDF pp.2-13, Table I | false |
 | A16-3 | CNS 对 D3、D6、D8、D9 的计算与实验能量通常在约 ±0.5 MeV 内一致，并给出随自旋 `ε2≈0.22→0.18`、`γ≈+24°` 的三轴解。 | model-result | direct | PDF p.15, Fig.9 | false |
 | A16-4 | 旧的 Q5/Q7 近简并及 signature-partner 解释在新连接关系下不再成立。 | author-interpretation | direct | PDF pp.16-17, Fig.10 | false |
 | A16-5 | TAC-CDFT 对 D3 的中等自旋能量和频率给出较好描述，但低、自旋端不收敛且未计算全部偶极带。 | model-result | direct | PDF p.18, Fig.11 | false |

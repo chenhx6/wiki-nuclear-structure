@@ -62,7 +62,7 @@ Physics Letters B 260 (1991) 265-270。PDF 正文完整，共 6 页。
 | ZC91-2 | `S(J,J-1,J-2)={[E(J)-E(J-1)]-[E(J-1)-E(J-2)]}/E(2_1+)`；对 `S(4,3,2)`，γ-unstable 极限为 -2，γ=30° Davydov 极限为 +1.67。 | model-result | direct | PDF p.3, Eq.(2) 后 | false |
 | ZC91-3 | 扫描的量中只有两类能量组合能较好区分 γ-soft 与 γ-rigid；最佳实例是 `S(4,3,2)` 和 `S(6,5,4)`。 | author-interpretation | direct | PDF p.4, Eq.(5a,b), Fig.2 | false |
 | ZC91-4 | 中间的经验 S 值不表示势能面同样“中间”；非常弱的 γ 依赖即可使 S 快速变化。 | author-interpretation | direct | PDF p.4, Fig.2 讨论 | false |
-| ZC91-5 | 作者对当时数据的结论是：具有显著不对称度的低能偶偶核表现为 γ soft，未显示 γ rigidity；Xe、Ba、Pt 所需势能偏离 γ independence 只有百分之几。 | author-interpretation | indirect | PDF pp.4-5, Figs.3-4, conclusion | true |
+| ZC91-5 | 作者对当时数据的结论是：具有显著不对称度的低能偶偶核表现为 γ soft，未显示 γ rigidity；Xe、Ba、Pt 所需势能偏离 γ independence 只有百分之几。 | author-interpretation | indirect | PDF pp.4-5, Figs.3-4, conclusion | false |
 
 ## Nuclear Structure Information
 

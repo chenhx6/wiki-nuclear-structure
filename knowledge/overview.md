@@ -24,7 +24,7 @@ updated: 2026-07-03
 | 页面级 unreviewed | 61 | 自动 lint governance 统计；本轮派生页未冒充人工审阅 |
 | source 页 unreviewed | 0 | 9 个 source 页均完成人工页面级审阅 |
 | 页面级 needs-human-review | 0 | 不等同于 claim-level 待审数量 |
-| claim-level `needs_review: true` | 9 | Domscheit 1999 的 DO99-1 至 DO99-13 已由用户确认 |
+| claim-level `needs_review: true` | 0 | 当前 66 条结构化 claims 均已完成用户确认 |
 | claim 缺失 locator | 0 | 自动解析 source `Key Results` 表 |
 | claim 缺失 claim kind | 0 | 使用 schema 字段 `claim_kind` |
 | source 缺失 raw_file | 0 | 自动统计 source frontmatter |
@@ -32,6 +32,6 @@ updated: 2026-07-03
 | 开放问题数 | 6 | `knowledge/questions.md`；本轮未改变 A≈130 开放问题 |
 | 断裂链接 | 0 | 526 个 Wikilink 已检查 |
 | Raw 哈希异常 | 0 | 9/9 个来源页与原文件一致 |
-| 自动 lint | 0 error / 3 warning / 9 info | warning 为用户 BibTeX 修改及 lint 未配置 Lu 导致的两项检查提示；9 info 为历史待审 claims |
+| 自动 lint | 0 error / 3 warning / 0 info | warning 为用户 BibTeX 修改及 lint 未配置 Lu 导致的两项检查提示 |
 
 自动 lint 全绿只表示没有达到失败阈值的结构问题，不表示科学内容已经全部完成人工复核。
