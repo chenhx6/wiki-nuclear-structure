@@ -34,6 +34,8 @@ tags: [triaxiality, wobbling, gamma-softness]
 
 ε、ε′/γ、配对与相互作用强度。
 
+[[sensharma-2019-two-phonon-wobbling-135pr]] 对 `135Pr` 使用 `ε=0.17, ε'=0.12`（`γ=35°`）。
+
 ## Predicted Observables
 
 能级、B(E2)、B(M1)、signature splitting、wobbling energy 和 SCS 图。
@@ -46,6 +48,8 @@ tags: [triaxiality, wobbling, gamma-softness]
 
 [[frauendorf-2024-wobbling-review]] 指出，虽然模型再现多类数据，如何从截断壳模型结果提炼清晰物理图像仍需发展。
 
+Sensharma 2019 的 TPSM 尚未给出角动量几何分析；它比 QTR 更高估 one-phonon energy，但给出相近的相对 E2 ratios，并更好再现 signature-partner band energy。
+
 ## Related Models
 
 [[triaxial-particle-rotor-model]]、[[random-phase-approximation]]
@@ -54,8 +58,9 @@ tags: [triaxiality, wobbling, gamma-softness]
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
+- [[sensharma-2019-two-phonon-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：建立 `131Xe` 与 wobbling 综述中的用途。
-
+- 2026-07-03：加入 Sensharma 2019 的 `135Pr` TPSM 参数、模型比较与几何分析缺口。

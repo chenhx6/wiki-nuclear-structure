@@ -44,13 +44,17 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 
 [[matta-2015-transverse-wobbling-135pr]] 的 Table I 给出 `135Pr` side-to-yrast transitions 的 E2 fractions 与相对 `B(E2_out)/B(E2_in)`；作者将其作为 wobbling 支持证据。没有独立寿命时，这些是 mixed-transition 分解后的相对量，不等同于绝对 `B(E2)`。
 
+[[sensharma-2019-two-phonon-wobbling-135pr]] 的 Fig.3 比较 TW2→TW1、TW1→yrast、TW2→yrast 与 signature-partner→yrast 的相对 `B(E2)_out/B(E2)_in`。论文明确说明未测得绝对跃迁概率；这些比值由强度和 angular-distribution mixing ratios 提取。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[matta-2015-transverse-wobbling-135pr]]
+- [[sensharma-2019-two-phonon-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：建立 wobbling 的关键电磁判据。
 - 2026-07-03：加入 Matta 2015 Table I 的相对 E2 支持链及绝对强度边界。
+- 2026-07-03：加入 Sensharma 2019 的 TW2 相对 E2 ratios 及无绝对寿命的边界。

@@ -44,12 +44,16 @@ tags: [wobbling, rotational-band]
 `E_wob(I)=E(I,n_w=1)-[E(I-1,n_w=0)+E(I+1,n_w=0)]/2`
 计算 `135Pr`，Fig.5 inset 显示实验值在低自旋区下降后回升。该趋势依赖 zero-/one-phonon band assignment，不能脱离电磁跃迁单独裁决。
 
+[[sensharma-2019-two-phonon-wobbling-135pr]] 以 yrast `n_w=0` 序列为参考，在 Fig.4 比较 TW1/TW2 的 wobbling energies；TW2 实验值随自旋下降。该量的 two-phonon 含义依赖 Matta 2015 的 `n_w=0/1` assignment。
+
 ## Sources
 
 - [[frauendorf-2024-wobbling-review]]
 - [[matta-2015-transverse-wobbling-135pr]]
+- [[sensharma-2019-two-phonon-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：建立“趋势不是充分判据”的边界。
 - 2026-07-03：加入 Matta 2015 的 Eq.1/Fig.5 原始实验案例。
+- 2026-07-03：加入 Sensharma 2019 的 TW2 自旋演化与 assignment-dependence。

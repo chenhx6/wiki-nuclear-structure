@@ -2,7 +2,7 @@
 type: system-questions
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-03
 ---
 
 # Research Questions
@@ -16,6 +16,7 @@ updated: 2026-07-01
 - [ ] `137Nd` D3、D6 能否获得寿命和 B(M1)/B(E2)，从而独立检验 chiral-vibration 指认？（opened 2026-07-01；scope: 137nd/chirality）
 - [ ] 如何在统一模型与 γ 约定下定量分离 signature splitting 中的非轴性和低-j Coriolis mixing？（opened 2026-07-01；scope: 131ba/133ce/signature）
 - [ ] `135Pr` 低自旋 yrast/side-band pair 的 mixing ratio、偏振和 `E_wob` 是否在后续独立分析中仍支持 transverse wobbling？（opened 2026-07-03；scope: 135pr/wobbling）
+- [ ] 若 `135Pr` 的 one-phonon assignment 被修订，Sensharma 2019 的 TW2→TW1 数据还能支持何种不依赖 phonon-order 的结构解释？（opened 2026-07-03；scope: 135pr/two-phonon-wobbling）
 
 ## Resolved
 

@@ -36,6 +36,7 @@ tags: [triaxiality, odd-a, wobbling]
 - [[petrache-2020-137nd-multiple-chiral-bands]] 为 `137Nd` D2/D3 与 D5/D6 分别采用约 `(β,γ)=(0.20,20.9°)`、`(0.21,23.5°)`；
 - [[ding-2021-131ba-133ce-signature-splitting]] 用 γ=15° 和 10° 分别描述 `131Ba`、`133Ce` 的 S(I)，并扫描 Coriolis attenuation。
 - [[matta-2015-transverse-wobbling-135pr]] 的修改 QTR 用 `J_m,J_s,J_l=7.4,5.6,1.8 ħ²/MeV`、`c=0.116` 拟合 `135Pr` zero-/one-phonon 能量。
+- [[sensharma-2019-two-phonon-wobbling-135pr]] 沿用 `135Pr` 的 `ε=0.16, γ=26°`、上述三个转动惯量和尺度因子，扩展比较 TW2 能量与相对 E2 ratios。
 
 ## Predicted Observables
 
@@ -53,6 +54,8 @@ QTR 中近邻轨道混合会与 γ 同时改变 S(I)，因此单个最佳 γ 往
 
 `135Pr` QTR 低估 `B(E2_out)`、高估 `B(M1_out)`，并把 signature-partner excitation 高估约 500 keV；拟合能量后的转动惯量不能作为独立验证。
 
+Sensharma 2019 的 QTR 给出强 anharmonicity 并再现较小的 TW2→TW1/TW2→yrast 相对 E2 ratios；由于参数沿用 Matta 2015，这不是对 zero-/one-phonon assignment 的独立验证。
+
 ## Related Models
 
 [[particle-rotor-model]]、[[triaxial-projected-shell-model]]
@@ -64,9 +67,11 @@ QTR 中近邻轨道混合会与 γ 同时改变 S(I)，因此单个最佳 γ 往
 - [[petrache-2020-137nd-multiple-chiral-bands]]
 - [[ding-2021-131ba-133ce-signature-splitting]]
 - [[matta-2015-transverse-wobbling-135pr]]
+- [[sensharma-2019-two-phonon-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 试摄入建立。
 - 2026-07-01：加入 `137Nd` 手征几何与 N=75 signature-splitting 的参数敏感性。
 - 2026-07-03：加入 Matta 2015 的 `135Pr` QTR 能量/跃迁比较及定量偏差。
+- 2026-07-03：加入 Sensharma 2019 的 TW2 anharmonicity/E2-ratio 比较及参数继承边界。

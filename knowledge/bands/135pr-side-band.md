@@ -38,6 +38,8 @@ Fig.1 中该序列约从 `13/2-` 延伸至 `33/2-`，并通过 747.0、812.8、7
 
 Matta 2015 将本带解释为 `n_w=1` transverse-wobbling band。
 
+Sensharma 2019 沿用这一指认，将本带称为 TW1，并以 [[135pr-second-side-band]] 到本带的连接跃迁建立 `n_w=2→1` hierarchy。后者不是对本带 one-phonon 性质的独立重新确认。
+
 ## Discriminating Observables
 
 - 747.0、812.8、754.6 keV 的大 `|δ|` 与 E2 fraction；
@@ -52,7 +54,9 @@ Matta 2015 将本带解释为 `n_w=1` transverse-wobbling band。
 ## Sources
 
 - [[matta-2015-transverse-wobbling-135pr]]
+- [[sensharma-2019-two-phonon-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-03：建立 Matta 2015 transverse-wobbling 支持方 band 页，保持候选状态。
+- 2026-07-03：加入 Sensharma 2019 对 TW1 assignment 的继承及其作为 TW2 指认前提的关系。

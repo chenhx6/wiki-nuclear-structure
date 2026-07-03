@@ -44,13 +44,17 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 
 [[matta-2015-transverse-wobbling-135pr]] 的 Table I 报告 `135Pr` 747.0、812.8、754.6 keV side-to-yrast transitions 分别有 `δ=-1.24(13)`、`-1.54(9)`、`-2.38(37)`；这些值是其 wobbling 支持链的关键待审数据。
 
+[[sensharma-2019-two-phonon-wobbling-135pr]] 的 Fig.2 报告 450.2、550.5、517.1 keV second-side-to-side-band transitions 的 `δ` 分别为约 `-1.91`、`-2.26`、`-3.48`。它们支持较大 E2 成分，但 phonon-order 解释仍依赖 band assignment。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[matta-2015-transverse-wobbling-135pr]]
+- [[sensharma-2019-two-phonon-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 判别问题建立。
 - 2026-07-03：加入 Matta 2015 的 `135Pr` 大 mixing-ratio 支持案例。
+- 2026-07-03：加入 Sensharma 2019 的 TW2→TW1 mixing-ratio 支持案例。
