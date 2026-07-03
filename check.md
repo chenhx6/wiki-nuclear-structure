@@ -1,7 +1,7 @@
 ---
 type: system-checklist
 graph-excluded: true
-updated: 2026-07-02
+updated: 2026-07-03
 ---
 
 # Wiki 系统核查清单
@@ -92,6 +92,9 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 ## F. 摄入、查询与综合
 
 - [ ] 摄入前已查重并检查 aliases。
+- [ ] 摄入前已按 `system/workflows/ingest-strategies.md` 选择与来源和任务匹配的策略；组合策略没有扩大到用户未要求的范围。
+- [ ] 策略默认清单只用于检查文中是否报告相关信息，没有为填满清单编造内容。
+- [ ] 摄入复盘包含所选策略要求的专项项目，以及新增 claims、待审 claims、证据缺口和建议人工审阅文件。
 - [ ] 摄入后已更新相关概念、核素、带结构、索引、日志和 handoff。
 - [ ] 查询答案的核心结论可追溯到来源页，而非只引用综合页。
 - [ ] 高复用答案才持久化，普通聊天不机械入库。
