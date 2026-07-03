@@ -100,6 +100,16 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 高复用答案才持久化，普通聊天不机械入库。
 - [ ] 综合前执行了反向检验，并记录未找到反证时的回音室风险。
 
+### 中英文术语归一化
+
+- [ ] concept/model/observable/method 页面包含检索所需的中英文 aliases。
+- [ ] 单篇来源新增术语优先写入页面 aliases；只有跨库统一、歧义、slug 风险或用户明确要求时才更新 `system/vocabulary.md`。
+- [ ] Query workflow 已使用 vocabulary 与页面 aliases 扩展中文、英文、缩写、历史写法和实验口语。
+- [ ] 中文和英文等价查询能够命中同一 canonical concept 及核心 source/claim。
+- [ ] 泛称命中多个模型或方法时已列出候选，没有静默选定或合并。
+- [ ] `angular distribution` / `angular correlation`，以及 shell model / CSM / PSM / TPSM 等易混术语保持分离。
+- [ ] vocabulary 只用于查询归一化；回答中的科学主张仍引用知识页、source 和 locator。
+
 ## G. 输出要求
 
 系统核查报告写入 `outputs/system-audit-YYYY-MM-DD.md`，至少包含：
