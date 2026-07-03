@@ -46,14 +46,18 @@ tags: [wobbling, rotational-band]
 
 [[sensharma-2019-two-phonon-wobbling-135pr]] 以 yrast `n_w=0` 序列为参考，在 Fig.4 比较 TW1/TW2 的 wobbling energies；TW2 实验值随自旋下降。该量的 two-phonon 含义依赖 Matta 2015 的 `n_w=0/1` assignment。
 
+[[sensharma-2020-longitudinal-wobbling-187au]] 按 Eq.1 计算 `187Au` band (2) 相对 yrast 的 `E_wobb`；Fig.4(d) 显示随自旋增加。作者将其与 E2-rich links 联合用于 LW 分类，不能脱离 band assignment 单独裁决。
+
 ## Sources
 
 - [[frauendorf-2024-wobbling-review]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
+- [[sensharma-2020-longitudinal-wobbling-187au]]
 
 ## Evolution Log
 
 - 2026-07-01：建立“趋势不是充分判据”的边界。
 - 2026-07-03：加入 Matta 2015 的 Eq.1/Fig.5 原始实验案例。
 - 2026-07-03：加入 Sensharma 2019 的 TW2 自旋演化与 assignment-dependence。
+- 2026-07-03：加入 Sensharma 2020 的 `187Au` increasing-`E_wobb` LW 支持案例。

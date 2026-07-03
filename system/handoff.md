@@ -10,6 +10,27 @@ updated: 2026-07-03
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：Sensharma 2020 `187Au` longitudinal wobbling（审核完成，待提交）
+
+- 按 `experiment-ingest + project-ingest` 深读 `raw/papers/2020_Sensharma et al_Longitudinal Wobbling Motion in Au 187.pdf`；citation key 唯一匹配 `sensharma_2020_LongitudinalWobbling`，SHA-256 为 `F348DCE9976AD076FD9B1D5281A728E0923053ACED33B0270F643D770729366A`。
+- 新建 source、`187Au` nucleus、yrast/LW/SP 三条 band、ATLAS/Gammasphere experiment 与 `187au-longitudinal-wobbling-controversy` supporting project。
+- source 建立 AU20-1 至 AU20-15；用户已审核 source 与全部 claims，source 为 `human-reviewed`，AU20-1 至 AU20-15 均为 `needs_review: false`。
+- supporting chain：LW→yrast 四条最低 links 有约 87.7%-93.3% E2 fractions；SP→yrast 两条 links 仅约 0.4%、1.0% E2；`E_wobb` 随自旋增加；PRM 比较 energies 与 transition ratios。
+- 证据边界：本文未报告 connecting-transition polarization；完整 coincidence、spin/parity 与 angular-distribution systematics 留给 forthcoming publication；angular-momentum geometry 未给出逐自旋分量。
+- `187Au` 作为独立 A≈190 project，只与 `135Pr` 在判据层做跨质量区比较，不作为 `135Pr` 直接证据。
+- 用户同时审核并确认 `135pr-wobbling-controversy` evidence matrix 与其余章节无问题；该 project 为 `human-reviewed`。
+- 审核后 lint 目标为 97 pages、805 Wikilinks、13/13 source hash、0 error、9 warning、0 info；用户已授权分 commit 后 push。
+
+## 当前执行：`135Pr` wobbling controversy project-level synthesis（待用户审核）
+
+- 基于已人工复核的 Matta 2015、Sensharma 2019 与 Lv 2022 共 41 条 source claims，重构 `knowledge/projects/135pr-wobbling-controversy.md` 为 locator-level evidence matrix。
+- 分开整理 observed facts、experimental criteria、author interpretations、model results、counter-evidence、paper evidence gate、needs review、unresolved issues 与 follow-up sources。
+- 核心争议覆盖 E2/M1 character、mixing-ratio 双解、polarization sign/magnitude、link polarization 覆盖、wobbling-energy trend、signature partner 对照、TAC/QTR/TPSM/TiP 模型边界。
+- 三篇 source claims 均为 `needs_review: false`；新 project matrix 尚未人工审核，project 保持 `review_status: unreviewed`。
+- Garg 2015/erratum、supplementary materials、TiP 理论/实验原始来源列为 follow-up；Guo 2022 与 `187Au` 仅列 future extension，本轮未摄入。
+- 按用户明确要求在 `PLAN.md` 中追加“下一步充实 TiP 相关理论与实验知识”的中期规划。
+- 本轮不 commit/push；等待用户审核 project Markdown。
+
 ## 当前执行：Lv 2022 `135Pr` counter-source（审核完成，待提交）
 
 - 已确认 PDF `raw/papers/2022_Lv et al_Evidence against the wobbling nature of low-spin bands in 135Pr.pdf`，SHA-256 `4B87C540BF9DA5141FA88EF8F00859162CB08918D56A5DA74726C7537DF5E26B`；BibTeX 唯一匹配 `lv_2022_Evidencewobbling`。

@@ -21,6 +21,7 @@ updated: 2026-07-03
 - [[matta-2015-transverse-wobbling-135pr]] - `135Pr` transverse-wobbling 解释的原始实验支持来源。
 - [[sensharma-2019-two-phonon-wobbling-135pr]] - `135Pr` two-phonon wobbling extension 的原始实验支持来源。
 - [[lv-2022-evidence-against-wobbling-135pr]] - 反对 `135Pr` low-spin wobbling 的联合角关联/偏振实验与 QTR 比较。
+- [[sensharma-2020-longitudinal-wobbling-187au]] - `187Au` longitudinal-wobbling 与 signature-partner 区分的原始实验支持来源。
 
 ## Nuclei
 
@@ -30,6 +31,7 @@ updated: 2026-07-03
 - [[137nd]] - 两对候选手征双重带及 chiral-vibration 解释。
 - [[163lu]] - 非 A≈130 的三轴超形变与高自旋转动参照核素。
 - [[135pr]] - 低自旋 yrast/side-band wobbling 争议核素。
+- [[187au]] - A≈190 区 low-spin longitudinal-wobbling 与 signature-partner 争议核素。
 
 ## Bands
 
@@ -41,6 +43,7 @@ updated: 2026-07-03
 - [[163lu-sd1]] / [[163lu-sd2]] - 已连接的主 SD 带与连接/解释仍未决的第二条 SD 带。
 - [[135pr-yrast-band]] / [[135pr-side-band]] / [[135pr-second-side-band]] - 支持方论文中的 zero-/one-/two-phonon 候选 band hierarchy。
 - [[135pr-signature-partner-band]] / [[135pr-dipole-band]] - 同核素的 signature-partner 对照与 3qp dipole 序列。
+- [[187au-yrast-band]] / [[187au-longitudinal-wobbling-band]] / [[187au-signature-partner-band]] - Sensharma 2020 的 LW/SP 候选结构。
 
 ## Concepts
 
@@ -66,6 +69,7 @@ updated: 2026-07-03
 - [[tifr-inga-135pr-o16-80mev]] - 同反应的 INGA clover 偏振数据。
 - [[atlas-digital-gammasphere-135pr-o16-80mev]] - Sensharma 2019 的 `135Pr` 高统计 DGS 符合与角分布数据。
 - [[jyfl-jurogam2-135pr-ar40-152mev]] - Lv 2022 的 `135Pr` 联合角关联与线偏振数据。
+- [[atlas-gammasphere-187au-f19-105-115mev]] - Sensharma 2020 的 `187Au` 符合与 angular-distribution 数据。
 
 ## Models
 
@@ -108,6 +112,7 @@ updated: 2026-07-03
 
 - [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
 - [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands wobbling 争议；当前录入 Matta 2015 与 Sensharma 2019 支持链。
+- [[187au-longitudinal-wobbling-controversy]] - 跟踪 `187Au` LW 与 associated signature partner；当前只录入 Sensharma 2020 支持链。
 
 ## Decisions and Failures
 

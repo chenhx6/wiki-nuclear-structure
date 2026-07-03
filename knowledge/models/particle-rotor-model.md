@@ -34,6 +34,8 @@ tags: [collective-model, triaxiality]
 
 β/γ、转动惯量、单粒子组态、配对和电磁矩。
 
+[[sensharma-2020-longitudinal-wobbling-187au]] 使用 `β=0.23, γ=23°`、`Δ=0.88 MeV`、`λ=-1.32 MeV` 与 `J_0=38.0 ħ²/MeV` 描述 `h9/2` proton bands。
+
 ## Predicted Observables
 
 能带、signature splitting、B(E2)、B(M1)、角动量取向和隧穿劈裂。
@@ -46,6 +48,8 @@ tags: [collective-model, triaxiality]
 
 转动惯量可调带来歧义；软芯和价粒子之间的 Pauli/交换效应可能需要微观模型。
 
+`187Au` 计算略低估 `E_wobb`，并高估 LW、低估 SP 的 `B(M1)_out/B(E2)_in`；作者认为偏差可能与 wobbling/SP state mixing 及 moments-of-inertia ratios 有关。
+
 ## Related Models
 
 [[tilted-axis-cranking]]、[[triaxial-particle-rotor-model]]、[[triaxial-projected-shell-model]]
@@ -54,8 +58,9 @@ tags: [collective-model, triaxiality]
 
 - [[frauendorf-meng-1997-tilted-rotation-chirality]]
 - [[frauendorf-2024-wobbling-review]]
+- [[sensharma-2020-longitudinal-wobbling-187au]]
 
 ## Evolution Log
 
 - 2026-07-01：建立手征与 wobbling 两类用途。
-
+- 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP 能量与 transition-ratio 比较。

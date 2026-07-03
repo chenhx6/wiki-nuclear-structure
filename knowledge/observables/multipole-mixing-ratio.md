@@ -48,6 +48,8 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 
 [[lv-2022-evidence-against-wobbling-135pr]] 强调 angular distribution 可产生大/小 `abs(δ)` 双解，并由联合 polarization/`R_ac` 得到 747.3、813.2、450.2 keV 的小 `abs(δ)` 解。
 
+[[sensharma-2020-longitudinal-wobbling-187au]] 报告四条 LW→yrast links 的 `δ` 约为 `-2.67` 至 `-3.72`，而两条 SP→yrast links 为 `-0.06(1)`、`-0.10(1)`；本文未报告 connecting-transition polarization。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -55,6 +57,7 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
+- [[sensharma-2020-longitudinal-wobbling-187au]]
 
 ## Evolution Log
 
@@ -62,3 +65,4 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 - 2026-07-03：加入 Matta 2015 的 `135Pr` 大 mixing-ratio 支持案例。
 - 2026-07-03：加入 Sensharma 2019 的 TW2→TW1 mixing-ratio 支持案例。
 - 2026-07-03：加入 Lv 2022 的双解问题与联合 polarization/`R_ac` counter-evidence。
+- 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP angular-distribution 对照。

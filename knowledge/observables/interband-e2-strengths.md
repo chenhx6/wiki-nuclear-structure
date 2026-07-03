@@ -48,6 +48,8 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 
 [[lv-2022-evidence-against-wobbling-135pr]] 报告 `B(E2;747)/B(E2;526)=0.7(+0.7/-0.5)`；作者认为两条强度相近，不符合 wobbling-to-yrast 应显著强于到 signature-partner 的预期。
 
+[[sensharma-2020-longitudinal-wobbling-187au]] 的 LW→yrast `B(E2)_out/B(E2)_in` 最大约 0.7，并显著高于 SP→yrast；PRM 较好再现 E2 ratios，但 M1 ratios 存在系统偏差。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -55,6 +57,7 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
+- [[sensharma-2020-longitudinal-wobbling-187au]]
 
 ## Evolution Log
 
@@ -62,3 +65,4 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - 2026-07-03：加入 Matta 2015 Table I 的相对 E2 支持链及绝对强度边界。
 - 2026-07-03：加入 Sensharma 2019 的 TW2 相对 E2 ratios 及无绝对寿命的边界。
 - 2026-07-03：加入 Lv 2022 的 747/526 E2-strength counter-test。
+- 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP relative-E2 对照。
