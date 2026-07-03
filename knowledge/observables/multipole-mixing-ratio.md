@@ -46,15 +46,19 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 
 [[sensharma-2019-two-phonon-wobbling-135pr]] 的 Fig.2 报告 450.2、550.5、517.1 keV second-side-to-side-band transitions 的 `δ` 分别为约 `-1.91`、`-2.26`、`-3.48`。它们支持较大 E2 成分，但 phonon-order 解释仍依赖 band assignment。
 
+[[lv-2022-evidence-against-wobbling-135pr]] 强调 angular distribution 可产生大/小 `abs(δ)` 双解，并由联合 polarization/`R_ac` 得到 747.3、813.2、450.2 keV 的小 `abs(δ)` 解。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
+- [[lv-2022-evidence-against-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 判别问题建立。
 - 2026-07-03：加入 Matta 2015 的 `135Pr` 大 mixing-ratio 支持案例。
 - 2026-07-03：加入 Sensharma 2019 的 TW2→TW1 mixing-ratio 支持案例。
+- 2026-07-03：加入 Lv 2022 的双解问题与联合 polarization/`R_ac` counter-evidence。

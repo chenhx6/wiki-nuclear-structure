@@ -17,6 +17,7 @@ updated: 2026-07-03
 - [ ] 如何在统一模型与 γ 约定下定量分离 signature splitting 中的非轴性和低-j Coriolis mixing？（opened 2026-07-01；scope: 131ba/133ce/signature）
 - [ ] `135Pr` 低自旋 yrast/side-band pair 的 mixing ratio、偏振和 `E_wob` 是否在后续独立分析中仍支持 transverse wobbling？（opened 2026-07-03；scope: 135pr/wobbling）
 - [ ] 若 `135Pr` 的 one-phonon assignment 被修订，Sensharma 2019 的 TW2→TW1 数据还能支持何种不依赖 phonon-order 的结构解释？（opened 2026-07-03；scope: 135pr/two-phonon-wobbling）
+- [ ] Matta/Lv 对相同 747、813 keV transitions 的 mixing-ratio 解差异来自哪些 polarization、角关联或分析约定？（opened 2026-07-03；scope: 135pr/wobbling-controversy）
 
 ## Resolved
 

@@ -20,6 +20,7 @@ updated: 2026-07-03
 - [[domscheit-1999-triaxial-superdeformation-163lu]] - 非 A≈130 的 `163Lu` SD 带连接、混合与 UC/PES 三轴形变比较案例。
 - [[matta-2015-transverse-wobbling-135pr]] - `135Pr` transverse-wobbling 解释的原始实验支持来源。
 - [[sensharma-2019-two-phonon-wobbling-135pr]] - `135Pr` two-phonon wobbling extension 的原始实验支持来源。
+- [[lv-2022-evidence-against-wobbling-135pr]] - 反对 `135Pr` low-spin wobbling 的联合角关联/偏振实验与 QTR 比较。
 
 ## Nuclei
 
@@ -64,6 +65,7 @@ updated: 2026-07-03
 - [[atlas-gammasphere-135pr-o16-80mev]] - 80 MeV `123Sb(16O,4n)135Pr` 的高统计符合与角分布数据。
 - [[tifr-inga-135pr-o16-80mev]] - 同反应的 INGA clover 偏振数据。
 - [[atlas-digital-gammasphere-135pr-o16-80mev]] - Sensharma 2019 的 `135Pr` 高统计 DGS 符合与角分布数据。
+- [[jyfl-jurogam2-135pr-ar40-152mev]] - Lv 2022 的 `135Pr` 联合角关联与线偏振数据。
 
 ## Models
 

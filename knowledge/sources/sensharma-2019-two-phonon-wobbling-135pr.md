@@ -71,7 +71,7 @@ N. Sensharma et al., *Physics Letters B* **792**, 170-174 (2019)，DOI `10.1016/
 | S19-8 | 作者把新序列指认为 `n_w=2` two-phonon wobbling band，并把既有 yrast/TW1 分别作为 `n_w=0/1`；这是作者解释，不是能级和 γ 线存在本身。 | author-interpretation | direct | pp.170-174, Abstract, Fig.1, Conclusions | false |
 | S19-9 | `n_w=2` 指认明确依赖 Matta 2015 已提出的 `n_w=1` TW1：本文以新带到 TW1 的连接跃迁及相对 yrast/TW1 的能量关系建立 phonon hierarchy。 | author-interpretation | direct | pp.170-171, final introduction paragraph; Fig.1 | false |
 | S19-10 | QTR 沿用 Matta 2015 的 `ε=0.16, γ=26°`、`J_m,J_s,J_l=7.4,5.6,1.8 ħ²/MeV` 和转动惯量尺度因子 `1+0.116I`。 | model-result | direct | p.173, left column, model setup | false |
-| S19-11 | QTR 给出的 TW2 能量明显低于 TW1 的两倍，并再现较小的 TW2→TW1 与 TW2→yrast 相对 E2 比；作者把这些结果解释为强 anharmonicity。 | model-result | direct | pp.173-174, Figs.3-4 | false |
+| S19-11 | QTR 给出的逐级 wobbling-phonon energy 明显非谐：在相应自旋标记下，第一声子增量约为第二声子增量的两倍，即 `E_TW1(I+1)-E_yrast(I) ≈ 2[E_TW2(I+2)-E_TW1(I+1)]`；QTR 还再现较小的 TW2→TW1 与 TW2→yrast 相对 E2 比。 | model-result | direct | pp.173-174, Figs.3-4 | false |
 | S19-12 | TPSM 使用 `ε=0.17, ε'=0.12`（对应 `γ=35°`）；它比 QTR 更高估 one-phonon energy，却给出相近的相对 E2 比，并更好再现 signature-partner band energy。 | model-result | direct | p.173, model setup and right column; Figs.3-4 | false |
 | S19-13 | 论文说明 TPSM 尚未完成角动量几何分析；其较大的 SP→yrast E2 比被作者解释为 one-phonon wobbling 与 signature-partner states 之间可能存在耦合，细节留待后续理论工作。 | model-result | direct | p.173, right column, final paragraphs | false |
 

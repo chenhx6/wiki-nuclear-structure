@@ -46,15 +46,19 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 
 [[sensharma-2019-two-phonon-wobbling-135pr]] 的 Fig.3 比较 TW2→TW1、TW1→yrast、TW2→yrast 与 signature-partner→yrast 的相对 `B(E2)_out/B(E2)_in`。论文明确说明未测得绝对跃迁概率；这些比值由强度和 angular-distribution mixing ratios 提取。
 
+[[lv-2022-evidence-against-wobbling-135pr]] 报告 `B(E2;747)/B(E2;526)=0.7(+0.7/-0.5)`；作者认为两条强度相近，不符合 wobbling-to-yrast 应显著强于到 signature-partner 的预期。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
+- [[lv-2022-evidence-against-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-01：建立 wobbling 的关键电磁判据。
 - 2026-07-03：加入 Matta 2015 Table I 的相对 E2 支持链及绝对强度边界。
 - 2026-07-03：加入 Sensharma 2019 的 TW2 相对 E2 ratios 及无绝对寿命的边界。
+- 2026-07-03：加入 Lv 2022 的 747/526 E2-strength counter-test。

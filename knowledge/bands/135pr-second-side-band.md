@@ -47,13 +47,15 @@ Sensharma 2019 将本带解释为 `n_w=2` two-phonon transverse-wobbling band。
 
 ## Competing Interpretations
 
-本页只记录支持方原始论文。若 [[135pr-side-band]] 的 one-phonon assignment 在后续重分析中不成立，本带的 two-phonon hierarchy 也不能独立保持。
+若 [[135pr-side-band]] 的 one-phonon assignment 在后续重分析中不成立，本带的 two-phonon hierarchy 也不能独立保持。[[lv-2022-evidence-against-wobbling-135pr]] 不接受 827、764、1009 keV 组成同一 rotational band，并把相关结构重组为 band 4 与可能的 band 5；450.2 keV 的 `abs(δ)<1` 被其用于反对 two-to-one-phonon link。
 
 ## Sources
 
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[matta-2015-transverse-wobbling-135pr]]（先决 assignment）
+- [[lv-2022-evidence-against-wobbling-135pr]]（counter-source）
 
 ## Evolution Log
 
 - 2026-07-03：由 Sensharma 2019 建立 TW2 候选带页，保持解释依赖与待审状态。
+- 2026-07-03：加入 Lv 2022 的能级重组与 450.2 keV counter-evidence。

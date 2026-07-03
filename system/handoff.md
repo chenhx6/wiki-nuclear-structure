@@ -10,12 +10,25 @@ updated: 2026-07-03
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：Lv 2022 `135Pr` counter-source（审核完成，待提交）
+
+- 已确认 PDF `raw/papers/2022_Lv et al_Evidence against the wobbling nature of low-spin bands in 135Pr.pdf`，SHA-256 `4B87C540BF9DA5141FA88EF8F00859162CB08918D56A5DA74726C7537DF5E26B`；BibTeX 唯一匹配 `lv_2022_Evidencewobbling`。
+- 已精读 6 页正文并视觉核对 Fig.1、Fig.2 与 Table 1；已新建 `knowledge/sources/lv-2022-evidence-against-wobbling-135pr.md` 和 `knowledge/experiments/jyfl-jurogam2-135pr-ar40-152mev.md`。
+- source 已建立 L22-1 至 L22-13；用户已完成页面与全部 claims 核对，source 为 `human-reviewed`，L22-1 至 L22-13 均为 `needs_review: false`。
+- 已把 counter-evidence 接入 `135pr-wobbling-controversy`，并更新 `135pr`、side/second-side bands、mixing-ratio、interband-E2、transverse-wobbling、QTR、index、overview 与 questions。
+- project 将 Lv 2022 标记为 `counter-source against low-spin wobbling interpretation`，并列出其对 Matta 2015/Sensharma 2019 的具体反证，不裁决争议。
+- 用户复核指出 Fig.4(c) 不直接展示 short/intermediate-axis realignment；已校正 L22-13：Fig.3(d) 是机制示意，p.5 正文是五条带发生 realignment 的作者陈述，Fig.4(c) 仅约束 `j_parallel` 与两角动量近乎平行、同步演化，逐带细节在 supplementary material。
+- 审核后 lint 目标为 90 pages、729 Wikilinks、12/12 source hash、0 error、7 warning、0 info；warning 为既有元素配置、用户 `.bib` 与 `1p4n` 自动解析边界。
+- 上一轮尚未提交的 Sensharma 声子能量校正仍在工作树：source S19-11、QTR model、memory、handoff、log；用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 继续只读保护。
+- 用户已授权检查通过后自动 commit/push；必须排除 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib`。
+
 ## 当前执行：Sensharma 2019 `135Pr`（审核完成，待提交）
 
 - 2026-07-03 按 `experiment-ingest + project-ingest` 深读 `raw/papers/2019_Sensharma et al_Two-phonon wobbling in 135Pr.pdf`；citation key 唯一匹配 `sensharma_2019_Twophononwobbling`，SHA-256 为 `54F06038943DE5F980DC731266844DCFA1980F1775E47A943F77D31C256C741F`。
 - 新建 source、`135Pr` second-side-band 候选页和独立 DGS 高统计 experiment 页；更新 nucleus、TW1 band、mixing ratio、interband E2、wobbling energy、transverse wobbling、QTR、TPSM 与争议 project。
 - source 建立 S19-1 至 S19-13，区分 observed facts、experimental criterion、author interpretation 与 model results；用户已完成页面与全部 claims 的原文核对，source 为 `human-reviewed`，S19-1 至 S19-13 均为 `needs_review: false`。
 - project 把本篇标为 `supporting source for two-phonon wobbling interpretation`，并明确该 `n_w=2` hierarchy 依赖 Matta 2015 的 `n_w=0/1` assignment，不按独立重复证据计数。
+- 用户补充校正 QTR anharmonicity 的物理量：应比较 successive wobbling-phonon spacings，写作 `E_TW1(I+1)-E_yrast(I) ≈ 2[E_TW2(I+2)-E_TW1(I+1)]`，而不是把 TW2 带能量与 TW1 带能量直接作两倍比较。
 - 论文未报告 linear polarization；相对 E2 ratios 缺本文独立寿命测量；只有三条最低能 TW2→TW1 links 给出完整角分布/mixing ratio。
 - 审核后 lint 目标为 88 pages、689 Wikilinks、11/11 source hash、0 error、6 warning、0 info；warning 为用户 `.bib`、既有 Lu 与 `16O` 元素配置提示。
 - 用户已授权 commit/push；显式排除 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib`。

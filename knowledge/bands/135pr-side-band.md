@@ -49,14 +49,16 @@ Sensharma 2019 沿用这一指认，将本带称为 TW1，并以 [[135pr-second-
 
 ## Competing Interpretations
 
-连接跃迁分析和 zero-/one-phonon 对应是 [[135pr-wobbling-controversy]] 的核心争议对象。后续反对 wobbling 的原始论文尚未在本轮摄入。
+连接跃迁分析和 zero-/one-phonon 对应是 [[135pr-wobbling-controversy]] 的核心争议对象。[[lv-2022-evidence-against-wobbling-135pr]] 将本带记为 band 3；其 747、813 keV 联合 polarization/`R_ac` 分析给出 `abs(δ)<1`，作者据此反对 one-phonon wobbling 指认。
 
 ## Sources
 
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
+- [[lv-2022-evidence-against-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-03：建立 Matta 2015 transverse-wobbling 支持方 band 页，保持候选状态。
 - 2026-07-03：加入 Sensharma 2019 对 TW1 assignment 的继承及其作为 TW2 指认前提的关系。
+- 2026-07-03：加入 Lv 2022 对 band 3 connecting transitions 的 counter-evidence。
