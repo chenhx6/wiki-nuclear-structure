@@ -20,11 +20,11 @@ updated: 2026-07-04
 | 综合页数 | 4 | `knowledge/synthesis/` |
 | 项目页数 | 3 | `knowledge/projects/`；新增 `187Au` LW controversy project |
 | 人工确认的高置信度结论 | 0 | 必须有确认记录 |
-| 页面级人工审阅页 | 20 | 13 个 source 页 + 7 个其他知识页 |
-| 页面级 unreviewed | 79 | 自动 lint governance 统计；Guo source、HIRFL experiment 与更新后的 `187Au` 派生页待审 |
-| source 页 unreviewed | 1 | Guo 2022 source 待页面级人工审阅 |
+| 页面级人工审阅页 | 21 | 14 个 source 页 + 7 个其他知识页 |
+| 页面级 unreviewed | 78 | 自动 lint governance 统计；HIRFL experiment 与更新后的 `187Au` 派生页仍待审 |
+| source 页 unreviewed | 0 | 14 个 source 页均完成人工页面级审阅 |
 | 页面级 needs-human-review | 0 | 不等同于 claim-level 待审数量 |
-| claim-level `needs_review: true` | 14 | Guo 2022 G22-3、G22-4、G22-15 已确认，其余 G22 claims 待审；总 claims=139 |
+| claim-level `needs_review: true` | 0 | 当前 139 条结构化 claims 均已完成用户确认 |
 | claim 缺失 locator | 0 | 自动解析 source `Key Results` 表 |
 | claim 缺失 claim kind | 0 | 使用 schema 字段 `claim_kind` |
 | source 缺失 raw_file | 0 | 自动统计 source frontmatter |
@@ -32,6 +32,6 @@ updated: 2026-07-04
 | 开放问题数 | 10 | `knowledge/questions.md`；更新 `187Au` mixing-ratio branch 与 band identity 问题 |
 | 断裂链接 | 0 | 856 个 Wikilink 已检查 |
 | Raw 哈希异常 | 0 | 14/14 个来源页与原文件一致 |
-| 自动 lint | 0 error / 10 warning / 14 info | warning 含用户 BibTeX、未配置元素与 `1p4n` 解析提示；info 为其余 G22 待审 claims |
+| 自动 lint | 0 error / 10 warning / 0 info | warning 含用户 BibTeX、未配置元素与 `1p4n` 解析提示 |
 
 自动 lint 全绿只表示没有达到失败阈值的结构问题，不表示科学内容已经全部完成人工复核。

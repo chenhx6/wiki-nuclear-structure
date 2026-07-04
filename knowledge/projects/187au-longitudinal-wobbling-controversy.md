@@ -88,7 +88,7 @@ bands (1)/(2) 是否满足 `n_w=0/1` longitudinal-wobbling 判据？band (3) 是
 
 ## Next Actions
 
-1. 用户继续审核 Guo 2022 source；G22-3、G22-4、G22-15 已确认，其余 G22 claims 待审。
+1. Guo 2022 source 与 G22-1 至 G22-17 已完成用户审核。
 2. 补齐 Guo supplementary material，并复核 polarization calibration、`σ/I` 处理和 QTR 细节。
 3. 对 376/462 keV links 做两方 mixing-ratio branch 的统一误差/响应比较。
 4. 核对 reported band (3) 的 gated spectra、`188Pt` assignment 与早期 `187Ag` β-decay coverage。
