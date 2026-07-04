@@ -36,7 +36,7 @@ tags: [multipolarity, gamma-spectroscopy, angular-correlation]
 
 经验数值高度依赖几何：
 
-- JUROGAM II `137Nd`：dipole≈0.8，quadrupole≈1.4；
+- JUROGAM II `135Nd/137Nd`：dipole≈0.8，quadrupole≈1.4；
 - GALILEO `131Ba`：dipole≈0.77，quadrupole≈1.54；
 - AFRODITE `133Ce`：dipole≈0.74，quadrupole≈1.27；
 - Gammasphere `133Ce`：文中采用 quadrupole>1.0、dipole<0.8 的经验区分。
@@ -48,6 +48,7 @@ tags: [multipolarity, gamma-spectroscopy, angular-correlation]
 - [[petrache-2020-137nd-multiple-chiral-bands]] 用 `R_ac` 约束新 D3、D6 的连接跃迁；
 - [[ding-2021-131ba-133ce-signature-splitting]] 在两套不同阵列中分别标定 band 2 跃迁。
 - [[guo-2022-low-spin-wobbling-187au]] 以 `154°/90°` gated intensities 构造 `R_ac`，并与 clover linear polarization 联合选择 376/462 keV links 的 mixing-ratio branch。
+- [[lv-2021-tilted-precession-135nd]] 以 133.6°+157.6° 对 75.5°+104.5°谱、相同 all-angle gates 构造 `R_ac`，并用它补充统计不足以获得 `R_DCO` 的弱 transitions。
 
 ## Sources
 
@@ -55,8 +56,10 @@ tags: [multipolarity, gamma-spectroscopy, angular-correlation]
 - [[petrache-2020-137nd-multiple-chiral-bands]]
 - [[ding-2021-131ba-133ce-signature-splitting]]
 - [[guo-2022-low-spin-wobbling-187au]]
+- [[lv-2021-tilted-precession-135nd]]
 
 ## Evolution Log
 
 - 2026-07-01（3 sources）：从 DCO 页面中分离出不依赖 gate 多极性的 `R_ac` 方法。
 - 2026-07-04：加入 HIRFL `154°/90°` 几何和与 polarization 联合选解的案例。
+- 2026-07-04：加入 Lv 2021 JUROGAM II `135Nd` geometry 与弱线用途。

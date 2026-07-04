@@ -154,3 +154,11 @@ updated: 2026-07-04
 ## [2026-07-04] claim-review | 用户审核 Lawrie 2020 source 与 LAW20-1 至 LAW20-15；校准 Fig.4 中 `f(n,I)` 自旋趋势的参数/耦合适用范围，并明确 Eq.34 的 1 轴为最大-MoI intermediate axis
 
 ## [2026-07-04] git | Lawrie 2020 theory-ingest WIP amend 为 `Ingest Lawrie 2020 TiP and wobbling framework` 并推送至 `origin/main`；用户 `.obsidian` 与 raw/BibTeX 改动未纳入
+
+## [2026-07-04] ingest-project | 深读摄入 Lv 2021 `135Nd` experimental TiP case；建立 LV21-1 至 LV21-18、D1/TiP1/TiP2、JUROGAM II experiment，并将 M1-dominated links、QTR energies/wave functions/transition ratios 与 TiP-vs-wobbling 边界接入 low-spin umbrella
+
+## [2026-07-04] git | Lv 2021 `135Nd` 摄入创建本地 WIP commit，未 push；用户 `.obsidian` 与 raw/BibTeX/PDF 未纳入
+
+## [2026-07-04] claim-review | 用户审核 Lv 2021 source 与 LV21-1 至 LV21-18；以 Table II 和 E2-fraction consistency 校准 618.3/566.8 keV mixing ratios，补齐 75.5°/104.5° clover geometry 与 LV21-13 的 TiP model-consistency 语义
+
+## [2026-07-04] git | Lv 2021 `135Nd` experimental TiP WIP amend 为 `Ingest Lv 2021 experimental TiP bands in 135Nd` 并推送至 `origin/main`；用户 `.obsidian` 与 raw/BibTeX/PDF 改动未纳入

@@ -46,14 +46,18 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 
 [[matta-2015-transverse-wobbling-135pr]] 称 702.7 keV `135Pr` signature-partner link 的 DCO ratio 支持 pure dipole，但 PRL 未列出具体比值；该赋值需在人工审阅时保留信息缺口。
 
+[[lv-2021-tilted-precession-135nd]] 以 157.6° tapered 对 75.5°、104.5° clover 非对称矩阵提取 `R_DCO`。其阵列标定在 stretched-quadrupole gate 下给出 quadrupole/dipole 约 1/0.46，在 stretched-dipole gate 下给出 dipole/quadrupole 约 1/2.1；这些经验值只适用于该 geometry 与 gate convention。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[domscheit-1999-triaxial-superdeformation-163lu]]
 - [[matta-2015-transverse-wobbling-135pr]]
+- [[lv-2021-tilted-precession-135nd]]
 
 ## Evolution Log
 
 - 2026-07-01：由 `131Xe` 实验建立。
 - 2026-07-03：加入早期 Euroball 几何实例及“不跨阵列套用经验阈值”的限制。
 - 2026-07-03：加入 Matta 2015 的“正文给出结论但未列具体 DCO 数值”案例。
+- 2026-07-04：加入 Lv 2021 JUROGAM II `135Nd` 双 gate convention 与经验值。

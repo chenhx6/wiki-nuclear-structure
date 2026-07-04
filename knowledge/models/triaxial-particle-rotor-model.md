@@ -40,6 +40,7 @@ tags: [triaxiality, odd-a, wobbling]
 - [[matta-2015-transverse-wobbling-135pr]] 的修改 QTR 用 `J_m,J_s,J_l=7.4,5.6,1.8 ħ²/MeV`、`c=0.116` 拟合 `135Pr` zero-/one-phonon 能量。
 - [[sensharma-2019-two-phonon-wobbling-135pr]] 沿用 `135Pr` 的 `ε=0.16, γ=26°`、上述三个转动惯量和尺度因子，扩展比较逐级 wobbling-phonon energy 与相对 E2 ratios。
 - [[guo-2022-low-spin-wobbling-187au]] 使用 `ε2=0.21, γ=12°`、Harris parameters `J0=25 ħ² MeV^-1, J1=8 ħ⁴ MeV^-3`、irrotational-flow-like γ dependence，并纳入 proton Fermi level 附近 9 个负宇称轨道。
+- [[lv-2021-tilted-precession-135nd]] 对 `135Nd` 使用 `β=0.19, γ=25°`、Harris `J0=5 ħ² MeV^-1, J1=71.4 ħ⁴ MeV^-3`、Coriolis attenuation 0.7、`g_s=0.6g_free`、`g_R=0.44` 与 neutron Fermi level 附近 7 个负宇称 orbitals。
 
 ## Predicted Observables
 
@@ -67,6 +68,8 @@ Sensharma 2019 的 QTR 给出
 
 [[guo-2022-low-spin-wobbling-187au]] 的 QTR 波函数把 `187Au` Bands 1/2 主要联系到 `h9/2` 来源的最低/次低轨道，并较好比较本文/早期 internal-conversion data 的 energies、mixing ratios 与相对 transition ratios；作者据此提出 dominant single-particle excitation。该模型结果与 Sensharma 2020 的 large-`δ`/LW PRM interpretation 竞争，不能写成实验事实。详细程序位于当前未收录的 supplementary material；本文提到 TiP 只是 broader low-spin alternative，不是该 `187Au` QTR calculation 的直接结论。
 
+[[lv-2021-tilted-precession-135nd]] 的 QTR 将 D1、TiP1、TiP2 低自旋主要联系到 `[Ω_l,K_l]=[9/2,9/2]`、`[9/2,13/2]`、`[11/2,15/2]`，并比较 energies 与相对 `B(M1)out/B(E2)in`、`B(E2)out/B(E2)in`。TiP1 高自旋 wave functions 混合且 energies 被高估；Appendix 的 no-pairing calculation 对 TiP1/TiP2 更差，说明低自旋模型比较依赖 pairing。这些是 QTR model results，不是直接观测的 angular-momentum geometry。
+
 ## Related Models
 
 [[particle-rotor-model]]、[[triaxial-projected-shell-model]]
@@ -82,6 +85,7 @@ Sensharma 2019 的 QTR 给出
 - [[lv-2022-evidence-against-wobbling-135pr]]
 - [[guo-2022-low-spin-wobbling-187au]]
 - [[lawrie-2020-tilted-precession-wobbling]]
+- [[lv-2021-tilted-precession-135nd]]
 
 ## Evolution Log
 
@@ -92,3 +96,4 @@ Sensharma 2019 的 QTR 给出
 - 2026-07-03：加入 Lv 2022 的 standard-input QTR realignment/TiP counter-interpretation。
 - 2026-07-04：加入 Guo 2022 的 `187Au` multi-orbital QTR single-particle reinterpretation 与 supplementary-material 边界。
 - 2026-07-04：加入 Lawrie 2020 对完整 3D QTR/TiP 与 harmonic wobbling approximation 的理论边界。
+- 2026-07-04：加入 Lv 2021 `135Nd` QTR parameters、wave-function assignment、transition ratios 与 pairing comparison。

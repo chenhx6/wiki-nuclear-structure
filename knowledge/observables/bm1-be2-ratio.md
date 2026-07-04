@@ -42,11 +42,14 @@ tags: [electromagnetic-transition, band-structure]
 
 `131Xe` yrare 17/2- 的实验值 1.27(14) 与 TPRM 1.27 一致；yrast 17/2- 的 2.54(4) 明显偏高。
 
+[[lv-2021-tilted-precession-135nd]] 比较 D1 带内及 TiP1→D1 的 `B(M1)out/B(E2)in` ratios 与 QTR。618.3/566.0 keV TiP1→D1 links 的实验 ratios 为 0.28(10)/0.24(14)；其中 566.0 keV 与另一个 566.8 keV connecting transition 应保持区分。Agreement 是模型一致性证据，不构成 TiP 的单独充分判据。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
+- [[lv-2021-tilted-precession-135nd]]
 
 ## Evolution Log
 
 - 2026-07-01：记录 `131Xe` 两条 13/2- 序列的区分用途。
-
+- 2026-07-04：加入 Lv 2021 `135Nd` TiP1→D1 relative-M1 comparison。

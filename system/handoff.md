@@ -10,6 +10,21 @@ updated: 2026-07-04
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：Lv 2021 `135Nd` experimental TiP ingest（source 审核完成，已 finalize/push）
+
+- 目标 PDF `raw/papers/2021_Lv et al_Tilted precession bands in Nd 135.pdf`，SHA-256 `E28BC232617AF4D6EE83D95D267B2E7ACD24EDDB0D03CC1592124D31E9871150`；BibTeX 唯一匹配 `lv_2021_Tiltedprecession`，DOI `10.1103/PhysRevC.103.044308`。
+- 按 experiment-ingest + project-ingest 深读 14 页，并视觉核对 Figs.2-6、Tables I-II、Figs.7-12 与 Appendix Figs.13-15；新建 source、`135Nd` nucleus、D1/TiP1/TiP2 三带和 JUROGAM II experiment。
+- 用户已审核 source 与 LV21-1 至 LV21-18；source 升级为 `human-reviewed`，全部 claims 改为 `needs_review: false`。`135Nd` 派生页、LSW-TIP-1 至 LSW-TIP-5、LSW-THEORY-1 至 LSW-THEORY-5 与更新后的 LSW-SYN-5 仍待审。
+- 实验链：152 MeV `100Mo(40Ar,5n)135Nd`，0.5 mg/cm² enriched self-supported `100Mo`，JUROGAM II 15 tapered + 24 clover，约 `5.1×10^10` fold≥3 events；γγ/γγγ、`R_DCO`、`R_ac`、polarization 与 angular distribution。
+- 用户核验 Table II：TiP1→D1 的 618.3/566.8 keV 为 `δ=-0.32(5)/-0.48(14)`、E2 fractions `9.3±2.6%/18.7±8.9%`；两者与 `δ²/(1+δ²)` 匹配，因此优先于 p.6 正文手写的无负号 0.32/0.33。TiP2→TiP1 的 518.3 keV 同为 M1-dominated；234 keV 太弱而无 multipolarity/`δ`。
+- 约 90°的 24 个 clover 明确位于 75.5°、104.5°；已同步 source、experiment、DCO 与 `R_ac` 页面。
+- LV21-13 补充作者如何使用整体 energy agreement、特别是 TiP2 已观测态的良好再现，作为 TiP assignment 的模型一致性依据；仍保留 TiP1 高自旋偏差与 wave-function mixing。
+- QTR 使用 `β=0.19, γ=25°`、Harris `J0/J1=5/71.4`、Coriolis attenuation 0.7、pairing 与 7 个近 Fermi negative-parity orbitals；D1/TiP1/TiP2 主要 `[Ω_l,K_l]` 分别为 `[9/2,9/2]`、`[9/2,13/2]`、`[11/2,15/2]`。TiP1 高自旋 energies 被高估且 wave functions 混合。
+- Umbrella 将本文标为 experimental TiP case / alternative interpretation source；新增 LSW-TIP-1 至 LSW-TIP-5 待审。只以 `135Nd` reference case cross-reference `135Pr/187Au`，不改判两个 controversy cases。
+- 当前 lint 目标：108 pages、995 Wikilinks、16/16 source hash、0 error、10 warning、0 info。
+- 已检查 `knowledge/questions.md`；现有 wobbling lifetime/electromagnetic evidence 与最小 identification protocol 问题已覆盖本轮缺口，不新增重复问题。
+- Lv 2021 WIP 已 amend/finalize 为 `Ingest Lv 2021 experimental TiP bands in 135Nd` 并推送至 `origin/main`；`.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib` 与 raw PDF 未纳入。
+
 ## 当前执行：Lawrie 2020 TiP / wobbling theory-ingest（审核完成，已 finalize/push）
 
 - 目标 PDF `raw/papers/2020_Lawrie et al_Tilted precession and wobbling in triaxial nuclei.pdf`，SHA-256 `777F935B0266FED8A9D9F2E1CC1F72995C84DD83E27CA1F5377AB2785B2EC405`；BibTeX 唯一匹配 `lawrie_2020_Tiltedprecession`，DOI `10.1103/PhysRevC.101.034306`。

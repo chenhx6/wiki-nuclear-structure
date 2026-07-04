@@ -52,6 +52,8 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 
 [[guo-2022-low-spin-wobbling-187au]] 由其小 mixing ratios 与外部文献的 `B(E2)_in=100-200 W.u.` 估计 `B(E2)_out` 仅数 W.u.，作者据此反对 Band 2 的 collective excitation。该量是派生估计，不是本文 lifetime/absolute-`B(E2)` measurement。
 
+[[lv-2021-tilted-precession-135nd]] 对 TiP1→D1 报告 `B(E2)out/B(E2)in` ratios，并与 QTR 比较；618.3/566.0 keV links 的实验值为 0.11(4)/0.12(7)。注意 566.0 keV ratio row 与 Table II 中另一个 566.8 keV、`δ=-0.48(14)` 的 connecting transition 不是同一行。这些值由 branching/mixing-ratio information 得到，不等于完整 independent lifetime/absolute-`B(E2)` measurement。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -61,6 +63,7 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - [[lv-2022-evidence-against-wobbling-135pr]]
 - [[sensharma-2020-longitudinal-wobbling-187au]]
 - [[guo-2022-low-spin-wobbling-187au]]
+- [[lv-2021-tilted-precession-135nd]]
 
 ## Evolution Log
 
@@ -70,3 +73,4 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - 2026-07-03：加入 Lv 2022 的 747/526 E2-strength counter-test。
 - 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP relative-E2 对照。
 - 2026-07-04：加入 Guo 2022 的数 W.u. `B(E2)_out` 估计及其外部输入边界。
+- 2026-07-04：加入 Lv 2021 `135Nd` TiP1→D1 relative-E2 ratios 与非绝对寿命边界。

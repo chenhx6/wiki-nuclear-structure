@@ -54,9 +54,11 @@ tags: [triaxiality, three-dimensional-rotation, precession, wobbling-controversy
 
 ## Supporting Evidence
 
-当前直接理论来源仅 [[lawrie-2020-tilted-precession-wobbling]]。该文用 triaxial rotor/QTR calculations 对照完整 TiP 与 wobbling equations 的 energies、approximation function 和 transition probabilities。
+直接理论基础为 [[lawrie-2020-tilted-precession-wobbling]]。该文用 triaxial rotor/QTR calculations 对照完整 TiP 与 wobbling equations 的 energies、approximation function 和 transition probabilities。
 
 [[lv-2022-evidence-against-wobbling-135pr]] 后续把 standard-input QTR realignment 解释为 `135Pr` tilted-precession bands；该解释属于具体模型应用，不是 TiP 定义本身。
+
+[[lv-2021-tilted-precession-135nd]] 提供当前直接实验案例：在 [[135nd]] 中新建 D1/TiP1/TiP2 三带关系，以 coincidence、`R_DCO/R_ac`、polarization 和 angular-distribution 约束带结构及 M1-dominated links，再由 QTR energies、wave functions 与 transition ratios 支持 TiP assignment。该组合是实验事实加模型解释，不是“进动轨迹被直接观测”。
 
 ## Counter-evidence and Competing Interpretations
 
@@ -67,6 +69,7 @@ tags: [triaxiality, three-dimensional-rotation, precession, wobbling-controversy
 ## Related Nuclei and Bands
 
 - `135Pr`、`105Pd`：Lawrie 2020 直接测试既有参数并提出 TiP reinterpretation。
+- `135Nd`：Lv 2021 的 [[135nd-d1-band]]、[[135nd-tip1-band]]、[[135nd-tip2-band]] 构成 experimental TiP case；LV21-1 至 LV21-18 已人工复核。
 - Lu TSD bands：用于比较 transverse 与 longitudinal coupling 的高自旋近似条件。
 - `187Au`：Lawrie 2020 未直接计算；仅通过 [[low-spin-wobbling-controversies]] 建立理论 cross-reference。
 
@@ -77,8 +80,10 @@ TiP 当前作为低自旋 wobbling 争议中的 theoretical framework / alternat
 ## Sources
 
 - [[lawrie-2020-tilted-precession-wobbling]]
+- [[lv-2021-tilted-precession-135nd]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
 
 ## Evolution Log
 
 - 2026-07-04：由 Lawrie 2020 theory-ingest 建立，区分完整 3D TiP 与 wobbling approximation。
+- 2026-07-04：加入 Lv 2021 `135Nd` experimental TiP case，保留实验事实、QTR 结果与作者解释分层。

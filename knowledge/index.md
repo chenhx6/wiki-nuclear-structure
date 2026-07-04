@@ -24,6 +24,7 @@ updated: 2026-07-04
 - [[sensharma-2020-longitudinal-wobbling-187au]] - `187Au` longitudinal-wobbling 与 signature-partner 区分的原始实验支持来源。
 - [[guo-2022-low-spin-wobbling-187au]] - 以独立 `R_ac-P`、internal conversion 比较与 QTR 重解释 `187Au` reported low-spin wobbling 的反方来源；supplementary material 作为附属证据层挂接。
 - [[lawrie-2020-tilted-precession-wobbling]] - TiP 完整 3D rotation、wobbling approximation 条件与 phonon quantization 的理论基础来源。
+- [[lv-2021-tilted-precession-135nd]] - `135Nd` D1/TiP1/TiP2 的 coincidence、电磁判据与 QTR comparison；experimental TiP case。
 
 ## Nuclei
 
@@ -34,6 +35,7 @@ updated: 2026-07-04
 - [[163lu]] - 非 A≈130 的三轴超形变与高自旋转动参照核素。
 - [[135pr]] - 低自旋 yrast/side-band wobbling 争议核素。
 - [[187au]] - A≈190 区 low-spin longitudinal-wobbling、single-particle excitation 与 signature-partner 争议核素。
+- [[135nd]] - `N=75` 奇中子核；当前聚焦 D1/TiP1/TiP2 experimental tilted-precession case。
 
 ## Bands
 
@@ -46,6 +48,7 @@ updated: 2026-07-04
 - [[135pr-yrast-band]] / [[135pr-side-band]] / [[135pr-second-side-band]] - 支持方论文中的 zero-/one-/two-phonon 候选 band hierarchy。
 - [[135pr-signature-partner-band]] / [[135pr-dipole-band]] - 同核素的 signature-partner 对照与 3qp dipole 序列。
 - [[187au-yrast-band]] / [[187au-longitudinal-wobbling-band]] / [[187au-signature-partner-band]] - Sensharma 2020 支持链与 Guo 2022 counter/reassignment 共同约束的候选结构。
+- [[135nd-d1-band]] / [[135nd-tip1-band]] / [[135nd-tip2-band]] - Lv 2021 的 `νh11/2` reference 与两条 experimental TiP candidate bands。
 
 ## Concepts
 
@@ -74,6 +77,7 @@ updated: 2026-07-04
 - [[jyfl-jurogam2-135pr-ar40-152mev]] - Lv 2022 的 `135Pr` 联合角关联与线偏振数据。
 - [[atlas-gammasphere-187au-f19-105-115mev]] - Sensharma 2020 的 `187Au` 符合与 angular-distribution 数据。
 - [[hirfl-187au-o18-108mev]] - Guo 2022 的 `175Lu(18O,6n)187Au`、`R_ac` 与线偏振数据。
+- [[jurogam2-135nd-ar40-152mev]] - 152 MeV `100Mo(40Ar,5n)135Nd`、JUROGAM II coincidence/`R_DCO`/`R_ac`/polarization 数据集。
 
 ## Models
 
@@ -117,7 +121,7 @@ updated: 2026-07-04
 - [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
 - [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands 的 wobbling/TiP 竞争解释与 supporting/counter evidence。
 - [[187au-longitudinal-wobbling-controversy]] - 已审核的 Sensharma 2020/Guo 2022 locator-level evidence matrix；跟踪 `187Au` LW、single-particle excitation、associated signature partner 与低自旋近似争议。
-- [[low-spin-wobbling-controversies]] - 已审核的 `135Pr/187Au` 低自旋 wobbling identification 跨案例证据地图；TiP 暂列 future extension。
+- [[low-spin-wobbling-controversies]] - `135Pr/187Au` 低自旋 wobbling identification 跨案例证据地图；接入 Lawrie 2020 理论边界与待审的 `135Nd` experimental TiP reference。
 
 ## Decisions and Failures
 
