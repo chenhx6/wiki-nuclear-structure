@@ -138,3 +138,11 @@ updated: 2026-07-04
 ## [2026-07-04] claim-review | 用户确认 Guo/Lv supplementary material 新增的 G22-18 至 G22-20、L22-14 至 L22-15 与 project synthesis AU-SYN-11 至 AU-SYN-12；144 条结构化 source claims 待审队列清零
 
 ## [2026-07-04] workflow | 文献摄入默认本地 WIP、不 push；审核后 amend 为 final commit，safe suspend 大量 diff 时优先本地 WIP checkpoint，避免临时提交累积与持续高 CPU
+
+## [2026-07-04] synthesize-project | 新建 low-spin wobbling controversies umbrella project，将已审核的 `135Pr/187Au` 案例接入共享 identification framework；新增 7 条待审跨案例 synthesis claims、TiP future extension、data-analysis bridge 与 innovation candidates，不裁决争议
+
+## [2026-07-04] git | umbrella project 草案创建本地 WIP commit，未 push；用户 `.obsidian` 与 raw/BibTeX 修改未纳入
+
+## [2026-07-04] review | 用户审核 low-spin wobbling umbrella project 与 LSW-SYN-1 至 LSW-SYN-7；校准大 `abs(δ)`/predominant-E2 为必要但非充分判据，并区分增强 E2 的其他机制与 γ-softness 形变动力学
+
+## [2026-07-04] git | umbrella project WIP amend 为 `Build low-spin wobbling controversies evidence map` 并推送至 `origin/main`；用户 `.obsidian` 与 raw/BibTeX 修改未纳入

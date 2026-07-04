@@ -161,6 +161,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 
 ## Related Sources and Pages
 
+- [[low-spin-wobbling-controversies]]
 - [[135pr]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]

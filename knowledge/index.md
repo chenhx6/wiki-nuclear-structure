@@ -115,6 +115,7 @@ updated: 2026-07-04
 - [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
 - [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands 的 wobbling/TiP 竞争解释与 supporting/counter evidence。
 - [[187au-longitudinal-wobbling-controversy]] - 已审核的 Sensharma 2020/Guo 2022 locator-level evidence matrix；跟踪 `187Au` LW、single-particle excitation、associated signature partner 与低自旋近似争议。
+- [[low-spin-wobbling-controversies]] - 已审核的 `135Pr/187Au` 低自旋 wobbling identification 跨案例证据地图；TiP 暂列 future extension。
 
 ## Decisions and Failures
 

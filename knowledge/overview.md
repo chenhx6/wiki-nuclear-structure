@@ -18,10 +18,10 @@ updated: 2026-07-04
 | 观测量页数 | 9 | `knowledge/observables/` |
 | 方法页数 | 7 | `knowledge/methods/` |
 | 综合页数 | 4 | `knowledge/synthesis/` |
-| 项目页数 | 3 | `knowledge/projects/`；`187Au` project 已形成 supporting/counter locator-level evidence matrix |
+| 项目页数 | 4 | `knowledge/projects/`；新增连接 `135Pr/187Au` 的 low-spin wobbling umbrella evidence map |
 | 人工确认的高置信度结论 | 0 | 必须有确认记录 |
-| 页面级人工审阅页 | 22 | 14 个 source 页 + 8 个其他知识页；`187Au` project matrix 已审 |
-| 页面级 unreviewed | 77 | 自动 lint governance 统计；派生页仍保持独立审阅状态 |
+| 页面级人工审阅页 | 23 | 14 个 source 页 + 9 个其他知识页；low-spin wobbling umbrella 已审 |
+| 页面级 unreviewed | 77 | 自动 lint governance 统计；派生页保持独立审阅状态 |
 | source 页 unreviewed | 0 | 14 个 source 页均完成人工页面级审阅 |
 | 页面级 needs-human-review | 0 | 不等同于 claim-level 待审数量 |
 | claim-level `needs_review: true` | 0 | 当前 144 条结构化 claims 均已完成用户确认 |
@@ -29,8 +29,8 @@ updated: 2026-07-04
 | claim 缺失 claim kind | 0 | 使用 schema 字段 `claim_kind` |
 | source 缺失 raw_file | 0 | 自动统计 source frontmatter |
 | source 缺失 citation key | 0 | 自动统计 source frontmatter |
-| 开放问题数 | 10 | `knowledge/questions.md`；更新 `187Au` mixing-ratio branch 与 band identity 问题 |
-| 断裂链接 | 0 | 862 个 Wikilink 已检查 |
+| 开放问题数 | 11 | `knowledge/questions.md`；新增跨案例最小 wobbling identification protocol 问题 |
+| 断裂链接 | 0 | 897 个 Wikilink 已检查 |
 | Raw 哈希异常 | 0 | 14/14 个来源页与原文件一致 |
 | 自动 lint | 0 error / 10 warning / 0 info | warning 含用户 BibTeX、未配置元素与 `1p4n` 解析提示 |
 

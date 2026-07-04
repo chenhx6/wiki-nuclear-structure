@@ -195,16 +195,17 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 
 ## Umbrella Project Recommendation
 
-暂不立即新建 `low-spin-wobbling-controversies`。当前已有 `135Pr` 与 `187Au` 两个核素级 project；Lawrie 2020 与 `135Nd` TiP 原始文献现已进入 raw/BibTeX inbox，下一步摄入后即可着手建立 umbrella project。该计划已写入 `PLAN.md`。
+用户已明确启动 [[low-spin-wobbling-controversies]]。当前版本只以 `135Pr` 与 `187Au` 两个已审核案例建立跨案例 identification evidence map；Lawrie 2020 与 `135Nd` TiP 尚未摄入，因此 TiP 仍作为 future extension，不用于裁决本案例。
 
 ## Next Actions
 
 1. 优先摄入 Rupnik 1998 与 early internal-conversion sources。
-2. 摄入 Lawrie 2020 与 `135Nd` TiP 原始工作，随后启动 low-spin wobbling umbrella project。
+2. 摄入 Lawrie 2020 与 `135Nd` TiP 原始工作，补充现有 umbrella project 的理论边界。
 3. 设计 376/462 keV links 的 common-response/common-error reanalysis。
 
 ## Related Sources and Pages
 
+- [[low-spin-wobbling-controversies]]
 - [[187au]]
 - [[sensharma-2020-longitudinal-wobbling-187au]]
 - [[guo-2022-low-spin-wobbling-187au]]

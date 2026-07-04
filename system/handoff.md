@@ -10,6 +10,16 @@ updated: 2026-07-04
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：low-spin wobbling controversies umbrella project（审核完成，已 finalize/push）
+
+- 用户明确启动 `knowledge/projects/low-spin-wobbling-controversies.md`，覆盖已审核的 `135Pr` 与 `187Au` 两个核素级 controversy project；该当前指令优先于 PLAN 中“TiP 摄入后再建”的旧顺序，但本轮未修改用户拥有的 PLAN。
+- umbrella 分开记录 Motivation、科学重要性、case map、两案例 summary、共享实验判据/争议、模型景观、evidence gaps、follow-up sources、TiP future extension、data-analysis bridge 与 innovation candidates。
+- 用户已审核 umbrella 全页与 LSW-SYN-1 至 LSW-SYN-7；页面升级为 `human-reviewed`，7 条 synthesis claims 均改为 `needs_review: false`。两个下位 project 与 144 条 source claims 的已审状态不变。
+- 按用户校准，明确 predominant-E2/大 `abs(δ)` connecting-transition character 是所讨论 wobbling identification paradigm 的必要判据，但非充分条件；β/γ vibration、TiP 等也可能产生增强 E2 links。γ-softness 是势能面/形变动力学性质，不能由大 `δ` 直接标记。
+- 新增跨案例开放问题：能否建立同时约束 mixing-ratio 双解、polarization、signature-partner identity 与 low-spin approximation 的最小 identification protocol。
+- 最终 lint 目标：100 pages、897 Wikilinks、14/14 source hash、0 error、10 warning、0 info；warning 为既有元素/反应道提示与用户 raw BibTeX 修改。
+- 本地 WIP 已 amend/finalize 为 `Build low-spin wobbling controversies evidence map` 并推送至 `origin/main`；`.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 未纳入。
+
 ## 当前执行：`187Au` longitudinal-wobbling project synthesis（审核完成，已提交）
 
 - 清晨定时任务无配置、线程、回执或匹配产物，按 scheduled-continuation 回执门判定为“未触发/未执行”；当前会话已直接完成 synthesis。
