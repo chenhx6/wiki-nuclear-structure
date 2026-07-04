@@ -23,6 +23,7 @@ updated: 2026-07-04
 - [[lv-2022-evidence-against-wobbling-135pr]] - 反对 `135Pr` low-spin wobbling 的联合角关联/偏振实验与 QTR 比较；supplementary material 作为附属证据层挂接。
 - [[sensharma-2020-longitudinal-wobbling-187au]] - `187Au` longitudinal-wobbling 与 signature-partner 区分的原始实验支持来源。
 - [[guo-2022-low-spin-wobbling-187au]] - 以独立 `R_ac-P`、internal conversion 比较与 QTR 重解释 `187Au` reported low-spin wobbling 的反方来源；supplementary material 作为附属证据层挂接。
+- [[lawrie-2020-tilted-precession-wobbling]] - TiP 完整 3D rotation、wobbling approximation 条件与 phonon quantization 的理论基础来源。
 
 ## Nuclei
 
@@ -57,6 +58,7 @@ updated: 2026-07-04
 - [[high-spin-phenomena]] / [[rotational-bands]] - 高自旋结构范围与集体转动带背景。
 - [[superdeformation]] - 大四极形变转动结构及其与三轴性之间的证据边界。
 - [[backbending]] / [[angular-momentum-alignment]] - 带交叉的谱学表现与角动量顺排。
+- [[tilted-precession-bands]] - 完整三维转动的倾斜进动带，以及与 harmonic wobbling approximation 的理论边界。
 
 ## Experiments
 

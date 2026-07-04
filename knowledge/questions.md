@@ -19,7 +19,7 @@ updated: 2026-07-04
 - [ ] 若 `135Pr` 的 one-phonon assignment 被修订，Sensharma 2019 的 TW2→TW1 数据还能支持何种不依赖 phonon-order 的结构解释？（opened 2026-07-03；scope: 135pr/two-phonon-wobbling）
 - [ ] Matta/Lv 对相同 747、813 keV transitions 的 mixing-ratio 解差异来自哪些 polarization、角关联或分析约定？（opened 2026-07-03；scope: 135pr/wobbling-controversy）
 - [ ] `187Au` 的 376/462 keV links 为何在 Sensharma/Guo 分析中落入不同 mixing-ratio branch；reported band (3) 的 `187Au/188Pt` identity、increasing `E_wobb`、absolute `B(E2)` 与 PRM/QTR geometry 能否在 common-response/common-error 分析中自洽？（opened 2026-07-03；updated 2026-07-04；scope: 187au/longitudinal-wobbling）
-- [ ] `135Pr` 与 `187Au` 的争议能否导出一套不依赖预设 band label、同时约束 mixing-ratio 双解、polarization、signature-partner identity 与 low-spin approximation 的最小 wobbling identification protocol？（opened 2026-07-04；scope: low-spin-wobbling/cross-case）
+- [ ] `135Pr` 与 `187Au` 的争议能否导出一套不依赖预设 band label、同时约束 mixing-ratio 双解、polarization、signature-partner identity、`f(n,I)` 近似条件与 phonon quantization 的最小 wobbling identification protocol？（opened 2026-07-04；updated 2026-07-04；scope: low-spin-wobbling/cross-case）
 
 ## Resolved
 

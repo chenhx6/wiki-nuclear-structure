@@ -10,6 +10,18 @@ updated: 2026-07-04
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：Lawrie 2020 TiP / wobbling theory-ingest（审核完成，已 finalize/push）
+
+- 目标 PDF `raw/papers/2020_Lawrie et al_Tilted precession and wobbling in triaxial nuclei.pdf`，SHA-256 `777F935B0266FED8A9D9F2E1CC1F72995C84DD83E27CA1F5377AB2785B2EC405`；BibTeX 唯一匹配 `lawrie_2020_Tiltedprecession`，DOI `10.1103/PhysRevC.101.034306`。
+- 按 theory-ingest + project-ingest 深读 12 页，并视觉核对 Eqs.15-16/33-34、Figs.4/9-11 与 Table I；新建 source 与 [[tilted-precession-bands]] concept，更新 QTR model、wobbling/transverse-wobbling concepts 和 low-spin umbrella。
+- 用户已审核 source 与 LAW20-1 至 LAW20-15；source 升级为 `human-reviewed`，全部 claims 改为 `needs_review: false`。TiP concept、LSW-THEORY-1 至 LSW-THEORY-5 与更新后的 LSW-SYN-5 仍待审。
+- 理论边界：完整 3D QTR/rotor solutions 在本文术语中是 TiP；wobbling 是 `f(n,I)<<1` 时的 principal-axis rotation + harmonic phonons approximation，并应显示 energy/transition-probability quantization。
+- 按用户校准，LAW20-4 将 `f` 单调下降严格限定于本文固定参数的偶偶核示例；Fig.4 的 Lu TSD-longitudinal 下降，而 TSD-transverse 随自旋先降后升，不外推为所有奇 A coupling 的普遍趋势。
+- LAW20-8 将 1 轴明确绑定为本文 irrotational-flow convention 中最大-MoI的 intermediate axis（中轴）；transverse approximation 难点是要求该轴上的 dominant rotational component 也为小量。
+- Umbrella 新增 LSW-THEORY-1 至 LSW-THEORY-5，均待审；Lawrie 2020 标为 theoretical framework / alternative interpretation source。`135Pr/105Pd/Lu` 只保留本文理论比较，`187Au` 仅 cross-reference。
+- 最终 lint 目标：102 pages、931 Wikilinks、15/15 source hash、0 error、10 warning、0 info。
+- Lawrie WIP 已 amend/finalize 为 `Ingest Lawrie 2020 TiP and wobbling framework` 并推送至 `origin/main`；`.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib` 与 raw PDF 未纳入。
+
 ## 当前执行：low-spin wobbling controversies umbrella project（审核完成，已 finalize/push）
 
 - 用户明确启动 `knowledge/projects/low-spin-wobbling-controversies.md`，覆盖已审核的 `135Pr` 与 `187Au` 两个核素级 controversy project；该当前指令优先于 PLAN 中“TiP 摄入后再建”的旧顺序，但本轮未修改用户拥有的 PLAN。

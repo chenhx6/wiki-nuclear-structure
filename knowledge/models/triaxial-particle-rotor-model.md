@@ -30,6 +30,8 @@ tags: [triaxiality, odd-a, wobbling]
 
 芯形变与转动惯量作为输入；模型参数可通过能级拟合调整。
 
+[[lawrie-2020-tilted-precession-wobbling]] 区分完整 QTR/particle-rotor-type 3D solutions 与 wobbling approximation：前者在该文术语中产生 [[tilted-precession-bands]]，后者只有在两个非主转轴的 angular-momentum components 可视为小量、`f(n,I)<<1` 时，才能写成 principal-axis rotation 与 harmonic wobbling phonons 的耦合。
+
 ## Inputs and Parameters
 
 - [[chakraborty-2023-131xe-wobbling-origin]] 最终采用 `ε2=0.13, γ=33°, ξ=1` 描述 `131Xe`；
@@ -52,6 +54,8 @@ tags: [triaxiality, odd-a, wobbling]
 拟合 γ 不是直接测量；转动惯量和 Coriolis attenuation 可引入模型依赖。
 
 QTR 中近邻轨道混合会与 γ 同时改变 S(I)，因此单个最佳 γ 往往不是唯一反演。
+
+Lawrie 2020 指出，QTR 对能带能量或大 E2 connecting transitions 的再现本身不能证明 transverse wobbling。对典型 transverse one-quasiparticle coupling，wobbling approximation 要求最大 MoI 轴——在该文 irrotational-flow convention 中为 intermediate axis（1 轴）——上的 rotational component 也为小量；作者计算的 `f(n,I)` 对 `135Pr/105Pd` 参数并不满足 `<<1`。该结论依赖 frozen-`j`、MoI ordering 和参数集合，仍是理论模型边界，不是实验裁决。
 
 `135Pr` QTR 低估 `B(E2_out)`、高估 `B(M1_out)`，并把 signature-partner excitation 高估约 500 keV；拟合能量后的转动惯量不能作为独立验证。
 
@@ -77,6 +81,7 @@ Sensharma 2019 的 QTR 给出
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
 - [[guo-2022-low-spin-wobbling-187au]]
+- [[lawrie-2020-tilted-precession-wobbling]]
 
 ## Evolution Log
 
@@ -86,3 +91,4 @@ Sensharma 2019 的 QTR 给出
 - 2026-07-03：加入 Sensharma 2019 的 TW2 anharmonicity/E2-ratio 比较及参数继承边界。
 - 2026-07-03：加入 Lv 2022 的 standard-input QTR realignment/TiP counter-interpretation。
 - 2026-07-04：加入 Guo 2022 的 `187Au` multi-orbital QTR single-particle reinterpretation 与 supplementary-material 边界。
+- 2026-07-04：加入 Lawrie 2020 对完整 3D QTR/TiP 与 harmonic wobbling approximation 的理论边界。
