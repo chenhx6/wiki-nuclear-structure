@@ -168,3 +168,5 @@ updated: 2026-07-04
 ## [2026-07-05] review | 用户审核 TiP / low-spin wobbling umbrella synthesis；LSW-SYN-5、LSW-THEORY-1 至 LSW-THEORY-5、LSW-TIP-1 至 LSW-TIP-5、LSW-TIP-SYN-1 至 LSW-TIP-SYN-8 共 19 条 notes 改为 `needs_review: false`；LSW-THEORY-1 校准为 Bohr–Mottelson Vol. II 提出 principal-axis rotation + harmonic-phonon wobbling approximation，Lawrie 2020 负责与完整 TiP/3D rotation 对照并检验适用条件，原书留作 future primary-source ingestion
 
 ## [2026-07-05] git | TiP / low-spin wobbling project synthesis 以 `Integrate reviewed TiP synthesis into low-spin wobbling project` 提交并推送至 `origin/main`；用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 改动未纳入
+
+## [2026-07-05] governance | 将 bounded initiative 第四条改为以可验证验收标准收敛任务的 Agent 行为契约
