@@ -80,8 +80,8 @@ B. F. Lv et al., *Physics Letters B* **824**, 136840 (2022)，DOI `10.1016/j.phy
 | L22-11 | 作者把关键 links 的 M1-dominated character、747/526 E2-strength ratio 与能级重组联合解释为反对 band 3 的 one-phonon 和第二个 `19/2-` state 的 two-phonon wobbling 性质。 | author-interpretation | direct | p.3 and p.5, Summary | false |
 | L22-12 | 本文 QTR 使用 `ε2=0.16, γ=26°`、irrotational-flow moments of inertia 与 unfrozen single-particle angular momentum；作者将其与先前为维持 short-axis precession 而调整参数和冻结单粒子取向的计算作对照。 | model-result | direct | pp.4-5, model discussion | false |
 | L22-13 | 作者在 p.5 正文报告：标准输入 QTR 中五条带均显著受到 Fig.3(d) 所示 single-particle excitation 机制影响，并发生 single-particle 与 total angular momenta 从 short axis 向 intermediate axis 的快速 realignment；逐带性质的细节指向 supplementary material。Fig.4(c) 只显示近似恒定且接近最大值的 `j_parallel=<I·j>/abs(I)`，支持两角动量近乎平行、同步演化，并不直接显示主轴分量。QTR 对 bands 1、3、4 的能量及 747/813 keV mixing ratios、813 keV transition ratio 给出较好比较；作者据此将这些带解释为基于 `πh11/2` 的 tilted-precession bands。 | model-result | direct | pp.4-5, Fig.3(d) as mechanism sketch; p.5 paragraphs before Fig.4 and Summary; Fig.4(a-d) | false |
-| L22-14 | 补充材料给出 747、813、450 keV polarization gates 的逐项污染检查：747 keV 使用 450 keV gated spectra；813 keV 只采用 796 keV suitable gate，并排查邻近 `136,137Nd` 线；450 keV 使用 747 keV gate，并以窄 gate 排除邻近 `136Nd` 449 keV line。作者据联合 `P-R_ac` 中心值选择 `δ`，其误差传播自 `P` 与 `R_ac`，而非不同 `σ/I` 本身。 | experimental-criterion | direct | supplementary material pp.1-4, Figs.2-5 | true |
-| L22-15 | 补充 QTR 计算采用 `ε2=0.16, γ=26°`、Harris `J0=J1=12.5`（相应单位）、10 个负宇称轨道、`g_s,eff=0.6g_s,free` 与 `g_core=Z/A`，不使用 frozen approximation，也不增强 short-axis moment of inertia。波函数把 bands 1-5 描述为 orbitals #14/#15/#16 的竞争与随自旋向 intermediate axis 的 realignment；single-particle 与 total angular momenta 同步转向且相对夹角近乎不变。 | model-result | direct | supplementary material pp.4-6, calculations section | true |
+| L22-14 | 补充材料给出 747、813、450 keV polarization gates 的逐项污染检查：747 keV 使用 450 keV gated spectra；813 keV 只采用 796 keV suitable gate，并排查邻近 `136,137Nd` 线；450 keV 使用 747 keV gate，并以窄 gate 排除邻近 `136Nd` 449 keV line。作者据联合 `P-R_ac` 中心值选择 `δ`，其误差传播自 `P` 与 `R_ac`，而非不同 `σ/I` 本身。 | experimental-criterion | direct | supplementary material pp.1-4, Figs.2-5 | false |
+| L22-15 | 补充 QTR 计算采用 `ε2=0.16, γ=26°`、Harris `J0=J1=12.5`（相应单位）、10 个负宇称轨道、`g_s,eff=0.6g_s,free` 与 `g_core=Z/A`，不使用 frozen approximation，也不增强 short-axis moment of inertia。波函数把 bands 1-5 描述为 orbitals #14/#15/#16 的竞争与随自旋向 intermediate axis 的 realignment；single-particle 与 total angular momenta 同步转向且相对夹角近乎不变。 | model-result | direct | supplementary material pp.4-6, calculations section | false |
 
 ## Nuclear Structure Information
 
@@ -127,4 +127,4 @@ B. F. Lv et al., *Physics Letters B* **824**, 136840 (2022)，DOI `10.1016/j.phy
 
 ## Personal Notes
 
-本页建立 counter-source，不裁决争议。用户已完成 source 页面及 L22-1 至 L22-13 的核对，并校正 L22-13 对 Fig.3(d)、p.5 正文与 Fig.4(c) 的证据边界。补充材料新增 L22-14 至 L22-15，当前为 `needs_review: true`。
+本页建立 counter-source，不裁决争议。用户已完成 source 页面及 L22-1 至 L22-15 的核对，并校正 L22-13 对 Fig.3(d)、p.5 正文与 Fig.4(c) 的证据边界；全部 claims 均为 `needs_review: false`。

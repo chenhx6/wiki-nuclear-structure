@@ -32,7 +32,7 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 | [[sensharma-2020-longitudinal-wobbling-187au]] | supporting source for the low-spin longitudinal-wobbling interpretation | 两次 ATLAS/Gammasphere 数据合并分析；angular distribution、能量与 PRM 构成同一支持链，connecting transitions 未测 linear polarization |
 | [[guo-2022-low-spin-wobbling-187au]] | counter-source/reinterpretation source against the low-spin LW interpretation | 独立 HIRFL 反应、探测阵列与 `R_ac + P` 数据；对 internal-conversion、β-decay 等早期工作仍是二手比较，需另摄入原始来源才能按独立证据计数 |
 
-两篇 source 均为 `human-reviewed`，AU20-1 至 AU20-15、G22-1 至 G22-17 均为 `needs_review: false`。用户已审核本 project 的 AU-SYN-1 至 AU-SYN-10；补充材料新增的 G22-18 至 G22-20 与 AU-SYN-11 至 AU-SYN-12 仍待 claim-level 复核。
+两篇 source 均为 `human-reviewed`，AU20-1 至 AU20-15、G22-1 至 G22-20 均为 `needs_review: false`。用户已审核本 project 的 AU-SYN-1 至 AU-SYN-12。
 
 ## Current Hypotheses
 
@@ -93,7 +93,7 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 | configuration-fixed CDFT 形变 | AU20-12；p.4 | 支持 PRM 常形变近似 | 只约束形变输入，不独立证明 wobbling |
 | PRM energies、`E_wobb` 与 transition ratios | AU20-13/AU20-14；pp.4-5, Figs.4-5 | 总体趋势和 E2 ratios 较好 | 略低估 `E_wobb`；对 LW/SP 的 M1 ratios 有相反方向偏差 |
 | Guo QTR：`ε2=0.21, γ=12°`、Harris `J0/J1`、9 个负宇称轨道 | G22-10；p.3 | 允许相邻 `h9/2` orbitals 竞争 | 与 Sensharma PRM 的形变、惯量和空间不同 |
-| QTR orbital content 与 transition observables | G22-11/G22-20；main p.3, Fig.4; supplement pp.4-5, Fig.3 | Band 1 以 orbital #19、Band 2 以 #21 为主；低自旋 precession-like #19 成分较小，支持 single-particle excitation 重解释 | 模型结果不能替代实验 branch 冲突；新增逐轨道细节待人工复核 |
+| QTR orbital content 与 transition observables | G22-11/G22-20；main p.3, Fig.4; supplement pp.4-5, Fig.3 | Band 1 以 orbital #19、Band 2 以 #21 为主；低自旋 precession-like #19 成分较小，支持 single-particle excitation 重解释 | 模型结果不能替代实验 branch 冲突 |
 | Precession / TiP | G22-16/G22-17；pp.4-5 | 提醒低自旋可有非 wobbling-phonon 的 collective motion | Guo 未对 `187Au` 完成直接 TiP calculation；本轮只列 future source/concept |
 
 ## Cross-Source Evidence Matrix
@@ -110,8 +110,8 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 | AU-SYN-8 | Guo QTR 为 single-particle excitation 提供竞争模型解释，不构成实验事实 | G22-10/G22-11 | 与支持方模型输入不同，逐轨道实现见补充材料 | 与 Guo 实验同一论文，模型与数据比较不是独立实验来源 | competing model interpretation | false |
 | AU-SYN-9 | low-spin wobbling approximation 的适用性尚未定量闭合 | AU20-15 的 half-filled-shell LW 图景 | G22-15 的 `R≈1ħ`/Fermi-surface 批评 | 两方依赖不同理论前提；需 Lawrie 2020 等原始理论来源 | unresolved theoretical premise | false |
 | AU-SYN-10 | 当前材料不能把 `187Au` 直接改判为 TiP | G22-16/G22-17 仅列 alternative mechanisms | 无 `187Au` TiP 专门 calculation、geometry 或区分性 observable | TiP 证据尚未摄入 | future hypothesis only | false |
-| AU-SYN-11 | Guo supplementary material 使 376/462 keV 小 branch 的选门、污染控制、校准和误差边界可审计，但不会把该结果升级为无条件终局裁决 | G22-18/G22-19；supplement pp.1-4 | 462 keV 需避开邻近异构态以上 463 keV 污染；`σ/I` 未固定，polarization sensitivity `Q` 采用同型探测器外部 calibration | 与 Guo 主文为同一实验和同一证据链 | stronger audit trail with retained systematics | true |
-| AU-SYN-12 | Guo supplementary QTR 具体支持 Band 1/#19 与 Band 2/#21 为不同 dominant orbitals，且低自旋 precession-like 成分较小 | G22-20；supplement pp.4-5, Fig.3 | 逐轨道波函数为模型结果；不能据此把实验 Band 2 单独“证明”为 single-particle excitation | 与 G22-10/G22-11 同一 QTR 计算链 | refined competing-model result | true |
+| AU-SYN-11 | Guo supplementary material 使 376/462 keV 小 branch 的选门、污染控制、校准和误差边界可审计，但不会把该结果升级为无条件终局裁决 | G22-18/G22-19；supplement pp.1-4 | 462 keV 需避开邻近异构态以上 463 keV 污染；`σ/I` 未固定，polarization sensitivity `Q` 采用同型探测器外部 calibration | 与 Guo 主文为同一实验和同一证据链 | stronger audit trail with retained systematics | false |
+| AU-SYN-12 | Guo supplementary QTR 具体支持 Band 1/#19 与 Band 2/#21 为不同 dominant orbitals，且低自旋 precession-like 成分较小 | G22-20；supplement pp.4-5, Fig.3 | 逐轨道波函数为模型结果；不能据此把实验 Band 2 单独“证明”为 single-particle excitation | 与 G22-10/G22-11 同一 QTR 计算链 | refined competing-model result | false |
 
 ## Counter-Evidence Summary
 
@@ -127,7 +127,7 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 | Material | Gate status | Required use |
 |---|---|---|
 | AU20-1 至 AU20-15、G22-1 至 G22-17 | eligible evidence pool | 两个 source/上述 claims 已人工复核，citation key 与 locator 完整；写作仍须回到对应 source/raw |
-| G22-18 至 G22-20 | claim-level review pending | 补充材料是 Guo 主文的附属证据层；可作待审方法与模型细节，人工复核前不进入正式 paper evidence pool |
+| G22-18 至 G22-20 | eligible evidence pool | 补充材料是 Guo 主文的附属证据层；claims 已人工复核，使用时仍归属于 `guo_2022_Probingnature` |
 | 能带、transition energy、实验 δ、E2 fraction、`R_ac`、polarization 与 `E_wobb` | eligible as reported observations | 必须注明 source、实验和 locator；冲突数值必须并列，不得择一写成共识 |
 | LW、signature partner、single-particle excitation | eligible only as attributed author interpretations | 必须写“作者解释/指认为”，不得写成裸事实 |
 | PRM/CDFT/QTR 结果 | eligible only as model results | 参数、模型空间、偏差和不同输入必须保留 |
@@ -135,13 +135,12 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 | G22-9 的数 W.u. `B(E2)_out` | attributed derived estimate | 依赖本文 δ 与外部 `B(E2)_in`，不是本文寿命测量 |
 | TiP 对 `187Au` 的解释 | not yet eligible | 当前只有 future alternative；缺专门理论/实验 source 与 `187Au` 直接 calculation |
 | Project synthesis matrix（AU-SYN-1 至 AU-SYN-10） | reviewed navigation/synthesis | 用户已人工审核；仍不能代替 source/raw 进入论文正文 |
-| AU-SYN-11 至 AU-SYN-12 | navigation/synthesis, review pending | 补充材料新增综合；人工复核前只作待审线索 |
+| AU-SYN-11 至 AU-SYN-12 | reviewed navigation/synthesis | 补充材料新增综合已人工复核；仍不能替代 source/raw |
 
 ## Needs Review
 
-- AU20-1 至 AU20-15、G22-1 至 G22-17 与 project-level AU-SYN-1 至 AU-SYN-10 均已审核，`needs_review: false`。
+- AU20-1 至 AU20-15、G22-1 至 G22-20 与 project-level AU-SYN-1 至 AU-SYN-12 均已审核，`needs_review: false`。
 - 本 project 已改为 `review_status: human-reviewed`。
-- 补充材料新增 G22-18 至 G22-20、AU-SYN-11 至 AU-SYN-12，均为 `needs_review: true`。
 
 ## Unresolved Issues
 
@@ -157,7 +156,7 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 ## Risks and Blockers
 
 - 相同 transition 的 mixing-ratio branch 尚未在统一响应和误差模型下复算；
-- Sensharma 的完整 coincidence/systematics 仍未进入 Wiki；Guo supplementary material 已挂接并形成待审 claims；
+- Sensharma 的完整 coincidence/systematics 仍未进入 Wiki；Guo supplementary material 已挂接并完成 claim review；
 - early internal-conversion 与 β-decay 证据当前通过 Guo 二手转述，独立性尚未闭合；
 - band (3) identity 冲突会反向影响“同核素 LW/SP 对照”的证据强度；
 - 两方模型输入不同，energy/transition agreement 不能直接比较为同一 benchmark；
@@ -166,7 +165,7 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 ## Follow-Up Sources
 
 1. Sensharma 2020 所指 forthcoming/full coincidence、spin/parity 与 angular-distribution analysis，或其 supplementary material。
-2. Guo 2022 supplementary material 已作为主文附属证据层挂接；后续只需人工复核 G22-18 至 G22-20，不另建 source/BibTeX。
+2. Guo 2022 supplementary material 已作为主文附属证据层挂接并完成 G22-18 至 G22-20 复核，不另建 source/BibTeX。
 3. D. Rupnik et al., *Phys. Rev. C* **58**, 771 (1998)：`187Ag` β decay/`187Au` level scheme 原始来源。
 4. C. Bourgeois et al. 1978 与 C. Bourgeois et al. 1989：internal conversion、shape coexistence 与 Band 1/2 早期 assignment。
 5. `186Pt/187Au` 的 lifetime/`B(E2)_in` 原始测量，用于审计 G22-9 的 `B(E2)_out` estimate。
@@ -200,10 +199,9 @@ tags: [187au, longitudinal-wobbling, signature-partner, controversy, evidence-ma
 
 ## Next Actions
 
-1. 用户复核补充材料新增 G22-18 至 G22-20、AU-SYN-11 至 AU-SYN-12。
-2. 优先摄入 Rupnik 1998 与 early internal-conversion sources。
-3. 摄入 Lawrie 2020 与 `135Nd` TiP 原始工作，随后启动 low-spin wobbling umbrella project。
-4. 设计 376/462 keV links 的 common-response/common-error reanalysis。
+1. 优先摄入 Rupnik 1998 与 early internal-conversion sources。
+2. 摄入 Lawrie 2020 与 `135Nd` TiP 原始工作，随后启动 low-spin wobbling umbrella project。
+3. 设计 376/462 keV links 的 common-response/common-error reanalysis。
 
 ## Related Sources and Pages
 

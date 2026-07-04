@@ -134,3 +134,5 @@ updated: 2026-07-04
 ## [2026-07-04] review-supplement | 用户审核 `187Au` project 的 AU-SYN-1 至 AU-SYN-10；project 升级为 human-reviewed。Guo/Lv 2022 supplementary material 作为各自主文附属证据层挂接，不新建 DOI/Bib/source；新增 G22-18 至 G22-20、L22-14 至 L22-15 与 AU-SYN-11 至 AU-SYN-12 待审，并在 PLAN 记录 TiP 摄入后启动 low-spin wobbling umbrella project
 
 ## [2026-07-04] git | `187Au` controversy synthesis、supplementary evidence 挂接与 umbrella PLAN 以 commit `41bcc6d` 提交并推送至 `origin/main`；用户 `.obsidian`、raw PDF 与 `wiki-inbox.bib` 修改未纳入
+
+## [2026-07-04] claim-review | 用户确认 Guo/Lv supplementary material 新增的 G22-18 至 G22-20、L22-14 至 L22-15 与 project synthesis AU-SYN-11 至 AU-SYN-12；144 条结构化 source claims 待审队列清零
