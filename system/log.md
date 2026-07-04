@@ -126,3 +126,9 @@ updated: 2026-07-04
 ## [2026-07-04 14:42] claim-review | 用户确认 Guo 2022 source 与其余 14 条 claims；source 升级为 human-reviewed，G22-1 至 G22-17 全部改为 `needs_review: false`，结构化 claim 待审队列再次清零
 
 ## [2026-07-04 14:58] git | Guo 2022 source 全量审核状态以 commit `20656c9` 提交并推送至 `origin/main`；用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 修改未纳入
+
+## [2026-07-04 15:15] automation-audit | 未找到清晨 `187Au` project-level synthesis 的自动化配置、运行线程、运行回执或匹配产物；按回执门判定未触发/未执行，由当前会话直接运行
+
+## [2026-07-04 15:15] synthesize-project | 基于已人工复核的 Sensharma 2020 与 Guo 2022 重构 `187Au` controversy locator-level evidence matrix；新增 AU-SYN-1 至 AU-SYN-10 待审综合 claims、paper evidence gate、unresolved issues 与 follow-up sources，不裁决争议，不 commit/push
+
+## [2026-07-04] review-supplement | 用户审核 `187Au` project 的 AU-SYN-1 至 AU-SYN-10；project 升级为 human-reviewed。Guo/Lv 2022 supplementary material 作为各自主文附属证据层挂接，不新建 DOI/Bib/source；新增 G22-18 至 G22-20、L22-14 至 L22-15 与 AU-SYN-11 至 AU-SYN-12 待审，并在 PLAN 记录 TiP 摄入后启动 low-spin wobbling umbrella project

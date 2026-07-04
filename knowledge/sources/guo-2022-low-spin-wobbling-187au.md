@@ -41,9 +41,15 @@ S. Guo et al., *Physics Letters B* **828**, 137010 (2022)，DOI `10.1016/j.physl
 
 ## Scope and Reading Depth
 
-全文精读，并视觉核对 Fig.1 的高/低自旋进动几何、Fig.2 的 `187Au/188Pt` 部分能级纲图与门谱、Fig.3 的联合 `P-R_ac` 与内转换比较、Fig.4 的实验-QTR 比较，以及 Fig.5-6 对 mixing-ratio 双解和偏振不确定度的讨论。
+主文与 supplementary material 全文精读，并视觉核对主文 Fig.1 的高/低自旋进动几何、Fig.2 的 `187Au/188Pt` 部分能级纲图与门谱、Fig.3 的联合 `P-R_ac` 与内转换比较、Fig.4 的实验-QTR 比较、Fig.5-6 对 mixing-ratio 双解和偏振不确定度的讨论，以及补充材料 pp.1-5 的选门、偏振校准、误差处理和 QTR 波函数分解。
 
-本页按 `experiment-ingest + project-ingest` 建立针对 reported low-spin wobbling bands 的 counter-source/reinterpretation source。它不把 Guo 2022 的反方解释写成本 Wiki 的最终裁决。论文把分析程序与更多模型细节指向 supplementary material，但该补充材料不在当前 `raw/` 中；相关细节保留为证据缺口。
+本页按 `experiment-ingest + project-ingest` 建立针对 reported low-spin wobbling bands 的 counter-source/reinterpretation source。它不把 Guo 2022 的反方解释写成本 Wiki 的最终裁决。补充材料作为主论文的附属证据层挂接到本 source，不另建 source、DOI 或 BibTeX 条目。
+
+## Supplementary Material Record
+
+- 文件：`raw/papers/2022_Guo et al_Probing the nature of the conjectured low-spin wobbling bands in atomic nuclei supplement.pdf`
+- SHA-256：`8525CAA69D98E808253E3C790430982451F621A01CE4E7F438AB3FE1D836BCD6`
+- 证据边界：该文件补充主文的数据分析、计算与评估细节，不具有独立文献身份；所有新增 claims 仍引用 `guo_2022_Probingnature`。
 
 ## Summary
 
@@ -79,6 +85,9 @@ S. Guo et al., *Physics Letters B* **828**, 137010 (2022)，DOI `10.1016/j.physl
 | G22-15 | 作者把 wobbling phonon 描述限定为高自旋下的小角 harmonic approximation。总角动量满足矢量耦合 `J=j+R`；多数 reported low-spin bands 的最低态约为 `J=j+1`，对应集体角动量 `R` 仅约 `1ħ`、collective rotation 极慢，难以形成该近似所要求的高自旋小角进动。对 `187Au h9/2`，作者还指出 proton Fermi surface 靠近 intruder subshell 底部，与其概括的 LW 需准质子处于 j-shell 中部的几何条件冲突。 | author-interpretation | direct | pp.1-2, Fig.1 and discussion before experimental setup | false |
 | G22-16 | 作者批评既有范式只在 signature partner 与 wobbling 间选择，并指出 β/γ vibration、tilted precession 等低自旋集体机制也可能产生增强的 E2 links；大 `abs(δ)` 单独不足以无歧义证明 wobbling。 | author-interpretation | secondary-comparison | pp.4-5, final discussion | false |
 | G22-17 | 作者最终把 `187Au` Band 2 重解释为 dominant single-particle excitation，而非 wobbling phonon；对其他 reported low-spin wobbling cases 只作“现有证据通常不足”的总体评估，并要求以可区分 wobbling、TiP 与振动的观测量继续检验。 | author-interpretation | direct | p.5, final two paragraphs and Summary | false |
+| G22-18 | 补充材料说明 `R_ac` 由相同全角度 gates 下的 `154°/90°` 效率归一谱强度比取得；偏振不对称校正由标准源标定为 `a(Eγ)=0.975(24)+7.6(379)×10^-6 Eγ`。由于高自旋异构态使 `σ/I` 不能由本实验固定，作者在所有可行 `σ/I` 上取穿过实验误差矩形的椭圆曲线来界定 `δ` 区间。 | experimental-criterion | direct | supplementary material pp.1, 3-4, data-analysis section and Fig.2 | true |
+| G22-19 | 对 376 keV transition，作者合并 316、319、400、417、471、565、625 keV 七个 clean gates；对邻近异构态以上 463 keV 线可能污染的 462 keV peak，则选择 316/400 keV gates 并限制 313 keV peak 的左侧区间，采用 upper/central/lower bounds。拟合至少重复五轮，finite-opening-angle correction 小于 3%，并对 efficiency/opening-angle 采用 5% systematic uncertainty。 | experimental-fact | direct | supplementary material pp.1-3, Figs.1-2 | true |
+| G22-20 | 补充 QTR 波函数显示 Band 1 主要由 orbital #19、`K_long=1/2` 构成，Band 2 主要由 orbital #21、`K_long=3/2` 构成；Band 2 中 orbital #23、`K_long=5/2` 的贡献随自旋增加，而作者联系到 nuclear precession 的 orbital #19、`K_long=3/2` 成分在低自旋处较小。 | model-result | direct | supplementary material pp.4-5, Table 1 and Fig.3 | true |
 
 ## Nuclear Structure Information
 
@@ -101,7 +110,7 @@ S. Guo et al., *Physics Letters B* **828**, 137010 (2022)，DOI `10.1016/j.physl
 - QTR 输入与模型空间见 G22-10；
 - Fig.4 比较 energies、mixing ratios 和两类相对 transition ratios；
 - 波函数的 orbital content 支持作者所称 single-particle excitation；
-- 详细计算程序和更多结果位于当前未收录的 supplementary material，因此不能把正文摘要扩写为逐自旋角动量几何结论；
+- 补充材料给出 orbitals #19/#21/#23 的逐自旋波函数成分；这些是 QTR model results，不是实验测得的主轴分量；
 - TiP 在本文中作为可能的低自旋替代机制和 `135Nd` 已报道案例出现，不是本文对 `187Au` 的直接模型计算结果。
 
 ## Competing Interpretations and Limitations
@@ -110,7 +119,7 @@ S. Guo et al., *Physics Letters B* **828**, 137010 (2022)，DOI `10.1016/j.physl
 - Guo 的两条关键 links 虽得到 `abs(δ)<1`，正文明确指出误差较大，精确数值与系统学仍需人工复核；
 - `B(E2)_out` 为从 mixing ratio 和外部 `B(E2)_in` 数据推导的估计，不是本文寿命测量；
 - 对 `135Pr`、`133La`、`105Pd`、`183Au`、`127Xe` 等案例的讨论是 broader controversy assessment，不作为这些核素的原始实验摄入；
-- supplementary material 未在当前 `raw/` 中，限制了对 polarization procedure、QTR 实现和 broader-case reanalysis 的完整复核。
+- 补充材料已挂接并补齐 polarization procedure 与 QTR 波函数细节；新增 G22-18 至 G22-20 仍待人工复核。
 
 ## Extracted Pages
 
@@ -125,4 +134,4 @@ S. Guo et al., *Physics Letters B* **828**, 137010 (2022)，DOI `10.1016/j.physl
 
 ## Personal Notes
 
-本页是 `187Au` project 的 counter-source/reinterpretation source。用户已完成 source 页面与 G22-1 至 G22-17 的逐条审核；页面为 `human-reviewed`，全部 claims 均为 `needs_review: false`。未建立 `low-spin-wobbling-controversies` umbrella project。
+本页是 `187Au` project 的 counter-source/reinterpretation source。用户已完成 source 页面与 G22-1 至 G22-17 的逐条审核；页面为 `human-reviewed`。补充材料新增 G22-18 至 G22-20，当前为 `needs_review: true`。未建立 `low-spin-wobbling-controversies` umbrella project。

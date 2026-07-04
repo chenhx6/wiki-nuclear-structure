@@ -20,9 +20,9 @@ updated: 2026-07-04
 - [[domscheit-1999-triaxial-superdeformation-163lu]] - 非 A≈130 的 `163Lu` SD 带连接、混合与 UC/PES 三轴形变比较案例。
 - [[matta-2015-transverse-wobbling-135pr]] - `135Pr` transverse-wobbling 解释的原始实验支持来源。
 - [[sensharma-2019-two-phonon-wobbling-135pr]] - `135Pr` two-phonon wobbling extension 的原始实验支持来源。
-- [[lv-2022-evidence-against-wobbling-135pr]] - 反对 `135Pr` low-spin wobbling 的联合角关联/偏振实验与 QTR 比较。
+- [[lv-2022-evidence-against-wobbling-135pr]] - 反对 `135Pr` low-spin wobbling 的联合角关联/偏振实验与 QTR 比较；supplementary material 作为附属证据层挂接。
 - [[sensharma-2020-longitudinal-wobbling-187au]] - `187Au` longitudinal-wobbling 与 signature-partner 区分的原始实验支持来源。
-- [[guo-2022-low-spin-wobbling-187au]] - 以独立 `R_ac-P`、internal conversion 比较与 QTR 重解释 `187Au` reported low-spin wobbling 的反方来源。
+- [[guo-2022-low-spin-wobbling-187au]] - 以独立 `R_ac-P`、internal conversion 比较与 QTR 重解释 `187Au` reported low-spin wobbling 的反方来源；supplementary material 作为附属证据层挂接。
 
 ## Nuclei
 
@@ -114,7 +114,7 @@ updated: 2026-07-04
 
 - [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
 - [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands 的 wobbling/TiP 竞争解释与 supporting/counter evidence。
-- [[187au-longitudinal-wobbling-controversy]] - 跟踪 `187Au` LW、single-particle excitation 与 associated signature partner；当前并列 Sensharma 2020 与 Guo 2022。
+- [[187au-longitudinal-wobbling-controversy]] - 已审核的 Sensharma 2020/Guo 2022 locator-level evidence matrix；跟踪 `187Au` LW、single-particle excitation、associated signature partner 与低自旋近似争议。
 
 ## Decisions and Failures
 

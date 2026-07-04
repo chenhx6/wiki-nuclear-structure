@@ -28,6 +28,8 @@
 
 下一步充实 tilted precession（TiP）相关的理论与实验知识，重点整理 TiP 的角动量几何、与 wobbling 的判别边界、代表性模型计算和原始实验案例。
 
+Lawrie 2020 *Tilted precession and wobbling in triaxial nuclei* 与 Lv 2021 `135Nd` tilted-precession 原始文献现已进入 `raw/papers/` 和 `wiki-inbox.bib`。完成这两篇来源摄入后，启动 `knowledge/projects/low-spin-wobbling-controversies.md` umbrella project，把 `135Pr`、`187Au` 及后续直接 counter-source 按 observed facts、experimental criteria、author interpretations 与 model results 分层比较；在此之前不提前建立空壳页面。
+
 ## 长期节奏
 
 - 每篇论文：一次精确摄入；

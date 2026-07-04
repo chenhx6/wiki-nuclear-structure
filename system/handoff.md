@@ -10,6 +10,17 @@ updated: 2026-07-04
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：`187Au` longitudinal-wobbling project synthesis（审核完成，待提交）
+
+- 清晨定时任务无配置、线程、回执或匹配产物，按 scheduled-continuation 回执门判定为“未触发/未执行”；当前会话已直接完成 synthesis。
+- 用户已审核 AU-SYN-1 至 AU-SYN-10，project 升级为 `human-reviewed`，上述 claims 均改为 `needs_review: false`；矩阵继续并列支持链与反证链，不裁决争议。
+- Guo 2022 与 Lv 2022 supplementary material 均已在 `raw/papers/`；它们不具独立 DOI/文献身份，未新建 source 或 BibTeX，而是分别挂接到既有 Guo/Lv source。
+- Guo supplement 补齐 376/462 keV 的 `R_ac`/polarization 选门、污染控制、`a(Eγ)` calibration、`σ/I` 与误差处理，并给出 Bands 1/2 的 #19/#21/#23 QTR 波函数成分；新增 G22-18 至 G22-20 与 AU-SYN-11 至 AU-SYN-12，均待人工复核。
+- Lv supplement 补齐 747/813/450 keV 的 gate/contamination checks、完整 transition table 与逐带 #14/#15/#16 QTR realignment；新增 L22-14 至 L22-15，均待人工复核。
+- 用户授权在 `PLAN.md` 写入 umbrella project 计划：Lawrie 2020 与 Lv 2021 `135Nd` TiP 原始文献已进入 raw/BibTeX inbox，完成两篇摄入后启动 `low-spin-wobbling-controversies`，不提前建立空壳页。
+- 当前 lint：99 pages、862 Wikilinks、14/14 source hash、0 error、10 warning、5 info；5 个 info 对应上述补充材料待审 claims。
+- 提交时必须排除用户 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib` 与 raw PDF；主提交信息使用 `Build 187Au longitudinal-wobbling controversy evidence matrix`，随后推送 `origin/main`。
+
 ## 当前执行：Guo 2022 `187Au` low-spin wobbling counter-source（审核完成，已提交）
 
 - 2026-07-04 按 `experiment-ingest + project-ingest` 深读 `raw/papers/2022_Guo et al_Probing the nature of the conjectured low-spin wobbling bands in atomic nuclei3.pdf`；citation key 唯一匹配 `guo_2022_Probingnature`，SHA-256 为 `DE541977E4C8402C905EF8268EBC5707303F4B92F244EB4F59405A70C3473206`。

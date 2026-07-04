@@ -3,7 +3,7 @@ type: project
 title: "135Pr low-spin wobbling controversy"
 aliases: [135Pr wobbling controversy, 135Pr low-spin bands evidence map]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 status: active
 review_status: human-reviewed
 project_stage: competing-evidence-matrix
@@ -79,7 +79,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 | yrast/side bands 为 `n_w=0/1` transverse-wobbling pair | Matta M15-3/M15-10；pp.2-5 | 作者解释；依赖 E2-link 与 `E_wob` 判据 |
 | 新侧带为 `n_w=2` two-phonon transverse wobbling | Sensharma S19-8/S19-9；pp.170-174 | 作者解释；继承 Matta assignment |
 | band 3 与第二个 `19/2-` state 不具有 one-/two-phonon wobbling 性质 | Lv L22-11；p.3 and p.5 Summary | counter-interpretation；不等于 project 裁决 |
-| 低激发带为基于 `πh11/2` 的 tilted-precession bands | Lv L22-13；pp.4-5 and Summary | 模型依赖解释；逐带轴分量细节在 supplementary material |
+| 低激发带为基于 `πh11/2` 的 tilted-precession bands | Lv L22-13/L22-15；main pp.4-5 and Summary; supplement pp.4-6 | 模型依赖解释；supplementary material 补充逐带轨道成分，但新增 claim 尚待复核 |
 
 ## Model Results
 
@@ -106,12 +106,13 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 | 能级、transition energy、mixing ratio、polarization、`R_ac`、相对 transition ratio | eligible as reported observation | 必须引用对应原始 source，不能只引用本 project |
 | transverse wobbling、two-phonon wobbling、TiP/realignment | eligible only as attributed interpretation/model result | 必须使用“作者解释/模型计算”，不得写成裸事实 |
 | Lv L22-9 对 Matta/Garg/erratum 的比较 | follow-up lead only | 当前只摄入 Lv 的二手比较；Garg 原文、erratum 与相关质疑尚未分别进入 evidence gate |
-| Lv 逐带 realignment 细节 | incomplete | 正文指向 supplementary material；补充材料未单独摄入前不能扩写主轴分量细节 |
-| 本 project 的矩阵与综合句 | navigation/synthesis only | project `review_status: unreviewed`，且综合页不能替代原始 source |
+| Lv 逐带 realignment 细节（L22-15） | claim-level review pending | supplementary material 已作为主文附属证据层挂接；新增逐带轨道成分待人工复核，且仍只能作为模型结果 |
+| 本 project 的矩阵与综合句 | reviewed navigation/synthesis | project 为 `review_status: human-reviewed`，但综合页仍不能替代原始 source |
 
 ## Needs Review
 
-- 三篇 source 的 41 条结构化 claims 当前均为 `needs_review: false`。
+- 三篇 source 的原 41 条结构化 claims 当前均为 `needs_review: false`。
+- Lv supplementary material 新增 L22-14 至 L22-15，当前为 `needs_review: true`。
 - 用户已审核本 project 的 evidence matrix 与其余章节，页面为 `review_status: human-reviewed`。
 - 没有新增 project-level claim ID；矩阵条目沿用 M15、S19、L22 source claim IDs。
 
@@ -129,14 +130,14 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 - 相同 transition 的 mixing-ratio branch 选择尚未在统一分析链下复算；
 - 支持方两篇论文的 phonon hierarchy 不是完全独立证据；
 - 关键弱 links 缺 polarization，且三篇论文均未提供统一的绝对 `B(E2)` 数据集；
-- TiP 的逐带角动量几何仍依赖尚未摄入的 supplementary material 与理论原始来源；
-- 当前 project matrix 未人工审核，不能替代三篇 source/raw 进入论文正文。
+- Lv supplementary material 已补齐逐带 QTR 成分；TiP 的理论边界仍依赖尚未摄入的理论原始来源；
+- project matrix 已人工审核，但仍不能替代三篇 source/raw 进入论文正文。
 
 ## Follow-Up Sources
 
 1. Garg et al. 2015 `135Pr` polarization 原始论文及其 erratum，用于独立核对 Lv L22-9。
 2. Matta 2015 所称后续完整 coincidence/angular-distribution/asymmetry 分析或 supplementary information。
-3. Sensharma 2019 与 Lv 2022 supplementary material，补齐弱 links、逐带 QTR 成分和主轴分量细节。
+3. Sensharma 2019 supplementary material；Lv 2022 supplementary material 已挂接到现有 source，待复核 L22-14 至 L22-15。
 4. Lawrie et al. 2020 *Tilted precession and wobbling in triaxial nuclei*，建立 TiP 理论定义与 wobbling 区分。
 5. Lv et al. 2021 `135Nd` tilted-precession 原始工作，作为 TiP 实验/模型案例；不直接替代 `135Pr` 证据。
 6. Guo 2022 已在 [[187au-longitudinal-wobbling-controversy]] 独立摄入为 counter/reinterpretation source；其 mixing-ratio 双解与低自旋识别范式批评只作跨质量区判据比较，不作为 `135Pr` 直接实验事实。
@@ -154,9 +155,9 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 
 ## Next Actions
 
-1. 用户审核本 evidence matrix。
+1. 用户复核 Lv supplementary material 新增 L22-14 至 L22-15。
 2. 优先摄入 TiP 理论与实验来源，建立其与 wobbling 的判别框架。
-3. 摄入 Garg 原文/erratum 与三篇论文的相关 supplementary material。
+3. 摄入 Garg 原文/erratum 与 Sensharma 2019 等尚缺的 supplementary material。
 4. 通过独立 `187Au` project 比较 Guo 2022 所提低自旋 wobbling 判据与 mixing-ratio 双解问题的跨质量区适用性。
 
 ## Related Sources and Pages
