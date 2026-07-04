@@ -2,7 +2,7 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-04
+updated: 2026-07-05
 ---
 
 # Knowledge Base Health Dashboard
@@ -18,13 +18,14 @@ updated: 2026-07-04
 | 观测量页数 | 9 | `knowledge/observables/` |
 | 方法页数 | 7 | `knowledge/methods/` |
 | 综合页数 | 4 | `knowledge/synthesis/` |
-| 项目页数 | 4 | `knowledge/projects/`；新增连接 `135Pr/187Au` 的 low-spin wobbling umbrella evidence map |
+| 项目页数 | 4 | `knowledge/projects/`；low-spin umbrella 已接入 Lawrie/Lv TiP theory-experiment synthesis |
 | 人工确认的高置信度结论 | 0 | 必须有确认记录 |
 | 页面级人工审阅页 | 25 | 16 个 source 页 + 9 个其他知识页；Lv 2021 source 已审 |
 | 页面级 unreviewed | 83 | 自动 lint governance 统计；`135Nd` 派生页仍待审 |
 | source 页 unreviewed | 0 | 16 个 source 页均完成人工页面级审阅 |
 | 页面级 needs-human-review | 0 | 不等同于 claim-level 待审数量 |
 | claim-level `needs_review: true` | 0 | 当前 177 条结构化 source claims 均已完成用户确认 |
+| project-level synthesis `needs_review: true` | 0 | 本轮 19 条 TiP/low-spin wobbling project notes 已完成人工审核 |
 | claim 缺失 locator | 0 | 自动解析 source `Key Results` 表 |
 | claim 缺失 claim kind | 0 | 使用 schema 字段 `claim_kind` |
 | source 缺失 raw_file | 0 | 自动统计 source frontmatter |

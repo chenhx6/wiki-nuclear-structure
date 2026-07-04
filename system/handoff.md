@@ -1,7 +1,7 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-04
+updated: 2026-07-05
 ---
 
 # 跨会话交接
@@ -9,6 +9,20 @@ updated: 2026-07-04
 ## 当前阶段
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
+
+## 当前执行：TiP / low-spin wobbling project-level synthesis（审核完成，已 finalize/push）
+
+- 基于已审核的 Lawrie 2020 LAW20-1 至 LAW20-15 与 Lv 2021 LV21-1 至 LV21-18，更新 `knowledge/projects/low-spin-wobbling-controversies.md`；未新增或修改 source claims。
+- 新增 TiP theoretical framework、wobbling approximation condition、TiP≈wobbling 条件、不可等同情形、transverse/longitudinal coupling、QTR/particle-rotor role、`135Nd` experimental reference、`135Pr/187Au` relation 与 discrimination criteria。
+- 保留 source-bound LSW-THEORY-1 至 5、LSW-TIP-1 至 5，并新增跨来源 LSW-TIP-SYN-1 至 LSW-TIP-SYN-8；连同更新后的 LSW-SYN-5，共 19 条 project-level synthesis notes 已由用户审核，均为 `needs_review: false`。
+- 用户校准 LSW-THEORY-1 的历史归因：principal-axis rotation + harmonic-phonon wobbling approximation 原始提出归于 Bohr–Mottelson *Nuclear Structure*, Vol. II；Lawrie 2020 的角色是把完整 TiP/3D rotation 与该既有近似系统对照并检验适用条件。原书尚未摄入，因此历史归因保留为 future primary-source evidence gap。
+- 综合边界：TiP 提供 wobbling 之外的完整 3D rotation framework；QTR/PRM fit 不自动证明 wobbling，也不自动证明 TiP。只有在 `f(n,I)<<1`、single-particle orientation 与 harmonic approximation 相容、并显示 phonon energy/transition-probability quantization 时，TiP solution 才可近似写成 wobbling。
+- `135Nd` 是 channel-/nucleus-distinct experimental TiP reference，但 Lv 2021 与 Lv 2022 `135Pr` 共享同一 JUROGAM II run，且与 Lawrie framework 共享作者/解释链；不能按完全独立证据计数。其 M1-dominated links 与 QTR agreement 均非单独充分条件，也不得跨核素替代 `135Pr/187Au` transition-level evidence。
+- 对 `135Pr`，TiP 与 Lawrie approximation test、Lv 2022 unfrozen-QTR reinterpretation 直接相关；对 `187Au` 仅增加待检验维度，当前无 nucleus-specific TiP calculation，不能改判。
+- 新增 future-source plan：Bohr–Mottelson Vol. II、Frauendorf-Dönau 2014、Tanabe 2017/2018、`105Pd`、Lu TSD benchmark、`135Pr/187Au` common-input calculations 与 `135Nd` absolute transition-strength follow-up。
+- 已检查 `knowledge/questions.md`；现有 cross-case minimal identification protocol 已覆盖 `f(n,I)`、phonon quantization 与判据组合，不新增重复问题。
+- 当前 lint 目标：108 pages、995 Wikilinks、16/16 source hash、0 error、10 warning、0 info；177 条 source claims 与 project-level synthesis 待审均为 0。
+- 本轮未修改 `PLAN.md`、source、raw、schema、vocabulary、workflow 或 USER_GUIDE；保留用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 改动。最终提交仅纳入本任务五个文件并推送至 `origin/main`。
 
 ## 当前执行：Lv 2021 `135Nd` experimental TiP ingest（source 审核完成，已 finalize/push）
 

@@ -3,7 +3,7 @@ type: project
 title: "Low-spin wobbling controversies"
 aliases: [low-spin wobbling evidence map, low-spin wobbling identification controversies, 低自旋 wobbling 争议]
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-07-05
 status: active
 review_status: human-reviewed
 project_stage: cross-case-evidence-map
@@ -41,11 +41,11 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 - H2：level/band identity、polarization magnitude 与 signature-partner comparison 是判据链的前置约束，缺一会降低 assignment 的可辨识性。
 - H3：能量趋势与模型再现提供条件性支持，但不能覆盖冲突的 electromagnetic evidence。
 - H4：low-spin approximation 的适用边界可能是跨案例解释分歧的重要理论来源；Lawrie 2020 已提供经审核的直接理论框架，但不足以把任一案例直接改判为 TiP。
-- 当前状态：H1-H3 有两个已审核 controversy project 的导航支持；H4 已接入经审核的 Lawrie 2020 理论来源和 `135Nd` experimental TiP source。新的跨来源 theory/TiP notes 仍待审核，本页不作最终取舍。
+- 当前状态：H1-H3 有两个已审核 controversy project 的导航支持；H4 已接入经审核的 Lawrie 2020 理论来源和 `135Nd` experimental TiP source。新的跨来源 theory/TiP notes 已完成人工审核，本页不作最终取舍。
 
 ## Evidence Available
 
-当前 umbrella evidence pool 包含 [[135pr-wobbling-controversy]]、[[187au-longitudinal-wobbling-controversy]] 及其已审核 source claims、已审核的 [[lawrie-2020-tilted-precession-wobbling]] 理论框架，以及已审核的 [[lv-2021-tilted-precession-135nd]] experimental TiP case。跨案例争议矩阵继续沿用 M15/S19/L22/AU20/G22 claim IDs；LSW-TIP、LSW-THEORY notes 与更新后的 LSW-SYN-5 尚待人工复核。
+当前 umbrella evidence pool 包含 [[135pr-wobbling-controversy]]、[[187au-longitudinal-wobbling-controversy]] 及其已审核 source claims、已审核的 [[lawrie-2020-tilted-precession-wobbling]] 理论框架，以及已审核的 [[lv-2021-tilted-precession-135nd]] experimental TiP case。跨案例争议矩阵继续沿用 M15/S19/L22/AU20/G22 claim IDs；本轮 LSW-THEORY、LSW-TIP、LSW-TIP-SYN 与更新后的 LSW-SYN-5 已完成人工复核。
 
 ## Case Map
 
@@ -53,16 +53,16 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 |---|---|---|---|---|---|
 | [[135pr-wobbling-controversy]] | transverse one-/two-phonon wobbling candidates | [[matta-2015-transverse-wobbling-135pr]]；[[sensharma-2019-two-phonon-wobbling-135pr]] | [[lv-2022-evidence-against-wobbling-135pr]] | 747、813、450 keV links 的大/小 `abs(δ)` branch 与 E2/M1 character | three-source evidence matrix 已审；TiP 仍是 attributed model interpretation/future theory topic |
 | [[187au-longitudinal-wobbling-controversy]] | longitudinal wobbling candidate 与 associated signature partner | [[sensharma-2020-longitudinal-wobbling-187au]] | [[guo-2022-low-spin-wobbling-187au]] | 376/462 keV links 的大/小 `abs(δ)` branch；reported signature-partner sequence identity | two-source evidence matrix 已审；early conversion/β-decay 原始来源与统一重分析仍缺 |
-| [[135nd]] experimental TiP reference | D1/TiP1/TiP2 tilted-precession assignment | [[lv-2021-tilted-precession-135nd]] | 本轮不建立核素争议 project | M1-dominated links、`ΔI=1` structure 与 QTR comparison 如何共同支持 TiP | source claims 已审、derived pages/LSW-TIP notes 待审；仅作替代解释的正面案例，不替代 `135Pr/187Au` 证据 |
+| [[135nd]] experimental TiP reference | D1/TiP1/TiP2 tilted-precession assignment | [[lv-2021-tilted-precession-135nd]] | 本轮不建立核素争议 project | M1-dominated links、`ΔI=1` structure 与 QTR comparison 如何共同支持 TiP | source claims 与 LSW-TIP notes 已审，derived pages 仍待审；仅作替代解释的正面案例，不替代 `135Pr/187Au` 证据 |
 
-两个 controversy cases 的支持链和反证链在实验上相互独立；`135Nd` 是第三套独立数据的 TiP reference case。跨案例共享的是判据与分析问题，不是同一份数据或同一个最终结论。
+`135Pr` 支持方数据与 Lv 2022 counter-data、`187Au` 两套数据彼此独立，但 `135Nd` Lv 2021 与 `135Pr` Lv 2022 来自同一套 152 MeV `40Ar+100Mo` JUROGAM II event pool，只是分别选择 5n 与 1p4n 蒸发道。因而 `135Nd` 是核素/反应道不同的 TiP reference，不是对 `135Pr` counter-analysis 的独立运行复现。Lawrie 2020 与 Lv 2021 也共享作者和解释框架；`135Nd` level scheme/electromagnetic measurements 是实验层证据，而 TiP interpretation 不是对 Lawrie framework 的完全独立理论验证。
 
 ## `135Nd` Experimental TiP Reference
 
-- Observed facts：新建 [[135nd-tip1-band]]、[[135nd-tip2-band]]，以 coincidence、relative intensity balance、`R_DCO/R_ac`、polarization 和 angular distribution 约束 level scheme、spin/parity 与 connecting transitions。
-- Experimental criteria：TiP1→D1 的 618.3/566.8 keV 及 TiP2→TiP1 的 518.3 keV links 均给出小 `abs(δ)`/predominant-M1 character；这些结果不满足作者采用的 predominant-E2 wobbling linking-transition criterion。
-- Model results：含 pairing 的 QTR 比较 energies、`[Ω_l,K_l]` wave-function content 和 relative transition probabilities；TiP1 高自旋 energy/wave-function 描述存在限制。
-- Author interpretation：作者以沿 intermediate axis 增加 `R_parallel` 的 `ΔI=1` bands、unfrozen neutron realignment 和非声子化 QTR solutions 解释为 TiP。
+- Observed facts：新建 [[135nd-tip1-band]]、[[135nd-tip2-band]]，以 coincidence、relative intensity balance、`R_DCO/R_ac`、polarization 和 angular distribution 约束 level scheme、spin/parity 与 connecting transitions（LV21-1 至 LV21-10；pp.4-8, Figs.3-6, Tables I-II）。
+- Experimental criteria：TiP1→D1 的 618.3/566.8 keV 及 TiP2→TiP1 的 518.3 keV links 均给出小 `abs(δ)`/predominant-M1 character；这些结果不满足作者采用的 predominant-E2 wobbling linking-transition criterion（LV21-9 至 LV21-11）。
+- Model results：含 pairing 的 QTR 比较 energies、`[Ω_l,K_l]` wave-function content 和 relative transition probabilities；TiP1 高自旋 energy/wave-function 描述存在限制（LV21-12 至 LV21-16；pp.8-14, Figs.7-12,14-15）。
+- Author interpretation：作者以沿 intermediate axis 增加 `R_parallel` 的 `ΔI=1` bands、unfrozen neutron realignment 和非声子化 QTR solutions 解释为 TiP（LV21-17/LV21-18；pp.2-4,11-13, Figs.1-2,13）。
 - Boundary：这是 `135Nd` 的 experimental TiP case，不是 `135Pr` 或 `187Au` 的直接重新分析，也不证明所有 M1-linked low-spin bands 都是 TiP。
 
 ## `135Pr` Controversy Summary
@@ -130,7 +130,7 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 | LSW-SYN-2 | Angular-correlation/distribution 的大 `abs(δ)` 解若缺少完整双解、偏振幅度与误差面审计，不能被视为自动唯一 | `135Pr` L22-3/L22-8；`187Au` G22-13/G22-14 | 两案例装置和分析不同，需分别重建后才能定量比较 | shared methodological dispute | false |
 | LSW-SYN-3 | Band identity 与 signature-partner 对照是 wobbling identification chain 的前置条件 | `135Pr` L22-2；`187Au` G22-3/G22-4 | regrouping/non-observation 的证明力依赖 coincidence、污染和原始 follow-up sources | shared assignment dispute | false |
 | LSW-SYN-4 | `E_wobb` 和模型能量再现只能提供条件性支持，不能替代 conflicting electromagnetic evidence | `135Pr` M15-9/S19-6；`187Au` AU20-9/AU20-13 | 趋势依赖先验 band/phonon assignment | conditional cross-case inference | false |
-| LSW-SYN-5 | 低自旋 wobbling approximation 的适用性会改变候选带应使用 wobbling phonon、precession 或其他语言描述的合理性 | `187Au` G22-15/G22-16；LAW20-4/LAW20-8 至 LAW20-10；LV21-17/LV21-18 | Lawrie 2020 与 `135Nd` source claims 已审，但本条跨来源综合仍待审；二者不自动决定 `135Pr/187Au` 的实验身份 | theory-and-reference-case-added, review pending | true |
+| LSW-SYN-5 | 低自旋 wobbling approximation 的适用性会改变候选带应使用 wobbling phonon、precession 或其他语言描述的合理性 | `187Au` G22-15/G22-16；LAW20-4/LAW20-8 至 LAW20-10；LV21-17/LV21-18 | Lawrie 2020、`135Nd` source claims 与本条跨来源综合均已审核；二者不自动决定 `135Pr/187Au` 的实验身份 | theory-and-reference-case-added, human-reviewed | false |
 | LSW-SYN-6 | 若低自旋 wobbling assignment 被修订，相关 triaxial collective-motion 解释需重新定级，但不能据此反向否定核形状三轴性本身 | 两案例的 supporting/counter evidence matrices | 三轴形变可能有其他独立证据；需逐核素审计 | innovation-oriented caution | false |
 | LSW-SYN-7 | 当前两个案例支持建立统一分析 schema，但尚不足以形成领域范围的最终综述结论 | 两个已审核素级 project | 仅覆盖 `135Pr`、`187Au`；其他案例和理论来源未系统摄入 | bounded umbrella scope | false |
 
@@ -148,25 +148,126 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 | Tilted precession（TiP） | [[lawrie-2020-tilted-precession-wobbling]] 定义完整 3D precessional bands，并与 harmonic wobbling approximation 对照 | source claims 已审；没有对 `187Au` 的直接 calculation，也不裁决 `135Pr` 实验 |
 | β/γ vibration 等其他机制 | Guo/Lv 讨论的 broader alternative space | 当前 umbrella 未摄入专门来源，只保留 evidence gap |
 
-## TiP / Wobbling Theory Notes
+## TiP Theoretical Framework
+
+本节至 `Core TiP / Wobbling Discrimination Criteria` 为基于已审核 source claims 的 project-level synthesis；LSW-THEORY、LSW-TIP、LSW-TIP-SYN 与更新后的 LSW-SYN-5 已由用户审核。即使审核完成，这些 synthesis 仍不能替代原始 source/raw 进入 paper evidence gate。
+
+### Full three-dimensional rotation
+
+Lawrie 2020 把三轴 rotor/QTR Hamiltonian 的完整量子解及其半经典总角动量进动轨迹称为 tilted-precession（TiP）bands。总角动量沿 angular-momentum sphere 与 energy ellipsoid 的交线进动，不同 excited bands 可对应不同倾角。这里的 TiP 是 theoretical framework / author terminology，不是实验直接拍摄到的轨迹（LAW20-1/LAW20-5；pp.2-5, Figs.1-3）。
+
+Principal-axis rotation + harmonic-phonon wobbling approximation 的原始提出应归于 Bohr and Mottelson, *Nuclear Structure*, Vol. II。Lawrie 2020 的作用不是提出该近似，而是将完整 TiP/3D rotation 与这一既有 wobbling approximation 系统对照，并检验其适用条件。该历史归因已由用户校准；Bohr–Mottelson 原书尚未作为当前 Wiki source 摄入，论文级使用仍需回到原书。
+
+TiP 对本项目的重要性在于：它允许三轴核存在 wobbling phonon 之外的三维转动能带组织。因而“QTR/particle-rotor calculation 再现 energies 或 electromagnetic links”只说明某一 coupled-rotation solution 与数据相容，不能自动证明该 solution 已达到 harmonic wobbling limit（LAW20-11 至 LAW20-14；pp.9-11, Figs.10-11）。
+
+### Wobbling approximation condition
+
+| Coupling regime | Small-component condition in Lawrie 2020 | When approximation may work | Boundary |
+|---|---|---|---|
+| Even-even zero-seniority/zero-quasiparticle | `I2²+I3² << I²`，即 Eq.16 的 `f(n,I)<<1` | 本文固定参数示例中 `f` 随自旋下降，高自旋可接近 harmonic limit | 该趋势不能外推为所有 MoI 或所有核素的普遍规律；LAW20-4 |
+| Odd-mass longitudinal 1qp | valence `j` 沿最大-MoI轴；其余 angular-momentum components 必须足够小 | 在给定 coupling、MoI 与高自旋范围内可能达到 `f<<1` | “longitudinal”标签本身不保证近似成立；需逐核素计算；LAW20-6/LAW20-10 |
+| Odd-mass transverse 1qp | Eq.34 要求 `I1²+I3² << I²`；本文 1 轴是最大-MoI intermediate axis | 只有当最大-MoI轴上的 rotational component 也可视为小量时才可能使用 wobbling approximation | 该分量通常较大；Lawrie 对 `135Pr/105Pd` 参数得到 `f` 不小；LAW20-8/LAW20-9 |
+
+因此，高自旋不是单独充分条件，低自旋也不是自动排除条件；核心是给定 `I`、phonon/band index、MoI、configuration 和 axis convention 下的小分量条件是否实际满足。
+
+### When TiP may approximate wobbling
+
+在本项目中，只有理论条件 1-4 满足、且第 5 项实验对象已经固定时，才可把 TiP solution 近似用 wobbling phonon 描述：
+
+1. 围绕某 principal axis 的 angular-momentum components 满足 `f(n,I)<<1`；
+2. odd-mass 情形中的 valence-particle orientation 与 frozen/collective approximation 相容，Coriolis realignment 不主导 band differences；
+3. excited-band energies 对 phonon number 显示近似线性 quantization；
+4. 相邻 phonon bands 的 `B(E2)`、`B(M1)` obey the expected `n` scaling，而不仅是存在一条强 E2 link；
+5. level/band identity、spin/parity 与 connecting-transition topology 已由实验独立建立。
+
+这些是 Lawrie 2020 理论边界与本项目实验判据的已审核联合 synthesis；不能作为单一来源的原文逐字结论。
+
+### When TiP should not be equated with wobbling
+
+- `f(n,I)` 不满足小量条件，或该条件未被计算；
+- single-particle reorientation/realignment 对不同 bands 的生成起主要作用；
+- QTR solutions 不显示 wobbling phonon 的 energy/transition-probability quantization；
+- 只有 energy fit、`E_wobb` trend 或 large E2 connecting transition，而缺少独立的 phonon hierarchy/geometry test；
+- candidate band 与 signature partner、single-particle excitation、β/γ vibration 等解释仍无法由实验 observables 区分。
+
+反过来，TiP 也不能仅凭“M1-dominated links”自动成立；M1/E2 character 是排查 wobbling necessary criterion 的一部分，TiP assignment 仍需 band geometry、configuration 和 model comparison。
+
+### Transverse versus longitudinal coupling
+
+| Question | Longitudinal coupling | Transverse coupling |
+|---|---|---|
+| Valence-particle orientation | `j` 沿最大-MoI axis；Lawrie convention 下为 intermediate axis | `j` 与最大-MoI axis 垂直，常沿 short/long axis |
+| Approximation prospect | 给定参数下，高自旋可能使非主分量变小 | 近似还要求通常占优的最大-MoI-axis rotational component 为小量，因此更难满足 |
+| Lawrie examples | Lu TSD-longitudinal `f` 随自旋下降 | Lu TSD-transverse `f` 先降后升；`135Pr/105Pd` 参数的 `f` 不小 |
+| Project implication | 不能由 increasing `E_wobb` 或 longitudinal label 自动确认 wobbling | 不能由 decreasing `E_wobb` 或 transverse label 自动确认 wobbling |
+
+### Role of QTR / particle-rotor models
+
+- Full QTR/particle-rotor-type solutions 可计算 energies、wave functions、transition probabilities 与 angular-momentum geometry；在 Lawrie 术语中，这类完整 3D solutions 首先属于 TiP/coupled rotation。
+- Wobbling equations 是完整 Hamiltonian 的特定 harmonic approximation，不是 QTR 的同义词。
+- QTR 对实验的 agreement 是 model consistency；要识别 wobbling phonon，还需额外检查 approximation condition 与 phonon quantization。
+- Pairing、MoI ordering、deformation、Coriolis attenuation、included orbitals 和 frozen/unfrozen `j` 均可改变结论。Lv 2021 的 no-pairing comparison 对 TiP1/TiP2 更差，显示低自旋 model comparison 对 pairing 敏感（LV21-12 至 LV21-16）。
+
+## Source-Bound TiP / Wobbling Theory Notes
 
 | ID | Project theory note | Source basis | Boundary | needs_review |
 |---|---|---|---|---|
-| LSW-THEORY-1 | Lawrie 2020 将 TiP 作为完整 3D rotation 的进动表示，将 wobbling 作为 principal-axis rotation + harmonic phonons 的近似；两者不是无条件同义词 | LAW20-1 至 LAW20-5 | 属于该文理论定义与推导，不是 observed fact | true |
-| LSW-THEORY-2 | Even-even zero-seniority/zero-quasiparticle bands 与 odd-mass longitudinal 1qp bands 只有在高自旋、`f(n,I)<<1` 时才可近似为 wobbling | LAW20-4/LAW20-6 | 近似边界依赖 MoI、spin、configuration 与 axis convention | true |
-| LSW-THEORY-3 | 典型 transverse 1qp coupling 要求最大-MoI轴上的 rotational component 也为小量；Lawrie 2020 的 `135Pr/105Pd` 参数检验不满足该条件 | LAW20-8/LAW20-9 | frozen-`j` 与选定参数集合下的 model result；不自动裁决实验 | true |
-| LSW-THEORY-4 | QTR 对 energies 或 large E2 links 的再现不足以证明 transverse wobbling；phonon interpretation 还应检验 excitation-energy 与 transition-probability quantization | LAW20-11 至 LAW20-14 | 大 `abs(δ)` 仍是必要判据之一，但 TiP/γ bands 也可有大 E2 component | true |
-| LSW-THEORY-5 | Lawrie 2020 直接把 `135Pr/105Pd` reported transverse cases 提为 TiP reinterpretation，但未讨论 `187Au` | LAW20-15 | 对 `135Pr` 只作 theory cross-reference；对 `187Au` 不得冒充直接 calculation | true |
+| LSW-THEORY-1 | Bohr–Mottelson Vol. II 提出 principal-axis rotation + harmonic-phonon wobbling approximation；Lawrie 2020 将其与完整 TiP/3D rotation 系统对照并检验适用条件，两者不是无条件同义词 | 用户校准的 Bohr–Mottelson 历史归因；LAW20-1 至 LAW20-5 | Bohr–Mottelson 原书尚未摄入，论文级历史引用须回到原书；Lawrie 部分不是 observed fact | false |
+| LSW-THEORY-2 | Even-even 与 odd-mass longitudinal solutions 只有在给定参数、自旋和组态下实际满足 `f(n,I)<<1` 时才可近似为 wobbling；Lawrie 的固定参数示例在高自旋显示这种趋近 | LAW20-4/LAW20-6/LAW20-10 | 高自旋是示例中的有利条件，不是跨核素充分条件 | false |
+| LSW-THEORY-3 | 典型 transverse 1qp coupling 要求最大-MoI轴上的 rotational component 也为小量；Lawrie 2020 的 `135Pr/105Pd` 参数检验不满足该条件 | LAW20-8/LAW20-9 | frozen-`j` 与选定参数集合下的 model result；不自动裁决实验 | false |
+| LSW-THEORY-4 | QTR 对 energies 或 large E2 links 的再现不足以证明 transverse wobbling；phonon interpretation 还应检验 excitation-energy 与 transition-probability quantization | LAW20-11 至 LAW20-14 | 大 `abs(δ)` 仍是必要判据之一，但 TiP/γ bands 也可有大 E2 component | false |
+| LSW-THEORY-5 | Lawrie 2020 直接把 `135Pr/105Pd` reported transverse cases 提为 TiP reinterpretation，但未讨论 `187Au` | LAW20-15 | 对 `135Pr` 只作 theory cross-reference；对 `187Au` 不得冒充直接 calculation | false |
 
 ## Experimental TiP Evidence Notes
 
 | ID | Project TiP note | Source basis | Boundary | needs_review |
 |---|---|---|---|---|
-| LSW-TIP-1 | `135Nd` D1/TiP1/TiP2 level scheme 由独立 JUROGAM II coincidence、intensity balance 与 multipolarity measurements 建立 | LV21-1 至 LV21-5 | Band identity 是 observed layer；TiP label 不是直接观测 | true |
-| LSW-TIP-2 | 618.3/566.8/518.3 keV connecting transitions 的小 `abs(δ)`、负 polarization/E2 fractions 支持 predominant-M1 character，不满足本文采用的 predominant-E2 wobbling criterion | LV21-8 至 LV21-11 | 削弱 wobbling assignment 不单独证明 TiP；TiP2 234 keV link 未定 | true |
-| LSW-TIP-3 | QTR 对 energies、wave functions 与 relative transition probabilities 的整体比较支持 `[9/2,9/2]`、`[9/2,13/2]`、`[11/2,15/2]` 三带组织 | LV21-12 至 LV21-16 | 模型依赖 pairing、shape/MoI inputs；TiP1 高自旋有明显偏差与 mixing | true |
-| LSW-TIP-4 | Lv 2021 把主要沿 intermediate axis 增加 `R_parallel` 的 `ΔI=1` sequences 解释为 TiP，而把 `ΔI=2`、增加 `R_perpendicular` 的有限自旋结构留给 transverse-wobbling approximation | LV21-17/LV21-18 | 属于 author interpretation/theory comparison，不是直接 angular-momentum measurement | true |
-| LSW-TIP-5 | `135Nd` 为 low-spin umbrella 提供 experimental TiP reference，但不能跨核素替代 `135Pr/187Au` 的 transition-level evidence | LV21-1 至 LV21-18 | cross-case synthesis；需保持不同反应、组态和分析相互独立 | true |
+| LSW-TIP-1 | `135Nd` D1/TiP1/TiP2 level scheme 由独立 JUROGAM II coincidence、intensity balance 与 multipolarity measurements 建立 | LV21-1 至 LV21-5 | Band identity 是 observed layer；TiP label 不是直接观测 | false |
+| LSW-TIP-2 | 618.3/566.8/518.3 keV connecting transitions 的小 `abs(δ)`、负 polarization/E2 fractions 支持 predominant-M1 character，不满足本文采用的 predominant-E2 wobbling criterion | LV21-8 至 LV21-11 | 削弱 wobbling assignment 不单独证明 TiP；TiP2 234 keV link 未定 | false |
+| LSW-TIP-3 | QTR 对 energies、wave functions 与 relative transition probabilities 的整体比较支持 `[9/2,9/2]`、`[9/2,13/2]`、`[11/2,15/2]` 三带组织 | LV21-12 至 LV21-16 | 模型依赖 pairing、shape/MoI inputs；TiP1 高自旋有明显偏差与 mixing | false |
+| LSW-TIP-4 | Lv 2021 把主要沿 intermediate axis 增加 `R_parallel` 的 `ΔI=1` sequences 解释为 TiP；其讨论的 `ΔI=2` transverse-coupled sequences 只有在额外近似条件满足时才可写成 transverse wobbling | LV21-17/LV21-18 | 属于 author interpretation/theory comparison，不是直接 angular-momentum measurement | false |
+| LSW-TIP-5 | `135Nd` 为 low-spin umbrella 提供 channel-/nucleus-distinct experimental TiP reference，但不能跨核素替代 `135Pr/187Au` 的 transition-level evidence | LV21-1 至 LV21-18 | Lv 2021 `135Nd` 与 Lv 2022 `135Pr` 共享同一 JUROGAM II run；不是独立运行复现 | false |
+
+## TiP Cross-Case Synthesis Notes
+
+| ID | Synthesis statement | Source basis | Reverse test / boundary | needs_review |
+|---|---|---|---|---|
+| LSW-TIP-SYN-1 | TiP 为低自旋三轴能带提供 wobbling phonon 之外的完整 3D rotation language，因此扩大了替代解释空间 | LAW20-1/LAW20-5；LV21-17/LV21-18 | “存在 TiP framework”不等于任一具体候选已经是 TiP | false |
+| LSW-TIP-SYN-2 | QTR/PRM energy 或 transition agreement 不能自动证明 wobbling；必须另验 `f(n,I)<<1` 与 phonon energy/transition-probability quantization | LAW20-3/LAW20-4/LAW20-11 至 LAW20-14 | 同理，QTR agreement 也不能单独证明 TiP experimental identity | false |
+| LSW-TIP-SYN-3 | `135Nd` 建立了一个由 level scheme、电磁性质和 QTR comparison 共同支持的 experimental TiP case | LV21-1 至 LV21-18 | TiP 是作者解释；与 Lawrie 共享作者/框架，且与 Lv 2022 `135Pr` 共享实验 run，不是完全独立验证 | false |
+| LSW-TIP-SYN-4 | `135Nd` 的 M1-dominated connecting links 展示了与 wobbling predominant-E2 necessary criterion 不同的实验 pattern | LV21-9 至 LV21-11 | 该 pattern 不能机械移植到 `135Pr/187Au`，也不表示所有 TiP 必须 M1 dominated | false |
+| LSW-TIP-SYN-5 | 对 `135Pr`，Lawrie 的 approximation test 与 Lv 2022 unfrozen-QTR reinterpretation 使 TiP 成为直接相关竞争框架 | LAW20-9/LAW20-15；`135Pr` L22-9 至 L22-13 | 仍须解决同一 747/813/450 keV links 的实验 branch 冲突；`135Nd` 不替代该证据 | false |
+| LSW-TIP-SYN-6 | 对 `187Au`，TiP 目前只改变可提问的问题：需检查低自旋 approximation、geometry 与 phonon quantization | G22-15/G22-16；LAW20 framework | Lawrie 未讨论 `187Au`，Lv 2021 也不是 `187Au` calculation；不得直接改判为 TiP | false |
+| LSW-TIP-SYN-7 | 跨案例最小判别集应同时覆盖 band identity、E2/M1 character、`E_wobb`、signature partner、angular-momentum geometry、approximation condition 与 phonon quantization | 两个 controversy projects；LAW20-3/LAW20-12；LV21 criteria | 尚无单一实验或 common-input calculation 同时闭合全部维度 | false |
+| LSW-TIP-SYN-8 | TiP 可以削弱“QTR fit 即 wobbling proof”的推理，但不能自动否定满足近似与 phonon quantization 的 wobbling assignments | LAW20-4/LAW20-10/LAW20-14 | 需要逐核素、逐组态、逐自旋判断，禁止领域范围外推 | false |
+
+## Relation to `135Pr` and `187Au`
+
+### `135Pr`
+
+- Direct relevance：Lawrie 2020 直接用 published `135Pr` parameter sets 检验 transverse approximation，得到相关自旋区 `f(n,I)` 不小；Lv 2022 又以独立 electromagnetic data 和 unfrozen QTR 提出 realignment/TiP interpretation。
+- What TiP changes：它要求把“QTR/TAC agreement”“decreasing `E_wobb`”“large `abs(δ)`”拆开检查，而不是合并成 phonon identity。
+- What remains unresolved：747/813/450 keV 的 mixing-ratio branch、weak-link polarization、TW2 regrouping、absolute strengths 及 common-input comparison 尚未闭合。`135Nd` 只能提供 comparison pattern，不能替代这些 `135Pr` 数据。
+
+### `187Au`
+
+- Direct relevance：Guo 2022 已质疑低自旋 harmonic approximation，并把 precession/TiP 列入 broader alternative space；这与 Lawrie 的理论边界相容。
+- Missing direct link：Lawrie 2020 未计算 `187Au`，Lv 2021 研究的是 `νh11/2` `135Nd`，而 `187Au` 争议涉及 proton `h9/2` bands、不同 MoI/deformation 与 band identity。
+- What TiP changes：应在 376/462 keV electromagnetic conflict 之外增加 `f(n,I)`、angular-momentum components、phonon quantization 和 common-input QTR/PRM comparison。
+- Current boundary：没有 `187Au`-specific TiP calculation 或可区分 TiP、single-particle excitation 与 longitudinal wobbling 的完整 observable set，不能把 Band 2 改判为 TiP。
+
+## Core TiP / Wobbling Discrimination Criteria
+
+| Criterion | Experimental or model role | Wobbling expectation / question | TiP relevance | Current gap |
+|---|---|---|---|---|
+| Level scheme and coincidence | observed fact | 是否存在稳定的 `n=0/1/2` candidate hierarchy | 先固定 TiP/reference bands 的 identity | `135Pr` TW2 regrouping、`187Au` band (3) identity 仍有争议 |
+| Connecting-transition E2/M1 character | experimental criterion | predominant-E2/大 `abs(δ)` 是当前识别范式中的必要条件之一 | TiP links 可呈不同 M1/E2 pattern；单一 character 不能充分识别 TiP | 关键弱 links 的 polarization/lifetime coverage 不全 |
+| `E_wobb` trend | derived observable | transverse/longitudinal 分类常使用下降/上升趋势 | 一般 TiP energy systematics 不要求同一 phonon trend | 趋势依赖 band assignment，不能脱离 electromagnetic evidence |
+| Signature partner comparison | experimental structural control | 区分 wobbling candidate 与 ordinary signature partner | TiP/QTR 也可形成 opposite-signature pairs 或 `ΔI=1` structures | 组态与 band identity 需独立固定 |
+| Angular-momentum geometry | model result unless directly constrained | principal-axis small-angle precession；transverse/longitudinal `j` orientation | 完整 3D precession、tilt 与 possible realignment | `135Pr/187Au` 缺统一逐自旋 components 与 common-axis convention |
+| Approximation function `f(n,I)` | model diagnostic | 必须 `f<<1` 才能使用 harmonic wobbling equations | `f` 不小时应保留完整 TiP/coupled-rotation description | 仅 Lawrie 的若干 parameter sets 已评估 |
+| Energy/transition-probability quantization | phonon diagnostic | energies 与 adjacent-band transition strengths 应随 `n` 呈预期 scaling | 一般 TiP 不必显示该 scaling | 两争议核素缺完整 absolute strengths 和可比较的多带数据 |
+| Model robustness | model comparison | wobbling conclusion应对 MoI、pairing、orbitals、frozen/unfrozen `j` 稳健 | TiP assignment 同样需避免只依赖单组 QTR fit | 缺 common-input PRM/QTR/wobbling-equation benchmark |
 
 ## Evidence Gaps
 
@@ -177,6 +278,9 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 - `187Au` 仍需 Sensharma full coincidence/systematics、Rupnik β-decay、Bourgeois internal-conversion 和相关 lifetime 原始来源。
 - Low-spin approximation、precession 与 TiP 的理论边界已由经审核的 Lawrie 2020 接入；其 frozen-`j` 与参数覆盖限制仍保留。
 - Lawrie 2020 的 frozen-`j` 分析未穷尽 unfrozen realignment、不同 MoI ordering 或所有 transverse configurations。
+- `135Nd` 的 TiP1 高自旋 wave functions 混合且 energies 被高估；TiP2 只有三个已观测态，尚不足以检验更长 spin interval 的 band evolution。
+- `135Nd` 现有 transition information 主要是 ratios；仍缺能跨 D1/TiP1/TiP2 系统检验 phonon/non-phonon scaling 的完整 absolute lifetimes、`B(E2)` 与 `B(M1)`。
+- 尚缺把 Lawrie approximation function、Lv 2021 unfrozen/pairing QTR 与同一组 experimental bands 放在 common-input calculation 中的 benchmark。
 - 尚缺 TiP 对 `187Au` 的直接 calculation，以及能把 TiP、wobbling、signature partner 和 single-particle excitation 同时区分开的实验 observable 组合。
 - 当前只有两个详细 controversy cases 与一个 `135Nd` TiP reference case，不能据此声称所有 reported low-spin wobbling bands 都具有相同问题或相同替代解释。
 
@@ -185,8 +289,9 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 - 两个案例的装置、反应、角度分组和 polarization response 不同，未经统一重分析不能直接比较数值优劣。
 - 关键弱 transitions、lifetime/absolute `B(E2)` 与原始 follow-up sources 缺失，使部分争议链无法闭合。
 - 将两个反方 source 并列不等于形成领域共识；它们各自的模型解释仍依赖输入和近似。
-- TiP 理论基础和 `135Nd` source claims 已审核；`135Nd` derived pages 与 LSW-TIP notes 待审，其他 TiP 应用仍未覆盖。
-- LSW-THEORY-1 至 LSW-THEORY-5、LSW-TIP-1 至 LSW-TIP-5 与更新后的 LSW-SYN-5 尚未人工审核，不能进入 paper evidence gate 或替代下位 project/source。
+- Lawrie 2020/Lv 2021/Lv 2022 在作者、理论框架或实验 run 上存在依赖关系；不能按三份完全独立 TiP 证据机械计数。
+- TiP 理论基础、`135Nd` source claims 与本页 LSW-THEORY/LSW-TIP/LSW-TIP-SYN notes 已审核；`135Nd` derived pages 仍待审，其他 TiP 应用仍未系统覆盖。
+- 本页审核完成的跨来源综合仍是 project synthesis，不能替代下位 project/source；Bohr–Mottelson 原书尚未摄入，历史归因暂不进入 paper evidence gate。
 
 ## Follow-Up Sources
 
@@ -204,14 +309,20 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 3. Bourgeois et al. 1978/1989 internal-conversion、shape coexistence 与早期 band assignment。
 4. `186Pt/187Au` lifetime 与 `B(E2)_in` 原始测量。
 
-### Future cross-case theory
+### TiP and wobbling-framework follow-up
 
 1. Lawrie et al. 2020 已摄入并完成 LAW20-1 至 LAW20-15 claim review。
 2. Lv et al. 2021 `135Nd` tilted-precession 原始工作已摄入，LV21-1 至 LV21-18 已由用户审核。
+3. Bohr and Mottelson, *Nuclear Structure*, Vol. II：核对 principal-axis rotation + harmonic-phonon wobbling approximation 的原始定义、推导与适用前提。
+4. Frauendorf and Dönau 2014 transverse/longitudinal wobbling 原始理论：补齐当前由 Lawrie 对照的 wobbling equations、coupling definitions 与适用前提。
+5. Tanabe and Sugawara-Tanabe 2017/2018 对 `135Pr` low-spin transverse-wobbling interpretation 的理论批评及修订。
+6. `105Pd` reported transverse-wobbling 原始实验与后续 TiP comparison：作为 Lawrie 2020 直接测试的第二个低自旋案例。
+7. Lu TSD longitudinal/transverse 原始实验与模型论文：作为 high-spin approximation benchmark，不与低自旋案例直接合并。
+8. `135Pr`、`187Au` nucleus-specific common-input QTR/PRM/TiP calculations，以及 `135Nd` 的 absolute lifetime/transition-strength follow-up。
 
-Lawrie 2020 作为 theoretical framework；Lv 2021 作为 experimental TiP case / alternative interpretation source。二者均不直接裁决 `135Pr/187Au`。
+第 3-8 项尚未在本 umbrella 中完成原始来源摄入。当前只能作为 future-source plan，不能写成已核验结论。Lawrie 2020 作为 theoretical framework；Lv 2021 作为 experimental TiP case / alternative interpretation source。二者均不直接裁决 `135Pr/187Au`。
 
-## Connection to Future TiP Ingestion
+## TiP Evidence Program
 
 Lawrie 2020 与 Lv 2021 已分别建立 TiP 的理论层和 `135Nd` 实验案例层，但 TiP 仍不是当前 umbrella 的预设答案。当前已覆盖：
 
@@ -221,7 +332,7 @@ Lawrie 2020 与 Lv 2021 已分别建立 TiP 的理论层和 `135Nd` 实验案例
 4. transverse/longitudinal coupling 的理论差异。
 5. `135Nd` D1/TiP1/TiP2 的 coincidence/electromagnetic criteria 与 QTR comparison。
 
-下一步需人工审核 LSW-TIP project notes 与 `135Nd` derived pages，并检查 TiP 是否对 `135Pr` 或 `187Au` 给出直接、可检验的 nucleus-specific calculation。本项目仍不把 `135Pr` 或 `187Au` 改判为 TiP。
+LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` derived pages，并检查 TiP 是否对 `135Pr` 或 `187Au` 给出直接、可检验的 nucleus-specific calculation。本项目仍不把 `135Pr` 或 `187Au` 改判为 TiP。
 
 ## Data-Analysis Bridge for User's Future Work
 
@@ -259,21 +370,24 @@ Lawrie 2020 与 Lv 2021 已分别建立 TiP 的理论层和 `135Nd` 实验案例
 | 两个核素级 project 所引用的已审 source claims | eligible through original source | 写作时必须回到 source/raw 与 locator；不得只引 umbrella |
 | `135Pr`/`187Au` 的 observed transitions、`δ`、polarization 和模型结果 | eligible according to each case project | 保持 observed fact、criterion、author interpretation、model result 分层 |
 | LSW-SYN-1 至 LSW-SYN-4、LSW-SYN-6 至 LSW-SYN-7 | reviewed navigation/synthesis | 用户已人工审核；仍不能替代下位 project、source 或 raw |
-| 更新后的 LSW-SYN-5 | navigation/synthesis review pending | 新接入 Lawrie 2020 theory claims；需重新人工复核 |
+| 更新后的 LSW-SYN-5 | reviewed navigation/synthesis | 已接入 Lawrie 2020 与 Lv 2021 并完成人工复核；仍不能替代下位证据 |
 | LAW20-1 至 LAW20-15 | eligible as reviewed theoretical framework | 必须作为 theoretical assumptions/model results/author interpretations 使用，不得写成实验事实 |
-| LSW-THEORY-1 至 LSW-THEORY-5 | project theory review pending | 只作待审跨来源综合；不得用于裁决具体核素 |
+| LSW-THEORY-1 至 LSW-THEORY-5 | reviewed project theory synthesis | 可作已审核导航；不得替代 source 或用于裁决具体核素 |
+| Bohr–Mottelson Vol. II 历史归因 | follow-up primary source / not yet eligible | 用户已校准归因，但原书尚未摄入；论文级使用必须回到原书 |
 | LV21-1 至 LV21-18 | eligible as reviewed experimental/model source | `135Nd` observed facts、criteria、model results 与 interpretation 必须按 claim kind 分层使用 |
-| LSW-TIP-1 至 LSW-TIP-5 | project synthesis review pending | 不得替代 Lv 2021 source 或跨核素裁决 `135Pr/187Au` |
+| LSW-TIP-1 至 LSW-TIP-5 | reviewed project synthesis | 不得替代 Lv 2021 source 或跨核素裁决 `135Pr/187Au` |
+| LSW-TIP-SYN-1 至 LSW-TIP-SYN-8 | reviewed cross-source synthesis | 只作 TiP/wobbling 关系、跨案例限制和未来判据导航；不得直接进入 paper evidence pool |
 | 其他 follow-up sources | not yet eligible | 尚未摄入，不得写成当前 Wiki 已确认内容 |
 | Innovation candidate notes | hypothesis/planning only | 不得写成 novelty claim 或论文结论 |
 
 ## Needs Review
 
 - 本 umbrella project 为 `review_status: human-reviewed`。
-- LSW-SYN-1 至 LSW-SYN-4、LSW-SYN-6 至 LSW-SYN-7 保持 `needs_review: false`；LSW-SYN-5 因接入 Lawrie 2020 理论来源更新为 `needs_review: true`。
+- LSW-SYN-1 至 LSW-SYN-7 均为 `needs_review: false`。
 - LAW20-1 至 LAW20-15 已审核，`needs_review: false`。
-- LSW-THEORY-1 至 LSW-THEORY-5 仍为 `needs_review: true`。
-- LV21-1 至 LV21-18 已审核，`needs_review: false`；LSW-TIP-1 至 LSW-TIP-5 仍为 `needs_review: true`。
+- LSW-THEORY-1 至 LSW-THEORY-5 已审核，均为 `needs_review: false`；其中 LSW-THEORY-1 的 Bohr–Mottelson 历史归因仍需未来摄入原书后才能进入 paper evidence gate。
+- LV21-1 至 LV21-18 已审核，`needs_review: false`；LSW-TIP-1 至 LSW-TIP-5 已审核，均为 `needs_review: false`。
+- LSW-TIP-SYN-1 至 LSW-TIP-SYN-8 已审核，均为 `needs_review: false`。
 - [[lv-2021-tilted-precession-135nd]] 为 `human-reviewed`；`135Nd` 派生页面保持 `review_status: unreviewed`。
 - 两个下位 project 及其引用的 source claims 已审核；其状态不会自动升级本页。
 
@@ -289,8 +403,8 @@ Lawrie 2020 与 Lv 2021 已分别建立 TiP 的理论层和 `135Nd` 实验案例
 ## Next Actions
 
 1. 分别补齐 `135Pr` 与 `187Au` 的实验 follow-up sources，不以 umbrella 代替核素内证据闭合。
-2. 用户审核 LSW-THEORY-1 至 LSW-THEORY-5、更新后的 LSW-SYN-5 与 [[tilted-precession-bands]]。
-3. 用户审核 LSW-TIP-1 至 LSW-TIP-5 与 `135Nd` 派生页面。
+2. 用户审核 [[tilted-precession-bands]] 与 `135Nd` 派生页面。
+3. 摄入 Bohr–Mottelson Vol. II、Frauendorf-Dönau 2014、Tanabe 2017/2018、`105Pd` 与 Lu TSD benchmark sources。
 4. 为用户未来数据建立统一但核素内独立的 transition-analysis schema。
 
 ## Related Pages
