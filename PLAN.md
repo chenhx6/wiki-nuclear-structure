@@ -1,6 +1,6 @@
 # Wiki 阶段计划与用户备忘
 
-> 本文件由用户拥有和维护。Agent 每次启动时涉及阶段计划、研究优先级、项目建立等任务时读取；除非用户明确要求，不得覆盖、重写、删除或重排其中内容。
+> 本文件由用户拥有和维护。Agent 仅在任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、多步骤知识库建设，或用户明确要求时读取；除非用户明确要求，不得覆盖、重写、删除或重排其中内容。
 
 ## 当前阶段目标
 
@@ -28,6 +28,12 @@
 
 下一步充实 tilted precession（TiP）相关的理论与实验知识，重点整理 TiP 的角动量几何、与 wobbling 的判别边界、代表性模型计算和原始实验案例。
 
+## 形变背景层与 `131Ce` 数据分析
+
+wobbling 相关知识之后，下一阶段补充 γ-soft / γ-rigid / stable triaxial、shape coexistence、band crossing 与自旋驱动形变演化等形变背景层。该层面服务后续 `131Ce` 数据分析：在讨论 wobbling、chirality、signature partner 或其他具体物理模式前，先尽量判断核形变背景与证据强弱，避免由主观先验过早指认一个数据层面并不充分支持的物理图像。
+
+这些内容在本页只作为研究方向和好奇心备忘，不展开具体文献、判据或结论；具体来源、证据分层与综合判断留给 source、project 或 synthesis 页面处理。
+
 Lawrie 2020 *Tilted precession and wobbling in triaxial nuclei* 与 Lv 2021 `135Nd` tilted-precession 原始文献现已进入 `raw/papers/` 和 `wiki-inbox.bib`。完成这两篇来源摄入后，启动 `knowledge/projects/low-spin-wobbling-controversies.md` umbrella project，把 `135Pr`、`187Au` 及后续直接 counter-source 按 observed facts、experimental criteria、author interpretations 与 model results 分层比较；在此之前不提前建立空壳页面。
 
 ## 长期节奏
@@ -45,6 +51,7 @@ Lawrie 2020 *Tilted precession and wobbling in triaxial nuclei* 与 Lv 2021 `135
 ## 维护规则
 
 - 用户负责决定和维护本文件中的阶段目标、优先级与备忘；
-- Agent 每次启动时读取本文件；
+- Agent 仅在任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、多步骤知识库建设，或用户明确要求时读取本文件；
 - Agent 不得擅自覆盖、重写、删除或重排本文件内容；
 - 只有用户明确要求时，Agent 才能修改本文件。
+
