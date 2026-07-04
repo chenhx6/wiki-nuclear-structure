@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: ingest-strategies
-updated: 2026-07-03
+updated: 2026-07-04
 ---
 
 # INGEST STRATEGIES：文献摄入策略注册表
@@ -24,10 +24,44 @@ updated: 2026-07-03
 9. 不修改 `raw/zotero/wiki-inbox.bib`，除非用户明确要求。
 10. 不新增 Skill、automation、脚本或调度器。
 11. 普通摄入不修改 lint 脚本、lint 配置或测试；若认为必须修改，停止并询问用户。
-12. 默认不 commit/push，除非用户明确指定提交策略。
+12. 普通文献摄入默认创建本地 WIP ingest commit、绝不自动 push；完整规则见下节。
 13. 摄入后列出新增 claims、`needs_review` claims、证据缺口和建议人工审阅的文件。
 14. 按 `AGENTS.md` 的 bounded initiative 只做直接相关的最小同步；有帮助但非必要的修改只列为建议。
 15. 单篇文献的新术语或别名优先写入页面 `aliases`。只有需要跨库统一、存在歧义或重复 slug/aliases 风险，或用户明确要求时，才修改 `system/vocabulary.md`；不确定时先询问或只列建议。
+
+## Default commit policy and WIP lifecycle
+
+普通文献摄入默认不 push。摄入主体完成且 Git 检查与 Wiki lint 通过后，如果用户没有明确指定提交策略，默认创建本地 WIP ingest commit：
+
+```text
+WIP ingest: <paper short name> for user review
+```
+
+WIP commit 只是等待用户审核的临时检查点，用于保存当前结果、减少未提交 diff 和文件监听负担；不表示页面或 claims 已完成人工复核，不得自动 push。
+
+只有用户明确写出“禁止任何本地 commit”“不要创建 WIP commit”或“不要本地临时 commit”时，才不得创建 WIP。旧式“不 commit/push，等待审核”在文献摄入场景中解释为：
+
+- 不创建 final commit；
+- 不 push；
+- 允许创建本地 WIP ingest commit。
+
+以下任一情况存在时不得创建 WIP ingest commit：
+
+- 检查失败；
+- 存在无法解释的文件；
+- 存在 raw、PDF、论文、数据或图片 diff；
+- 无法安全、显式地暂存本轮文件。
+
+WIP ingest commit 只允许包含本轮文献摄入相关文件。不得包含：
+
+- `.obsidian/graph.json`；
+- `raw/zotero/wiki-inbox.bib`；
+- raw PDF、论文、数据或图片；
+- 未经用户明确要求的 `PLAN.md`；
+- 无关 framework/governance 文件；
+- 无法解释的文件。
+
+同一分支最多允许一个 active WIP ingest commit。若 HEAD 已以 `WIP ingest:` 开头，不得开始下一篇摄入；必须等待用户审核后 finalize/amend，或由用户明确要求另开分支、放弃 WIP。审核完成后按 `system/workflows/ingest.md` 使用 amend 把 WIP 转换为 final commit，避免临时 commit 累积。
 
 ## 1. review-ingest
 
@@ -319,7 +353,7 @@ project 关系：
 <非目标质量区、只读某章节、不作为核心证据等>
 
 提交策略：
-<不 commit/push，等待人工审核 / 只 commit / commit 并 push>
+<默认本地 WIP、不 push / 禁止任何本地 commit / 审核后只 final commit / 审核后 final commit 并 push>
 ```
 
-用户不需要重复 Global ingest rules 或各策略默认清单。`daily-ingest`、`claim-review-update` 和 `data-analysis-bridge` 可在“摄入策略”或任务正文中直接指定；缺少关键信息且无法从仓库唯一确定时，Codex 应先询问，不得猜测。
+用户不需要重复 Global ingest rules 或各策略默认清单。未填写提交策略时默认本地 WIP、不 push；旧式“不 commit/push，等待审核”也不禁止本地 WIP，只有明确写“禁止任何本地 commit”才禁止。`daily-ingest`、`claim-review-update` 和 `data-analysis-bridge` 可在“摄入策略”或任务正文中直接指定；缺少关键信息且无法从仓库唯一确定时，Codex 应先询问，不得猜测。

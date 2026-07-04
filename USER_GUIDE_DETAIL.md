@@ -108,6 +108,19 @@
 
 不要把聊天内容或整批未读文献机械倒入 knowledge。新文献应先检查重复、书目信息、citation key 和原始文件定位。
 
+### WIP ingest → review → final
+
+摄入主体完成且检查通过后，默认流程是：
+
+1. Codex 显式暂存本轮摄入文件，创建本地 `WIP ingest: <paper> for user review`；
+2. WIP 不 push，也不代表页面或 claims 已人工复核；
+3. 用户继续通过 Codex 内置 Markdown 渲染查看文件并给出审核报告；
+4. Codex 只按报告修改明确项目，并推荐 final commit message；
+5. Codex 使用 `git commit --amend` 把 WIP 转成 final commit，避免临时 commits 累积；
+6. Final commit 通过检查后，只有用户允许才 push。
+
+同一分支最多保留一个 active WIP。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若要禁止所有本地 commit，需明确写“禁止本地 WIP commit”。Safe suspend 遇到大量 Markdown diff 时也优先采用本地 WIP checkpoint，减少 Codex、Git、编辑器或文件监听的持续 CPU 占用；checkpoint 绝不自动 push。
+
 ## 8. How to review claims / 如何人工审阅
 
 人工审阅至少检查：

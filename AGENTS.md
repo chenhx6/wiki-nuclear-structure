@@ -139,15 +139,55 @@ python system/scripts/wiki_lint.py --fail-on error
 
 ## Safe suspend
 
-当 Codex 发现上下文、token、5 小时额度或执行余量不足，且任务无法稳定完成时，不得继续扩大修改范围，必须立即进入 safe suspend：
+当 Codex 发现上下文、token、5 小时额度或执行余量不足，且任务无法稳定完成时，不得继续扩大修改范围，必须立即进入 safe suspend。
+
+Safe suspend 的目标是保护当前工作、停止低余量扩张、留下可恢复 handoff，并避免大量未提交 Markdown diff 长时间触发 Codex、Git、文件监听或编辑器的高 CPU 占用。Safe suspend 绝不自动 push。
+
+### 基本步骤
 
 1. 停止新增大范围修改；
 2. 运行 `git status --short`、`git diff --stat`、`git diff --check`；
-3. 更新 `system/handoff.md`，记录已完成事项、未完成事项、已修改文件、当前风险，以及下一轮可直接执行的续跑提示词；
-4. 不得自动 commit/push，除非用户明确要求；
+3. 更新 `system/handoff.md`，记录已完成事项、未完成事项、已修改文件、当前风险、检查结果、下一轮可直接执行的续跑提示词，以及是否存在 active WIP commit；
+4. 不得自动 push；
 5. 告知用户等待额度刷新后发送“继续”。
 
-Safe suspend 不是让当前任务自动睡眠并原地恢复。若用户后续使用 automation，应视为额度刷新后新开一次任务，由新任务按启动规则读取 handoff 后继续；不得因进入 safe suspend 自动创建 automation。
+### 本地 WIP checkpoint commit
+
+文献摄入、project 建立、批量 Markdown 页面生成或其他产生大量 diff 的任务进入 safe suspend 时，应优先尝试创建本地 WIP checkpoint commit。它只用于保存检查点、降低工作树 diff、方便下一轮从 handoff 与 Git HEAD 继续，并减少持续文件扫描；不表示科学内容已经人工审核，也不表示任务已经完成，绝不自动 push。
+
+只有同时满足以下条件，才允许创建或更新 WIP checkpoint：
+
+1. 当前修改能够分类；
+2. 可以显式暂存本轮相关文件，且不使用 `git add .`；
+3. 不暂存 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib`、raw PDF、论文、数据、图片、无关 framework/governance 文件、无法解释的文件，以及未经用户明确要求的 `PLAN.md`；
+4. 已运行 `git status --short`、`git diff --stat`、`git diff --check`；
+5. `system/handoff.md` 已写入任务状态、风险、检查结果和续跑提示词。
+
+如果 wiki lint 来不及完整运行，可以创建未验证的 `WIP suspend` commit，但 handoff 和最终报告必须明确写明：“wiki lint 未执行，本 WIP checkpoint commit 未验证为可提交状态。”
+
+Commit message 统一使用：
+
+- 未完成任务：`WIP suspend: <task short name>`；
+- 摄入主体完成、等待用户审核：`WIP ingest: <paper short name> for user review`；
+- 未完成的 workflow/framework 修正：`WIP suspend: <workflow short name>`。
+
+### Active WIP 限制与 amend
+
+同一分支最多允许一个 active `WIP ingest:` 或 `WIP suspend:` commit。HEAD 已是当前任务相关 WIP 时，不得再创建第二个 WIP；安全暂存后使用 `git commit --amend --no-edit`，需要调整 message 时使用 `git commit --amend -m "<updated WIP message>"`。HEAD 不是当前任务相关 WIP，或无法判断归属时，停止并询问用户，不得擅自 amend。
+
+恢复任务时先检查 HEAD、handoff、工作树、用户/无关文件，以及是否可以继续 amend 当前 WIP。任务完成后的处理：
+
+- 文献摄入完成但未审核：保留本地 WIP ingest，不 push；
+- 用户审核完成：按审核报告修改后，将 WIP amend 为 final commit；只有用户允许时才 push；
+- 任务放弃：等待用户明确指令，不自动 reset。
+
+### “不 commit/push”的兼容解释
+
+文献摄入任务中的旧式“不要 commit/push”或“不 commit、不 push，等待审核”，默认表示不创建 final commit、不 push，但允许创建本地 WIP ingest/checkpoint 以降低 diff 和 CPU 负担。只有用户明确写出“禁止任何本地 commit”“不要创建 WIP commit”或“不要本地临时 commit”时，才不得创建 WIP。
+
+若用户明确禁止任何本地 commit，而大量 diff 可能导致高 CPU 占用，safe suspend 报告必须提醒：“由于用户明确禁止任何本地 commit，本轮无法创建 WIP checkpoint commit。大量未提交 diff 可能导致 Codex/Git/文件监听高 CPU 占用。”
+
+Safe suspend 不是让当前任务自动睡眠并原地恢复。若用户后续使用 automation，应视为额度刷新后新开一次任务，由新任务按启动规则读取 handoff 和当前 Git HEAD 后继续；不得因进入 safe suspend 自动创建 automation。
 
 ## 写回与收尾
 
