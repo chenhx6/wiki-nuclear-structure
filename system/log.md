@@ -190,3 +190,24 @@ updated: 2026-07-04
 - NOM21-7 补齐 D-F 与 W-J/O(6) 极限定义、四个参考值、Fig.3 计算点位置及对 `131Ce/133Ce` 的奇 A 外推边界。
 - B19-4 将 `stopping power` 绑定中文释义“阻停能力”。
 - 三篇 source 升级为 `human-reviewed`，NOM17-1 至 NOM17-10、NOM21-1 至 NOM21-9、B19-1 至 B19-12 全部改为 `needs_review: false`。
+
+## [2026-07-05] synthesize-project | 建立 gamma-soft deformation evidence map 并扩写阶段性 synthesis
+
+- 新建 gamma-soft project，按 theory/experiment、模型、观测量、证据缺口、low-spin relation 与未来 `131Ce/133Ce` 数据入口组织。
+- 扩写既有 `gamma-soft-vs-gamma-rigid-diagnostics`，没有创建重复 synthesis。
+- 基于 Zamfir–Casten 1991、Nomura 2017/2021、Babra 2019 和 low-spin review/background 完成反向检验；不把模型解释写成实验事实，不把 γ-soft 自动绑定 wobbling。
+- 新增 GSD-PROJ-1 至 GSD-PROJ-6 与 GSD-SYN-1 至 GSD-SYN-8，共 14 条跨来源 statements 待用户审核。
+- 自动 lint 为 0 error、10 warning、0 info；未修改 raw、PDF、数据、图片、PLAN 或治理规则。
+
+## [2026-07-05] git | gamma-soft project + synthesis 创建本地 WIP checkpoint
+
+- message：`WIP synthesis: gamma-soft deformation evidence map for user review`。
+- 仅纳入本轮 9 个 project/synthesis/必要同步文件；用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 未纳入。
+- 未 push；等待用户审核 GSD-PROJ-1 至 GSD-PROJ-6 与 GSD-SYN-1 至 GSD-SYN-8。
+
+## [2026-07-05] review-synthesis | 用户审核 gamma-soft project 与 synthesis 的 14 条跨来源 statements
+
+- GSD-PROJ-4 重写为三层证据链：实验寿命/`Q_t` 与带交叉约束集体性变化，TRS/TPSM 给出模型形变结果，作者据此提出 γ-soft→rigid/stable-triaxial transition；不把模型形状写成直接实验事实。
+- 手征双重带与 wobbling bands 记录为稳定三轴性研究的重要候选集体指纹，但模式指认不能单独证明 γ-rigid 形变。
+- 重点扩展 GSD-SYN-5 与 soft-to-rigid transition 专节，并按用户授权在 `PLAN.md` 写入 A≈130、特别是 `131Ce/133Ce` 的未来证据摄入计划。
+- GSD-PROJ-1 至 GSD-PROJ-6、GSD-SYN-1 至 GSD-SYN-8 全部改为 `needs_review: false`；project 与 synthesis 页面升级为 `human-reviewed`。

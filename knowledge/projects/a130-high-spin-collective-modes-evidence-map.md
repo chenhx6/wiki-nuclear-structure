@@ -152,7 +152,7 @@ tags: [a130, high-spin, evidence-map, data-analysis, project]
 
 1. 为目标 A≈130 高自旋核补充寿命、绝对 B(E2) 与跨带交叉形变演化来源。
 2. 检查 pairing softness 是否会影响后续 `131Ce/133Ce` 形变背景模型选择。
-3. 后续另行判断是否需要 γ-soft deformation synthesis；当前 source 审核不提前修改 synthesis 结论。
+3. 审核 [[gamma-soft-deformation-evidence-map]] 与更新后的 [[gamma-soft-vs-gamma-rigid-diagnostics]]，再决定如何接入 `131Ce/133Ce` 数据。
 4. 数据处理出现阶段性结果后更新 Data-Analysis Bridge。
 
 ## Related Sources and Pages
@@ -160,6 +160,7 @@ tags: [a130, high-spin, evidence-map, data-analysis, project]
 - [[high-spin-phenomena]]、[[rotational-bands]]、[[backbending]]、[[angular-momentum-alignment]]
 - [[wobbling-motion]]、[[signature-partner-bands]]、[[chiral-doublet-bands]]
 - [[gamma-soft-deformation]]、[[gamma-rigid-deformation]]、[[triaxial-deformation]]
+- [[gamma-soft-deformation-evidence-map]]、[[gamma-soft-vs-gamma-rigid-diagnostics]]
 - [[in-beam-gamma-spectroscopy]]、[[gamma-gamma-coincidence]]
 
 ## Evolution Log

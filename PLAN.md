@@ -34,6 +34,15 @@ wobbling 相关知识之后，下一阶段补充 γ-soft / γ-rigid / stable tri
 
 这些内容在本页只作为研究方向和好奇心备忘，不展开具体文献、判据或结论；具体来源、证据分层与综合判断留给 source、project 或 synthesis 页面处理。
 
+未来建立“γ-soft→γ-rigid / stable-triaxial transition”专题摄入链。该方向是当前 A≈130 核结构研究的重要问题，优先补充：
+
+- 跨自旋或带交叉的寿命、绝对 B(E2)、`Q_t` 与 E2 matrix elements；
+- 由 Coulomb excitation 或其他多矩阵元分析得到的形状不变量与 γ 涨落约束；
+- 同一核、同一 γ 约定和尽量 common input 下，允许 γ 涨落的集体模型与固定三轴模型比较；
+- pairing、奇粒子-芯耦合、shape coexistence 与准粒子对齐对 soft-to-rigid localization 的影响；
+- `131Ce/133Ce` 及相关 A≈130 核的 nucleus-specific sources，避免用 `136Sm` 或偶偶邻核直接替代；
+- 手征双重带与 wobbling bands 作为稳定三轴形变研究的重要候选集体指纹，同时分别保留其模式判据、竞争解释与“候选带不单独证明 γ-rigid”的证据边界。
+
 Lawrie 2020 *Tilted precession and wobbling in triaxial nuclei* 与 Lv 2021 `135Nd` tilted-precession 原始文献现已进入 `raw/papers/` 和 `wiki-inbox.bib`。完成这两篇来源摄入后，启动 `knowledge/projects/low-spin-wobbling-controversies.md` umbrella project，把 `135Pr`、`187Au` 及后续直接 counter-source 按 observed facts、experimental criteria、author interpretations 与 model results 分层比较；在此之前不提前建立空壳页面。
 
 ## 长期节奏
@@ -54,4 +63,3 @@ Lawrie 2020 *Tilted precession and wobbling in triaxial nuclei* 与 Lv 2021 `135
 - Agent 仅在任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、多步骤知识库建设，或用户明确要求时读取本文件；
 - Agent 不得擅自覆盖、重写、删除或重排本文件内容；
 - 只有用户明确要求时，Agent 才能修改本文件。
-

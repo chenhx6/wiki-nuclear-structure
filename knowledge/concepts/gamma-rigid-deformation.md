@@ -3,7 +3,7 @@ type: concept
 title: γ 刚性形变
 aliases: [gamma-rigid deformation, rigid triaxiality, rigid triaxial deformation, γ-rigid]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 status: active
 review_status: unreviewed
 concept_type: deformation-dynamics
@@ -29,7 +29,9 @@ tags: [triaxiality, collective-motion]
 
 ## Supporting Evidence
 
-当前种子库只提供理论极限和判据，没有足够证据把某个 A≈130 核标为已确认 γ-rigid。
+当前种子库提供 D-F 理论极限和低能判据。[[babra-2019-deformation-change-136sm]] 的 TRS/TPSM 在带交叉后给出较稳定三轴极小，但这是模型结果/作者解释，不足以把 `136Sm` 或 A≈130 核无条件标为已确认 γ-rigid。
+
+手征双重带（chiral doublet bands）与 wobbling bands 是稳定三轴形变研究中的重要候选集体指纹。[[frauendorf-meng-1997-tilted-rotation-chirality]] 将手征性联系到三轴体系的 aplanar angular-momentum geometry；[[frauendorf-2024-wobbling-review]] 将 wobbling 建立在三轴转动与相邻声子带的集体 E2 连接上。二者都需要模式自身的完整判据，不能仅凭候选带标签反向证明 γ-rigid。
 
 ## Counter-evidence and Competing Interpretations
 
@@ -41,13 +43,18 @@ tags: [triaxiality, collective-motion]
 
 ## Our Current Position
 
-在没有势能面局域性或多观测量一致约束前，使用“triaxial”而非“γ-rigid”。
+在没有势能面局域性或多观测量一致约束前，使用“triaxial”而非“γ-rigid”。证据边界见 [[gamma-soft-deformation-evidence-map]] 与 [[gamma-soft-vs-gamma-rigid-diagnostics]]。
 
 ## Sources
 
 - [[zamfir-casten-1991-gamma-softness-triaxiality]]
+- [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]]
+- [[babra-2019-deformation-change-136sm]]
+- [[frauendorf-meng-1997-tilted-rotation-chirality]]
+- [[frauendorf-2024-wobbling-review]]
 
 ## Evolution Log
 
 - 2026-07-01（1 source）：作为 γ-soft 的竞争极限建立。
-
+- 2026-07-05（3 sources）：加入 W-J/D-F 多指标边界与 `136Sm` 模型支持的随自旋稳定三轴解释。
+- 2026-07-05（5 sources）：记录 chiral doublet/wobbling 作为稳定三轴性候选指纹，并保留模式指认不等于 γ-rigid 证明的边界。

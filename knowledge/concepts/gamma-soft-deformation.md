@@ -57,7 +57,7 @@ A≈130 的 Xe、Ba、Ce、Nd 是当前重点区域；`136Sm` 提供跨带交叉
 
 ## Our Current Position
 
-将 γ 软视为势能面/波函数涨落性质，不用单个拟合 γ 值替代。
+将 γ 软视为势能面/波函数涨落性质，不用单个拟合 γ 值替代。跨来源证据与未来 `131Ce/133Ce` 数据入口见 [[gamma-soft-deformation-evidence-map]]；阶段性综合见 [[gamma-soft-vs-gamma-rigid-diagnostics]]。
 
 ## Sources
 
@@ -71,3 +71,4 @@ A≈130 的 Xe、Ba、Ce、Nd 是当前重点区域；`136Sm` 提供跨带交叉
 
 - 2026-07-01（2 sources）：建立定义并加入低能 staggering 与 TPSM 视角。
 - 2026-07-05（5 sources）：加入 A≈130 奇 A 形状相变、配对-三轴耦合与 `136Sm` 跨带交叉 `Q_t` 案例，并明确模型势面和寿命证据边界。
+- 2026-07-05：接入 gamma-soft evidence-map project 与阶段性 synthesis。

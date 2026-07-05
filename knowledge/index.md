@@ -114,7 +114,7 @@ updated: 2026-07-05
 
 ## Synthesis
 
-- [[gamma-soft-vs-gamma-rigid-diagnostics]] - 低能偶偶核判据与外推边界。
+- [[gamma-soft-vs-gamma-rigid-diagnostics]] - γ-soft 的低能判据、形状相变、配对-三轴耦合、`136Sm` 形变演化与 low-spin 外推边界。
 - [[chiral-rotation-from-aplanar-tac]] - 手征对称性框架与实验限制。
 - [[wobbling-vs-signature-partner]] - 以电磁跃迁优先的判别矩阵。
 - [[signature-splitting-mechanisms]] - 非轴性、低-j mixing 与 Coriolis 耦合的共同作用。
@@ -122,6 +122,7 @@ updated: 2026-07-05
 ## Projects
 
 - [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
+- [[gamma-soft-deformation-evidence-map]] - 连接 γ-soft/γ-rigid 判据、模型、`136Sm` 实验参照、证据缺口与未来 `131Ce/133Ce` 数据的 evidence map。
 - [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands 的 wobbling/TiP 竞争解释与 supporting/counter evidence。
 - [[187au-longitudinal-wobbling-controversy]] - 已审核的 Sensharma 2020/Guo 2022 locator-level evidence matrix；跟踪 `187Au` LW、single-particle excitation、associated signature partner 与低自旋近似争议。
 - [[low-spin-wobbling-controversies]] - `135Pr/187Au` 低自旋 wobbling identification 跨案例证据地图；接入 Lawrie 2020 理论边界、`135Nd` experimental TiP reference 与已审核 TiP synthesis。

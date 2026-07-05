@@ -10,6 +10,23 @@ updated: 2026-07-05
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：gamma-soft deformation project + synthesis（审核完成，终版收尾）
+
+- 新建 `knowledge/projects/gamma-soft-deformation-evidence-map.md`，定位为 evidence map，不是论文草稿或完整文献清单。
+- 扩写既有 `knowledge/synthesis/gamma-soft-vs-gamma-rigid-diagnostics.md`，没有创建同义 synthesis；内容覆盖定义、soft-vs-rigid、A≈130 shape-phase transition、pairing+triaxial vibration、`136Sm` deformation change、low-spin relation 与证据能力边界。
+- 核心 source 均已审核：Zamfir–Casten 1991 提供低能偶偶判据；Nomura 2017/2021 作为共享方法链的 theory/model evidence；Babra 2019 提供寿命/`Q_t` 实验层与 TRS/TPSM 解释层；Frauendorf 2024 仅作 low-spin relation 背景。
+- 反向检验：ZC91 判据不能直接外推奇 A 高自旋；Nomura 两文不是独立实验复现；`136Sm` 直接实验只建立集体性变化，γ-soft→rigid/stable-triaxial transition 是由 TRS/TPSM 支持的作者解释；当前四源不能裁决 `131Ce/133Ce` 或 wobbling 身份。
+- 用户已审核 GSD-PROJ-1 至 GSD-PROJ-6 与 GSD-SYN-1 至 GSD-SYN-8，共 14 条跨来源 statements，全部改为 `needs_review: false`；project/synthesis 页面均升级为 `human-reviewed`。
+- 按用户批注重写 GSD-PROJ-4：明确区分寿命/`Q_t` 与带交叉的直接实验约束、TRS/TPSM 模型结果和作者提出的 soft-to-rigid 演化，并保留多极小、模型参数及非 Ce 核限制。
+- 把手征双重带与 wobbling bands 记录为稳定三轴性研究的重要候选集体指纹；模式指认与 γ-rigid 判定仍是两条需交叉约束的证据链，不能由带标签单独证明稳定三轴形变。
+- 重点扩展 GSD-SYN-5 和专门的 γ-soft→rigid/stable-triaxial transition 小节；`PLAN.md` 已按用户授权加入未来摄入计划，覆盖寿命/绝对 E2、形状不变量、common-input 模型比较、pairing/奇粒子/带交叉，以及 `131Ce/133Ce` nucleus-specific sources。
+- 最小同步：更新 gamma-soft/gamma-rigid concepts、A≈130 parent project、index 与 overview；未修改 model/observable 页面，因为现有条目已覆盖本轮所需模型和观测量边界。
+- 已检查 `knowledge/questions.md`：现有形变背景问题与新 project gaps 可承接本轮，不新增重复问题。
+- 最终 lint：112 pages、1082 Wikilinks、19/19 source hash、0 error、10 warning、0 info；source claims 208 条、待审 0，project/synthesis 的 14 条 notes 也已全部审核。warning 均为既有反应/元素配置提示和用户 raw BibTeX 改动。
+- 文档同步门：未改变目录、命令、治理规则、schema、template 或 vocabulary，不更新 USER_GUIDE/AGENTS/check；按用户明确要求修改 `PLAN.md`；raw、PDF、数据和图片未修改。
+- 终版推荐 message：`Build reviewed gamma-soft deformation evidence map and transition synthesis`；将 amend 当前单一 WIP 后按用户授权 push。
+- 保留用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 修改，不纳入终版提交。
+
 ## 当前执行：γ-soft deformation 三文献 daily-ingest（审核完成，终版收尾）
 
 - 严格按用户顺序完成：Nomura 2017 `theory-ingest + project-ingest`，Nomura 2021 `theory-ingest + project-ingest`，Babra 2019 `experiment-ingest + project-ingest`；整体按 `daily-ingest / batch source-note ingest` 收尾。
