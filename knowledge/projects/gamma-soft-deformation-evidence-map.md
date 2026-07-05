@@ -110,7 +110,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 | GSD-PROJ-4 | `136Sm` 的直接实验结果是第一带交叉附近及其后 `Q_t` 总体下降、E2 集体性减弱；TRS 给出低频 γ-soft 极小和交叉后较稳定三轴极小，TPSM 用两套形变输入分别改善交叉前后描述，作者据此提出 γ-soft→rigid/stable-triaxial transition | B19-1 至 B19-12；PDF pp.1-9, Table I, Figs.5-10 | 形状转变不是由 `Q_t` 单独测得；TRS/TPSM 有参数依赖，第二交叉以上还有 oblate/triaxial/highly-deformed-prolate 竞争极小；非 Ce 核 | false |
 | GSD-PROJ-5 | 形变背景应在 low-spin band interpretation 之前建立，但本身不能确认 wobbling、chirality 或 signature partner | 四个核心 source；[[low-spin-wobbling-controversies]] | 需要逐带电磁判据、band identity 与专门模型；当前 project 不改判已有争议 | false |
 | GSD-PROJ-6 | 对 `131Ce/133Ce`，最低可行证据链应联合能级系统学、寿命/绝对 E2、形状不变量或匹配势能面，并显式处理奇粒子与带交叉 | 当前四源的方法边界 | 当前 Wiki 未覆盖 `131Ce` nucleus-specific gamma-soft source；`133Ce` 现有页侧重高自旋谱学/其他模式 | false |
-| GSD-PROJ-7 | γ-soft core 可在 IBFM 中产生与 reported low-spin wobbling candidates 相近的 odd-mass bands，因此 γ-softness 只限定形变/芯动力学背景，不能单独决定 wobbling、TiP 或其他 band identity | NOM22-2 至 NOM22-15, PDF pp.2-10 | Nomura 2022 source 已审；但 GSD-PROJ-7 本 note 仍待审，且四核模型有拟合/空间限制，`131Ce/133Ce` 未计算 | true |
+| GSD-PROJ-7 | γ-soft core 可在 IBFM 中产生与 reported low-spin wobbling candidates 相近的 odd-mass bands，因此 γ-softness 只限定形变/芯动力学背景，不能单独决定 wobbling、TiP 或其他 band identity | NOM22-2 至 NOM22-15, PDF pp.2-10 | Nomura 2022 source 已审；四核模型有拟合/空间限制，`131Ce/133Ce` 未计算 | false |
 
 ## Evidence Gaps
 
@@ -151,11 +151,11 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 - `136Sm` 不是 Ce，邻核比较不能替代目标核证据；
 - `131Ce` 当前缺 nucleus-specific source，`133Ce` 也缺与本 project 同口径的寿命/不变量链；
 - project 与 synthesis 的 14 条跨来源 statements 已由用户审核；论文级使用仍须回到 source、raw、locator，并重新执行 paper evidence gate。
-- GSD-PROJ-7 仍待用户审核；Nomura 2022 source 已完成 source 级复核，但不自动继承为本页 project note 的已审状态。
+- GSD-PROJ-7 已通过用户审核；Nomura 2022 source 级复核不会自动推导到其他未写明的项目。
 
 ## Next Actions
 
-1. 用户审核 GSD-PROJ-7，重点核对“γ-soft background 不决定 band identity”的 source→project 证据边界。
+1. 继续等待新的 `131Ce/133Ce` 或其他 nucleus-specific source，以便把 γ-soft background 的 project note 进一步落到目标核。
 2. 为 `131Ce` 建立 nucleus-specific 原始证据链；不以邻核替代。
 3. 补充 `128-134Xe/Ba/Ce` 的现代 E2 matrix-element / Coulomb-excitation 来源。
 4. 为 `131Ce/133Ce` 设计 common-observable、common-convention 的 soft-vs-rigid 模型比较。

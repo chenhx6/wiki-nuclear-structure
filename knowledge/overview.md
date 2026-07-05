@@ -25,7 +25,7 @@ updated: 2026-07-05
 | source 页 unreviewed | 0 | 20 个 source 页当前均已完成人工页面级审阅 |
 | 页面级 needs-human-review | 0 | 不等同于 claim-level 待审数量 |
 | claim-level `needs_review: true` | 0 | 当前 source claim 队列已清零；待审项仅剩 project-level notes |
-| project-level synthesis `needs_review: true` | 5 | LSW-IBFM-1 至 4 与 GSD-PROJ-7 待用户核对；lint 当前不自动汇总该表 |
+| project-level synthesis `needs_review: true` | 0 | 当前所有 project-level notes 已通过用户审核 |
 | claim 缺失 locator | 0 | 自动解析 source `Key Results` 表 |
 | claim 缺失 claim kind | 0 | 使用 schema 字段 `claim_kind` |
 | source 缺失 raw_file | 0 | 自动统计 source frontmatter |

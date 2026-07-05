@@ -160,10 +160,10 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 
 | ID | Project-level statement | Source basis | Evidence boundary | needs_review |
 |---|---|---|---|---|
-| LSW-IBFM-1 | γ-soft IBM core + odd fermion 可在不预设 wobbling phonon 的情况下产生与 reported low-spin bands 对应的低能结构，因此构成独立于 wobbling/TiP 语言的替代理论框架 | NOM22-2 至 NOM22-6, PDF pp.2-5 | band matching 与 coupling fit 有模型依赖；不是 observed band identity | true |
-| LSW-IBFM-2 | IBFM 对若干 candidate→yrast links 给出小 `abs(δ)`/较强 M1，挑战 predominant-E2 wobbling criterion；但 `127Xe` 低自旋异常大 `abs(δ)` 和实验数据冲突阻止普遍化 | NOM22-7 至 NOM22-11/NOM22-15, PDF pp.6-10 | 需逐 transition 回到原实验分析；model `δ` 不替代 measured `δ` | true |
-| LSW-IBFM-3 | Nomura 2022 的 IBFM alternative 不能与 TiP 自动合并：前者未检验 TiP geometry、approximation condition 或 phonon quantization | NOM22-1 至 NOM22-14；对照 LAW20/LV21 notes | 两者可同时挑战 wobbling assignment，但机制和可检验预测不同 | true |
-| LSW-IBFM-4 | 当前可把 `135Pr` 接入详细 controversy；`133La/127Xe/105Pd` 仅列 future cases，`187Au` 则是本文明确的模型适用困难，不形成同等覆盖 | NOM22-7 至 NOM22-13, PDF pp.6-10 | 缺三核原 experimental sources 与 common-input model benchmark | true |
+| LSW-IBFM-1 | γ-soft IBM core + odd fermion 可在不预设 wobbling phonon 的情况下产生与 reported low-spin bands 对应的低能结构，因此构成独立于 wobbling/TiP 语言的替代理论框架 | NOM22-2 至 NOM22-6, PDF pp.2-5 | band matching 与 coupling fit 有模型依赖；不是 observed band identity | false |
+| LSW-IBFM-2 | IBFM 对若干 candidate→yrast links 给出小 `abs(δ)`/较强 M1，挑战 predominant-E2 wobbling criterion；但 `127Xe` 低自旋异常大 `abs(δ)` 和实验数据冲突阻止普遍化 | NOM22-7 至 NOM22-11/NOM22-15, PDF pp.6-10 | 需逐 transition 回到原实验分析；model `δ` 不替代 measured `δ` | false |
+| LSW-IBFM-3 | Nomura 2022 的 IBFM alternative 不能与 TiP 自动合并：前者未检验 TiP geometry、approximation condition 或 phonon quantization | NOM22-1 至 NOM22-14；对照 LAW20/LV21 notes | 两者可同时挑战 wobbling assignment，但机制和可检验预测不同 | false |
+| LSW-IBFM-4 | 当前可把 `135Pr` 接入详细 controversy；`133La/127Xe/105Pd` 仅列 future cases，`187Au` 则是本文明确的模型适用困难，不形成同等覆盖 | NOM22-7 至 NOM22-13, PDF pp.6-10 | 缺三核原 experimental sources 与 common-input model benchmark | false |
 | Single-particle excitation | Guo 2022 对 `187Au` Band 2 的主要重解释 | QTR-supported author interpretation；不构成最终裁决 |
 | Tilted precession（TiP） | [[lawrie-2020-tilted-precession-wobbling]] 定义完整 3D precessional bands，并与 harmonic wobbling approximation 对照 | source claims 已审；没有对 `187Au` 的直接 calculation，也不裁决 `135Pr` 实验 |
 | β/γ vibration 等其他机制 | Guo/Lv 讨论的 broader alternative space | 当前 umbrella 未摄入专门来源，只保留 evidence gap |
@@ -400,7 +400,7 @@ LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` deri
 | LSW-TIP-1 至 LSW-TIP-5 | reviewed project synthesis | 不得替代 Lv 2021 source 或跨核素裁决 `135Pr/187Au` |
 | LSW-TIP-SYN-1 至 LSW-TIP-SYN-8 | reviewed cross-source synthesis | 只作 TiP/wobbling 关系、跨案例限制和未来判据导航；不得直接进入 paper evidence pool |
 | NOM22-1 至 NOM22-15 | eligible as reviewed theoretical source | 可按 source claim kind 作为 IBFM alternative 的理论证据使用；引用时仍需回到 source/raw/locator，不得拿 source 内二手 experimental comparison 代替原实验摄入 |
-| LSW-IBFM-1 至 LSW-IBFM-4 | pending human review / not yet eligible | 仅作 IBFM alternative 导航；审核时重点核对 Table II、`127Xe` 例外、模型假设和结论措辞 |
+| LSW-IBFM-1 至 LSW-IBFM-4 | eligible as reviewed project notes | 仅作 IBFM alternative 导航；已通过审核，重点保留 Table II、`127Xe` 例外、模型假设和结论措辞 |
 | 其他 follow-up sources | not yet eligible | 尚未摄入，不得写成当前 Wiki 已确认内容 |
 | Innovation candidate notes | hypothesis/planning only | 不得写成 novelty claim 或论文结论 |
 
@@ -414,7 +414,7 @@ LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` deri
 - LSW-TIP-SYN-1 至 LSW-TIP-SYN-8 已审核，均为 `needs_review: false`。
 - [[lv-2021-tilted-precession-135nd]] 为 `human-reviewed`；`135Nd` 派生页面保持 `review_status: unreviewed`。
 - 两个下位 project 及其引用的 source claims 已审核；其状态不会自动升级本页。
-- [[nomura-2022-questioning-wobbling-ibfm]] 为 `human-reviewed`，NOM22-1 至 NOM22-15 已改为 `needs_review: false`；LSW-IBFM-1 至 LSW-IBFM-4 仍为 `needs_review: true`。
+- [[nomura-2022-questioning-wobbling-ibfm]] 为 `human-reviewed`，NOM22-1 至 NOM22-15 已改为 `needs_review: false`；LSW-IBFM-1 至 LSW-IBFM-4 也已改为 `needs_review: false`。
 
 ## Decisions
 

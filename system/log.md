@@ -225,6 +225,12 @@ updated: 2026-07-04
 - [[nomura-2022-questioning-wobbling-ibfm]] 升级为 `human-reviewed`；NOM22-1 至 NOM22-15 全部改为 `needs_review: false`。
 - [[low-spin-wobbling-controversies]] 与 [[gamma-soft-deformation-evidence-map]] 同步为“Nomura 2022 source 已审、LSW-IBFM-1 至 4 与 GSD-PROJ-7 仍待审”。
 - 复核后 lint 为 114 pages、1124 Wikilinks、20/20 source hash、0 error、10 warning、0 info；source claim 待审队列清零，剩余 5 条 project-level notes 待审。
+
+## [2026-07-05] claim-review | 用户确认 Nomura 2022 project notes 已审核通过
+
+- LSW-IBFM-1 至 LSW-IBFM-4 与 GSD-PROJ-7 全部由 `needs_review: true` 改为 `needs_review: false`。
+- `low-spin-wobbling-controversies` 与 `gamma-soft-deformation-evidence-map` 中关于 Nomura 2022 的 project-level 待审提示改为已审收口。
+- `knowledge/overview.md` 中 project-level synthesis 待审计数同步清零。
 - `135Pr` 只加理论 cross-reference；`133La/127Xe/105Pd` 不建空壳 nucleus/project；`187Au` 只记录本文模型空间困难。未新增 synthesis，未修改 raw。
 
 ## [2026-07-05] governance | 建立 Human review triage protocol
