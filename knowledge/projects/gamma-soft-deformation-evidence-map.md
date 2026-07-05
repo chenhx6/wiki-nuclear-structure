@@ -41,7 +41,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 
 ## Evidence Available
 
-当前已审核核心证据由四篇 source 构成：一篇低能偶偶判据来源、两篇共享理论方法链的 Nomura 理论来源，以及一篇独立 `136Sm` 寿命实验及模型比较。待审核的 Nomura 2022 新增 γ-soft IBFM odd-mass bands 与 low-spin wobbling alternative 的直接桥接；它不改变既有四源综合的审核状态。Frauendorf 2024 仅提供 low-spin relation 背景。
+当前已审核核心证据由五篇 source 构成：一篇低能偶偶判据来源、三篇共享或相邻理论方法链的 Nomura 理论来源，以及一篇独立 `136Sm` 寿命实验及模型比较。Nomura 2022 已补入 γ-soft IBFM odd-mass bands 与 low-spin wobbling alternative 的直接桥接；它不自动改变本页既有 project-level notes 的审核状态。Frauendorf 2024 仅提供 low-spin relation 背景。
 
 ## Seed Sources
 
@@ -51,7 +51,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 | [[nomura-2017-odd-mass-gamma-soft-shape-transitions]] | theory source | A≈130 Ba/Xe 偶偶芯势能面、IBFM 奇 A 谱学演化与态依赖形状不变量 | model result / author interpretation；粒子-芯耦合逐核拟合 |
 | [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]] | theory source | `128,130Xe` 的 pairing-plus-triaxial collective space 与 γ-softness ratios | 与 Nomura 2017 共享作者/SCMF→IBM 方法链，不按独立实验复现计数 |
 | [[babra-2019-deformation-change-136sm]] | experiment source + model comparison | `136Sm` yrast 寿命、`Q_t` 与带交叉处形变演化案例 | 寿命/`Q_t` 为直接实验；γ-soft 与稳定三轴标签来自 TRS/TPSM 和作者解释 |
-| [[nomura-2022-questioning-wobbling-ibfm]] | theory source, pending review | `135Pr/133La/127Xe/105Pd` 的 γ-soft core + odd-fermion bands 与 E2/M1 predictions | 与 Nomura 2017/2021 共享方法链；couplings fitted；`127Xe` 有异常 `δ`；不是新实验 |
+| [[nomura-2022-questioning-wobbling-ibfm]] | theory source, source reviewed | `135Pr/133La/127Xe/105Pd` 的 γ-soft core + odd-fermion bands 与 E2/M1 predictions | 与 Nomura 2017/2021 共享方法链；couplings fitted；`127Xe` 有异常 `δ`；不是新实验 |
 | [[frauendorf-2024-wobbling-review]] | review/background | γ-soft 芯与奇 A collective-band interpretation 的关系入口 | 只用于 relation/future bridge，不替代 wobbling 原始实验来源 |
 
 ## Gamma-soft Deformation Concepts
@@ -110,7 +110,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 | GSD-PROJ-4 | `136Sm` 的直接实验结果是第一带交叉附近及其后 `Q_t` 总体下降、E2 集体性减弱；TRS 给出低频 γ-soft 极小和交叉后较稳定三轴极小，TPSM 用两套形变输入分别改善交叉前后描述，作者据此提出 γ-soft→rigid/stable-triaxial transition | B19-1 至 B19-12；PDF pp.1-9, Table I, Figs.5-10 | 形状转变不是由 `Q_t` 单独测得；TRS/TPSM 有参数依赖，第二交叉以上还有 oblate/triaxial/highly-deformed-prolate 竞争极小；非 Ce 核 | false |
 | GSD-PROJ-5 | 形变背景应在 low-spin band interpretation 之前建立，但本身不能确认 wobbling、chirality 或 signature partner | 四个核心 source；[[low-spin-wobbling-controversies]] | 需要逐带电磁判据、band identity 与专门模型；当前 project 不改判已有争议 | false |
 | GSD-PROJ-6 | 对 `131Ce/133Ce`，最低可行证据链应联合能级系统学、寿命/绝对 E2、形状不变量或匹配势能面，并显式处理奇粒子与带交叉 | 当前四源的方法边界 | 当前 Wiki 未覆盖 `131Ce` nucleus-specific gamma-soft source；`133Ce` 现有页侧重高自旋谱学/其他模式 | false |
-| GSD-PROJ-7 | γ-soft core 可在 IBFM 中产生与 reported low-spin wobbling candidates 相近的 odd-mass bands，因此 γ-softness 只限定形变/芯动力学背景，不能单独决定 wobbling、TiP 或其他 band identity | NOM22-2 至 NOM22-15, PDF pp.2-10 | Nomura 2022 待审；四核模型有拟合/空间限制，且 `131Ce/133Ce` 未计算 | true |
+| GSD-PROJ-7 | γ-soft core 可在 IBFM 中产生与 reported low-spin wobbling candidates 相近的 odd-mass bands，因此 γ-softness 只限定形变/芯动力学背景，不能单独决定 wobbling、TiP 或其他 band identity | NOM22-2 至 NOM22-15, PDF pp.2-10 | Nomura 2022 source 已审；但 GSD-PROJ-7 本 note 仍待审，且四核模型有拟合/空间限制，`131Ce/133Ce` 未计算 | true |
 
 ## Evidence Gaps
 
@@ -151,11 +151,11 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 - `136Sm` 不是 Ce，邻核比较不能替代目标核证据；
 - `131Ce` 当前缺 nucleus-specific source，`133Ce` 也缺与本 project 同口径的寿命/不变量链；
 - project 与 synthesis 的 14 条跨来源 statements 已由用户审核；论文级使用仍须回到 source、raw、locator，并重新执行 paper evidence gate。
-- 新增 GSD-PROJ-7 与 Nomura 2022 source 尚待用户审核，不自动继承本页既有审核状态。
+- GSD-PROJ-7 仍待用户审核；Nomura 2022 source 已完成 source 级复核，但不自动继承为本页 project note 的已审状态。
 
 ## Next Actions
 
-1. 用户审核 Nomura 2022 source 与 GSD-PROJ-7，重点核对“γ-soft background 不决定 band identity”的证据边界。
+1. 用户审核 GSD-PROJ-7，重点核对“γ-soft background 不决定 band identity”的 source→project 证据边界。
 2. 为 `131Ce` 建立 nucleus-specific 原始证据链；不以邻核替代。
 3. 补充 `128-134Xe/Ba/Ce` 的现代 E2 matrix-element / Coulomb-excitation 来源。
 4. 为 `131Ce/133Ce` 设计 common-observable、common-convention 的 soft-vs-rigid 模型比较。

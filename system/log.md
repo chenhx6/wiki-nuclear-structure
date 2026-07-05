@@ -217,6 +217,14 @@ updated: 2026-07-04
 - 全文精读并视觉核对 Figs.1-13、Tables I-II；新建 source 与 IBFM model，建立 NOM22-1 至 NOM22-15 待审 claims。
 - 分层记录 EDF→IBM-2/IBFM assumptions、四核谱与 E2/M1 model results、既有实验值 comparison、作者对 earlier wobbling assignments 的 challenge，以及 `127Xe` 异常大计算 `abs(δ)` 对结论普遍化的限制。
 - Umbrella project 新增 LSW-IBFM-1 至 LSW-IBFM-4，gamma-soft project 新增 GSD-PROJ-7；IBFM alternative 与 TiP/QTR 分开，不把理论结果写成实验事实或最终裁决。
+
+## [2026-07-05] claim-review | 用户审核 Nomura 2022 source 并完成 source 级收尾
+
+- NOM22-10 明确补入 `105Pd` 原 wobbling paper 中 band B/C 与本文 B1/B2 的对应关系，避免跨文献带标号混淆。
+- NOM22-11 改写为分别陈述 `B(E2)out/B(E2)in` 与 `B(M1)out/B(E2)in`；对 `133La` 明确前者 agreement 较好、后者仍偏大，并同步修正 NOM22-8 的相同表述风险。
+- [[nomura-2022-questioning-wobbling-ibfm]] 升级为 `human-reviewed`；NOM22-1 至 NOM22-15 全部改为 `needs_review: false`。
+- [[low-spin-wobbling-controversies]] 与 [[gamma-soft-deformation-evidence-map]] 同步为“Nomura 2022 source 已审、LSW-IBFM-1 至 4 与 GSD-PROJ-7 仍待审”。
+- 复核后 lint 为 114 pages、1124 Wikilinks、20/20 source hash、0 error、10 warning、0 info；source claim 待审队列清零，剩余 5 条 project-level notes 待审。
 - `135Pr` 只加理论 cross-reference；`133La/127Xe/105Pd` 不建空壳 nucleus/project；`187Au` 只记录本文模型空间困难。未新增 synthesis，未修改 raw。
 
 ## [2026-07-05] governance | 建立 Human review triage protocol

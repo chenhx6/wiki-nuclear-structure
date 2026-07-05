@@ -45,7 +45,7 @@ tags: [low-spin-wobbling, triaxiality, mixing-ratio, linear-polarization, signat
 
 ## Evidence Available
 
-当前 umbrella evidence pool 包含 [[135pr-wobbling-controversy]]、[[187au-longitudinal-wobbling-controversy]] 及其已审核 source claims、已审核的 [[lawrie-2020-tilted-precession-wobbling]] 理论框架、已审核的 [[lv-2021-tilted-precession-135nd]] experimental TiP case，以及待审核的 [[nomura-2022-questioning-wobbling-ibfm]] theoretical alternative。跨案例争议矩阵继续沿用 M15/S19/L22/AU20/G22 claim IDs；新增 NOM22 与 LSW-IBFM notes 不改变既有审核状态。
+当前 umbrella evidence pool 包含 [[135pr-wobbling-controversy]]、[[187au-longitudinal-wobbling-controversy]] 及其已审核 source claims、已审核的 [[lawrie-2020-tilted-precession-wobbling]] 理论框架、已审核的 [[lv-2021-tilted-precession-135nd]] experimental TiP case，以及已审核的 [[nomura-2022-questioning-wobbling-ibfm]] theoretical alternative。跨案例争议矩阵继续沿用 M15/S19/L22/AU20/G22 claim IDs；NOM22 source claims 已审，LSW-IBFM notes 仍待审，不改变既有已审核内容的状态。
 
 ## Case Map
 
@@ -399,7 +399,8 @@ LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` deri
 | LV21-1 至 LV21-18 | eligible as reviewed experimental/model source | `135Nd` observed facts、criteria、model results 与 interpretation 必须按 claim kind 分层使用 |
 | LSW-TIP-1 至 LSW-TIP-5 | reviewed project synthesis | 不得替代 Lv 2021 source 或跨核素裁决 `135Pr/187Au` |
 | LSW-TIP-SYN-1 至 LSW-TIP-SYN-8 | reviewed cross-source synthesis | 只作 TiP/wobbling 关系、跨案例限制和未来判据导航；不得直接进入 paper evidence pool |
-| NOM22-1 至 NOM22-15、LSW-IBFM-1 至 LSW-IBFM-4 | pending human review / not yet eligible | 仅作 IBFM alternative 导航；审核时重点核对 Table II、`127Xe` 例外、模型假设和结论措辞 |
+| NOM22-1 至 NOM22-15 | eligible as reviewed theoretical source | 可按 source claim kind 作为 IBFM alternative 的理论证据使用；引用时仍需回到 source/raw/locator，不得拿 source 内二手 experimental comparison 代替原实验摄入 |
+| LSW-IBFM-1 至 LSW-IBFM-4 | pending human review / not yet eligible | 仅作 IBFM alternative 导航；审核时重点核对 Table II、`127Xe` 例外、模型假设和结论措辞 |
 | 其他 follow-up sources | not yet eligible | 尚未摄入，不得写成当前 Wiki 已确认内容 |
 | Innovation candidate notes | hypothesis/planning only | 不得写成 novelty claim 或论文结论 |
 
@@ -413,7 +414,7 @@ LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` deri
 - LSW-TIP-SYN-1 至 LSW-TIP-SYN-8 已审核，均为 `needs_review: false`。
 - [[lv-2021-tilted-precession-135nd]] 为 `human-reviewed`；`135Nd` 派生页面保持 `review_status: unreviewed`。
 - 两个下位 project 及其引用的 source claims 已审核；其状态不会自动升级本页。
-- [[nomura-2022-questioning-wobbling-ibfm]] 为 `unreviewed`，NOM22-1 至 NOM22-15 与 LSW-IBFM-1 至 LSW-IBFM-4 均为 `needs_review: true`。
+- [[nomura-2022-questioning-wobbling-ibfm]] 为 `human-reviewed`，NOM22-1 至 NOM22-15 已改为 `needs_review: false`；LSW-IBFM-1 至 LSW-IBFM-4 仍为 `needs_review: true`。
 
 ## Decisions
 
@@ -429,7 +430,7 @@ LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` deri
 
 1. 分别补齐 `135Pr` 与 `187Au` 的实验 follow-up sources，不以 umbrella 代替核素内证据闭合。
 2. 用户审核 [[tilted-precession-bands]] 与 `135Nd` 派生页面。
-3. 用户审核 Nomura 2022 的 NOM22-1 至 NOM22-15、LSW-IBFM-1 至 LSW-IBFM-4，并优先核对 Table II 与 `127Xe` exception。
+3. 用户审核 LSW-IBFM-1 至 LSW-IBFM-4，并优先回看 Table II、`127Xe` exception 与 source→project 外推边界。
 4. 摄入 Bohr–Mottelson Vol. II、Frauendorf-Dönau 2014、Tanabe 2017/2018、`105Pd` 与 Lu TSD benchmark sources。
 5. 为用户未来数据建立统一但核素内独立的 transition-analysis schema。
 
