@@ -25,6 +25,9 @@ updated: 2026-07-05
 - [[guo-2022-low-spin-wobbling-187au]] - 以独立 `R_ac-P`、internal conversion 比较与 QTR 重解释 `187Au` reported low-spin wobbling 的反方来源；supplementary material 作为附属证据层挂接。
 - [[lawrie-2020-tilted-precession-wobbling]] - TiP 完整 3D rotation、wobbling approximation 条件与 phonon quantization 的理论基础来源。
 - [[lv-2021-tilted-precession-135nd]] - `135Nd` D1/TiP1/TiP2 的 coincidence、电磁判据与 QTR comparison；experimental TiP case。
+- [[nomura-2017-odd-mass-gamma-soft-shape-transitions]] - DD-PC1 RHB+IBFM 对 A≈130 奇 A Ba/Xe/La/Cs 近球形到 γ-soft 形状相变的模型研究。
+- [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]] - `128,130Xe` 中配对振动与三轴形状自由度耦合的玻色子数非守恒 IBM 研究。
+- [[babra-2019-deformation-change-136sm]] - `136Sm` yrast 寿命、`Q_t` 下降与带交叉处形变演化的实验-模型证据链。
 
 ## Nuclei
 

@@ -170,3 +170,23 @@ updated: 2026-07-04
 ## [2026-07-05] git | TiP / low-spin wobbling project synthesis 以 `Integrate reviewed TiP synthesis into low-spin wobbling project` 提交并推送至 `origin/main`；用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 改动未纳入
 
 ## [2026-07-05] governance | 将 bounded initiative 第四条改为以可验证验收标准收敛任务的 Agent 行为契约
+## [2026-07-05] daily-ingest-project | 按 Nomura 2017 → Nomura 2021 → Babra 2019 顺序完成 γ-soft deformation 三文献批次摄入
+
+- Nomura 2017 采用 `theory-ingest + project-ingest`，建立 NOM17-1 至 NOM17-10。
+- Nomura 2021 采用 `theory-ingest + project-ingest`，建立 NOM21-1 至 NOM21-9。
+- Babra 2019 采用 `experiment-ingest + project-ingest`，建立 B19-1 至 B19-12；实验寿命/`Q_t`、模型结果与作者形变解释分层记录。
+- 更新 A≈130 evidence-map project 的来源角色、证据缺口与 data-analysis bridge；不创建 synthesis，不修改 raw。
+- 三篇 source 与 31 条 claims 均待用户审核；自动 lint 为 0 error、10 warning、31 info。
+
+## [2026-07-05] git | γ-soft 三文献批次创建单一本地 WIP ingest checkpoint
+
+- message：`WIP ingest: gamma-soft three-paper batch for user review`。
+- 仅纳入本批 13 个知识库文件；用户 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib` 与 raw PDF 未纳入。
+- 未 push；等待用户审核 NOM17-1 至 NOM17-10、NOM21-1 至 NOM21-9、B19-1 至 B19-12 后 amend/finalize。
+
+## [2026-07-05] claim-review | 用户审核 γ-soft 三文献 source notes 与 31 条 claims
+
+- NOM17-7 限定为偶偶核 `0+_1` 的 Fig.13 结果；NOM17-8 补齐 Figs.14-15 中奇 A 各低能态的态依赖变化。
+- NOM21-7 补齐 D-F 与 W-J/O(6) 极限定义、四个参考值、Fig.3 计算点位置及对 `131Ce/133Ce` 的奇 A 外推边界。
+- B19-4 将 `stopping power` 绑定中文释义“阻停能力”。
+- 三篇 source 升级为 `human-reviewed`，NOM17-1 至 NOM17-10、NOM21-1 至 NOM21-9、B19-1 至 B19-12 全部改为 `needs_review: false`。

@@ -3,7 +3,7 @@ type: model
 title: 推转壳模型
 aliases: [cranked shell model, CSM]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 status: active
 review_status: unreviewed
 model_family: rotating-shell-model
@@ -20,7 +20,7 @@ tags: [signature, coriolis, high-spin]
 
 ## Hamiltonian or Core Formalism
 
-形变单粒子场加推转项和 pairing；具体基底、参数化及是否粒子数守恒必须按来源说明。
+形变单粒子场加推转项和 pairing；具体基底、参数化及是否粒子数守恒必须按来源说明。[[babra-2019-deformation-change-136sm]] 还结合准粒子 Routhian 与总 Routhian 面（TRS）追踪带交叉和竞争形变极小。
 
 ## Degrees of Freedom
 
@@ -32,7 +32,7 @@ tags: [signature, coriolis, high-spin]
 
 ## Inputs and Parameters
 
-β2、γ、β4、pairing 和轨道占据。
+β2、γ、β4、pairing、转动频率和轨道占据。Babra 2019 的准粒子交叉示例采用 `β2=0.25, β4=0.02, γ=-15°`，TRS 则在 `(β2,γ)` 平面逐频率对 `β4` 极小化。
 
 ## Predicted Observables
 
@@ -44,7 +44,7 @@ quasiparticle Routhian、alignment、交叉频率与 signature splitting。
 
 ## Known Limitations
 
-单独改变 γ 不能涵盖近邻低-j 轨道混合的全部效应；模型趋势不能把 S(I) 变成 γ 的唯一反演。
+单独改变 γ 不能涵盖近邻低-j 轨道混合的全部效应；模型趋势不能把 S(I) 变成 γ 的唯一反演。准粒子交叉频率和 TRS 极小还依赖 Woods-Saxon、配对及宏观-微观能量设置；多个竞争极小存在时，有限寿命数据未必能唯一选形状。
 
 ## Related Models
 
@@ -53,8 +53,9 @@ quasiparticle Routhian、alignment、交叉频率与 signature splitting。
 ## Sources
 
 - [[ding-2021-131ba-133ce-signature-splitting]]
+- [[babra-2019-deformation-change-136sm]]
 
 ## Evolution Log
 
 - 2026-07-01：由 N=75 g7/2 signature-splitting 分析建立。
-
+- 2026-07-05：加入 `136Sm` 准粒子交叉与 TRS 多极小的高自旋形变演化用途。

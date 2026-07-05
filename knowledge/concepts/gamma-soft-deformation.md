@@ -3,7 +3,7 @@ type: concept
 title: γ 软形变
 aliases: [gamma-soft deformation, γ-softness, gamma softness, γ 软, gamma-unstable]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 status: active
 review_status: unreviewed
 concept_type: deformation-dynamics
@@ -27,22 +27,33 @@ tags: [triaxiality, collective-motion]
 
 - γ 带能量 staggering 的相位；
 - `S(4,3,2)`、`S(6,5,4)` 等归一化指标；
+- 偶偶核低能 γ 带比值：固定 `γ=30°` 的 D-F 刚性三轴参考给出 `E(2+_γ)/E(2+_g)=2.00`、`R3γ=1.78`，γ-independent 的 W-J/O(6) 参考给出 `2.50`、`1.19`；这些是模型极限参考线，不是奇 A 核的无条件阈值；
 - E2 矩阵元及其随自旋的系统性；
 - 微观模型中不同 γ 基态成分的混合。
+- 自洽平均场或映射模型中的 `(β,γ)` 势能面曲率；该曲率是模型结果，不是直接观测量；
+- 跨带交叉的寿命与 `Q_t` 系统学；`Q_t` 下降只直接约束集体性，γ 刚性仍需模型与其他观测量。
 
 ## Supporting Evidence
 
 [[zamfir-casten-1991-gamma-softness-triaxiality]] 指出 Xe、Ba、Pt 的当时低能数据更接近 γ 软势，并强调很弱的 γ 势依赖即可显著改变 staggering。
+
+[[nomura-2017-odd-mass-gamma-soft-shape-transitions]] 在 DD-PC1 RHB+IBFM 中把 A≈130 Ba/Xe 芯的势能面、奇 A 能级变化与 E2 四极形状不变量并列，用 N≈76-78 的态依赖变化讨论近球形到 γ-soft 的相变。Fig.13 的 `γ_eff` 峰值只对应偶偶 `0+_1`；奇 A 不同低能态在 Figs.14-15 中呈现不同位置和方向的变化。
+
+[[nomura-2021-pairing-triaxial-vibrations-gamma-soft]] 显示 `128,130Xe` 的 γ 软度可与配对软度同时出现；`E2γ` 靠近 W-J/O(6) 参考，而 `R3γ` 位于 W-J 与 D-F 之间并趋向 D-F，提示不能依赖单一指标分类。
+
+[[babra-2019-deformation-change-136sm]] 测得 `136Sm` yrast 带交叉后 `Q_t` 下降；由 γ-soft 低自旋形状到较稳定三轴形状的变化是 TRS/TPSM 支持的作者解释，而非寿命数据单独给出的事实。
 
 ## Counter-evidence and Competing Interpretations
 
 - 带混合可产生或改变 staggering；
 - 某些微观模型可用固定内禀基底的组态混合再现 γ-soft 特征；
 - 非零平均 γ 或三轴相关信号不自动意味着 γ-rigid。
+- 配对振动、准粒子对齐和带交叉会共同改变低能谱与 E2 集体性；
+- 同一核在不同自旋区可对应不同势能极小，因此低自旋 γ-soft 判断不能自动外推到高自旋。
 
 ## Related Nuclei and Bands
 
-A≈130 的 Xe、Ba、Ce、Nd 是当前重点区域。
+A≈130 的 Xe、Ba、Ce、Nd 是当前重点区域；`136Sm` 提供跨带交叉形变演化的比较案例。
 
 ## Our Current Position
 
@@ -51,9 +62,12 @@ A≈130 的 Xe、Ba、Ce、Nd 是当前重点区域。
 ## Sources
 
 - [[zamfir-casten-1991-gamma-softness-triaxiality]]
+- [[nomura-2017-odd-mass-gamma-soft-shape-transitions]]
+- [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]]
+- [[babra-2019-deformation-change-136sm]]
 - [[frauendorf-2024-wobbling-review]]
 
 ## Evolution Log
 
 - 2026-07-01（2 sources）：建立定义并加入低能 staggering 与 TPSM 视角。
-
+- 2026-07-05（5 sources）：加入 A≈130 奇 A 形状相变、配对-三轴耦合与 `136Sm` 跨带交叉 `Q_t` 案例，并明确模型势面和寿命证据边界。

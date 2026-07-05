@@ -10,6 +10,26 @@ updated: 2026-07-05
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：γ-soft deformation 三文献 daily-ingest（审核完成，终版收尾）
+
+- 严格按用户顺序完成：Nomura 2017 `theory-ingest + project-ingest`，Nomura 2021 `theory-ingest + project-ingest`，Babra 2019 `experiment-ingest + project-ingest`；整体按 `daily-ingest / batch source-note ingest` 收尾。
+- 新建三篇 source notes：`nomura-2017-odd-mass-gamma-soft-shape-transitions.md`、`nomura-2021-pairing-triaxial-vibrations-gamma-soft.md`、`babra-2019-deformation-change-136sm.md`。
+- 原始证据哈希分别为 `481E6A9E...EFAEA9`、`CF500A8C...102C4`、`A26149BF...425BA6`；BibTeX key 分别唯一匹配 `nomura_2017_Shapephasetransitions`、`nomura_2021_Couplingpairing`、`babra_2019_Investigationlarge`。
+- 用户已审核三篇 source notes 与 31 条 claims：NOM17-1 至 NOM17-10、NOM21-1 至 NOM21-9、B19-1 至 B19-12。三页均为 `human-reviewed`，全部 claim 为 `needs_review: false`。
+- NOM17-7 严格限定 Fig.13 为偶偶 `128-136Ba/126-134Xe` 基态 `0+_1` 的四极形状不变量；NOM17-8 补齐奇 N Ba/Xe 与奇 Z La/Cs 各低能态在不同中子数的态依赖 `γ_eff` 变化，明确不普遍重复偶偶 `0+_1` 峰值。
+- NOM21-7 补齐 D-F 固定 `γ=30°` 刚性三轴与 W-J γ-independent/O(6) 两极限定义、`E2γ/R3γ=2.00/1.78` 与 `2.50/1.19` 参考值，以及 Fig.3 中完整计算点的位置；明确不能直接作为 `131Ce/133Ce` 奇 A 激发模式阈值。
+- B19-4 将 `stopping power` 绑定中文释义“阻停能力”，并同步 `transition-quadrupole-moment` 页。
+- Nomura 2017：DD-PC1 RHB→IBM/IBFM，记录 N≈76-78 的近球形到 γ-soft 模型相变、奇 A 能级变化、E2 四极形状不变量与逐核拟合限制。
+- Nomura 2021：PC-PK1 RMF+BCS→玻色子数非守恒 IBM，记录 `(α,β,γ)` 配对-三轴耦合、激发 `0+` 态、γ 带与两个 γ-softness 指标的不同极限倾向。
+- Babra 2019：145 MeV `107Ag(32S,1p2n)136Sm`、INGA、DSAM 寿命与 `Q_t`；把实验集体性下降、推转/TRS/TPSM 模型结果和“γ-soft→较稳定三轴”作者解释严格分层。
+- 最小派生同步：更新 `gamma-soft-deformation`、IBM、CSM、TPSM、`transition-quadrupole-moment`、`knowledge/index.md`；未新建空壳 nucleus/experiment/method 页。
+- Project 同步：更新 `a130-high-spin-collective-modes-evidence-map.md` 的 seed sources、比较背景、evidence gaps 与 data-analysis bridge；未创建新 project，未创建或修改正式 synthesis 结论。
+- 已检查 `knowledge/questions.md`：现有 A≈130 形变背景与判据问题可承接本轮缺口，project 已记录更具体的 pairing-softness、跨带交叉寿命/`Q_t` 缺口，不新增重复问题。
+- 自动 lint：111 pages、1037 Wikilinks、19/19 source hash、0 error、10 warning、0 info；208 条 source claims 待审为 0，warning 均为既有未配置元素/反应解析与用户 raw BibTeX 改动。
+- 文档同步门：没有用户可见目录/命令/工具或治理规则变化，不更新 USER_GUIDE/AGENTS/check/schema/templates/vocabulary；`PLAN.md` 未修改；`raw/` 未由 Agent 修改。
+- active WIP `WIP ingest: gamma-soft three-paper batch for user review` 将在本轮 amend 为 `Ingest reviewed gamma-soft deformation sources` 并按用户授权 push；push 回执在本轮最终报告核验，不为回执额外创建 commit。
+- 保留用户原有 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 修改，绝不纳入终版提交。
+
 ## 当前执行：TiP / low-spin wobbling project-level synthesis（审核完成，已 finalize/push）
 
 - 基于已审核的 Lawrie 2020 LAW20-1 至 LAW20-15 与 Lv 2021 LV21-1 至 LV21-18，更新 `knowledge/projects/low-spin-wobbling-controversies.md`；未新增或修改 source claims。

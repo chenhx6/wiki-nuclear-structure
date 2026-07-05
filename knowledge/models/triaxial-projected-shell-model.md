@@ -3,7 +3,7 @@ type: model
 title: 三轴投影壳模型
 aliases: [triaxial projected shell model, TPSM]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 status: active
 review_status: unreviewed
 model_family: projected-shell-model
@@ -36,6 +36,8 @@ tags: [triaxiality, wobbling, gamma-softness]
 
 [[sensharma-2019-two-phonon-wobbling-135pr]] 对 `135Pr` 使用 `ε=0.17, ε'=0.12`（`γ=35°`）。
 
+[[babra-2019-deformation-change-136sm]] 对 `136Sm` 分别使用 `β=0.30, γ=26°` 与 `β=0.22, γ=-25°` 比较带交叉前后的 yrast/γ 带和 `Q_t`。前一平均场较适合低自旋，后一平均场较适合交叉以上；两套输入不是实验直接反演的连续形状轨迹。
+
 ## Predicted Observables
 
 能级、B(E2)、B(M1)、signature splitting、wobbling energy 和 SCS 图。
@@ -50,6 +52,8 @@ tags: [triaxiality, wobbling, gamma-softness]
 
 Sensharma 2019 的 TPSM 尚未给出角动量几何分析；它比 QTR 更高估 one-phonon energy，但给出相近的相对 E2 ratios，并更好再现 signature-partner band energy。
 
+Babra 2019 在交叉前后切换固定形变输入；这种比较支持形变变化解释，但不能替代对多极小共存和连续形状演化的动态计算。
+
 ## Related Models
 
 [[triaxial-particle-rotor-model]]、[[random-phase-approximation]]
@@ -59,8 +63,10 @@ Sensharma 2019 的 TPSM 尚未给出角动量几何分析；它比 QTR 更高估
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[frauendorf-2024-wobbling-review]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
+- [[babra-2019-deformation-change-136sm]]
 
 ## Evolution Log
 
 - 2026-07-01：建立 `131Xe` 与 wobbling 综述中的用途。
 - 2026-07-03：加入 Sensharma 2019 的 `135Pr` TPSM 参数、模型比较与几何分析缺口。
+- 2026-07-05：加入 `136Sm` 带交叉前后两套 TPSM 形变输入及其解释边界。
