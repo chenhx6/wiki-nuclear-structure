@@ -1,7 +1,7 @@
 ---
 type: system-checklist
 graph-excluded: true
-updated: 2026-07-04
+updated: 2026-07-05
 ---
 
 # Wiki 系统核查清单
@@ -99,6 +99,21 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 查询答案的核心结论可追溯到来源页，而非只引用综合页。
 - [ ] 高复用答案才持久化，普通聊天不机械入库。
 - [ ] 综合前执行了反向检验，并记录未找到反证时的回音室风险。
+
+### Human review triage
+
+- [ ] 文献摄入、project、synthesis、data-analysis-bridge 或 claim-review-update 的最终复盘包含 Human review triage。
+- [ ] Triage 明确列出 P0/P1/P2/P3；没有 P0 时写明 `P0: none identified`。
+- [ ] P0/P1 给出具体文件、section/段落、claim ID（如有）和 source locator（如有）。
+- [ ] 每个 P0/P1 说明为什么重要以及用户需要检查什么；P0 还说明不审核的风险。
+- [ ] 没有把所有 `needs_review` 等权重铺开；P0 全列、P1 只逐项列前 10，P2/P3 按文件聚合。
+- [ ] 审核点较多时给出“精力有限时建议先看”的 3–5 个位置。
+- [ ] 低风险 index/overview/handoff/log、格式和导航更新与科学 claim 分开。
+- [ ] Paper evidence gate 候选被列为 P0/P1；未完成 P0/P1 审核时没有描述为可直接用于论文。
+- [ ] 用户数据解释、competing interpretation、innovation candidate 和 paper-level candidate 被列为 P0/P1。
+- [ ] 多篇摄入按每篇文献分别列 P0/P1，没有混成一组。
+- [ ] Project/synthesis 任务列出主结论段落、evidence matrix 和跨来源解释的审核优先级。
+- [ ] P0 未审核前不建议 final amend 或 push，默认保留 WIP 等待用户确认。
 
 ### 中英文术语归一化
 

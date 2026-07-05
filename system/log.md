@@ -211,3 +211,9 @@ updated: 2026-07-04
 - 手征双重带与 wobbling bands 记录为稳定三轴性研究的重要候选集体指纹，但模式指认不能单独证明 γ-rigid 形变。
 - 重点扩展 GSD-SYN-5 与 soft-to-rigid transition 专节，并按用户授权在 `PLAN.md` 写入 A≈130、特别是 `131Ce/133Ce` 的未来证据摄入计划。
 - GSD-PROJ-1 至 GSD-PROJ-6、GSD-SYN-1 至 GSD-SYN-8 全部改为 `needs_review: false`；project 与 synthesis 页面升级为 `human-reviewed`。
+
+## [2026-07-05] governance | 建立 Human review triage protocol
+
+- 为 ingest、project/synthesis、data-analysis-bridge 和 claim-review-update 定义 P0/P1/P2/P3 审核优先级与统一复盘格式。
+- P0 全部列出，P1 限前 10，P2/P3 按文件聚合，并要求给出精力有限时优先审核的 3–5 个位置。
+- Paper evidence gate 候选默认进入 P0/P1；P0 未审核前不建议 final amend 或 push。

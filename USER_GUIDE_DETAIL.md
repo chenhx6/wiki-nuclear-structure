@@ -134,6 +134,25 @@
 
 用户查看 source 页只足以更新页面级状态，不自动清除 `needs_review: true`。只有用户明确确认某条 claim，或明确圈定的一组 claims，Codex 才能更新对应 claim-level 状态。
 
+### 如何根据审核优先级审核 Codex 输出
+
+文献摄入、project、synthesis、data-analysis-bridge 和 claim-review-update 完成后，Codex 应提供 Human review triage：
+
+- **P0 必须审核**：影响核心科学结论、关键数值/指认、主线综合或论文级证据门的位置。P0 未审核前不建议 final amend 或 push。
+- **P1 优先审核**：关键 source claims、evidence matrix、模型假设、跨来源总结、定义和高歧义 aliases。有时间应优先看。
+- **P2 可抽查**：背景摘要、follow-up sources、evidence gaps 和 planning notes，按文件抽查即可。
+- **P3 快速扫过**：index、overview、handoff/log、普通反链、格式和低风险导航。
+
+审核时，source 重点核对原文与 locator；project 重点核对证据归类、研究问题和数据桥；synthesis 重点核对跨来源结论是否过强；data-analysis-bridge 重点核对数据事实、分析结果、物理解释和创新点候选是否分层。页面级 `human-reviewed` 与 claim-level `needs_review` 仍然独立，不能因整页通过就自动清除具体 claim 的待审状态。
+
+审核点很多时，先看“精力有限时建议先看”的 3–5 个位置。对每个 P0/P1，审核报告可明确写：
+
+```text
+<文件 / claim ID>：通过 / 需要修改；
+needs_review：保留 true / 可改为 false；
+修改意见：<如有>。
+```
+
 ## 9. How to use projects / 如何使用 project
 
 Project 不必等到一个月后或数据处理全部结束才建立。出现以下任一情况即可进入 project 工作流：

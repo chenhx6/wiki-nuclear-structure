@@ -1,7 +1,7 @@
 ---
 type: system-policy
 graph-excluded: true
-updated: 2026-07-02
+updated: 2026-07-05
 ---
 
 # 论文级证据门
@@ -21,6 +21,12 @@ updated: 2026-07-02
 7. 未人工复核的 claim 只能作为阅读线索，不得写成确定结论。
 
 Wiki 未收录某类文献，只能写“当前知识库未覆盖”。不得据此声称“没有相关工作”“文献已经完整覆盖”或“一篇不漏”。
+
+## Human review triage gate
+
+任何准备进入 paper evidence gate 的 claim、project statement、synthesis-supporting statement 或 data-analysis-derived statement，默认必须列为 P0 或 P1 审核对象。P0/P1 人工审核是准入的必要步骤；未完成时，不得描述为“可直接用于论文”“可直接作为论文结论”“已经进入 paper evidence gate”或“无需回原文引用”。
+
+Synthesis 可以组织跨来源思路，project 可以推进证据链，但两者都不能替代 source 和原文 locator。论文写作仍须回到原始来源，并满足本文件的全部准入条件。P0 尚未审核时，不建议把对应 WIP amend 为 final commit 或 push。
 
 ## 投稿前漏引检查
 
