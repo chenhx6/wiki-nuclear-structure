@@ -41,7 +41,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 
 ## Evidence Available
 
-当前证据由四篇已审核核心 source 构成：一篇低能偶偶判据来源、两篇共享理论方法链的 Nomura 理论来源，以及一篇独立 `136Sm` 寿命实验及模型比较。下文分别记录它们的角色、局限和跨来源缺口；Frauendorf 2024 仅提供 low-spin relation 背景。
+当前已审核核心证据由四篇 source 构成：一篇低能偶偶判据来源、两篇共享理论方法链的 Nomura 理论来源，以及一篇独立 `136Sm` 寿命实验及模型比较。待审核的 Nomura 2022 新增 γ-soft IBFM odd-mass bands 与 low-spin wobbling alternative 的直接桥接；它不改变既有四源综合的审核状态。Frauendorf 2024 仅提供 low-spin relation 背景。
 
 ## Seed Sources
 
@@ -51,6 +51,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 | [[nomura-2017-odd-mass-gamma-soft-shape-transitions]] | theory source | A≈130 Ba/Xe 偶偶芯势能面、IBFM 奇 A 谱学演化与态依赖形状不变量 | model result / author interpretation；粒子-芯耦合逐核拟合 |
 | [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]] | theory source | `128,130Xe` 的 pairing-plus-triaxial collective space 与 γ-softness ratios | 与 Nomura 2017 共享作者/SCMF→IBM 方法链，不按独立实验复现计数 |
 | [[babra-2019-deformation-change-136sm]] | experiment source + model comparison | `136Sm` yrast 寿命、`Q_t` 与带交叉处形变演化案例 | 寿命/`Q_t` 为直接实验；γ-soft 与稳定三轴标签来自 TRS/TPSM 和作者解释 |
+| [[nomura-2022-questioning-wobbling-ibfm]] | theory source, pending review | `135Pr/133La/127Xe/105Pd` 的 γ-soft core + odd-fermion bands 与 E2/M1 predictions | 与 Nomura 2017/2021 共享方法链；couplings fitted；`127Xe` 有异常 `δ`；不是新实验 |
 | [[frauendorf-2024-wobbling-review]] | review/background | γ-soft 芯与奇 A collective-band interpretation 的关系入口 | 只用于 relation/future bridge，不替代 wobbling 原始实验来源 |
 
 ## Gamma-soft Deformation Concepts
@@ -83,7 +84,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 |---|---|---|
 | [[gamma-unstable-model]] / O(6) | γ-independent 理想参考 | 真实核通常不完全 γ independent |
 | [[davydov-triaxial-rotor-model]] | 固定 γ 的 rigid-triaxial 参考 | 固定 γ 拟合不证明波函数局域 |
-| [[interacting-boson-model]] / IBFM | 势能面映射、低能谱、奇粒子-芯耦合、配对振动扩展 | 映射与模型空间依赖；IBFM 耦合逐核拟合 |
+| [[interacting-boson-model]] / [[interacting-boson-fermion-model]] | 势能面映射、低能谱、奇粒子-芯耦合、配对振动扩展；Nomura 2022 的 low-spin alternative | 映射与模型空间依赖；IBFM 耦合逐核拟合，模型 band matching 不是 observed identity |
 | [[covariant-density-functional-theory]] / RHB/RMF+BCS | 生成 `(β,γ)` 或 `(α,β,γ)` SCMF 势能面 | 泛函、配对与约束依赖；模型 γ 非直接测量 |
 | [[cranked-shell-model]] / TRS | 追踪准粒子交叉和随频率变化的竞争极小 | 宏观-微观参数与 pairing 依赖 |
 | [[triaxial-projected-shell-model]] | 比较固定形变基底上的能级与 E2 集体性 | 输入形变和基底截断依赖；切换两套输入不等于连续形状测量 |
@@ -109,6 +110,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 | GSD-PROJ-4 | `136Sm` 的直接实验结果是第一带交叉附近及其后 `Q_t` 总体下降、E2 集体性减弱；TRS 给出低频 γ-soft 极小和交叉后较稳定三轴极小，TPSM 用两套形变输入分别改善交叉前后描述，作者据此提出 γ-soft→rigid/stable-triaxial transition | B19-1 至 B19-12；PDF pp.1-9, Table I, Figs.5-10 | 形状转变不是由 `Q_t` 单独测得；TRS/TPSM 有参数依赖，第二交叉以上还有 oblate/triaxial/highly-deformed-prolate 竞争极小；非 Ce 核 | false |
 | GSD-PROJ-5 | 形变背景应在 low-spin band interpretation 之前建立，但本身不能确认 wobbling、chirality 或 signature partner | 四个核心 source；[[low-spin-wobbling-controversies]] | 需要逐带电磁判据、band identity 与专门模型；当前 project 不改判已有争议 | false |
 | GSD-PROJ-6 | 对 `131Ce/133Ce`，最低可行证据链应联合能级系统学、寿命/绝对 E2、形状不变量或匹配势能面，并显式处理奇粒子与带交叉 | 当前四源的方法边界 | 当前 Wiki 未覆盖 `131Ce` nucleus-specific gamma-soft source；`133Ce` 现有页侧重高自旋谱学/其他模式 | false |
+| GSD-PROJ-7 | γ-soft core 可在 IBFM 中产生与 reported low-spin wobbling candidates 相近的 odd-mass bands，因此 γ-softness 只限定形变/芯动力学背景，不能单独决定 wobbling、TiP 或其他 band identity | NOM22-2 至 NOM22-15, PDF pp.2-10 | Nomura 2022 待审；四核模型有拟合/空间限制，且 `131Ce/133Ce` 未计算 | true |
 
 ## Evidence Gaps
 
@@ -119,6 +121,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 - Nomura 2017 与 2021 共享作者和 SCMF→IBM 方法链，理论证据并非完全独立；
 - `136Sm` 的 `Q_t` 下降直接约束集体性，但第二交叉以上多极小和形状共存仍未由寿命闭合；
 - 当前没有对“γ-softness 如何改变具体 low-spin wobbling/TiP 近似条件”的 nucleus-specific 计算。
+- Nomura 2022 提供 IBFM alternative，但没有计算 `131Ce/133Ce`，也没有检验 TiP geometry 或 wobbling approximation；不能填补目标核的 nucleus-specific 缺口。
 
 ## Relation to Low-spin Wobbling Controversies
 
@@ -126,6 +129,7 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 
 - γ-softness 不由大 `abs(δ)` 或一条 E2-dominated link 直接标记；
 - γ-soft 芯与某些奇 A collective-band 模式可在模型中共存，但这不建立 wobbling 身份；
+- Nomura 2022 显示同一类 γ-soft background 也可进入 IBFM non-wobbling interpretation；该理论 challenge 与 TiP alternative 分属不同机制链；
 - 手征双重带与 wobbling bands 是稳定三轴性研究的重要候选指纹；它们的模式指认与 γ-rigid 形变判断仍是两条需要交叉约束的证据链；
 - 若形变背景随自旋或带交叉改变，固定转子输入和低自旋近似应重新检验；
 - 本页不修改 `135Pr/187Au` 的任何支持或反证结论。
@@ -147,13 +151,15 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 - `136Sm` 不是 Ce，邻核比较不能替代目标核证据；
 - `131Ce` 当前缺 nucleus-specific source，`133Ce` 也缺与本 project 同口径的寿命/不变量链；
 - project 与 synthesis 的 14 条跨来源 statements 已由用户审核；论文级使用仍须回到 source、raw、locator，并重新执行 paper evidence gate。
+- 新增 GSD-PROJ-7 与 Nomura 2022 source 尚待用户审核，不自动继承本页既有审核状态。
 
 ## Next Actions
 
-1. 为 `131Ce` 建立 nucleus-specific 原始证据链；不以邻核替代。
-2. 补充 `128-134Xe/Ba/Ce` 的现代 E2 matrix-element / Coulomb-excitation 来源。
-3. 为 `131Ce/133Ce` 设计 common-observable、common-convention 的 soft-vs-rigid 模型比较。
-4. 数据出现寿命或绝对 E2 后，优先更新 `Q_t/B(E2)` 与带交叉前后形变背景。
+1. 用户审核 Nomura 2022 source 与 GSD-PROJ-7，重点核对“γ-soft background 不决定 band identity”的证据边界。
+2. 为 `131Ce` 建立 nucleus-specific 原始证据链；不以邻核替代。
+3. 补充 `128-134Xe/Ba/Ce` 的现代 E2 matrix-element / Coulomb-excitation 来源。
+4. 为 `131Ce/133Ce` 设计 common-observable、common-convention 的 soft-vs-rigid 模型比较。
+5. 数据出现寿命或绝对 E2 后，优先更新 `Q_t/B(E2)` 与带交叉前后形变背景。
 
 ## Related Sources and Pages
 

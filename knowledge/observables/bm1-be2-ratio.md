@@ -44,12 +44,16 @@ tags: [electromagnetic-transition, band-structure]
 
 [[lv-2021-tilted-precession-135nd]] 比较 D1 带内及 TiP1→D1 的 `B(M1)out/B(E2)in` ratios 与 QTR。618.3/566.0 keV TiP1→D1 links 的实验 ratios 为 0.28(10)/0.24(14)；其中 566.0 keV 与另一个 566.8 keV connecting transition 应保持区分。Agreement 是模型一致性证据，不构成 TiP 的单独充分判据。
 
+[[nomura-2022-questioning-wobbling-ibfm]] 比较四核的计算与既有实验 `B(M1)out/B(E2)in`。IBFM 常给出比 wobbling 支持数据更强的相对 M1 成分，但不同核/自旋的 agreement 不一致；该比值依赖所选 E2/M1 operators 和波函数，不能单独裁决 band identity。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[lv-2021-tilted-precession-135nd]]
+- [[nomura-2022-questioning-wobbling-ibfm]]
 
 ## Evolution Log
 
 - 2026-07-01：记录 `131Xe` 两条 13/2- 序列的区分用途。
 - 2026-07-04：加入 Lv 2021 `135Nd` TiP1→D1 relative-M1 comparison。
+- 2026-07-05：加入 Nomura 2022 的 IBFM relative-M1 comparison 与模型依赖。

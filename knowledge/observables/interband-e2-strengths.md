@@ -54,6 +54,8 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 
 [[lv-2021-tilted-precession-135nd]] 对 TiP1→D1 报告 `B(E2)out/B(E2)in` ratios，并与 QTR 比较；618.3/566.0 keV links 的实验值为 0.11(4)/0.12(7)。注意 566.0 keV ratio row 与 Table II 中另一个 566.8 keV、`δ=-0.48(14)` 的 connecting transition 不是同一行。这些值由 branching/mixing-ratio information 得到，不等于完整 independent lifetime/absolute-`B(E2)` measurement。
 
+[[nomura-2022-questioning-wobbling-ibfm]] 计算四个 γ-soft odd-mass cases 的 `B(E2)out/B(E2)in`。对若干 reported wobbling bands，IBFM 值低于早期实验派生值；这属于模型-实验比较，并受 band matching、transition operators 和争议中的 mixing ratios 限制，不是新的 lifetime/absolute-`B(E2)` measurement。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -64,6 +66,7 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - [[sensharma-2020-longitudinal-wobbling-187au]]
 - [[guo-2022-low-spin-wobbling-187au]]
 - [[lv-2021-tilted-precession-135nd]]
+- [[nomura-2022-questioning-wobbling-ibfm]]
 
 ## Evolution Log
 
@@ -74,3 +77,4 @@ QTR/PTR 与 TPSM 对其绝对大小可能有系统差异。
 - 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP relative-E2 对照。
 - 2026-07-04：加入 Guo 2022 的数 W.u. `B(E2)_out` 估计及其外部输入边界。
 - 2026-07-04：加入 Lv 2021 `135Nd` TiP1→D1 relative-E2 ratios 与非绝对寿命边界。
+- 2026-07-05：加入 Nomura 2022 的 IBFM relative-E2 预测及其非实验测量边界。

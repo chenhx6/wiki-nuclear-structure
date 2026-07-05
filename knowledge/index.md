@@ -28,6 +28,7 @@ updated: 2026-07-05
 - [[nomura-2017-odd-mass-gamma-soft-shape-transitions]] - DD-PC1 RHB+IBFM 对 A≈130 奇 A Ba/Xe/La/Cs 近球形到 γ-soft 形状相变的模型研究。
 - [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]] - `128,130Xe` 中配对振动与三轴形状自由度耦合的玻色子数非守恒 IBM 研究。
 - [[babra-2019-deformation-change-136sm]] - `136Sm` yrast 寿命、`Q_t` 下降与带交叉处形变演化的实验-模型证据链。
+- [[nomura-2022-questioning-wobbling-ibfm]] - 对 `135Pr/133La/127Xe/105Pd` reported low-spin wobbling bands 的 γ-soft IBFM 替代理论解释与 E2/M1 comparison。
 
 ## Nuclei
 
@@ -86,6 +87,7 @@ updated: 2026-07-05
 
 - [[gamma-unstable-model]] / [[davydov-triaxial-rotor-model]] - γ-soft 与 rigid triaxial 的几何极限。
 - [[interacting-boson-model]] - O(6)+三阶项对 γ 势依赖的扫描。
+- [[interacting-boson-fermion-model]] - IBM 偶偶芯与奇费米子耦合；用于奇 A 低能谱和 E2/M1 observables。
 - [[triaxial-rotor-model]] - wobbling 拓扑的集体基础。
 - [[tilted-axis-cranking]] - Planar/aplanar 旋转平均场。
 - [[particle-rotor-model]] / [[triaxial-particle-rotor-model]] - 粒子与三轴芯耦合。

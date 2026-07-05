@@ -212,6 +212,13 @@ updated: 2026-07-04
 - 重点扩展 GSD-SYN-5 与 soft-to-rigid transition 专节，并按用户授权在 `PLAN.md` 写入 A≈130、特别是 `131Ce/133Ce` 的未来证据摄入计划。
 - GSD-PROJ-1 至 GSD-PROJ-6、GSD-SYN-1 至 GSD-SYN-8 全部改为 `needs_review: false`；project 与 synthesis 页面升级为 `human-reviewed`。
 
+## [2026-07-05] theory-ingest-project | Nomura 2022：γ-soft odd-mass low-spin bands 的 IBFM alternative
+
+- 全文精读并视觉核对 Figs.1-13、Tables I-II；新建 source 与 IBFM model，建立 NOM22-1 至 NOM22-15 待审 claims。
+- 分层记录 EDF→IBM-2/IBFM assumptions、四核谱与 E2/M1 model results、既有实验值 comparison、作者对 earlier wobbling assignments 的 challenge，以及 `127Xe` 异常大计算 `abs(δ)` 对结论普遍化的限制。
+- Umbrella project 新增 LSW-IBFM-1 至 LSW-IBFM-4，gamma-soft project 新增 GSD-PROJ-7；IBFM alternative 与 TiP/QTR 分开，不把理论结果写成实验事实或最终裁决。
+- `135Pr` 只加理论 cross-reference；`133La/127Xe/105Pd` 不建空壳 nucleus/project；`187Au` 只记录本文模型空间困难。未新增 synthesis，未修改 raw。
+
 ## [2026-07-05] governance | 建立 Human review triage protocol
 
 - 为 ingest、project/synthesis、data-analysis-bridge 和 claim-review-update 定义 P0/P1/P2/P3 审核优先级与统一复盘格式。

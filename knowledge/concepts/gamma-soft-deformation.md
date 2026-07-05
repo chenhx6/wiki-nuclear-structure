@@ -43,6 +43,8 @@ tags: [triaxiality, collective-motion]
 
 [[babra-2019-deformation-change-136sm]] 测得 `136Sm` yrast 带交叉后 `Q_t` 下降；由 γ-soft 低自旋形状到较稳定三轴形状的变化是 TRS/TPSM 支持的作者解释，而非寿命数据单独给出的事实。
 
+[[nomura-2022-questioning-wobbling-ibfm]] 以四个偶偶芯的 EDF 势能面作为 γ-soft 模型输入，再用 IBFM 计算奇 A 低能 bands 与 E2/M1 links。该文说明 γ-soft particle-core background 可以支持非 wobbling 的替代理论描述；它不把 γ-softness 本身当作任一能带身份的实验判据。
+
 ## Counter-evidence and Competing Interpretations
 
 - 带混合可产生或改变 staggering；
@@ -65,10 +67,11 @@ A≈130 的 Xe、Ba、Ce、Nd 是当前重点区域；`136Sm` 提供跨带交叉
 - [[nomura-2017-odd-mass-gamma-soft-shape-transitions]]
 - [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]]
 - [[babra-2019-deformation-change-136sm]]
+- [[nomura-2022-questioning-wobbling-ibfm]]
 - [[frauendorf-2024-wobbling-review]]
 
 ## Evolution Log
 
 - 2026-07-01（2 sources）：建立定义并加入低能 staggering 与 TPSM 视角。
-- 2026-07-05（5 sources）：加入 A≈130 奇 A 形状相变、配对-三轴耦合与 `136Sm` 跨带交叉 `Q_t` 案例，并明确模型势面和寿命证据边界。
+- 2026-07-05（6 sources）：加入 A≈130 奇 A 形状相变、配对-三轴耦合、`136Sm` 跨带交叉 `Q_t` 案例与 IBFM low-spin alternative，并明确模型势面、寿命和 band-identity 证据边界。
 - 2026-07-05：接入 gamma-soft evidence-map project 与阶段性 synthesis。

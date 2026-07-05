@@ -36,6 +36,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 | [[matta-2015-transverse-wobbling-135pr]] | supporting source for transverse-wobbling interpretation | ATLAS/Gammasphere 与 TIFR/INGA 原始数据 |
 | [[sensharma-2019-two-phonon-wobbling-135pr]] | supporting source for two-phonon extension | 独立高统计 DGS 数据，但 `n_w=2` hierarchy 继承 Matta 的 `n_w=0/1` assignment |
 | [[lv-2022-evidence-against-wobbling-135pr]] | counter-source against low-spin wobbling interpretation | 独立 JUROGAM II 数据与重新分析；对 Matta/Garg/erratum 的比较仍需回到各原始来源 |
+| [[nomura-2022-questioning-wobbling-ibfm]] | IBFM-based theoretical alternative/challenge | 复用既有实验能级与 mixing ratios；不是新实验，也不与 Lv 2022 算作独立 experimental counter-evidence |
 
 ## Evidence Available
 
@@ -90,6 +91,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 | QTR/TPSM 给出强 anharmonicity 与相对 E2 ratios | Sensharma S19-10-S19-13；p.173, Figs.3-4 | QTR 继承 Matta 参数；TPSM 未给出 angular-momentum geometry |
 | standard-input QTR 允许 unfrozen single-particle realignment | Lv L22-12/L22-13；pp.4-5, Figs.3-4 | Fig.3(d) 是机制示意；realignment 为 p.5 作者陈述，Fig.4(c) 只显示近恒定 `j_parallel` |
 | Lv QTR 对 bands 1、3、4 energies、747/813 mixing ratios 与 813 transition ratio 给出较好比较 | Lv L22-13；p.5, Fig.4(a,b,d) | bands 2、5 尤其高自旋处能量被高估 |
+| EDF-mapped IBFM 给出 γ-soft core + odd `h11/2` proton 的低能 bands，并预测 B2→yrast links 偏 M1 dominant | Nomura NOM22-2 至 NOM22-12；pp.2-10, Figs.1-13, Tables I-II | 带对应、逐核拟合耦合及 E2/M1 operators 有模型依赖；不是新实验 |
 
 ## Counter-Evidence Summary
 
@@ -107,6 +109,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 | transverse wobbling、two-phonon wobbling、TiP/realignment | eligible only as attributed interpretation/model result | 必须使用“作者解释/模型计算”，不得写成裸事实 |
 | Lv L22-9 对 Matta/Garg/erratum 的比较 | follow-up lead only | 当前只摄入 Lv 的二手比较；Garg 原文、erratum 与相关质疑尚未分别进入 evidence gate |
 | Lv 逐带 realignment 细节（L22-15） | eligible as model result | supplementary material 已作为主文附属证据层挂接且 claim 已人工复核；仍只能作为模型结果 |
+| Nomura NOM22-1 至 NOM22-15 | pending human review / not yet eligible | 只作为 IBFM theoretical alternative；审核前不能进入 paper evidence pool |
 | 本 project 的矩阵与综合句 | reviewed navigation/synthesis | project 为 `review_status: human-reviewed`，但综合页仍不能替代原始 source |
 
 ## Needs Review
@@ -114,7 +117,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 - 三篇 source 的原 41 条结构化 claims 当前均为 `needs_review: false`。
 - Lv supplementary material 的 L22-14 至 L22-15 已人工复核，`needs_review: false`。
 - 用户已审核本 project 的 evidence matrix 与其余章节，页面为 `review_status: human-reviewed`。
-- 没有新增 project-level claim ID；矩阵条目沿用 M15、S19、L22 source claim IDs。
+- 新增 [[nomura-2022-questioning-wobbling-ibfm]] 及 NOM22-1 至 NOM22-15 尚待人工审核；既有 M15、S19、L22 审核状态不变。
 
 ## Unresolved Issues
 
@@ -166,6 +169,7 @@ Matta 2015 的 yrast/side-band pair 是否满足 transverse-wobbling 判据？Se
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[sensharma-2019-two-phonon-wobbling-135pr]]
 - [[lv-2022-evidence-against-wobbling-135pr]]
+- [[nomura-2022-questioning-wobbling-ibfm]]
 - [[135pr-yrast-band]]、[[135pr-side-band]]、[[135pr-second-side-band]]、[[135pr-signature-partner-band]]
 - [[wobbling-motion]]、[[transverse-wobbling]]、[[signature-partner-bands]]
 - [[multipole-mixing-ratio]]、[[interband-e2-strengths]]、[[wobbling-energy]]

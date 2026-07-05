@@ -10,6 +10,23 @@ updated: 2026-07-05
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
 
+## 当前执行：Nomura 2022 IBFM low-spin wobbling alternative（主体完成，等待用户审核）
+
+- 目标 PDF 已唯一定位为 `raw/papers/2022_Nomura et al_Questioning the wobbling interpretation of low-spin bands in γ -soft nuclei within the interacting b.pdf`；SHA-256 `E61E3DD6FE5E67FB55543F3A136C7CCE0FDA98AD01F112D81D5EEF70B613465F`，BibTeX key `nomura_2022_Questioningwobbling`，DOI `10.1103/PhysRevC.105.024320`。
+- 按 `theory-ingest + project-ingest` 全文精读 11 页，并视觉核对 Figs.1-13 与 Tables I-II；新建 `knowledge/sources/nomura-2022-questioning-wobbling-ibfm.md`，建立 NOM22-1 至 NOM22-15，全部 `needs_review: true`。
+- 新建 `knowledge/models/interacting-boson-fermion-model.md`，记录 `H=H_B+H_F+V_BF`、EDF→IBM-2 PES mapping、odd `h11/2` fermion、boson-fermion couplings、E2/M1 operators 及模型限制。
+- 理论范围：`135Pr/133La/127Xe/105Pd` 分别由 γ-soft even-even core 与 odd proton/neutron hole 耦合；本文没有新实验，所有 experimental values 来自既有论文。
+- 主要 model result：多数 candidate→yrast links 的 IBFM `abs(δ)` 较小并偏 M1，`B(E2)out/B(E2)in` 往往低于早期 wobbling 支持值；`135Pr` 更接近 Lv 2022 小 branch，`105Pd` 更接近 Rickey 旧数据。
+- 关键反向检验：正文 Fig.7/Table II 明确存在 `127Xe` B2 低自旋异常大 `abs(δ)`，作者归因于近零计算 M1 matrix element 与参数/组态混合敏感性；因此没有把结论段“consistently `abs(δ)<1`”写成无条件事实。
+- 作者解释只记录为“IBFM-based alternative interpretation / challenges earlier wobbling assignments”，不写成 Wiki 最终裁决；该 alternative 与 TiP/QTR 分开，不把二者自动合并。
+- Project 更新：umbrella 新增 LSW-IBFM-1 至 LSW-IBFM-4；gamma-soft evidence map 新增 GSD-PROJ-7；五条 project notes 均为 `needs_review: true`。`135Pr` project 只加理论 source role；`133La/127Xe/105Pd` 只留 future-case map；`187Au` 只记录本文明确的模型适用困难。
+- 最小派生同步：更新 gamma-soft concept、IBM model、mixing ratio、interband E2、B(M1)/B(E2)、index 与 overview；未新增 nucleus、experiment 或 synthesis 页面，未修改 PLAN、raw、PDF、数据、图片、治理规则、lint 或测试。
+- 已检查 `knowledge/questions.md`：现有 low-spin wobbling minimal protocol、`135Pr` mixing-ratio 冲突和 A≈130 wobbling 证据问题可承接本轮，不新增重复问题。
+- 当前 lint：114 pages、1124 Wikilinks、20/20 source hash、0 error、10 warning、15 info；source claims 223 条，NOM22-1 至 NOM22-15 待审。另有 5 条 project notes 由 overview 人工记录。
+- Human review priority：P0 为 NOM22-7 至 NOM22-11/NOM22-15（Table II、四核 E2/M1 comparison、`127Xe` 例外）；P1 为 NOM22-1 至 NOM22-6/NOM22-12 至 NOM22-14 与 LSW-IBFM-1 至 4/GSD-PROJ-7。
+- 文档同步门：无目录、命令、治理规则、schema、template 或 vocabulary 变化，不更新 USER_GUIDE/AGENTS/check；不修改用户拥有的 PLAN。
+- 将以 `WIP ingest: Nomura 2022 IBFM low-spin wobbling` 创建单一本地 checkpoint，不 push；用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 修改保持未暂存。
+
 ## 当前执行：gamma-soft deformation project + synthesis（审核完成，终版收尾）
 
 - 新建 `knowledge/projects/gamma-soft-deformation-evidence-map.md`，定位为 evidence map，不是论文草稿或完整文献清单。

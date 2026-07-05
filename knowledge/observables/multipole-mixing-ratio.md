@@ -32,7 +32,7 @@ tags: [gamma-transition, multipolarity, wobbling]
 
 ## Model Dependence
 
-DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过程。
+DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过程。理论 mixing ratio 还依赖 E2/M1 transition operators、effective charges、`g` factors 和模型波函数；模型给出的 `δ` 不能写成实验提取值。
 
 ## Failure Modes and Ambiguities
 
@@ -54,6 +54,8 @@ angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)`
 
 [[guo-2022-low-spin-wobbling-187au]] 用独立数据联合 `R_ac` 与 linear polarization，对同一 376/462 keV links 得到约 `δ=-0.26/-0.28` 的小 `abs(δ)` branch，并指出该解与早期 internal-conversion data 更一致。两篇结果构成直接实验冲突，不能把任一 branch 当作无争议事实。
 
+[[nomura-2022-questioning-wobbling-ibfm]] 用 IBFM transition operators 计算 `135Pr/133La/127Xe/105Pd` 的 `δ(E2/M1)`。多数被比较 links 的计算值偏向小 `abs(δ)`/M1 dominance，但 `127Xe` 低自旋存在由近零 M1 matrix element 导致的异常大 `abs(δ)`；该模型比较挑战 wobbling assignments，却不替代原始 angular-distribution/polarization analysis。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -63,6 +65,7 @@ angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)`
 - [[lv-2022-evidence-against-wobbling-135pr]]
 - [[sensharma-2020-longitudinal-wobbling-187au]]
 - [[guo-2022-low-spin-wobbling-187au]]
+- [[nomura-2022-questioning-wobbling-ibfm]]
 
 ## Evolution Log
 
@@ -72,3 +75,4 @@ angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)`
 - 2026-07-03：加入 Lv 2022 的双解问题与联合 polarization/`R_ac` counter-evidence。
 - 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP angular-distribution 对照。
 - 2026-07-04：加入 Guo 2022 的 `R_ac-P` 小 `abs(δ)` branch 与同一 links 的直接冲突。
+- 2026-07-05：加入 Nomura 2022 的 IBFM `δ` 预测、实验值比较及 `127Xe` 异常分母边界。
