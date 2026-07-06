@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: lint
-updated: 2026-07-02
+updated: 2026-07-06
 ---
 
 # LINT：健康检查流程
@@ -63,7 +63,8 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 - 检查可以自动化，科学修复不能默认自动化。
 - 合并、重命名和物理解读变更必须先展示影响。
-- qmd 未安装时应报告“未执行”，使用 `rg`、索引和直接读取降级，不得伪造 qmd 状态。
+- QMD 已启用时检查 `qmd.cmd status`、collection 范围和 embedding freshness；不可用或异常时报告“未执行/警告”，使用 `rg`、索引和直接读取降级，不得伪造 QMD 状态。
+- QMD 的 `.qmd/` 是被 Git 忽略的可重建缓存，不属于结构 lint 产物；禁止通过 `qmd update --pull` 让检索工具接管 Git。
 - 本地存在 PDF 时执行 source SHA-256；GitHub Actions 因 PDF 不入 Git，会把缺失 PDF 报为 warning 而不是伪装成已校验。
 - 日常 lint 可只输出到终端；正式阶段审计写入 `outputs/system-audit-YYYY-MM-DD.md`。
 - 正式报告完成后更新 log 和 handoff。

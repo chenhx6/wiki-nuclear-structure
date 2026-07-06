@@ -100,6 +100,16 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 高复用答案才持久化，普通聊天不机械入库。
 - [ ] 综合前执行了反向检验，并记录未找到反证时的回音室风险。
 
+### QMD 本地检索
+
+- [ ] 从仓库根目录运行 `qmd.cmd status` 时使用 project-local `.qmd/index.sqlite`，collection 名为 `nuclear-knowledge`，范围仅为 `knowledge/**/*.md`。
+- [ ] `.qmd/` 作为可重建缓存已被 Git 忽略，没有把 SQLite 索引或模型提交进仓库。
+- [ ] `knowledge/` 有实质变化后已运行 `qmd.cmd update`；存在待嵌入内容时已运行 `qmd.cmd embed -c nuclear-knowledge`。
+- [ ] 精确查询优先 `rg`/`qmd search`，语义查询按需使用 `qmd vsearch`；完整 `qmd query` 只在收益足以覆盖数分钟冷启动时使用。
+- [ ] 已对候选结果执行 `qmd get` 或直接读取完整文件，没有把搜索摘要、分数或 reranker 输出当成科学证据。
+- [ ] QMD 不可用、超时或索引异常时已如实报告并降级到 `rg`、index 和直接读取。
+- [ ] 没有运行 `qmd update --pull` 或让 QMD 隐式操作 Git；`qmd pull` 只在首次下载或修复模型时使用。
+
 ### Human review triage
 
 - [ ] 文献摄入、project、synthesis、data-analysis-bridge 或 claim-review-update 的最终复盘包含 Human review triage。

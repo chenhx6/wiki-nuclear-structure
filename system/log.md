@@ -258,3 +258,11 @@ updated: 2026-07-06
 - 文献摄入等待审核统一使用 `WIP ingest:`；project、synthesis 与跨来源综合等待审核统一使用 `WIP review:`。
 - 用户审核完成并要求 final commit/push 后，必须 amend 对应 WIP，不保留独立 WIP 后再新增 final commit；该仓库内授权优先于通用“不主动 amend”约束。
 - Final commit message 由用户指定时原样使用；未指定时由 Codex 推荐直接相关的 message 并在最终报告中说明。
+
+## [2026-07-06] tooling | 启用 QMD project-local 本地检索层
+
+- 安装状态确认为 QMD `2.5.3`；初始化被 Git 忽略的 `.qmd/`，`nuclear-knowledge` 只索引 `knowledge/**/*.md`。
+- 建立 118 个文档、348 个向量 chunk，并下载 embedding、generation、reranking 本地模型。
+- BM25、语义与完整 hybrid 检索均通过；按实测性能建立 direct read → BM25 → semantic → full hybrid 的分层路由。
+- 明确 `qmd pull` 只管理模型，禁止 `qmd update --pull` 接管 Git；搜索结果必须回读完整页面和 source/raw。
+- 同步 AGENTS、check、query/lint workflow、USER_GUIDE、详细指南、PLAN、memory 与 handoff；未修改科学知识页或 raw。

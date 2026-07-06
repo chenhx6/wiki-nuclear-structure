@@ -121,6 +121,35 @@ Test-Path 'C:\Program Files\Git\bin\git.exe'
 - 健康检查：遵循 `system/workflows/lint.md` 和根目录 `check.md`
 - 定时续跑或无人值守任务：遵循 `system/workflows/scheduled-continuation.md`
 
+## QMD 本地检索契约
+
+QMD 是 `knowledge/` 的本地候选检索层，不是证据来源、Git 客户端或聊天记忆替代品。仓库根目录下被忽略的 `.qmd/` 保存 project-local 可重建索引；collection 固定为 `nuclear-knowledge`，只覆盖 `knowledge/**/*.md`。`raw/`、`system/`、`outputs/` 和 Obsidian 配置不进入该 collection。
+
+在 Windows PowerShell 中优先调用 `qmd.cmd`；若 `PATH` 暂时不可见，使用：
+
+```powershell
+$qmd = Join-Path $env:APPDATA 'npm\qmd.cmd'
+& $qmd status
+```
+
+检索路由：
+
+1. 已知文件路径或少量确定页面时，直接读取，不为形式统一而调用 QMD。
+2. 精确核素、作者、DOI、citation key、带名或术语优先使用 `rg` 或 `qmd.cmd search`。
+3. 关键词不足以覆盖近义表达、跨页机制或竞争解释时，使用 `qmd.cmd vsearch`。
+4. 完整 `qmd.cmd query` 包含本地 query expansion 与 reranking；当前 Windows 机器冷启动可能耗时数分钟，只用于高价值跨页综合且执行余量充足的任务。超时或收益不足时降级到 `search`/`vsearch`，不得阻塞回答。
+5. 搜索摘要和排名只能用于选择候选文件。回答事实、数值、引文、决策或细微物理边界前，必须用 `qmd.cmd get`、直接读取文件或回到 source/raw 查看完整上下文。
+
+实质修改 `knowledge/` 后，在收尾阶段运行：
+
+```powershell
+qmd.cmd update
+qmd.cmd embed -c nuclear-knowledge
+qmd.cmd status
+```
+
+若 QMD 不可用或索引损坏，明确报告并降级到 `rg`、`knowledge/index.md` 和直接读取；不得伪造 QMD 已检索。`qmd pull` 只负责下载或修复本地模型，不是日常索引更新；`qmd update --pull` 会先操作 Git，本仓库禁止由 QMD 执行，Git 同步必须由显式 Git 工作流控制。
+
 完成知识页、治理规则、模板或脚本的实质修改后，必须运行：
 
 ```text

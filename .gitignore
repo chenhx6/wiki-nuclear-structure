@@ -20,6 +20,7 @@ tmp/
 __pycache__/
 *.pyc
 .trash/
+.qmd/
 
 # Obsidian machine-local state
 .obsidian/workspace.json

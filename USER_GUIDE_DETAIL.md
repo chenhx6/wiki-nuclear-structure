@@ -187,6 +187,28 @@ Project 可以记录研究问题、连接数据处理结果、汇总 source 与 
 
 论文摄入、综合、lint 和写作目前继续使用已有 workflow 与规则文件。等真实流程稳定后，再评估 ingest、reflect、lint 或 writing Skill，避免过早固化尚未验证的流程。
 
+### QMD 与 Skill 的关系
+
+QMD 是 `$wiki-evidence-query` 和普通查询流程可自动调用的底层检索工具，不是另一个知识库，也不需要用户在每条问题中点名。当前 `nuclear-knowledge` collection 只索引 `knowledge/**/*.md`；索引数据库保存在被忽略的 `.qmd/`，模型保存在用户缓存，两者都不进入 Git。
+
+推荐分层：
+
+1. 已知页面直接读取；
+2. 精确词使用 `rg` 或 `qmd search`；
+3. 近义概念和跨页问题使用 `qmd vsearch`；
+4. 只有复杂、高价值综合才使用完整 `qmd query`；
+5. 所有候选都必须回读完整页面、source 和必要的 raw locator。
+
+维护命令：
+
+```powershell
+qmd.cmd status
+qmd.cmd update
+qmd.cmd embed -c nuclear-knowledge
+```
+
+模型缺失或损坏时才运行 `qmd pull`。不要运行 `qmd update --pull`，避免检索工具在用户存在未提交修改时隐式操作 Git。
+
 ## 12. Git and safety / Git 与安全边界
 
 - 不要使用不加检查的 `git add .`；应显式暂存目标文件；

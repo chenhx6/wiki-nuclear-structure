@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: query
-updated: 2026-07-03
+updated: 2026-07-06
 ---
 
 # QUERY：知识库查询流程
@@ -25,12 +25,66 @@ updated: 2026-07-03
 
 ## 3. 检索顺序
 
-1. `knowledge/index.md`
-2. 相关核素页、带结构页、概念页和方法页
-3. 这些页面指向的 `knowledge/sources/` 来源页
-4. 必要时回读 `raw/` 原文核验精确位置
+### 3.1 QMD 状态与范围
 
-将来启用 qmd 后，可优先搜索，但不得用搜索摘要代替完整阅读。
+QMD 已启用为本地候选检索层。project-local 索引位于被 Git 忽略的 `.qmd/`，collection 为 `nuclear-knowledge`，只索引 `knowledge/**/*.md`。从仓库根目录检查：
+
+```powershell
+$qmd = Get-Command qmd.cmd -ErrorAction SilentlyContinue
+if (-not $qmd) { $qmd = Join-Path $env:APPDATA 'npm\qmd.cmd' }
+& $qmd status
+```
+
+若 QMD 不可用或索引异常，降级到 `rg`、`knowledge/index.md` 和直接读取，并在回答中说明未使用 QMD。不得把未执行写成已检索。
+
+### 3.2 检索路由
+
+1. 已知路径或候选页面很少：直接读取文件。
+2. 精确核素、作者、DOI、citation key、带名和术语：先用 `rg` 或快速 BM25。
+
+   ```powershell
+   qmd.cmd search "signature splitting wobbling" -c nuclear-knowledge --format files -n 10
+   ```
+
+3. 用户用自然语言描述机制、近义概念或竞争解释，关键词检索覆盖不足：使用语义检索。
+
+   ```powershell
+   qmd.cmd vsearch "如何区分低自旋 wobbling 与替代解释" -c nuclear-knowledge --format files -n 10
+   ```
+
+4. 高价值跨页综合且执行余量充足：可使用完整 hybrid query。
+
+   ```powershell
+   qmd.cmd query "比较低自旋 wobbling、TiP 和 IBFM 替代解释的证据边界" -c nuclear-knowledge --format files -n 10
+   ```
+
+   当前 Windows + Intel Iris Xe 环境的首次实测中，BM25 为十秒级、语义检索约两分钟、完整 query 约七分钟。完整 query 不作为简单问答默认路径；超时或收益不足时降级，不得让检索工具阻塞任务。
+
+### 3.3 全文回读与证据追踪
+
+搜索结果只用于建立候选集合。不得从 snippet、score、query expansion 或 reranker 排名直接生成科学结论。对候选页执行：
+
+```powershell
+qmd.cmd get "qmd://nuclear-knowledge/synthesis/example.md"
+```
+
+然后按以下顺序回读：
+
+1. 相关核素页、带结构页、概念页、模型页和观测量页；
+2. 这些页面指向的 `knowledge/sources/` 来源页；
+3. 必要时回到 `raw/` 原文核验页码、图表、能级和不确定度。
+
+### 3.4 索引维护
+
+实质修改 `knowledge/` 后运行：
+
+```powershell
+qmd.cmd update
+qmd.cmd embed -c nuclear-knowledge
+qmd.cmd status
+```
+
+增量 `embed` 只处理新建或变化内容。`qmd pull` 仅下载/校验 embedding、generation 和 reranking 模型；正常查询与日常知识更新不需要重复运行。禁止使用 `qmd update --pull`，因为 Git 获取、冲突处理和用户工作树保护必须由显式 Git 工作流负责。
 
 ## 4. 回答要求
 
@@ -60,4 +114,4 @@ updated: 2026-07-03
 
 ## 6. 收尾
 
-持久化后更新 index、log 和 handoff；若产生新问题，追加到 `knowledge/questions.md`。
+持久化后更新 index、log 和 handoff；若产生新问题，追加到 `knowledge/questions.md`。知识层有实质变化且 QMD 可用时，按 3.4 更新索引。

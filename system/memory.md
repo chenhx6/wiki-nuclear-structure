@@ -17,6 +17,7 @@ updated: 2026-07-06
 - 不把 AI 对话本身当作长期记忆。
 - Obsidian 以仓库根目录 `E:\imp\wiki` 为 vault，附件目录为 `raw/figures/`，已启用 Dataview。
 - Zotero 使用 `Wiki Inbox` + Better BibTeX 自动导出 `raw/zotero/wiki-inbox.bib`；Agent 对该文件只读。
+- QMD `2.5.3` 已配置为 `knowledge/**/*.md` 的本地候选检索层，collection 为 `nuclear-knowledge`；project-local `.qmd/` 为被 Git 忽略的可重建索引。Agent 自动按问题选择 direct read、`rg`/BM25、语义检索或完整 hybrid，并必须回读全文；QMD 不接管 Git。
 - Markdown 知识库使用私有 GitHub 仓库 `chenhx6/wiki-nuclear-structure` 作为异地远端，PDF 与私有原始材料不进入普通 Git 历史。
 - 用户在仓库根目录维护 `PLAN.md`，用于宏观阶段计划、个人好奇心备忘和研究方向草稿；它由用户拥有，不是 cite-key 文献清单、执行日志或 Agent 可自由改写的任务列表。
 - `PLAN.md` 按任务条件读取并管理方向与优先级；`system/handoff.md` 管理最近执行事实与交接细节。无法分类的冲突必须询问用户。
