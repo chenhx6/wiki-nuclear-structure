@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: ingest
-updated: 2026-07-05
+updated: 2026-07-06
 ---
 
 # INGEST：来源摄入流程
@@ -139,7 +139,7 @@ WIP ingest 只表示等待用户审核的本地检查点，不表示科学内容
 4. 重新输出 Human review triage，列明已处理项目、仍保留的 P0/P1 和 paper evidence gate 影响；
 5. P0 尚未审核时不建议 final amend 或 push，默认保留 WIP 等待用户确认；
 6. 确认 HEAD 是对应的 WIP ingest commit 后，使用 `git commit --amend` 把 WIP 转换为 final commit，不新建额外 review commit；
-7. final commit message 由 Codex 根据实际摄入与审核修改推荐生成，用户无需手写；
+7. 用户指定 final commit message 时原样使用；未指定时由 Codex 根据实际摄入与审核修改推荐直接相关的 message，并在最终报告中说明；
 8. 检查通过后，只有用户允许 final push 时才执行 `git push origin main`；
 9. final push 后确认工作树中没有残留该文献摄入相关 diff。
 

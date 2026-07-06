@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: reflect
-updated: 2026-07-05
+updated: 2026-07-06
 ---
 
 # REFLECT：综合与反向检验
@@ -64,3 +64,5 @@ Project、synthesis 或跨来源 reflect 完成后，必须按 `system/workflows
 - innovation candidate notes、data-analysis bridge 和争议性解释总结。
 
 主结论、evidence matrix 归类、用户数据解释、创新点候选和 paper evidence gate 候选通常属于 P0/P1。Planning notes、follow-up sources 与低风险导航可归入 P2/P3。最终复盘必须列出全部 P0、最重要的 P1 和“精力有限时建议先看”的 3–5 个具体位置。
+
+综合主体完成、等待用户审核时，若用户未明确禁止任何本地 commit，按 `AGENTS.md` 创建单个本地 `WIP review: <task short name> for user review`，不 push。用户审核完成并要求 final commit/push 后，必须把该 WIP amend 为 final commit，不得另建 review/final commit；用户指定 final message 时原样使用，未指定时由 Codex 推荐直接相关的 message 并在最终报告中说明。

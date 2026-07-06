@@ -169,17 +169,22 @@ Commit message 统一使用：
 
 - 未完成任务：`WIP suspend: <task short name>`；
 - 摄入主体完成、等待用户审核：`WIP ingest: <paper short name> for user review`；
+- project、synthesis 或跨来源综合主体完成、等待用户审核：`WIP review: <task short name> for user review`；
 - 未完成的 workflow/framework 修正：`WIP suspend: <workflow short name>`。
 
 ### Active WIP 限制与 amend
 
-同一分支最多允许一个 active `WIP ingest:` 或 `WIP suspend:` commit。HEAD 已是当前任务相关 WIP 时，不得再创建第二个 WIP；安全暂存后使用 `git commit --amend --no-edit`，需要调整 message 时使用 `git commit --amend -m "<updated WIP message>"`。HEAD 不是当前任务相关 WIP，或无法判断归属时，停止并询问用户，不得擅自 amend。
+同一分支最多允许一个 active `WIP ingest:`、`WIP review:` 或 `WIP suspend:` commit。HEAD 已是当前任务相关 WIP 时，不得再创建第二个 WIP；安全暂存后使用 `git commit --amend --no-edit`，需要调整 message 时使用 `git commit --amend -m "<updated WIP message>"`。HEAD 不是当前任务相关 WIP，或无法判断归属时，停止并询问用户，不得擅自 amend。
 
 恢复任务时先检查 HEAD、handoff、工作树、用户/无关文件，以及是否可以继续 amend 当前 WIP。任务完成后的处理：
 
 - 文献摄入完成但未审核：保留本地 WIP ingest，不 push；
-- 用户审核完成：按审核报告修改后，将 WIP amend 为 final commit；只有用户允许时才 push；
+- project、synthesis 或跨来源综合完成但未审核：保留本地 WIP review，不 push；
+- 用户审核完成：按审核报告修改并确认待提交文件均为本轮 human-review 收口内容后，将对应 WIP amend 为 final commit，不得另建 review/final commit；只有用户允许时才 push；
+- 用户指定 final commit message 时原样使用；未指定时由 Codex 给出与本轮内容直接相关的建议 message，并在最终报告中说明；
 - 任务放弃：等待用户明确指令，不自动 reset。
+
+仓库中存在对应 active WIP、用户已完成审核并要求 final commit/push 时，上述规则即构成对 `git commit --amend` 的明确本地授权，优先于通用的“除非用户明确要求，否则不要 amend”约束。不得因该通用约束而保留独立 WIP，再额外创建 final commit。
 
 ### “不 commit/push”的兼容解释
 

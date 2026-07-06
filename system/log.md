@@ -2,7 +2,7 @@
 type: system-log
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-04
+updated: 2026-07-06
 ---
 
 # 操作日志
@@ -238,3 +238,23 @@ updated: 2026-07-04
 - 为 ingest、project/synthesis、data-analysis-bridge 和 claim-review-update 定义 P0/P1/P2/P3 审核优先级与统一复盘格式。
 - P0 全部列出，P1 限前 10，P2/P3 按文件聚合，并要求给出精力有限时优先审核的 3–5 个位置。
 - Paper evidence gate 候选默认进入 P0/P1；P0 未审核前不建议 final amend 或 push。
+
+## [2026-07-06] synthesize-project | 建立 low-spin wobbling、γ-soft deformation 与 TiP/IBFM alternatives 跨主题研究地图
+
+- 新建 cross-project synthesis，按 conceptual layers、共享实验判据、case map、model landscape、observed/model/interpretation 分层、evidence gaps 与未来 `19F+116Sn` 数据入口组织。
+- 更新 low-spin umbrella 的 γ-soft context、`136Sm` 背景参照、TiP/IBFM 区分、E2/M1 ratio 记录边界和 gamma-soft-aware model stress-test 候选。
+- 新增 LSW-XPROJ-1 至 LSW-XPROJ-5 与 LSW-GSAI-SYN-1 至 LSW-GSAI-SYN-10，全部为 `needs_review: true`；不改变既有已审核 source/project claims。
+- 最小同步 gamma-soft project、index、overview、handoff；不扩写 concept/model/observable，不修改 PLAN、raw、PDF、数据、图片或治理规则。
+- 自动 lint：115 pages、1172 Wikilinks、20/20 source hashes、0 error、10 warning、1 info；未 push。
+
+## [2026-07-06] claim-review | 用户确认跨主题综合审核通过
+
+- `[[low-spin-wobbling-controversies]]` 中 LSW-XPROJ-1 至 LSW-XPROJ-5 全部改为 `needs_review: false`，页面恢复为 `human-reviewed`。
+- `[[low-spin-wobbling-gamma-soft-deformation-and-alternative-interpretations]]` 中 LSW-GSAI-SYN-1 至 LSW-GSAI-SYN-10 全部改为 `needs_review: false`，页面升级为 `human-reviewed`。
+- `knowledge/overview.md`、`system/handoff.md` 与 `system/log.md` 同步清除本轮 cross-project 待审提示；不修改 raw、PDF、数据、图片、PLAN 或治理规则。
+
+## [2026-07-06] governance | 明确 human-review WIP 的 amend 收口优先级
+
+- 文献摄入等待审核统一使用 `WIP ingest:`；project、synthesis 与跨来源综合等待审核统一使用 `WIP review:`。
+- 用户审核完成并要求 final commit/push 后，必须 amend 对应 WIP，不保留独立 WIP 后再新增 final commit；该仓库内授权优先于通用“不主动 amend”约束。
+- Final commit message 由用户指定时原样使用；未指定时由 Codex 推荐直接相关的 message 并在最终报告中说明。

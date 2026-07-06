@@ -1,7 +1,7 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-05
+updated: 2026-07-06
 ---
 
 # 跨会话交接
@@ -9,6 +9,26 @@ updated: 2026-07-05
 ## 当前阶段
 
 Phase 2：第一版结构和三轮摄入已经稳定；已建立首个 A≈130 高自旋集体模式 project seed。当前继续以证据型知识问答、证据追踪、逐篇摄入和数据分析桥接为主，不预设最终创新点。
+
+## 当前执行：WIP 审核收口规则与 cross-project synthesis 历史修正
+
+- 用户已确认 cross-project synthesis 的 human review 内容通过，并要求按仓库框架消除独立 WIP 历史。
+- 治理规则已最小补强：文献摄入等待审核使用 `WIP ingest:`；project、synthesis 或跨来源综合等待审核使用 `WIP review:`；human review 完成并要求 final commit/push 后必须 amend 对应 WIP，不得另建 review/final commit。
+- 对应 active WIP、审核完成和 final commit/push 指令共同构成仓库内明确 amend 授权，优先于通用“不主动 amend”约束。
+- Final commit message 选择规则已明确：用户指定时原样使用；未指定时由 Codex 推荐与本轮内容直接相关的 message，并在最终报告中说明。
+- 本轮历史修正以 `dcafa84` 为共同基点，把 `f173be0` 与 `a5553f5` 的内容合并为单一 final commit；远端更新须使用带 lease 的安全强制推送，并核验 `f173be0` 不再是 `main` 可达历史。
+- 用户 `.obsidian/graph.json` 与 `raw/zotero/wiki-inbox.bib` 修改继续保持未暂存、未提交；未修改 `PLAN.md`、raw PDF、数据或图片。
+
+## 最近完成：Low-spin wobbling + γ-soft + TiP/IBFM cross-project synthesis（已审核）
+
+- `knowledge/synthesis/low-spin-wobbling-gamma-soft-deformation-and-alternative-interpretations.md` 已完成用户审核，LSW-GSAI-SYN-1 至 LSW-GSAI-SYN-10 全部改为 `needs_review: false`，页面升级为 `review_status: human-reviewed`。
+- `knowledge/projects/low-spin-wobbling-controversies.md` 已同步完成用户审核，LSW-XPROJ-1 至 LSW-XPROJ-5 全部改为 `needs_review: false`，页面恢复为 `review_status: human-reviewed`。
+- `knowledge/projects/gamma-soft-deformation-evidence-map.md` 维持已审核状态；本轮不改动其科学内容，只保留与 cross-project synthesis 的入口关系。
+- 核心边界保持不变：γ-soft 是形变动力学背景，不自动等同 wobbling；TiP 与 IBFM 是不同替代理论链；模型结果不写成实验事实；`136Sm` 只迁移证据结构；不宣称 low-spin wobbling 均错误。
+- `knowledge/questions.md` 已检查：现有跨案例最小 wobbling identification protocol 问题仍可承接后续工作，不新增重复问题。
+- 原 synthesis 收口轮没有用户可见目录/schema/template/vocabulary 变化；本次 WIP 规则修正另行同步 AGENTS、check、USER_GUIDE、ingest/reflect workflow、memory、handoff 与 log。PLAN 未修改。
+- Cross-project synthesis 与本次最小治理修正合并为单一 final 历史；继续保留用户 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib` 未暂存。
+- 下一轮研究入口：补齐 `133La/127Xe/105Pd` 的原始 experimental sources，并把 future user data 的 transition-level protocol 继续向 nucleus-specific analysis schema 收敛。
 
 ## 当前执行：Nomura 2022 IBFM low-spin wobbling alternative（source 与 project notes 均已审核完成）
 

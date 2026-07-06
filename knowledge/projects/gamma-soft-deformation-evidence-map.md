@@ -3,7 +3,7 @@ type: project
 title: "Gamma-soft deformation evidence map"
 aliases: [γ-soft deformation evidence map, γ 软形变证据图]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-06
 status: active
 review_status: human-reviewed
 project_stage: seed-evidence-map
@@ -134,6 +134,8 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 - 若形变背景随自旋或带交叉改变，固定转子输入和低自旋近似应重新检验；
 - 本页不修改 `135Pr/187Au` 的任何支持或反证结论。
 
+跨主题的分层 case map、TiP/IBFM 区分、共享实验判据与未来 `19F+116Sn` 数据入口统一见 [[low-spin-wobbling-gamma-soft-deformation-and-alternative-interpretations]]；该 synthesis 不改变本页已审核 GSD-PROJ statements。
+
 ## Relation to Future User Data
 
 未来 `131Ce/133Ce` 数据按以下层级接入：
@@ -164,6 +166,6 @@ tags: [gamma-softness, gamma-rigidity, a130, deformation, evidence-map, data-ana
 ## Related Sources and Pages
 
 - Concepts: [[gamma-soft-deformation]], [[gamma-rigid-deformation]], [[triaxial-deformation]]
-- Synthesis: [[gamma-soft-vs-gamma-rigid-diagnostics]]
+- Synthesis: [[gamma-soft-vs-gamma-rigid-diagnostics]]；[[low-spin-wobbling-gamma-soft-deformation-and-alternative-interpretations]]
 - Parent context: [[a130-high-spin-collective-modes-evidence-map]]
 - Low-spin relation: [[low-spin-wobbling-controversies]]

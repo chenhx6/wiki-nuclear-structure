@@ -1,7 +1,7 @@
 ---
 type: system-checklist
 graph-excluded: true
-updated: 2026-07-05
+updated: 2026-07-06
 ---
 
 # Wiki 系统核查清单
@@ -137,14 +137,16 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ## H. Git 与文档同步门
 
-### WIP ingest 与 safe suspend checkpoint
+### WIP ingest/review 与 safe suspend checkpoint
 
 - [ ] 文献摄入完成后，若用户未明确禁止本地 commit，HEAD 存在且仅存在一个 active `WIP ingest:` commit。
 - [ ] WIP commit 只包含本轮摄入相关文件，message 以 `WIP ingest:` 开头。
+- [ ] Project、synthesis 或跨来源综合完成并等待人工审核时，HEAD 存在且仅存在一个 active `WIP review:` commit。
 - [ ] WIP commit 只保存在本地，没有 push。
-- [ ] HEAD 已是 active WIP ingest/suspend 时，没有开始下一篇摄入或创建第二个 WIP。
-- [ ] 用户审核后通过 `git commit --amend` 把对应 WIP 转为 final commit，没有累积额外 review commits。
-- [ ] Final commit message 由 Codex 根据实际修改推荐；只有用户允许时才 push。
+- [ ] HEAD 已是 active WIP ingest/review/suspend 时，没有开始下一篇摄入、下一项综合或创建第二个 WIP。
+- [ ] 用户审核后通过 `git commit --amend` 把对应 WIP 转为 final commit，没有保留独立 WIP 或累积额外 review/final commits。
+- [ ] 用户指定 final commit message 时已原样使用；未指定时由 Codex 根据实际修改推荐直接相关的 message，并在最终报告中说明。
+- [ ] 对应 active WIP + 用户审核完成 + final commit/push 指令已按仓库内明确 amend 授权处理，没有错误套用通用“不主动 amend”约束。
 - [ ] WIP/final commit 均未包含 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib`、raw PDF、论文、数据、图片、未经授权的 `PLAN.md` 或无关文件。
 - [ ] Safe suspend 遇到大量 Markdown diff 时，已优先判断并尝试本地 WIP checkpoint。
 - [ ] Safe suspend 仍然禁止自动 push。
@@ -152,7 +154,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 旧式“不 commit/push，等待审核”已解释为“不 final commit / 不 push，但允许本地 WIP”。
 - [ ] 只有用户明确禁止任何本地 commit 时，才不创建 WIP checkpoint，并已提示大 diff 的 CPU 风险。
 - [ ] HEAD 已是当前任务相关 WIP 时使用 amend 更新；归属不明时已停止并询问用户。
-- [ ] WIP ingest 最终复盘列出 hash、message、未 push、待审核文件和 claim ID。
+- [ ] WIP ingest/review 最终复盘列出 hash、message、未 push、待审核文件和 claim ID/段落。
 
 - [ ] Git 工作树状态已检查；用户已有修改未被覆盖。
 - [ ] `.gitignore` 没有把应持久化的 Markdown 知识页排除。

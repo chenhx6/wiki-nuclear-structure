@@ -1,7 +1,7 @@
 ---
 type: system-memory
 graph-excluded: true
-updated: 2026-07-03
+updated: 2026-07-06
 ---
 
 # 长期记忆
@@ -40,6 +40,7 @@ updated: 2026-07-03
 - 2026-07-03：用户确认 Domscheit 1999 source 的 citation key、表述和科学内容无明显问题；补充确认 `163Lu/164Lu` 分别由 5n/4n 道产生，并要求中英专业术语对应及具体对象消歧，尤其不能把 SD-ND two-band mixing 简写成可能被误解为 SD1-SD2 混合的“两带混合”。
 - 2026-07-03：用户确认历史遗留的 A16-2、C23-2/C23-5、F24-2/F24-4/F24-7、FM97-6、P20-2、ZC91-5 均贴近原文或作者总结；当前结构化 claim-level 待审队列清零。
 - 2026-07-03：用户纠正 Sensharma 2019 的 anharmonicity 表述：QTR 比较的是逐级 wobbling 声子能量，关系应写为 `E_TW1(I+1)-E_yrast(I) ≈ 2[E_TW2(I+2)-E_TW1(I+1)]`，不能表述为 TW2 带能量简单低于 TW1 的两倍。
+- 2026-07-06：用户重申审核后 WIP 收口规则：文献摄入使用 `WIP ingest:`，project/synthesis/跨来源综合等待审核使用 `WIP review:`；用户审核完成并要求 final commit/push 时，必须 amend 对应 WIP，不保留独立 WIP 后另建 final commit。用户指定 final message 时原样使用；未指定时由 Codex 推荐直接相关的 message 并报告。该仓库内授权优先于通用“不主动 amend”约束。
 
 ## 禁止写入
 

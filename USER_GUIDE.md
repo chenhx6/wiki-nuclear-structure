@@ -120,9 +120,9 @@ SORT file.name ASC
 
 ### 本地 WIP 检查点
 
-普通文献摄入完成并通过检查后，默认创建一个仅保存在本地的 `WIP ingest: ... for user review` commit，不 push。它只是减少未提交 diff、降低 Codex/Git/文件监听 CPU 负担的审核检查点，不表示科学内容已经人工复核；你仍可使用 Codex 内置 Markdown 渲染查看文件并提交审核意见。
+普通文献摄入完成并通过检查后，默认创建一个仅保存在本地的 `WIP ingest: ... for user review` commit；project、synthesis 或跨来源综合等待审核时使用 `WIP review: ... for user review`。二者都不 push，只是减少未提交 diff、降低 Codex/Git/文件监听 CPU 负担的审核检查点，不表示科学内容已经人工复核；你仍可使用 Codex 内置 Markdown 渲染查看文件并提交审核意见。
 
-审核后，Codex 根据报告修改明确项目、推荐 final commit message，并使用 `git commit --amend` 把 WIP 转为 final commit；只有你允许时才 push。同一分支不累积多个 active WIP。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若确实不希望任何本地 commit，请明确写“禁止本地 WIP commit”。
+审核后，Codex 根据报告修改明确项目，并使用 `git commit --amend` 把对应 WIP 转为 final commit；不得保留独立 WIP 后再增加 final commit。你指定 final commit message 时原样使用；未指定时由 Codex 推荐与本轮内容直接相关的 message，并在最终报告中说明。只有你允许时才 push。同一分支不累积多个 active WIP。仓库存在对应 WIP、你已完成审核并要求 final commit/push 时，这本身就是仓库流程对 amend 的明确授权。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若确实不希望任何本地 commit，请明确写“禁止本地 WIP commit”。
 
 ## 4. Zotero 轻量连接
 
