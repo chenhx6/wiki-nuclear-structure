@@ -55,7 +55,38 @@ Lawrie 2020 *Tilted precession and wobbling in triaxial nuclei* 与 Lv 2021 `135
 
 ## 当前边界
 
-暂时不批量导入全部 Zotero 文献，不堆积插件，也不安装 qmd。当前优先补齐关键原始论文，并让知识库服务真实研究项目。
+暂时不批量导入全部 Zotero 文献，不堆积 Obsidian 插件。QMD 已在 Windows 启用，当前只索引 `knowledge/**/*.md`，作为 Agent 的本地候选检索层；它不替代 source/raw 核验，不接管 Git，也不推动批量摄入。当前仍优先补齐关键原始论文，并让知识库服务真实研究项目。
+
+## 暂缓事项：QMD MCP 常驻服务接入
+
+QMD 已通过 CLI 正式接入 Wiki，并采用 project-local 索引。当前阶段暂不接入 QMD MCP daemon / 常驻服务。
+
+当前策略：
+
+- 已知页面优先直接读取；
+- 精确核素、作者、DOI、术语与关键词使用 `rg` 或 `qmd search`；
+- 机制、近义表达和概念关联使用 `qmd vsearch`；
+- 复杂跨文献综合时才使用完整 `qmd query`；
+- QMD 结果只作为候选导航，不能替代完整页面、source 页面和 raw 原始材料核验；
+- 知识更新后继续使用 CLI 执行 `qmd.cmd update` 和 `qmd.cmd embed -c nuclear-knowledge`；
+- 禁止使用 `qmd update --pull`，避免 QMD 操作 Git。
+
+暂缓 MCP 常驻服务的原因是：当前 Wiki 仍处于真实科研查询试运行阶段，CLI 已能覆盖关键词检索、语义检索、混合检索和全文回读；过早接入 MCP daemon 会增加后台服务、路径、环境变量和资源占用等维护成本。
+
+后续满足以下情况时再重新评估是否接入：
+
+- 已完成约 10 次真实科研查询，并确认 QMD 召回质量稳定；
+- 经常需要 Agent 自动调用 Wiki 检索，而不是人工手动执行 QMD 命令；
+- 完整 hybrid 查询的冷启动时间成为明显负担；
+- Wiki 页面规模显著扩大，且反复加载模型影响工作流效率。
+
+可能的后续命令仅作为备忘：
+
+```powershell
+qmd.cmd mcp --http --daemon
+```
+
+在正式接入前，不将 MCP daemon 写入默认启动流程，也不要求每次会话自动开启。
 
 ## 维护规则
 
