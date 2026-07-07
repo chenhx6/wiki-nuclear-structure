@@ -1,4 +1,4 @@
----
+﻿---
 type: system-checklist
 graph-excluded: true
 updated: 2026-07-06
@@ -32,21 +32,28 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ## A. 会话记忆与治理
 
-- [ ] 已按 `AGENTS.md` 的顺序读取固定启动文件；仅在规定触发条件成立或用户明确要求时额外读取 `PLAN.md`。
+- [ ] 已按 `AGENTS.md` 的顺序读取固定启动文件；`README.md` 只作为稳定入口，不因其中链接自动扩展读取；`system/handoff.md` 只读 `Active handoff`，`system/log.md` 只读最近 10 条记录；仅在规定触发条件成立或用户明确要求时额外读取 `PLAN.md`。
 - [ ] `PLAN.md` 保持宏观计划、个人好奇心与研究方向草稿性质，未被当作 cite-key 文献清单、执行日志或必须立即执行的任务列表。
 - [ ] `PLAN.md` 未在缺少用户明确要求时被覆盖、重写、删除、重排或机械整理。
-- [ ] `system/handoff.md` 包含最近完成事项、当前状态、未完成事项、修改文件和明确下一步。
+- [ ] `system/handoff.md` 顶部包含短的 `Active handoff`，包括 current active task、branch / WIP or local commit、last task status、unfinished items、P0/P1 review focus、risks、next prompt 和 recent user decisions；历史交接未堆入 active 区块。
 - [ ] PLAN/handoff 冲突已按“方向与优先级看 PLAN、执行事实与交接细节看 handoff”分类；无法分类时已询问用户。
 - [ ] `system/memory.md` 只保存稳定规则与用户确认过的偏好，不保存临时聊天摘要。
 - [ ] 已判断本次是否需要更新 `USER_GUIDE.md`；需要时已经同步。
 - [ ] 本次规则修改已同步到 `AGENTS.md`、`check.md` 和相应工作流。
-- [ ] `system/log.md` 只追加，没有重写历史记录。
+- [ ] `system/log.md` 只追加，没有重写历史记录；启动或普通恢复未用 `ReadAllText(system/log.md)` 读取完整 log。
 - [ ] 若使用定时续跑，已遵循 `system/workflows/scheduled-continuation.md`，并说明本机应用、调度服务与电脑可用性前提。
 - [ ] 定时任务的“一次/重复”、时区和下次运行时间在界面中无歧义；一次性请求未显示为“每天”。
 - [ ] 只有在存在运行回执且产物已核验时，才把定时任务报告为“已执行/已完成”；无回执明确写为“未触发/未验证”。
-- [ ] 若执行余量不足且任务无法稳定完成，已停止扩大范围，运行三项 Git 检查并把完整 safe suspend 信息写入 handoff。
+- [ ] 若执行余量不足、检查失败需要用户决策、长任务未完成或任务无法稳定完成，已停止扩大范围，运行三项 Git 检查并把完整 safe suspend 信息写入 handoff。
 - [ ] Safe suspend 未被表述为自动睡眠/原地恢复，未自动创建 automation 或 push；大量 diff 场景已按规则判断是否创建本地 WIP checkpoint。
+- [ ] Safe suspend / checkpoint 已写明未完成内容、未核查 locator / claim gaps、P0/P1 风险和 continuation prompt；未把 metadata-only 或 skimmed 伪装成 read / deep-read。
 
+
+### 启动与工具开销控制
+
+- [ ] 未读取 handoff archive，除非用户明确要求审计历史。
+- [ ] 未对全仓库运行无过滤 `Get-ChildItem -Recurse`、`tree`、`ls -R` 或 `rg "关键词" .`。
+- [ ] 搜索已限定到 `knowledge/`、`system/`、`AGENTS.md`、`check.md`、`USER_GUIDE_DETAIL.md` 或明确目标文件；未无目的扫描 `.git/`、`.qmd/`、`.obsidian/`、`tmp/`、`raw/`、`outputs/`、`share_message/`、`__pycache__/`、`.pytest_cache/`。
 ## B. 原始证据完整性
 
 - [ ] `raw/` 中的文件未被 Agent 修改、移动、重命名或删除。
@@ -92,19 +99,28 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 ## F. 摄入、查询与综合
 
 - [ ] 摄入前已查重并检查 aliases。
-- [ ] 摄入前已按 `system/workflows/ingest-strategies.md` 选择与来源和任务匹配的策略；组合策略没有扩大到用户未要求的范围。
+- [ ] 摄入前已按 `system/workflows/ingest-strategies.md` 运行时短规则选择策略；普通单篇摄入定义明确，未默认读取 `ingest-strategies-detail.md`。
+- [ ] 已确认 `ingest-strategies-detail.md` 的 detail 指 workflow detail，不是 PDF reading depth；不读取 detail 不得降低文献阅读深度。
 - [ ] 策略默认清单只用于检查文中是否报告相关信息，没有为填满清单编造内容。
-- [ ] 摄入复盘包含所选策略要求的专项项目，以及新增 claims、待审 claims、证据缺口和建议人工审阅文件。
-- [ ] 摄入后已更新相关概念、核素、带结构、索引、日志和 handoff。
+- [ ] 摄入复盘采用 compact final recap，优先列 Result status、commit/push、关键文件、Human review triage、checks 和 next action。
+- [ ] 摄入后已做必要最小同步；普通单篇摄入没有无必要重写 `knowledge/overview.md`，若 deferred 已说明原因和建议补跑时机。
 - [ ] 查询答案的核心结论可追溯到来源页，而非只引用综合页。
 - [ ] 高复用答案才持久化，普通聊天不机械入库。
 - [ ] 综合前执行了反向检验，并记录未找到反证时的回音室风险。
 
+
+### Project / synthesis active summary 与 staged reading
+
+- [ ] 如果本轮修改了大型 project/synthesis 主体，已同步最小更新该页 `Agent active summary`；若页面缺失 active summary 且本轮实际修改该页，已创建短 summary。
+- [ ] 用户明确要求补充 project/synthesis 时，没有只修改 active summary。
+- [ ] Active summary 仅作为导航和 section 定位，没有替代 source locator、project/synthesis 主体或原文证据。
+- [ ] PDF staged evidence reading 被作为阅读顺序优化执行，不被解释为降低深度读取标准；默认正式摄入不应停留在 `metadata-only` 或 `skimmed`。
+- [ ] 如果核心 PDF 读取未完成，已 safe suspend 并列出已读范围、未读 section/figure/table/locator，而不是省略核心读取。
 ### QMD 本地检索
 
 - [ ] 从仓库根目录运行 `qmd.cmd status` 时使用 project-local `.qmd/index.sqlite`，collection 名为 `nuclear-knowledge`，范围仅为 `knowledge/**/*.md`。
 - [ ] `.qmd/` 作为可重建缓存已被 Git 忽略，没有把 SQLite 索引或模型提交进仓库。
-- [ ] `knowledge/` 有实质变化后已运行 `qmd.cmd update`；存在待嵌入内容时已运行 `qmd.cmd embed -c nuclear-knowledge`。
+- [ ] 普通单篇文献摄入未强制 `qmd.cmd embed`；若 QMD refresh deferred，已说明原因和建议补跑时机。批量摄入、多篇完成、用户明确要求或大型 project/synthesis 依赖最新检索时，已运行或明确安排 `qmd.cmd update` / `qmd.cmd embed -c nuclear-knowledge`。
 - [ ] 精确查询优先 `rg`/`qmd search`，语义查询按需使用 `qmd vsearch`；完整 `qmd query` 只在收益足以覆盖数分钟冷启动时使用。
 - [ ] 已对候选结果执行 `qmd get` 或直接读取完整文件，没有把搜索摘要、分数或 reranker 输出当成科学证据。
 - [ ] QMD 不可用、超时或索引异常时已如实报告并降级到 `rg`、index 和直接读取。
@@ -114,14 +130,14 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 - [ ] 文献摄入、project、synthesis、data-analysis-bridge 或 claim-review-update 的最终复盘包含 Human review triage。
 - [ ] Triage 明确列出 P0/P1/P2/P3；没有 P0 时写明 `P0: none identified`。
-- [ ] P0/P1 给出具体文件、section/段落、claim ID（如有）和 source locator（如有）。
+- [ ] P0 分为 `P0 focus: top 3-5` 和 `Remaining P0`；P0/P1 给出具体文件、section/段落、claim ID（如有）和 source locator（如有）。
 - [ ] 每个 P0/P1 说明为什么重要以及用户需要检查什么；P0 还说明不审核的风险。
-- [ ] 没有把所有 `needs_review` 等权重铺开；P0 全列、P1 只逐项列前 10，P2/P3 按文件聚合。
-- [ ] 审核点较多时给出“精力有限时建议先看”的 3–5 个位置。
+- [ ] 没有把所有 `needs_review` 等权重铺开；Remaining P0 压缩列出，P1 最多逐项列 5 个最重要位置，其余按文件聚合，P2/P3 按文件聚合。
+- [ ] 审核点较多时给出“精力有限时建议先看”的 3-5 个位置。
 - [ ] 低风险 index/overview/handoff/log、格式和导航更新与科学 claim 分开。
 - [ ] Paper evidence gate 候选被列为 P0/P1；未完成 P0/P1 审核时没有描述为可直接用于论文。
 - [ ] 用户数据解释、competing interpretation、innovation candidate 和 paper-level candidate 被列为 P0/P1。
-- [ ] 多篇摄入按每篇文献分别列 P0/P1，没有混成一组。
+- [ ] 多篇逐篇摄入没有粗略批处理；每篇文献分别列 source-level / claim-level 审核重点和 P0/P1。
 - [ ] Project/synthesis 任务列出主结论段落、evidence matrix 和跨来源解释的审核优先级。
 - [ ] P0 未审核前不建议 final amend 或 push，默认保留 WIP 等待用户确认。
 
@@ -159,6 +175,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 对应 active WIP + 用户审核完成 + final commit/push 指令已按仓库内明确 amend 授权处理，没有错误套用通用“不主动 amend”约束。
 - [ ] WIP/final commit 均未包含 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib`、raw PDF、论文、数据、图片、未经授权的 `PLAN.md` 或无关文件。
 - [ ] Safe suspend 遇到大量 Markdown diff 时，已优先判断并尝试本地 WIP checkpoint。
+- [ ] 文献摄入、project、synthesis 或 framework 任务正常结束时，已自动刷新 Active handoff 并向 `system/log.md` 追加简短记录；用户不需要每次手动要求 handoff/log 收尾。
 - [ ] Safe suspend 仍然禁止自动 push。
 - [ ] Safe suspend WIP 只显式暂存本轮可分类文件；无法解释或无法安全暂存时未创建 commit。
 - [ ] 旧式“不 commit/push，等待审核”已解释为“不 final commit / 不 push，但允许本地 WIP”。
@@ -172,5 +189,5 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 最终 diff 中不存在意外的 raw 修改。
 - [ ] `USER_GUIDE.md` 与当前目录、命令和 Obsidian 工作流一致。
 - [ ] 自动 lint 已运行且 error 为 0；warning/info 已解释。
-- [ ] `knowledge/overview.md` 的页面级与 claim-level 统计已与最新 lint `GOVERNANCE` 输出同步。
+- [ ] `knowledge/overview.md` 的页面级与 claim-level 统计在阶段性更新触发时已与最新 lint `GOVERNANCE` 输出同步；普通单篇摄入 deferred 时已说明。
 - [ ] 修改 lint 实现时，单元与仓库集成测试已通过。

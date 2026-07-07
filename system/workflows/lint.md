@@ -1,4 +1,4 @@
----
+﻿---
 type: system-workflow
 graph-excluded: true
 operation: lint
@@ -59,11 +59,15 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 自动覆盖 slug/alias 冲突、孤立页提示和 index 遗漏；“两页是否物理等价”不得自动决定。
 
+
+## 工具使用卫生
+
+健康检查不得以无过滤全库递归扫描替代既有 lint。禁止 `Get-ChildItem -Recurse` 直接扫全仓库、`tree`、`ls -R`、`rg "关键词" .`；需要定位规则或知识页时限定 `knowledge/`、`system/`、`AGENTS.md`、`check.md`、`USER_GUIDE_DETAIL.md`，并默认排除 `.git/`、`.qmd/`、`.obsidian/`、`tmp/`、`raw/`、`outputs/`、`share_message/`、`__pycache__/` 和 `.pytest_cache/`。
 ## 执行原则
 
 - 检查可以自动化，科学修复不能默认自动化。
 - 合并、重命名和物理解读变更必须先展示影响。
-- QMD 已启用时检查 `qmd.cmd status`、collection 范围和 embedding freshness；不可用或异常时报告“未执行/警告”，使用 `rg`、索引和直接读取降级，不得伪造 QMD 状态。
+- QMD 已启用时可检查 `qmd.cmd status`、collection 范围和 freshness；普通单篇摄入不强制 `qmd embed`。若 QMD refresh deferred，在检查或复盘中说明原因和建议补跑时机；不可用或异常时报告“未执行/警告”，使用 `rg`、索引和直接读取降级，不得伪造 QMD 状态。
 - QMD 的 `.qmd/` 是被 Git 忽略的可重建缓存，不属于结构 lint 产物；禁止通过 `qmd update --pull` 让检索工具接管 Git。
 - 本地存在 PDF 时执行 source SHA-256；GitHub Actions 因 PDF 不入 Git，会把缺失 PDF 报为 warning 而不是伪装成已校验。
 - 日常 lint 可只输出到终端；正式阶段审计写入 `outputs/system-audit-YYYY-MM-DD.md`。

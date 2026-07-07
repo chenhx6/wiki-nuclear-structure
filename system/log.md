@@ -266,3 +266,7 @@ updated: 2026-07-06
 - BM25、语义与完整 hybrid 检索均通过；按实测性能建立 direct read → BM25 → semantic → full hybrid 的分层路由。
 - 明确 `qmd pull` 只管理模型，禁止 `qmd update --pull` 接管 Git；搜索结果必须回读完整页面和 source/raw。
 - 同步 AGENTS、check、query/lint workflow、USER_GUIDE、详细指南、PLAN、memory 与 handoff；未修改科学知识页或 raw。
+
+## [2026-07-07] framework | Optimized ingest startup and recap budget: Active handoff replaces full startup handoff, log tail-only rule clarified, ingest strategies split into runtime short rules plus detail tutorial, ordinary ingest QMD embed/overview updates made deferrable, no-unfiltered-scan rule added, active summary/staged PDF reading/compact recap rules synchronized; no science pages or raw files modified.
+
+## [2026-07-07] framework | Active handoff refreshed and wording clarified after framework optimization commit 769b9ab; clarified README startup, workflow detail vs PDF reading depth, ordinary single-paper ingest, sequential multi-paper ingest, reading-depth expectations, automatic handoff/log closeout, and safe suspend/checkpoint expectations.

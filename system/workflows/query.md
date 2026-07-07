@@ -1,4 +1,4 @@
----
+﻿---
 type: system-workflow
 graph-excluded: true
 operation: query
@@ -24,6 +24,9 @@ updated: 2026-07-06
 若术语扩展改变了检索范围，在最终回答中简要列出使用的 canonical term 和主要扩展词。术语表只负责检索归一化，不构成科学证据。
 
 ## 3. 检索顺序
+### 3.0 工具使用卫生
+
+查询不得用无过滤递归扫描替代定界检索。禁止 `Get-ChildItem -Recurse` 扫全仓库、`tree`、`ls -R`、`rg "关键词" .`，也不得无目的扫描 `.git/`、`.qmd/`、`.obsidian/`、`tmp/`、`raw/`、`outputs/`、`share_message/`、`__pycache__/` 或 `.pytest_cache/`。默认限定 `knowledge/`、`system/`、`AGENTS.md`、`check.md`、`USER_GUIDE_DETAIL.md`；查 raw PDF 时只查目标文件名或已知候选。
 
 ### 3.1 QMD 状态与范围
 
@@ -76,7 +79,7 @@ qmd.cmd get "qmd://nuclear-knowledge/synthesis/example.md"
 
 ### 3.4 索引维护
 
-实质修改 `knowledge/` 后运行：
+`knowledge/` 有实质修改后，QMD refresh 可按任务价值判断。普通单篇摄入不强制 embed；批量摄入、多篇完成、用户明确要求刷新，或大型 project/synthesis 依赖最新检索时运行：
 
 ```powershell
 qmd.cmd update
@@ -84,7 +87,7 @@ qmd.cmd embed -c nuclear-knowledge
 qmd.cmd status
 ```
 
-增量 `embed` 只处理新建或变化内容。`qmd pull` 仅下载/校验 embedding、generation 和 reranking 模型；正常查询与日常知识更新不需要重复运行。禁止使用 `qmd update --pull`，因为 Git 获取、冲突处理和用户工作树保护必须由显式 Git 工作流负责。
+若本轮 deferred，最终复盘写明 `QMD refresh deferred`、原因和建议补跑时机。增量 `embed` 只处理新建或变化内容。`qmd pull` 仅下载/校验 embedding、generation 和 reranking 模型；正常查询与日常知识更新不需要重复运行。禁止使用 `qmd update --pull`，因为 Git 获取、冲突处理和用户工作树保护必须由显式 Git 工作流负责。
 
 ## 4. 回答要求
 
@@ -114,4 +117,4 @@ qmd.cmd status
 
 ## 6. 收尾
 
-持久化后更新 index、log 和 handoff；若产生新问题，追加到 `knowledge/questions.md`。知识层有实质变化且 QMD 可用时，按 3.4 更新索引。
+持久化后更新 index、log 和 Active handoff；若产生新问题，追加到 `knowledge/questions.md`。知识层有实质变化时按 3.4 判断是否刷新 QMD；普通单篇摄入可 deferred。
