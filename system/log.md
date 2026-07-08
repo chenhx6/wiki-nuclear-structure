@@ -280,3 +280,36 @@ updated: 2026-07-06
 - Zobel 1983 source 按用户审核意见完成收口；三篇 source 与 sigma-over-I project 均升级为 `human-reviewed`，相关 `needs_review` 清零。
 - `knowledge/overview.md`、`system/handoff.md` 与 `system/wip-queue.md` 已同步；QMD update/embed/status 成功；lint 为 0 error、10 warning、0 info。
 - 本地 final commit 已创建；push 到 `origin/main` 连续两次因 GitHub `443` 连接超时失败，随后按用户建议使用 `http://127.0.0.1:7890` proxy 仍因本地代理端口不可达失败，当前为 not pushed。
+
+## [2026-07-09] checkpoint | article4-6 sigma-over-I deorientation ingest：Cejnar 1996 completed
+
+- Completed source: [[cejnar-1996-spin-deorientation-alpha-2n-gamma]] with C96-1 to C96-11.
+- Current source in progress: none; next source is Radeck 2012.
+- Unfinished items: Radeck 2012 and Lauritsen 2025 source ingests; final checks/report/WIP commit.
+- Locator gaps: none identified for Cejnar key claims; figures not digitized.
+- P0/P1 risks: C96-4/C96-5/C96-10 and project SIO-PROJ-7/SIO-PROJ-8 require user review.
+- Continuation prompt: Continue article4-6 ingest from Radeck 2012 PDF and update checkpoint after that source.
+
+## [2026-07-09] checkpoint | article4-6 sigma-over-I deorientation ingest：Radeck 2012 completed
+
+- Completed source: [[radeck-2012-deorientation-lifetime-98ru-rdds]] with R12-1 to R12-12.
+- Current source in progress: none; next source is Lauritsen 2025.
+- Unfinished items: Lauritsen 2025 source ingest; final checks/report/WIP commit.
+- Locator gaps: none identified for Radeck key claims; figure curves not digitized.
+- P0/P1 risks: R12-3 boundary, R12-7/R12-8/R12-10 formula-chain claims, and project SIO-PROJ-9/SIO-PROJ-10 require user review.
+- Continuation prompt: Continue article4-6 ingest from Lauritsen 2025 PDF and update checkpoint after that source.
+
+## [2026-07-09] checkpoint | article4-6 sigma-over-I deorientation ingest: Lauritsen 2025 completed
+
+- Completed source: [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] with L25-1 to L25-15.
+- Completed article4-6 three-source source-note/project-map ingest and updated project evidence rows SIO-PROJ-11/SIO-PROJ-12.
+- Added or updated method/concept anchors: [[tracking-array]], [[angular-correlation]], [[deorientation]], [[angular-distribution]], [[linear-polarization-asymmetry]], [[attenuation-coefficient]], [[sigma-over-i]].
+- Lint passed with 0 errors / 10 warnings / 38 info; Cejnar/Radeck/Lauritsen new claims remain human-review pending.
+- Next action: finish QMD refresh, final report, WIP queue, and local WIP ingest commit without push.
+
+## [2026-07-09] finalization | article4-6 sigma-over-I source review
+
+- Applied user review edits to C96-4, R12-7 and L25-14; marked Cejnar 1996, Radeck 2012, Lauritsen 2025 and SIO-PROJ-7--SIO-PROJ-12 reviewed.
+- Added [[152dy]] and [[atlas-gretina-152dy-ca48-191mev]] for Lauritsen 2025 `152Dy` experimental information.
+- Lint passed with 0 errors / 10 warnings / 0 info; lint unittest passed; QMD update/embed/status succeeded.
+- Final commit created and article4-6 WIP queue entry moved to completed; push to GitHub failed twice due HTTPS connection timeout.

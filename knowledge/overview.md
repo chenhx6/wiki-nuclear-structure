@@ -2,10 +2,32 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-08
+updated: 2026-07-09
 ---
 
 # Knowledge Base Health Dashboard
+
+## Current Snapshot: 2026-07-09
+
+This snapshot reflects the article4-6 review finalization after user source-page review and the addition of `152Dy` experiment entries.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 26 | Added Cejnar 1996, Radeck 2012 and Lauritsen 2025 for the sigma-over-I/P-ADO project. |
+| nucleus pages | 9 | Added [[152dy]] as a narrow Lauritsen 2025 `152Dy` experiment/observable entry. |
+| experiment pages | 14 | Added [[atlas-gretina-152dy-ca48-191mev]]. |
+| concept pages | 20 | Added deorientation and updated sigma-over-I boundaries. |
+| method pages | 10 | Added angular-correlation and tracking-array method anchors. |
+| observable pages | 11 | Updated attenuation-coefficient boundary. |
+| project pages | 6 | Updated sigma-over-I evidence map. |
+| source pages unreviewed | 0 | User confirmed source-page P0/P1/P2 review for the article4-6 pages. |
+| source claim-level `needs_review: true` | 0 | C96-1--C96-11, R12-1--R12-12, L25-1--L25-16 are marked reviewed. |
+| claim missing locator | 0 | Lint found no claim locator gaps. |
+| source missing raw_file / citation_key | 0 / 0 | Lint found no missing source raw/citation metadata. |
+| raw hash coverage | 26/26 | Lint reports all source pages matched raw hashes. |
+| wikilinks | 1322 | Lint count. |
+
+## Previous Snapshot: 2026-07-08
 
 | 指标 | 当前值 | 说明 |
 |---|---:|---|

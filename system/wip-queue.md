@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-07-08
+updated: 2026-07-09
 ---
 
 # Pending WIP queue
@@ -13,6 +13,16 @@ This page tracks local WIP tasks that are not yet finalized. Keep entries short.
 None.
 
 ## Completed entries
+
+### Article4-6 sigma-over-I deorientation/formalism sources
+- status: user review finalized; WIP ingest amended to final local commit; push to `origin/main` failed twice due GitHub HTTPS connection timeout
+- branch: `main`
+- commit: final commit created from WIP `0e3414d` with message `Finalize article4-6 sigma-over-I source review`
+- files: Cejnar 1996, Radeck 2012 and Lauritsen 2025 source pages; new `152Dy` nucleus/experiment pages; deorientation/angular-correlation/tracking-array anchors; sigma-over-I project; index/overview; handoff/log/queue
+- review needed: no source/project P0 remains; new `152Dy` nucleus/experiment pages are narrow Lauritsen-derived entries and remain page-level `unreviewed`
+- overview/QMD: overview refreshed; QMD update/embed/status succeeded after sandbox escalation
+- next action: retry `git push origin HEAD:main` when network/proxy is available, then map actual P-ADO `sigma/I` code/input convention and user-data conditions before writing final equations
+- risks: `.obsidian/`, `knowledge/concepts/spin-alignment.md`, and `raw/zotero/wiki-inbox.bib` remain uncommitted external/user changes and were not included
 
 ### Sigma-over-I alignment sources
 - status: user review finalized; local final commit created; not pushed due GitHub/proxy connection failure

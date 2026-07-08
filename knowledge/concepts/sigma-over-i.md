@@ -3,7 +3,7 @@ type: concept
 title: σ/I 归一化宽度
 aliases: [sigma over I, sigma/I, sigma-over-I, sigma over spin, alignment width over spin]
 created: 2026-07-08
-updated: 2026-07-08
+updated: 2026-07-09
 status: ai-draft
 review_status: unreviewed
 concept_type: angular-distribution-analysis-parameter
@@ -23,6 +23,8 @@ tags: [alignment, angular-distribution, mixing-ratio, pado-support]
 
 本页尚未把 `σ/I` 定义为某一篇来源的固定符号。[[draper-1970-gaussian-substate-side-feeding]] 中 `σ` 是 Gaussian side-feeding substate population width；[[zobel-1980-magnetic-substate-distributions]] 和 [[zobel-1983-energy-projectile-alignment]] 主要使用 attenuation coefficients `αK`。这些变量可以共同讨论 alignment/substate-population uncertainty，但不能自动等同。
 
+[[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] is the most direct current notation source for `sigma/J`: it uses Gaussian `Pm(J)` for magnetic-substate population, characterizes it by `sigma/J`, and places that normalized width in the same formula chain as `delta`, `alpha_k` and angular-distribution coefficients. This supports mapping later `sigma/I` language to `sigma/J`-style Gaussian alignment width only after checking the user's code convention.
+
 ## Project Use
 
 [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]] 使用本页作为 symbol-boundary anchor：可以说 alignment-width assumptions are model dependent；不能写成 Draper/Zobel 已给出用户 P-ADO 代码中 `σ/I` 的唯一数值。
@@ -39,6 +41,8 @@ Angular-distribution coefficients、linear polarization、known pure transitions
 
 Draper 1970 支持 Gaussian-width sensitivity；Zobel 1980/1983 支持 attenuation/alignment 的 model and condition dependence。
 
+Lauritsen 2025 states that `sigma/J=0` indicates full alignment and that fusion-evaporation particle evaporation gives a non-zero `sigma/J`. It also warns that reactions such as fragmentation may require explicit `Pm(J)` rather than the usual Gaussian parameterization.
+
 ## Counter-evidence and Competing Interpretations
 
 若数据可由不同 alignment widths 或 feeding models 同时解释，单个 preset `σ/I` 不能被当作已验证事实。
@@ -52,3 +56,4 @@ Draper 1970 支持 Gaussian-width sensitivity；Zobel 1980/1983 支持 attenuati
 - [[draper-1970-gaussian-substate-side-feeding]]
 - [[zobel-1980-magnetic-substate-distributions]]
 - [[zobel-1983-energy-projectile-alignment]]
+- [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]

@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-08
+updated: 2026-07-09
 ---
 
 # Wiki Index
@@ -32,6 +32,9 @@ updated: 2026-07-08
 - [[draper-1970-gaussian-substate-side-feeding]] - Gaussian magnetic-substate side feeding 对 stretched-E2 `A2/A4` 的形式化处理。
 - [[zobel-1980-magnetic-substate-distributions]] - fusion-evaporation alignment attenuation coefficients、ALY curve 与 Gaussian hypothesis 条件。
 - [[zobel-1983-energy-projectile-alignment]] - `67Ga` alignment attenuation 的 projectile、energy 与 direct/cascade feeding dependence。
+- [[cejnar-1996-spin-deorientation-alpha-2n-gamma]] - `(α,2nγ)` 反应中 spin deorientation、angular-momentum routes 与 Gaussian side-feeding `σ` 的统计模型计算。
+- [[radeck-2012-deorientation-lifetime-98ru-rdds]] - inverse Coulomb excitation + RDDS 中 time-dependent deorientation、`Gk(t/d)` 与 angular-correlation correction 的方法案例。
+- [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] - tracking arrays 中 angular correlations、angular distributions、linear polarization、`Pm(J)` 与 `σ/J` 的现代公式链。
 
 ## Nuclei
 
@@ -43,6 +46,7 @@ updated: 2026-07-08
 - [[135pr]] - 低自旋 yrast/side-band wobbling 争议核素。
 - [[187au]] - A≈190 区 low-spin longitudinal-wobbling、single-particle excitation 与 signature-partner 争议核素。
 - [[135nd]] - `N=75` 奇中子核；当前聚焦 D1/TiP1/TiP2 experimental tilted-precession case。
+- [[152dy]] - Lauritsen 2025 GRETINA tracking-array 方法示例中的 high-spin `152Dy` 实验信息入口。
 
 ## Bands
 
@@ -69,7 +73,7 @@ updated: 2026-07-08
 - [[superdeformation]] - 大四极形变转动结构及其与三轴性之间的证据边界。
 - [[backbending]] / [[angular-momentum-alignment]] - 带交叉的谱学表现与角动量顺排。
 - [[tilted-precession-bands]] - 完整三维转动的倾斜进动带，以及与 harmonic wobbling approximation 的理论边界。
-- [[magnetic-substate-population]] / [[spin-alignment]] / [[side-feeding]] / [[sigma-over-i]] - P-ADO/角分布分析中 alignment-width 与 feeding dependence 的基础术语边界。
+- [[magnetic-substate-population]] / [[spin-alignment]] / [[deorientation]] / [[side-feeding]] / [[sigma-over-i]] - P-ADO/角分布分析中 alignment-width、deorientation 与 feeding dependence 的基础术语边界。
 
 ## Experiments
 
@@ -86,6 +90,7 @@ updated: 2026-07-08
 - [[atlas-gammasphere-187au-f19-105-115mev]] - Sensharma 2020 的 `187Au` 符合与 angular-distribution 数据。
 - [[hirfl-187au-o18-108mev]] - Guo 2022 的 `175Lu(18O,6n)187Au`、`R_ac` 与线偏振数据。
 - [[jurogam2-135nd-ar40-152mev]] - 152 MeV `100Mo(40Ar,5n)135Nd`、JUROGAM II coincidence/`R_DCO`/`R_ac`/polarization 数据集。
+- [[atlas-gretina-152dy-ca48-191mev]] - Lauritsen 2025 Appendix B.1 的 `108Pd(48Ca,4n)152Dy` GRETINA/LaBr2 数据集。
 
 ## Models
 
@@ -114,11 +119,13 @@ updated: 2026-07-08
 ## Methods
 
 - [[gamma-gamma-coincidence]] - 建立级联与能级纲图。
+- [[angular-correlation]] - γ/particle-γ angular correlation 的 alignment、multipolarity 与 deorientation correction 入口。
 - [[dco-ratio]] / [[linear-polarization-asymmetry]] - 多极性和电磁性质约束。
 - [[spin-coherent-state-map]] / [[spin-squeezed-state-map]] - 模型波函数的角动量几何。
 - [[two-point-angular-correlation-ratio]] - 不同阵列中以 `R_ac` 区分 dipole/quadrupole。
 - [[in-beam-gamma-spectroscopy]] - 熔合蒸发高自旋谱学的实验入口与证据边界。
 - [[angular-distribution]] - γ 射线角分布分析及其 alignment、feeding 与 mixing-ratio 前提。
+- [[tracking-array]] - γ-ray tracking arrays 的连续角度 angular-distribution/correlation/polarization response-function 方法入口。
 
 ## Synthesis
 

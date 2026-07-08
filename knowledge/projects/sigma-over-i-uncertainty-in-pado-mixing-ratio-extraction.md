@@ -3,7 +3,7 @@ type: project
 title: "Sigma-over-I uncertainty in P-ADO mixing-ratio extraction"
 aliases: [sigma over I uncertainty, sigma/I uncertainty, P-ADO sigma over I, alignment uncertainty in P-ADO, NST sigma-over-I evidence map]
 created: 2026-07-08
-updated: 2026-07-08
+updated: 2026-07-09
 status: active
 review_status: human-reviewed
 project_stage: evidence-map
@@ -16,13 +16,13 @@ tags: [pado, mixing-ratio, angular-distribution, polarization, alignment, sigma-
 
 ## Active Summary for Agents
 
-Current task: first-round sequential ingest and user-review finalization of three core formalism/experiment sources for the question why a single preset `σ/I` value is unsafe or model-dependent in in-beam γ-ray mixing-ratio extraction.
+Current task: article4-6 source review finalized for deorientation and modern angular-distribution formalism sources supporting the question why a single preset `σ/I` value is unsafe or model-dependent in in-beam γ-ray mixing-ratio extraction.
 
-Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]].
+Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]].
 
-In-progress / pending source rows: none for this prompt.
+In-progress / pending source rows: none for article4-6. User review on 2026-07-09 cleared the source-page P0/P1/P2 items and project rows SIO-PROJ-7--SIO-PROJ-12.
 
-High-risk symbol boundary: Draper `σ` is Gaussian width for side-feeding substate population; later `σ/I`, `σ/J`, attenuation coefficients `αK`/`Gk`, and angular-distribution coefficients `A2/A4` are related descriptions of alignment/orientation but are not identical variables.
+High-risk symbol boundary: Draper and Cejnar `σ` are Gaussian widths for side-feeding magnetic-substate population; Lauritsen 2025 directly uses Gaussian `Pm(J)` and normalized `σ/J`; later `σ/I`, attenuation/deorientation coefficients `αK`/`Gk`/`Uλ`, angular-distribution coefficients `A2/A4`, and detector solid-angle factors `Qk` are related to the angular response but are not identical variables.
 
 ## Research Question
 
@@ -40,7 +40,7 @@ This is an evidence map / writing-support project for NST paper and future thesi
 
 ## Evidence Available
 
-Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, and Zobel 1983 projectile/energy/feeding dependence in `67Ga`.
+Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, Zobel 1983 projectile/energy/feeding dependence in `67Ga`, Cejnar 1996 spin-deorientation calculation in `Pd(α,2nγ)Cd` reactions, Radeck 2012 time-dependent deorientation correction in inverse Coulomb excitation + RDDS, and Lauritsen 2025 modern tracking-array angular-distribution / polarization formalism.
 
 ## Symbol Mapping
 
@@ -49,6 +49,12 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | `σ` in Draper 1970 | Gaussian width of side-feeding magnetic-substate population `Pσ(M)` | Do not equate directly with `σ/I`; use as evidence that width assumptions are model choices. |
 | `A2`, `A4` | Legendre angular-distribution coefficients for `W(θ)` | Observables affected by population/alignment and transition properties. |
 | `αK` in Zobel 1980 | Attenuation coefficients `PK/BK` for actual partial alignment relative to complete alignment | Related to alignment, but not identical to Gaussian `σ` or normalized `σ/I`. |
+| `Uλ` in Cejnar 1996 | Deorientation coefficient for a particle or γ transition from `Ji` to `Jf` carrying angular momentum `L` | Propagates orientation flow through reaction routes; not the same as `σ`, `σ/I`, `σ/J` or measured `αK`. |
+| `Gk(t)` / `Gk(d)` in Radeck 2012 | Time- or distance-dependent attenuation factor for hyperfine-driven deorientation in RDDS angular correlations | Related deorientation correction, but not a side-feeding Gaussian width or detector `Qk`. |
+| `Qk` in Radeck 2012 | Detector finite-solid-angle correction in the angular-correlation function | Detector geometry term; do not confuse with nuclear alignment/deorientation attenuation. |
+| `Pm(J)` in Lauritsen 2025 | Magnetic-substate distribution for level spin `J`, usually Gaussian with respect to the beam axis | Direct bridge from alignment population to `alpha_k(J)` and normalized `sigma/J`; still not automatically identical to user-code `sigma/I`. |
+| `sigma/J` in Lauritsen 2025 | Normalized Gaussian width characterizing `Pm(J)`; `sigma/J=0` indicates full alignment | Closest source-level notation to project `sigma/I`; must be mapped to the user's convention before paper wording. |
+| `alpha_k` in Lauritsen 2025 | In source angular correlations: detector solid-angle attenuation; in in-beam angular distributions: nuclear alignment/deorientation attenuation from `Pm(J)` | Preserve local formula context; do not merge detector and nuclear attenuation meanings. |
 | projectile / energy / feeding condition | Experimental context controlling alignment attenuation in Zobel 1983 | Do not transfer a fixed alignment parameter across different conditions without check. |
 | magnetic-substate population `P(M)` | Population over `M` substates of the emitting level | Underlying physical/statistical object behind alignment descriptions. |
 | side feeding | Population component from outside the main cascade/band | One mechanism that changes `P(M)` and therefore angular distributions. |
@@ -60,6 +66,9 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | [[draper-1970-gaussian-substate-side-feeding]] | theory-ingest + method-ingest + project-ingest | Shows that stretched-E2 `A2/A4` depend on Gaussian side-feeding width, cascade feeding and side-feeding intensities; provides exact treatment and allowed coefficient-space boundaries. | DR70-1 to DR70-10 | P0 resolved: DR70-3, DR70-6, DR70-7 |
 | [[zobel-1980-magnetic-substate-distributions]] | experiment-ingest + method-ingest + project-ingest | Shows that angular-distribution-only fitting has more unknowns than measured coefficients unless alignment is known or modeled; documents ALY/Gaussian assumptions, their conditions and lifetime/Doppler effects on `αK`. | Z80-1 to Z80-13 | P0 resolved: Z80-2, Z80-3, Z80-10 |
 | [[zobel-1983-energy-projectile-alignment]] | experiment-ingest + method-ingest + project-ingest | Shows that attenuation coefficients vary with projectile, incident energy and direct/cascade feeding balance; warns against combining angular-distribution and polarization data from different conditions. | Z83-1 to Z83-10 | P0 resolved: Z83-5, Z83-8, Z83-9 |
+| [[cejnar-1996-spin-deorientation-alpha-2n-gamma]] | theory-ingest + method-ingest + project-ingest | Calculates spin deorientation through angular-momentum routes, tests the side-feeding Gaussian hypothesis, and shows that the imposed `σ` interval can change `δ` extraction. | C96-1 to C96-11 | P0 resolved: C96-4, C96-5, C96-10 |
+| [[radeck-2012-deorientation-lifetime-98ru-rdds]] | method-ingest + experiment-ingest + project-ingest | Demonstrates time-dependent deorientation correction with particle-γ angular correlations and separates `Rk`, `Bk`, `Qk`, `Gk` and deorientation correction factors in inverse Coulomb excitation + RDDS. | R12-1 to R12-12 | P0 resolved: R12-3, R12-7, R12-8, R12-10 |
+| [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] | method-review-ingest + project-ingest | Provides modern tracking-array formalism connecting `delta`, `alpha_k`, Gaussian `Pm(J)`, `sigma/J`, response functions, DCO and linear polarization. | L25-1 to L25-16 | P0 resolved: L25-5, L25-7, L25-8, L25-14, L25-15 |
 
 ## Evidence Map
 
@@ -71,6 +80,12 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | SIO-PROJ-4 | Gaussian or ALY-based alignment assumptions are conditional, with explicit risks from β feeding, isomers, short lifetimes, Doppler broadening, lifetime-dependent shifts of `αK` pairs, and feeding-component mixtures. | Z80-7 to Z80-13 | Wiki synthesis / project note | Does not imply Gaussian assumptions are invalid in all cases; it identifies conditions that must be checked. | false |
 | SIO-PROJ-5 | Alignment attenuation can change with projectile, incident energy and the direct/cascade feeding balance, so a preset alignment parameter is condition-specific rather than universally transferable. | Z83-3 to Z83-8 | Wiki synthesis / project note | Based on `67Ga`; generalization to user data requires reaction-specific checks. | false |
 | SIO-PROJ-6 | Combining angular-distribution and polarization constraints for `δ` should preserve beam/projectile/target consistency or explicitly model condition differences. | Z83-9 | Wiki synthesis / project note | This is a methodological caution, not a ban on combining datasets. | false |
+| SIO-PROJ-7 | Spin-deorientation calculations connect a Gaussian side-feeding width to reaction-specific angular-momentum routes, projectile energy, quasicontinuum feeding and discrete-level feeding corrections. | C96-2 to C96-9 | Wiki synthesis / project note | Cejnar 1996 is a statistical-model result for `Pd(α,2nγ)Cd`; it is relevant background, not a universal `σ/I` prescription. | false |
+| SIO-PROJ-8 | The `σ` region used in angular-distribution fitting can change the extracted `δ` branch or sign, so P-ADO writing should expose the alignment-width assumption instead of hiding it as a fixed constant. | C96-10 | Wiki synthesis / project note | Based on Cejnar Fig.7 for one `851.2 keV` transition; user data require their own `σ/I` mapping. | false |
+| SIO-PROJ-9 | Time-dependent deorientation can be measured through angular-correlation perturbations and encoded as `Gk(t/d)` factors; this supports treating alignment response as an experimental/model input with uncertainty. | R12-5 to R12-10 | Wiki synthesis / project note | Radeck 2012 is inverse Coulomb excitation + RDDS; use as related method background, not direct fusion-evaporation `σ/I` evidence. | false |
+| SIO-PROJ-10 | Modern fitting language must keep detector solid-angle attenuation `Qk`, nuclear alignment `Bk`/`alpha_k`, time-dependent deorientation `Gk`, and side-feeding Gaussian `σ`/`sigma/J` separate before using them in `δ` extraction. | R12-7, R12-8; C96-5; L25-4 to L25-8; Z80-1 to Z80-4 | Wiki synthesis / project note | Lauritsen 2025 resolves the formalism vocabulary, but user P-ADO implementation details remain unmapped. | false |
+| SIO-PROJ-11 | Lauritsen 2025 supplies the direct formula chain needed for P-ADO wording: `delta` enters transition-dependent `Amax_k`, in-beam `alpha_k(J)` describes nuclear alignment/deorientation, `alpha_k(J)` can be computed from `Pm(J)`, and `Pm(J)` is usually parameterized by Gaussian `sigma/J`. | L25-5 to L25-8 | Wiki synthesis / project note | This maps source notation, but does not prove the user's `sigma/I` is numerically identical to Lauritsen `sigma/J`. | false |
+| SIO-PROJ-12 | Tracking-array response-function and polarization/DCO constraints do not remove alignment-width assumptions; they help separate detector response, angular distribution, parity/multipolarity ambiguity and nuclear population assumptions. | L25-2, L25-10, L25-12 to L25-15 | Wiki synthesis / project note | Based on GRETINA examples and formalism; user detector/code path still needs mapping. | false |
 
 ## How This Supports P-ADO / NST Introduction
 
@@ -82,10 +97,18 @@ Zobel 1980 also supplies a condition checklist for when Gaussian/ALY assumptions
 
 Zobel 1983 adds the experimental context: alignment changes with projectile, energy and feeding balance, and angular-distribution/polarization constraints should be kept condition-consistent. Together, these sources motivate explicit P-ADO handling of alignment uncertainty; they do not by themselves prescribe one universal `σ/I` prior.
 
+Cejnar 1996 adds the deorientation-calculation layer: the side-feeding Gaussian width can be estimated from reaction-specific angular-momentum routes rather than treated as a free universal constant. Its Fig.7 is a useful warning for the NST introduction because changing the imposed `σ` interval changes the `δ` inference for an `M1+E2` transition. The boundary is equally important: this is a statistical-model result for selected `(α,2nγ)` reactions and does not prove a transferable `σ/I` prior.
+
+Radeck 2012 adds a complementary time-dependent deorientation example: in inverse Coulomb excitation + RDDS, angular-correlation coefficients are corrected by `Gk(t/d)` factors, while finite detector solid angle enters separately through `Qk`. This is useful for explaining why P-ADO should expose alignment/deorientation assumptions, but it should remain labelled as related methodology rather than direct fusion-evaporation side-feeding evidence.
+
+Lauritsen 2025 provides the cleanest modern equation language for the NST introduction. It allows a sentence like: in current tracking-array angular-distribution formalism, the fitted curvature depends not only on `delta` but also on the magnetic-substate population through `alpha_k(J)` and often through a Gaussian `sigma/J` parameter. Its `152Dy` examples also show why angular distribution alone may leave electric/magnetic or mixed-transition ambiguity, requiring DCO and linear polarization as complementary constraints.
+
 ## Evidence Gaps
 
 - Need mapping from the user's actual P-ADO implementation to source symbols before writing final equations.
-- Need source-level check of whether later P-ADO notation uses `σ/I`, `σ/J`, or another normalized width convention.
+- Need source-level check of whether later P-ADO notation uses `σ/I`, `σ/J`, or another normalized width convention; Lauritsen 2025 gives `σ/J`, but user-code mapping remains open.
+- Need decide how, or whether, Cejnar-style reaction-route deorientation calculations can be approximated for the user's actual reaction and detector conditions.
+- Need map whether any Radeck-style time-dependent deorientation or detector `Qk` correction exists in the user's P-ADO code path.
 - Need user-data-specific check of reaction, beam energy, target, detector geometry, feeding pattern and polarization/ADO acquisition conditions.
 
 ## Future Writing Hooks
@@ -106,7 +129,10 @@ Zobel 1983 adds the experimental context: alignment changes with projectile, ene
 ## Risks and Blockers
 
 - Source symbols are not identical; `σ`, `σ/I`, `αK`, `A2/A4` and feeding fractions must remain separated.
-- Source and project claims from this three-source ingest were user-reviewed on 2026-07-08; final paper wording still needs source locator checks and user-data-specific mapping.
+- Source and project claims from the first three-source ingest were user-reviewed on 2026-07-08; final paper wording still needs source locator checks and user-data-specific mapping.
+- Cejnar 1996, Radeck 2012 and Lauritsen 2025 source/project claims from 2026-07-09 were user-reviewed, but should still not be promoted into paper-ready final wording without source locator checks in the writing context.
+- Especially do not promote Radeck 2012 RDDS/Coulomb-excitation correction to a direct fusion-evaporation `σ/I` conclusion.
+- Lauritsen 2025 gives `sigma/J`; mapping it to the user's `sigma/I` convention remains a separate code/data-context task.
 - User data conditions and P-ADO implementation details are not yet mapped to the source notation.
 
 ## Next Actions
@@ -118,6 +144,7 @@ Zobel 1983 adds the experimental context: alignment changes with projectile, ene
 
 - [[magnetic-substate-population]]
 - [[side-feeding]]
+- [[deorientation]]
 - [[sigma-over-i]]
 - [[angular-distribution]]
 - [[angular-distribution-coefficient]]

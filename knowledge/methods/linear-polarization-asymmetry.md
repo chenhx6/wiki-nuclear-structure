@@ -3,7 +3,7 @@ type: method
 title: 线偏振不对称分析
 aliases: [linear polarization asymmetry, polarization asymmetry, Delta asym]
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-09
 status: active
 review_status: unreviewed
 method_type: gamma-ray-polarimetry
@@ -36,6 +36,8 @@ tags: [multipolarity, electric-magnetic-character]
 
 不对称量符号依实验定义，必须引用原文校准。
 
+[[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] treats tracking-array linear polarization as a continuous-angle response-function problem. For in-beam single-gamma polarization, its Eq.35 expands the angular-distribution expression with a `P_pm cos(2 zeta)` term and includes mixed transitions. Its `152Dy` 432-keV example shows why angular distribution, DCO and linear polarization may all be needed to resolve `M1/E2` versus `E1/M2` ambiguity.
+
 ## Examples
 
 `131Xe` 论文明确指出弱连接跃迁的偏振误差较大，因此主要依赖角关联/角分布约束 δ。
@@ -49,6 +51,7 @@ tags: [multipolarity, electric-magnetic-character]
 - [[chakraborty-2023-131xe-wobbling-origin]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[guo-2022-low-spin-wobbling-187au]]
+- [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
 
 ## Evolution Log
 
