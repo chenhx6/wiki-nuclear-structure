@@ -121,6 +121,16 @@
 
 同一分支最多保留一个 active WIP。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若要禁止所有本地 commit，需明确写“禁止本地 WIP commit”。Safe suspend 遇到大量 Markdown diff 时也优先采用本地 WIP checkpoint，减少 Codex、Git、编辑器或文件监听的持续 CPU 占用；checkpoint 绝不自动 push。
 
+用户不需要串行工作。若暂时没时间审核某个 WIP，可以让 Codex 保留本地 WIP commit、不 push，并把短索引写入 `system/wip-queue.md`。之后可以说“列出 pending WIP”或“继续审核某个 WIP”；Codex 应从 queue、handoff 和 Git 状态恢复，而不是把旧 WIP 从 Active handoff 中丢失。
+
+审核完成后可以用短句触发 finalization，例如：
+
+```text
+审核：1... 2... 审核完毕，除以上两点外无问题。
+```
+
+Codex 应自动理解为审核后的 finalization 请求：按审核意见做最小修改，处理明确确认范围内的 `needs_review`，更新 overview，刷新 QMD，完成 final commit / push，刷新 handoff 并追加 short log。若不想执行其中某项，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
+
 ## 8. How to review claims / 如何人工审阅
 
 人工审阅至少检查：
@@ -229,6 +239,7 @@ qmd.cmd embed -c nuclear-knowledge
 - `raw/`、PDF、论文、数据和图片不得被 Agent 误改或误提交；
 - 用户维护的 BibTeX 和 Obsidian 配置应与治理改动分开确认；
 - `system/handoff.md` 记录当前状态和下一次任务入口；
+- `system/wip-queue.md` 只记录多个 pending WIP 的恢复索引，不保存长报告或 source claim 正文；
 - 文献摄入、project、synthesis 或 framework 任务正常结束后，Codex 应自动刷新 Active handoff 并向 `system/log.md` 追加简短记录，用户不需要每次手动要求；
 - safe suspend 是写回状态后结束本轮，不是后台睡眠或自动恢复；
 - 长任务、余量不足、检查失败或无法可靠完成时，应 checkpoint / safe suspend，留下下一轮可继续的交接信息；

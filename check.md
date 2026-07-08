@@ -36,6 +36,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] `PLAN.md` 保持宏观计划、个人好奇心与研究方向草稿性质，未被当作 cite-key 文献清单、执行日志或必须立即执行的任务列表。
 - [ ] `PLAN.md` 未在缺少用户明确要求时被覆盖、重写、删除、重排或机械整理。
 - [ ] `system/handoff.md` 顶部包含短的 `Active handoff`，包括 current active task、branch / WIP or local commit、last task status、unfinished items、P0/P1 review focus、risks、next prompt 和 recent user decisions；历史交接未堆入 active 区块。
+- [ ] 启动时未默认读取完整 `system/wip-queue.md`；只有涉及 unfinished WIP、review continuation、safe suspend、non-serial work 或用户询问 pending WIP 时才读取。
 - [ ] PLAN/handoff 冲突已按“方向与优先级看 PLAN、执行事实与交接细节看 handoff”分类；无法分类时已询问用户。
 - [ ] `system/memory.md` 只保存稳定规则与用户确认过的偏好，不保存临时聊天摘要。
 - [ ] 已判断本次是否需要更新 `USER_GUIDE.md`；需要时已经同步。
@@ -169,6 +170,16 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] WIP commit 只包含本轮摄入相关文件，message 以 `WIP ingest:` 开头。
 - [ ] Project、synthesis 或跨来源综合完成并等待人工审核时，HEAD 存在且仅存在一个 active `WIP review:` commit。
 - [ ] WIP commit 只保存在本地，没有 push。
+- [ ] 若存在 pending WIP、等待审核、safe-suspended task 或未 push checkpoint，`system/wip-queue.md` 已新增或更新短 entry。
+- [ ] Pending WIP queue 只记录恢复索引，没有写入 raw 内容、source claim 正文或长复盘。
+- [ ] WIP 结束时 overview/QMD deferred 状态已在 queue 和最终复盘中说明；未把未审核 WIP push 到 `main`。
+- [ ] 已识别 review-finalization trigger：用户在 WIP ingest/source review/project review/synthesis review/cross-project synthesis review/waiting for user review/waiting for user P0/P1 review 后说“审核完毕”“已审核”“除以上几点外无问题”“除以上两点外无问题”“P0/P1 已审核通过”“可以提交”“请 commit/push”“审核完毕，请 commit/push”等时，默认进入 finalization，除非用户明确覆盖。
+- [ ] Review finalization 已按用户审核意见做最小修改，并只处理用户明确确认范围内的 `review_status` / `needs_review`。
+- [ ] Review finalization 默认更新 `knowledge/overview.md`；若用户明确不要 overview，最终复盘已说明。
+- [ ] Review finalization 默认执行 QMD refresh；若用户明确不要 QMD 或 QMD 失败，最终复盘已说明。
+- [ ] Review finalization 已按 WIP lifecycle amend 为 final commit，并默认 push；若用户明确不要 push，最终复盘已说明 not pushed。
+- [ ] Review finalization 已刷新 Active handoff、更新或清除对应 queue entry，并追加 short log。
+- [ ] 存在 unresolved P0、locator gaps、审核意见无法唯一映射或 WIP 归属不明时，未强行 finalization，已 safe suspend 或报告阻塞。
 - [ ] HEAD 已是 active WIP ingest/review/suspend 时，没有开始下一篇摄入、下一项综合或创建第二个 WIP。
 - [ ] 用户审核后通过 `git commit --amend` 把对应 WIP 转为 final commit，没有保留独立 WIP 或累积额外 review/final commits。
 - [ ] 用户指定 final commit message 时已原样使用；未指定时由 Codex 根据实际修改推荐直接相关的 message，并在最终报告中说明。

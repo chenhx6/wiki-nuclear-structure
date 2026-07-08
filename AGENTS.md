@@ -21,6 +21,8 @@
 
 `system/handoff.md` 顶部必须保留短的 `Active handoff`，只包含 current active task、current branch / WIP or local commit、last task status、unfinished items、P0/P1 review focus、risks、next prompt / continuation phrase 和 recent user decisions。历史交接应归档到 `system/archive/handoff-history-YYYY-MM.md` 或放在 active 区块之后；启动时默认不读取归档。简言之：`PLAN.md` answers “where the user may want to go next”; `system/handoff.md` answers “where the last task stopped.”
 
+`system/wip-queue.md` is a short index for multiple unfinished local WIP, review WIP, safe-suspended tasks, or not-pushed checkpoints. It does not replace Active handoff. Do not read the full queue during normal startup; read it only when the task concerns unfinished WIP, review continuation, safe suspend, non-serial work, or the user asks about pending WIP / unfinished review tasks.
+
 若文件之间存在冲突：
 
 1. 用户当前明确指令永远最高；
@@ -224,6 +226,33 @@ Commit message 统一使用：
 - 任务放弃：等待用户明确指令，不自动 reset。
 
 仓库中存在对应 active WIP、用户已完成审核并要求 final commit/push 时，上述规则即构成对 `git commit --amend` 的明确本地授权，优先于通用的“除非用户明确要求，否则不要 amend”约束。不得因该通用约束而保留独立 WIP，再额外创建 final commit。
+
+### Pending WIP queue
+
+When a task ends as WIP, a local not-pushed commit, a safe suspend, or user-review pending state, update `system/wip-queue.md` as well as Active handoff. Active handoff records only the latest activity; the queue preserves short recovery indexes for multiple non-serial pending WIPs.
+
+Queue entries record only task short name, status, branch, commit, files, review needed, overview/QMD, next action, and risks. Do not store full paper notes, raw content, source-claim bodies, or long recaps there. If the user starts a new ingest/project/synthesis while older WIPs remain unreviewed, keep the older WIPs in the queue instead of relying on Active handoff.
+
+After WIP finalization and push, update or clear the matching queue entry. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
+
+### Review-finalization trigger / 审核完成触发
+
+当上一轮任务处于 `WIP ingest:`、source review、waiting for user review、waiting for user P0/P1 review、`WIP review:`、project review、synthesis review 或 cross-project synthesis review 状态，且用户在下一轮消息中给出审核意见并表示“审核完毕”“已审核”“除以上几点外无问题”“除以上两点外无问题”“P0/P1 已审核通过”“可以提交”“请 commit/push”“审核完毕，请 commit/push”等同义表达时，Codex 应自动识别为 `review-finalization request`。
+
+在 `review-finalization request` 下，除非用户明确说“不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”“只修改，不提交”“只 commit，不 push”等覆盖默认行为，Codex 默认执行：
+
+1. 根据用户审核意见做最小修改；
+2. 只处理用户明确确认范围内的 `review_status` / `needs_review` 状态；
+3. 若仍有 unresolved P0、未核查 locator gaps 或用户审核意见未落实，不得强行 finalization，应 safe suspend 或报告阻塞；
+4. 若审核意见已落实且无 unresolved P0，更新 `knowledge/overview.md`，并说明 overview 状态；
+5. 执行 QMD refresh（`qmd.cmd update`、`qmd.cmd embed -c nuclear-knowledge`、`qmd.cmd status`），失败时如实报告并不得伪造刷新成功；
+6. 运行与本次修改相称的检查；
+7. 按 WIP lifecycle 将对应 WIP amend 为 final commit，并默认 push；若用户明确“不要 push”或“只 commit，不 push”，则只 final commit 不 push；
+8. 刷新 `system/handoff.md` 的 Active handoff，并更新 `system/wip-queue.md` 对应 entry；
+9. 向 `system/log.md` 追加一条简短记录；
+10. 最终复盘报告 overview、QMD、commit、push、handoff、queue 和 log 的状态。
+
+若仍存在 unresolved P0、locator gaps、审核意见未落实、审核意见无法唯一映射到具体 claim、source/project/synthesis 仍存在高风险不确定内容，或 HEAD 不是对应 WIP 且无法确认归属，不得强行 finalization；应停止扩大修改，必要时 safe suspend，并向用户报告阻塞点。
 
 ### “不 commit/push”的兼容解释
 

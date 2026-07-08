@@ -270,3 +270,5 @@ updated: 2026-07-06
 ## [2026-07-07] framework | Optimized ingest startup and recap budget: Active handoff replaces full startup handoff, log tail-only rule clarified, ingest strategies split into runtime short rules plus detail tutorial, ordinary ingest QMD embed/overview updates made deferrable, no-unfiltered-scan rule added, active summary/staged PDF reading/compact recap rules synchronized; no science pages or raw files modified.
 
 ## [2026-07-07] framework | Active handoff refreshed and wording clarified after framework optimization commit 769b9ab; clarified README startup, workflow detail vs PDF reading depth, ordinary single-paper ingest, sequential multi-paper ingest, reading-depth expectations, automatic handoff/log closeout, and safe suspend/checkpoint expectations.
+
+## [2026-07-08] framework | Review-finalization trigger was confirmed/supplemented and Pending WIP queue workflow was added; active sigma-over-I WIP ingest `7b1e52a` was preserved separately and not pushed.

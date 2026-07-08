@@ -1,7 +1,7 @@
 ﻿---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-07
+updated: 2026-07-08
 ---
 
 # 跨会话交接
@@ -9,35 +9,35 @@ updated: 2026-07-07
 ## Active handoff
 
 Current active task:
-Awaiting user review of local framework commit 769b9ab, Optimize Wiki ingest startup and recap budget.
+Finalize review-finalization trigger and pending WIP queue workflow.
 
 Current branch / local commit:
-main; local framework commit 769b9ab created and not pushed.
+`framework-review-finalization-wip-queue`; framework-only commit is being prepared for push to `origin/main`. The unreviewed sigma-over-I ingest WIP remains preserved separately at `wip-sigma-over-i-alignment-review` commit `7b1e52a` and must not be pushed before user review. Recovery stash `stash@{0}` is retained.
 
 Last task status:
-Framework optimization completed. Active-only handoff, log tail-only rule, QMD deferred policy, no unfiltered recursive scan rule, compact recap rule, active summary sync rule, PDF staged evidence reading, ingest-strategies split, and overview staged update policy were implemented.
+Review-finalization trigger wording was confirmed/supplemented across AGENTS, ingest/reflect workflows, user guides and check checklist. Pending WIP queue workflow was added with `system/wip-queue.md` tracking the sigma-over-I WIP. No science pages, raw files, schema, lint scripts/config/tests, or PLAN were modified.
 
 Unfinished items:
-User should review P0 focus files before push.
+Push the framework-only commit to `origin/main` after checks. Existing sigma-over-I WIP still awaits user P0/P1 review and later review-finalization.
 
 P0 focus:
 
-1. AGENTS.md: startup order, README stable-entry rule, active handoff, log tail-only, QMD deferred, no recursive scan, compact recap, automatic handoff/log closeout, safe suspend/checkpoint.
-2. system/workflows/ingest-strategies.md: runtime short rules, detail meaning, ordinary single-paper ingest definition, multi-paper sequential ingest rule, PDF staged evidence reading, active summary, overview deferred, compact triage.
-3. system/workflows/ingest.md: ordinary ingest no longer forces QMD embed or overview rewrite, while preserving deep source reading, correct reading-depth labels, and safe suspend if core reading is incomplete.
-4. system/handoff.md and system/archive/handoff-history-2026-07.md: active handoff is short and prior history is preserved.
+1. Confirm `review-finalization request` trigger wording covers WIP ingest/source review/project review/synthesis review/cross-project review/waiting-for-review states and common user phrases.
+2. Confirm default finalization actions are scoped correctly: user-review fixes, reviewed `needs_review`, overview, QMD refresh, checks, commit/push, handoff/queue/log and final recap.
+3. Confirm unresolved P0, locator gaps, unimplemented review comments, high-risk uncertainty or ambiguous WIP ownership block forced finalization.
+4. Confirm `system/wip-queue.md` stays a short recovery index and does not replace Active handoff.
 
 Remaining P0:
 none identified.
 
 Risks:
-Do not stage .obsidian/graph.json, raw/zotero/wiki-inbox.bib, raw PDFs, source claims, review statuses, PLAN.md, science knowledge pages, lint scripts/config/tests, or unrelated files.
+Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, science pages/source claims, `PLAN.md`, schema, lint scripts/config/tests, or unrelated files. Do not push unreviewed WIP `7b1e52a`; push only the framework branch HEAD to `origin/main`.
 
 Next prompt / continuation phrase:
-继续审核 Optimize Wiki ingest startup and recap budget 的 P0 focus；当前 commit 为 769b9ab，尚未 push。
+Next user action: review sigma-over-I P0/P1 items listed in `system/wip-queue.md`; when done, provide review comments and say “审核完毕，请 commit/push” or the desired override.
 
 Recent user decisions:
-Keep default deep PDF evidence reading; optimize only startup overhead, QMD refresh, recursive scans, strategy loading, overview rewrites, and recap length. Do not treat workflow detail loading as PDF reading depth. Future normal task completion should automatically refresh Active handoff and append a short log; long or incomplete tasks should safe suspend with a continuation prompt.
+User requested recovery after 502, completion of review-finalization trigger plus pending WIP queue workflow, a framework-only commit pushed to `origin/main`, preservation of WIP `7b1e52a`, and retention of `stash@{0}`.
 
 ## Archived handoff history
 

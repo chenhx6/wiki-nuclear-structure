@@ -124,6 +124,8 @@ SORT file.name ASC
 
 审核后，Codex 根据报告修改明确项目，并使用 `git commit --amend` 把对应 WIP 转为 final commit；不得保留独立 WIP 后再增加 final commit。你指定 final commit message 时原样使用；未指定时由 Codex 推荐与本轮内容直接相关的 message，并在最终报告中说明。只有你允许时才 push。同一分支不累积多个 active WIP。仓库存在对应 WIP、你已完成审核并要求 final commit/push 时，这本身就是仓库流程对 amend 的明确授权。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若确实不希望任何本地 commit，请明确写“禁止本地 WIP commit”。
 
+如果你不想串行审核，可以保留多个 pending WIP。Codex 会把多个未完成本地 WIP、等待审核任务或未 push checkpoint 记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动。之后可以说“列出 pending WIP”或“继续审核某个 WIP”。未审核 WIP 不应 push 到 `main`。
+
 ## 4. Zotero 轻量连接
 
 当前推荐 Zotero 继续作为书目和标注主库，不直接读写运行中的 `zotero.sqlite`。
@@ -232,6 +234,7 @@ Project 可以随具体研究问题、阶段性数据处理结果、证据比较
 聊天不是长期记忆。每次实质任务结束后，Agent 应更新：
 
 - `system/handoff.md`
+- `system/wip-queue.md`（仅当存在 pending WIP、等待审核或未 push checkpoint）
 - `system/log.md`
 - `knowledge/index.md`
 - 必要时更新 `knowledge/overview.md` 与 `knowledge/questions.md`

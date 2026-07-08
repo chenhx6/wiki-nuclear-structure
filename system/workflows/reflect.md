@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: reflect
-updated: 2026-07-07
+updated: 2026-07-08
 ---
 
 # REFLECT：综合与反向检验
@@ -71,8 +71,12 @@ Project、synthesis 或跨来源 reflect 完成后，必须按 `system/workflows
 
 主结论、evidence matrix 归类、用户数据解释、创新点候选和 paper evidence gate 候选通常属于 P0/P1。Planning notes、follow-up sources 与低风险导航可归入 P2/P3。最终复盘采用 compact final recap；P0 分为 `P0 focus: top 3-5` 和 `Remaining P0`，P1 最多逐项列 5 个最重要位置，P2/P3 聚合，并给出“精力有限时建议先看”的 3-5 个具体位置。
 
-综合主体完成、等待用户审核时，若用户未明确禁止任何本地 commit，按 `AGENTS.md` 创建单个本地 `WIP review: <task short name> for user review`，不 push。用户审核完成并要求 final commit/push 后，必须把该 WIP amend 为 final commit，不得另建 review/final commit；用户指定 final message 时原样使用，未指定时由 Codex 推荐直接相关的 message 并在最终报告中说明。
+综合主体完成、等待用户审核时，若用户未明确禁止任何本地 commit，按 `AGENTS.md` 创建单个本地 `WIP review: <task short name> for user review`，不 push，并在 `system/wip-queue.md` 写入或更新 pending entry。用户审核完成并要求 final commit/push 后，必须把该 WIP amend 为 final commit，不得另建 review/final commit；用户指定 final message 时原样使用，未指定时由 Codex 推荐直接相关的 message 并在最终报告中说明。
 
-Project、synthesis、cross-project synthesis 或 framework 任务正常结束后，必须自动刷新 `system/handoff.md` 的 Active handoff 并向 `system/log.md` 追加一条简短记录；用户不需要每次手动要求。Active handoff 写当前任务状态、commit/push 状态、未完成事项、P0/P1 审核重点、风险和下一步；`system/log.md` 只写短事件，不保存长复盘。
+若上一轮处于 project review、synthesis review、cross-project synthesis review、waiting for user review、waiting for user P0/P1 review 或 `WIP review:` 状态，且用户给出审核意见并表示“审核完毕”“已审核”“除以上几点外无问题”“除以上两点外无问题”“P0/P1 已审核通过”“可以提交”“请 commit/push”“审核完毕，请 commit/push”等同义表达，应自动识别为 `review-finalization request`。除非用户明确说“不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”“只修改，不提交”“只 commit，不 push”，默认执行：按审核意见做最小修改，处理用户明确确认范围内的 `needs_review`，确认无 unresolved P0/locator gaps 后更新 `knowledge/overview.md`，执行 QMD refresh，运行检查，将对应 WIP amend 为 final commit，默认 push，刷新 Active handoff，更新 queue entry，追加 short log，并在最终复盘报告 overview/QMD/commit/push/handoff/queue/log 状态。
+
+若仍有 unresolved P0、locator gaps、审核意见未落实、审核意见无法唯一映射到具体 project/synthesis statement、project/synthesis 仍存在高风险不确定内容，或 HEAD 不是对应 WIP 且无法确认归属，不得强行 finalization；应停止并报告阻塞，必要时 safe suspend。
+
+Project、synthesis、cross-project synthesis 或 framework 任务正常结束后，必须自动刷新 `system/handoff.md` 的 Active handoff 并向 `system/log.md` 追加一条简短记录；用户不需要每次手动要求。Active handoff 写当前任务状态、commit/push 状态、未完成事项、P0/P1 审核重点、风险和下一步；若任务结束为 WIP、未 push 或等待审核，同步更新 `system/wip-queue.md`；`system/log.md` 只写短事件，不保存长复盘。
 
 若综合任务执行余量不足、检查失败需要用户决策、project/synthesis 修改未完成，或无法可靠完成，应进入 safe suspend：停止新增科学 claim，记录已完成步骤、已修改文件、未完成项、未核查 locator / claim gaps、P0/P1 风险和 continuation prompt；必要时创建本地 WIP checkpoint，但不 push。
