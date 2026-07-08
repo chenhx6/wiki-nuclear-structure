@@ -10,19 +10,19 @@ This page tracks local WIP tasks that are not yet finalized. Keep entries short.
 
 ## Active entries
 
-### Sigma-over-I alignment sources
-- status: waiting for user P0/P1 review
-- branch: `wip-sigma-over-i-alignment-review`
-- commit: `7b1e52a` (`WIP ingest: sigma-over-I alignment sources for user review`)
-- files: sigma-over-I/P-ADO source, project, concept, method, observable, index, questions, handoff and log changes created by the WIP ingest
-- review needed: Draper DR70-3/6/7; Zobel 1980 Z80-2/3/10; Zobel 1983 Z83-5/8/9; project wording in How This Supports P-ADO / NST Introduction
-- overview/QMD: deferred until review-finalization
-- next action: user review, then use the review-finalization trigger to amend/finalize the WIP ingest
-- risks: do not push this WIP before user review; do not mix it into framework commits on `main`
+None.
 
 ## Completed entries
 
-None yet.
+### Sigma-over-I alignment sources
+- status: user review finalized; local final commit created; not pushed due GitHub/proxy connection failure
+- branch: `wip-sigma-over-i-alignment-review`
+- commit: `Finalize sigma-over-I alignment source review` local final commit on `wip-sigma-over-i-alignment-review`
+- files: Draper 1970, Zobel 1980, Zobel 1983 source pages; sigma-over-I project; overview; handoff/log/queue
+- review needed: none identified for DR70-3/6/7, Z80-2/3/10/Fig.5, or Z83 source claims
+- overview/QMD: overview refreshed; QMD update/embed/status succeeded after sandbox escalation
+- next action: retry `git push origin HEAD:main` or a working proxy push, then map actual P-ADO `σ/I` input convention and user-data conditions before writing final equations
+- risks: `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain uncommitted external/user changes and were not included
 
 ## Rules
 

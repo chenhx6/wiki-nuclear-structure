@@ -272,3 +272,11 @@ updated: 2026-07-06
 ## [2026-07-07] framework | Active handoff refreshed and wording clarified after framework optimization commit 769b9ab; clarified README startup, workflow detail vs PDF reading depth, ordinary single-paper ingest, sequential multi-paper ingest, reading-depth expectations, automatic handoff/log closeout, and safe suspend/checkpoint expectations.
 
 ## [2026-07-08] framework | Review-finalization trigger was confirmed/supplemented and Pending WIP queue workflow was added; active sigma-over-I WIP ingest `7b1e52a` was preserved separately and not pushed.
+
+## [2026-07-08] claim-review | 用户完成 sigma-over-I alignment sources 审核并请求 finalization
+
+- Draper 1970 补充 DR70-3 mixed final population `\bar{P}(M)`、DR70-6 Fig.3 `bdry` mixture boundary 解释、DR70-7 stretched E2 定义。
+- Zobel 1980 补充 Z80-3 三未知量歧义的 a/b/c 出路、Z80-10 Gaussian/ALY 条件性重点、Fig.5 lifetime-to-`αK` 位移记录，并同步 project 写作支撑。
+- Zobel 1983 source 按用户审核意见完成收口；三篇 source 与 sigma-over-I project 均升级为 `human-reviewed`，相关 `needs_review` 清零。
+- `knowledge/overview.md`、`system/handoff.md` 与 `system/wip-queue.md` 已同步；QMD update/embed/status 成功；lint 为 0 error、10 warning、0 info。
+- 本地 final commit 已创建；push 到 `origin/main` 连续两次因 GitHub `443` 连接超时失败，随后按用户建议使用 `http://127.0.0.1:7890` proxy 仍因本地代理端口不可达失败，当前为 not pushed。

@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-06
+updated: 2026-07-08
 ---
 
 # Wiki Index
@@ -29,6 +29,9 @@ updated: 2026-07-06
 - [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]] - `128,130Xe` 中配对振动与三轴形状自由度耦合的玻色子数非守恒 IBM 研究。
 - [[babra-2019-deformation-change-136sm]] - `136Sm` yrast 寿命、`Q_t` 下降与带交叉处形变演化的实验-模型证据链。
 - [[nomura-2022-questioning-wobbling-ibfm]] - 对 `135Pr/133La/127Xe/105Pd` reported low-spin wobbling bands 的 γ-soft IBFM 替代理论解释与 E2/M1 comparison。
+- [[draper-1970-gaussian-substate-side-feeding]] - Gaussian magnetic-substate side feeding 对 stretched-E2 `A2/A4` 的形式化处理。
+- [[zobel-1980-magnetic-substate-distributions]] - fusion-evaporation alignment attenuation coefficients、ALY curve 与 Gaussian hypothesis 条件。
+- [[zobel-1983-energy-projectile-alignment]] - `67Ga` alignment attenuation 的 projectile、energy 与 direct/cascade feeding dependence。
 
 ## Nuclei
 
@@ -66,6 +69,7 @@ updated: 2026-07-06
 - [[superdeformation]] - 大四极形变转动结构及其与三轴性之间的证据边界。
 - [[backbending]] / [[angular-momentum-alignment]] - 带交叉的谱学表现与角动量顺排。
 - [[tilted-precession-bands]] - 完整三维转动的倾斜进动带，以及与 harmonic wobbling approximation 的理论边界。
+- [[magnetic-substate-population]] / [[spin-alignment]] / [[side-feeding]] / [[sigma-over-i]] - P-ADO/角分布分析中 alignment-width 与 feeding dependence 的基础术语边界。
 
 ## Experiments
 
@@ -105,6 +109,7 @@ updated: 2026-07-06
 - [[interband-transition-strengths]] / [[interband-e2-strengths]] - 手征与 wobbling 的带间电磁证据。
 - [[moments-of-inertia]] - 转动响应、band crossing 与 alignment 的诊断量。
 - [[transition-quadrupole-moment]] - 寿命/E2 集体性与形变尺度的诊断量。
+- [[angular-distribution-coefficient]] / [[attenuation-coefficient]] - 角分布 `A2/A4` 与 spin-alignment attenuation `αK` 的区分。
 
 ## Methods
 
@@ -113,6 +118,7 @@ updated: 2026-07-06
 - [[spin-coherent-state-map]] / [[spin-squeezed-state-map]] - 模型波函数的角动量几何。
 - [[two-point-angular-correlation-ratio]] - 不同阵列中以 `R_ac` 区分 dipole/quadrupole。
 - [[in-beam-gamma-spectroscopy]] - 熔合蒸发高自旋谱学的实验入口与证据边界。
+- [[angular-distribution]] - γ 射线角分布分析及其 alignment、feeding 与 mixing-ratio 前提。
 
 ## Synthesis
 
@@ -129,6 +135,7 @@ updated: 2026-07-06
 - [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands 的 wobbling/TiP 竞争解释与 supporting/counter evidence。
 - [[187au-longitudinal-wobbling-controversy]] - 已审核的 Sensharma 2020/Guo 2022 locator-level evidence matrix；跟踪 `187Au` LW、single-particle excitation、associated signature partner 与低自旋近似争议。
 - [[low-spin-wobbling-controversies]] - `135Pr/187Au` 低自旋 wobbling identification 跨案例证据地图；接入 γ-soft 背景、Lawrie 2020/TiP、`135Nd` reference 与 Nomura 2022 IBFM alternative。
+- [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]] - 支持 NST/P-ADO 写作的 `σ/I` 预设困难、alignment uncertainty 与 feeding dependence evidence map。
 
 ## Decisions and Failures
 

@@ -9,35 +9,31 @@ updated: 2026-07-08
 ## Active handoff
 
 Current active task:
-Finalize review-finalization trigger and pending WIP queue workflow.
+Sigma-over-I alignment source review-finalization for Draper 1970, Zobel 1980 and Zobel 1983.
 
 Current branch / local commit:
-`framework-review-finalization-wip-queue`; framework-only commit is being prepared for push to `origin/main`. The unreviewed sigma-over-I ingest WIP remains preserved separately at `wip-sigma-over-i-alignment-review` commit `7b1e52a` and must not be pushed before user review. Recovery stash `stash@{0}` is retained.
+`wip-sigma-over-i-alignment-review`; final local commit `Finalize sigma-over-I alignment source review` was created from the local WIP chain. Push to `origin/main` was attempted twice directly and once with `http.proxy`/`https.proxy` set to `http://127.0.0.1:7890`; direct attempts timed out to GitHub `443`, and the proxy attempt failed because `127.0.0.1:7890` was not reachable in this execution environment. `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain uncommitted external/user changes and are not part of this finalization.
 
 Last task status:
-Review-finalization trigger wording was confirmed/supplemented across AGENTS, ingest/reflect workflows, user guides and check checklist. Pending WIP queue workflow was added with `system/wip-queue.md` tracking the sigma-over-I WIP. No science pages, raw files, schema, lint scripts/config/tests, or PLAN were modified.
+Draper DR70-3/6/7, Zobel 1980 Z80-2/3/10/Fig.5, and Zobel 1983 source review comments were applied. The three source pages and the sigma-over-I project page are `human-reviewed`; source/project `needs_review` flags from this WIP are cleared. `knowledge/overview.md` was refreshed. QMD update/embed/status succeeded after sandbox escalation.
 
 Unfinished items:
-Push the framework-only commit to `origin/main` after checks. Existing sigma-over-I WIP still awaits user P0/P1 review and later review-finalization.
+No unresolved P0/P1 from this three-source review. Remote push remains unfinished due network connectivity. Follow-up scientific work: map the user's actual P-ADO `σ/I` convention to source variables and user-data conditions before writing final paper equations.
 
 P0 focus:
-
-1. Confirm `review-finalization request` trigger wording covers WIP ingest/source review/project review/synthesis review/cross-project review/waiting-for-review states and common user phrases.
-2. Confirm default finalization actions are scoped correctly: user-review fixes, reviewed `needs_review`, overview, QMD refresh, checks, commit/push, handoff/queue/log and final recap.
-3. Confirm unresolved P0, locator gaps, unimplemented review comments, high-risk uncertainty or ambiguous WIP ownership block forced finalization.
-4. Confirm `system/wip-queue.md` stays a short recovery index and does not replace Active handoff.
+P0: none identified.
 
 Remaining P0:
 none identified.
 
 Risks:
-Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, science pages/source claims, `PLAN.md`, schema, lint scripts/config/tests, or unrelated files. Do not push unreviewed WIP `7b1e52a`; push only the framework branch HEAD to `origin/main`.
+Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, `PLAN.md`, or unrelated files. QMD refresh required sandbox escalation because non-escalated `qmd.cmd update` failed with `SQLITE_CANTOPEN`; escalated update/embed/status succeeded. Lint still reports 10 warnings, including the external raw Zotero working-tree change. Push is not complete until either `git push origin HEAD:main` or a working-proxy equivalent succeeds.
 
 Next prompt / continuation phrase:
-Next user action: review sigma-over-I P0/P1 items listed in `system/wip-queue.md`; when done, provide review comments and say “审核完毕，请 commit/push” or the desired override.
+Continue by mapping the actual P-ADO code/input convention for `σ/I` to Draper/Zobel variables and user-data reaction/detector conditions.
 
 Recent user decisions:
-User requested recovery after 502, completion of review-finalization trigger plus pending WIP queue workflow, a framework-only commit pushed to `origin/main`, preservation of WIP `7b1e52a`, and retention of `stash@{0}`.
+User reviewed Draper 1970, Zobel 1980 and Zobel 1983 sources; requested specific additions for Draper DR70-3/6/7, Zobel 1980 Z80-3/Z80-10/Fig.5, accepted Zobel 1983 as having no source-level problem, and requested commit/push.
 
 ## Archived handoff history
 
