@@ -7,15 +7,17 @@
 本文件作为行为契约加载后，开始任何知识库任务前依次读取：
 
 1. `README.md`：了解 Wiki 的稳定入口、当前定位、研究范围和工作流入口；
-2. `system/handoff.md` 的 `Active handoff` 区块：了解当前任务状态、最近交接和下一步；除非用户要求审计历史，不读取 handoff archive；
+2. `system/handoff.md`：只读取 `## Active handoff` 区块、默认不读取 `Previous active handoff`、`superseded` 或 handoff archive、只有当 Active handoff 内部信息不足、存在冲突，或用户明确要求历史审计/追溯时，才允许读取 superseded 区块或 archive；
+   1. 默认原则：当前任务状态以 Active handoff 为准；superseded 和 archive 只作为冲突排查或历史审计材料，不作为普通任务启动上下文。
+
 3. `profile.md`；
 4. `system/memory.md`；
 5. `knowledge/index.md`；
 6. `system/log.md` 最近 10 条记录。
 
-`PLAN.md` 是条件读取文件，不是每次小任务的强制启动文件。当任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、基于用户好奇点扩充知识库、多步骤知识库建设，或用户明确要求读取 `PLAN.md` 时，必须在读取 `README.md` 后、读取 `system/handoff.md` 前额外读取 `PLAN.md`。
-
 `README.md` 是稳定入口，不是自动扩展读取清单。Codex 启动时只用它建立项目范围和入口意识；不得因为 README 列出 `USER_GUIDE`、`USER_GUIDE_DETAIL`、overview、schema、detail workflow 或其他链接，就自动继续读取这些文件。只有本轮任务确实需要时才读取扩展文件。不需要建立两份 README；同一个 README 可以同时服务人类用户和 Codex。
+
+`PLAN.md` 是条件读取文件，不是每次小任务的强制启动文件。当任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、基于用户好奇点扩充知识库、多步骤知识库建设，或用户明确要求读取 `PLAN.md` 时，必须在读取 `README.md` 后、读取 `system/handoff.md` 前额外读取 `PLAN.md`。
 
 `PLAN.md` 由用户拥有和维护，用于宏观阶段计划、个人好奇心备忘和研究方向草稿，可以记录讨论点、好奇点、未来探索问题以及需要补充的文献类别或问题方向。它通常不写具体 cite key，不是文献清单、执行日志或 Agent 可自由改写的任务列表；其中模糊、大纲式或探索性的内容不等于 Agent 必须立即执行的任务。未经用户明确要求，Agent 不得覆盖、重写、删除、重排或机械整理其内容。
 
