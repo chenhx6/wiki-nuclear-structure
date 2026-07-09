@@ -1,7 +1,7 @@
 ﻿---
 type: system-checklist
 graph-excluded: true
-updated: 2026-07-06
+updated: 2026-07-10
 ---
 
 # Wiki 系统核查清单
@@ -100,6 +100,12 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 ## F. 摄入、查询与综合
 
 - [ ] 摄入前已查重并检查 aliases。
+- [ ] 摄入时区分了当前研究锚点与 Wiki 收录边界，没有把主线质量区当成知识库边界。
+- [ ] 没有把质量区本身当成唯一排除标准或唯一纳入标准。
+- [ ] 若主线锚点之外的来源被保留为 source-only，理由基于证据密度、复用价值或任务范围，而不是质量区本身。
+- [ ] 用户明确声明某文献、核素、反应体系或方法为重点时，摄入已尊重该优先级，且没有虚构用户参与历史。
+- [ ] 摄入已判断是否存在足以支持轻量 nucleus、method、concept、band 或 project 页的 source-supported 可复用信息。
+- [ ] framework-level 规则没有使用未定义的 AC/AD 缩写；需要时已写成角关联、角分布或展开后的英文全称。
 - [ ] 摄入前已按 `system/workflows/ingest-strategies.md` 运行时短规则选择策略；普通单篇摄入定义明确，未默认读取 `ingest-strategies-detail.md`。
 - [ ] 已确认 `ingest-strategies-detail.md` 的 detail 指 workflow detail，不是 PDF reading depth；不读取 detail 不得降低文献阅读深度。
 - [ ] 策略默认清单只用于检查文中是否报告相关信息，没有为填满清单编造内容。

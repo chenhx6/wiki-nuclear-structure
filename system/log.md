@@ -392,3 +392,9 @@ updated: 2026-07-06
 
 - After syncing `system/handoff.md`, `system/log.md`, and `system/wip-queue.md`, the final article10-11 commit was amended to `f4934e7` and pushed to `origin/main`.
 - Scope remains the reviewed Ekstrom 1979 / Ionescu 1981 supplemental ingest plus the user-requested `PLAN.md` note; `.obsidian/` and `raw/zotero/wiki-inbox.bib` stayed outside the commit.
+
+## [2026-07-10] framework | clarify experimental nuclear-structure scope beyond A130
+
+- Clarified that the current main mass region is a research anchor rather than a Wiki collection boundary.
+- Ingest scope and lightweight page decisions must follow source-supported experimental nuclear-structure value, evidence density, reuse value, comparative value, and explicit user-declared priority instead of mass region alone.
+- Long-term framework text stays abstract and must not infer user participation history or store personal-title / reaction-specific background.

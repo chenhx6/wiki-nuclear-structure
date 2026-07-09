@@ -1,7 +1,7 @@
 ﻿---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-09
+updated: 2026-07-10
 ---
 
 # 跨会话交接
@@ -9,37 +9,34 @@ updated: 2026-07-09
 ## Active handoff
 
 Current active task:
-No active execution task. Article10-11 supplemental ingest, review-finalization, and push are complete.
+No active execution task. The latest completed task is the framework-only scope correction for experimental nuclear-structure ingest beyond the current main anchor.
 
 Current branch / local commit:
-`main` and `origin/main` are now at `f4934e7` (`Ingest supplemental spin-alignment assumption sources`). Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of article10-11 and must remain unstaged.
+`main`. This task only touches framework files. Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of this framework task and must remain unstaged.
 
 Last task status:
-User review corrections were applied to Ekstrom 1979 and Ionescu 1981: EK79-5 now uses the exact `Delta alpha2^MANDY` formula, EK79-9 now describes Fig.6 as a boundary/allowed-region argument rather than a one-sided point cloud, `rho2/rho4` was restored in Ionescu Fig.3 discussion, and all mistaken `o` width references in the project boundary text were normalized back to `σ`. The user then requested and approved a new Ionescu follow-up note about branching-ratio-derived, model-dependent `delta`; this is now recorded as `IO81-10` in the source page and in `PLAN.md`. QMD refresh completed successfully, the final local commit was amended to `f4934e7`, and `git push origin HEAD:main` succeeded on 2026-07-09.
+Framework-only scope correction updated `profile.md`, `AGENTS.md`, `system/workflows/ingest.md`, `USER_GUIDE_DETAIL.md`, `check.md`, `system/memory.md`, `system/handoff.md`, and `system/log.md`. The repository now treats the current main mass region as a research anchor rather than a Wiki collection boundary, requires page-creation decisions to follow source-supported experimental nuclear-structure value and explicit user-declared priority, and keeps long-term records abstract instead of personal-history-specific.
 
 Unfinished items:
-No unresolved article10-11 finalization item remains. Optional scientific follow-up: map the user's actual P-ADO `σ/I` code/input convention to source variables and user-data conditions before writing final paper equations. `E:\imp\prompt\wiki\article10-11_reports.md` is still not created.
+No unresolved framework item remains. Historical log/archive entries may still contain older concrete nucleus or reaction examples; they were not batch-rewritten in this task.
 
 P0 focus:
-1. [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] EK79-2, p.243 Introduction: verify the paper really says angular distributions alone are insufficient for spin/parity or mixing-ratio interpretation without alignment constraints or extra observables.
-2. [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] EK79-5/EK79-6, pp.246 and 248: verify the uncertainty prescription `max{0.15 alpha_MANDY, 0.04}` and the warning about faulty assignments if the alignment error is too small.
-3. [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] EK79-9, p.247 Sec.4.2 + Eq.(5) + Fig.6: verify the paper says the Gaussian magnetic-substate population is too restrictive, not universally invalid.
-4. [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]] IO81-4/5/8: verify the case-specific Gaussian-hypothesis failure, the feeding-aware improved population model, and the pure-E2-to-mixed-transition fitting route.
+P0: none identified.
 
 Remaining P0:
-No locator gap is currently known. EK79-*, IO81-1..10, and SIO-PROJ-16..19 are now user-reviewed on 2026-07-09.
+none identified.
 
 Risks:
-Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, schema files, or unrelated files. `PLAN.md` was user-requested scope in this turn and is already folded into the local final commit. Do not turn Ekstrom 1979 or Ionescu 1981 into direct P-ADO prior papers. Keep `alpha2/alpha4`, `rho2/rho4`, Gaussian width `σ`, CNR/MANDY alignment estimates, statistical tensors, and user-code `sigma/I` as distinct notation layers.
+Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, `PLAN.md`, `system/schema.md`, lint scripts/config/tests, or knowledge science pages when committing this framework correction. Keep long-term framework text abstract; do not infer user participation history or write specific thesis-title / reaction-route background into rules, profile, memory, or guide pages.
 
 Checks:
-Final article10-11 content passes `git diff --check`. `python system/scripts/wiki_lint.py --fail-on error` passes with `0 errors / 10 warnings / 0 info` expected after clearing `IO81-10`. `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` all succeeded; current status shows no pending vectors.
+Framework validation should include `git status --short`, `git diff --stat`, `git diff --check`, the rule-search commands for scope wording, angular-correlation / angular-distribution shorthand, over-specific background, and `python system/scripts/wiki_lint.py --fail-on error`. Existing warnings about reaction parsing, element config, and user-local raw changes may remain.
 
 Next prompt / continuation phrase:
-If continuing the sigma-over-I project, next step is to map the user's actual P-ADO `σ/I` code/input convention to Draper/Zobel/Ekstrom/Ionescu variables and data conditions before writing final equations.
+If continuing from this point, next step is to use the clarified scope rule on future ingest without treating the current main mass region as a collection boundary.
 
 Recent user decisions:
-User reviewed Ekstrom 1979 and Ionescu 1981, corrected the exact MANDY uncertainty formula, corrected the Fig.6 interpretation and the `rho2/rho4` notation, requested that `PLAN.md` add an `ionescu_1981_Improvedanalysis` task about branching-ratio-derived model-dependent `delta`, approved the resulting `IO81-10` wording, and explicitly asked to push.
+User required a framework-only correction: current main mass region is a research anchor, not a Wiki collection boundary; ingest priority must follow experimental nuclear-structure value, reuse value, comparative value, and explicit user-declared priority; long-term repository text must stay abstract and must not record personal-history-specific background.
 
 ## Previous active handoff (superseded 2026-07-09 article4-6 finalization)
 
