@@ -3,9 +3,9 @@ type: concept
 title: 磁子态布居
 aliases: [magnetic substate population, magnetic-substate distribution, m-substate population, M-substate population, substate population]
 created: 2026-07-08
-updated: 2026-07-08
+updated: 2026-07-10
 status: ai-draft
-review_status: unreviewed
+review_status: human-reviewed
 concept_type: gamma-angular-distribution-foundation
 confidence: low
 high_confirmed_by:
@@ -13,69 +13,70 @@ high_confirmed_date:
 tags: [alignment, angular-distribution, fusion-evaporation, pado-support]
 ---
 
-# 磁子态布居（Magnetic Substate Population）
+# 磁子态布居 (Magnetic Substate Population)
 
 ## Definition
 
-磁子态布居是给定自旋态 `J` 中不同 `M` substates 的 population distribution。对束流方向取量子化轴时，非各向同性的 `M` 分布会使随后的 γ 射线角分布出现各向异性。
+磁子态布居是给定自旋态 `J` 中各个 `m` substates 的 population distribution。若该分布不是各向同性，后续的 gamma-ray angular distribution、angular correlation、polarization 等 observables 就会表现出方向依赖。
+
+对 aligned state，常见条件是 `P(-m) = P(m)`；对 oriented state，则不要求 `P(-m) = P(m)`。二者都属于 magnetic-substate population 的不同对称性情形。
 
 ## Source-Level Meaning
 
-[[draper-1970-gaussian-substate-side-feeding]] 使用 `P(M)` 表示 emitting level 的 substate population，并用 `Pσ(M)` 表示 side feeding 引入的 normalized Gaussian population。该来源中的 `σ` 是 Gaussian width，不应直接等同于后续项目中常见的 `σ/I` 输入参数。
+[[draper-1970-gaussian-substate-side-feeding]] 明确使用 `P(M)` 表示 emitting level 的 magnetic-substate population，并用 Gaussian `P_sigma(M)` 描述某类 side-feeding input。
 
-[[zobel-1980-magnetic-substate-distributions]] 与 [[zobel-1983-energy-projectile-alignment]] 使用 attenuation coefficients `αK` 描述 alignment loss and substate-distribution shape. 这些系数与 Gaussian width 是相关描述，但不是同一变量。
+[[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] 使用 `Pm(J)` 作为现代 tracking-array formalism 中的 population notation，并把它与 `alpha_k(J)`、`sigma/J`、angular-distribution coefficients 直接联系起来。
+
+[[zobel-1980-magnetic-substate-distributions]] 与 [[zobel-1983-energy-projectile-alignment]] 更多从 attenuation coefficients 这一层描述 population/alignment 的实验表现，而不是直接给出统一的 `Pm(J)` 参数化。
 
 ## Relevance to P-ADO
 
-P-ADO 或 angular-distribution/polarization fitting 需要把未知的 orientation/alignment 信息转化为可计算响应。具体参数化可能是 Gaussian width、attenuation coefficients 或其他等效/近似描述，必须按来源定义区分。
+P-ADO 或 in-beam angular-distribution / polarization fitting 的核心难点之一，就是把“未知的 population pattern”转写成可计算的 observable response。具体参数化可以是：
+
+- Gaussian width `sigma`
+- normalized width `sigma/I` or `sigma/J`
+- attenuation coefficients
+- feeding-aware mixed population model
+
+这些量都与 `Pm(J)` 有关，但不在同一记号层面。
 
 ## Boundaries
 
-- Gaussian distribution 是常用假设，不是所有 fusion-evaporation 反应的无条件事实。
-- `M`-substate population、spin alignment、attenuation coefficients、Gaussian `σ` 与 `σ/I` 是相关但不相同的描述层。
+- Gaussian population 是常用近似，不是所有 reaction 的无条件事实。
+- magnetic-substate population、spin alignment、attenuation coefficients、Gaussian `sigma`、normalized `sigma/I` / `sigma/J` 是相关但不等同的描述层。
+- 若 direct feeding、side feeding、isomeric feeding、short lifetime、Doppler broadening 或 time-dependent deorientation 明显存在，单一 population form 可能不足。
 
 ## Necessary Assumptions
 
-需要先指定量子化轴、emitting level spin、feeding history 和采用的 population parameterization。
+- 需要先指定量子化轴。
+- 需要先指定 emitting level spin 和正在描述的是 initial population 还是 feeding-modified population。
+- 需要先说明采用的 population parameterization，例如 Gaussian width、attenuation coefficients，或 feeding-aware mixed model。
 
 ## Discriminating Observables
 
-γ-ray angular-distribution coefficients、attenuation coefficients、linear polarization 与 feeding intensities 可共同约束该分布。
+- angular-distribution coefficients
+- angular-correlation coefficients
+- linear polarization
+- pure-E2 calibration transitions
+- feeding intensities and resolved direct-feeding branches
 
 ## Supporting Evidence
 
-Draper 1970、Zobel 1980 和 Zobel 1983 均把 magnetic-substate population 或其 attenuation representation 作为角分布分析的核心输入。
+[[draper-1970-gaussian-substate-side-feeding]]、[[zobel-1980-magnetic-substate-distributions]]、[[zobel-1983-energy-projectile-alignment]] 与 [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] 都把 magnetic-substate population 或其等价 attenuation description 视为 angular-distribution analysis 的核心输入层。
 
 ## Counter-evidence and Competing Interpretations
 
-不同 feeding components、isomeric feeding、β feeding、short lifetimes 和 Doppler broadening 都可能破坏简单 Gaussian interpretation。
+- 不同 feeding components 可以产生不同的 effective population description。
+- simple Gaussian form 可能不足以描述全部 level population。
+- 某些 observable 的变化也可能来自 detector response、deorientation、lifetime effect 或 host-specific context，而不只是 population width。
 
 ## Our Current Position
 
-本页作为 P-ADO 项目的术语边界页；所有具体数值和写作用语必须回到 source locator。
-
-## Necessary Assumptions
-
-需要先指定量子化轴、emitting level spin、feeding history 和采用的 population parameterization。
-
-## Discriminating Observables
-
-γ-ray angular-distribution coefficients、attenuation coefficients、linear polarization 与 feeding intensities 可共同约束该分布。
-
-## Supporting Evidence
-
-Draper 1970、Zobel 1980 和 Zobel 1983 均把 magnetic-substate population 或其 attenuation representation 作为角分布分析的核心输入。
-
-## Counter-evidence and Competing Interpretations
-
-不同 feeding components、isomeric feeding、β feeding、short lifetimes 和 Doppler broadening 都可能破坏简单 Gaussian interpretation。
-
-## Our Current Position
-
-本页作为 P-ADO 项目的术语边界页；所有具体数值和写作用语必须回到 source locator。
+本页作为 P-ADO / angular-distribution 项目的术语边界页使用。任何具体数值、拟合区间或 low-spin / high-spin 结论，都应回到 source locator 或明确标记为 project-level inference。
 
 ## Sources
 
 - [[draper-1970-gaussian-substate-side-feeding]]
 - [[zobel-1980-magnetic-substate-distributions]]
 - [[zobel-1983-energy-projectile-alignment]]
+- [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]

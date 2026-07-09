@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-07-09
+updated: 2026-07-10
 ---
 
 # Pending WIP queue
@@ -10,9 +10,19 @@ This page tracks local WIP tasks that are not yet finalized. Keep entries short.
 
 ## Active entries
 
-None currently.
+No active WIP entries.
 
 ## Completed entries
+
+### Sigma-over-I writing-support synthesis
+- status: user review finalized; final commit created from the prior `WIP review:` task and ready for push on `main`
+- branch: `main`
+- commit: current HEAD final `Create sigma-over-I writing-support synthesis`
+- files: sigma-over-I project page; sigma-over-I writing-support synthesis; repaired `knowledge/index.md`; `sigma-over-i` and `magnetic-substate-population` concept pages; `spin-alignment-attenuation-factor`; overview; handoff/log/queue
+- review needed: none for the current project/synthesis wording round; the low-spin caution remains intentionally bounded rather than universal
+- overview/QMD: overview refreshed; `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` succeeded
+- next action: optional follow-up is to map the actual P-ADO `sigma/I` code/input convention and calibration-transition strategy before writing code-facing equations
+- risks: `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain external/user changes and were not included
 
 ### Article10-11 supplemental spin-alignment assumption sources
 - status: user review finalized; final commit pushed to `origin/main`
@@ -21,7 +31,7 @@ None currently.
 - files: Ekstrom 1979 and Ionescu 1981 source pages; direct-feeding / compound-nucleus-reaction-model / spin-alignment-attenuation-factor pages; sigma-over-I project; overview; PLAN; handoff/log/queue
 - review needed: none for EK79-*, IO81-1..10, or SIO-PROJ-16/17/18/19
 - overview/QMD: overview refreshed; `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` succeeded
-- next action: optional scientific follow-up is to map the actual P-ADO `σ/I` code/input convention before writing final equations
+- next action: optional scientific follow-up is to map the actual P-ADO `sigma/I` code/input convention before writing final equations
 - risks: `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain external/user changes and were not included
 
 ### Article7-9 sigma-over-I practice sources
@@ -31,8 +41,8 @@ None currently.
 - files: Chiara 2012, Summary 2013 and Gray 2020 source pages; sigma-over-I project; spin-parity-assignment/TDPAD/g-factor method pages; sigma-over-I concept; index/overview/questions; handoff/log/queue
 - review needed: none for CH12-*, SB13-*, G20-* or SIO-PROJ-13/14/15; related method/concept pages remain page-level `unreviewed`
 - overview/QMD: overview refreshed; QMD update/embed/status succeeded after sandbox escalation
-- next action: map actual P-ADO `σ/I` code/input convention before writing final equation-level synthesis
-- risks: `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain external/user changes and were not included; Summary 2013 `σ/I = 0.3` stays at guide-level background
+- next action: map actual P-ADO `sigma/I` code/input convention before writing final equation-level synthesis
+- risks: `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain external/user changes and were not included; Summary 2013 `sigma/I = 0.3` stays at guide-level background
 
 ### Article4-6 sigma-over-I deorientation/formalism sources
 - status: user review finalized; WIP ingest amended to final commit and pushed to `origin/main`
@@ -51,7 +61,7 @@ None currently.
 - files: Draper 1970, Zobel 1980, Zobel 1983 source pages; sigma-over-I project; overview; handoff/log/queue
 - review needed: none identified for DR70-3/6/7, Z80-2/3/10/Fig.5, or Z83 source claims
 - overview/QMD: overview refreshed; QMD update/embed/status succeeded after sandbox escalation
-- next action: retry `git push origin HEAD:main` or a working proxy push, then map actual P-ADO `σ/I` input convention and user-data conditions before writing final equations
+- next action: retry `git push origin HEAD:main` or a working proxy push, then map actual P-ADO `sigma/I` input convention and user-data conditions before writing final equations
 - risks: `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain uncommitted external/user changes and were not included
 
 ## Rules

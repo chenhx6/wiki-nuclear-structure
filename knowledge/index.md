@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-09
+updated: 2026-07-10
 ---
 
 # Wiki Index
@@ -108,7 +108,7 @@ updated: 2026-07-09
 - [[interacting-boson-model]] - O(6)+三阶项对 γ 势依赖的扫描。
 - [[interacting-boson-fermion-model]] - IBM 偶偶芯与奇费米子耦合；用于奇 A 低能谱和 E2/M1 observables。
 - [[triaxial-rotor-model]] - wobbling 拓扑的集体基础。
-- [[tilted-axis-cranking]] - Planar/aplanar 旋转平均场。
+- [[tilted-axis-cranking]] - planar/aplanar 旋转平均场。
 - [[particle-rotor-model]] / [[triaxial-particle-rotor-model]] - 粒子与三轴芯耦合。
 - [[random-phase-approximation]] / [[triaxial-projected-shell-model]] - wobbling 的微观描述。
 - [[cranked-nilsson-strutinsky-model]] / [[cranked-shell-model]] - 高自旋组态能量、Routhian 与 signature 响应。
@@ -144,6 +144,7 @@ updated: 2026-07-09
 
 ## Synthesis
 
+- [[sigma-over-i-assumptions-and-mixing-ratio-extraction]] - `sigma/I` 假设、alignment / feeding / deorientation 边界与 P-ADO `delta` 提取动机的小型 writing-support synthesis。
 - [[gamma-soft-vs-gamma-rigid-diagnostics]] - γ-soft 的低能判据、形状相变、配对-三轴耦合、`136Sm` 形变演化与 low-spin 外推边界。
 - [[low-spin-wobbling-gamma-soft-deformation-and-alternative-interpretations]] - 连接 low-spin wobbling、γ-soft 背景、TiP/IBFM alternatives、共享实验判据与未来数据入口的阶段性综合。
 - [[chiral-rotation-from-aplanar-tac]] - 手征对称性框架与实验限制。

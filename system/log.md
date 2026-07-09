@@ -398,3 +398,21 @@ updated: 2026-07-06
 - Clarified that the current main mass region is a research anchor rather than a Wiki collection boundary.
 - Ingest scope and lightweight page decisions must follow source-supported experimental nuclear-structure value, evidence density, reuse value, comparative value, and explicit user-declared priority instead of mass region alone.
 - Long-term framework text stays abstract and must not infer user participation history or store personal-title / reaction-specific background.
+
+## [2026-07-10] synthesis-planning | sigma-over-I writing-support synthesis created locally
+
+- Completed a readiness audit across the sigma-over-I project, 11 source notes, and related concept/method pages; no current source-note metadata/locator/kind blocker was found.
+- Added `knowledge/synthesis/sigma-over-i-assumptions-and-mixing-ratio-extraction.md` and updated the sigma-over-I project page plus `knowledge/index.md`.
+- This is a local WIP review state only: overview/QMD refresh is deferred, push is intentionally not done, and human review is still required for terminology mapping and paper-evidence-gate boundaries.
+
+## [2026-07-10] review-follow-up | repaired index display and tightened sigma-over-I wording
+
+- Restored `knowledge/index.md` from a clean base after user-reported display corruption, repaired the handoff title line, and kept the new sigma-over-I synthesis entry in the index.
+- Updated the sigma-over-I project/synthesis/concept chain to reflect the user's review: split the Ekstrom Gaussian-limitation and threshold/feeding conclusions, preserved the reaction-threshold wording boundary, and added a bounded low-spin caution plus an explicit user-analysis normalization note that is not source-backed evidence.
+- State remains local review only: no push, overview/QMD still deferred, and the current WIP review commit should be amended rather than duplicated.
+
+## [2026-07-10] review-finalized | sigma-over-I synthesis planning approved for finalization
+
+- User accepted the bounded conclusion that the present 11-paper package does not yet supply direct low-spin-specific `sigma/I` sensitivity evidence strong enough for a stronger universal claim.
+- Promoted the reviewed sigma-over-I project/synthesis/terminology pages to `review_status: human-reviewed`, refreshed `knowledge/overview.md`, and completed `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status`.
+- The prior local `WIP review:` commit was converted into the final `Create sigma-over-I writing-support synthesis` commit; only the push remained at this checkpoint.

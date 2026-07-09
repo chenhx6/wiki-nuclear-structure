@@ -2,12 +2,35 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-09
+updated: 2026-07-10
 ---
 
 # Knowledge Base Health Dashboard
 
-## Current Snapshot: 2026-07-09
+## Current Snapshot: 2026-07-10
+
+This snapshot reflects the finalized sigma-over-I synthesis-planning round after user review. The bounded writing-support synthesis, the sigma-over-I project evidence map, and the related terminology pages used in this round were reviewed on 2026-07-10. The user also confirmed that the current 11-source package does not yet contain direct low-spin-specific `sigma/I` sensitivity evidence strong enough to support a universal low-spin claim.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 31 | No new source page was added in this review-finalization round. |
+| nucleus pages | 9 | Added [[152dy]] as a narrow Lauritsen 2025 `152Dy` experiment/observable entry. |
+| experiment pages | 14 | Added [[atlas-gretina-152dy-ca48-191mev]]. |
+| concept pages | 21 | `[[sigma-over-i]]` and `[[magnetic-substate-population]]` were revised and user-reviewed for terminology boundaries. |
+| method pages | 13 | Added spin-parity-assignment, TDPAD, and g-factor measurement method anchors. |
+| observable pages | 12 | `[[spin-alignment-attenuation-factor]]` was revised and user-reviewed for EK79 threshold wording and notation boundaries. |
+| model pages | 14 | Added [[compound-nucleus-reaction-model]]. |
+| project pages | 6 | `[[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]]` is now user-reviewed after synthesis planning. |
+| synthesis pages | 6 | Added and user-reviewed [[sigma-over-i-assumptions-and-mixing-ratio-extraction]]. |
+| source pages unreviewed | 0 | The two new article10-11 source pages were moved to `review_status: human-reviewed`. |
+| source claim-level `needs_review: true` | 0 | EK79-1--EK79-9, IO81-1--IO81-9, and follow-up IO81-10 were cleared by user review on 2026-07-09. |
+| project claim-level `needs_review: true` | 0 | The current sigma-over-I project/synthesis wording round has no remaining claim-level review queue. |
+| claim missing locator | 0 | Lint found no claim locator gaps. |
+| source missing raw_file / citation_key | 0 / 0 | Lint found no missing source raw/citation metadata. |
+| raw hash coverage | 31/31 | Lint reports all source pages matched raw hashes after this round. |
+| wikilinks | 1481 | Lint count after the synthesis-planning and review-finalization round. |
+
+## Previous Snapshot: 2026-07-09
 
 This snapshot reflects the finalized article10-11 supplemental ingest after user review corrections and the additional Ionescu branching-ratio / model-dependent-`delta` follow-up note. Ekstrom 1979, the Ionescu 1981 source package, and the follow-up IO81-10 note were user-reviewed on 2026-07-09.
 
@@ -28,8 +51,6 @@ This snapshot reflects the finalized article10-11 supplemental ingest after user
 | source missing raw_file / citation_key | 0 / 0 | Lint found no missing source raw/citation metadata. |
 | raw hash coverage | 31/31 | Lint reports all source pages matched raw hashes after this round. |
 | wikilinks | 1430 | Lint count after adding the IO81 branching-ratio follow-up note. |
-
-## Previous Snapshot: 2026-07-08
 
 | 指标 | 当前值 | 说明 |
 |---|---:|---|
