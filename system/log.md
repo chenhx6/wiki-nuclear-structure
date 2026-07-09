@@ -312,4 +312,4 @@ updated: 2026-07-06
 - Applied user review edits to C96-4, R12-7 and L25-14; marked Cejnar 1996, Radeck 2012, Lauritsen 2025 and SIO-PROJ-7--SIO-PROJ-12 reviewed.
 - Added [[152dy]] and [[atlas-gretina-152dy-ca48-191mev]] for Lauritsen 2025 `152Dy` experimental information.
 - Lint passed with 0 errors / 10 warnings / 0 info; lint unittest passed; QMD update/embed/status succeeded.
-- Final commit created and article4-6 WIP queue entry moved to completed; push to GitHub failed twice due HTTPS connection timeout.
+- Final commit created and article4-6 WIP queue entry moved to completed; final commit pushed to `origin/main`.

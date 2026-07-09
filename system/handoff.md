@@ -9,16 +9,16 @@ updated: 2026-07-09
 ## Active handoff
 
 Current active task:
-None. Article4-6 source review finalization for the sigma-over-I project is complete in local Git; push to `origin/main` failed twice because GitHub HTTPS connection timed out.
+None. Article4-6 source review finalization for the sigma-over-I project is complete and pushed to `origin/main`.
 
 Current branch / local commit:
-`main`; local HEAD is final commit `Finalize article4-6 sigma-over-I source review` (amended from WIP `0e3414d`) and remains not pushed because `git push origin HEAD:main` failed twice with GitHub 443 connection timeout. Pre-existing uncommitted external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, `knowledge/concepts/spin-alignment.md`, and `raw/zotero/wiki-inbox.bib`; they are not part of this finalization and must not be staged.
+`main`; local HEAD is final commit `Finalize article4-6 sigma-over-I source review` (amended from WIP `0e3414d`) and pushed to `origin/main` per user request. Pre-existing uncommitted external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, `knowledge/concepts/spin-alignment.md`, and `raw/zotero/wiki-inbox.bib`; they are not part of this finalization and must not be staged.
 
 Last task status:
 User reviewed all P0 plus P1/P2/source-page items. Applied final wording edits to C96-4, R12-7 and L25-14; marked Cejnar 1996, Radeck 2012 and Lauritsen 2025 source claims reviewed; marked project rows SIO-PROJ-7--SIO-PROJ-12 reviewed; added [[152dy]] and [[atlas-gretina-152dy-ca48-191mev]] for Lauritsen 2025 `152Dy` experimental information. Updated [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]], [[index]], [[overview]], lint element config, WIP queue and log.
 
 Unfinished items:
-Push remains unfinished due network connectivity to GitHub. Retry when network/proxy is available with `git push origin HEAD:main`. No article4-6 P0 remains. New `152Dy` nucleus/experiment pages are narrow Lauritsen-derived entries and remain page-level `unreviewed` because they were created during finalization. Future work should map the user's actual P-ADO `sigma/I` code/input convention before writing final paper equations.
+No article4-6 P0 remains. New `152Dy` nucleus/experiment pages are narrow Lauritsen-derived entries and remain page-level `unreviewed` because they were created during finalization. Future work should map the user's actual P-ADO `sigma/I` code/input convention before writing final paper equations.
 
 P0 focus:
 P0: none identified after user review. Keep the project boundary that Cejnar 1996, Radeck 2012 and Lauritsen 2025 are not a universal fusion-evaporation `sigma/I` prior.
