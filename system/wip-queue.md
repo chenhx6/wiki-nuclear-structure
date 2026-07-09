@@ -10,7 +10,15 @@ This page tracks local WIP tasks that are not yet finalized. Keep entries short.
 
 ## Active entries
 
-None currently.
+### Article10-11 supplemental spin-alignment assumption sources
+- status: local final commit `4fb459c` exists on `main`; QMD refresh finished, but push is still pending because the first GitHub connection attempt failed
+- branch: `main`
+- commit: `4fb459c` (`Ingest supplemental spin-alignment assumption sources`)
+- files: Ekstrom 1979 and Ionescu 1981 source pages; direct-feeding / compound-nucleus-reaction-model / spin-alignment-attenuation-factor pages; sigma-over-I project; overview; PLAN; handoff/log/queue
+- review needed: none for EK79-*, IO81-1..10, or SIO-PROJ-16/17/18/19
+- overview/QMD: overview updated locally to reflect the follow-up note; `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` succeeded
+- next action: retry `git push origin HEAD:main`
+- risks: keep `alpha2/alpha4`, `rho2/rho4`, MANDY/CNR alignment estimates, Gaussian width `σ`, and user-code `sigma/I` distinct; `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain external changes and must stay out of the commit
 
 ## Completed entries
 

@@ -16,13 +16,13 @@ tags: [pado, mixing-ratio, angular-distribution, polarization, alignment, sigma-
 
 ## Active Summary for Agents
 
-Current task: article7-9 source-note ingest completed for experimental-practice / reference-guide / TDPAD boundary examples supporting the question why a single preset `σ/I` value is unsafe or model-dependent in in-beam γ-ray mixing-ratio extraction.
+Current task: article10-11 supplemental source-note ingest has been user-reviewed and finalized as part of the sigma-over-I alignment-limitation evidence map.
 
-Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]; [[chiara-2012-cu65-cu67-core-coupled-protons]]; [[summary-2013-bases-spin-parity-assignments]]; [[gray-2020-hyperfine-fields-g-factor-measurements]].
+Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]; [[chiara-2012-cu65-cu67-core-coupled-protons]]; [[summary-2013-bases-spin-parity-assignments]]; [[gray-2020-hyperfine-fields-g-factor-measurements]]; [[ekstrom-1979-spin-alignment-attenuation-a61-a67]]; [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]].
 
-In-progress / pending source rows: none for article7-9 source-note ingest. The three article7-9 source pages and project claims were user-reviewed and finalized on 2026-07-09.
+In-progress / pending source rows: none for article10-11 source-note ingest. Ekstrom/Ionescu source claims and SIO-PROJ-16..19 were user-reviewed and finalized on 2026-07-09.
 
-High-risk scope boundary: Draper and Cejnar `σ` are Gaussian widths for side-feeding magnetic-substate population; Summary 2013 gives a guide-level typical `σ/I = 0.3`; Lauritsen 2025 directly uses Gaussian `Pm(J)` and normalized `σ/J`; Gray 2020 discusses empirical `σ/I ≈ 0.35` and its failure in an isomeric TDPAD context. These entries all touch alignment/orientation practice, but they do not by themselves define a universal prior.
+High-risk scope boundary: Draper and Cejnar `σ` are Gaussian widths for side-feeding magnetic-substate population; Ekstrom 1979 uses spin-alignment attenuation factors `alpha2/alpha4` and MANDY/CNR alignment estimates; Ionescu 1981 uses Gaussian width `σ` plus explicit discrete direct-feeding terms and discusses `rho2/rho4` statistical-tensor factors rather than Ekstrom-style attenuation factors; Summary 2013 gives a guide-level typical `σ/I = 0.3`; Lauritsen 2025 directly uses Gaussian `Pm(J)` and normalized `σ/J`; Gray 2020 discusses empirical `σ/I ≈ 0.35` and its failure in an isomeric TDPAD context. These entries all touch alignment/orientation practice, but they do not by themselves define a universal prior.
 
 ## Research Question
 
@@ -36,11 +36,11 @@ This is an evidence map / writing-support project for NST paper and future thesi
 
 - H1: Presetting a single `σ/I` can hide feeding- and condition-dependent alignment uncertainty.
 - H2: P-ADO should expose the coupling between `δ` and alignment/population assumptions rather than treat alignment as a universal constant.
-- H3: The three ingested sources motivate caution but do not yet define a final prior range for user data.
+- H3: The accumulated source set motivates caution but does not yet define a final prior range for user data.
 
 ## Evidence Available
 
-Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, Zobel 1983 projectile/energy/feeding dependence in `67Ga`, Cejnar 1996 spin-deorientation calculation in `Pd(α,2nγ)Cd` reactions, Radeck 2012 time-dependent deorientation correction in inverse Coulomb excitation + RDDS, Lauritsen 2025 modern tracking-array angular-distribution / polarization formalism, Chiara 2012 as a spectroscopy practice example using assumed `σ/I`, Summary 2013 as reference-guide high-spin assignment background with typical `σ/I = 0.3`, and Gray 2020 as a TDPAD / `g`-factor boundary case where empirical `σ/I` expectations can fail.
+Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, Zobel 1983 projectile/energy/feeding dependence in `67Ga`, Ekstrom 1979 compiled spin-alignment attenuation factors plus MANDY/CNR uncertainty and Gaussian-limitation arguments, Ionescu 1981 feeding-aware angular-distribution analysis in `167Tm`, Cejnar 1996 spin-deorientation calculation in `Pd(α,2nγ)Cd` reactions, Radeck 2012 time-dependent deorientation correction in inverse Coulomb excitation + RDDS, Lauritsen 2025 modern tracking-array angular-distribution / polarization formalism, Chiara 2012 as a spectroscopy practice example using assumed `σ/I`, Summary 2013 as reference-guide high-spin assignment background with typical `σ/I = 0.3`, and Gray 2020 as a TDPAD / `g`-factor boundary case where empirical `σ/I` expectations can fail.
 
 ## Symbol Mapping
 
@@ -48,6 +48,10 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 |---|---|---|
 | `σ` in Draper 1970 | Gaussian width of side-feeding magnetic-substate population `Pσ(M)` | Do not equate directly with `σ/I`; use as evidence that width assumptions are model choices. |
 | `A2`, `A4` | Legendre angular-distribution coefficients for `W(θ)` | Observables affected by population/alignment and transition properties. |
+| `rho_k` in Ionescu 1981 | Statistical-tensor factor built from magnetic-substate population `Pm(Ji)`; Fig.3 uses `rho2` and `rho4` for pure-`E2` tests | Related to attenuation-factor language, but not identical notation; do not silently relabel `rho_k` as `alpha_k`. |
+| `alpha2`, `alpha4` in Ekstrom 1979 | Spin-alignment attenuation factors reduced from pure-E2 angular distributions | Alignment descriptors constrained by pure-E2 data; not the same symbol layer as Gaussian width `σ` or user-code `σ/I`. |
+| MANDY / CNR alignment estimate | Compound-nucleus-reaction-model prediction for alignment/population parameters derived from transmission probabilities | A model-based alignment estimate that needs its own uncertainty budget; not the same thing as P-ADO marginalization over `σ/I`. |
+| `σ` in Ionescu 1981 | Width parameter for the Gaussian side-feeding contribution to the substate population | In the improved model it describes side feeding only, not the total population of a level. |
 | `αK` in Zobel 1980 | Attenuation coefficients `PK/BK` for actual partial alignment relative to complete alignment | Related to alignment, but not identical to Gaussian `σ` or normalized `σ/I`. |
 | `Uλ` in Cejnar 1996 | Deorientation coefficient for a particle or γ transition from `Ji` to `Jf` carrying angular momentum `L` | Propagates orientation flow through reaction routes; not the same as `σ`, `σ/I`, `σ/J` or measured `αK`. |
 | `Gk(t)` / `Gk(d)` in Radeck 2012 | Time- or distance-dependent attenuation factor for hyperfine-driven deorientation in RDDS angular correlations | Related deorientation correction, but not a side-feeding Gaussian width or detector `Qk`. |
@@ -60,6 +64,7 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | projectile / energy / feeding condition | Experimental context controlling alignment attenuation in Zobel 1983 | Do not transfer a fixed alignment parameter across different conditions without check. |
 | magnetic-substate population `P(M)` | Population over `M` substates of the emitting level | Underlying physical/statistical object behind alignment descriptions. |
 | side feeding | Population component from outside the main cascade/band | One mechanism that changes `P(M)` and therefore angular distributions. |
+| direct gamma feeding | Population carried by explicitly observed discrete parent-state gamma transitions | Can require a separate term in the population model rather than being folded into one global Gaussian width. |
 
 ## Source-by-Source Evidence Table
 
@@ -74,12 +79,20 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | [[chiara-2012-cu65-cu67-core-coupled-protons]] | experiment-ingest + targeted-ingest + project-ingest | Gives a concrete spectroscopy practice example where `σ/I = 0.5` is assumed to reproduce known transitions and a different assumed `σ/I` changes the fitted `δ` for one `65Cu` line. | CH12-1 to CH12-8 | P0 resolved: CH12-3, CH12-5 |
 | [[summary-2013-bases-spin-parity-assignments]] | reference-guide-ingest + targeted-ingest + project-ingest | Records high-spin assignment heuristics for angular distributions and DCO ratios at a typical `σ/I = 0.3`, making the practice background explicit while keeping it at guide level. | SB13-1 to SB13-7 | P0 resolved: SB13-2, SB13-4, SB13-7 |
 | [[gray-2020-hyperfine-fields-g-factor-measurements]] | experiment-ingest + method-ingest + project-ingest | Shows in a TDPAD / `g`-factor context that empirical alignment expectations such as `σ/I ≈ 0.35` can fail and that reduced `R(t)` amplitude does not uniquely diagnose field-free implantation. | G20-1 to G20-9 | P0 resolved: G20-4, G20-6, G20-7 |
+| [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] | experiment-ingest + method-ingest + project-ingest | Compiles pure-E2 angular distributions into `alpha2/alpha4`, tests MANDY/CNR alignment estimates, prescribes an uncertainty budget, and argues that a simple Gaussian magnetic-substate population is too restrictive. | EK79-1 to EK79-9 | P0 pending: EK79-2, EK79-5, EK79-9 |
+| [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]] | experiment-ingest + method-ingest + project-ingest | Shows in `165Ho(alpha,2n)167Tm` that the global Gaussian hypothesis fails and that a feeding-aware model with Gaussian side feeding plus discrete direct feeding can improve spin and `delta` analysis. | IO81-1 to IO81-9 | P0 pending: IO81-4, IO81-5, IO81-8 |
 
 ## Experimental-Practice Evidence
 
 The article7-9 sources add a different layer from the earlier formalism and deorientation papers. They show that assumed or typical orientation parameters are embedded in real spectroscopy practice and reference-guide language, but that these assumptions remain notation-sensitive and context-sensitive.
 
 Chiara 2012 is the most direct spectroscopy example: a working `σ/I` value is chosen because it reproduces known transitions, and a single transition's fitted `δ` changes when the assumed alignment changes. Summary 2013 is weaker scientifically but important culturally: it documents that high-spin assignment heuristics are often quoted with a typical orientation parameter, here `σ/I = 0.3`. Gray 2020 is the counterweight: in an isomeric TDPAD context, an empirical `σ/I ≈ 0.35` expectation can fail, and amplitude alone does not tell you whether the issue is alignment or field-free implantation.
+
+## Supplemental Core Evidence
+
+Ekstrom 1979 strengthens the older alignment-limitation evidence chain from a complementary direction. Instead of starting from a fit ambiguity alone, it compiles pure-E2 data into `alpha2/alpha4`, tests CNR/MANDY alignment estimates against experiment, gives an explicit uncertainty prescription for those estimates, and warns that too-small alignment errors can lead to faulty spin/parity or mixing-ratio assignments.
+
+Ionescu 1981 then shows what to do when a global Gaussian substate-population model fails in a carefully measured case. It uses pure-E2 transitions and their `rho2/rho4` behavior to test the Gaussian hypothesis, finds it inadequate for `167Tm`, and replaces it with a model that keeps Gaussian side feeding but adds discrete direct gamma-feeding contributions explicitly before fitting mixed transitions.
 
 ## Evidence Map
 
@@ -100,6 +113,10 @@ Chiara 2012 is the most direct spectroscopy example: a working `σ/I` value is c
 | SIO-PROJ-13 | In practical spectroscopy work, an assumed `σ/I` may be selected because it reproduces known reference transitions, and a different assumed value can change the fitted `δ` for a specific line. | CH12-3 to CH12-5 | Wiki synthesis / project note | Based on one `65Cu` angular-distribution analysis and one `1115 keV` example; not a universal fitting rule. | false |
 | SIO-PROJ-14 | Reference-guide high-spin assignment heuristics explicitly use a typical `σ/I = 0.3`; this is background for spectroscopy practice, not a universal fusion-evaporation prior. | SB13-1 to SB13-5 | Wiki synthesis / project note | Source is a Nuclear Data Sheets guide, not an original measurement or a theory derivation. | false |
 | SIO-PROJ-15 | In an isomeric TDPAD / `g`-factor context, reduced `R(t)` amplitudes can indicate weaker-than-expected alignment and do not uniquely determine the field-free fraction; empirical `σ/I ≈ 0.35` expectations may fail and require independent alignment checks. | G20-3 to G20-8 | Wiki synthesis / project note | Host-specific Fe/Gd implantation and hyperfine-field physics; useful boundary case, not a direct P-ADO fitting prescription. | false |
+| SIO-PROJ-16 | Angular-distribution interpretation of spin/parity or mixing ratio requires externally constrained alignment information or an explicit population model; when CNR/MANDY alignment estimates are used, they need a nontrivial uncertainty budget rather than a near-fixed value. | EK79-2, EK79-5, EK79-6 | Wiki synthesis / project note | Ekstrom 1979 uses `alpha2/alpha4` and MANDY/CNR estimates, not user-code `σ/I`; use it as alignment-uncertainty evidence, not as a direct prior prescription. | false |
+| SIO-PROJ-17 | A simple Gaussian magnetic-substate population can be too restrictive, and direct-population alignment estimates become unreliable for levels sufficiently far above threshold when unmodeled gamma feeding is appreciable. | EK79-7 to EK79-9 | Wiki synthesis / project note | Based on near-threshold `(alpha,n)` / `(alpha,p)` reactions in `A=61-67`; do not generalize into a universal rejection of all Gaussian-like models. | false |
+| SIO-PROJ-18 | Pure-E2 transitions can be used to test and calibrate a population model; in `167Tm`, the global Gaussian hypothesis fails, while a model that combines Gaussian side feeding with discrete direct feeding gives better angular-distribution fits and sharper spin assignments. | IO81-3 to IO81-7 | Wiki synthesis / project note | Source is a detailed `165Ho(alpha,2n)167Tm` case study; it supports feeding-aware modeling, not a universal replacement formula for every reaction. | false |
+| SIO-PROJ-19 | Angular-distribution-based `delta` extraction can depend on first constraining the population-width model from competing pure-E2 transitions; this is a concrete source-level example that feeding-aware alignment modeling may be needed before trusting mixed-transition assignments. | IO81-8, IO81-9 | Wiki synthesis / project note | The fitted width parameter describes side feeding in the improved model, not a direct one-to-one replacement for user-code `σ/I`. | false |
 
 ## How This Supports P-ADO / NST Introduction
 
@@ -110,6 +127,12 @@ Zobel 1980 adds the direct angular-distribution-analysis reason: two measured an
 Zobel 1980 also supplies a condition checklist for when Gaussian/ALY assumptions are plausible: no β feeding, no preceding isomeric state, and long enough lifetime to neglect Doppler broadening. Fig.5 is important for the writing argument because it shows that lifetime-dependent Doppler line-shape loss can move apparent `αK` pairs, not merely broaden a peak aesthetically.
 
 Zobel 1983 adds the experimental context: alignment changes with projectile, energy and feeding balance, and angular-distribution/polarization constraints should be kept condition-consistent. Together, these sources motivate explicit P-ADO handling of alignment uncertainty; they do not by themselves prescribe one universal `σ/I` prior.
+
+Ekstrom 1979 sharpens that caution in a more operational way. It says directly that angular distributions by themselves do not settle spin/parity or `delta` unless alignment is otherwise constrained, and it attaches an explicit uncertainty prescription to model-predicted alignment. For the NST introduction, this is valuable because it justifies treating alignment inputs as uncertain observables or model outputs, not silent constants.
+
+Ekstrom 1979 also strengthens the case against overconfident Gaussian defaults. It shows both that gamma feeding above threshold can invalidate direct-population alignment estimates and that a simple Gaussian magnetic-substate population is too restrictive for the compiled `A=61-67` data. That is not a universal anti-Gaussian theorem, but it is strong evidence against treating one narrow Gaussian prior as automatically safe.
+
+Ionescu 1981 provides the clearest feeding-aware bridge in this project. It shows a workflow in which pure-E2 transitions are first used to test and calibrate the population model, after which mixed transitions are analyzed for `delta` within the resulting width range. For P-ADO writing, this is a concrete precedent for saying that the population model may need to be constrained empirically before one trusts mixed-transition inference.
 
 Cejnar 1996 adds the deorientation-calculation layer: the side-feeding Gaussian width can be estimated from reaction-specific angular-momentum routes rather than treated as a free universal constant. Its Fig.7 is a useful warning for the NST introduction because changing the imposed `σ` interval changes the `δ` inference for an `M1+E2` transition. The boundary is equally important: this is a statistical-model result for selected `(α,2nγ)` reactions and does not prove a transferable `σ/I` prior.
 
@@ -132,6 +155,8 @@ Gray 2020 adds a method-boundary example from TDPAD and `g`-factor measurements.
 - Need user-data-specific check of reaction, beam energy, target, detector geometry, feeding pattern and polarization/ADO acquisition conditions.
 - Need a source-backed mapping between the project's working `σ/I` convention and Lauritsen 2025 `sigma/J` before writing final code-facing equations.
 - Need determine whether the user's analysis has Chiara-like calibration transitions that could test an assumed alignment-width parameter empirically.
+- Need determine whether the user's data contain pure-E2 calibration transitions that could support an Ionescu-style population-model constraint before mixed-transition fitting.
+- Need assess whether any Ekstrom-style alignment uncertainty budget or Ionescu-style discrete-feeding term can be approximated realistically for the user's reaction and observed feeding pattern.
 - Need check whether isomeric feeding or delayed components could make Gray-style amplitude/alignment cautions relevant to the user's data.
 
 ## Future Writing Hooks
@@ -165,8 +190,9 @@ Gray 2020 adds a method-boundary example from TDPAD and `g`-factor measurements.
 ## Next Actions
 
 1. Map the actual P-ADO code/input convention for `σ/I` to the source-level variables.
-2. Add user-data-specific reaction and detector condition records before turning the project into writing text.
-3. Continue the supplemental core round with Ekstrom 1979 and Ionescu 1981 before attempting a formal synthesis.
+2. Check whether the user's data include pure-E2 calibration transitions and a reconstructible feeding history that would support an Ionescu-style constraint on the population model.
+3. Add user-data-specific reaction, detector and feeding-condition records before turning the project into writing text.
+4. Decide whether the next source round should emphasize empirical alignment uncertainties, explicit feeding models, or code-facing notation mapping before attempting a formal synthesis.
 
 ## Related Pages
 

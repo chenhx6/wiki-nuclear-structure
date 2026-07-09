@@ -9,24 +9,25 @@ updated: 2026-07-09
 
 ## Current Snapshot: 2026-07-09
 
-This snapshot reflects the finalized article7-9 three-paper batch ingest for sigma-over-I experimental-practice / reference-guide / TDPAD boundary sources. The three new source pages and their project claims were user-reviewed on 2026-07-09.
+This snapshot reflects the finalized article10-11 supplemental ingest after user review corrections and the additional Ionescu branching-ratio / model-dependent-`delta` follow-up note. Ekstrom 1979, the Ionescu 1981 source package, and the follow-up IO81-10 note were user-reviewed on 2026-07-09.
 
 | metric | current value | note |
 |---|---:|---|
-| source pages | 29 | Added Chiara 2012, Summary 2013, and Gray 2020 for the sigma-over-I/P-ADO practice/boundary round. |
+| source pages | 31 | Added Ekstrom 1979 and Ionescu 1981 for the sigma-over-I supplemental alignment-limitation round. |
 | nucleus pages | 9 | Added [[152dy]] as a narrow Lauritsen 2025 `152Dy` experiment/observable entry. |
 | experiment pages | 14 | Added [[atlas-gretina-152dy-ca48-191mev]]. |
-| concept pages | 20 | No new concept page this round; updated sigma-over-I boundaries. |
+| concept pages | 21 | Added [[direct-feeding]]. |
 | method pages | 13 | Added spin-parity-assignment, TDPAD, and g-factor measurement method anchors. |
-| observable pages | 11 | Updated attenuation-coefficient boundary. |
+| observable pages | 12 | Added [[spin-alignment-attenuation-factor]] and updated attenuation-coefficient boundary. |
+| model pages | 14 | Added [[compound-nucleus-reaction-model]]. |
 | project pages | 6 | Updated sigma-over-I evidence map. |
-| source pages unreviewed | 0 | The three article7-9 source pages were moved to `review_status: human-reviewed`. |
-| source claim-level `needs_review: true` | 0 | CH12-1--CH12-8, SB13-1--SB13-7, and G20-1--G20-9 were cleared by user review on 2026-07-09. |
-| project claim-level `needs_review: true` | 0 | SIO-PROJ-13--SIO-PROJ-15 were cleared by user review on 2026-07-09. |
+| source pages unreviewed | 0 | The two new article10-11 source pages were moved to `review_status: human-reviewed`. |
+| source claim-level `needs_review: true` | 0 | EK79-1--EK79-9, IO81-1--IO81-9, and follow-up IO81-10 were cleared by user review on 2026-07-09. |
+| project claim-level `needs_review: true` | 0 | SIO-PROJ-16--SIO-PROJ-19 were cleared by user review on 2026-07-09. |
 | claim missing locator | 0 | Lint found no claim locator gaps. |
 | source missing raw_file / citation_key | 0 / 0 | Lint found no missing source raw/citation metadata. |
-| raw hash coverage | 29/29 | Lint reports all source pages matched raw hashes after this round. |
-| wikilinks | 1395 | Lint count. |
+| raw hash coverage | 31/31 | Lint reports all source pages matched raw hashes after this round. |
+| wikilinks | 1430 | Lint count after adding the IO81 branching-ratio follow-up note. |
 
 ## Previous Snapshot: 2026-07-08
 

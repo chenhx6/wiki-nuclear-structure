@@ -1,7 +1,7 @@
 ---
 type: observable
 title: 取向衰减系数
-aliases: [attenuation coefficient, spin-alignment attenuation factor, attenuation factor, alpha K, αK, aK, Gk, time-dependent attenuation factor]
+aliases: [attenuation coefficient, alignment attenuation coefficient, attenuation factor, alpha K, αK, aK, Gk, time-dependent attenuation factor]
 created: 2026-07-08
 updated: 2026-07-09
 status: ai-draft

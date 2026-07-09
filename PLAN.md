@@ -13,6 +13,7 @@
 3. 摄入 `131Ba` 手征带原始论文；
 4. 补充 `137Nd`、`133Ce` 等核素的寿命、B(M1)、B(E2) 原始测量；
 5. 确认 GitHub 的 `Wiki lint` Action 为绿色。
+6. 继续补充 `ionescu_1981_Improvedanalysis`：关注用 branching ratios 提取、且带模型依赖的混合比 `delta` 证据，并补入 source 页。
 
 ## 中期计划
 

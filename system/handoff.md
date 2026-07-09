@@ -9,36 +9,37 @@ updated: 2026-07-09
 ## Active handoff
 
 Current active task:
-No active ingest. Latest completed task is article7-9 review-finalization for the `sigma-over-i` project.
+Article10-11 supplemental ingest is finalized after review corrections and the approved Ionescu branching-ratio / model-dependent-`delta` follow-up; only push retry remains.
 
 Current branch / local commit:
-`main` contains the article7-9 final commit derived from the prior local `WIP ingest:` commit and pushed to `origin/main` in this round. Pre-existing uncommitted external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of article7-9 and were not staged.
+`main` currently has local not-pushed final commit `4fb459c` (`Ingest supplemental spin-alignment assumption sources`). Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of article10-11 and must remain unstaged.
 
 Last task status:
-Article7-9 was finalized after user review. The three source pages [[chiara-2012-cu65-cu67-core-coupled-protons]], [[summary-2013-bases-spin-parity-assignments]], and [[gray-2020-hyperfine-fields-g-factor-measurements]] are now `human-reviewed`; CH12-*, SB13-* and G20-* claims are all `needs_review: false`; project rows SIO-PROJ-13/14/15 are also `needs_review: false`. Summary 2013 was corrected to `σ/I = 0.3`, Chiara CH12-5 was softened to "moves toward larger-magnitude adopted/literature `δ` values", and Gray 2020 now records several source-backed factors that change the inferred alignment scale. `python system/scripts/wiki_lint.py --fail-on error` passes with 0 errors / 10 warnings / 0 info. QMD `update` / `embed -c nuclear-knowledge` / `status` succeeded after sandbox escalation.
+User review corrections were applied to Ekstrom 1979 and Ionescu 1981: EK79-5 now uses the exact `Delta alpha2^MANDY` formula, EK79-9 now describes Fig.6 as a boundary/allowed-region argument rather than a one-sided point cloud, `rho2/rho4` was restored in Ionescu Fig.3 discussion, and all mistaken `o` width references in the project boundary text were normalized back to `σ`. The user then requested and approved a new Ionescu follow-up note about branching-ratio-derived, model-dependent `delta`; this is now recorded as `IO81-10` in the source page and in `PLAN.md`. QMD refresh completed successfully, the final local commit was amended to `4fb459c`, and the first push attempt failed because GitHub was unreachable on port 443.
 
 Unfinished items:
-No unresolved P0 remains for article7-9. Next substantive task is still to map the user's actual P-ADO `σ/I` code/input convention to the source-side `σ/J` / `Pm(J)` formalism before writing final equation-level NST text.
+Retry `git push origin HEAD:main` when GitHub connectivity is available. `E:\imp\prompt\wiki\article10-11_reports.md` is still not created.
 
 P0 focus:
-1. P0 resolved for article7-9: CH12-3/5, SB13-2/4/7, G20-4/6/7/8, and SIO-PROJ-13/14/15 have been updated per user review.
-2. Keep the remaining global project boundary: Summary 2013 `σ/I = 0.3` is guide-level practice background, not a universal fusion-evaporation prior.
-3. Keep Gray 2020 in a method/host-specific TDPAD boundary role rather than a direct P-ADO fitting prescription.
+1. [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] EK79-2, p.243 Introduction: verify the paper really says angular distributions alone are insufficient for spin/parity or mixing-ratio interpretation without alignment constraints or extra observables.
+2. [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] EK79-5/EK79-6, pp.246 and 248: verify the uncertainty prescription `max{0.15 alpha_MANDY, 0.04}` and the warning about faulty assignments if the alignment error is too small.
+3. [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] EK79-9, p.247 Sec.4.2 + Eq.(5) + Fig.6: verify the paper says the Gaussian magnetic-substate population is too restrictive, not universally invalid.
+4. [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]] IO81-4/5/8: verify the case-specific Gaussian-hypothesis failure, the feeding-aware improved population model, and the pure-E2-to-mixed-transition fitting route.
 
 Remaining P0:
-None identified for article7-9 after user review finalization.
+No locator gap is currently known. EK79-*, IO81-1..10, and SIO-PROJ-16..19 are now user-reviewed on 2026-07-09.
 
 Risks:
-Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, `PLAN.md`, or unrelated files. Summary 2013 `σ/I = 0.3` should stay as reference-guide practice background. Gray 2020 remains a TDPAD / `g`-factor boundary case; its host/isomer physics should not be overgeneralized into a universal alignment-width rule. QMD refresh required escalation because sandboxed access failed with `SQLITE_CANTOPEN`.
+Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, schema files, or unrelated files. `PLAN.md` was user-requested scope in this turn and is already folded into the local final commit. Do not turn Ekstrom 1979 or Ionescu 1981 into direct P-ADO prior papers. Keep `alpha2/alpha4`, `rho2/rho4`, Gaussian width `σ`, CNR/MANDY alignment estimates, statistical tensors, and user-code `sigma/I` as distinct notation layers.
 
 Checks:
-`git diff --check` passed aside from LF->CRLF warnings on existing working-copy files. `python system/scripts/wiki_lint.py --fail-on error` passed with 0 errors / 10 warnings / 0 info. QMD `update`, `embed -c nuclear-knowledge`, and `status` all succeeded after escalation.
+Local final content passes `git diff --check`. `python system/scripts/wiki_lint.py --fail-on error` passes with `0 errors / 10 warnings / 0 info` expected after clearing `IO81-10`. `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` all succeeded; current status shows no pending vectors.
 
 Next prompt / continuation phrase:
-Map the user's actual P-ADO `σ/I` code/input convention to source-side notation, or continue the next requested ingest/review task from `main`.
+Retry article10-11 push from local final commit `4fb459c`: recheck status if needed, run `git push origin HEAD:main`, and report whether connectivity to GitHub was restored.
 
 Recent user decisions:
-User completed review for the three article7-9 sources plus the `sigma-over-i` project, requested commit/push, corrected Summary 2013 to `σ/I = 0.3`, asked for softer CH12-5 wording against adopted/literature `δ` values, and asked Gray 2020 to retain more detail on factors affecting the `σ` scale.
+User reviewed Ekstrom 1979 and Ionescu 1981, corrected the exact MANDY uncertainty formula, corrected the Fig.6 interpretation and the `rho2/rho4` notation, requested that `PLAN.md` add an `ionescu_1981_Improvedanalysis` task about branching-ratio-derived model-dependent `delta`, approved the resulting `IO81-10` wording, and explicitly asked to push.
 
 ## Previous active handoff (superseded 2026-07-09 article4-6 finalization)
 

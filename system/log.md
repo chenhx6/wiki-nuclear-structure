@@ -352,3 +352,38 @@ updated: 2026-07-06
 - User review finalized CH12-*, SB13-*, G20-* and SIO-PROJ-13/14/15; corresponding source/project pages were moved to `human-reviewed` / `needs_review: false`.
 - Applied review corrections: CH12-5 softened to adopted/literature-`δ` range wording; Summary 2013 corrected to `σ/I = 0.3`; Gray 2020 now records extra source-backed factors affecting inferred `σ` scale.
 - Checks: `wiki_lint` passed with 0 errors / 10 warnings / 0 info; QMD update/embed/status succeeded after sandbox escalation.
+
+## [2026-07-09] checkpoint | article10-11 supplemental core ingest: Ekstrom 1979 completed
+
+- Completed source: [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] with EK79-1 to EK79-9.
+- Current source in progress: Ionescu 1981 improved angular-distribution analysis.
+- Unfinished items: Ionescu source note; project and knowledge-page updates; checks; report; local `WIP ingest:` commit.
+- Locator gaps: none identified for the Ekstrom 1979 claims already entered.
+- P0/P1 risks: keep MANDY/CNR alignment estimates separate from user-code `sigma/I`, and keep the Gaussian-limitation claim at the "too restrictive" level rather than a universal invalidation.
+- Continuation prompt: Continue article10-11 from Ionescu 1981 source note, then integrate both papers into the `sigma-over-i` project before final checks.
+
+## [2026-07-09] recovery | article10-11 supplemental core ingest repaired after interruption
+
+- Recovery audit confirmed that the Ekstrom 1979 source note needed repair, while the Ionescu 1981 source note was largely complete and only needed minimal metadata / extracted-page cleanup.
+- Repaired or confirmed: [[ekstrom-1979-spin-alignment-attenuation-a61-a67]], [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]], [[direct-feeding]], [[compound-nucleus-reaction-model]], [[spin-alignment-attenuation-factor]], and the `sigma-over-i` project evidence rows for EK79 / IO81.
+- Remaining before closeout: final Git/lint checks, external report write, and the local not-pushed article10-11 commit.
+
+## [2026-07-09] local-commit | article10-11 supplemental core ingest sanity-checked
+
+- Scope of sanity review is limited to `git diff --check`, `wiki_lint`, and staged-file hygiene; no new long-form scientific review was performed in this turn.
+- Prepared local not-pushed commit scope: [[ekstrom-1979-spin-alignment-attenuation-a61-a67]], [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]], [[direct-feeding]], [[compound-nucleus-reaction-model]], [[spin-alignment-attenuation-factor]], [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]], [[knowledge/index]], plus handoff/log/queue updates.
+
+## [2026-07-09] follow-up | ionescu branching-ratio delta note added
+
+- After user review corrections on Ekstrom/Ionescu, added a new follow-up task in `PLAN.md` and a new source-level note `IO81-10` about model-dependent `delta` values inferred from branching ratios in Ionescu 1981.
+- Follow-up status: `git diff --check` and `wiki_lint` pass; only `IO81-10` remains claim-level pending review, so push was deferred.
+
+## [2026-07-09] review-finalized | article10-11 iionescu follow-up approved
+
+- User approved `IO81-10`, keeping the core wording that branching-ratio-derived `delta` values are model dependent and belong to an intraband rotational-band context.
+- Article10-11 now has no remaining source/project claim-level review items; next step is QMD refresh, amend local commit `6609bc3`, and push.
+
+## [2026-07-09] push-blocked | article10-11 final commit ready but GitHub unreachable
+
+- Article10-11 review-finalized content is now in local final commit `4fb459c` on `main`; `wiki_lint`, `git diff --check`, and QMD refresh all succeeded.
+- `git push origin HEAD:main` failed because `github.com:443` was unreachable at the time of the attempt, so only a push retry remains.

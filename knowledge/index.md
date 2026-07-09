@@ -9,6 +9,9 @@ updated: 2026-07-09
 
 ## Sources
 
+- [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] - 汇编 pure-E2 angular distributions 为 `alpha2/alpha4`，检验 MANDY/CNR 对齐预测，给出 uncertainty budget，并指出简单 Gaussian magnetic-substate population 过于受限。
+- [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]] - `165Ho(alpha,2n)167Tm` 个案中检验 global Gaussian hypothesis，并用 Gaussian side feeding 加 discrete direct feeding 的模型改进 spin / `delta` 分析。
+
 - [[zamfir-casten-1991-gamma-softness-triaxiality]] - γ-band staggering 区分 γ-soft/γ-rigid 的低能判据。
 - [[frauendorf-meng-1997-tilted-rotation-chirality]] - Aplanar TAC 与核转动手征性的奠基理论。
 - [[ayangeakaa-2016-133ce-in-beam]] - `133Ce` 的完整中高自旋谱学地图、CNS 与 TAC-CDFT。
@@ -66,6 +69,8 @@ updated: 2026-07-09
 
 ## Concepts
 
+- [[direct-feeding]] - 与 side feeding 区分的离散 gamma feeding component；在 Ionescu 1981 的 feeding-aware population model 中是关键项。
+
 - [[triaxial-deformation]] - 三轴形状与更强结构解释的层级关系。
 - [[gamma-soft-deformation]] / [[gamma-rigid-deformation]] - γ 动力学的两个不同极限。
 - [[wobbling-motion]] - wobbling 的定义、判据与反证。
@@ -97,6 +102,8 @@ updated: 2026-07-09
 
 ## Models
 
+- [[compound-nucleus-reaction-model]] - Ekstrom 1979 中用于 MANDY alignment estimate 的 CNR reaction-population boundary page。
+
 - [[gamma-unstable-model]] / [[davydov-triaxial-rotor-model]] - γ-soft 与 rigid triaxial 的几何极限。
 - [[interacting-boson-model]] - O(6)+三阶项对 γ 势依赖的扫描。
 - [[interacting-boson-fermion-model]] - IBM 偶偶芯与奇费米子耦合；用于奇 A 低能谱和 E2/M1 observables。
@@ -108,6 +115,8 @@ updated: 2026-07-09
 - [[covariant-density-functional-theory]] - constrained CDFT 与 TAC-CDFT 的自洽形变入口。
 
 ## Observables
+
+- [[spin-alignment-attenuation-factor]] - `alpha2/alpha4` 这一由 pure-E2 angular distributions 反推的 alignment observable，以及它与 `sigma/I` 的边界。
 
 - [[gamma-band-energy-staggering]] - `S(J,J-1,J-2)` 与 γ 势判别。
 - [[signature-splitting]] - 奇 A 伙伴带能量劈裂。
