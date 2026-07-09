@@ -387,3 +387,8 @@ updated: 2026-07-06
 
 - Article10-11 review-finalized content is now in local final commit `4fb459c` on `main`; `wiki_lint`, `git diff --check`, and QMD refresh all succeeded.
 - `git push origin HEAD:main` failed because `github.com:443` was unreachable at the time of the attempt, so only a push retry remains.
+
+## [2026-07-09] pushed | article10-11 supplemental ingest finalized to origin/main
+
+- After syncing `system/handoff.md`, `system/log.md`, and `system/wip-queue.md`, the final article10-11 commit was amended to `f4934e7` and pushed to `origin/main`.
+- Scope remains the reviewed Ekstrom 1979 / Ionescu 1981 supplemental ingest plus the user-requested `PLAN.md` note; `.obsidian/` and `raw/zotero/wiki-inbox.bib` stayed outside the commit.

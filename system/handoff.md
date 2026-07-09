@@ -9,16 +9,16 @@ updated: 2026-07-09
 ## Active handoff
 
 Current active task:
-Article10-11 supplemental ingest is finalized after review corrections and the approved Ionescu branching-ratio / model-dependent-`delta` follow-up; only push retry remains.
+No active execution task. Article10-11 supplemental ingest, review-finalization, and push are complete.
 
 Current branch / local commit:
-`main` currently has local not-pushed final commit `4fb459c` (`Ingest supplemental spin-alignment assumption sources`). Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of article10-11 and must remain unstaged.
+`main` and `origin/main` are now at `f4934e7` (`Ingest supplemental spin-alignment assumption sources`). Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of article10-11 and must remain unstaged.
 
 Last task status:
-User review corrections were applied to Ekstrom 1979 and Ionescu 1981: EK79-5 now uses the exact `Delta alpha2^MANDY` formula, EK79-9 now describes Fig.6 as a boundary/allowed-region argument rather than a one-sided point cloud, `rho2/rho4` was restored in Ionescu Fig.3 discussion, and all mistaken `o` width references in the project boundary text were normalized back to `σ`. The user then requested and approved a new Ionescu follow-up note about branching-ratio-derived, model-dependent `delta`; this is now recorded as `IO81-10` in the source page and in `PLAN.md`. QMD refresh completed successfully, the final local commit was amended to `4fb459c`, and the first push attempt failed because GitHub was unreachable on port 443.
+User review corrections were applied to Ekstrom 1979 and Ionescu 1981: EK79-5 now uses the exact `Delta alpha2^MANDY` formula, EK79-9 now describes Fig.6 as a boundary/allowed-region argument rather than a one-sided point cloud, `rho2/rho4` was restored in Ionescu Fig.3 discussion, and all mistaken `o` width references in the project boundary text were normalized back to `σ`. The user then requested and approved a new Ionescu follow-up note about branching-ratio-derived, model-dependent `delta`; this is now recorded as `IO81-10` in the source page and in `PLAN.md`. QMD refresh completed successfully, the final local commit was amended to `f4934e7`, and `git push origin HEAD:main` succeeded on 2026-07-09.
 
 Unfinished items:
-Retry `git push origin HEAD:main` when GitHub connectivity is available. `E:\imp\prompt\wiki\article10-11_reports.md` is still not created.
+No unresolved article10-11 finalization item remains. Optional scientific follow-up: map the user's actual P-ADO `σ/I` code/input convention to source variables and user-data conditions before writing final paper equations. `E:\imp\prompt\wiki\article10-11_reports.md` is still not created.
 
 P0 focus:
 1. [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] EK79-2, p.243 Introduction: verify the paper really says angular distributions alone are insufficient for spin/parity or mixing-ratio interpretation without alignment constraints or extra observables.
@@ -33,10 +33,10 @@ Risks:
 Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, schema files, or unrelated files. `PLAN.md` was user-requested scope in this turn and is already folded into the local final commit. Do not turn Ekstrom 1979 or Ionescu 1981 into direct P-ADO prior papers. Keep `alpha2/alpha4`, `rho2/rho4`, Gaussian width `σ`, CNR/MANDY alignment estimates, statistical tensors, and user-code `sigma/I` as distinct notation layers.
 
 Checks:
-Local final content passes `git diff --check`. `python system/scripts/wiki_lint.py --fail-on error` passes with `0 errors / 10 warnings / 0 info` expected after clearing `IO81-10`. `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` all succeeded; current status shows no pending vectors.
+Final article10-11 content passes `git diff --check`. `python system/scripts/wiki_lint.py --fail-on error` passes with `0 errors / 10 warnings / 0 info` expected after clearing `IO81-10`. `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` all succeeded; current status shows no pending vectors.
 
 Next prompt / continuation phrase:
-Retry article10-11 push from local final commit `4fb459c`: recheck status if needed, run `git push origin HEAD:main`, and report whether connectivity to GitHub was restored.
+If continuing the sigma-over-I project, next step is to map the user's actual P-ADO `σ/I` code/input convention to Draper/Zobel/Ekstrom/Ionescu variables and data conditions before writing final equations.
 
 Recent user decisions:
 User reviewed Ekstrom 1979 and Ionescu 1981, corrected the exact MANDY uncertainty formula, corrected the Fig.6 interpretation and the `rho2/rho4` notation, requested that `PLAN.md` add an `ionescu_1981_Improvedanalysis` task about branching-ratio-derived model-dependent `delta`, approved the resulting `IO81-10` wording, and explicitly asked to push.
