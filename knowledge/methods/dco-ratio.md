@@ -38,6 +38,10 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 
 不要把 DCO 与 [[two-point-angular-correlation-ratio]] 混写：后者可设计为对 gating transition 多极性不敏感，但其经验标定仍依赖具体阵列。
 
+## Reference-Guide Boundary
+
+[[summary-2013-bases-spin-parity-assignments]] records DCO-ratio practice as part of a spin/parity-assignment guide for high-spin work. Its quoted typical orientation parameter is `σ/I = 0.3`. For the sigma-over-I project this is useful background evidence that practical assignment workflows often assume a typical orientation scale, but it is not enough to justify one universal default across different reactions and fitting contexts.
+
 ## Examples
 
 [[chakraborty-2023-131xe-wobbling-origin]] 使用 40°、90°、125° INGA 数据约束 671、882、1055 keV 等跃迁。
@@ -54,6 +58,7 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 - [[domscheit-1999-triaxial-superdeformation-163lu]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[lv-2021-tilted-precession-135nd]]
+- [[summary-2013-bases-spin-parity-assignments]]
 
 ## Evolution Log
 

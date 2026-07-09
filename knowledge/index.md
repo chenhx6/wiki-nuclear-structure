@@ -35,6 +35,9 @@ updated: 2026-07-09
 - [[cejnar-1996-spin-deorientation-alpha-2n-gamma]] - `(α,2nγ)` 反应中 spin deorientation、angular-momentum routes 与 Gaussian side-feeding `σ` 的统计模型计算。
 - [[radeck-2012-deorientation-lifetime-98ru-rdds]] - inverse Coulomb excitation + RDDS 中 time-dependent deorientation、`Gk(t/d)` 与 angular-correlation correction 的方法案例。
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] - tracking arrays 中 angular correlations、angular distributions、linear polarization、`Pm(J)` 与 `σ/J` 的现代公式链。
+- [[chiara-2012-cu65-cu67-core-coupled-protons]] - `65,67Cu` 高自旋实验中的角分布实践例子；目标相关之处是 assumed `sigma/I = 0.5` 与一个 `1115 keV` 跃迁的 `delta` 对 assumed alignment 的敏感性。
+- [[summary-2013-bases-spin-parity-assignments]] - Nuclear Data Sheets spin/parity assignment guide；高自旋 angular-distribution / DCO heuristic 使用典型 `σ/I = 0.3`。
+- [[gray-2020-hyperfine-fields-g-factor-measurements]] - TDPAD / `g`-factor host-field paper；作为 empirical `sigma/I` expectation 可能失效的边界案例。
 
 ## Nuclei
 
@@ -126,6 +129,9 @@ updated: 2026-07-09
 - [[in-beam-gamma-spectroscopy]] - 熔合蒸发高自旋谱学的实验入口与证据边界。
 - [[angular-distribution]] - γ 射线角分布分析及其 alignment、feeding 与 mixing-ratio 前提。
 - [[tracking-array]] - γ-ray tracking arrays 的连续角度 angular-distribution/correlation/polarization response-function 方法入口。
+- [[spin-parity-assignment]] - 组合角分布、DCO、偏振和能级序列证据的 `J^pi` 赋值方法页。
+- [[time-differential-perturbed-angular-distribution]] - TDPAD 振幅、alignment 与 hyperfine precession 的时间依赖方法边界。
+- [[g-factor-measurement]] - 核 `g` 因子测量与 TDPAD / hyperfine-field 条件依赖的最小方法入口。
 
 ## Synthesis
 

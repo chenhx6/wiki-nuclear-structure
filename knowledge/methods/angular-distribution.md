@@ -45,9 +45,19 @@ This `alpha_k` must not be merged with detector solid-angle attenuation. Laurits
 
 仅凭两个角分布系数通常不能同时唯一确定 `α2`、`α4` 与 `δ`；弱峰、短寿命、Doppler broadening 和 feeding ambiguity 会增加多解风险。
 
+## Practice-Level Boundary
+
+[[chiara-2012-cu65-cu67-core-coupled-protons]] adds a practical spectroscopy example: the angular-distribution calculation for `65Cu` used an assumed `sigma/I = 0.5` because it reproduced known transitions, and the fitted `delta` of one `1115 keV` line changed when the assumed alignment width changed.
+
+[[summary-2013-bases-spin-parity-assignments]] adds reference-guide background that high-spin assignment heuristics are often quoted with a typical orientation parameter, here `σ/I = 0.3`, but that guide-level value is not by itself a demonstrated universal Gaussian prior.
+
+Angular-distribution evidence is one of the standard inputs collected on [[spin-parity-assignment]] pages.
+
 ## Sources
 
 - [[draper-1970-gaussian-substate-side-feeding]]
 - [[zobel-1980-magnetic-substate-distributions]]
 - [[zobel-1983-energy-projectile-alignment]]
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
+- [[chiara-2012-cu65-cu67-core-coupled-protons]]
+- [[summary-2013-bases-spin-parity-assignments]]

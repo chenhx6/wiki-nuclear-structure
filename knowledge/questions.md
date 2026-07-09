@@ -21,6 +21,7 @@ updated: 2026-07-08
 - [ ] `187Au` 的 376/462 keV links 为何在 Sensharma/Guo 分析中落入不同 mixing-ratio branch；reported band (3) 的 `187Au/188Pt` identity、increasing `E_wobb`、absolute `B(E2)` 与 PRM/QTR geometry 能否在 common-response/common-error 分析中自洽？（opened 2026-07-03；updated 2026-07-04；scope: 187au/longitudinal-wobbling）
 - [ ] `135Pr` 与 `187Au` 的争议能否导出一套不依赖预设 band label、同时约束 mixing-ratio 双解、polarization、signature-partner identity、`f(n,I)` 近似条件与 phonon quantization 的最小 wobbling identification protocol？（opened 2026-07-04；updated 2026-07-04；scope: low-spin-wobbling/cross-case）
 - [ ] 在用户的 P-ADO / NST mixing-ratio extraction 中，`σ/I`、Gaussian width、attenuation coefficients 与 feeding-condition uncertainty 应如何映射到同一套可审计的 fit/prior schema？（opened 2026-07-08；scope: pado/sigma-over-i/alignment）
+- [ ] Lauritsen 2025 的 `sigma/J` 与用户分析中的 `σ/I` 在代码和公式层面应如何一一映射？Summary 2013 给出的 `σ/I = 0.3` 目前只能作为 guide-level practice 背景，不能直接当作 universal prior。（opened 2026-07-09；updated 2026-07-09；scope: pado/sigma-over-i/notation-boundary）
 
 ## Resolved
 

@@ -25,6 +25,10 @@ tags: [alignment, angular-distribution, mixing-ratio, pado-support]
 
 [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] is the most direct current notation source for `sigma/J`: it uses Gaussian `Pm(J)` for magnetic-substate population, characterizes it by `sigma/J`, and places that normalized width in the same formula chain as `delta`, `alpha_k` and angular-distribution coefficients. This supports mapping later `sigma/I` language to `sigma/J`-style Gaussian alignment width only after checking the user's code convention.
 
+[[summary-2013-bases-spin-parity-assignments]] adds guide-level practice background for this project. Its high-spin angular-distribution and DCO heuristics quote a typical `σ/I = 0.3`, but that guide-level number is still not enough to define a universal default for all Gaussian-substate analyses.
+
+[[gray-2020-hyperfine-fields-g-factor-measurements]] adds a context boundary from TDPAD and `g`-factor work: an empirical alignment rule such as `sigma/I ≈ 0.35` can fail in an isomeric host-specific case, and a reduced `R(t)` amplitude does not uniquely identify whether the issue is weaker alignment or a larger field-free fraction.
+
 ## Project Use
 
 [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]] 使用本页作为 symbol-boundary anchor：可以说 alignment-width assumptions are model dependent；不能写成 Draper/Zobel 已给出用户 P-ADO 代码中 `σ/I` 的唯一数值。
@@ -43,6 +47,8 @@ Draper 1970 支持 Gaussian-width sensitivity；Zobel 1980/1983 支持 attenuati
 
 Lauritsen 2025 states that `sigma/J=0` indicates full alignment and that fusion-evaporation particle evaporation gives a non-zero `sigma/J`. It also warns that reactions such as fragmentation may require explicit `Pm(J)` rather than the usual Gaussian parameterization.
 
+Chiara 2012 shows a practice-level use of assumed `sigma/I` in angular-distribution fitting. Summary 2013 shows that high-spin assignment heuristics can carry a typical orientation parameter in guide language. Gray 2020 shows that empirical alignment expectations can fail in a TDPAD / `g`-factor setting.
+
 ## Counter-evidence and Competing Interpretations
 
 若数据可由不同 alignment widths 或 feeding models 同时解释，单个 preset `σ/I` 不能被当作已验证事实。
@@ -57,3 +63,6 @@ Lauritsen 2025 states that `sigma/J=0` indicates full alignment and that fusion-
 - [[zobel-1980-magnetic-substate-distributions]]
 - [[zobel-1983-energy-projectile-alignment]]
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
+- [[chiara-2012-cu65-cu67-core-coupled-protons]]
+- [[summary-2013-bases-spin-parity-assignments]]
+- [[gray-2020-hyperfine-fields-g-factor-measurements]]

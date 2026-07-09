@@ -10,9 +10,19 @@ This page tracks local WIP tasks that are not yet finalized. Keep entries short.
 
 ## Active entries
 
-None.
+None currently.
 
 ## Completed entries
+
+### Article7-9 sigma-over-I practice sources
+- status: user review finalized; WIP ingest amended to a final commit and pushed to `origin/main`
+- branch: `main`
+- commit: final commit created from prior local `WIP ingest: article7-9 sigma-over-I practice sources for user review`
+- files: Chiara 2012, Summary 2013 and Gray 2020 source pages; sigma-over-I project; spin-parity-assignment/TDPAD/g-factor method pages; sigma-over-I concept; index/overview/questions; handoff/log/queue
+- review needed: none for CH12-*, SB13-*, G20-* or SIO-PROJ-13/14/15; related method/concept pages remain page-level `unreviewed`
+- overview/QMD: overview refreshed; QMD update/embed/status succeeded after sandbox escalation
+- next action: map actual P-ADO `σ/I` code/input convention before writing final equation-level synthesis
+- risks: `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain external/user changes and were not included; Summary 2013 `σ/I = 0.3` stays at guide-level background
 
 ### Article4-6 sigma-over-I deorientation/formalism sources
 - status: user review finalized; WIP ingest amended to final commit and pushed to `origin/main`

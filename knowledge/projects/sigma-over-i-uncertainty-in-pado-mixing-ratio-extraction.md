@@ -16,13 +16,13 @@ tags: [pado, mixing-ratio, angular-distribution, polarization, alignment, sigma-
 
 ## Active Summary for Agents
 
-Current task: article4-6 source review finalized for deorientation and modern angular-distribution formalism sources supporting the question why a single preset `σ/I` value is unsafe or model-dependent in in-beam γ-ray mixing-ratio extraction.
+Current task: article7-9 source-note ingest completed for experimental-practice / reference-guide / TDPAD boundary examples supporting the question why a single preset `σ/I` value is unsafe or model-dependent in in-beam γ-ray mixing-ratio extraction.
 
-Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]].
+Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]; [[chiara-2012-cu65-cu67-core-coupled-protons]]; [[summary-2013-bases-spin-parity-assignments]]; [[gray-2020-hyperfine-fields-g-factor-measurements]].
 
-In-progress / pending source rows: none for article4-6. User review on 2026-07-09 cleared the source-page P0/P1/P2 items and project rows SIO-PROJ-7--SIO-PROJ-12.
+In-progress / pending source rows: none for article7-9 source-note ingest. The three article7-9 source pages and project claims were user-reviewed and finalized on 2026-07-09.
 
-High-risk symbol boundary: Draper and Cejnar `σ` are Gaussian widths for side-feeding magnetic-substate population; Lauritsen 2025 directly uses Gaussian `Pm(J)` and normalized `σ/J`; later `σ/I`, attenuation/deorientation coefficients `αK`/`Gk`/`Uλ`, angular-distribution coefficients `A2/A4`, and detector solid-angle factors `Qk` are related to the angular response but are not identical variables.
+High-risk scope boundary: Draper and Cejnar `σ` are Gaussian widths for side-feeding magnetic-substate population; Summary 2013 gives a guide-level typical `σ/I = 0.3`; Lauritsen 2025 directly uses Gaussian `Pm(J)` and normalized `σ/J`; Gray 2020 discusses empirical `σ/I ≈ 0.35` and its failure in an isomeric TDPAD context. These entries all touch alignment/orientation practice, but they do not by themselves define a universal prior.
 
 ## Research Question
 
@@ -40,7 +40,7 @@ This is an evidence map / writing-support project for NST paper and future thesi
 
 ## Evidence Available
 
-Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, Zobel 1983 projectile/energy/feeding dependence in `67Ga`, Cejnar 1996 spin-deorientation calculation in `Pd(α,2nγ)Cd` reactions, Radeck 2012 time-dependent deorientation correction in inverse Coulomb excitation + RDDS, and Lauritsen 2025 modern tracking-array angular-distribution / polarization formalism.
+Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, Zobel 1983 projectile/energy/feeding dependence in `67Ga`, Cejnar 1996 spin-deorientation calculation in `Pd(α,2nγ)Cd` reactions, Radeck 2012 time-dependent deorientation correction in inverse Coulomb excitation + RDDS, Lauritsen 2025 modern tracking-array angular-distribution / polarization formalism, Chiara 2012 as a spectroscopy practice example using assumed `σ/I`, Summary 2013 as reference-guide high-spin assignment background with typical `σ/I = 0.3`, and Gray 2020 as a TDPAD / `g`-factor boundary case where empirical `σ/I` expectations can fail.
 
 ## Symbol Mapping
 
@@ -54,7 +54,9 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | `Qk` in Radeck 2012 | Detector finite-solid-angle correction in the angular-correlation function | Detector geometry term; do not confuse with nuclear alignment/deorientation attenuation. |
 | `Pm(J)` in Lauritsen 2025 | Magnetic-substate distribution for level spin `J`, usually Gaussian with respect to the beam axis | Direct bridge from alignment population to `alpha_k(J)` and normalized `sigma/J`; still not automatically identical to user-code `sigma/I`. |
 | `sigma/J` in Lauritsen 2025 | Normalized Gaussian width characterizing `Pm(J)`; `sigma/J=0` indicates full alignment | Closest source-level notation to project `sigma/I`; must be mapped to the user's convention before paper wording. |
+| `σ/I` in Summary 2013 | Typical magnetic-substate population parameter used in high-spin angular-distribution and DCO assignment heuristics | Practice-level orientation parameter; keep it as guide-level background rather than a universal default. |
 | `alpha_k` in Lauritsen 2025 | In source angular correlations: detector solid-angle attenuation; in in-beam angular distributions: nuclear alignment/deorientation attenuation from `Pm(J)` | Preserve local formula context; do not merge detector and nuclear attenuation meanings. |
+| `R(t)` amplitude in Gray 2020 | TDPAD observable depending on both alignment `B2` and the field-free fraction `p` after implantation | A reduced amplitude does not uniquely diagnose weaker alignment or more field-free sites without independent information. |
 | projectile / energy / feeding condition | Experimental context controlling alignment attenuation in Zobel 1983 | Do not transfer a fixed alignment parameter across different conditions without check. |
 | magnetic-substate population `P(M)` | Population over `M` substates of the emitting level | Underlying physical/statistical object behind alignment descriptions. |
 | side feeding | Population component from outside the main cascade/band | One mechanism that changes `P(M)` and therefore angular distributions. |
@@ -69,6 +71,15 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | [[cejnar-1996-spin-deorientation-alpha-2n-gamma]] | theory-ingest + method-ingest + project-ingest | Calculates spin deorientation through angular-momentum routes, tests the side-feeding Gaussian hypothesis, and shows that the imposed `σ` interval can change `δ` extraction. | C96-1 to C96-11 | P0 resolved: C96-4, C96-5, C96-10 |
 | [[radeck-2012-deorientation-lifetime-98ru-rdds]] | method-ingest + experiment-ingest + project-ingest | Demonstrates time-dependent deorientation correction with particle-γ angular correlations and separates `Rk`, `Bk`, `Qk`, `Gk` and deorientation correction factors in inverse Coulomb excitation + RDDS. | R12-1 to R12-12 | P0 resolved: R12-3, R12-7, R12-8, R12-10 |
 | [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] | method-review-ingest + project-ingest | Provides modern tracking-array formalism connecting `delta`, `alpha_k`, Gaussian `Pm(J)`, `sigma/J`, response functions, DCO and linear polarization. | L25-1 to L25-16 | P0 resolved: L25-5, L25-7, L25-8, L25-14, L25-15 |
+| [[chiara-2012-cu65-cu67-core-coupled-protons]] | experiment-ingest + targeted-ingest + project-ingest | Gives a concrete spectroscopy practice example where `σ/I = 0.5` is assumed to reproduce known transitions and a different assumed `σ/I` changes the fitted `δ` for one `65Cu` line. | CH12-1 to CH12-8 | P0 resolved: CH12-3, CH12-5 |
+| [[summary-2013-bases-spin-parity-assignments]] | reference-guide-ingest + targeted-ingest + project-ingest | Records high-spin assignment heuristics for angular distributions and DCO ratios at a typical `σ/I = 0.3`, making the practice background explicit while keeping it at guide level. | SB13-1 to SB13-7 | P0 resolved: SB13-2, SB13-4, SB13-7 |
+| [[gray-2020-hyperfine-fields-g-factor-measurements]] | experiment-ingest + method-ingest + project-ingest | Shows in a TDPAD / `g`-factor context that empirical alignment expectations such as `σ/I ≈ 0.35` can fail and that reduced `R(t)` amplitude does not uniquely diagnose field-free implantation. | G20-1 to G20-9 | P0 resolved: G20-4, G20-6, G20-7 |
+
+## Experimental-Practice Evidence
+
+The article7-9 sources add a different layer from the earlier formalism and deorientation papers. They show that assumed or typical orientation parameters are embedded in real spectroscopy practice and reference-guide language, but that these assumptions remain notation-sensitive and context-sensitive.
+
+Chiara 2012 is the most direct spectroscopy example: a working `σ/I` value is chosen because it reproduces known transitions, and a single transition's fitted `δ` changes when the assumed alignment changes. Summary 2013 is weaker scientifically but important culturally: it documents that high-spin assignment heuristics are often quoted with a typical orientation parameter, here `σ/I = 0.3`. Gray 2020 is the counterweight: in an isomeric TDPAD context, an empirical `σ/I ≈ 0.35` expectation can fail, and amplitude alone does not tell you whether the issue is alignment or field-free implantation.
 
 ## Evidence Map
 
@@ -86,6 +97,9 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | SIO-PROJ-10 | Modern fitting language must keep detector solid-angle attenuation `Qk`, nuclear alignment `Bk`/`alpha_k`, time-dependent deorientation `Gk`, and side-feeding Gaussian `σ`/`sigma/J` separate before using them in `δ` extraction. | R12-7, R12-8; C96-5; L25-4 to L25-8; Z80-1 to Z80-4 | Wiki synthesis / project note | Lauritsen 2025 resolves the formalism vocabulary, but user P-ADO implementation details remain unmapped. | false |
 | SIO-PROJ-11 | Lauritsen 2025 supplies the direct formula chain needed for P-ADO wording: `delta` enters transition-dependent `Amax_k`, in-beam `alpha_k(J)` describes nuclear alignment/deorientation, `alpha_k(J)` can be computed from `Pm(J)`, and `Pm(J)` is usually parameterized by Gaussian `sigma/J`. | L25-5 to L25-8 | Wiki synthesis / project note | This maps source notation, but does not prove the user's `sigma/I` is numerically identical to Lauritsen `sigma/J`. | false |
 | SIO-PROJ-12 | Tracking-array response-function and polarization/DCO constraints do not remove alignment-width assumptions; they help separate detector response, angular distribution, parity/multipolarity ambiguity and nuclear population assumptions. | L25-2, L25-10, L25-12 to L25-15 | Wiki synthesis / project note | Based on GRETINA examples and formalism; user detector/code path still needs mapping. | false |
+| SIO-PROJ-13 | In practical spectroscopy work, an assumed `σ/I` may be selected because it reproduces known reference transitions, and a different assumed value can change the fitted `δ` for a specific line. | CH12-3 to CH12-5 | Wiki synthesis / project note | Based on one `65Cu` angular-distribution analysis and one `1115 keV` example; not a universal fitting rule. | false |
+| SIO-PROJ-14 | Reference-guide high-spin assignment heuristics explicitly use a typical `σ/I = 0.3`; this is background for spectroscopy practice, not a universal fusion-evaporation prior. | SB13-1 to SB13-5 | Wiki synthesis / project note | Source is a Nuclear Data Sheets guide, not an original measurement or a theory derivation. | false |
+| SIO-PROJ-15 | In an isomeric TDPAD / `g`-factor context, reduced `R(t)` amplitudes can indicate weaker-than-expected alignment and do not uniquely determine the field-free fraction; empirical `σ/I ≈ 0.35` expectations may fail and require independent alignment checks. | G20-3 to G20-8 | Wiki synthesis / project note | Host-specific Fe/Gd implantation and hyperfine-field physics; useful boundary case, not a direct P-ADO fitting prescription. | false |
 
 ## How This Supports P-ADO / NST Introduction
 
@@ -103,6 +117,12 @@ Radeck 2012 adds a complementary time-dependent deorientation example: in invers
 
 Lauritsen 2025 provides the cleanest modern equation language for the NST introduction. It allows a sentence like: in current tracking-array angular-distribution formalism, the fitted curvature depends not only on `delta` but also on the magnetic-substate population through `alpha_k(J)` and often through a Gaussian `sigma/J` parameter. Its `152Dy` examples also show why angular distribution alone may leave electric/magnetic or mixed-transition ambiguity, requiring DCO and linear polarization as complementary constraints.
 
+Chiara 2012 adds the missing practice-level example. It shows that an assumed `σ/I` is not merely a theoretical symbol but can be chosen operationally because it gives good agreement for known transitions. The same paper also gives a concrete warning that the fitted `δ` for a `65Cu` transition changes when the assumed `σ/I` changes. This is useful for the NST introduction because it grounds the project in how spectroscopy papers are actually analyzed, not only in formal derivations.
+
+Summary 2013 adds reference-guide background. It shows that high-spin assignment heuristics are often quoted with a typical orientation parameter already built in, here `σ/I = 0.3`. The user review narrows the needed caution: the issue is not a special `V` notation boundary, but that this guide-level value is still not a universal prior for every P-ADO fit.
+
+Gray 2020 adds a method-boundary example from TDPAD and `g`-factor measurements. Its message is not that all spectroscopy should use `σ/I ≈ 0.9`; rather, it shows that an empirical expectation such as `σ/I ≈ 0.35` can fail in an isomeric, host-specific context, and that a reduced amplitude does not uniquely tell you whether alignment is weaker or the field-free fraction is larger. This is useful for the NST introduction as a warning against overconfident empirical defaults.
+
 ## Evidence Gaps
 
 - Need mapping from the user's actual P-ADO implementation to source symbols before writing final equations.
@@ -110,6 +130,9 @@ Lauritsen 2025 provides the cleanest modern equation language for the NST introd
 - Need decide how, or whether, Cejnar-style reaction-route deorientation calculations can be approximated for the user's actual reaction and detector conditions.
 - Need map whether any Radeck-style time-dependent deorientation or detector `Qk` correction exists in the user's P-ADO code path.
 - Need user-data-specific check of reaction, beam energy, target, detector geometry, feeding pattern and polarization/ADO acquisition conditions.
+- Need a source-backed mapping between the project's working `σ/I` convention and Lauritsen 2025 `sigma/J` before writing final code-facing equations.
+- Need determine whether the user's analysis has Chiara-like calibration transitions that could test an assumed alignment-width parameter empirically.
+- Need check whether isomeric feeding or delayed components could make Gray-style amplitude/alignment cautions relevant to the user's data.
 
 ## Future Writing Hooks
 
@@ -125,6 +148,8 @@ Lauritsen 2025 provides the cleanest modern equation language for the NST introd
 | `σ/I` must always be fitted rather than fixed | Current source supports model dependence but does not evaluate all practical P-ADO cases. |
 | A universal prior range for `σ/I` | No source in this project has yet established a transferable numerical range. |
 | Draper Gaussian `σ` equals P-ADO `σ/I` | Explicitly not ready; symbol mapping remains unresolved. |
+| Summary 2013 typical `σ/I = 0.3` can be used as a default `σ/I` value | Not ready; the guide gives a heuristic assignment-context value, not a validated universal P-ADO default. |
+| Gray 2020 proves that empirical alignment widths should be replaced by `σ/I ≈ 0.9` | Not ready; that inference is host-specific, isomer-specific, and conditional on the full-field assumption. |
 
 ## Risks and Blockers
 
@@ -133,12 +158,15 @@ Lauritsen 2025 provides the cleanest modern equation language for the NST introd
 - Cejnar 1996, Radeck 2012 and Lauritsen 2025 source/project claims from 2026-07-09 were user-reviewed, but should still not be promoted into paper-ready final wording without source locator checks in the writing context.
 - Especially do not promote Radeck 2012 RDDS/Coulomb-excitation correction to a direct fusion-evaporation `σ/I` conclusion.
 - Lauritsen 2025 gives `sigma/J`; mapping it to the user's `sigma/I` convention remains a separate code/data-context task.
+- Summary 2013 provides a guide-level `σ/I = 0.3`, but that still does not justify treating one fixed number as a universal prior across different reactions, feeding patterns, and methods.
+- Gray 2020 is a TDPAD / hyperfine-host case; its alignment-amplitude lesson is useful, but its host physics is not the same as ordinary P-ADO fitting.
 - User data conditions and P-ADO implementation details are not yet mapped to the source notation.
 
 ## Next Actions
 
 1. Map the actual P-ADO code/input convention for `σ/I` to the source-level variables.
 2. Add user-data-specific reaction and detector condition records before turning the project into writing text.
+3. Continue the supplemental core round with Ekstrom 1979 and Ionescu 1981 before attempting a formal synthesis.
 
 ## Related Pages
 

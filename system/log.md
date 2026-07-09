@@ -313,3 +313,42 @@ updated: 2026-07-06
 - Added [[152dy]] and [[atlas-gretina-152dy-ca48-191mev]] for Lauritsen 2025 `152Dy` experimental information.
 - Lint passed with 0 errors / 10 warnings / 0 info; lint unittest passed; QMD update/embed/status succeeded.
 - Final commit created and article4-6 WIP queue entry moved to completed; final commit pushed to `origin/main`.
+
+## [2026-07-09] checkpoint | article7-9 sigma-over-I practice ingest: Chiara 2012 completed
+
+- Completed source: [[chiara-2012-cu65-cu67-core-coupled-protons]] with CH12-1 to CH12-8.
+- Current source in progress: `2013_Summary of Bases for Spin and Parity Assignments.pdf`.
+- Unfinished items: Summary 2013 source note; Gray 2020 source note; project update; minimal method/concept updates; checks/report/local WIP ingest commit.
+- Locator gaps: none identified for Chiara targeted `sigma/I` claims; Summary 2013 and Gray 2020 not yet checked.
+- P0/P1 risks: Chiara `sigma/I=0.5` AD assumption and `1115 keV` `delta` sensitivity remain human-review pending.
+- Continuation prompt: Continue article7-9 from Summary 2013 high-spin angular-distribution / DCO sections and checkpoint before starting Gray 2020.
+
+## [2026-07-09] checkpoint | article7-9 sigma-over-I practice ingest: Summary 2013 completed
+
+- Completed source: [[summary-2013-bases-spin-parity-assignments]] with SB13-1 to SB13-7.
+- Current source in progress: Gray 2020 hyperfine-field / `g`-factor paper.
+- Unfinished items: Gray 2020 source note; project update; minimal method/concept updates; checks/report/local WIP ingest commit.
+- Locator gaps: none identified for Summary 2013 targeted high-spin assignment rules; Gray 2020 not yet checked.
+- P0/P1 risks: keep Summary 2013 at guide-level `σ/I = 0.3` practice background; do not promote it into a universal prior.
+- Continuation prompt: Continue article7-9 from Gray 2020 TDPAD `R(t)` amplitudes and empirical alignment-expectation sections.
+
+## [2026-07-09] checkpoint | article7-9 sigma-over-I practice ingest: Gray 2020 completed
+
+- Completed source: [[gray-2020-hyperfine-fields-g-factor-measurements]] with G20-1 to G20-9.
+- Current source in progress: none; source-note ingest for the three requested papers is complete.
+- Unfinished items: project update; minimal method-page additions; checks/report/local WIP ingest commit.
+- Locator gaps: none identified for Gray 2020 targeted alignment-amplitude claims.
+- P0/P1 risks: keep Gray 2020 in a TDPAD / host-specific boundary role; do not generalize its `sigma/I` discussion to ordinary P-ADO fitting.
+- Continuation prompt: Continue article7-9 from project update and minimal method pages before final checks.
+
+## [2026-07-09] wip | article7-9 sigma-over-I practice ingest packaged for review
+
+- Completed: project/method/index/overview updates for article7-9, plus QMD refresh.
+- Checks: `wiki_lint` passed with 0 errors; QMD update/embed/status succeeded after sandbox escalation.
+- Pending: wait for user review of CH12-*, SB13-*, G20-* and SIO-PROJ-13/14/15. External report written to `E:\imp\prompt\wiki\article7-9_reports.md`. Local `HEAD` is now the article7-9 `WIP ingest:` commit and was not pushed.
+
+## [2026-07-09] review-finalized | article7-9 sigma-over-I practice sources
+
+- User review finalized CH12-*, SB13-*, G20-* and SIO-PROJ-13/14/15; corresponding source/project pages were moved to `human-reviewed` / `needs_review: false`.
+- Applied review corrections: CH12-5 softened to adopted/literature-`δ` range wording; Summary 2013 corrected to `σ/I = 0.3`; Gray 2020 now records extra source-backed factors affecting inferred `σ` scale.
+- Checks: `wiki_lint` passed with 0 errors / 10 warnings / 0 info; QMD update/embed/status succeeded after sandbox escalation.

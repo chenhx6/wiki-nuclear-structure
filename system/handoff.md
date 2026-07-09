@@ -9,34 +9,36 @@ updated: 2026-07-09
 ## Active handoff
 
 Current active task:
-None. Article4-6 source review finalization for the sigma-over-I project is complete and pushed to `origin/main`.
+No active ingest. Latest completed task is article7-9 review-finalization for the `sigma-over-i` project.
 
 Current branch / local commit:
-`main`; local HEAD is final commit `Finalize article4-6 sigma-over-I source review` (amended from WIP `0e3414d`) and pushed to `origin/main` per user request. Pre-existing uncommitted external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, `knowledge/concepts/spin-alignment.md`, and `raw/zotero/wiki-inbox.bib`; they are not part of this finalization and must not be staged.
+`main` contains the article7-9 final commit derived from the prior local `WIP ingest:` commit and pushed to `origin/main` in this round. Pre-existing uncommitted external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of article7-9 and were not staged.
 
 Last task status:
-User reviewed all P0 plus P1/P2/source-page items. Applied final wording edits to C96-4, R12-7 and L25-14; marked Cejnar 1996, Radeck 2012 and Lauritsen 2025 source claims reviewed; marked project rows SIO-PROJ-7--SIO-PROJ-12 reviewed; added [[152dy]] and [[atlas-gretina-152dy-ca48-191mev]] for Lauritsen 2025 `152Dy` experimental information. Updated [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]], [[index]], [[overview]], lint element config, WIP queue and log.
+Article7-9 was finalized after user review. The three source pages [[chiara-2012-cu65-cu67-core-coupled-protons]], [[summary-2013-bases-spin-parity-assignments]], and [[gray-2020-hyperfine-fields-g-factor-measurements]] are now `human-reviewed`; CH12-*, SB13-* and G20-* claims are all `needs_review: false`; project rows SIO-PROJ-13/14/15 are also `needs_review: false`. Summary 2013 was corrected to `σ/I = 0.3`, Chiara CH12-5 was softened to "moves toward larger-magnitude adopted/literature `δ` values", and Gray 2020 now records several source-backed factors that change the inferred alignment scale. `python system/scripts/wiki_lint.py --fail-on error` passes with 0 errors / 10 warnings / 0 info. QMD `update` / `embed -c nuclear-knowledge` / `status` succeeded after sandbox escalation.
 
 Unfinished items:
-No article4-6 P0 remains. New `152Dy` nucleus/experiment pages are narrow Lauritsen-derived entries and remain page-level `unreviewed` because they were created during finalization. Future work should map the user's actual P-ADO `sigma/I` code/input convention before writing final paper equations.
+No unresolved P0 remains for article7-9. Next substantive task is still to map the user's actual P-ADO `σ/I` code/input convention to the source-side `σ/J` / `Pm(J)` formalism before writing final equation-level NST text.
 
 P0 focus:
-P0: none identified after user review. Keep the project boundary that Cejnar 1996, Radeck 2012 and Lauritsen 2025 are not a universal fusion-evaporation `sigma/I` prior.
+1. P0 resolved for article7-9: CH12-3/5, SB13-2/4/7, G20-4/6/7/8, and SIO-PROJ-13/14/15 have been updated per user review.
+2. Keep the remaining global project boundary: Summary 2013 `σ/I = 0.3` is guide-level practice background, not a universal fusion-evaporation prior.
+3. Keep Gray 2020 in a method/host-specific TDPAD boundary role rather than a direct P-ADO fitting prescription.
 
 Remaining P0:
-None identified. No missing locator was reported by lint; figures were not digitized.
+None identified for article7-9 after user review finalization.
 
 Risks:
-Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, `PLAN.md`, or unrelated files. Cejnar is reaction/statistical-model evidence, Radeck is RDDS/Coulomb-excitation method evidence, and Lauritsen is tracking-array formalism plus `152Dy` example evidence; none alone prescribes a universal user-code `sigma/I` prior.
+Do not stage `.obsidian/`, `raw/`, raw PDFs, `raw/zotero/wiki-inbox.bib`, `PLAN.md`, or unrelated files. Summary 2013 `σ/I = 0.3` should stay as reference-guide practice background. Gray 2020 remains a TDPAD / `g`-factor boundary case; its host/isomer physics should not be overgeneralized into a universal alignment-width rule. QMD refresh required escalation because sandboxed access failed with `SQLITE_CANTOPEN`.
 
 Checks:
-`python system/scripts/wiki_lint.py --fail-on error` passed with 0 errors / 10 warnings / 0 info. `python -m unittest discover -s system/tests -p "test_*.py" -v` passed 7 tests. QMD refresh succeeded: `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` report 137 indexed files and 485 embedded vectors.
+`git diff --check` passed aside from LF->CRLF warnings on existing working-copy files. `python system/scripts/wiki_lint.py --fail-on error` passed with 0 errors / 10 warnings / 0 info. QMD `update`, `embed -c nuclear-knowledge`, and `status` all succeeded after escalation.
 
 Next prompt / continuation phrase:
-Next substantive task: map the user's actual P-ADO `sigma/I` implementation and reaction/detector conditions to the source-level `sigma`, `sigma/J`, `alpha_k`, `Ulambda`, `Gk` and `Qk` notation before drafting final paper equations.
+Map the user's actual P-ADO `σ/I` code/input convention to source-side notation, or continue the next requested ingest/review task from `main`.
 
 Recent user decisions:
-User reviewed Cejnar/Radeck/Lauritsen P0 items plus P1/P2/source-page content and requested appropriate edits, commit and push. User specifically approved project wording SIO-PROJ-7--SIO-PROJ-12 and requested adding `152Dy` nuclear experimental information from Lauritsen 2025.
+User completed review for the three article7-9 sources plus the `sigma-over-i` project, requested commit/push, corrected Summary 2013 to `σ/I = 0.3`, asked for softer CH12-5 wording against adopted/literature `δ` values, and asked Gray 2020 to retain more detail on factors affecting the `σ` scale.
 
 ## Previous active handoff (superseded 2026-07-09 article4-6 finalization)
 
