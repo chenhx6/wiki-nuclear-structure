@@ -139,7 +139,7 @@ SORT file.name ASC
 
 Codex 应自动把这类消息理解为“本轮人工审核已经结束”，记录本轮 Review history，并进入 review-finalization：按审核意见做最小修改，执行 overview/QMD/review commit/push 的默认流程，再独立判断 queue 是否继续保留。你不必使用固定短语；只要整体语义可以无歧义地判断本轮审核已经结束即可。如果你不想 finalization，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
 
-普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断，并尽量给出已有来源、citation key、数据、locator 或页面入口方便你核查。只有当你明确要求论文定稿级核查时，才进入严格的 paper evidence mode。
+普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断，并尽量给出已有来源、citation key、数据、locator 或页面入口方便你核查。论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认时才进入严格的 paper evidence mode；普通争议讨论本身不自动触发 strict mode。
 
 ## 4. Zotero 轻量连接
 
@@ -258,14 +258,14 @@ Project 可以随具体研究问题、阶段性数据处理结果、证据比较
 
 Git 只管理 Markdown、规则和小型文本资产。PDF、数据和个人材料默认不进入普通 Git 历史；它们由 Zotero、原始存储和备份负责。
 
-私有远端仓库为 `chenhx6/wiki-nuclear-structure`。首次连接本地仓库时运行：
+公开远端仓库为 `chenhx6/wiki-nuclear-structure`。首次连接本地仓库时运行：
 
 ```powershell
 git remote add origin https://github.com/chenhx6/wiki-nuclear-structure.git
 git push -u origin main
 ```
 
-若 `git remote -v` 已显示 `origin`，不要重复执行 `remote add`。未发表解释、合作材料与审稿内容应继续留在被忽略的私有目录，不进入远端。
+若 `git remote -v` 已显示 `origin`，不要重复执行 `remote add`。未发表内容、合作材料、审稿材料、个人数据和敏感原始材料应继续留在被忽略的私有目录，不进入公开远端。
 
 ## 8. 自动 lint
 

@@ -8,35 +8,35 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Framework-only correction: align the paper evidence gate with claim-specific verification and user-confirmed paper admission.
+Framework consistency audit: align long-term review, answer-output, Wiki-growth, strict-mode, and public-remote safety rules.
 
 Current branch / local commit:
-`main`, based on unchanged `320913f`. This task is limited to the paper gate, the Skill description, user-guide/checklist semantic sync, and required handoff/log closure; pre-existing user changes in `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain unstaged.
+`main`, with `c6d4d99` preserved as an ancestor. This task is limited to governance documents plus required handoff/log closure; pre-existing user changes in `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain unstaged.
 
 Last task status:
-Aligned `system/paper-evidence-gate.md` around candidate-evidence discovery, claim-specific verification, and user-confirmed paper admission. Page-level review no longer substitutes for current-claim verification; unreviewed pages do not block focused verification; P0/P1 is claim-scoped; and writing interfaces may surface unverified candidates without admitting them as final claims. Skill description, user guides, and checklist received minimal matching corrections.
+Updated long-term memory to record the public GitHub remote and its sensitive-material boundary, review status as discovery/verification metadata, rechecking and deeper extraction of reviewed knowledge, focused claim verification, scoped paper admission, and complete strict-mode triggers. Minimally synchronized AGENTS, user guides, checklist, and query workflow; evidence policy, paper gate, and Skill were already consistent.
 
 Unfinished items:
-Run final repository-wide semantic checks, Skill validation, and wiki lint; create the requested independent commit and push `main` if network access succeeds.
+Run final scoped semantic checks, Skill validation, and wiki lint; create the requested independent commit and push `main` if checks pass.
 
 P0 focus:
-1. Final manuscript admission remains specific to the current claim, wording, source/locator, applicability, competing evidence, and explicit user confirmation.
-2. Candidate evidence remains visible with status and verification tasks, but cannot be described as having passed the gate before verification and confirmation.
+1. Public-remote safety must keep unpublished, collaboration, peer-review, personal, and sensitive raw material outside GitHub.
+2. Strict mode must cover formal evidence use without spilling into ordinary or general controversy discussion.
 
 Remaining P0:
 None identified for this framework-only skill/query sync.
 
 Risks:
-Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside the commit. Do not expand focused claim admission into whole-page review state changes or weaken direct-source requirements.
+Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside the commit. Do not rewrite historical log entries that accurately record earlier repository state or workflow labels.
 
 Checks:
-Pre-lint semantic audit found no remaining conflict in AGENTS, query workflow, evidence policy, Review history, or WIP queue. Still run full targeted `rg`, Skill validation, `git diff --check`, and wiki lint before and after commit.
+Pre-lint audit confirms current governance wording no longer calls the remote private and aligns candidate evidence, claim-specific verification, source visibility, paper admission, and strict triggers. Historical log matches remain expected. Run final `rg`, Skill validation, `git diff --check`, and wiki lint.
 
 Next prompt / continuation phrase:
-Test a manuscript claim from an unreviewed page or a precision claim from a human-reviewed page against the revised gate.
+Continue ordinary Wiki-informed Q&A or test one candidate-evidence-to-paper-admission path against the aligned rules.
 
 Recent user decisions:
-User defined a three-stage model: surface candidate evidence, verify the specific claim and proposed wording, then require explicit user confirmation for paper admission. Whole-page review is not a prerequisite or a substitute.
+User confirmed that the GitHub remote is public and required a stable safety boundary for unpublished, collaboration, peer-review, personal, and sensitive raw material. Review metadata must support discovery and correction rather than suppress knowledge.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

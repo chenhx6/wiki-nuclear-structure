@@ -119,7 +119,7 @@ qmd.cmd status
 
 普通问答不机械归档。
 
-涉及论文定稿、正式引用核查、关键科学主张审查或用户明确要求执行 paper evidence review 时，额外遵循 `system/paper-evidence-gate.md`。未通过 paper evidence gate 不禁止讨论、谨慎综合或初稿生成；它只表示正式提交前仍需补查直接来源、精确 locator、适用条件、竞争解释和引用风险。当前 Wiki 没有覆盖到的文献不能被推断为“不存在”。
+涉及论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认，或用户明确要求执行 paper evidence review 时，额外遵循 `system/paper-evidence-gate.md`。普通争议讨论本身不自动进入 strict mode。未通过 paper evidence gate 不禁止讨论、谨慎综合或初稿生成；它只表示正式提交前仍需补查直接来源、精确 locator、适用条件、竞争解释和引用风险。当前 Wiki 没有覆盖到的文献不能被推断为“不存在”。
 
 ## 6. 收尾
 

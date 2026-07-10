@@ -29,7 +29,7 @@
 - 不是最终权威，不能替代原始论文阅读；
 - 不保证文献完整覆盖；
 - 不能仅凭已有页面生成可直接投稿的确定结论；
-- 不能把未人工复核的页面或 claim 当作论文依据；
+- 不能把尚未完成 claim-specific verification 和用户确认的 candidate evidence 写成最终论文依据；
 - 不能因为未收录某类文献就断言“没有相关工作”；
 - 不能用 synthesis 页面代替原始文献引用。
 
@@ -202,7 +202,7 @@ Project 可以记录研究问题、连接数据处理结果、汇总 source 与 
 - 创新点候选梳理；
 - 引用候选和缺失证据清单。
 
-当前只预留接口，不创建写作 Skill。普通讨论和早期草稿可以先基于现有证据工作，并明确区分直接事实、作者解释、模型结果、跨来源综合和暂时推断；若进入论文定稿、正式引用核查或关键主张审查，再执行 `system/paper-evidence-gate.md`，逐项检查 source、locator、claim kind、citation key、人工复核状态、竞争解释及 synthesis 是否被误当成原始来源。
+当前只预留接口，不创建写作 Skill。普通讨论和早期草稿可以先基于现有证据工作，并明确区分直接事实、作者解释、模型结果、跨来源综合和暂时推断；论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认时，再执行 `system/paper-evidence-gate.md`，逐项检查 source、locator、claim kind、citation key、人工复核状态、竞争解释及 synthesis 是否被误当成原始来源。普通争议讨论本身不自动进入 strict mode。
 
 ## 11. How to use Skills / 如何使用 Skill
 

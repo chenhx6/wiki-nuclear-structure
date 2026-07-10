@@ -264,6 +264,8 @@ Do not require a fixed trigger phrase, but do not invent review completion when 
 
 Review history does not require task closure, paper readiness, or push completion. It may coexist with a Pending WIP entry when follow-up work still remains. Record `review commit message` when a real review commit is created or amended for that round; do not record commit hash or push status there.
 
+Review history is workflow traceability metadata, not scientific evidence, an approved-knowledge whitelist, or a paper-readiness index. It must not determine whether relevant content may be retrieved, surfaced, discussed, rechecked, or used as candidate evidence.
+
 Do not backfill old completed reviews during routine framework maintenance.
 
 ### Review-finalization trigger / 审核完成触发
@@ -303,7 +305,7 @@ Do not backfill old completed reviews during routine framework maintenance.
 
 当直接证据不完整时，应降低表述强度、说明限制，并指出值得补查的来源、数据、locator 或页面入口，而不是无必要地拒绝回答或停止写作。不得虚构 citation key、DOI、页码、图号、表号、locator、原文表述、数据或引文。
 
-严格 paper evidence gate 只在论文定稿、正式引用核查、关键科学主张审查或用户明确要求时启用。未通过 paper evidence gate 不禁止普通讨论、谨慎综合、合理推断或初稿生成；它只表示正式提交前仍需回到直接来源、精确 locator、适用条件、竞争解释和引用风险做进一步核查。
+严格 paper evidence gate 只在论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认，或用户明确要求时启用。普通问答、研究讨论、探索性综合、早期草稿和一般争议讨论不因此自动进入 strict mode。未通过 paper evidence gate 不禁止普通讨论、谨慎综合、合理推断或初稿生成；它只表示正式提交前仍需回到直接来源、精确 locator、适用条件、竞争解释和引用风险做进一步核查。
 
 ### “不 commit/push”的兼容解释
 

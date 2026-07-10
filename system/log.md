@@ -440,3 +440,8 @@ updated: 2026-07-06
 
 - Replaced page-status-based paper admission with candidate discovery, focused claim/source verification, and explicit user-confirmed admission for the proposed manuscript wording.
 - Clarified claim-scoped P0/P1 review and future writing-skill candidate handling; minimally synchronized the evidence-query description, user guides, and checklist without changing science pages or Review history.
+
+## [2026-07-10] framework | aligned review, output, and Wiki growth rules
+
+- Updated long-term memory and user guidance for the public GitHub remote and exclusion of unpublished, collaboration, peer-review, personal, and sensitive raw material.
+- Aligned high-value candidate surfacing, reviewed-knowledge rechecking/growth, claim-specific paper admission, Review history boundaries, and complete strict-mode triggers across current governance files.
