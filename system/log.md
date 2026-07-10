@@ -421,3 +421,7 @@ updated: 2026-07-06
 
 - Added `system/review-history.md` as the forward-looking index for completed review/finalization tasks; no old completed reviews were backfilled.
 - Synchronized Pending WIP queue, review-finalization, user-guide, and checklist rules so future finalized reviews move from pending queue into review history without extra queue-only status commits unless a sync step was truly missed.
+
+## [2026-07-10] framework | review-history semantics and evidence guidance refined
+
+- Refined human-review history, review-commit traceability, and evidence-calibrated citation guidance.

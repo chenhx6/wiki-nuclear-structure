@@ -25,7 +25,7 @@
 
 `system/wip-queue.md` is a short index for multiple unfinished local WIP, review WIP, safe-suspended tasks, or not-pushed checkpoints. It does not replace Active handoff. Do not read the full queue during normal startup; read it only when the task concerns unfinished WIP, review continuation, safe suspend, non-serial work, or the user asks about pending WIP / unfinished review tasks.
 
-`system/review-history.md` is a short index for future finalized/pushed/closed review tasks. Do not read it during ordinary startup; read it only when the task concerns completed reviews, manuscript-ready reviewed sources, or the user asks what was already finalized.
+`system/review-history.md` is a short index for completed human-review rounds. Do not read it during ordinary startup; read it only when the task concerns completed reviews, review rounds already finished by the user, or the user asks what was already reviewed/finalized.
 
 若文件之间存在冲突：
 
@@ -242,8 +242,8 @@ Commit message 统一使用：
 
 - 文献摄入完成但未审核：保留本地 WIP ingest，不 push；
 - project、synthesis 或跨来源综合完成但未审核：保留本地 WIP review，不 push；
-- 用户审核完成：按审核报告修改并确认待提交文件均为本轮 human-review 收口内容后，将对应 WIP amend 为 final commit，不得另建 review/final commit；只有用户允许时才 push；
-- 用户指定 final commit message 时原样使用；未指定时由 Codex 给出与本轮内容直接相关的建议 message，并在最终报告中说明；
+- 用户审核完成：按审核报告修改并确认待提交文件均为本轮 human-review 收口内容后，将对应 WIP amend 为 review/final commit，不得另建 review/final commit；只有用户允许时才 push；
+- 用户指定本轮提交 message 时原样使用；未指定时由 Codex 给出与本轮内容直接相关的建议 message，并在最终报告中说明；
 - 任务放弃：等待用户明确指令，不自动 reset。
 
 仓库中存在对应 active WIP、用户已完成审核并要求 final commit/push 时，上述规则即构成对 `git commit --amend` 的明确本地授权，优先于通用的“除非用户明确要求，否则不要 amend”约束。不得因该通用约束而保留独立 WIP，再额外创建 final commit。
@@ -254,17 +254,23 @@ When a task ends as WIP, a local not-pushed commit, a safe suspend, or user-revi
 
 Queue entries record only task short name, status, branch, commit, files, review needed, overview/QMD, next action, and risks. They should keep only the latest branch / commit / next action needed to continue review or push, not every temporary commit/push state. Do not store full paper notes, raw content, source-claim bodies, or long recaps there. If the user starts a new ingest/project/synthesis while older WIPs remain unreviewed, keep the older WIPs in the queue instead of relying on Active handoff.
 
-If a WIP commit hash changes after amend or rebase, update the queue to the latest branch/commit pointer. After WIP finalization, push, or explicit closure, update or clear the matching queue entry and use `system/review-history.md` for the completed-review summary. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
+If a WIP commit hash changes after amend or rebase, update the queue to the latest branch/commit pointer. Review history and Pending WIP are not mutually exclusive: after a human-review round is completed, append review history first, then independently decide whether the queue entry should remain, be updated, or be cleared. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
 
 ### Review history
 
-`system/review-history.md` records future review tasks that are finalized, pushed, or explicitly closed. Keep entries short and index-like; do not copy long review reports, raw source text, or full claim bodies there.
+`system/review-history.md` records completed human-review rounds. A review round exists when the user gives substantive review comments and clearly indicates, or the context makes it unambiguous, that this review round has ended. Keep entries short and index-like; do not copy long review reports, raw source text, or full claim bodies there.
 
-Do not backfill old completed reviews during routine framework maintenance. Only write a completed review entry when the review workflow is truly closed for this round. If the user explicitly says “不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”, or if push status remains uncertain, keep the task in `system/wip-queue.md` instead of moving it into completed review history.
+Do not require a fixed trigger phrase, but do not invent review completion when the user's intent is ambiguous, partial, or still open-ended. Review history is triggered by the human-review completion event itself, not by commit, push, merge, rebase, overview, QMD, lint, or the Agent's own sense that a task is finished.
+
+Review history does not require task closure, paper readiness, or push completion. It may coexist with a Pending WIP entry when follow-up work still remains. Record `review commit message` when a real review commit is created or amended for that round; do not record commit hash or push status there.
+
+Do not backfill old completed reviews during routine framework maintenance.
 
 ### Review-finalization trigger / 审核完成触发
 
-当上一轮任务处于 `WIP ingest:`、source review、waiting for user review、waiting for user P0/P1 review、`WIP review:`、project review、synthesis review 或 cross-project synthesis review 状态，且用户在下一轮消息中给出审核意见并表示“审核完毕”“已审核”“除以上几点外无问题”“除以上两点外无问题”“P0/P1 已审核通过”“可以提交”“请 commit/push”“审核完毕，请 commit/push”等同义表达时，Codex 应自动识别为 `review-finalization request`。
+当上一轮任务处于 `WIP ingest:`、source review、waiting for user review、waiting for user P0/P1 review、`WIP review:`、project review、synthesis review 或 cross-project synthesis review 状态，且用户给出实质性审核意见，并明确表示或根据当前消息与上下文可以无歧义地判断本轮人工审核已经结束时，Codex 应识别为发生了 human-review completion event，并在适用时进入 `review-finalization request`。
+
+不要求固定短语；若是否结束本轮审核存在歧义，不得擅自写入 `system/review-history.md` 或强行进入 finalization。
 
 在 `review-finalization request` 下，除非用户明确说“不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”“只修改，不提交”“只 commit，不 push”等覆盖默认行为，Codex 默认执行：
 
@@ -274,15 +280,30 @@ Do not backfill old completed reviews during routine framework maintenance. Only
 4. 若审核意见已落实且无 unresolved P0，更新 `knowledge/overview.md`，并说明 overview 状态；
 5. 执行 QMD refresh（`qmd.cmd update`、`qmd.cmd embed -c nuclear-knowledge`、`qmd.cmd status`），失败时如实报告并不得伪造刷新成功；
 6. 运行与本次修改相称的检查；
-7. 按 WIP lifecycle 将对应 WIP amend 为 final commit，并默认 push；若用户明确“不要 push”或“只 commit，不 push”，则只 final commit 不 push；
-8. 在同一个 finalization 流程中更新 `system/wip-queue.md`，并在任务已最终完成、成功 push 或被明确关闭时，将对应条目迁移或摘要写入 `system/review-history.md`；
-9. 刷新 `system/handoff.md` 的 Active handoff；
-10. 向 `system/log.md` 追加一条简短记录；
-11. 最终复盘报告 overview、QMD、commit、push、handoff、queue、review history 和 log 的状态。
+7. 按 WIP lifecycle 将对应 WIP amend 为 review commit / final commit，并默认 push；若用户明确“不要 push”或“只 commit，不 push”，则只提交本地 commit 不 push；
+8. 为本轮明确结束的人工审核追加 `system/review-history.md` 条目；该条目记录审核范围、用户判断、要求修改、遗留问题、下一步、相关页面，以及 `review commit message`（若本轮实际创建或 amend 了 review commit）；
+9. 独立判断 `system/wip-queue.md` 对应 entry 是否继续保留、需要更新，还是已经可以清除；不得使用简单的 `Pending WIP → Review history` 单向迁移模型；
+10. 刷新 `system/handoff.md` 的 Active handoff；
+11. 向 `system/log.md` 追加一条简短记录；
+12. 最终复盘报告 overview、QMD、commit、push、handoff、queue、review history 和 log 的状态。
 
 若仍存在 unresolved P0、locator gaps、审核意见未落实、审核意见无法唯一映射到具体 claim、source/project/synthesis 仍存在高风险不确定内容，或 HEAD 不是对应 WIP 且无法确认归属，不得强行 finalization；应停止扩大修改，必要时 safe suspend，并向用户报告阻塞点。
 
 不要在 push 后再额外创建只修正 queue/status 的 commit，除非前一次 finalization 确实遗漏了必要的 queue/review-history/handoff/log 同步。若无法确认 push 是否成功，应 safe suspend，并在 handoff/queue 中写明 `push status: uncertain`，而不是猜测已完成。
+
+## Evidence-calibrated reasoning / 证据校准推理
+
+可追溯性的目的，是区分证据层级、校准表述强度并方便用户核查，而不是禁止合理分析和推断。普通 Wiki 问答、研究讨论、跨来源比较、综合分析和论文早期草稿，应基于当前已有证据给出最佳可支持答案，同时明确区分：
+
+- 文献直接报告的实验事实；
+- 文献作者的解释；
+- 模型或计算结果；
+- 跨来源综合；
+- 我们自己的暂时推断、工作假设或可能解释。
+
+当直接证据不完整时，应降低表述强度、说明限制，并指出值得补查的来源、数据、locator 或页面入口，而不是无必要地拒绝回答或停止写作。不得虚构 citation key、DOI、页码、图号、表号、locator、原文表述、数据或引文。
+
+严格 paper evidence gate 只在论文定稿、正式引用核查、关键科学主张审查或用户明确要求时启用。未通过 paper evidence gate 不禁止普通讨论、谨慎综合、合理推断或初稿生成；它只表示正式提交前仍需回到直接来源、精确 locator、适用条件、竞争解释和引用风险做进一步核查。
 
 ### “不 commit/push”的兼容解释
 

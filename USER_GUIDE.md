@@ -122,9 +122,11 @@ SORT file.name ASC
 
 普通文献摄入完成并通过检查后，默认创建一个仅保存在本地的 `WIP ingest: ... for user review` commit；project、synthesis 或跨来源综合等待审核时使用 `WIP review: ... for user review`。二者都不 push，只是减少未提交 diff、降低 Codex/Git/文件监听 CPU 负担的审核检查点，不表示科学内容已经人工复核；你仍可使用 Codex 内置 Markdown 渲染查看文件并提交审核意见。
 
-审核后，Codex 根据报告修改明确项目，并使用 `git commit --amend` 把对应 WIP 转为 final commit；不得保留独立 WIP 后再增加 final commit。你指定 final commit message 时原样使用；未指定时由 Codex 推荐与本轮内容直接相关的 message，并在最终报告中说明。只有你允许时才 push。同一分支不累积多个 active WIP。仓库存在对应 WIP、你已完成审核并要求 final commit/push 时，这本身就是仓库流程对 amend 的明确授权。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若确实不希望任何本地 commit，请明确写“禁止本地 WIP commit”。
+审核后，Codex 根据报告修改明确项目，并使用 `git commit --amend` 把对应 WIP 转为落实本轮审核意见的 review commit / final commit；不得保留独立 WIP 后再增加 final commit。你指定 review commit message 时原样使用；未指定时由 Codex 推荐与本轮内容直接相关的 message，并在最终报告中说明。只有你允许时才 push。同一分支不累积多个 active WIP。仓库存在对应 WIP、你已完成审核并要求 final commit/push 时，这本身就是仓库流程对 amend 的明确授权。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若确实不希望任何本地 commit，请明确写“禁止本地 WIP commit”。
 
-如果你不想串行审核，可以保留多个 pending WIP。Codex 会把多个未完成本地 WIP、等待审核任务、未 push checkpoint 或 push 状态 uncertain 的任务记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动；真正完成并关闭的 review 则写入 `system/review-history.md`。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”。未审核 WIP 不应 push 到 `main`。
+如果你不想串行审核，可以保留多个 pending WIP。Codex 会把多个未完成本地 WIP、等待审核任务、未 push checkpoint 或 push 状态 uncertain 的任务记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动。
+
+`system/review-history.md` 单独记录已经明确结束的人工审核轮次。两者可以同时保留同一任务：history 记录“这一轮已经审完”，queue 记录“这项工作还要继续处理什么”。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”。未审核 WIP 不应 push 到 `main`。
 
 审核完成时可以直接写简短结论，例如：
 
@@ -135,7 +137,9 @@ SORT file.name ASC
 审核完毕，除了以上几点外无问题。
 ```
 
-Codex 应自动进入 review-finalization：按审核意见做最小修改，执行 overview/QMD/final commit/push 的默认流程，并在成功后把对应 WIP 从 `system/wip-queue.md` 迁移或摘要到 `system/review-history.md`。如果你不想 finalization，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
+Codex 应自动把这类消息理解为“本轮人工审核已经结束”，记录本轮 Review history，并进入 review-finalization：按审核意见做最小修改，执行 overview/QMD/review commit/push 的默认流程，再独立判断 queue 是否继续保留。你不必使用固定短语；只要整体语义可以无歧义地判断本轮审核已经结束即可。如果你不想 finalization，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
+
+普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断，并尽量给出已有来源、citation key、数据、locator 或页面入口方便你核查。只有当你明确要求论文定稿级核查时，才进入严格的 paper evidence mode。
 
 ## 4. Zotero 轻量连接
 

@@ -6,30 +6,40 @@ updated: 2026-07-10
 
 # Review history
 
-This page tracks completed review/finalization tasks. Keep entries short. Do not store long reports here.
+This page tracks completed human-review rounds. A review round is recorded when the user's substantive review has clearly ended. Git commit, push, merge, overview, QMD, task closure, and paper readiness are not review triggers.
 
-## Completed reviews
+## Completed review rounds
 
-<!-- Future completed review entries go here. Do not backfill old history during framework setup. -->
+<!-- Append real completed human-review rounds here. Do not backfill old history during framework setup. -->
 
-### <short review task name>
-- status:
-- branch:
-- final commit:
-- pushed:
-- source/project pages:
-- review resolved:
-- overview/QMD:
-- paper-use:
-- notes:
+## Entry template
+
+```markdown
+### YYYY-MM-DD — <review task name> — round <N>
+
+- review scope:
+- user decisions:
+- corrections requested:
+- unresolved issues:
+- next action:
+- related pages:
+- review commit message:
+```
 
 ## Rules
 
-- Move or summarize a Pending WIP queue entry here when the review workflow is fully completed and the task is finalized, pushed, or explicitly closed.
+- Create an entry only after a substantive human-review round has clearly ended.
+- Do not require a fixed trigger phrase; judge the entire user message and context.
+- If review completion is ambiguous, do not create an entry.
+- Review history records the human-review event, not commit/push/finalization/overview/QMD history.
+- Review history and Pending WIP may coexist for the same task.
+- A completed review round does not require the task to be closed.
+- Support multiple rounds by appending new dated entries; do not overwrite earlier rounds.
 - Keep entries short and index-like; do not copy long review reports.
 - Do not store raw source text or full claim bodies here.
-- Use this page to answer questions such as "which reviews were completed recently?" or "which reviewed sources are ready for manuscript use?".
-- If a finalized review still needs manuscript integration, mark `paper-use` accordingly.
-- If a task is abandoned, superseded, or otherwise explicitly closed, record that status rather than leaving it indefinitely in the queue.
-- Do not add tasks here when push is skipped, push status is uncertain, unresolved P0 remains, or locator gaps remain unresolved.
+- Use this page to answer questions such as "which review rounds were completed recently?".
+- `review commit message` identifies the commit that implements the decisions from this human-review round. It does not imply task closure, finalization, or push completion.
+- Record `review commit message` only when a real review commit exists or is being created in the same workflow; do not use placeholders.
+- Do not record WIP/review/final commit hashes or push status here.
+- If the user explicitly forbids a commit or Git safety blocks commit creation, omit `review commit message` and record the remaining action in queue/handoff instead.
 - Do not backfill old completed reviews unless the user explicitly requests a historical audit.

@@ -165,7 +165,9 @@ WIP ingest 只表示等待用户审核的本地检查点，不表示科学内容
 
 ### 7.2 Review finalization
 
-用户审核后，若上一轮处于 `WIP ingest:` / source review / waiting for user review / waiting for user P0/P1 review 状态，且用户给出审核意见并表示“审核完毕”“已审核”“除以上几点外无问题”“除以上两点外无问题”“P0/P1 已审核通过”“可以提交”“请 commit/push”“审核完毕，请 commit/push”等同义表达，应自动识别为 `review-finalization request`。除非用户明确说“不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”“只修改，不提交”“只 commit，不 push”，默认进入 finalization。
+用户审核后，若上一轮处于 `WIP ingest:` / source review / waiting for user review / waiting for user P0/P1 review 状态，且用户给出实质性审核意见，并明确表示或根据当前消息与上下文可以无歧义地判断本轮人工审核已经结束，应识别为 human-review completion event，并在适用时进入 `review-finalization request`。
+
+不要求固定触发短语；若存在歧义，不得自动写入 `system/review-history.md`。除非用户明确说“不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”“只修改，不提交”“只 commit，不 push”，默认进入 finalization。
 
 Finalization 包括：
 
@@ -177,11 +179,12 @@ Finalization 包括：
 6. 执行 QMD refresh（`qmd.cmd update`、`qmd.cmd embed -c nuclear-knowledge`、`qmd.cmd status`）；
 7. 重新运行 Git 检查和 Wiki lint；
 8. 重新输出 Human review triage，列明已处理项目、仍保留的 P0/P1 和 paper evidence gate 影响；
-9. 确认 HEAD 是对应的 WIP ingest commit 后，使用 `git commit --amend` 把 WIP 转换为 final commit，不新建额外 review commit；
-10. 用户指定 final commit message 时原样使用；未指定时由 Codex 根据实际摄入与审核修改推荐直接相关的 message，并在最终报告中说明；
+9. 确认 HEAD 是对应的 WIP ingest commit 后，使用 `git commit --amend` 把 WIP 转换为 review/final commit，不新建额外 review commit；
+10. 用户指定本轮提交 message 时原样使用；未指定时由 Codex 根据实际摄入与审核修改推荐直接相关的 message，并在最终报告中说明；
 11. 默认执行 `git push origin main`；若用户明确“不要 push”，只 final commit 不 push；
-12. 在同一个 finalization 流程中刷新 `system/handoff.md` Active handoff、更新或清除 `system/wip-queue.md` 对应 entry，并在任务已真正完成、成功 push 或被明确关闭时，将其迁移或摘要写入 `system/review-history.md`；
-13. 向 `system/log.md` 追加短记录；
-14. 最终复盘报告 overview、QMD、commit、push、handoff、queue、review history 和 log 状态。
+12. 为本轮明确结束的人工审核追加 `system/review-history.md` 条目；记录审核范围、用户判断、要求修改、遗留问题、下一步、相关页面，以及 `review commit message`（若本轮实际创建或 amend 了 review commit）；
+13. 在同一个 finalization 流程中刷新 `system/handoff.md` Active handoff，并独立判断 `system/wip-queue.md` 对应 entry 是继续保留、更新还是清除；不得使用简单的 queue-to-history 自动迁移模型；
+14. 向 `system/log.md` 追加短记录；
+15. 最终复盘报告 overview、QMD、commit、push、handoff、queue、review history 和 log 状态。
 
-如果 HEAD 不是对应 WIP，或无法确认 WIP 归属，停止并询问用户，不得擅自 amend。若用户明确“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”，则不得把该任务移动到 `system/review-history.md` 的 completed 区。若 push 状态无法确认，应 safe suspend，并在 handoff/queue 中写明 `push status: uncertain`。Finalization 使用 amend，避免 WIP commit 累积，也避免在 push 后再额外创建 queue/status 修正 commit。
+如果 HEAD 不是对应 WIP，或无法确认 WIP 归属，停止并询问用户，不得擅自 amend。若用户明确“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”，Review history 仍可记录本轮已明确结束的人工审核，但 queue 是否保留必须独立判断。若 push 状态无法确认，应 safe suspend，并在 handoff/queue 中写明 `push status: uncertain`。Finalization 使用 amend，避免 WIP commit 累积，也避免在 push 后再额外创建 queue/status 修正 commit。

@@ -91,16 +91,21 @@ qmd.cmd status
 
 ## 4. 回答要求
 
+- 默认模式是 ordinary Wiki questions / exploratory synthesis / research discussion / early drafting，而不是严格 paper evidence gate。
 - 每个核心结论追溯到来源页。
-- 关键数值附单位、不确定度和 locator。
+- 关键数值在已有直接来源时附单位、不确定度和 locator；若精确 locator 暂缺但仍能给出有价值回答，应降低措辞强度并说明限制。
 - 术语首次出现时优先使用“中文（English, abbreviation）”；必要时说明 canonical term、用户原词和原文术语的关系。
-- 显式标明实验事实、实验判据、作者解释、模型结果、我们的推断和综合判断。
+- 显式标明实验事实、实验判据、作者解释、模型结果、跨来源综合、我们的暂时推断或工作假设。
 - 相互冲突的来源并列呈现。
 - 库中没有的信息明确写“当前知识库未覆盖”。
 - 不以模型的通用记忆冒充本库资料。
 - 页面或 claim 未完成人工复核时，明确标记为阅读线索，不把它写成论文级结论。
 - synthesis 只能帮助综合和导航，不能替代原始 source/raw。
 - source/claim 引用继续以知识页和原始 locator 为准，不得只引用 vocabulary。
+- 当已有 source、citation key、数据、locator 或 Wiki 页面入口时，优先提供这些核查入口，方便用户回查。
+- 证据不完整时，应校准措辞、说明限制并指出值得补查的方向，而不是无必要地拒绝回答。
+- 不得把综合或推断伪装成某一来源直接报告的结论，也不得把“当前尚无直接证据”自动解释为“该判断一定错误”。
+- 不得虚构 citation、DOI、页码、图号、表号、locator、原文或数据。
 
 ## 5. 持久化判断
 
@@ -113,7 +118,7 @@ qmd.cmd status
 
 普通问答不机械归档。
 
-涉及论文级文字、引用建议或创新点判断时，额外遵循 `system/paper-evidence-gate.md`。当前 Wiki 没有覆盖到的文献不能被推断为“不存在”。
+涉及论文定稿、正式引用核查、关键科学主张审查或用户明确要求执行 paper evidence review 时，额外遵循 `system/paper-evidence-gate.md`。未通过 paper evidence gate 不禁止讨论、谨慎综合或初稿生成；它只表示正式提交前仍需补查直接来源、精确 locator、适用条件、竞争解释和引用风险。当前 Wiki 没有覆盖到的文献不能被推断为“不存在”。
 
 ## 6. 收尾
 

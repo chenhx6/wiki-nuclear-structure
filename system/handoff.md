@@ -8,35 +8,35 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Framework-only workflow improvement: add `system/review-history.md` and synchronize future review-finalization tracking across Active handoff, Pending WIP queue, and completed review history.
+Framework-only workflow correction: refine human-review history semantics, review-commit traceability, and evidence-calibrated reasoning boundaries.
 
 Current branch / local commit:
 `main`. This round is limited to framework files for workflow/docs/checklist synchronization. Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of this task and must remain unstaged.
 
 Last task status:
-Added forward-looking `system/review-history.md` template/rules, clarified that `system/wip-queue.md` keeps pending WIP with only the latest continuation pointers, and synchronized AGENTS/workflows/guides/checklist wording so future review-finalization can move completed items into review history without backfilling old tasks.
+Refined `system/review-history.md` so it is triggered by the clear end of a substantive human-review round rather than by commit/push/task closure; replaced queue-to-history migration language with append review history + independently judge queue retention; unified Git helper wording to `review commit message`; and added evidence-calibrated reasoning boundaries so ordinary answers can still provide the best supported synthesis without pretending to satisfy manuscript-level evidence by default.
 
 Unfinished items:
-No framework blocker is identified in this setup task. Future review-finalization rounds should update queue/history/handoff/log together and avoid backfilling old completed reviews during routine maintenance.
+No framework blocker is identified in this correction task. Future review-finalization rounds should treat Review history as append-only human-review rounds, keep queue/history logically independent, and use strict paper evidence gate only when the task is actually manuscript-grade.
 
 P0 focus:
-1. Do not move a task into completed review history when push is skipped, push status is uncertain, or unresolved P0 / locator gaps remain.
-2. Do not backfill legacy completed reviews into `system/review-history.md` unless the user explicitly requests a historical audit.
+1. Review history should be written only when the user's substantive review has clearly ended; fixed trigger words are not required, but ambiguity still blocks automatic entry creation.
+2. Review history records `review commit message` only as a human-readable search aid; it must not record hash/push state or imply task closure/finalization completion.
 
 Remaining P0:
-None identified for this framework-only workflow update.
+None identified for this framework-only workflow correction.
 
 Risks:
-`system/wip-queue.md` still contains legacy completed entries from before `system/review-history.md`; they are intentionally left unmigrated in this setup task. Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside future commits unless the user explicitly asks otherwise.
+`system/wip-queue.md` still contains legacy completed entries from before the corrected human-review-history semantics; they are intentionally left untouched in this task. Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside future commits unless the user explicitly asks otherwise.
 
 Checks:
-This round passed `git diff --check` and `python system/scripts/wiki_lint.py --fail-on error` with only existing warnings. This framework task must not modify `raw/`, science pages, `PLAN.md`, `system/schema.md`, or lint/test code.
+Run `git status --short`, `git diff --stat`, `git diff --check`, targeted `rg` audits for old review-history trigger logic / Git fields / evidence wording, and `python system/scripts/wiki_lint.py --fail-on error`. This framework task must not modify `raw/`, science pages, `PLAN.md`, `system/schema.md`, or lint/test code.
 
 Next prompt / continuation phrase:
-Continue framework workflow maintenance by using `system/wip-queue.md` for pending review work and `system/review-history.md` for newly completed review-finalization tasks only.
+Continue framework workflow maintenance by treating Review history as human-review-round history, keeping queue/history independent, and using evidence-calibrated ordinary answers unless a strict paper evidence review is explicitly requested.
 
 Recent user decisions:
-User requested a framework-only workflow update: add `system/review-history.md`, keep Active handoff short, keep `system/wip-queue.md` focused on pending WIP, do not backfill old completed reviews, and do not write this framework task into completed review history.
+User requested a framework-only correction: Review history must be triggered by the clear end of a substantive human-review round rather than by commit/push/task closure; fixed trigger phrases are not required; Review history may coexist with Pending WIP; Git helper field should be `review commit message`; and ordinary answers should use evidence-calibrated reasoning rather than defaulting to strict paper evidence gate.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

@@ -8,6 +8,12 @@ updated: 2026-07-05
 
 本规则用于判断 Wiki 内容能否进入论文级证据池。它不是论文写作模板，也不表示当前 Wiki 已完整覆盖文献。
 
+The paper evidence gate is a conditional manuscript-readiness check. It is not the default operating mode for ordinary Wiki questions, exploratory synthesis, research discussion, or early drafting.
+
+Failure to pass the paper evidence gate does not prohibit discussion, provisional synthesis, or draft generation. It requires calibrated wording, traceable supporting material when available, and a clear indication of what should be checked before final submission.
+
+中文边界：未通过 paper evidence gate，不等于不能讨论、不能写草稿或不能提出合理推断；只表示正式投稿、正式引用核查或关键主张确认前，还需要进一步检查直接来源、精确 locator、适用条件、数据一致性、竞争解释和引用风险。
+
 ## 科学主张准入条件
 
 论文正文使用 Wiki 支撑科学主张时，至少满足：

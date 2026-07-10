@@ -181,20 +181,26 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] Pending WIP queue 只记录恢复索引，没有写入 raw 内容、source claim 正文或长复盘。
 - [ ] Pending WIP queue 只保留继续审核所需的最新 branch / commit / next action，没有频繁追踪每个临时 commit/push 状态。
 - [ ] WIP 结束时 overview/QMD deferred 状态已在 queue 和最终复盘中说明；未把未审核 WIP push 到 `main`。
-- [ ] 已识别 review-finalization trigger：用户在 WIP ingest/source review/project review/synthesis review/cross-project synthesis review/waiting for user review/waiting for user P0/P1 review 后说“审核完毕”“已审核”“除以上几点外无问题”“除以上两点外无问题”“P0/P1 已审核通过”“可以提交”“请 commit/push”“审核完毕，请 commit/push”等时，默认进入 finalization，除非用户明确覆盖。
+- [ ] 本轮是否存在用户已经完成的实质性人工审核，以及是否可以无歧义地判断本轮审核已经结束。
+- [ ] Review history 触发判断没有机械依赖固定关键词；存在歧义时未擅自创建 Review history entry。
+- [ ] Review history 由审核完成语义触发，而不是由 commit、push、merge、overview 或 QMD 触发。
 - [ ] Review finalization 已按用户审核意见做最小修改，并只处理用户明确确认范围内的 `review_status` / `needs_review`。
-- [ ] 已判断当前任务在 finalization 后是否应写入 `system/review-history.md`，以及是否应清理、移除或标记对应 pending queue entry。
+- [ ] Review history 不要求 task closed 后才能写入，并允许与 Pending WIP queue 同时存在。
+- [ ] 已判断当前任务在本轮审核后是否应写入 `system/review-history.md`，以及 queue 应继续保留、更新还是清理。
 - [ ] Review finalization 默认更新 `knowledge/overview.md`；若用户明确不要 overview，最终复盘已说明。
 - [ ] Review finalization 默认执行 QMD refresh；若用户明确不要 QMD 或 QMD 失败，最终复盘已说明。
 - [ ] Review finalization 已按 WIP lifecycle amend 为 final commit，并默认 push；若用户明确不要 push，最终复盘已说明 not pushed。
-- [ ] Review finalization 已刷新 Active handoff、更新或清除对应 queue entry、按规则更新 `system/review-history.md`，并追加 short log。
+- [ ] Review history 条目记录了审核范围、用户判断、要求修改和遗留问题，没有伪装成 Git/push 历史。
+- [ ] Review history 使用 `review commit message`，不使用 `Git reference` 或 `final commit message`，且没有记录 commit hash 或 push 状态。
+- [ ] Review history 中的 `review commit message` 与实际 commit message 一致，且没有把它解释为 task closure、finalization complete 或 push complete。
+- [ ] Review finalization 已刷新 Active handoff，并按规则更新 queue / review history / short log；没有把它们强制绑定为简单 queue-to-history 迁移。
 - [ ] 没有在 push 后再额外创建纯 queue/status 修正 commit，除非前一次 finalization 确实遗漏了必要同步。
+- [ ] 同一任务的多轮审核按 round 追加，而不是覆盖旧条目。
 - [ ] 存在 unresolved P0、locator gaps、审核意见无法唯一映射或 WIP 归属不明时，未强行 finalization，已 safe suspend 或报告阻塞。
-- [ ] 没有把 unresolved P0、locator gaps 未清、未 push、push 状态 uncertain 的任务强行写入 completed review history。
 - [ ] framework setup 或普通维护没有回填旧 review history，除非用户明确要求历史审计。
 - [ ] HEAD 已是 active WIP ingest/review/suspend 时，没有开始下一篇摄入、下一项综合或创建第二个 WIP。
 - [ ] 用户审核后通过 `git commit --amend` 把对应 WIP 转为 final commit，没有保留独立 WIP 或累积额外 review/final commits。
-- [ ] 用户指定 final commit message 时已原样使用；未指定时由 Codex 根据实际修改推荐直接相关的 message，并在最终报告中说明。
+- [ ] 用户指定本轮提交 message 时已原样使用；未指定时由 Codex 根据实际修改推荐直接相关的 message，并在最终报告中说明。
 - [ ] 对应 active WIP + 用户审核完成 + final commit/push 指令已按仓库内明确 amend 授权处理，没有错误套用通用“不主动 amend”约束。
 - [ ] WIP/final commit 均未包含 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib`、raw PDF、论文、数据、图片、未经授权的 `PLAN.md` 或无关文件。
 - [ ] Safe suspend 遇到大量 Markdown diff 时，已优先判断并尝试本地 WIP checkpoint。
@@ -213,4 +219,13 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] `USER_GUIDE.md` 与当前目录、命令和 Obsidian 工作流一致。
 - [ ] 自动 lint 已运行且 error 为 0；warning/info 已解释。
 - [ ] `knowledge/overview.md` 的页面级与 claim-level 统计在阶段性更新触发时已与最新 lint `GOVERNANCE` 输出同步；普通单篇摄入 deferred 时已说明。
+- [ ] 可追溯性被用于区分证据层级和校准措辞，而不是禁止合理推断。
+- [ ] 回答明确区分直接事实、作者解释、模型结果、跨来源综合和暂时推断。
+- [ ] 证据不完整时已降低表述强度并说明限制，而不是无必要地拒绝回答。
+- [ ] 普通问答、研究讨论、综合分析或早期草稿没有误用投稿级 paper evidence gate。
+- [ ] 在已有来源、citation key、数据、locator 或页面入口时，优先给出这些核查入口。
+- [ ] 综合或推断已标明其性质和主要支撑来源，没有伪装成来源直接结论。
+- [ ] 没有把间接讨论误写成对强结论的直接支持。
+- [ ] 没有虚构 citation、DOI、页码、图表编号、locator、原文或数据。
+- [ ] 论文定稿、正式引用核查或关键主张审查时，关键主张已回到直接来源、locator 和适用条件。
 - [ ] 修改 lint 实现时，单元与仓库集成测试已通过。

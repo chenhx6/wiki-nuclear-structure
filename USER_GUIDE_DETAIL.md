@@ -33,7 +33,7 @@
 - 不能因为未收录某类文献就断言“没有相关工作”；
 - 不能用 synthesis 页面代替原始文献引用。
 
-论文级结论必须回到 source、必要的 raw 原文、精确 locator、citation key 和人工复核，并通过 paper evidence gate。
+论文级结论必须回到 source、必要的 raw 原文、精确 locator、citation key 和人工复核，并通过 paper evidence gate。普通 Wiki 问答、研究讨论、跨来源综合和早期草稿不默认进入严格 paper evidence gate；这些场景仍应基于现有证据给出最佳可支持内容，只是需要校准措辞并说明限制。
 
 ## 4. Core layers / 核心层级
 
@@ -125,13 +125,15 @@
 1. Codex 显式暂存本轮摄入文件，创建本地 `WIP ingest: <paper> for user review`；
 2. WIP 不 push，也不代表页面或 claims 已人工复核；
 3. 用户继续通过 Codex 内置 Markdown 渲染查看文件并给出审核报告；
-4. Codex 只按报告修改明确项目，并推荐 final commit message；
-5. Codex 使用 `git commit --amend` 把 WIP 转成 final commit，避免临时 commits 累积；
-6. Final commit 通过检查后，只有用户允许才 push。
+4. Codex 只按报告修改明确项目，并推荐 review commit message；
+5. Codex 使用 `git commit --amend` 把 WIP 转成落实本轮审核意见的 review/final commit，避免临时 commits 累积；
+6. commit 通过检查后，只有用户允许才 push。
 
 同一分支最多保留一个 active WIP。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若要禁止所有本地 commit，需明确写“禁止本地 WIP commit”。Safe suspend 遇到大量 Markdown diff 时也优先采用本地 WIP checkpoint，减少 Codex、Git、编辑器或文件监听的持续 CPU 占用；checkpoint 绝不自动 push。
 
-用户不需要串行工作。若暂时没时间审核某个 WIP，可以让 Codex 保留本地 WIP commit、不 push，并把短索引写入 `system/wip-queue.md`。queue 只保留继续审核所需的最新 branch/commit/next action，不追踪每个临时 commit/push 细节。真正完成并关闭的 review 则写入 `system/review-history.md`。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”；Codex 应从 queue、handoff、review history 和 Git 状态恢复，而不是把旧 WIP 从 Active handoff 中丢失。
+用户不需要串行工作。若暂时没时间审核某个 WIP，可以让 Codex 保留本地 WIP commit、不 push，并把短索引写入 `system/wip-queue.md`。queue 只保留继续审核所需的最新 branch/commit/next action，不追踪每个临时 commit/push 细节。
+
+`system/review-history.md` 记录的是已经明确结束的人工审核轮次，不要求任务已经 closed，也不要求已经 push。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”；Codex 应从 queue、handoff、review history 和 Git 状态恢复，而不是把旧 WIP 从 Active handoff 中丢失。
 
 审核完成后可以用短句触发 finalization，例如：
 
@@ -139,9 +141,11 @@
 审核：1... 2... 审核完毕，除以上两点外无问题。
 ```
 
-Codex 应自动理解为审核后的 finalization 请求：按审核意见做最小修改，处理明确确认范围内的 `needs_review`，更新 overview，刷新 QMD，完成 final commit / push，并在成功后把该任务从 `system/wip-queue.md` 迁移或摘要到 `system/review-history.md`，再刷新 handoff 并追加 short log。若不想执行其中某项，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。如果 push 未做、push 状态 uncertain，或仍有 unresolved P0 / locator gaps，该任务不应进入 completed review history。
+Codex 应自动理解为：本轮人工审核已经结束，可以记录一条 Review history，然后按审核意见做最小修改，处理明确确认范围内的 `needs_review`，更新 overview，刷新 QMD，完成 review/final commit，并按用户要求决定是否 push。是否保留 queue entry 需要独立判断；Review history 与 Pending WIP 可以同时存在。
 
-`system/review-history.md` 是 forward-looking 的已完成 review 索引；普通 framework setup 不会自动回填旧 reviews。若用户明确要求历史审计，再单独处理。
+若不想执行其中某项，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。如果是否结束本轮审核存在歧义，Codex 不应擅自写入 Review history。
+
+`system/review-history.md` 是 forward-looking 的人工审核轮次索引；普通 framework setup 不会自动回填旧 reviews。它记录 `review commit message`，不记录 commit hash 或 push 状态，也不把 review commit message 解释为 task closure、finalization complete 或 push complete。若用户明确要求历史审计，再单独处理。
 
 ## 8. How to review claims / 如何人工审阅
 
@@ -196,7 +200,7 @@ Project 可以记录研究问题、连接数据处理结果、汇总 source 与 
 - 创新点候选梳理；
 - 引用候选和缺失证据清单。
 
-当前只预留接口，不创建写作 Skill。写作前必须执行 `system/paper-evidence-gate.md`，逐项检查 source、locator、claim kind、citation key、人工复核状态、竞争解释及 synthesis 是否被误当成原始来源。
+当前只预留接口，不创建写作 Skill。普通讨论和早期草稿可以先基于现有证据工作，并明确区分直接事实、作者解释、模型结果、跨来源综合和暂时推断；若进入论文定稿、正式引用核查或关键主张审查，再执行 `system/paper-evidence-gate.md`，逐项检查 source、locator、claim kind、citation key、人工复核状态、竞争解释及 synthesis 是否被误当成原始来源。
 
 ## 11. How to use Skills / 如何使用 Skill
 

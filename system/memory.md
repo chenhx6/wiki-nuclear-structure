@@ -43,6 +43,7 @@ updated: 2026-07-10
 - 2026-07-03：用户纠正 Sensharma 2019 的 anharmonicity 表述：QTR 比较的是逐级 wobbling 声子能量，关系应写为 `E_TW1(I+1)-E_yrast(I) ≈ 2[E_TW2(I+2)-E_TW1(I+1)]`，不能表述为 TW2 带能量简单低于 TW1 的两倍。
 - 2026-07-06：用户重申审核后 WIP 收口规则：文献摄入使用 `WIP ingest:`，project/synthesis/跨来源综合等待审核使用 `WIP review:`；用户审核完成并要求 final commit/push 时，必须 amend 对应 WIP，不保留独立 WIP 后另建 final commit。用户指定 final message 时原样使用；未指定时由 Codex 推荐直接相关的 message 并报告。该仓库内授权优先于通用“不主动 amend”约束。
 - 2026-07-10：用户强调：Wiki 是面向实验核物理与低能核结构研究的个人科研知识库。当前主线质量区是研究锚点，不是收录边界；摄入优先级应由实验核结构价值、证据密度、方法复用价值、跨质量区比较意义和用户明确优先级决定，不得因非当前主线质量区自动降级，也不得凭空推断某实验与用户个人履历直接相关。
+- 2026-07-10：Review history 记录“用户已完成的一轮实质性人工审核”，不要求固定触发短语，也不由 commit/push/overview/QMD 触发；它不要求 task closed，可与 Pending WIP 并存，只记录 `review commit message` 而不记录 hash/push 状态。可追溯性用于区分证据层级和校准措辞，不应阻止普通问答、合理综合与早期草稿；严格 paper evidence gate 只在定稿、正式引用核查或关键主张审查时启用。
 
 ## 禁止写入
 
