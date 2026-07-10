@@ -8,35 +8,35 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Framework-only workflow correction: refine human-review history semantics, review-commit traceability, and evidence-calibrated reasoning boundaries.
+Framework-only skill/query sync: optimize `wiki-evidence-query` for open-world, low-token, evidence-calibrated Q&A.
 
 Current branch / local commit:
-`main`. This round is limited to framework files for workflow/docs/checklist synchronization. Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of this task and must remain unstaged.
+`main`. This round is limited to `.agents/skills/wiki-evidence-query/SKILL.md`, `system/workflows/query.md`, `system/evidence-policy.md`, and required handoff/log synchronization. Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of this task and must remain unstaged.
 
 Last task status:
-Refined `system/review-history.md` so it is triggered by the clear end of a substantive human-review round rather than by commit/push/task closure; replaced queue-to-history migration language with append review history + independently judge queue retention; unified Git helper wording to `review commit message`; and added evidence-calibrated reasoning boundaries so ordinary answers can still provide the best supported synthesis without pretending to satisfy manuscript-level evidence by default.
+Repositioned `.agents/skills/wiki-evidence-query/SKILL.md` so the Wiki is the preferred personalization/calibration layer rather than a closed corpus; removed default rereads of startup files and broad governance files; added general-background / external-verification routing, Fast/Standard/Deep paths, ordinary vs strict mode split, state-file evidence boundaries, answer-scaling, and stop conditions; minimally synchronized `system/workflows/query.md` so ordinary mode may use stable general background without presenting it as Wiki evidence; and corrected `system/evidence-policy.md` from four to six statement classes in the section heading.
 
 Unfinished items:
-No framework blocker is identified in this correction task. Future review-finalization rounds should treat Review history as append-only human-review rounds, keep queue/history logically independent, and use strict paper evidence gate only when the task is actually manuscript-grade.
+No further framework inconsistency is identified from this sync. Create the requested commit on `main` and push it to `origin/main` if network access succeeds.
 
 P0 focus:
-1. Review history should be written only when the user's substantive review has clearly ended; fixed trigger words are not required, but ambiguity still blocks automatic entry creation.
-2. Review history records `review commit message` only as a human-readable search aid; it must not record hash/push state or imply task closure/finalization completion.
+1. Ordinary answers may use calibrated general scientific background when the Wiki is incomplete, but they must not present that background as Wiki-grounded evidence.
+2. Strict paper-evidence review remains conditional; `Review history`, `WIP queue`, `handoff`, and `log` stay workflow metadata rather than scientific evidence.
 
 Remaining P0:
-None identified for this framework-only workflow correction.
+None identified for this framework-only skill/query sync.
 
 Risks:
-`system/wip-queue.md` still contains legacy completed entries from before the corrected human-review-history semantics; they are intentionally left untouched in this task. Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside future commits unless the user explicitly asks otherwise.
+Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside this commit. Future edits to the skill should preserve the new evidence/provenance boundaries and avoid drifting back to default all-file loading or automatic raw/external retrieval for simple questions.
 
 Checks:
-Run `git status --short`, `git diff --stat`, `git diff --check`, targeted `rg` audits for old review-history trigger logic / Git fields / evidence wording, and `python system/scripts/wiki_lint.py --fail-on error`. This framework task must not modify `raw/`, science pages, `PLAN.md`, `system/schema.md`, or lint/test code.
+Run `git status --short`, `git diff --stat`, `git diff --check`, targeted `rg` audits for personalization-layer wording / conditional reads / path layering / read-only boundaries, and `python system/scripts/wiki_lint.py --fail-on error`. This framework task must not modify `raw/`, science pages, `PLAN.md`, `system/schema.md`, or lint/test code.
 
 Next prompt / continuation phrase:
-Continue framework workflow maintenance by treating Review history as human-review-round history, keeping queue/history independent, and using evidence-calibrated ordinary answers unless a strict paper evidence review is explicitly requested.
+Continue from the optimized skill by testing a concrete query scenario or by requesting additional workflow synchronization only if a real conflict remains.
 
 Recent user decisions:
-User requested a framework-only correction: Review history must be triggered by the clear end of a substantive human-review round rather than by commit/push/task closure; fixed trigger phrases are not required; Review history may coexist with Pending WIP; Git helper field should be `review commit message`; and ordinary answers should use evidence-calibrated reasoning rather than defaulting to strict paper evidence gate.
+User requested a small-scope skill/framework sync: optimize `wiki-evidence-query` for Wiki-informed open-world Q&A, keep ordinary evidence-calibrated mode, preserve paper evidence gate, avoid default broad file loading, avoid state-file writes during read-only Q&A, and keep the diff small and reviewable.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

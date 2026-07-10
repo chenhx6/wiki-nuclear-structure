@@ -425,3 +425,8 @@ updated: 2026-07-06
 ## [2026-07-10] framework | review-history semantics and evidence guidance refined
 
 - Refined human-review history, review-commit traceability, and evidence-calibrated citation guidance.
+
+## [2026-07-10] framework | optimized wiki-informed evidence query skill
+
+- Reframed `.agents/skills/wiki-evidence-query/SKILL.md` around Wiki-as-personalization-layer open-world ordinary Q&A, with conditional governance reads, Fast/Standard/Deep routing, external-verification triggers, answer scaling, stop conditions, and read-only state-file boundaries.
+- Minimally synchronized `system/workflows/query.md` so ordinary mode may use stable general background without pretending it is Wiki evidence, and corrected `system/evidence-policy.md` heading from four to six statement classes.

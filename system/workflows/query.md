@@ -92,12 +92,12 @@ qmd.cmd status
 ## 4. 回答要求
 
 - 默认模式是 ordinary Wiki questions / exploratory synthesis / research discussion / early drafting，而不是严格 paper evidence gate。
-- 每个核心结论追溯到来源页。
+- 凡被表述为 Wiki 已收录或 external source 已核验的核心结论，都应追溯到来源页或直接来源；ordinary mode 下的稳定一般专业背景可以使用，但不得伪装成 Wiki 已收录事实。
 - 关键数值在已有直接来源时附单位、不确定度和 locator；若精确 locator 暂缺但仍能给出有价值回答，应降低措辞强度并说明限制。
 - 术语首次出现时优先使用“中文（English, abbreviation）”；必要时说明 canonical term、用户原词和原文术语的关系。
 - 显式标明实验事实、实验判据、作者解释、模型结果、跨来源综合、我们的暂时推断或工作假设。
 - 相互冲突的来源并列呈现。
-- 库中没有的信息明确写“当前知识库未覆盖”。
+- 库中没有的信息明确写“当前知识库未覆盖”；这表示当前 Wiki 缺少个人化上下文或已整理证据，不自动等于不能给出一般专业回答。
 - 不以模型的通用记忆冒充本库资料。
 - 页面或 claim 未完成人工复核时，明确标记为阅读线索，不把它写成论文级结论。
 - synthesis 只能帮助综合和导航，不能替代原始 source/raw。
