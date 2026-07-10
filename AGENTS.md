@@ -25,6 +25,8 @@
 
 `system/wip-queue.md` is a short index for multiple unfinished local WIP, review WIP, safe-suspended tasks, or not-pushed checkpoints. It does not replace Active handoff. Do not read the full queue during normal startup; read it only when the task concerns unfinished WIP, review continuation, safe suspend, non-serial work, or the user asks about pending WIP / unfinished review tasks.
 
+`system/review-history.md` is a short index for future finalized/pushed/closed review tasks. Do not read it during ordinary startup; read it only when the task concerns completed reviews, manuscript-ready reviewed sources, or the user asks what was already finalized.
+
 若文件之间存在冲突：
 
 1. 用户当前明确指令永远最高；
@@ -250,9 +252,15 @@ Commit message 统一使用：
 
 When a task ends as WIP, a local not-pushed commit, a safe suspend, or user-review pending state, update `system/wip-queue.md` as well as Active handoff. Active handoff records only the latest activity; the queue preserves short recovery indexes for multiple non-serial pending WIPs.
 
-Queue entries record only task short name, status, branch, commit, files, review needed, overview/QMD, next action, and risks. Do not store full paper notes, raw content, source-claim bodies, or long recaps there. If the user starts a new ingest/project/synthesis while older WIPs remain unreviewed, keep the older WIPs in the queue instead of relying on Active handoff.
+Queue entries record only task short name, status, branch, commit, files, review needed, overview/QMD, next action, and risks. They should keep only the latest branch / commit / next action needed to continue review or push, not every temporary commit/push state. Do not store full paper notes, raw content, source-claim bodies, or long recaps there. If the user starts a new ingest/project/synthesis while older WIPs remain unreviewed, keep the older WIPs in the queue instead of relying on Active handoff.
 
-After WIP finalization and push, update or clear the matching queue entry. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
+If a WIP commit hash changes after amend or rebase, update the queue to the latest branch/commit pointer. After WIP finalization, push, or explicit closure, update or clear the matching queue entry and use `system/review-history.md` for the completed-review summary. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
+
+### Review history
+
+`system/review-history.md` records future review tasks that are finalized, pushed, or explicitly closed. Keep entries short and index-like; do not copy long review reports, raw source text, or full claim bodies there.
+
+Do not backfill old completed reviews during routine framework maintenance. Only write a completed review entry when the review workflow is truly closed for this round. If the user explicitly says “不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”, or if push status remains uncertain, keep the task in `system/wip-queue.md` instead of moving it into completed review history.
 
 ### Review-finalization trigger / 审核完成触发
 
@@ -267,11 +275,14 @@ After WIP finalization and push, update or clear the matching queue entry. If qu
 5. 执行 QMD refresh（`qmd.cmd update`、`qmd.cmd embed -c nuclear-knowledge`、`qmd.cmd status`），失败时如实报告并不得伪造刷新成功；
 6. 运行与本次修改相称的检查；
 7. 按 WIP lifecycle 将对应 WIP amend 为 final commit，并默认 push；若用户明确“不要 push”或“只 commit，不 push”，则只 final commit 不 push；
-8. 刷新 `system/handoff.md` 的 Active handoff，并更新 `system/wip-queue.md` 对应 entry；
-9. 向 `system/log.md` 追加一条简短记录；
-10. 最终复盘报告 overview、QMD、commit、push、handoff、queue 和 log 的状态。
+8. 在同一个 finalization 流程中更新 `system/wip-queue.md`，并在任务已最终完成、成功 push 或被明确关闭时，将对应条目迁移或摘要写入 `system/review-history.md`；
+9. 刷新 `system/handoff.md` 的 Active handoff；
+10. 向 `system/log.md` 追加一条简短记录；
+11. 最终复盘报告 overview、QMD、commit、push、handoff、queue、review history 和 log 的状态。
 
 若仍存在 unresolved P0、locator gaps、审核意见未落实、审核意见无法唯一映射到具体 claim、source/project/synthesis 仍存在高风险不确定内容，或 HEAD 不是对应 WIP 且无法确认归属，不得强行 finalization；应停止扩大修改，必要时 safe suspend，并向用户报告阻塞点。
+
+不要在 push 后再额外创建只修正 queue/status 的 commit，除非前一次 finalization 确实遗漏了必要的 queue/review-history/handoff/log 同步。若无法确认 push 是否成功，应 safe suspend，并在 handoff/queue 中写明 `push status: uncertain`，而不是猜测已完成。
 
 ### “不 commit/push”的兼容解释
 

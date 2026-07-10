@@ -124,7 +124,18 @@ SORT file.name ASC
 
 审核后，Codex 根据报告修改明确项目，并使用 `git commit --amend` 把对应 WIP 转为 final commit；不得保留独立 WIP 后再增加 final commit。你指定 final commit message 时原样使用；未指定时由 Codex 推荐与本轮内容直接相关的 message，并在最终报告中说明。只有你允许时才 push。同一分支不累积多个 active WIP。仓库存在对应 WIP、你已完成审核并要求 final commit/push 时，这本身就是仓库流程对 amend 的明确授权。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若确实不希望任何本地 commit，请明确写“禁止本地 WIP commit”。
 
-如果你不想串行审核，可以保留多个 pending WIP。Codex 会把多个未完成本地 WIP、等待审核任务或未 push checkpoint 记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动。之后可以说“列出 pending WIP”或“继续审核某个 WIP”。未审核 WIP 不应 push 到 `main`。
+如果你不想串行审核，可以保留多个 pending WIP。Codex 会把多个未完成本地 WIP、等待审核任务、未 push checkpoint 或 push 状态 uncertain 的任务记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动；真正完成并关闭的 review 则写入 `system/review-history.md`。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”。未审核 WIP 不应 push 到 `main`。
+
+审核完成时可以直接写简短结论，例如：
+
+```text
+审核：
+1. ...
+2. ...
+审核完毕，除了以上几点外无问题。
+```
+
+Codex 应自动进入 review-finalization：按审核意见做最小修改，执行 overview/QMD/final commit/push 的默认流程，并在成功后把对应 WIP 从 `system/wip-queue.md` 迁移或摘要到 `system/review-history.md`。如果你不想 finalization，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
 
 ## 4. Zotero 轻量连接
 

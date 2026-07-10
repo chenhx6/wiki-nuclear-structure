@@ -6,13 +6,15 @@ updated: 2026-07-10
 
 # Pending WIP queue
 
-This page tracks local WIP tasks that are not yet finalized. Keep entries short. Do not store long reports here.
+This page tracks pending local WIP/review tasks that are not yet fully closed. Keep entries short. Do not store long reports here. Completed review history now belongs in `system/review-history.md`.
 
 ## Active entries
 
 No active WIP entries.
 
-## Completed entries
+## Legacy completed entries
+
+These entries predate `system/review-history.md`. Keep them as legacy context during framework setup; do not backfill or migrate them automatically in this task. Future finalized/pushed/closed reviews should go to `system/review-history.md` instead of being maintained here.
 
 ### Sigma-over-I writing-support synthesis
 - status: user review finalized; final commit created from the prior `WIP review:` task and ready for push on `main`
@@ -66,8 +68,11 @@ No active WIP entries.
 
 ## Rules
 
-- Add or update an entry when a task ends as WIP, user-review pending, safe-suspended, or not pushed.
+- Add or update an entry when a task ends as WIP, user-review pending, safe-suspended, not pushed, or has uncertain push status.
 - Keep Active handoff short; use this queue for multiple parallel pending WIPs.
 - Do not add raw content, source-claim bodies, or long reports here.
-- When a WIP is finalized and pushed, mark it done or move it to a short completed section.
+- Pending entries only need the latest branch / commit / next action needed to continue review or push; do not preserve every temporary commit/push state here.
+- If a WIP commit hash changes after amend or rebase, update the latest branch/commit pointer rather than keeping the old temporary state.
+- If review-finalization is completed and the task is pushed or explicitly closed, move or summarize it into `system/review-history.md` and mark the queue entry done/moved or remove it from Active entries.
+- If push is skipped or push status is uncertain, keep the task in the pending queue and record that state explicitly rather than guessing completion.
 - If the user starts a new ingest while prior WIPs remain unreviewed, keep prior WIPs in this queue instead of overwriting them.

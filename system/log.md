@@ -416,3 +416,8 @@ updated: 2026-07-06
 - User accepted the bounded conclusion that the present 11-paper package does not yet supply direct low-spin-specific `sigma/I` sensitivity evidence strong enough for a stronger universal claim.
 - Promoted the reviewed sigma-over-I project/synthesis/terminology pages to `review_status: human-reviewed`, refreshed `knowledge/overview.md`, and completed `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status`.
 - The prior local `WIP review:` commit was converted into the final `Create sigma-over-I writing-support synthesis` commit; only the push remained at this checkpoint.
+
+## [2026-07-10] framework | review-history workflow added
+
+- Added `system/review-history.md` as the forward-looking index for completed review/finalization tasks; no old completed reviews were backfilled.
+- Synchronized Pending WIP queue, review-finalization, user-guide, and checklist rules so future finalized reviews move from pending queue into review history without extra queue-only status commits unless a sync step was truly missed.

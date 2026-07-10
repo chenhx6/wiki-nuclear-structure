@@ -143,7 +143,7 @@ A source outside the current main research anchor may still justify lightweight 
 - QMD refresh 不是普通单篇摄入固定收尾成本；可只运行轻量状态检查，或写明 `QMD refresh deferred`、原因和建议补跑时机。批量摄入、多篇文献完成、用户明确要求或大型 project/synthesis 依赖最新检索时，再运行 `qmd update` / `qmd embed`。
 - 检查是否推进 `knowledge/questions.md` 中的开放问题；不为形式完整而新增重复问题。
 - 向 `system/log.md` 追加简短 ingest 记录，更新 `system/handoff.md` 的 Active handoff；用户不需要每次手动要求 handoff/log 收尾。
-- 摄入结束但用户未审核时，创建本地 WIP ingest commit、不 push，并在 `system/wip-queue.md` 写入或更新 pending entry；overview/QMD 可按规则 deferred 到 review-finalization。
+- 摄入结束但用户未审核时，创建本地 WIP ingest commit、不 push，并在 `system/wip-queue.md` 写入或更新 pending entry；queue 只保留继续审核所需的最新 branch/commit/next action，overview/QMD 可按规则 deferred 到 review-finalization。
 - handoff/log 不保存长复盘；Active handoff 记录任务状态、commit/push 状态、未完成事项、P0/P1 审核重点、风险和下一步。
 - 执行 `check.md` 中与本次摄入相关的项目。
 - 最终复盘采用 compact final recap：Result status、commit/push、关键文件、Human review triage、checks、next action。
@@ -158,7 +158,7 @@ A source outside the current main research anchor may still justify lightweight 
 3. 检查通过且用户未明确禁止任何本地 commit 时，显式暂存本轮摄入相关文件，不使用 `git add .`；
 4. 创建本地 `WIP ingest: <paper short name> for user review` commit；
 5. 不 push；
-6. 更新 `system/wip-queue.md` 的 pending entry，列出短 task name、branch、commit、review needed、overview/QMD deferred 和 next action；
+6. 更新 `system/wip-queue.md` 的 pending entry，列出短 task name、branch、commit、review needed、overview/QMD deferred 和 next action；若后续 amend/rebase 改变 WIP commit hash，只更新到最新 commit；
 7. 最终复盘列出 WIP hash、message、未 push、待审核文件、待审核 claim ID 和 Human review triage。
 
 WIP ingest 只表示等待用户审核的本地检查点，不表示科学内容已人工复核。若用户明确禁止本地 WIP，保留工作树 diff，并在 diff 较大时提示可能产生 Codex、Git 或文件监听的持续 CPU 负担。
@@ -180,7 +180,8 @@ Finalization 包括：
 9. 确认 HEAD 是对应的 WIP ingest commit 后，使用 `git commit --amend` 把 WIP 转换为 final commit，不新建额外 review commit；
 10. 用户指定 final commit message 时原样使用；未指定时由 Codex 根据实际摄入与审核修改推荐直接相关的 message，并在最终报告中说明；
 11. 默认执行 `git push origin main`；若用户明确“不要 push”，只 final commit 不 push；
-12. 刷新 `system/handoff.md` Active handoff，更新或清除 `system/wip-queue.md` 对应 entry，向 `system/log.md` 追加短记录；
-13. 最终复盘报告 overview、QMD、commit、push、handoff、queue 和 log 状态。
+12. 在同一个 finalization 流程中刷新 `system/handoff.md` Active handoff、更新或清除 `system/wip-queue.md` 对应 entry，并在任务已真正完成、成功 push 或被明确关闭时，将其迁移或摘要写入 `system/review-history.md`；
+13. 向 `system/log.md` 追加短记录；
+14. 最终复盘报告 overview、QMD、commit、push、handoff、queue、review history 和 log 状态。
 
-如果 HEAD 不是对应 WIP，或无法确认 WIP 归属，停止并询问用户，不得擅自 amend。Finalization 使用 amend，避免 WIP commit 累积。
+如果 HEAD 不是对应 WIP，或无法确认 WIP 归属，停止并询问用户，不得擅自 amend。若用户明确“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”，则不得把该任务移动到 `system/review-history.md` 的 completed 区。若 push 状态无法确认，应 safe suspend，并在 handoff/queue 中写明 `push status: uncertain`。Finalization 使用 amend，避免 WIP commit 累积，也避免在 push 后再额外创建 queue/status 修正 commit。

@@ -131,7 +131,7 @@
 
 同一分支最多保留一个 active WIP。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若要禁止所有本地 commit，需明确写“禁止本地 WIP commit”。Safe suspend 遇到大量 Markdown diff 时也优先采用本地 WIP checkpoint，减少 Codex、Git、编辑器或文件监听的持续 CPU 占用；checkpoint 绝不自动 push。
 
-用户不需要串行工作。若暂时没时间审核某个 WIP，可以让 Codex 保留本地 WIP commit、不 push，并把短索引写入 `system/wip-queue.md`。之后可以说“列出 pending WIP”或“继续审核某个 WIP”；Codex 应从 queue、handoff 和 Git 状态恢复，而不是把旧 WIP 从 Active handoff 中丢失。
+用户不需要串行工作。若暂时没时间审核某个 WIP，可以让 Codex 保留本地 WIP commit、不 push，并把短索引写入 `system/wip-queue.md`。queue 只保留继续审核所需的最新 branch/commit/next action，不追踪每个临时 commit/push 细节。真正完成并关闭的 review 则写入 `system/review-history.md`。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”；Codex 应从 queue、handoff、review history 和 Git 状态恢复，而不是把旧 WIP 从 Active handoff 中丢失。
 
 审核完成后可以用短句触发 finalization，例如：
 
@@ -139,7 +139,9 @@
 审核：1... 2... 审核完毕，除以上两点外无问题。
 ```
 
-Codex 应自动理解为审核后的 finalization 请求：按审核意见做最小修改，处理明确确认范围内的 `needs_review`，更新 overview，刷新 QMD，完成 final commit / push，刷新 handoff 并追加 short log。若不想执行其中某项，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
+Codex 应自动理解为审核后的 finalization 请求：按审核意见做最小修改，处理明确确认范围内的 `needs_review`，更新 overview，刷新 QMD，完成 final commit / push，并在成功后把该任务从 `system/wip-queue.md` 迁移或摘要到 `system/review-history.md`，再刷新 handoff 并追加 short log。若不想执行其中某项，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。如果 push 未做、push 状态 uncertain，或仍有 unresolved P0 / locator gaps，该任务不应进入 completed review history。
+
+`system/review-history.md` 是 forward-looking 的已完成 review 索引；普通 framework setup 不会自动回填旧 reviews。若用户明确要求历史审计，再单独处理。
 
 ## 8. How to review claims / 如何人工审阅
 

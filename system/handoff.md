@@ -8,35 +8,35 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Sigma-over-I / P-ADO synthesis planning and writing-support synthesis are finalized for this round after user review. The project page, synthesis page, related terminology pages, overview snapshot, and QMD index were refreshed in review-finalization.
+Framework-only workflow improvement: add `system/review-history.md` and synchronize future review-finalization tracking across Active handoff, Pending WIP queue, and completed review history.
 
 Current branch / local commit:
-`main`, with the current HEAD as the final sigma-over-I writing-support synthesis commit for this task. Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of this task and must remain unstaged.
+`main`. This round is limited to framework files for workflow/docs/checklist synchronization. Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of this task and must remain unstaged.
 
 Last task status:
-Finalized the reviewed sigma-over-I project/synthesis package. This round preserved the bounded writing-support conclusion, kept the low-spin caution explicitly non-universal, recorded the user-analysis normalization note as non-source-backed, refreshed `knowledge/overview.md`, and completed `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status`.
+Added forward-looking `system/review-history.md` template/rules, clarified that `system/wip-queue.md` keeps pending WIP with only the latest continuation pointers, and synchronized AGENTS/workflows/guides/checklist wording so future review-finalization can move completed items into review history without backfilling old tasks.
 
 Unfinished items:
-No review-finalization blocker remains for this task. Follow-up science work is still open: map the user's actual `sigma/I` code/input convention, reaction-condition mapping, and calibration-transition strategy before writing code-facing equations or final manuscript equations.
+No framework blocker is identified in this setup task. Future review-finalization rounds should update queue/history/handoff/log together and avoid backfilling old completed reviews during routine maintenance.
 
 P0 focus:
-1. If the next task is science follow-up, first map the actual user-code `sigma/I` convention against Lauritsen `sigma/J` and older source notations.
-2. If the next task is writing support, keep the low-spin statement bounded: current evidence supports caution, not a universal low-spin `sigma/I` law.
+1. Do not move a task into completed review history when push is skipped, push status is uncertain, or unresolved P0 / locator gaps remain.
+2. Do not backfill legacy completed reviews into `system/review-history.md` unless the user explicitly requests a historical audit.
 
 Remaining P0:
-No known source-note, project-claim, or synthesis-claim P0 remains from this review-finalization round.
+None identified for this framework-only workflow update.
 
 Risks:
-Do not treat the user-analysis normalization note as source-backed literature evidence. Do not promote the current low-spin caution into a universal low-spin `sigma/I` law. Do not write code-facing equations until the user's actual `sigma/I` convention is mapped. Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside future commits unless the user explicitly asks otherwise.
+`system/wip-queue.md` still contains legacy completed entries from before `system/review-history.md`; they are intentionally left unmigrated in this setup task. Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside future commits unless the user explicitly asks otherwise.
 
 Checks:
-This round passed `git diff --check`, `python system/scripts/wiki_lint.py --fail-on error`, `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status`. The working tree should return to only external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes after task completion.
+This round passed `git diff --check` and `python system/scripts/wiki_lint.py --fail-on error` with only existing warnings. This framework task must not modify `raw/`, science pages, `PLAN.md`, `system/schema.md`, or lint/test code.
 
 Next prompt / continuation phrase:
-Continue sigma-over-I follow-up by mapping the user's actual `sigma/I` implementation and calibration-transition strategy, while keeping the current synthesis as bounded writing support rather than a universal prior.
+Continue framework workflow maintenance by using `system/wip-queue.md` for pending review work and `system/review-history.md` for newly completed review-finalization tasks only.
 
 Recent user decisions:
-User accepted that the current 11-paper package does not contain direct low-spin-specific `sigma/I` sensitivity evidence strong enough for a stronger claim. User approved the recorded user-analysis note, confirmed the reviewed pages had no remaining issues, and requested final commit/push.
+User requested a framework-only workflow update: add `system/review-history.md`, keep Active handoff short, keep `system/wip-queue.md` focused on pending WIP, do not backfill old completed reviews, and do not write this framework task into completed review history.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 
