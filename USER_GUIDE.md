@@ -139,7 +139,7 @@ SORT file.name ASC
 
 Codex 应自动把这类消息理解为“本轮人工审核已经结束”，记录本轮 Review history，并进入 review-finalization：按审核意见做最小修改，执行 overview/QMD/review commit/push 的默认流程，再独立判断 queue 是否继续保留。你不必使用固定短语；只要整体语义可以无歧义地判断本轮审核已经结束即可。如果你不想 finalization，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
 
-普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断，并尽量给出已有页面入口方便你核查。回答面板中的主要 Wiki 证据入口按“文献/页面名称 → 一句证据说明 → 蓝色内容页行号链接”输出；链接使用读取目标文件后核实的绝对路径和真实行号，在当前 Codex 客户端打开实际 Wiki 文件的实时渲染可编辑视图，普通 Markdown 链接不能强制调用 P0/P1 报告的 review/read-only 界面。若当前客户端不能直接跳行，则提供文件链接和实际小节/claim 定位并如实说明。Wiki 正文仍保留 Obsidian Wikilink。论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认时才进入严格的 paper evidence mode；普通争议讨论本身不自动触发 strict mode。
+普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断，并尽量给出已有页面入口方便你核查。回答面板中的主要 Wiki 证据入口按“文献/页面名称 → 一句证据说明 → 蓝色内容页行号链接”输出；链接使用读取目标文件后核实的绝对路径和真实行号，在当前 Codex 客户端打开实际 Wiki 文件的实时渲染可编辑视图。该入口只是回答依据导航，不表示内容已经人工审核。若当前客户端不能直接跳行，则提供文件链接和实际小节/claim 定位并如实说明。普通回答不默认展开 citation key、raw PDF、review 状态或长 evidence card；原文核查、论文级审查或 strict paper mode 再补充完整核查信息。Wiki 正文仍保留 Obsidian Wikilink，也不会为了改变打开界面而修改证据页或制造 Git diff。论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认时才进入严格的 paper evidence mode；普通争议讨论本身不自动触发 strict mode。
 
 ## 4. Zotero 轻量连接
 

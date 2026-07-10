@@ -454,3 +454,8 @@ updated: 2026-07-06
 
 - Standardized ordinary evidence entries as page name, one-sentence support note, and a verified absolute `file.md:line` content link.
 - Recorded that Codex opens these links in the live rendered editable view, with file-plus-section fallback when direct line navigation is unavailable; no science or review-history content was changed.
+
+## [2026-07-10] framework | closed failed read-only evidence route
+
+- Confirmed that neither ordinary Markdown line links nor inline code-comment references can reliably force unchanged Wiki files into a read-only review surface.
+- Retained verified exact-line evidence navigation with file-plus-section fallback and prohibited evidence-page edits, fake diffs, or temporary commits as UI workarounds.

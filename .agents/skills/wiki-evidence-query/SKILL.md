@@ -93,20 +93,18 @@ Use this fixed lightweight ordinary-mode form:
   [内容页](E:/imp/wiki/knowledge/sources/example.md:42)
 ```
 
-Use the same absolute-file-plus-line form as P0/P1 reports. In the current Codex
-client it opens the actual Wiki file in the live rendered editable view; an
-ordinary Markdown link cannot force the separate review/read-only interface.
-Read the target file during the answer and use the actual line carrying the
-claim, paragraph, table row, or section content; never guess a line number or
-point only to the file start when a precise evidence location is available.
-Prefer the source, project, synthesis, concept, observable, nucleus, or band
-location that most directly supports the answer.
+In the current Codex client this link opens the actual Wiki file in the live
+rendered editable view. It is navigation to the answer's evidence, not proof
+that the scientific content was human-reviewed. Read the target file during the
+answer and use the actual line carrying the claim, paragraph, table row, or
+section content; never guess a line number or point only to the file start when
+a precise evidence location is available. Prefer the source, project,
+synthesis, concept, observable, nucleus, or band location that most directly
+supports the answer.
 
 If the current client has been tested and does not navigate `file.md:line`,
 fall back to a clickable file link plus `定位：## actual section → claim or
-paragraph name`, and state that direct line navigation was not achieved. Do not
-claim that Markdown heading fragments or a review/read-only interface can be
-forced.
+paragraph name`, and state that direct line navigation was not achieved.
 Never output only a page name, slug, a bare `[[wikilink]]`, or a Wiki entry
 wrapped in backticks. If a name or alias resolves to multiple files, list the
 candidate links instead of guessing. In ordinary answers, do not default to
@@ -114,6 +112,8 @@ citation keys, raw PDF paths, review status, full locators, or long evidence
 cards. Add citation keys, raw PDF paths, review status, and full locators only
 when the user requests direct-source verification or strict paper review. This
 output rule does not require converting Wikilinks inside Wiki Markdown files.
+Do not modify source/project/synthesis pages, create fake or whitespace-only
+diffs, or make temporary commits merely to change how evidence links open.
 
 ## Retrieval budget
 

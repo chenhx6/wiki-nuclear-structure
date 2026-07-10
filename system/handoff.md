@@ -8,36 +8,36 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Improve clickable Wiki evidence navigation in Codex/chat answers by using verified absolute file-plus-line links and a fixed lightweight evidence-entry format.
+Close out Wiki evidence-entry routing after testing confirmed that neither Markdown line links nor inline code comments can force a read-only review surface for unchanged Wiki files.
 
 Current branch / local commit:
-`main`, aligned with `origin/main` at startup. The task will create a new independent commit after staging only the four requested governance files plus this handoff and the append-only log entry. Existing `.obsidian/` and science-page working-tree state remains unstaged and untouched.
+`main`, aligned with `origin/main` at startup. Create the independent `Clean failed read-only evidence route rules` commit from governance files only, then push `origin/main`. Existing `.obsidian/` and knowledge-page working-tree state remains unstaged and untouched.
 
 Last task status:
-Updated the evidence-query Skill, query workflow, checklist, and user guide so ordinary answers use verified `file.md:line` links in the format “page name -> one-sentence evidence note -> content-page link.” Current Codex behavior is recorded accurately: links open the real Wiki file in the live rendered editable view, not the P0/P1 review/read-only interface. Source and synthesis examples were re-read at lines 67 and 81; Skill validation, diff check, and Wiki lint passed.
+Capability tests on unchanged source and synthesis files confirmed that both absolute Markdown line links and inline code-comment file references open the live rendered editable view. The accepted route remains a verified exact-line content link with a file-plus-section fallback; no read-only evidence route is claimed.
 
 Unfinished items:
-Stage only the task governance files, create `Improve clickable Wiki evidence navigation`, run post-commit checks, and push `origin/main`. Do not include `.obsidian/`, knowledge pages, raw files, or Review history.
+Run final validation, stage only the modified governance files, create the requested independent commit, rerun checks, and push. Do not include `.obsidian/`, knowledge pages, raw files, Review history, or WIP queue.
 
 P0 focus:
-1. Stage only `.agents/skills/wiki-evidence-query/SKILL.md`, `system/workflows/query.md`, `check.md`, `USER_GUIDE.md`, this Active handoff, and the appended log entry.
+1. Stage only the evidence-query Skill, query workflow, checklist, user guide, memory, Active handoff, and appended log entry.
 2. Keep all user/local `.obsidian/` and knowledge-page status outside the commit.
-3. Preserve the verified output behavior without claiming that Markdown links can force the P0/P1 review/read-only interface.
+3. Preserve exact-line evidence navigation without claiming any forced reading, review, or read-only surface.
 
 Remaining P0:
 None identified if the staged file set remains limited to the task governance documents.
 
 Risks:
-Several knowledge source files appear modified in `git status` after link testing but have no content diff in `git diff --name-only`; treat them as external/editor state and do not stage or modify them. Do not claim heading-fragment support or a forceable review/read-only view.
+Several knowledge files appear modified in `git status` but have no content diff in `git diff --stat`; treat them as external/editor state and do not stage, restore, format, or modify them. Do not retry code-comment, heading-fragment, fake-diff, or temporary-commit workarounds.
 
 Checks:
-Skill validation passed. `git diff --check` passed with line-ending warnings only. Wiki lint passed with `0 errors / 9 warnings`; warnings are existing reaction/element configuration findings.
+Run Skill validation, `git diff --check`, and Wiki lint before and after the commit. LF-to-CRLF notices are warnings, not content errors.
 
 Next prompt / continuation phrase:
-If interrupted, continue clickable Wiki evidence navigation closeout: inspect the staged file list, commit with the requested message, rerun checks, and push `origin/main`.
+If interrupted, continue failed read-only evidence-route cleanup: inspect the staged governance-only file list, commit with the requested message, rerun checks, and push `origin/main`.
 
 Recent user decisions:
-User confirmed that `file.md:line` links open the actual Wiki file in Codex's live rendered editable view, not the P0/P1 review/read-only interface. Ordinary output must stay lightweight, use verified real line numbers, and fall back to a file link plus an actual section/claim locator when direct line navigation is unavailable.
+User accepted verified exact-line Markdown evidence links as the current route after both Markdown and inline code-comment tests opened the editable view. Do not continue trying heading variants, code comments, fake diffs, or temporary commits to force a read-only surface.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 
