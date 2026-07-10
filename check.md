@@ -227,7 +227,12 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 回答明确区分直接事实、作者解释、模型结果、跨来源综合和暂时推断。
 - [ ] 证据不完整时已降低表述强度并说明限制，而不是无必要地拒绝回答。
 - [ ] 普通问答、研究讨论、综合分析或早期草稿没有误用投稿级 paper evidence gate。
-- [ ] 在已有来源、citation key、数据、locator 或页面入口时，优先给出这些核查入口。
+- [ ] 相关回答末尾的“Wiki 中对应的主要证据入口”优先链接最直接支持判断的 source/project/synthesis 等真实 Wiki 内容；ordinary mode 每项固定为 `**文献或页面名称** — 证据：一句话说明支持什么。`，下一行给精确的 `[内容页](E:/imp/wiki/真实文件.md:真实行号)`。
+- [ ] 回答没有只给裸页面名、slug、反引号包裹的 `[[wikilink]]` 或裸 `[[wikilink]]`；名称或 alias 有多个候选时列出已解析的候选路径，没有猜测。
+- [ ] 行号是在回答时读取目标文件后确定，落在直接承载判断的 claim、段落、表格行或小节内容，没有猜测行号或在可精确定位时只链接文件开头。
+- [ ] 已如实区分界面：当前行号链接打开实际 Wiki 文件的实时渲染可编辑视图；没有声称普通 Markdown 链接可强制调用 P0/P1 的 review/read-only 界面。
+- [ ] 若当前客户端实测不支持 `文件.md:行号`，已退化为可点击文件链接加 `定位：## 实际小节 → claim/段落名称`，并如实说明未实现直接行号跳转；没有声称可保证 heading fragment。
+- [ ] ordinary mode 没有默认显示 citation key、raw PDF、review 状态或完整 locator；原文核实或 strict paper mode 按需补充，且未要求批量改写 Wiki 正文中的 Wikilink。
 - [ ] 综合或推断已标明其性质和主要支撑来源，没有伪装成来源直接结论。
 - [ ] 没有把间接讨论误写成对强结论的直接支持。
 - [ ] 没有虚构 citation、DOI、页码、图表编号、locator、原文或数据。

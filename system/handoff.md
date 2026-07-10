@@ -8,36 +8,36 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Public-repository metadata closeout for the now-public GitHub Wiki remote: add standard MIT licensing, repository citation metadata, a bilingual disclaimer, minimal contribution/security files, and the current user-authorized bibliography snapshot without touching science pages.
+Improve clickable Wiki evidence navigation in Codex/chat answers by using verified absolute file-plus-line links and a fixed lightweight evidence-entry format.
 
 Current branch / local commit:
-`main`, aligned with `origin/main` at startup. This task is limited to public-repository maintenance files plus required handoff/log closure. Pre-existing user changes in `.obsidian/` remain outside the commit; `raw/zotero/wiki-inbox.bib` is explicitly authorized for this task.
+`main`, aligned with `origin/main` at startup. The task will create a new independent commit after staging only the four requested governance files plus this handoff and the append-only log entry. Existing `.obsidian/` and science-page working-tree state remains unstaged and untouched.
 
 Last task status:
-Startup audit confirmed that `main` matches `origin/main`, only the three `.obsidian/` files plus `raw/zotero/wiki-inbox.bib` were initially modified, and no rebase/merge/cherry-pick was in progress. Public metadata files were absent, existing `raw/README.md` and `raw/zotero/README.md` were read for minimal merge, and the current `wiki-inbox.bib` diff passed a read-only sensitive-content scan.
+Updated the evidence-query Skill, query workflow, checklist, and user guide so ordinary answers use verified `file.md:line` links in the format “page name -> one-sentence evidence note -> content-page link.” Current Codex behavior is recorded accurately: links open the real Wiki file in the live rendered editable view, not the P0/P1 review/read-only interface. Source and synthesis examples were re-read at lines 67 and 81; Skill validation, diff check, and Wiki lint passed.
 
 Unfinished items:
-Finish validation, stage only the allowed public-maintenance files, create a new independent commit with the requested message, and push `origin/main` if checks pass. Do not write anything to `system/review-history.md`.
+Stage only the task governance files, create `Improve clickable Wiki evidence navigation`, run post-commit checks, and push `origin/main`. Do not include `.obsidian/`, knowledge pages, raw files, or Review history.
 
 P0 focus:
-1. `LICENSE`, `CITATION.cff`, and `DISCLAIMER.md` must match the requested public-repository metadata exactly enough for a clean public release.
-2. `README.md` must stay minimal and link-only for public metadata; it must not duplicate disclaimer text, ORCID, or email.
-3. `raw/zotero/wiki-inbox.bib` must be committed as-is from the user's current snapshot without Codex rewriting it.
+1. Stage only `.agents/skills/wiki-evidence-query/SKILL.md`, `system/workflows/query.md`, `check.md`, `USER_GUIDE.md`, this Active handoff, and the appended log entry.
+2. Keep all user/local `.obsidian/` and knowledge-page status outside the commit.
+3. Preserve the verified output behavior without claiming that Markdown links can force the P0/P1 review/read-only interface.
 
 Remaining P0:
-None identified if the staged file set stays within the user-authorized public-maintenance scope.
+None identified if the staged file set remains limited to the task governance documents.
 
 Risks:
-Keep external `.obsidian/` changes outside the commit. Do not modify `knowledge/`, `PLAN.md`, `system/review-history.md`, `system/wip-queue.md`, `system/schema.md`, or any science page. Do not rewrite or auto-format `raw/zotero/wiki-inbox.bib`; only stage the current user snapshot after validation.
+Several knowledge source files appear modified in `git status` after link testing but have no content diff in `git diff --name-only`; treat them as external/editor state and do not stage or modify them. Do not claim heading-fragment support or a forceable review/read-only view.
 
 Checks:
-Run the requested Git audit, required-file checks, README/disclaimer/CFF/license checks, BibTeX sensitive-pattern scan, `git diff --check`, and `python system/scripts/wiki_lint.py --fail-on error`. Use `cffconvert --validate` only if it is already available; do not install dependencies.
+Skill validation passed. `git diff --check` passed with line-ending warnings only. Wiki lint passed with `0 errors / 9 warnings`; warnings are existing reaction/element configuration findings.
 
 Next prompt / continuation phrase:
-Continue public-repository maintenance after the metadata files land: verify the staged file set, create the independent commit, and push `origin/main` if the final checks still pass.
+If interrupted, continue clickable Wiki evidence navigation closeout: inspect the staged file list, commit with the requested message, rerun checks, and push `origin/main`.
 
 Recent user decisions:
-User requested a public-repository maintenance round only: add MIT licensing, `CITATION.cff`, a bilingual `DISCLAIMER.md`, minimal contribution/security/PR files, and explicitly include the current `raw/zotero/wiki-inbox.bib` snapshot in the same new independent commit. This task must not amend history, must not touch science pages, and must not write `system/review-history.md`.
+User confirmed that `file.md:line` links open the actual Wiki file in Codex's live rendered editable view, not the P0/P1 review/read-only interface. Ordinary output must stay lightweight, use verified real line numbers, and fall back to a file link plus an actual section/claim locator when direct line navigation is unavailable.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

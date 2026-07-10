@@ -449,3 +449,8 @@ updated: 2026-07-06
 ## [2026-07-10] maintenance | added public repository metadata package
 
 - Added public licensing, citation metadata, bilingual disclaimer, contribution files, and the current bibliography snapshot.
+
+## [2026-07-10] framework | improved clickable Wiki evidence navigation
+
+- Standardized ordinary evidence entries as page name, one-sentence support note, and a verified absolute `file.md:line` content link.
+- Recorded that Codex opens these links in the live rendered editable view, with file-plus-section fallback when direct line navigation is unavailable; no science or review-history content was changed.

@@ -103,7 +103,8 @@ qmd.cmd status
 - 已人工审核内容仍可在用户质疑、新证据冲突、精确核查或论文使用时重新检查。不得把 `human-reviewed` 当作永久正确、完整或已充分挖掘的保证。
 - synthesis 只能帮助综合和导航，不能替代原始 source/raw。
 - source/claim 引用继续以知识页和原始 locator 为准，不得只引用 vocabulary。
-- 当已有 source、citation key、数据、locator 或 Wiki 页面入口时，优先提供这些核查入口，方便用户回查。
+- 相关回答末尾用轻量的“Wiki 中对应的主要证据入口”列出最直接支持当前判断的 source、project、synthesis、concept、observable、nucleus 或 band 内容。ordinary mode 每项固定为：`**文献或页面名称** — 证据：一句话说明支持什么。`，下一行给 `[内容页](E:/imp/wiki/真实文件.md:真实行号)`。这种与 P0/P1 报告相同形式的绝对路径加行号链接，在当前 Codex 客户端打开实际 Wiki 文件的实时渲染可编辑视图；普通 Markdown 链接不能强制调用 P0/P1 审核报告使用的 review/read-only 界面。
+- 回答时必须读取目标文件并使用直接承载该判断的 claim、段落、表格行或小节内容的真实行号；不得猜测行号，也不得在已有精确位置时只链接文件开头。若当前客户端实测不支持 `文件.md:行号` 定位，退化为可点击文件链接，并紧随 `定位：## 实际小节 → claim/段落名称`，同时如实说明未实现直接行号跳转。不得声称 Markdown heading fragment 或 review/read-only 界面可由普通链接强制调用。不得只给裸页面名、slug、反引号包裹的 `[[wikilink]]` 或裸 `[[wikilink]]`；名称或 alias 对应多个文件时列出已解析的候选路径，不得猜测。ordinary mode 不默认显示 citation key、raw PDF、review 状态或完整 locator；用户要求原文核实或进入 strict paper mode 时再补充。该规则只约束 Codex/chat 输出，不要求改写 Wiki 正文中的现有 Wikilink。
 - 证据不完整时，应校准措辞、说明限制并指出值得补查的方向，而不是无必要地拒绝回答。
 - 不得把综合或推断伪装成某一来源直接报告的结论，也不得把“当前尚无直接证据”自动解释为“该判断一定错误”。
 - 不得虚构 citation、DOI、页码、图号、表号、locator、原文或数据。
