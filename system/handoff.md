@@ -8,35 +8,35 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Framework-only skill/query sync: optimize `wiki-evidence-query` for open-world, low-token, evidence-calibrated Q&A.
+Framework-only correction: surface useful reviewed or unreviewed knowledge, correct review-status semantics, and compress `wiki-evidence-query`.
 
 Current branch / local commit:
-`main`. This round is limited to `.agents/skills/wiki-evidence-query/SKILL.md`, `system/workflows/query.md`, `system/evidence-policy.md`, and required handoff/log synchronization. Pre-existing external/user changes remain in `.obsidian/app.json`, `.obsidian/community-plugins.json`, `.obsidian/graph.json`, and `raw/zotero/wiki-inbox.bib`; they are not part of this task and must remain unstaged.
+`main`, based on unchanged `109bd57`. This task is packaged with the requested commit message `Surface useful knowledge and compress evidence query skill`; pre-existing user changes in `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain unstaged and outside the task.
 
 Last task status:
-Repositioned `.agents/skills/wiki-evidence-query/SKILL.md` so the Wiki is the preferred personalization/calibration layer rather than a closed corpus; removed default rereads of startup files and broad governance files; added general-background / external-verification routing, Fast/Standard/Deep paths, ordinary vs strict mode split, state-file evidence boundaries, answer-scaling, and stop conditions; minimally synchronized `system/workflows/query.md` so ordinary mode may use stable general background without presenting it as Wiki evidence; and corrected `system/evidence-policy.md` from four to six statement classes in the section heading.
+Compressed the evidence-query Skill from 451 to 257 lines while preserving open-world Q&A, provenance, Fast/Standard/Deep, ordinary/strict, source visibility, and stopping rules. Review status now controls disclosure and verification priority rather than visibility or value; highly relevant unreviewed material is surfaced with a verification path, reviewed material remains recheckable, and manuscript support is assessed claim by claim. Query workflow and evidence policy received matching minimal corrections.
 
 Unfinished items:
-No further framework inconsistency is identified from this sync. Create the requested commit on `main` and push it to `origin/main` if network access succeeds.
+Run final targeted checks and wiki lint, create the independent commit, and push `main` if network access succeeds.
 
 P0 focus:
-1. Ordinary answers may use calibrated general scientific background when the Wiki is incomplete, but they must not present that background as Wiki-grounded evidence.
-2. Strict paper-evidence review remains conditional; `Review history`, `WIP queue`, `handoff`, and `log` stay workflow metadata rather than scientific evidence.
+1. Unreviewed content must not be hidden when it is highly relevant and informative, but its review/source/locator limits must remain visible.
+2. `human-reviewed` is scoped and fallible; precise or manuscript claims still require claim-specific direct-source verification when warranted.
 
 Remaining P0:
 None identified for this framework-only skill/query sync.
 
 Risks:
-Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside this commit. Future edits to the skill should preserve the new evidence/provenance boundaries and avoid drifting back to default all-file loading or automatic raw/external retrieval for simple questions.
+Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside the commit. Do not turn active surfacing into exhaustive unreviewed-page dumps or weaken the paper evidence gate.
 
 Checks:
-Run `git status --short`, `git diff --stat`, `git diff --check`, targeted `rg` audits for personalization-layer wording / conditional reads / path layering / read-only boundaries, and `python system/scripts/wiki_lint.py --fail-on error`. This framework task must not modify `raw/`, science pages, `PLAN.md`, `system/schema.md`, or lint/test code.
+Targeted wording/line-count audits pass at the pre-lint stage. Still run Skill validation, `git diff --check`, and `python system/scripts/wiki_lint.py --fail-on error` before commit and again after commit.
 
 Next prompt / continuation phrase:
-Continue from the optimized skill by testing a concrete query scenario or by requesting additional workflow synchronization only if a real conflict remains.
+Test the revised Skill with one of the review-status acceptance scenarios, or continue ordinary Wiki-informed Q&A.
 
 Recent user decisions:
-User requested a small-scope skill/framework sync: optimize `wiki-evidence-query` for Wiki-informed open-world Q&A, keep ordinary evidence-calibrated mode, preserve paper evidence gate, avoid default broad file loading, avoid state-file writes during read-only Q&A, and keep the diff small and reviewable.
+User clarified that review metadata must guide disclosure and verification priority, not suppress useful knowledge or determine paper eligibility by page status. Human-reviewed material remains open to correction and deeper extraction; Codex may not change review markers without explicit user confirmation.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

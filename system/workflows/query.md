@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: query
-updated: 2026-07-06
+updated: 2026-07-10
 ---
 
 # QUERY：知识库查询流程
@@ -99,7 +99,8 @@ qmd.cmd status
 - 相互冲突的来源并列呈现。
 - 库中没有的信息明确写“当前知识库未覆盖”；这表示当前 Wiki 缺少个人化上下文或已整理证据，不自动等于不能给出一般专业回答。
 - 不以模型的通用记忆冒充本库资料。
-- 页面或 claim 未完成人工复核时，明确标记为阅读线索，不把它写成论文级结论。
+- 页面或 claim 未完成人工复核时，不得因此隐藏或排除与当前问题相关、可能有信息增益的内容。它仍可用于普通问答、研究分析、探索性综合、文献发现、候选证据发现和问题导航。回答应说明当前 review、source 和 locator 状态，并在内容可能影响判断时主动指出最值得用户核查的位置。涉及精确、争议或论文用途时，应针对具体 claim 回到直接来源核验；页面级 review status 本身既不自动赋予，也不自动取消论文使用资格。
+- 已人工审核内容仍可在用户质疑、新证据冲突、精确核查或论文使用时重新检查。不得把 `human-reviewed` 当作永久正确、完整或已充分挖掘的保证。
 - synthesis 只能帮助综合和导航，不能替代原始 source/raw。
 - source/claim 引用继续以知识页和原始 locator 为准，不得只引用 vocabulary。
 - 当已有 source、citation key、数据、locator 或 Wiki 页面入口时，优先提供这些核查入口，方便用户回查。

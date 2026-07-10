@@ -430,3 +430,8 @@ updated: 2026-07-06
 
 - Reframed `.agents/skills/wiki-evidence-query/SKILL.md` around Wiki-as-personalization-layer open-world ordinary Q&A, with conditional governance reads, Fast/Standard/Deep routing, external-verification triggers, answer scaling, stop conditions, and read-only state-file boundaries.
 - Minimally synchronized `system/workflows/query.md` so ordinary mode may use stable general background without pretending it is Wiki evidence, and corrected `system/evidence-policy.md` heading from four to six statement classes.
+
+## [2026-07-10] framework | surfaced useful knowledge and corrected review semantics
+
+- Compressed `wiki-evidence-query` while making review status a disclosure and verification-priority signal rather than a visibility, value, or manuscript-eligibility filter.
+- Added active surfacing of high-information unreviewed material, claim-specific verification on unreviewed pages, and rechecking/deeper extraction of previously reviewed material; synchronized query workflow and evidence policy without changing Review history.

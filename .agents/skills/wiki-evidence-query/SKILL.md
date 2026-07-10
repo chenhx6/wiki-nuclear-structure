@@ -3,449 +3,255 @@ name: wiki-evidence-query
 description: >-
   Wiki-informed professional Q&A for low-energy nuclear structure and
   experimental spectroscopy. Use the Wiki as the preferred personal research
-  context, not as a closed knowledge boundary. Support questions about level
-  schemes, band structures, collective excitations, experimental criteria,
-  models, competing interpretations, and cross-mass-region comparisons.
-  Distinguish Wiki-grounded evidence, externally verified evidence, general
-  scientific background, synthesis, and provisional inference. Default to
-  read-only evidence-calibrated ordinary Q&A; expand beyond the Wiki or enter
-  strict paper-evidence review when the question requires external verification,
-  precise citation support, current literature, or manuscript-level checking.
+  context and calibration layer, not as a closed knowledge boundary. Support
+  level schemes, band structures, collective excitations, experimental
+  criteria, models, competing interpretations, and cross-mass-region
+  comparisons. Distinguish Wiki-grounded evidence, externally verified
+  evidence, general scientific background, synthesis, and provisional
+  inference. Default to read-only evidence-calibrated ordinary Q&A; expand
+  beyond the Wiki or enter strict paper-evidence review only when external
+  verification, precise citation support, current literature, controversy, or
+  manuscript-level checking requires it.
 ---
 
 # Wiki-Informed Evidence Query
 
-This skill supports professional low-energy nuclear-structure Q&A.
+## Purpose and scope
 
-Use the Wiki to understand the user, not to confine the answer.
+- Use the Wiki to understand and calibrate to the user, not to confine the
+  answer. It is a personalization layer, not a closed corpus or the boundary of
+  answerable knowledge.
+- Prefer relevant Wiki context, terminology, reviewed evidence, methods,
+  competing interpretations, projects, and priorities. A current anchor such
+  as A≈130 is not a query boundary.
+- If the Wiki is incomplete, answer ordinary questions with stable general
+  scientific knowledge and calibrated reasoning. Do not present model memory
+  as Wiki-stored, reviewed, or sourced content.
+- Expand beyond the Wiki when the user needs current, precise, controversial,
+  externally verifiable, or manuscript-level evidence. External material need
+  not be ingested before answering.
+- Default to read-only Q&A. Route ingestion, Wiki edits, planning, governance,
+  data/raw changes, or Git work to the relevant workflow.
 
-## Scope
+## Startup and conditional reads
 
-- Use the Wiki as the preferred personal research context and calibration layer.
-- Support experimental spectroscopy, level schemes, band structures, collective
-  excitations, experimental criteria, models, competing interpretations, and
-  cross-mass-region comparison.
-- A current research anchor such as A≈130 is not the boundary of answerable
-  knowledge.
-- Default to read-only professional Q&A, not editing workflows.
-- Do not use this skill for ingestion, Wiki edits, raw/data/image changes,
-  repository governance, planning, Git operations, scripts, automations,
-  schedulers, or file organization.
-
-## Startup and reading discipline
-
-1. Follow `AGENTS.md` before all other instructions.
-2. Follow the `AGENTS.md` startup sequence once per session.
-3. If `README.md`, `Active handoff`, `profile.md`, `system/memory.md`,
-   `knowledge/index.md`, and the recent `system/log.md` entries are already
-   loaded in the current session, do not reread them unless repository state
-   changed or the current question requires a specific section.
-4. Do not reread startup files already loaded just because this skill is
-   invoked.
-5. Ordinary query work must not read `Previous active handoff`, superseded
-   handoff, or handoff archive by default.
-6. Ordinary query work must not read `USER_GUIDE.md`, `PLAN.md`,
-   `system/review-history.md`, `system/wip-queue.md`,
-   `system/paper-evidence-gate.md`, the full `system/vocabulary.md`, or the
-   full `system/evidence-policy.md` by default.
-7. If the target page or source is already known, read it directly. Do not
-   rescan `knowledge/index.md` or run broader retrieval for formality alone.
-
-## Wiki as a personalization layer, not a closed corpus
-
-The Wiki is the preferred personal research context, not the boundary of
-answerable knowledge.
-
-Its purpose is to make the model more suitable for the user by preserving:
-
-- research context;
-- terminology and conventions;
-- reviewed evidence;
-- analysis methods;
-- competing interpretations;
-- current projects and priorities.
-
-For an ordinary knowledge question:
-
-1. Use relevant Wiki evidence first when it exists.
-2. If the Wiki does not cover the topic adequately, continue with the best
-   available general scientific knowledge and calibrated reasoning.
-3. Briefly distinguish Wiki-grounded material from general background or
-   provisional reasoning when that distinction affects reliability.
-4. Do not describe general model knowledge as if it were stored, reviewed, or
-   sourced in the Wiki.
-5. Do not invent citations, data, locators, or author statements.
-6. When the user asks for evidence, precise data, current literature,
-   competing views, verification, or paper-level support, expand beyond the
-   Wiki through external source retrieval and direct-source checking.
-7. External material may later be routed to ingest, but ordinary answering
-   does not require immediate ingestion.
+1. Follow `AGENTS.md` and its startup sequence once per session. Do not reread
+   `README.md`, Active handoff, `profile.md`, `system/memory.md`,
+   `knowledge/index.md`, or recent log entries already loaded unless repository
+   state changed or the question needs a specific section.
+2. Read a known target page or source directly; do not rescan the index for
+   formality. Do not read superseded handoff or archives in ordinary queries.
+3. Do not default-read `USER_GUIDE.md`, `PLAN.md`, full vocabulary, full
+   evidence policy, Review history, WIP queue, or paper evidence gate.
+4. Use page aliases first. Read only the relevant `system/vocabulary.md` entry
+   when terminology is ambiguous, aliases conflict, experimental speech is
+   used, or `do_not_merge_with` matters.
+5. Read the relevant section of `system/workflows/query.md` only when detailed
+   retrieval routing, cross-source synthesis, or external expansion is needed.
+6. Read the relevant section of `system/evidence-policy.md` only when claim
+   classification, confidence, review status, independence, or evidence grading
+   is material.
+7. Read `system/paper-evidence-gate.md` only in strict paper-evidence mode.
+8. Read `system/review-history.md` only for questions about completed
+   human-review rounds, recorded user review decisions, review scope, or
+   `review commit message` traceability. It is not a scientific knowledge
+   directory, approved-knowledge whitelist, or paper-readiness index.
+9. Read `system/wip-queue.md` only for pending WIP or task recovery. Review
+   history, WIP queue, handoff, and log are workflow metadata, not scientific
+   evidence and not retrieval filters.
 
 ## Knowledge-source routing
 
-### 1. Wiki-grounded material
+- **Wiki-grounded:** use source, nucleus, band, concept, observable, project,
+  and synthesis pages for personalized and traceable context. Claims described
+  as Wiki-grounded must match the current record and its source/locator status.
+- **General scientific background:** use stable nuclear-structure and
+  spectroscopy knowledge when the Wiki is insufficient and the user did not
+  request Wiki-only scope. It need not carry a citation on every basic sentence,
+  but it is not current Wiki evidence or verified external evidence.
+- **Externally verified:** retrieve and inspect external papers, webpages, or
+  direct sources when evidence beyond the Wiki is needed. Keep retrieved
+  evidence distinct from model memory and search snippets.
+- **Synthesis/inference:** identify cross-source synthesis, working hypotheses,
+  and possible explanations as such; never attribute them to one paper without
+  direct support.
 
-- Use source pages, nuclei pages, band pages, concept pages, observables pages,
-  project pages, and synthesis pages already present in the Wiki.
-- Use this layer for personalized, traceable, context-aligned answers.
-- A claim described as Wiki-grounded must match the Wiki's current content and
-  locator support.
+Low-token answering reduces retrieval overhead, not source visibility.
 
-### 2. General scientific background
+When the Wiki already has a useful source page, citation key, data locator, or
+page entry, expose the best verification entry even for unreviewed material.
+Say what is missing when source or locator support is incomplete. For a citation
+request, use existing Wiki sources first, then retrieve externally if coverage,
+currency, or breadth is insufficient.
 
-- When the Wiki does not cover a topic adequately and the user did not say
-  "only based on the Wiki", ordinary Q&A may use stable general scientific
-  background.
-- This includes standard nuclear-structure concepts, spectroscopy background,
-  established method explanations, and limited calibrated physical reasoning.
-- General scientific background can answer ordinary questions, but it is not
-  current Wiki evidence.
-- Do not claim that such material is already stored, reviewed, or sourced in
-  the Wiki.
-- Do not fabricate literature, data, DOI, locator, or quoted wording.
-- For precise, controversial, or high-risk claims, lower wording strength or
-  escalate to direct evidence.
-
-### 3. Externally verified evidence
-
-- Use external source retrieval and direct-source checking when the question
-  requires evidence beyond the Wiki.
-- Keep externally verified evidence separate from general model memory.
-- If external retrieval is unavailable, say that external source verification
-  was not completed and provide only the ordinary-mode explanation that can be
-  supported without inventing sources.
-
-## External verification triggers
-
-Do not automatically perform external retrieval for every question.
-
-Expand beyond the Wiki when one or more of the following applies:
-
-- the user explicitly asks for citation, source, paper, link, search, latest,
-  current, verification, or direct quotation;
-- the answer depends on precise data, DOI, page, figure, table, equation,
-  locator, or experimental condition;
-- the question involves important controversy, competing interpretations, or
-  absolute claims such as "first", "none", "all", "consensus", or "latest";
-- the result is intended for manuscript, formal citation, or claim checking;
-- Wiki-grounded content conflicts with other known information;
-- model confidence is not high enough for a reliable specific conclusion.
-
-## Conditional governance reads
-
-- `system/vocabulary.md`: read only the relevant entry when aliases,
-  abbreviations, experimental speech, or `do_not_merge_with` boundaries matter.
-  Prefer page frontmatter `aliases` first. Do not read the full vocabulary by
-  default.
-- `system/workflows/query.md`: read only the relevant section when retrieval
-  routing, semantic search, cross-source synthesis, competing interpretation,
-  external extension, or workflow conflict is at issue.
-- `system/evidence-policy.md`: read only the relevant section when claim kind,
-  confidence, source independence, review status, or evidence grading is
-  central to the answer.
-- `system/paper-evidence-gate.md`: read only in strict paper-evidence mode.
-- `system/review-history.md`: read only for questions about completed review
-  rounds, review-finalized work, or `review commit message` traceability.
-  Review history is not scientific evidence.
-- `system/wip-queue.md`: read only for pending WIP, recovery, safe suspend, or
-  unfinished review tasks. WIP queue is not scientific evidence.
-- `system/handoff.md` and `system/log.md`: use only for task state or recent
-  workflow history, not for scientific evidence.
-
-## Terminology normalization
-
-- Expand Chinese, English, abbreviation, alias, and historical forms
-  bidirectionally when helpful for search.
-- When a generic term can refer to multiple models or methods, list the
-  candidates or answer them separately. Do not choose silently.
-- In gamma-spectroscopy context, expand `gate`, "开门", "拉门", or "开窗" toward
-  gating/coincidence-gate language while preserving energy and gate-type
-  context.
-- Do not merge terms listed under `do_not_merge_with`.
-- Treat terminology normalization as search routing, not as scientific evidence.
-
-## Retrieval paths
+## Retrieval budget
 
 ### Fast path
 
-Use for:
-
-- a known nucleus, band, transition, citation key, author, or page;
-- "what does this source report?";
-- simple definition;
-- ordinary professional background;
-- a stable topic not yet covered in the Wiki.
-
-Default budget:
-
-- read the directly relevant page if known;
-- read 1-3 related source pages when Wiki evidence is requested;
-- or answer directly from stable general scientific background;
-- stop when the source locator is sufficient or the background explanation is
-  already adequate.
-
-Do not default to full semantic search, full vocabulary, full evidence policy,
-raw readback, external search, evidence table, or complete controversy sweep.
+Use for a known page, nucleus, band, transition, author, citation key, source
+report, simple definition, or stable background question. Read the direct page
+and, when Wiki evidence is requested, usually 1-3 source pages. Otherwise answer
+from stable general background. Stop when the locator or explanation is enough.
+Do not default to semantic search, raw readback, external search, full governance
+files, controversy sweeps, or evidence tables.
 
 ### Standard path
 
-Use for:
-
-- method questions and experimental criteria;
-- small source comparison;
-- analytical research discussion;
-- moderately ambiguous terminology;
-- questions combining Wiki context and general scientific background;
-- "is this interpretation reasonable?" style questions.
-
-Default budget:
-
-- inspect a small set of high-relevance pages or sources, usually 3-5
-  candidates;
-- add general scientific background only as needed.
-
-Expand only when attribution is missing, sources conflict, a real alternative
-interpretation exists, the current set is insufficient, or the user requests
-broader evidence.
+Use for methods, experimental criteria, small comparisons, moderately ambiguous
+terms, research analysis, or interpretation checks. Start with a small set of
+high-relevance pages or sources, usually 3-5, plus necessary general background.
+Expand only for missing attribution, conflict, a serious alternative, inadequate
+support, or a user request for broader evidence.
 
 ### Deep path
 
-Use for:
+Use for contested interpretations, cross-nucleus or cross-mass synthesis,
+high-value projects, external literature expansion, or manuscript-grade claim
+checking. Inspect supporting and alternative sources and use raw/direct sources,
+evidence policy, and paper evidence gate as required.
 
-- wobbling, chirality, gamma-soft/gamma-rigid, or other contested topics;
-- cross-nucleus or cross-mass-region synthesis;
-- high-value synthesis or project support;
-- external literature expansion;
-- manuscript-grade claim checking;
-- precise locator review.
+Retrieval routing:
 
-This path may use QMD `vsearch` or `query`, project/synthesis pages, multiple
-supporting and alternative sources, raw readback, external retrieval, evidence
-policy, and paper evidence gate. It is not the default path for simple Q&A.
+1. Read known files directly.
+2. Prefer `rg` or fast BM25 for exact nuclei, authors, DOI, citation keys, band
+   names, and terms.
+3. Use QMD `vsearch` for mechanisms, near-synonyms, or concept questions missed
+   by keywords; reserve full `query` for high-value cross-page synthesis.
+4. Treat snippets and rankings only as candidate selectors. Do not repeat
+   retrieval without expected information gain or scan the whole repo/raw for
+   ordinary questions.
+5. A Wiki miss means missing personal context, not missing field knowledge.
 
-## Local search and source-checking route
+A source page is enough in ordinary mode when identity and locator are clear,
+wording is adequate for the question, no material conflict is known, and no
+quotation or manuscript judgment is requested. Do not mechanically reread raw.
+Use raw or an external direct source for precise data/formulas/locators,
+quotations, weak attribution, conflict, controversy dependent on exact wording,
+secondary-summary checks, or manuscript/formal-citation use.
 
-1. If the file path or page is already known, read it directly.
-2. For precise nucleus, author, DOI, citation key, band name, or term queries,
-   prefer `rg`, `qmd.cmd search`, or fast BM25.
-3. For mechanisms, near-synonyms, or concept questions that keyword search
-   misses, use `qmd.cmd vsearch`.
-4. Use full `qmd.cmd query` only for high-value cross-page synthesis when the
-   extra cost is justified.
-5. Search snippets and rankings only choose candidates. They are not evidence.
-6. Do not repeat the same retrieval without a clear benefit.
-7. Do not scan the whole repository or `raw/` for ordinary questions.
-8. A local Wiki miss does not automatically mean the field lacks knowledge.
+## Evidence, review status, and provenance
 
-## When a source page is enough
+Keep six statement classes distinct: experimental fact, experimental criterion,
+author interpretation, model result, Codex/our provisional inference, and
+cross-source synthesis judgment. Also distinguish Wiki-grounded, externally
+verified, general-background, and synthesis/inference provenance when it affects
+reliability. Do not force these categories into headings in every answer.
 
-In ordinary mode, a source page is usually enough when:
+Never invent citations, DOI, data, uncertainty, page/figure/table/equation
+numbers, locators, quotations, or author wording. Do not turn snippets, model
+memory, or synthesis into a paper's direct conclusion. For competing structural
+interpretations, inspect both support and serious alternatives.
 
-1. it is directly relevant to the question;
-2. source identity or citation key is clear;
-3. the locator is sufficient for the current answer;
-4. the wording is not materially ambiguous;
-5. it does not conflict with the currently known related pages;
-6. the question does not require quotation or manuscript-grade judgment.
+Review status controls uncertainty disclosure and verification priority. It does
+not control visibility, retrieval, scientific relevance, usefulness, ordinary
+Q&A participation, or eligibility for further investigation or candidate
+manuscript evidence.
 
-Do not mechanically reread `raw/` if the source page already supports the
-answer.
+Apply this knowledge-growth loop to reviewed and unreviewed material:
 
-Prefer or require `raw/` or an external direct source when the question needs:
+1. Discover relevant content and rank it by relevance, information gain,
+   possible impact on the answer, and verification value, not by a simple
+   reviewed/unreviewed split.
+2. Surface highly relevant material that may add evidence, change an answer,
+   expose an omission, or provide a serious alternative. Do not wait for the
+   user to name a hidden page first.
+3. Briefly state what it may contribute, its review/source/locator status, and a
+   practical verification path or the most valuable location to check next.
+4. If needed, verify the specific claim against its source, raw, or external
+   direct source; check wording, locator, data, applicability, claim kind, and
+   competing explanations.
+5. Let the user confirm, correct, or retain uncertainty. Enter an update workflow
+   only when the user asks to persist changes.
 
-1. precise numbers, uncertainties, or formulas;
-2. figure, table, level, transition, or data-location confirmation;
-3. direct quotation;
-4. missing or weak locator support;
-5. conflict between source and synthesis or across sources;
-6. controversy that depends on exact original wording;
-7. manuscript-grade or formal-citation checking;
-8. unresolved P0 or obvious high-risk ambiguity;
-9. secondary-summary verification;
-10. specific citable evidence for a topic not yet covered in the Wiki.
+Do not hide potentially useful knowledge merely because it is unreviewed.
+Unreviewed material may support ordinary Q&A, research analysis, exploratory
+synthesis, explanation and question generation, literature discovery, competing
+interpretation discovery, and candidate-evidence discovery. It is not thereby
+user-confirmed, fully verified, uncontested, paper-ready, or a substitute for
+formal direct-source checking.
 
-## Statement classes and provenance
+Surface only material with meaningful relevance or information gain; do not dump
+every unreviewed page or repeat review warnings sentence by sentence.
 
-Always keep these six statement classes distinct:
+Human review is valuable but fallible. `human-reviewed` means a user previously
+checked a stated scope; it does not guarantee that every claim is permanently
+correct, complete, exhaustively extracted, accurately attributed/located, or
+immune to new evidence. Recheck and continue mining reviewed material when the
+user questions it, new sources conflict, precision or manuscript use requires
+it, wording exceeds the reviewed scope, or an old omission/error is suspected.
 
-1. experimental fact;
-2. experimental criterion;
-3. author interpretation;
-4. model result;
-5. Codex or our provisional inference;
-6. cross-source synthesis judgment.
+Page-level review is not claim-by-claim certification. A page may remain
+`unreviewed` while a specific claim is directly verified for a specific use;
+judge manuscript support from the exact claim, proposed wording, source,
+locator, applicability, competing explanations, and use context. Conversely, a
+`human-reviewed` page does not remove claim-specific verification when risk or
+precision requires it.
 
-Also distinguish provenance when relevant:
+Do not change page-level `review_status`, clear claim-level `needs_review`, or
+set `high` confidence without the user confirmation required by repository
+policy. A claim-specific check applies only to that claim and use context; it
+does not review the rest of the page.
 
-- Wiki-grounded;
-- externally verified;
-- general scientific background;
-- synthesis or inference.
+Review history only records that a human-review round and scoped user decisions
+occurred. An entry neither proves claims correct nor controls whether a source,
+page, or claim may be retrieved, discussed, rechecked, corrected, or mined more
+deeply. Missing entries do not make knowledge invisible or unusable.
 
-Do not force these labels as headings in every answer. Use natural wording when
-the boundary matters, for example:
+## Escalation and stop conditions
 
-- "Wiki 中整理的来源报告..."
-- "文献作者将其解释为..."
-- "模型计算表明..."
-- "通用核结构背景下..."
-- "综合 Wiki 和一般专业知识..."
-- "一种可能解释是..."
-- "该判断尚未经过 external source verification..."
+Use **ordinary evidence-calibrated mode** for normal Q&A, research discussion,
+comparison, exploratory synthesis, and early drafting. Give the best supported
+answer, lower wording strength when evidence is incomplete, expose material
+source limits when they matter, and do not refuse useful analysis merely because
+paper-grade support is unfinished.
 
-Do not present model memory, Wiki synthesis, provisional inference, or search
-snippets as if they were a paper's direct conclusion.
+Enter **strict paper-evidence mode** only for manuscript/submission checking,
+formal citation, direct quotation/source requests, exact locator review, or key
+scientific claim confirmation. Follow `system/paper-evidence-gate.md`; page-level
+review status alone neither qualifies nor disqualifies a specific claim.
 
-## Modes
+Retrieve externally when the user asks for sources, links, verification, latest
+work, or wider coverage; when the answer depends on precise data, locators, or
+experimental conditions; when controversy, conflict, absolute/current claims,
+or insufficient confidence make memory unsafe; or when manuscript use requires
+direct support. If retrieval is unavailable, say it was not completed and do
+not fabricate a source. Do not auto-search stable basic questions.
 
-### Ordinary evidence-calibrated mode
+Stop when:
 
-This is the default for ordinary Wiki Q&A, research discussion, comparison,
-analytical explanation, and early drafting.
+- a stable background explanation is clear and not precision-dependent;
+- a direct fact or author interpretation has sufficient source/locator support
+  and no known conflict;
+- a method's definition, applicability, and main limit are clear;
+- a competing-interpretation answer has checked main support, a serious
+  alternative, and the key limitation.
 
-In ordinary mode:
+Do not make absolute or current claims from Wiki coverage or memory alone;
+retrieve externally or explicitly bound the scope.
 
-- prefer relevant Wiki context when available;
-- use general scientific background when the Wiki is incomplete;
-- provide the best currently supportable answer;
-- distinguish fact, criterion, interpretation, model result, synthesis, and
-  inference;
-- lower wording strength when direct evidence is incomplete;
-- explain source boundaries only when they affect reliability;
-- expand to external sources only when the question requires it;
-- do not refuse useful analysis merely because manuscript-grade evidence is not
-  yet assembled;
-- do not invent missing data or references.
-
-Unreviewed Wiki material may be used as a research clue, but not described as
-manuscript-grade evidence without saying so.
-
-### Strict paper-evidence mode
-
-Use only when the task is manuscript, submission, formal citation, direct
-source, precise locator, key-claim confirmation, or explicit paper-evidence
-review work.
-
-Strict mode follows `system/paper-evidence-gate.md`. Do not let strict mode
-spill into ordinary Q&A by default.
-
-## Knowledge-gap routing
-
-The following phrases are routing signals, not automatic stop conditions.
-
-### 1. 当前知识库未覆盖
-
-Use this when the Wiki currently lacks relevant pages or sources.
-
-Do not infer that:
-
-- the field has no knowledge;
-- the literature does not exist;
-- Codex cannot answer;
-- the user cannot continue exploring.
-
-Handling:
-
-- If the user said "only based on the Wiki", report the coverage gap and stay
-  inside the Wiki.
-- Otherwise, continue with general scientific background when appropriate.
-- If precise evidence is requested, expand to external sources.
-
-### 2. 知识库当前未给出足够出处
-
-Use this when the Wiki has related wording but lacks enough source, locator,
-attribution, or claim-kind support to treat it as checked Wiki evidence.
-
-Handling:
-
-- explain what the Wiki actually provides;
-- still offer careful analysis when useful;
-- label synthesis or inference honestly;
-- point to the most valuable source, raw, locator, or condition to check next;
-- expand externally if the user asks.
-
-### 3. 外部来源尚未核验
-
-Use this when ordinary answering relies on general scientific background or an
-unverified memory of the literature, and the claim should not yet be treated as
-formally citable external evidence.
-
-Do not add this sentence mechanically to every answer.
+Treat `当前知识库未覆盖`, `知识库当前未给出足够出处`, and `外部来源尚未核验`
+as routing signals, not automatic refusal. Respect Wiki-only requests; otherwise
+use calibrated general background, identify missing attribution/locator, or
+expand externally as the question requires.
 
 ## Answer scaling
 
-### Fast factual or background answer
+- **Fast:** give the direct answer, the most useful source/provenance entry when
+  relevant, and one important limitation if any.
+- **Standard:** give a short conclusion, the strongest relevant basis, the main
+  limitation or alternative, and a verification path when useful.
+- **Deep/strict:** use fuller evidence structure only for multiple claims or
+  sources, real controversy, or explicit manuscript review. Use an evidence
+  table only when it improves comparison; never force empty sections or a
+  suggested follow-up query.
 
-Usually provide only:
+## Read-only boundary
 
-- the direct answer;
-- a brief source or provenance note when needed;
-- one key limitation if it matters.
+Pure Q&A is read-only: do not modify the Wiki or update handoff, log, WIP queue,
+Review history, Git commits, or remotes. If resources run low, stop expanding,
+return the verified or reliable portion, state the remaining gap, and offer one
+concrete verification direction without writing task state.
 
-### Standard analytical answer
-
-Usually provide:
-
-- a short conclusion;
-- the most relevant Wiki evidence or general-scientific basis;
-- the main limitation or alternative explanation;
-- a useful next-check direction only if it helps.
-
-### Deep synthesis or strict review
-
-Use fuller structure only for complex controversy or manuscript-grade work, for
-example:
-
-- evidence table;
-- observed facts;
-- experimental criteria;
-- model results;
-- author interpretation;
-- synthesis;
-- evidence gaps;
-- external source list.
-
-Only use an evidence table when there are multiple sources, multiple claims,
-real competing interpretations, or the user explicitly asks for it. Do not
-force empty sections. Do not append a suggested follow-up query mechanically.
-
-## Stop conditions
-
-- Stable background question: stop when a clear, reliable, non-precision-heavy
-  explanation is already available.
-- Direct experimental fact: stop when a direct source with sufficient locator
-  and no known conflict is in hand.
-- Author interpretation: stop once the author wording and locator are clear,
-  unless the user asks for broader consensus or later dispute.
-- Method or criterion: stop once definition, applicability, and main limits are
-  clear.
-- Competing interpretation: do not stop at the first supporting source; check
-  the main support, at least one serious alternative, and the key limitation.
-- Absolute or current claim: do not conclude from Wiki or memory alone; either
-  retrieve external evidence or explicitly narrow the scope.
-
-## Read-only boundary and low-headroom behavior
-
-Ordinary Q&A with this skill is read-only.
-
-Do not:
-
-- modify the Wiki;
-- update `system/handoff.md`;
-- update `system/log.md`;
-- update `system/wip-queue.md`;
-- update `system/review-history.md`;
-- commit;
-- push.
-
-If token, context, or execution headroom is low:
-
-- stop expanding scope;
-- return the part that is already verified or can be explained reliably;
-- state the remaining gap;
-- suggest one concrete next question or verification direction;
-- do not update workflow state files during pure Q&A.
-
-If the user asks to ingest literature, update pages, save external evidence,
-modify synthesis, or record review state, exit this read-only skill and route
-to the relevant workflow.
+If the user asks to ingest, persist a correction, update review state, save an
+external source, or modify a synthesis, exit this read-only skill and use the
+relevant workflow.
