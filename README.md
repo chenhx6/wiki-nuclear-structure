@@ -60,6 +60,13 @@ Zotero Wiki Inbox
 python system/scripts/wiki_lint.py --fail-on error
 ```
 
+## Repository information
+
+- Citation: [`CITATION.cff`](CITATION.cff)
+- License: [`LICENSE`](LICENSE)
+- Disclaimer: [`DISCLAIMER.md`](DISCLAIMER.md)
+- Contributions: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
 ## README、PLAN 与 handoff
 
 - `README.md` 是稳定、简洁的 Wiki 入口，不保存大量阶段性待办。

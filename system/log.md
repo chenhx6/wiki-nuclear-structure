@@ -445,3 +445,7 @@ updated: 2026-07-06
 
 - Updated long-term memory and user guidance for the public GitHub remote and exclusion of unpublished, collaboration, peer-review, personal, and sensitive raw material.
 - Aligned high-value candidate surfacing, reviewed-knowledge rechecking/growth, claim-specific paper admission, Review history boundaries, and complete strict-mode triggers across current governance files.
+
+## [2026-07-10] maintenance | added public repository metadata package
+
+- Added public licensing, citation metadata, bilingual disclaimer, contribution files, and the current bibliography snapshot.

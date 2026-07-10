@@ -8,35 +8,36 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Framework consistency audit: align long-term review, answer-output, Wiki-growth, strict-mode, and public-remote safety rules.
+Public-repository metadata closeout for the now-public GitHub Wiki remote: add standard MIT licensing, repository citation metadata, a bilingual disclaimer, minimal contribution/security files, and the current user-authorized bibliography snapshot without touching science pages.
 
 Current branch / local commit:
-`main`, with `c6d4d99` preserved as an ancestor. This task is limited to governance documents plus required handoff/log closure; pre-existing user changes in `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain unstaged.
+`main`, aligned with `origin/main` at startup. This task is limited to public-repository maintenance files plus required handoff/log closure. Pre-existing user changes in `.obsidian/` remain outside the commit; `raw/zotero/wiki-inbox.bib` is explicitly authorized for this task.
 
 Last task status:
-Updated long-term memory to record the public GitHub remote and its sensitive-material boundary, review status as discovery/verification metadata, rechecking and deeper extraction of reviewed knowledge, focused claim verification, scoped paper admission, and complete strict-mode triggers. Minimally synchronized AGENTS, user guides, checklist, and query workflow; evidence policy, paper gate, and Skill were already consistent.
+Startup audit confirmed that `main` matches `origin/main`, only the three `.obsidian/` files plus `raw/zotero/wiki-inbox.bib` were initially modified, and no rebase/merge/cherry-pick was in progress. Public metadata files were absent, existing `raw/README.md` and `raw/zotero/README.md` were read for minimal merge, and the current `wiki-inbox.bib` diff passed a read-only sensitive-content scan.
 
 Unfinished items:
-Run final scoped semantic checks, Skill validation, and wiki lint; create the requested independent commit and push `main` if checks pass.
+Finish validation, stage only the allowed public-maintenance files, create a new independent commit with the requested message, and push `origin/main` if checks pass. Do not write anything to `system/review-history.md`.
 
 P0 focus:
-1. Public-remote safety must keep unpublished, collaboration, peer-review, personal, and sensitive raw material outside GitHub.
-2. Strict mode must cover formal evidence use without spilling into ordinary or general controversy discussion.
+1. `LICENSE`, `CITATION.cff`, and `DISCLAIMER.md` must match the requested public-repository metadata exactly enough for a clean public release.
+2. `README.md` must stay minimal and link-only for public metadata; it must not duplicate disclaimer text, ORCID, or email.
+3. `raw/zotero/wiki-inbox.bib` must be committed as-is from the user's current snapshot without Codex rewriting it.
 
 Remaining P0:
-None identified for this framework-only skill/query sync.
+None identified if the staged file set stays within the user-authorized public-maintenance scope.
 
 Risks:
-Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside the commit. Do not rewrite historical log entries that accurately record earlier repository state or workflow labels.
+Keep external `.obsidian/` changes outside the commit. Do not modify `knowledge/`, `PLAN.md`, `system/review-history.md`, `system/wip-queue.md`, `system/schema.md`, or any science page. Do not rewrite or auto-format `raw/zotero/wiki-inbox.bib`; only stage the current user snapshot after validation.
 
 Checks:
-Pre-lint audit confirms current governance wording no longer calls the remote private and aligns candidate evidence, claim-specific verification, source visibility, paper admission, and strict triggers. Historical log matches remain expected. Run final `rg`, Skill validation, `git diff --check`, and wiki lint.
+Run the requested Git audit, required-file checks, README/disclaimer/CFF/license checks, BibTeX sensitive-pattern scan, `git diff --check`, and `python system/scripts/wiki_lint.py --fail-on error`. Use `cffconvert --validate` only if it is already available; do not install dependencies.
 
 Next prompt / continuation phrase:
-Continue ordinary Wiki-informed Q&A or test one candidate-evidence-to-paper-admission path against the aligned rules.
+Continue public-repository maintenance after the metadata files land: verify the staged file set, create the independent commit, and push `origin/main` if the final checks still pass.
 
 Recent user decisions:
-User confirmed that the GitHub remote is public and required a stable safety boundary for unpublished, collaboration, peer-review, personal, and sensitive raw material. Review metadata must support discovery and correction rather than suppress knowledge.
+User requested a public-repository maintenance round only: add MIT licensing, `CITATION.cff`, a bilingual `DISCLAIMER.md`, minimal contribution/security/PR files, and explicitly include the current `raw/zotero/wiki-inbox.bib` snapshot in the same new independent commit. This task must not amend history, must not touch science pages, and must not write `system/review-history.md`.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

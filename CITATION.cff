@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this knowledge base, please cite this repository."
+title: "Low-Energy Nuclear Structure Wiki"
+type: dataset
+authors:
+  - family-names: "Chen"
+    given-names: "Hongxing"
+    orcid: "https://orcid.org/0009-0007-5032-9620"
+    email: "chenhongxing@impcas.ac.cn"
+repository-code: "https://github.com/chenhx6/wiki-nuclear-structure"
+url: "https://github.com/chenhx6/wiki-nuclear-structure"
+license: MIT
