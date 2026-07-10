@@ -8,36 +8,36 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Close out Wiki evidence-entry routing after testing confirmed that neither Markdown line links nor inline code comments can force a read-only review surface for unchanged Wiki files.
+Add repository-level LF safeguards for the accepted editable Wiki evidence view, while keeping exact-line evidence navigation and protecting local Obsidian state.
 
 Current branch / local commit:
-`main`, aligned with `origin/main` at startup. Create the independent `Clean failed read-only evidence route rules` commit from governance files only, then push `origin/main`. Existing `.obsidian/` and knowledge-page working-tree state remains unstaged and untouched.
+`main`, aligned with `origin/main` at startup. Create and push the independent `Record editable evidence view line-ending safeguards` commit from `.gitattributes` plus memory/handoff/log only. The three local `.obsidian/` files remain outside the commit.
 
 Last task status:
-Capability tests on unchanged source and synthesis files confirmed that both absolute Markdown line links and inline code-comment file references open the live rendered editable view. The accepted route remains a verified exact-line content link with a file-plus-section fallback; no read-only evidence route is claimed.
+The evidence route is settled: verified exact-line links open the live rendered editable view, and no read-only surface is guaranteed. Baseline checks found only three substantive `.obsidian/` diffs; `git diff --ignore-space-at-eol --exit-code -- knowledge` returned 0. The repository had no `.gitattributes`, while system Git uses `core.autocrlf=true`.
 
 Unfinished items:
-Run final validation, stage only the modified governance files, create the requested independent commit, rerun checks, and push. Do not include `.obsidian/`, knowledge pages, raw files, Review history, or WIP queue.
+Set local skip-worktree on the three allowed `.obsidian/` files, validate the new line-ending rules, stage only `.gitattributes` and governance records, create the requested commit, rerun checks, and push.
 
 P0 focus:
-1. Stage only the evidence-query Skill, query workflow, checklist, user guide, memory, Active handoff, and appended log entry.
-2. Keep all user/local `.obsidian/` and knowledge-page status outside the commit.
-3. Preserve exact-line evidence navigation without claiming any forced reading, review, or read-only surface.
+1. Do not run repository-wide renormalization or rewrite any knowledge/source content.
+2. Stage only `.gitattributes`, `system/memory.md`, `system/handoff.md`, and `system/log.md`.
+3. Keep `.obsidian/`, knowledge, raw, Review history, and WIP queue outside the commit.
 
 Remaining P0:
 None identified if the staged file set remains limited to the task governance documents.
 
 Risks:
-Several knowledge files appear modified in `git status` but have no content diff in `git diff --stat`; treat them as external/editor state and do not stage, restore, format, or modify them. Do not retry code-comment, heading-fragment, fake-diff, or temporary-commit workarounds.
+Do not use `git add --renormalize`, rewrite line endings across the repository, or treat LF-to-CRLF warnings as content errors. Skip-worktree is local index state and must be reversible with `git update-index --no-skip-worktree <file>`.
 
 Checks:
-Run Skill validation, `git diff --check`, and Wiki lint before and after the commit. LF-to-CRLF notices are warnings, not content errors.
+Run Git status/diff checks, the knowledge ignore-EOL check, skip-worktree verification, and Wiki lint before and after the commit.
 
 Next prompt / continuation phrase:
-If interrupted, continue failed read-only evidence-route cleanup: inspect the staged governance-only file list, commit with the requested message, rerun checks, and push `origin/main`.
+If interrupted, continue editable-evidence LF safeguard closeout: verify skip-worktree flags, inspect the staged four-file list, commit, rerun checks, and push `origin/main`.
 
 Recent user decisions:
-User accepted verified exact-line Markdown evidence links as the current route after both Markdown and inline code-comment tests opened the editable view. Do not continue trying heading variants, code comments, fake diffs, or temporary commits to force a read-only surface.
+User accepted the editable exact-line evidence route and requested repository-level LF governance rather than further read-only UI workarounds. Evidence-page LF/CRLF-only dirty state must be verified with an ignore-EOL diff and cleaned, never committed.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

@@ -459,3 +459,8 @@ updated: 2026-07-06
 
 - Confirmed that neither ordinary Markdown line links nor inline code-comment references can reliably force unchanged Wiki files into a read-only review surface.
 - Retained verified exact-line evidence navigation with file-plus-section fallback and prohibited evidence-page edits, fake diffs, or temporary commits as UI workarounds.
+
+## [2026-07-10] governance | added editable-evidence line-ending safeguards
+
+- Added repository LF rules for Markdown and common text formats, with binary handling for PDF/image/archive/ROOT files; no repository-wide renormalization was performed.
+- Recorded the ignore-EOL verification and restore procedure for evidence pages opened in the editable Codex view, while keeping local `.obsidian/` state outside commits.
