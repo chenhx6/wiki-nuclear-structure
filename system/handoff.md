@@ -8,35 +8,35 @@ updated: 2026-07-10
 ## Active handoff
 
 Current active task:
-Framework-only correction: surface useful reviewed or unreviewed knowledge, correct review-status semantics, and compress `wiki-evidence-query`.
+Framework-only correction: align the paper evidence gate with claim-specific verification and user-confirmed paper admission.
 
 Current branch / local commit:
-`main`, based on unchanged `109bd57`. This task is packaged with the requested commit message `Surface useful knowledge and compress evidence query skill`; pre-existing user changes in `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain unstaged and outside the task.
+`main`, based on unchanged `320913f`. This task is limited to the paper gate, the Skill description, user-guide/checklist semantic sync, and required handoff/log closure; pre-existing user changes in `.obsidian/` and `raw/zotero/wiki-inbox.bib` remain unstaged.
 
 Last task status:
-Compressed the evidence-query Skill from 451 to 257 lines while preserving open-world Q&A, provenance, Fast/Standard/Deep, ordinary/strict, source visibility, and stopping rules. Review status now controls disclosure and verification priority rather than visibility or value; highly relevant unreviewed material is surfaced with a verification path, reviewed material remains recheckable, and manuscript support is assessed claim by claim. Query workflow and evidence policy received matching minimal corrections.
+Aligned `system/paper-evidence-gate.md` around candidate-evidence discovery, claim-specific verification, and user-confirmed paper admission. Page-level review no longer substitutes for current-claim verification; unreviewed pages do not block focused verification; P0/P1 is claim-scoped; and writing interfaces may surface unverified candidates without admitting them as final claims. Skill description, user guides, and checklist received minimal matching corrections.
 
 Unfinished items:
-Run final targeted checks and wiki lint, create the independent commit, and push `main` if network access succeeds.
+Run final repository-wide semantic checks, Skill validation, and wiki lint; create the requested independent commit and push `main` if network access succeeds.
 
 P0 focus:
-1. Unreviewed content must not be hidden when it is highly relevant and informative, but its review/source/locator limits must remain visible.
-2. `human-reviewed` is scoped and fallible; precise or manuscript claims still require claim-specific direct-source verification when warranted.
+1. Final manuscript admission remains specific to the current claim, wording, source/locator, applicability, competing evidence, and explicit user confirmation.
+2. Candidate evidence remains visible with status and verification tasks, but cannot be described as having passed the gate before verification and confirmation.
 
 Remaining P0:
 None identified for this framework-only skill/query sync.
 
 Risks:
-Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside the commit. Do not turn active surfacing into exhaustive unreviewed-page dumps or weaken the paper evidence gate.
+Keep external `.obsidian/` and `raw/zotero/wiki-inbox.bib` changes outside the commit. Do not expand focused claim admission into whole-page review state changes or weaken direct-source requirements.
 
 Checks:
-Targeted wording/line-count audits pass at the pre-lint stage. Still run Skill validation, `git diff --check`, and `python system/scripts/wiki_lint.py --fail-on error` before commit and again after commit.
+Pre-lint semantic audit found no remaining conflict in AGENTS, query workflow, evidence policy, Review history, or WIP queue. Still run full targeted `rg`, Skill validation, `git diff --check`, and wiki lint before and after commit.
 
 Next prompt / continuation phrase:
-Test the revised Skill with one of the review-status acceptance scenarios, or continue ordinary Wiki-informed Q&A.
+Test a manuscript claim from an unreviewed page or a precision claim from a human-reviewed page against the revised gate.
 
 Recent user decisions:
-User clarified that review metadata must guide disclosure and verification priority, not suppress useful knowledge or determine paper eligibility by page status. Human-reviewed material remains open to correction and deeper extraction; Codex may not change review markers without explicit user confirmation.
+User defined a three-stage model: surface candidate evidence, verify the specific claim and proposed wording, then require explicit user confirmation for paper admission. Whole-page review is not a prerequisite or a substitute.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

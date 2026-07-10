@@ -8,10 +8,11 @@ description: >-
   criteria, models, competing interpretations, and cross-mass-region
   comparisons. Distinguish Wiki-grounded evidence, externally verified
   evidence, general scientific background, synthesis, and provisional
-  inference. Default to read-only evidence-calibrated ordinary Q&A; expand
-  beyond the Wiki or enter strict paper-evidence review only when external
-  verification, precise citation support, current literature, controversy, or
-  manuscript-level checking requires it.
+  inference. Default to read-only evidence-calibrated ordinary Q&A. Expand
+  beyond the Wiki when external verification, precise evidence, current
+  literature, or broader controversy checking requires it; enter strict
+  paper-evidence review only for manuscript, formal-citation, direct-source,
+  precise-locator, or key-claim checking.
 ---
 
 # Wiki-Informed Evidence Query

@@ -143,6 +143,10 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 审核点较多时给出“精力有限时建议先看”的 3-5 个位置。
 - [ ] 低风险 index/overview/handoff/log、格式和导航更新与科学 claim 分开。
 - [ ] Paper evidence gate 候选被列为 P0/P1；未完成 P0/P1 审核时没有描述为可直接用于论文。
+- [ ] 高相关未核验材料未因 `unreviewed` 或缺少 Review history entry 而被隐藏；已作为 candidate evidence 标明 review/source/locator 状态、适用条件、缺口和核查路径。
+- [ ] P0/P1 聚焦当前关键 claim 或证据项；没有要求用户先全面审核整页/整篇，除非当前 claim 依赖更广上下文。
+- [ ] 页面整体 `unreviewed` 未阻止具体 claim 核验；页面 `human-reviewed` 也未替代精确、高风险或论文用途 claim 的直接来源核验。
+- [ ] Paper admission 由具体 claim、拟用措辞、直接来源、locator、适用条件、数据一致性和竞争解释共同决定，并经用户明确确认；局部准入未扩张为整页或其它 claims 的 review 状态更新。
 - [ ] 用户数据解释、competing interpretation、innovation candidate 和 paper-level candidate 被列为 P0/P1。
 - [ ] 多篇逐篇摄入没有粗略批处理；每篇文献分别列 source-level / claim-level 审核重点和 P0/P1。
 - [ ] Project/synthesis 任务列出主结论段落、evidence matrix 和跨来源解释的审核优先级。

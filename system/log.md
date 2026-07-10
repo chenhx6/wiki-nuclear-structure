@@ -435,3 +435,8 @@ updated: 2026-07-06
 
 - Compressed `wiki-evidence-query` while making review status a disclosure and verification-priority signal rather than a visibility, value, or manuscript-eligibility filter.
 - Added active surfacing of high-information unreviewed material, claim-specific verification on unreviewed pages, and rechecking/deeper extraction of previously reviewed material; synchronized query workflow and evidence policy without changing Review history.
+
+## [2026-07-10] framework | aligned paper gate with claim-specific verification
+
+- Replaced page-status-based paper admission with candidate discovery, focused claim/source verification, and explicit user-confirmed admission for the proposed manuscript wording.
+- Clarified claim-scoped P0/P1 review and future writing-skill candidate handling; minimally synchronized the evidence-query description, user guides, and checklist without changing science pages or Review history.

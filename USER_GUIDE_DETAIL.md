@@ -104,7 +104,7 @@
 3. Codex 按 schema 更新相关 concept、observable、nucleus、band、model、experiment 和必要的 synthesis；
 4. Codex 在复盘中列出新增 claims、待审 claims、竞争解释和证据缺口；
 5. 用户审阅 source 页和关键 claims；
-6. 完成人工复核后，相应内容才进入论文级证据池。
+6. 可能用于论文的具体 claim 完成直接来源、locator、适用条件和竞争解释核验，并由用户确认当前拟用措辞后，才进入论文级证据池；页面整体无需先完成全面审核。
 
 不要把聊天内容或整批未读文献机械倒入 knowledge。新文献应先检查重复、书目信息、citation key 和原始文件定位。
 
@@ -168,6 +168,8 @@ Codex 应自动理解为：本轮人工审核已经结束，可以记录一条 R
 - **P1 优先审核**：关键 source claims、evidence matrix、模型假设、跨来源总结、定义和高歧义 aliases。有时间应优先看。
 - **P2 可抽查**：背景摘要、follow-up sources、evidence gaps 和 planning notes，按文件抽查即可。
 - **P3 快速扫过**：index、overview、handoff/log、普通反链、格式和低风险导航。
+
+P0/P1 是当前关键 claim 或证据项的 focused review 优先级，不要求全面审核整页或整篇文献，除非当前 claim 依赖更广上下文。局部 claim 核验和用户确认只适用于该 claim 与当前使用语境，不自动改变页面或其它 claims 的 review 状态。
 
 审核时，source 重点核对原文与 locator；project 重点核对证据归类、研究问题和数据桥；synthesis 重点核对跨来源结论是否过强；data-analysis-bridge 重点核对数据事实、分析结果、物理解释和创新点候选是否分层。页面级 `human-reviewed` 与 claim-level `needs_review` 仍然独立，不能因整页通过就自动清除具体 claim 的待审状态。
 
@@ -266,7 +268,7 @@ qmd.cmd embed -c nuclear-knowledge
 - 把 synthesis 当作原始文献；
 - 把作者解释写成观测事实；
 - 把模型结果写成实验事实；
-- 把 unreviewed 页面或 `needs_review: true` claim 写入论文；
+- 把尚未完成 claim-specific verification 和用户确认的 candidate evidence 写成最终论文结论；
 - 认为 Wiki 未收录就等于没有相关工作；
 - 缺少 locator 或 citation key 时自行猜测；
 - 让 Codex 大规模重写用户维护的 `PLAN.md`；
