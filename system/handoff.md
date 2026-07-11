@@ -8,13 +8,13 @@ updated: 2026-07-11
 ## Active handoff
 
 Current active task:
-None after this governance closeout. The write-entry, commit, and pre-push Git preflight lifecycle is implemented.
+None after this forward safety patch. The three-stage Git preflight lifecycle remains implemented.
 
 Current branch / local commit:
-`main`; finalized with commit message `Add write-entry preflight and EOL cleanup script` and intended for `origin/main` push after the post-commit preflight.
+`main`, aligned with `origin/main` after the completed preflight governance finalization; this patch uses final commit message `Restrict EOL cleanup to LF/CRLF changes`.
 
 Last task status:
-Added the unified EOL-only knowledge dirty-state cleanup script, moved preflight to the first repository write, retained commit and pre-push checks, and documented dirty baselines, dynamic file-entry scope, staged-file isolation, pending-WIP overlap, and separate scientific/governance WIP lifecycles. No scientific knowledge content was modified.
+Restricted automatic cleanup to provable LF/CRLF-only changes with `--ignore-cr-at-eol`. Ordinary trailing spaces, Markdown double-space line breaks, and Tabs remain substantive. Added post-restore status verification and a DryRun `Would restore` count without changing the existing preflight or WIP lifecycle.
 
 Unfinished items:
 None after checks, final commit, and push complete.
@@ -29,16 +29,16 @@ Remaining P0:
 None for this task.
 
 Risks:
-The cleanup script intentionally leaves substantive, mixed, conflict, staged, and ambiguous states untouched. Codex must still classify authorization and WIP ownership from the baseline.
+The cleanup script intentionally leaves trailing whitespace, substantive, mixed, conflict, staged, and ambiguous states untouched. Codex must still classify authorization and WIP ownership from the baseline.
 
 Checks:
-PowerShell parse passed. Repository DryRun/default returned 0. Temporary Git tests passed for clean, EOL-only, substantive, staged-only, MM, delete, rename, conflict, space paths, ignored paths, untracked files, DryRun, and non-repository error routing. Skill validation and diff checks passed; knowledge ignore-EOL returned 0; Wiki lint returned 0 errors / 9 existing warnings.
+Safety tests passed for LF/CRLF-only cleanup; single/double trailing spaces and Tabs; Chinese/space paths; staged-only, mixed, rename, delete and conflict states; DryRun; and non-repository errors. Repository DryRun/default and strict ignore-CR checks returned 0; PowerShell parse and Skill validation passed; Wiki lint returned 0 errors / 9 existing warnings. No knowledge content changed.
 
 Next prompt / continuation phrase:
 No continuation required after push. Future write tasks start with the new write-entry preflight.
 
 Recent user decisions:
-User approved the EOL-only cleanup script, first-write baseline, dynamic scope gate, safe parallel WIP overlap handling, serial ingest-review recommendation, and direct final commits for fully specified governance tasks.
+User requires automatic cleanup to mean LF/CRLF-only, never arbitrary trailing whitespace; restore success must be rechecked and DryRun must count candidates. Existing preflight and WIP governance remain unchanged.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

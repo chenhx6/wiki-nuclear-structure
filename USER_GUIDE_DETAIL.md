@@ -137,7 +137,7 @@
 
 已有 pending WIP commit 与仍留在 Git index 的 staged 文件不同：commit 不会自动混入当前 commit，任务前 staged 文件却会。write-entry 和 commit preflight 必须检查完整 cached name/stat；无关 staged 内容不得混入本轮，也不得在归属不明时擅自 unstage。若治理允许且归属明确，可先安全保存到所属 WIP；否则暂停并询问用户。
 
-统一脚本 `system/scripts/clean_knowledge_eol_dirty.ps1` 只处理 tracked knowledge Markdown 的 EOL-only worktree dirty state。exit code `0` 表示清理流程成功，`1` 表示 substantive/mixed/unsafe 状态仍需按 baseline 和授权范围分类，`2` 表示脚本或 Git 错误并停止写操作。脚本不审批科学修改，也不替代 pending-WIP overlap 判断。
+统一脚本 `system/scripts/clean_knowledge_eol_dirty.ps1` 只处理 tracked knowledge Markdown 的 LF/CRLF-only worktree dirty state，不忽略普通行尾空格、Markdown 双空格或 Tab。exit code `0` 表示清理流程成功，`1` 表示 substantive/mixed/unsafe 状态仍需按 baseline 和授权范围分类，`2` 表示脚本或 Git 错误并停止写操作。脚本不审批科学修改，也不替代 pending-WIP overlap 判断。
 
 `system/review-history.md` 记录的是已经明确结束的人工审核轮次，不要求任务已经 closed，也不要求已经 push。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”；Codex 应从 queue、handoff、review history 和 Git 状态恢复，而不是把旧 WIP 从 Active handoff 中丢失。
 

@@ -94,6 +94,7 @@ function Get-KnowledgeStatus {
 
 $refreshed = 0
 $restored = 0
+$wouldRestore = 0
 $keptSubstantive = 0
 $stagedNotTouched = 0
 $unsafe = 0
@@ -120,10 +121,11 @@ try {
         $displayPath = $knowledgePaths -join ' -> '
 
         if ($entry.Status -eq ' M') {
-            $diffResult = Invoke-GitCapture @('diff', '--ignore-space-at-eol', '--quiet', '--', $path)
+            $diffResult = Invoke-GitCapture @('diff', '--ignore-cr-at-eol', '--quiet', '--', $path)
             $diffExit = $diffResult.ExitCode
             if ($diffExit -eq 0) {
                 if ($DryRun) {
+                    $wouldRestore++
                     Write-Output "[WOULD-RESTORE] $path"
                     continue
                 }
@@ -141,8 +143,15 @@ try {
                     if ($restoreResult.ExitCode -ne 0) {
                         throw "git restore failed for '$path': $($restoreResult.StdErr.Trim())"
                     }
-                    $restored++
-                    Write-Output "[RESTORED] $path"
+                    $afterRestore = @(Get-KnowledgeStatus $path)
+                    if ($afterRestore.Count -eq 0) {
+                        $restored++
+                        Write-Output "[RESTORED] $path"
+                    } else {
+                        $unsafe++
+                        $exitCode = 1
+                        Write-Output "[REVIEW-UNSAFE] still-dirty-after-restore $path"
+                    }
                 } else {
                     $unsafe++
                     $exitCode = 1
@@ -171,6 +180,7 @@ try {
 
 Write-Output "Refreshed: $refreshed"
 Write-Output "Restored: $restored"
+Write-Output "Would restore: $wouldRestore"
 Write-Output "Kept substantive: $keptSubstantive"
 Write-Output "Staged not touched: $stagedNotTouched"
 Write-Output "Unsafe/mixed: $unsafe"

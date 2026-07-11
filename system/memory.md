@@ -28,7 +28,7 @@ updated: 2026-07-10
 - Paper admission 针对具体 claim、拟用措辞和使用语境，并需要用户明确确认。局部 claim 核验不能自动改变整页或其它 claims 的 `review_status` / `needs_review`；Codex 只有在用户明确授权相应状态更新后才能修改。
 - Strict paper evidence mode 只用于论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认；普通问答、研究讨论、探索性综合、早期草稿和一般争议讨论仍使用 ordinary mode。
 - Wiki 证据入口采用读取后核实的绝对文件行号链接，并在当前 Codex 客户端打开实时渲染可编辑视图；普通 Markdown 与 inline `code-comment` 均不能稳定强制只读审核界面。不得为改变界面而修改证据页、制造 fake/空白 diff 或创建临时 commit。
-- 仓库用 `.gitattributes` 固定 Markdown 和常用文本格式为 LF；editable evidence view 仍可能产生 EOL-only dirty state。统一清理入口是 `system/scripts/clean_knowledge_eol_dirty.ps1`，写任务第一次写入前、commit 前和 push 前运行；纯 read-only 问答不运行。脚本只清理可证明为 EOL-only 的 worktree 修改，不审批科学修改；exit code `1` 由 Codex 按 dirty baseline、授权范围和 WIP 归属分类，exit code `2` 停止写操作。不得使用 `git add .`。
+- 仓库用 `.gitattributes` 固定 Markdown 和常用文本格式为 LF；editable evidence view 仍可能产生 LF/CRLF-only dirty state。统一清理入口是 `system/scripts/clean_knowledge_eol_dirty.ps1`，写任务第一次写入前、commit 前和 push 前运行；纯 read-only 问答不运行。脚本只清理可证明为 LF/CRLF 行尾格式差异的 worktree 修改，不忽略普通行尾空格、Markdown 双空格或 Tab，也不审批科学修改；exit code `1` 由 Codex 按 dirty baseline、授权范围和 WIP 归属分类，exit code `2` 停止写操作。不得使用 `git add .`。
 - 文献摄入和科学内容修改默认本地 WIP、用户审核后 amend 为 final；推荐审核完成当前摄入后再开始下一篇。允许多个 pending WIP，但共享文件必须在写入前选择合并原 WIP、记录依赖或暂缓，不得静默重叠。方案和验收已确认、无科学内容且检查通过的治理/框架/脚本任务可直接 final commit。
 - 日常建设坚持一次摄入一篇论文，并在每次摄入后列出新增 claim、待审 claim、竞争解释和证据缺口。
 - 现阶段 Skill 只保留证据型知识问答入口；ingest/reflect/lint 等流程稳定后再考虑封装，写作 Skill 等数据处理与证据层成熟后再创建。

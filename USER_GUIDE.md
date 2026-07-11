@@ -126,14 +126,14 @@ SORT file.name ASC
 
 推荐完成当前文献摄入的人工审核和 finalization 后再开始下一篇，以减少 nucleus、concept、project、synthesis、index 等共享页的未审核重叠。暂时无法审核时仍可保留多个 pending WIP：无文件重叠可建立独立 WIP；同一范围应继续并 amend 原 WIP；依赖未 final 内容时建立 dependent WIP；共享文件无法安全隔离时暂缓修改。不得静默创建两个独立且同时修改同一文件的 WIP。Codex 会把等待审核、未 push checkpoint 或 push 状态 uncertain 的短恢复索引记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动。
 
-写任务第一次修改文件前、创建 WIP/final commit 前及 push 前，Codex 会按 `check.md` 运行统一 EOL-only 清理入口。用户也可手动运行：
+写任务第一次修改文件前、创建 WIP/final commit 前及 push 前，Codex 会按 `check.md` 运行仅限 LF/CRLF 行尾格式差异的清理入口。用户也可手动运行：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirty.ps1
 powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirty.ps1 -DryRun
 ```
 
-脚本只清理未暂存且 ignore-EOL 后无实质差异的 tracked `knowledge/**/*.md`；不触碰 staged 内容、不处理其它目录，并保留 substantive/mixed 状态。exit code `1` 只表示仍需由 Codex 按授权范围、入口 baseline 和 WIP 归属分类；完全属于当前授权任务的 substantive diff 不会因此被无条件阻断。
+脚本只清理未暂存且可证明为 LF/CRLF-only 的 tracked `knowledge/**/*.md`；普通行尾空格、Markdown 双空格和 Tab 都视为 substantive 并保留。脚本不触碰 staged 内容、不处理其它目录，并保留 substantive/mixed 状态。exit code `1` 只表示仍需由 Codex 按授权范围、入口 baseline 和 WIP 归属分类；完全属于当前授权任务的 substantive diff 不会因此被无条件阻断。
 
 `system/review-history.md` 单独记录已经明确结束的人工审核轮次。两者可以同时保留同一任务：history 记录“这一轮已经审完”，queue 记录“这项工作还要继续处理什么”。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”。未审核 WIP 不应 push 到 `main`。
 

@@ -475,3 +475,8 @@ updated: 2026-07-11
 - Added a tracked-knowledge EOL-only cleanup script and moved dirty-state classification to the first repository write while retaining commit and pre-push checks.
 - Added dirty baselines, dynamic file-entry scope, staged-file isolation, pending-WIP overlap/dependency rules, and a serial-review recommendation with safe parallel WIP support.
 - Kept scientific work on review WIPs while allowing fully specified governance tasks to final directly; no knowledge content was modified.
+
+## [2026-07-11] governance | restricted cleanup to LF/CRLF changes
+
+- Changed cleanup comparison from `--ignore-space-at-eol` to `--ignore-cr-at-eol`, preserving trailing spaces, Markdown double-space line breaks, and Tabs as substantive changes.
+- Added post-restore status verification, DryRun candidate counting, and expanded temporary-repository safety coverage including Chinese paths; no knowledge content was modified.
