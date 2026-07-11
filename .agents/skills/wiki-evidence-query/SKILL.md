@@ -285,4 +285,6 @@ concrete verification direction without writing task state.
 
 If the user asks to ingest, persist a correction, update review state, save an
 external source, or modify a synthesis, exit this read-only skill and use the
-relevant workflow.
+relevant workflow. Before any later `git add`, `git commit`, or `git push`, run
+the repository's `check.md` Git preflight; never stage evidence-page LF/CRLF-only
+dirty state or restore a file whose ignore-EOL diff is nonzero.

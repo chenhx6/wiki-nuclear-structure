@@ -28,7 +28,7 @@ updated: 2026-07-10
 - Paper admission 针对具体 claim、拟用措辞和使用语境，并需要用户明确确认。局部 claim 核验不能自动改变整页或其它 claims 的 `review_status` / `needs_review`；Codex 只有在用户明确授权相应状态更新后才能修改。
 - Strict paper evidence mode 只用于论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认；普通问答、研究讨论、探索性综合、早期草稿和一般争议讨论仍使用 ordinary mode。
 - Wiki 证据入口采用读取后核实的绝对文件行号链接，并在当前 Codex 客户端打开实时渲染可编辑视图；普通 Markdown 与 inline `code-comment` 均不能稳定强制只读审核界面。不得为改变界面而修改证据页、制造 fake/空白 diff 或创建临时 commit。
-- 仓库用 `.gitattributes` 固定 Markdown 和常用文本格式为 LF。若用户只打开证据页后 `knowledge/*.md` 显示 modified，先运行 `git diff --ignore-space-at-eol --exit-code -- <files>`；exit code 为 0 表示无实质内容差异，可用 `git restore -- <files>` 清理，不得提交这种 LF/CRLF 脏状态。
+- 仓库用 `.gitattributes` 固定 Markdown 和常用文本格式为 LF。每次 `git add`、`git commit` 或 `git push` 前必须执行 Git preflight；若用户只打开证据页后 `knowledge/*.md` 显示 modified，先运行 `git diff --ignore-space-at-eol --exit-code -- <files>`。exit code 为 0 表示无实质内容差异，可用 `git restore -- <files>` 清理；非 0 时不得 restore、commit 或 push，必须等待用户确认。不得提交这种 LF/CRLF 脏状态，也不得使用 `git add .`。
 - 日常建设坚持一次摄入一篇论文，并在每次摄入后列出新增 claim、待审 claim、竞争解释和证据缺口。
 - 现阶段 Skill 只保留证据型知识问答入口；ingest/reflect/lint 等流程稳定后再考虑封装，写作 Skill 等数据处理与证据层成熟后再创建。
 - 经典高自旋综述不能仅因年代较早而被笼统降级：通用术语、γ 探测基础和物理成因框架可继续作为有效背景；应分别核对后来发展的物理模式、具体装置性能和单核素证据。

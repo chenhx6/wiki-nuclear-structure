@@ -1,44 +1,44 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-10
+updated: 2026-07-11
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-None. Evidence navigation and editable-view line-ending safeguards are settled.
+None after this governance closeout. Knowledge dirty-state Git preflight is documented and mandatory before staging, committing, or pushing.
 
 Current branch / local commit:
-`main`, aligned with `origin/main` after `7f0086a` (`Record editable evidence view line-ending safeguards`).
+`main`, aligned with `origin/main` through `b717535` at startup. This closeout uses `Add knowledge dirty-state git preflight rules` and should be pushed before reporting completion.
 
 Last task status:
-`$wiki-evidence-query` now uses verified exact-line evidence links that open the live rendered editable view. P0/P1 read-only/review surface cannot be guaranteed from ordinary Markdown links or inline `code-comment` targets. `.gitattributes` fixes Markdown/text line endings to LF. The three local `.obsidian/` files are marked skip-worktree and remain outside commits. If opening evidence pages makes `knowledge/*.md` appear modified, verify with `git diff --ignore-space-at-eol --exit-code -- <files>` and restore only when the exit code is 0.
+Added a fixed documented preflight in `check.md`, made `AGENTS.md` require it before every `git add` / `git commit` / `git push`, and synchronized query routing, the evidence-query Skill, USER_GUIDE, and stable memory. Four unrelated source pages showing modified after evidence viewing passed ignore-EOL checks and were restored before governance edits; no knowledge content was committed.
 
 Unfinished items:
-None for this task.
+None after the requested commit and push complete.
 
 P0 focus:
-1. Do not commit LF/CRLF-only diffs from `knowledge/*.md`.
-2. Do not run repository-wide renormalization unless the user explicitly requests it.
-3. Do not stage `.obsidian/` files.
-4. Keep evidence navigation as exact verified line links; do not retry read-only/review-route workarounds unless the user explicitly reopens that topic.
+1. Before every stage/commit/push, classify any modified `knowledge/**/*.md` as authorized or unrelated.
+2. Never restore authorized knowledge edits; show their diff and stage only explicitly authorized files.
+3. For unrelated knowledge dirty state, restore only after the file-specific ignore-EOL check returns 0; otherwise stop before commit/push and ask the user.
+4. Never use `git add .` or stage `.obsidian/`, `raw/`, or unrelated files.
 
 Remaining P0:
 None for this task.
 
 Risks:
-Future evidence-page opens may expose LF/CRLF-only working-tree noise on machines with `core.autocrlf=true`; verify before restoring and never commit that noise. Skip-worktree is local index state and remains reversible with `git update-index --no-skip-worktree <file>`.
+Evidence-page opens may expose LF/CRLF-only or index/stat noise. Treat nonzero ignore-EOL output as possible substantive user content and block commit/push rather than restoring it.
 
 Checks:
-Completed for `7f0086a`: Git status clean, knowledge ignore-EOL check returned 0, skip-worktree flags verified, and Wiki lint passed with 0 errors / 9 existing warnings.
+Skill validation passed; `git diff --check` passed; knowledge ignore-EOL check returned 0; Wiki lint passed with 0 errors / 9 existing warnings. No scripts, hooks, knowledge pages, raw files, Review history, or WIP queue were modified.
 
 Next prompt / continuation phrase:
-No continuation required. Start the next user-requested Wiki task from the normal startup audit.
+No continuation required after push. Start the next user-requested Wiki task from the normal startup audit and apply the new preflight before any Git write operation.
 
 Recent user decisions:
-User accepted the editable exact-line evidence route. Repository-level LF safeguards and local Obsidian skip-worktree handling are complete.
+User requires a documented, non-automated Git preflight rather than a script or hook. Unrelated evidence-page dirty state must be checked file-by-file; substantive differences block commit/push pending confirmation.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

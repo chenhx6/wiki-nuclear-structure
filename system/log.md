@@ -464,3 +464,8 @@ updated: 2026-07-06
 
 - Added repository LF rules for Markdown and common text formats, with binary handling for PDF/image/archive/ROOT files; no repository-wide renormalization was performed.
 - Recorded the ignore-EOL verification and restore procedure for evidence pages opened in the editable Codex view, while keeping local `.obsidian/` state outside commits.
+
+## [2026-07-11] governance | added knowledge dirty-state Git preflight
+
+- Added a mandatory documented preflight before every stage, commit, and push: classify modified knowledge pages, verify unrelated evidence-view noise with file-specific ignore-EOL diffs, and block Git writes when substantive differences remain.
+- Kept the workflow documentation-only: no scripts, hooks, repository-wide renormalization, or knowledge/source content changes were added.

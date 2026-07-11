@@ -216,6 +216,20 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] HEAD 已是当前任务相关 WIP 时使用 amend 更新；归属不明时已停止并询问用户。
 - [ ] WIP ingest/review 最终复盘列出 hash、message、未 push、待审核文件和 claim ID/段落。
 
+## H. Git add / commit / push preflight
+
+- [ ] 每次准备执行 `git add`、`git commit` 或 `git push` 前，已运行 `git status -sb` 和 `git status --short`。
+- [ ] 若 `knowledge/**/*.md` 显示 modified，已判断它是否属于本轮明确授权的知识内容修改。
+- [ ] 属于本轮授权的 knowledge 修改已保留并展示 diff，只显式 stage 用户授权文件，没有自动 restore。
+- [ ] 不属于本轮授权、尤其是打开证据页后出现的 knowledge dirty 文件，已逐文件运行 `git diff --ignore-space-at-eol --exit-code -- <files>`。
+- [ ] ignore-EOL exit code 为 0 时，已说明无实质内容差异，可执行 `git restore -- <files>`，并重新运行 `git status --short`。
+- [ ] ignore-EOL exit code 非 0 时，没有 restore、commit 或 push；已报告可能存在实质差异的文件并等待用户确认。
+- [ ] 没有提交 LF/CRLF-only dirty 状态，没有使用 `git add .`，也没有用其它宽泛命令带入无关 `knowledge/`、`.obsidian/` 或 `raw/` 文件。
+- [ ] 只显式 stage 本轮实际修改且用户授权的文件。
+- [ ] commit 前已运行 `git diff --cached --name-only`、`git diff --cached --stat` 和 `git diff --cached --check`。
+- [ ] push 前已再次运行 `git status -sb`、`git status --short`、`git diff --stat`、`git diff --cached --name-only` 和 `git diff --cached --check`。
+- [ ] commit 后、push 前若又出现 unrelated `knowledge/**/*.md` modified，已重新执行上述 ignore-EOL 路由；无法确认无实质差异时没有 push。
+
 - [ ] Git 工作树状态已检查；用户已有修改未被覆盖。
 - [ ] `.gitignore` 没有把应持久化的 Markdown 知识页排除。
 - [ ] `raw/` 中的大型 PDF、数据与个人材料未进入普通 Git 跟踪。

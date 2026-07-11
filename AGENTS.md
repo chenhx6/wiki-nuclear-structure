@@ -99,6 +99,12 @@ Test-Path 'C:\Program Files\Git\bin\git.exe'
 
 若仍找不到 Git，停止并报告执行环境问题；不得假设仓库状态，也不得跳过提交边界审查。不要安装 Git、修改系统 `PATH`，或用其他工具替代 Git 状态检查。
 
+## Git add / commit / push preflight
+
+每次准备执行 `git add`、`git commit` 或 `git push` 前，必须先执行 `check.md` 的 `Git add / commit / push preflight`。先运行 `git status -sb` 和 `git status --short`；若出现不属于本轮明确授权修改的 `knowledge/**/*.md`，尤其是打开证据页后出现的 modified 状态，必须先对具体文件运行 `git diff --ignore-space-at-eol --exit-code -- <files>`。
+
+exit code 为 0 时，说明没有实质内容差异，可以 `git restore -- <files>` 后重新检查状态；exit code 非 0 时不得 restore、commit 或 push，必须报告文件并等待用户确认。属于本轮明确授权的 knowledge 修改必须保留、展示 diff 并逐文件显式 stage。任何情况下都不得提交 LF/CRLF-only dirty 状态，不得使用 `git add .`，也不得把无关 `knowledge/`、`.obsidian/` 或 `raw/` 文件带入提交。
+
 ## 权限边界
 
 - `raw/` 是原始证据层，由人类拥有。Agent 只能读取，不得修改、重命名、移动或删除。
