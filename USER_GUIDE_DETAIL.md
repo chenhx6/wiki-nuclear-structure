@@ -131,7 +131,13 @@
 
 同一分支最多保留一个 active WIP。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若要禁止所有本地 commit，需明确写“禁止本地 WIP commit”。Safe suspend 遇到大量 Markdown diff 时也优先采用本地 WIP checkpoint，减少 Codex、Git、编辑器或文件监听的持续 CPU 占用；checkpoint 绝不自动 push。
 
-用户不需要串行工作。若暂时没时间审核某个 WIP，可以让 Codex 保留本地 WIP commit、不 push，并把短索引写入 `system/wip-queue.md`。queue 只保留继续审核所需的最新 branch/commit/next action，不追踪每个临时 commit/push 细节。
+默认推荐完成当前文献摄入的人工审核、amend finalization 后再开始下一篇，这能减少共享 nucleus、concept、project、synthesis 和 index 的未审核重叠；这是推荐流程，不是并行工作的硬性禁令。若暂时没时间审核，可以保留多个 pending WIP，但新任务第一次写入前必须读取相关 queue 条目并比较预期文件：无重叠可建立独立 WIP；同一审核范围应继续并 amend 原 WIP；依赖上游未 final 内容时建立 dependent WIP 并记录依赖；两个独立任务需要同一共享文件时，先 final 上游或暂缓该文件。不得静默创建两个独立且修改同一文件的 WIP。
+
+任何写任务第一次写入前建立 dirty baseline，区分本轮授权、明确承接 WIP、受保护的任务前修改和 unresolved overlap。后续发现新的必要关联文件时，只在该文件第一次写入前执行 file-entry gate；不要求每次编辑后重跑全量脚本。跨会话或 safe suspend 恢复时重新建立 baseline，并用 handoff、queue、分支/commit 和实际 diff 恢复归属。
+
+已有 pending WIP commit 与仍留在 Git index 的 staged 文件不同：commit 不会自动混入当前 commit，任务前 staged 文件却会。write-entry 和 commit preflight 必须检查完整 cached name/stat；无关 staged 内容不得混入本轮，也不得在归属不明时擅自 unstage。若治理允许且归属明确，可先安全保存到所属 WIP；否则暂停并询问用户。
+
+统一脚本 `system/scripts/clean_knowledge_eol_dirty.ps1` 只处理 tracked knowledge Markdown 的 EOL-only worktree dirty state。exit code `0` 表示清理流程成功，`1` 表示 substantive/mixed/unsafe 状态仍需按 baseline 和授权范围分类，`2` 表示脚本或 Git 错误并停止写操作。脚本不审批科学修改，也不替代 pending-WIP overlap 判断。
 
 `system/review-history.md` 记录的是已经明确结束的人工审核轮次，不要求任务已经 closed，也不要求已经 push。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”；Codex 应从 queue、handoff、review history 和 Git 状态恢复，而不是把旧 WIP 从 Active handoff 中丢失。
 

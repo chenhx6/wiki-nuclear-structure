@@ -2,7 +2,7 @@
 type: system-log
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-06
+updated: 2026-07-11
 ---
 
 # 操作日志
@@ -469,3 +469,9 @@ updated: 2026-07-06
 
 - Added a mandatory documented preflight before every stage, commit, and push: classify modified knowledge pages, verify unrelated evidence-view noise with file-specific ignore-EOL diffs, and block Git writes when substantive differences remain.
 - Kept the workflow documentation-only: no scripts, hooks, repository-wide renormalization, or knowledge/source content changes were added.
+
+## [2026-07-11] governance | added write-entry preflight and EOL cleanup
+
+- Added a tracked-knowledge EOL-only cleanup script and moved dirty-state classification to the first repository write while retaining commit and pre-push checks.
+- Added dirty baselines, dynamic file-entry scope, staged-file isolation, pending-WIP overlap/dependency rules, and a serial-review recommendation with safe parallel WIP support.
+- Kept scientific work on review WIPs while allowing fully specified governance tasks to final directly; no knowledge content was modified.

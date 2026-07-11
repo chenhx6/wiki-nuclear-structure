@@ -62,6 +62,8 @@ python system/scripts/wiki_lint.py --fail-on error
 
 ## Repository information
 
+文献摄入推荐按“一篇摄入 → 本地 WIP → 用户审核 → amend 为 final → 再摄入下一篇”串行推进，以减少共享知识页重叠。确需并行时可保留多个 pending WIP，但写入前必须检查文件 overlap，并选择合并、依赖或暂缓共享文件。
+
 - Citation: [`CITATION.cff`](CITATION.cff)
 - License: [`LICENSE`](LICENSE)
 - Disclaimer: [`DISCLAIMER.md`](DISCLAIMER.md)

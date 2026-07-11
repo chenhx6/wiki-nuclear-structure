@@ -99,11 +99,13 @@ Test-Path 'C:\Program Files\Git\bin\git.exe'
 
 若仍找不到 Git，停止并报告执行环境问题；不得假设仓库状态，也不得跳过提交边界审查。不要安装 Git、修改系统 `PATH`，或用其他工具替代 Git 状态检查。
 
-## Git add / commit / push preflight
+## Git write-entry / commit / push preflight
 
-每次准备执行 `git add`、`git commit` 或 `git push` 前，必须先执行 `check.md` 的 `Git add / commit / push preflight`。先运行 `git status -sb` 和 `git status --short`；若出现不属于本轮明确授权修改的 `knowledge/**/*.md`，尤其是打开证据页后出现的 modified 状态，必须先对具体文件运行 `git diff --ignore-space-at-eol --exit-code -- <files>`。
+`check.md` 的 `Git write-entry / commit / push preflight` 是完整权威清单。纯读取、搜索、普通问答和只给建议不运行清理脚本；任何会新增、删除、移动、重命名或修改仓库文件的任务，必须在第一次写入前运行 status、`system/scripts/clean_knowledge_eol_dirty.ps1` 和再次 status，并建立当前会话的 dirty baseline。脚本 exit code `1` 表示仍有 substantive/mixed/unsafe knowledge 状态，需要按本轮授权范围、既有 WIP 和 baseline 分类，不是无条件中断；exit code `2` 必须停止写操作并报告。
 
-exit code 为 0 时，说明没有实质内容差异，可以 `git restore -- <files>` 后重新检查状态；exit code 非 0 时不得 restore、commit 或 push，必须报告文件并等待用户确认。属于本轮明确授权的 knowledge 修改必须保留、展示 diff 并逐文件显式 stage。任何情况下都不得提交 LF/CRLF-only dirty 状态，不得使用 `git add .`，也不得把无关 `knowledge/`、`.obsidian/` 或 `raw/` 文件带入提交。
+入口 baseline 至少区分 initial authorized scope、authorized inherited changes、protected pre-existing changes 和 unresolved/overlapping changes。任务中发现新的必要关联文件时，可动态扩展 authorized scope，但每个新文件在第一次写入前必须对照 baseline、pending WIP queue、既有 substantive diff 和修改必要性；来源不明、mixed/conflict 或 WIP overlap 无法区分时先暂停。任务期间不要求每次编辑后重跑脚本，除非工作树异常变化、再次打开大量证据页、跨会话恢复或怀疑出现无关修改。
+
+创建或 amend WIP、创建 final commit，以及 commit 后 push 前，均须再次执行 `check.md` 对应阶段。属于本轮授权的 knowledge 修改必须保留并显式 stage；无关真实修改不得 restore、修改、stage 或 commit。不得提交 LF/CRLF-only dirty state，不得使用 `git add .`，也不得把无关 `knowledge/`、`.obsidian/`、`raw/` 或任务前 staged 文件带入提交。
 
 ## 权限边界
 
@@ -254,11 +256,17 @@ Commit message 统一使用：
 
 仓库中存在对应 active WIP、用户已完成审核并要求 final commit/push 时，上述规则即构成对 `git commit --amend` 的明确本地授权，优先于通用的“除非用户明确要求，否则不要 amend”约束。不得因该通用约束而保留独立 WIP，再额外创建 final commit。
 
+科学内容与文献摄入、source/claim、nucleus/band/concept/observable、project/synthesis 和需要用户科学判断的修改，默认按本地 WIP → 用户审核 → amend 为 final → 用户允许后 push 的生命周期执行。推荐完成当前文献摄入的审核与 finalization 后再摄入下一篇；并行 WIP 不是禁止项，但必须先解决共享文件 overlap。
+
+治理、框架、脚本和说明文档任务若方案与验收标准已由用户确认、无科学内容修改、无新增重大设计选择、检查通过且文件归属清楚，可直接创建 final commit 并按用户指令 push，不因多文件修改而机械等待 WIP 审核。只有设计分歧、范围异常扩大、核心检查失败、迁移需裁决、文件归属/overlap 不明、用户要求先审核或执行余量不足时，才使用 WIP 或 safe suspend。
+
 ### Pending WIP queue
 
 When a task ends as WIP, a local not-pushed commit, a safe suspend, or user-review pending state, update `system/wip-queue.md` as well as Active handoff. Active handoff records only the latest activity; the queue preserves short recovery indexes for multiple non-serial pending WIPs.
 
 Queue entries record only task short name, status, branch, commit, files, review needed, overview/QMD, next action, and risks. They should keep only the latest branch / commit / next action needed to continue review or push, not every temporary commit/push state. Do not store full paper notes, raw content, source-claim bodies, or long recaps there. If the user starts a new ingest/project/synthesis while older WIPs remain unreviewed, keep the older WIPs in the queue instead of relying on Active handoff.
+
+Multiple pending WIPs are allowed, but a new ingest/project/synthesis must check its expected files against relevant queue entries before first write. No overlap permits an independent WIP. If files overlap, continue and amend the same WIP when the scope is shared; record an explicit upstream dependency for a dependent WIP; or defer the shared-file edit until the upstream WIP is finalized. Never create two supposedly independent WIPs that silently modify the same file. If ownership cannot be resolved, pause before editing the shared file.
 
 If a WIP commit hash changes after amend or rebase, update the queue to the latest branch/commit pointer. Review history and Pending WIP are not mutually exclusive: after a human-review round is completed, append review history first, then independently decide whether the queue entry should remain, be updated, or be cleared. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
 

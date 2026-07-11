@@ -216,19 +216,35 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] HEAD 已是当前任务相关 WIP 时使用 amend 更新；归属不明时已停止并询问用户。
 - [ ] WIP ingest/review 最终复盘列出 hash、message、未 push、待审核文件和 claim ID/段落。
 
-## H. Git add / commit / push preflight
+## H. Git write-entry / commit / push preflight
 
-- [ ] 每次准备执行 `git add`、`git commit` 或 `git push` 前，已运行 `git status -sb` 和 `git status --short`。
-- [ ] 若 `knowledge/**/*.md` 显示 modified，已判断它是否属于本轮明确授权的知识内容修改。
-- [ ] 属于本轮授权的 knowledge 修改已保留并展示 diff，只显式 stage 用户授权文件，没有自动 restore。
-- [ ] 不属于本轮授权、尤其是打开证据页后出现的 knowledge dirty 文件，已逐文件运行 `git diff --ignore-space-at-eol --exit-code -- <files>`。
-- [ ] ignore-EOL exit code 为 0 时，已说明无实质内容差异，可执行 `git restore -- <files>`，并重新运行 `git status --short`。
-- [ ] ignore-EOL exit code 非 0 时，没有 restore、commit 或 push；已报告可能存在实质差异的文件并等待用户确认。
-- [ ] 没有提交 LF/CRLF-only dirty 状态，没有使用 `git add .`，也没有用其它宽泛命令带入无关 `knowledge/`、`.obsidian/` 或 `raw/` 文件。
-- [ ] 只显式 stage 本轮实际修改且用户授权的文件。
-- [ ] commit 前已运行 `git diff --cached --name-only`、`git diff --cached --stat` 和 `git diff --cached --check`。
-- [ ] push 前已再次运行 `git status -sb`、`git status --short`、`git diff --stat`、`git diff --cached --name-only` 和 `git diff --cached --check`。
-- [ ] commit 后、push 前若又出现 unrelated `knowledge/**/*.md` modified，已重新执行上述 ignore-EOL 路由；无法确认无实质差异时没有 push。
+`check.md` 本节是完整 Git preflight 的唯一权威执行清单。纯读取、搜索、普通问答和只给建议不运行清理脚本；任务一旦转入文件写入或 Git 写操作，按以下三阶段执行。
+
+### H1. Write-entry preflight
+
+- [ ] 第一次新增、删除、移动、重命名或修改仓库文件前，已依次运行 `git status -sb`、`git status --short`、`powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirty.ps1`，再运行两次 status。
+- [ ] 已检查 `git diff --cached --name-only` 和 `git diff --cached --stat`，没有让任务前已 staged 的无关文件静默进入本轮 commit；未擅自 unstage 或覆盖用户内容。
+- [ ] 已建立入口 dirty baseline，并将现有变化分为 initial authorized scope、authorized inherited changes、protected pre-existing changes 和 unresolved/overlapping changes。
+- [ ] 清理脚本 exit code `0` 视为成功；exit code `1` 后已分类剩余 substantive/mixed/unsafe 文件，而非无条件中断；exit code `2` 已停止文件与 Git 写操作并报告错误。
+- [ ] 属于本轮授权或明确承接 WIP 的 substantive 修改已保留、检查 diff 且未 restore；无关真实修改保持 protected，不修改、不 stage、不 commit。
+- [ ] 来源不明、mixed/conflict、任务前已有修改且本轮需编辑同一文件，或 pending-WIP overlap 无法解决时，已在首次写入该文件前暂停。
+- [ ] 新的必要关联文件在第一次写入前已通过 file-entry gate：对照 baseline、WIP queue、既有 diff、必要性和治理/科学边界后才加入动态 authorized scope。
+- [ ] 任务期间只在状态意外变化、大量证据页再次打开、跨会话/safe-suspend 恢复或怀疑无关修改时额外重跑全量清理脚本。
+
+### H2. WIP / final commit verification
+
+- [ ] 创建或 amend WIP、或创建 final commit 前，已重新运行清理脚本、`git status -sb`、`git status --short`、`git diff --stat`，并以入口 baseline 核对本轮变化。
+- [ ] staged-only knowledge 文件被脚本保留且没有被误判为清理失败；substantive、mixed 或 unsafe 状态已按授权范围和 WIP 归属处理。
+- [ ] pending WIP 的预期文件已检查 overlap：无重叠可独立；同一范围继续并 amend；依赖关系写入 queue；共享文件无法隔离时先 final 上游或暂缓，没有静默创建两个独立冲突 WIP。
+- [ ] 科学内容、摄入、project/synthesis 和 claim-review 默认创建本地 WIP、不 push；方案已确认且检查通过的治理、框架、脚本和说明任务可直接 final commit。
+- [ ] 没有使用 `git add .` 或其它宽泛 stage；只显式 stage 本轮实际修改且用户授权的文件。
+- [ ] commit 前已运行 `git diff --cached --name-only`、`git diff --cached --stat` 和 `git diff --cached --check`，完整 index 不含无关 `knowledge/`、`.obsidian/`、`raw/` 或历史 staged 文件。
+
+### H3. Post-commit / pre-push final check
+
+- [ ] commit 后、push 前已重新运行清理脚本，再运行 `git status -sb`、`git status --short`、`git diff --stat`、`git diff --cached --name-only` 和 `git diff --cached --check`。
+- [ ] commit 后新出现的 unrelated `knowledge/**/*.md` 已按脚本结果和 baseline 分类；无法确认无实质差异、存在 mixed/conflict 或 overlap 未解决时没有 push。
+- [ ] 没有提交 LF/CRLF-only dirty state；脚本未审批科学修改，也未替代 Codex 对授权范围、baseline 和 pending WIP 归属的判断。
 
 - [ ] Git 工作树状态已检查；用户已有修改未被覆盖。
 - [ ] `.gitignore` 没有把应持久化的 Markdown 知识页排除。

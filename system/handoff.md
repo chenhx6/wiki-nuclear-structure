@@ -8,37 +8,37 @@ updated: 2026-07-11
 ## Active handoff
 
 Current active task:
-None after this governance closeout. Knowledge dirty-state Git preflight is documented and mandatory before staging, committing, or pushing.
+None after this governance closeout. The write-entry, commit, and pre-push Git preflight lifecycle is implemented.
 
 Current branch / local commit:
-`main`, aligned with `origin/main` through `b717535` at startup. This closeout uses `Add knowledge dirty-state git preflight rules` and should be pushed before reporting completion.
+`main`; finalized with commit message `Add write-entry preflight and EOL cleanup script` and intended for `origin/main` push after the post-commit preflight.
 
 Last task status:
-Added a fixed documented preflight in `check.md`, made `AGENTS.md` require it before every `git add` / `git commit` / `git push`, and synchronized query routing, the evidence-query Skill, USER_GUIDE, and stable memory. Four unrelated source pages showing modified after evidence viewing passed ignore-EOL checks and were restored before governance edits; no knowledge content was committed.
+Added the unified EOL-only knowledge dirty-state cleanup script, moved preflight to the first repository write, retained commit and pre-push checks, and documented dirty baselines, dynamic file-entry scope, staged-file isolation, pending-WIP overlap, and separate scientific/governance WIP lifecycles. No scientific knowledge content was modified.
 
 Unfinished items:
-None after the requested commit and push complete.
+None after checks, final commit, and push complete.
 
 P0 focus:
-1. Before every stage/commit/push, classify any modified `knowledge/**/*.md` as authorized or unrelated.
-2. Never restore authorized knowledge edits; show their diff and stage only explicitly authorized files.
-3. For unrelated knowledge dirty state, restore only after the file-specific ignore-EOL check returns 0; otherwise stop before commit/push and ask the user.
-4. Never use `git add .` or stage `.obsidian/`, `raw/`, or unrelated files.
+1. Run write-entry preflight before the first file write; read-only Q&A remains exempt.
+2. Treat script exit 1 as a classification gate, not automatic rejection of authorized substantive edits; exit 2 blocks writes.
+3. Resolve pending-WIP shared-file overlap before editing through merge, dependency, or deferral.
+4. Keep science work in local review WIPs; confirmed governance work may final directly after checks.
 
 Remaining P0:
 None for this task.
 
 Risks:
-Evidence-page opens may expose LF/CRLF-only or index/stat noise. Treat nonzero ignore-EOL output as possible substantive user content and block commit/push rather than restoring it.
+The cleanup script intentionally leaves substantive, mixed, conflict, staged, and ambiguous states untouched. Codex must still classify authorization and WIP ownership from the baseline.
 
 Checks:
-Skill validation passed; `git diff --check` passed; knowledge ignore-EOL check returned 0; Wiki lint passed with 0 errors / 9 existing warnings. No scripts, hooks, knowledge pages, raw files, Review history, or WIP queue were modified.
+PowerShell parse passed. Repository DryRun/default returned 0. Temporary Git tests passed for clean, EOL-only, substantive, staged-only, MM, delete, rename, conflict, space paths, ignored paths, untracked files, DryRun, and non-repository error routing. Skill validation and diff checks passed; knowledge ignore-EOL returned 0; Wiki lint returned 0 errors / 9 existing warnings.
 
 Next prompt / continuation phrase:
-No continuation required after push. Start the next user-requested Wiki task from the normal startup audit and apply the new preflight before any Git write operation.
+No continuation required after push. Future write tasks start with the new write-entry preflight.
 
 Recent user decisions:
-User requires a documented, non-automated Git preflight rather than a script or hook. Unrelated evidence-page dirty state must be checked file-by-file; substantive differences block commit/push pending confirmation.
+User approved the EOL-only cleanup script, first-write baseline, dynamic scope gate, safe parallel WIP overlap handling, serial ingest-review recommendation, and direct final commits for fully specified governance tasks.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

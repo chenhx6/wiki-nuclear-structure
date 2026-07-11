@@ -81,3 +81,5 @@ These entries predate `system/review-history.md`. Keep them as legacy context du
 - After a review round is recorded, independently decide whether this queue entry should remain, be updated, or be removed; do not assume a one-way queue-to-history migration.
 - If push is skipped or push status is uncertain, keep the task in the pending queue and record that state explicitly rather than guessing completion.
 - If the user starts a new ingest while prior WIPs remain unreviewed, keep prior WIPs in this queue instead of overwriting them.
+- Before a new ingest/project/synthesis writes files, compare its expected files with active entries. No overlap allows an independent WIP; shared scope continues the original WIP; dependent work records its upstream task/commit; unresolved shared-file overlap is deferred or sent to the user before editing.
+- Never record two WIPs as independent when they silently modify the same file. Add a short `depends on` field when dependency is the chosen resolution.
