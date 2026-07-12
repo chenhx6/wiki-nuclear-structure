@@ -11,7 +11,7 @@ Current active task:
 None after this final Wiki-miss consistency closeout. The three-stage Git preflight lifecycle remains implemented.
 
 Current branch / local commit:
-`main`; inline evidence-link governance closeout is the current final governance change.
+`main`; the open-knowledge-boundary governance is finalized, and `main` is aligned with `origin/main` after this handoff-only correction.
 
 Last task status:
 Confirmed the final open-knowledge boundary: Wiki gaps are reported as evidence/context gaps, while ordinary answers may add stable general scientific background without presenting it as Wiki or externally verified evidence. Updated the detailed guide, quick guide, query workflow and checklist; no science content was modified.
