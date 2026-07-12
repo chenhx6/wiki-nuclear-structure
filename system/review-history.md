@@ -12,6 +12,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 
 <!-- Append real completed human-review rounds here. Do not backfill old history during framework setup. -->
 
+### 2026-07-12 — gamma spectroscopy method sources — round 1
+
+- review scope: Rezynkina 2017, Kramer-Flecken 1989, Kibedi 2008, Rusev 2009, and `SIO-PROJ-21`--`SIO-PROJ-24` in the sigma-over-I project
+- user decisions: `RZ17-*` acceptable; `KF89-1` should include the experimental `R_DCO` formula; `KF89-2` must use `sigma/I` and retain the low-spin `I < 6` boundary; project wording was acceptable as a bounded connection layer
+- corrections requested: tighten `RU09-6`; propagate the KF89 experimental-formula and low-spin-`sigma/I` information into the necessary connected knowledge pages
+- unresolved issues: none for this source/project review round; future paper-level reuse may still recheck wording against the original source as usual
+- next action: if continuing sigma-over-I / P-ADO work, map the user's actual notation, detector geometry, and calibration transitions to the source-level symbols
+- related pages: `knowledge/sources/rezynkina-2017-graphical-extraction-multipole-mixing-ratios.md`, `knowledge/sources/kramer-flecken-1989-use-dco-ratios.md`, `knowledge/sources/kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc.md`, `knowledge/sources/rusev-2009-multipole-mixing-ratios-11b.md`, `knowledge/methods/dco-ratio.md`, `knowledge/concepts/sigma-over-i.md`, `knowledge/projects/sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction.md`
+- review commit message: Finalize gamma spectroscopy method source review
+
 ## Entry template
 
 ```markdown

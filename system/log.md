@@ -490,3 +490,13 @@ updated: 2026-07-12
 
 - Replaced the over-absolute user-guide wording with a single rule: report Wiki evidence boundaries, add stable general background in ordinary Q&A when useful, and keep its provenance distinct from Wiki-grounded or externally verified evidence.
 - Added checklist coverage for non-refusal on Wiki misses and prevention of model-memory source fabrication; no knowledge content was modified.
+
+## [2026-07-12] ingest | added four gamma-spectroscopy method sources
+
+- Ingested Rezynkina 2017, Kramer-Flecken 1989, Kibedi 2008, and Rusev 2009; added internal-conversion method/observable anchors; updated DCO, angular-correlation, polarization, mixing-ratio, and sigma-over-I project pages.
+- Left `knowledge/overview.md` and QMD refresh deferred for post-review finalization; kept `raw/zotero/wiki-inbox.bib` untouched as a protected user change.
+
+## [2026-07-12] review | finalized gamma-spectroscopy method source review
+
+- Applied user review to the four-source method bundle and the related sigma-over-I project notes.
+- Corrected the KF89 `sigma/I` low-spin `I < 6` wording, added the experimental `R_DCO` intensity-ratio formula, and tightened `RU09-6` into an author-judgment branch-selection note. QMD refresh and wiki lint succeeded.

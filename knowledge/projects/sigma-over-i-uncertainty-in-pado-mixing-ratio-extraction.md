@@ -3,7 +3,7 @@ type: project
 title: "Sigma-over-I uncertainty in P-ADO mixing-ratio extraction"
 aliases: [sigma over I uncertainty, sigma/I uncertainty, P-ADO sigma over I, alignment uncertainty in P-ADO, NST sigma-over-I evidence map]
 created: 2026-07-08
-updated: 2026-07-10
+updated: 2026-07-12
 status: active
 review_status: human-reviewed
 project_stage: evidence-map
@@ -16,11 +16,11 @@ tags: [pado, mixing-ratio, angular-distribution, polarization, alignment, sigma-
 
 ## Active Summary for Agents
 
-Current task: synthesis planning for sigma-over-I assumptions and P-ADO mixing-ratio extraction is complete and user-reviewed. A bounded writing-support synthesis now exists at [[sigma-over-i-assumptions-and-mixing-ratio-extraction]].
+Current task: the earlier synthesis-planning round is complete, and a new four-source gamma-spectroscopy-method ingest has been attached to this project as additional evidence about how `delta` extraction can still remain assumption- or branch-dependent even when DCO, polarization, or ICC constraints are added.
 
-Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]; [[chiara-2012-cu65-cu67-core-coupled-protons]]; [[summary-2013-bases-spin-parity-assignments]]; [[gray-2020-hyperfine-fields-g-factor-measurements]]; [[ekstrom-1979-spin-alignment-attenuation-a61-a67]]; [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]].
+Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]; [[chiara-2012-cu65-cu67-core-coupled-protons]]; [[summary-2013-bases-spin-parity-assignments]]; [[gray-2020-hyperfine-fields-g-factor-measurements]]; [[ekstrom-1979-spin-alignment-attenuation-a61-a67]]; [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]]; [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]]; [[kramer-flecken-1989-use-dco-ratios]]; [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]]; [[rusev-2009-multipole-mixing-ratios-11b]].
 
-In-progress / pending source rows: none for the 11-paper source ingest. User review for the current project/synthesis wording round is complete; remaining work is follow-up science use only, especially code-facing notation mapping and calibration strategy.
+In-progress / pending source rows: the 2026-07-12 four-source method round has now been user-reviewed. The project-level notes were accepted in that review round; the only intentionally retained claim-level recheck is source note `RU09-6`, where branch selection still depends on author-side physical-plausibility judgment.
 
 Synthesis readiness: ready for bounded writing-support synthesis, but not yet ready for user-code-facing equations, a universal numeric prior, or final manuscript wording without further source-to-user notation mapping.
 
@@ -33,10 +33,10 @@ Why is it unsafe or model-dependent to preset a single `sigma/I` value when extr
 ## Synthesis Readiness
 
 - Status: ready for bounded writing-support synthesis.
-- Source coverage: all 11 target source notes exist and are page-level `human-reviewed`.
+- Source coverage: the original 11-source alignment/deorientation package is reviewed; four new method sources extend the project toward ICC, DCO and polarization-only `delta` extraction boundaries, but they are not yet human-reviewed.
 - Structural audit: no known missing `citation_key`, missing `raw_file`, missing locator, or missing claim-kind blocker was found in the audited project/source chain.
 - Evidence categories completed: Gaussian substate formalism; CNR / alignment attenuation estimates; Gaussian-hypothesis limitations; feeding-aware population models; fusion-evaporation projectile / energy / feeding dependence; deorientation / attenuation evidence; experimental-practice evidence; empirical expectation and failure examples; implications for P-ADO motivation.
-- Unresolved P0: none in the current reviewed project/synthesis wording round.
+- Unresolved P0: none at the project-note level after the 2026-07-12 review round.
 - Unresolved P1: user-data-specific mapping of reaction conditions, detector geometry, calibration transitions, and whether the user's code convention matches `sigma/J` or another normalized width.
 - Recommendation: yes, proceed to NST introduction writing-support at the bounded framework level; no, do not yet write code-facing equations or a universal `sigma/I` prior.
 - Writing-support synthesis: [[sigma-over-i-assumptions-and-mixing-ratio-extraction]]
@@ -53,7 +53,7 @@ This is an evidence map / writing-support project for NST paper and future thesi
 
 ## Evidence Available
 
-Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, Zobel 1983 projectile/energy/feeding dependence in `67Ga`, Ekstrom 1979 compiled spin-alignment attenuation factors plus MANDY/CNR uncertainty and Gaussian-limitation arguments, Ionescu 1981 feeding-aware angular-distribution analysis in `167Tm`, Cejnar 1996 spin-deorientation calculation in `Pd(alpha,2n gamma)Cd` reactions, Radeck 2012 time-dependent deorientation correction in inverse Coulomb excitation + RDDS, Lauritsen 2025 modern tracking-array angular-distribution / polarization formalism, Chiara 2012 as a spectroscopy practice example using assumed `sigma/I`, Summary 2013 as reference-guide high-spin assignment background with typical `sigma/I = 0.3`, and Gray 2020 as a TDPAD / `g`-factor boundary case where empirical `sigma/I` expectations can fail.
+Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 1980 attenuation/ALY/Gaussian-condition analysis, Zobel 1983 projectile/energy/feeding dependence in `67Ga`, Ekstrom 1979 compiled spin-alignment attenuation factors plus MANDY/CNR uncertainty and Gaussian-limitation arguments, Ionescu 1981 feeding-aware angular-distribution analysis in `167Tm`, Cejnar 1996 spin-deorientation calculation in `Pd(alpha,2n gamma)Cd` reactions, Radeck 2012 time-dependent deorientation correction in inverse Coulomb excitation + RDDS, Lauritsen 2025 modern tracking-array angular-distribution / polarization formalism, Chiara 2012 as a spectroscopy practice example using assumed `sigma/I`, Summary 2013 as reference-guide high-spin assignment background with typical `sigma/I = 0.3`, Gray 2020 as a TDPAD / `g`-factor boundary case where empirical `sigma/I` expectations can fail, plus a new 2026-07-12 method bundle on ICC-based `delta` extraction, DCO geometry/multi-solution boundaries, and polarization-asymmetry branch ambiguity from Rezynkina 2017, Kramer-Flecken 1989, Kibedi 2008, and Rusev 2009.
 
 ## Symbol Mapping
 
@@ -90,6 +90,10 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | [[gray-2020-hyperfine-fields-g-factor-measurements]] | experiment-ingest + method-ingest + project-ingest | Shows in a TDPAD / `g`-factor context that empirical alignment expectations such as `sigma/I ≈ 0.35` can fail and that reduced `R(t)` amplitude does not uniquely diagnose field-free implantation. | G20-1 to G20-9 | P0 resolved: G20-4, G20-6, G20-7 |
 | [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] | experiment-ingest + method-ingest + project-ingest | Compiles pure-E2 angular distributions into `alpha2/alpha4`, tests MANDY/CNR alignment estimates, prescribes an uncertainty budget, and argues that a simple Gaussian magnetic-substate population is too restrictive. | EK79-1 to EK79-9 | Source P0 resolved on 2026-07-09; synthesis P0 now concerns notation boundary and paper-gate wording. |
 | [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]] | experiment-ingest + method-ingest + project-ingest | Shows in `165Ho(alpha,2n)167Tm` that the global Gaussian hypothesis fails and that a feeding-aware model with Gaussian side feeding plus discrete direct feeding can improve spin and `delta` analysis. | IO81-1 to IO81-10 | Source P0 resolved on 2026-07-09; synthesis P0 now concerns feeding-aware wording and notation boundary. |
+| [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]] | method-ingest + project-ingest | Adds an ICC-based graphical/PDF route to `delta`, emphasizing asymmetric uncertainty propagation and the failure of naive inversion when ICC errors are large. | RZ17-1 to RZ17-7 | Reviewed on 2026-07-12; no claim correction requested. |
+| [[kramer-flecken-1989-use-dco-ratios]] | method-ingest + theory-ingest + project-ingest | Gives the DCO-ratio definition, the experimental `R_DCO` intensity ratio, geometry/alignment dependence, efficiency-correction practice, the low-spin `I < 6` deviation from the near-constant `sigma/I` heuristic, and the explicit statement that one DCO ratio can map to several spin/`delta` solutions. | KF89-1 to KF89-8 | Reviewed on 2026-07-12; low-spin `sigma/I` wording and experimental-formula note corrected. |
+| [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]] | review-ingest + theory-ingest + project-ingest | Supplies the BrIcc mixed-transition ICC formalism, `delta`/energy uncertainty propagation, vacancy-treatment boundary, and interpolation cautions for ICC-based `delta` work. | KB08-1 to KB08-8 | New review needed: BrIccFO default wording, interpolation boundary, nonunique-multipolarity handling. |
+| [[rusev-2009-multipole-mixing-ratios-11b]] | experiment-ingest + method-ingest + project-ingest | Shows a polarization-asymmetry-only `delta` extraction route and explicitly demonstrates that one measured asymmetry can correspond to two `delta` solutions, with branch selection still requiring author-side physical-plausibility judgment. | RU09-1 to RU09-7 | Reviewed on 2026-07-12; keep `RU09-6` as a source-level human-recheck note. |
 
 ## Experimental-Practice Evidence
 
@@ -140,6 +144,10 @@ Therefore, the present project can justify higher caution about low-spin reuse o
 | SIO-PROJ-18 | Pure-E2 transitions can be used to test and calibrate a population model; in `167Tm`, the global Gaussian hypothesis fails, while a model that combines Gaussian side feeding with discrete direct feeding gives better angular-distribution fits and sharper spin assignments. | IO81-3 to IO81-7 | Wiki synthesis / project note | Source is a detailed `165Ho(alpha,2n)167Tm` case study; it supports feeding-aware modeling, not a universal replacement formula for every reaction. | false |
 | SIO-PROJ-19 | Angular-distribution-based `delta` extraction can depend on first constraining the population-width model from competing pure-E2 transitions; this is a concrete source-level example that feeding-aware alignment modeling may be needed before trusting mixed-transition assignments. | IO81-8, IO81-9 | Wiki synthesis / project note | The fitted width parameter describes side feeding in the improved model, not a direct one-to-one replacement for user-code `sigma/I`. | false |
 | SIO-PROJ-20 | When unmodeled gamma feeding is appreciable, direct-population alignment estimates can become unreliable once the reaction energy lies sufficiently above the relevant particle-emission threshold. | EK79-8, EK79-9 | Wiki synthesis / project note | In EK79 the `E ≳ 2 MeV` wording belongs only to the Fig.5 `62Ni(alpha,n)65Zn` example; for `(alpha,p)` the effective above-threshold scale is lowered by the proton Coulomb barrier by about `2-3 MeV`, so this is not a universal numeric threshold. | false |
+| SIO-PROJ-21 | Even when one uses ICC rather than angular-distribution coefficients, `delta` extraction still inherits theory-table, interpolation, transition-energy, and mixing-ratio uncertainty; BrIcc treats these pieces explicitly rather than assuming a fixed exact `alpha`. | KB08-2, KB08-3, KB08-6 | Wiki synthesis / project note | This is an ICC-method boundary, not direct evidence about user-data alignment. | false |
+| SIO-PROJ-22 | ICC-based `delta` intervals can be asymmetric and effectively non-Gaussian; when the relative experimental ICC uncertainty becomes large, naive inversion of the mixed-transition ICC formula can bias the inferred central `delta` value. | RZ17-3 to RZ17-7 | Wiki synthesis / project note | Rezynkina 2017 uses a `251Fm` example and a graphical/PDF comparison, not a fusion-evaporation in-beam case. | false |
+| SIO-PROJ-23 | DCO ratios compress gamma-gamma angular-correlation information, but their interpretive power depends on detector geometry, gate convention, efficiency correction, and alignment width; Kramer-Flecken 1989 also flags that the near-constant `sigma/I` heuristic itself deviates in the low-spin `I < 6` region, and a single measured DCO ratio may correspond to several spin or `delta` solutions. | KF89-1 to KF89-6 | Wiki synthesis / project note | Relevant as a general spectroscopy boundary; not a direct statement about the user's current detector geometry. | false |
+| SIO-PROJ-24 | A polarization-related asymmetry observable can also admit two `delta` branches for the same measured value; selecting one branch may require additional physics judgment rather than asymmetry alone. | RU09-5, RU09-6 | Wiki synthesis / project note | Rusev 2009 uses polarized-photon NRF asymmetry, not in-beam clover Compton asymmetry. The transfer is conceptual, not one-to-one. | false |
 
 ## User-Analysis Normalization Note (Not a Source Claim)
 
@@ -179,6 +187,7 @@ Chiara 2012, Summary 2013, and Gray 2020 together supply the practice/background
 - Need assess whether any Ekstrom-style alignment uncertainty budget or Ionescu-style discrete-feeding term can be approximated realistically for the user's reaction and observed feeding pattern.
 - Need check whether isomeric feeding or delayed components could make Gray-style amplitude/alignment cautions relevant to the user's data.
 - Need stronger direct evidence, if available, before promoting the current low-spin caution into a universal low-spin `sigma/I` statement.
+- Need map more explicitly how ICC, DCO and polarization constraints would be combined in the user's actual P-ADO or in-beam analysis path, rather than treating them as interchangeable generic diagnostics.
 
 ## Writing-Support Synthesis Status
 
@@ -198,7 +207,9 @@ Chiara 2012, Summary 2013, and Gray 2020 together supply the practice/background
 ## Risks and Blockers
 
 - Source symbols are not identical; `sigma`, `sigma/I`, attenuation coefficients, `alpha2/alpha4`, and feeding fractions must remain separated.
+- Rusev-style polarization asymmetry, in-beam clover Compton asymmetry, DCO ratios and ICC constraints are complementary but not interchangeable observables.
 - Summary 2013, Chiara 2012, Gray 2020, and Radeck 2012 should not be promoted into universal P-ADO priors.
+- A single DCO or asymmetry value can still leave branch ambiguity; these new method sources should not be rewritten as "one observable proves `delta`."
 - The present low-spin caution is partly an indirect project inference; it is not yet a universal source-backed rule.
 - User data conditions and P-ADO implementation details are not yet mapped to the source notation.
 
@@ -207,7 +218,8 @@ Chiara 2012, Summary 2013, and Gray 2020 together supply the practice/background
 1. Human-review the synthesis-level terminology mapping and paper-evidence-gate boundaries.
 2. Map the actual P-ADO code/input convention for `sigma/I` to the source-level variables.
 3. Check whether the user's data include pure-E2 calibration transitions and a reconstructible feeding history that would support an Ionescu-style constraint on the population model.
-4. Add user-data-specific reaction, detector, and feeding-condition records before turning the project into code-facing or manuscript-facing text.
+4. Decide whether the user's analysis path could realistically incorporate ICC-based or polarization-based external constraints, and if so, which observable definitions match the actual experiment.
+5. Add user-data-specific reaction, detector, and feeding-condition records before turning the project into code-facing or manuscript-facing text.
 
 ## Related Pages
 

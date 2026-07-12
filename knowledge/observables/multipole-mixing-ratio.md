@@ -3,7 +3,7 @@ type: observable
 title: 多极混合比
 aliases: [multipole mixing ratio, E2/M1 mixing ratio, mixing ratio, δ]
 created: 2026-07-01
-updated: 2026-07-04
+updated: 2026-07-12
 status: active
 review_status: unreviewed
 observable_kind: electromagnetic-transition-observable
@@ -24,7 +24,7 @@ tags: [gamma-transition, multipolarity, wobbling]
 
 ## How It Is Obtained
 
-可由角分布、角关联/DCO 和线偏振与理论响应比较得到。
+可由角分布、角关联/DCO、线偏振和内转换系数与理论响应比较得到。
 
 ## Diagnostic Use
 
@@ -40,6 +40,8 @@ DCO 几何、alignment 参数、角分布系数和探测器响应进入提取过
 
 angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)` 两个局部解。只比较大解与 pure-M1 曲线，或只依据 polarization 符号而不使用其幅度与不确定度，不能证明已唯一选出 E2-dominated branch。
 
+ICC-based `delta` extraction 也可能带来明显非对称误差；当 experimental conversion coefficient 相对误差较大时，简单反演混合 ICC 公式可能低估 `delta` 的中心值或区间。
+
 ## Examples
 
 `131Xe` 的 671、882、1055 keV 连接跃迁 δ 很小，构成反对 wobbling 指认的重要证据。
@@ -54,6 +56,10 @@ angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)`
 
 [[guo-2022-low-spin-wobbling-187au]] 用独立数据联合 `R_ac` 与 linear polarization，对同一 376/462 keV links 得到约 `δ=-0.26/-0.28` 的小 `abs(δ)` branch，并指出该解与早期 internal-conversion data 更一致。两篇结果构成直接实验冲突，不能把任一 branch 当作无争议事实。
 
+[[rusev-2009-multipole-mixing-ratios-11b]] 明确展示，同一个 measured polarization-related asymmetry 也可能对应两支 `delta` 解；作者对 `11B` 选择较小 `|δ|` branch，是基于大 `|δ|` branch 会给出异常大 `E2` admixture 的物理判断。
+
+[[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]] 与 [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]] 共同说明：ICC-based `delta` extraction 需要把 theoretical ICC、transition-energy 与 `delta` 本身的不确定度一起传播。
+
 [[nomura-2022-questioning-wobbling-ibfm]] 用 IBFM transition operators 计算 `135Pr/133La/127Xe/105Pd` 的 `δ(E2/M1)`。多数被比较 links 的计算值偏向小 `abs(δ)`/M1 dominance，但 `127Xe` 低自旋存在由近零 M1 matrix element 导致的异常大 `abs(δ)`；该模型比较挑战 wobbling assignments，却不替代原始 angular-distribution/polarization analysis。
 
 ## Sources
@@ -66,6 +72,9 @@ angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)`
 - [[sensharma-2020-longitudinal-wobbling-187au]]
 - [[guo-2022-low-spin-wobbling-187au]]
 - [[nomura-2022-questioning-wobbling-ibfm]]
+- [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]]
+- [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]]
+- [[rusev-2009-multipole-mixing-ratios-11b]]
 
 ## Evolution Log
 
@@ -76,3 +85,4 @@ angular-distribution `χ²(δ)` 可能同时存在大 `abs(δ)` 与小 `abs(δ)`
 - 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP angular-distribution 对照。
 - 2026-07-04：加入 Guo 2022 的 `R_ac-P` 小 `abs(δ)` branch 与同一 links 的直接冲突。
 - 2026-07-05：加入 Nomura 2022 的 IBFM `δ` 预测、实验值比较及 `127Xe` 异常分母边界。
+- 2026-07-12：加入 Rusev 2009 的 asymmetry 双解，以及 Rezynkina 2017 / Kibedi 2008 的 ICC-based `δ` 不确定度边界。

@@ -2,10 +2,34 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-10
+updated: 2026-07-12
 ---
 
 # Knowledge Base Health Dashboard
+
+## Current Snapshot: 2026-07-12
+
+This snapshot reflects the finalized review round for the four gamma-spectroscopy method sources added on 2026-07-12: Rezynkina 2017, Kramer-Flecken 1989, Kibedi 2008, and Rusev 2009. The user review accepted the method/project bundle, corrected the KF89 `sigma/I` low-spin boundary and experimental `R_DCO` formula linkage, and required the Rusev branch-selection note to remain tightly framed as an author-judgment statement rather than a direct observable fact.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 35 | Added four method-oriented source pages in the completed review round. |
+| nucleus pages | 9 | No new nucleus page was added in this round. |
+| experiment pages | 14 | No new experiment page was added in this round. |
+| concept pages | 21 | `[[sigma-over-i]]` was minimally extended with the KF89 low-spin `I < 6` boundary. |
+| method pages | 14 | Added `[[internal-conversion-analysis]]`; `[[dco-ratio]]` was minimally extended with the experimental `R_DCO` formula and low-spin boundary. |
+| observable pages | 13 | Added `[[internal-conversion-coefficient]]`. |
+| model pages | 14 | No new model page was added in this round. |
+| project pages | 6 | `[[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]]` was re-reviewed and minimally tightened. |
+| synthesis pages | 6 | No new synthesis page was added in this round. |
+| source pages unreviewed | 0 | The four new method-source pages were moved to `review_status: human-reviewed`. |
+| page-level unreviewed | 100 | Current lint governance count after this review-finalization round. |
+| source claim-level `needs_review: true` | lint summary currently 0 | Project-note queue is clear; the Rusev branch-selection caveat was kept narrow in source wording rather than promoted to a project-level review queue. |
+| project claim-level `needs_review: true` | 0 | `SIO-PROJ-21`--`SIO-PROJ-24` were accepted in this review round. |
+| claim missing locator | 0 | Lint found no locator gaps. |
+| source missing raw_file / citation_key | 0 / 0 | Lint found no source metadata gaps. |
+| raw hash coverage | 35/35 | Lint reports all source pages matched raw hashes after this round. |
+| wikilinks | 1545 | Lint count after the method-review finalization round. |
 
 ## Current Snapshot: 2026-07-10
 

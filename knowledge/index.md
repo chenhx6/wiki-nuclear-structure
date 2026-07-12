@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-10
+updated: 2026-07-12
 ---
 
 # Wiki Index
@@ -11,6 +11,10 @@ updated: 2026-07-10
 
 - [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] - 汇编 pure-E2 angular distributions 为 `alpha2/alpha4`，检验 MANDY/CNR 对齐预测，给出 uncertainty budget，并指出简单 Gaussian magnetic-substate population 过于受限。
 - [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]] - `165Ho(alpha,2n)167Tm` 个案中检验 global Gaussian hypothesis，并用 Gaussian side feeding 加 discrete direct feeding 的模型改进 spin / `delta` 分析。
+- [[kramer-flecken-1989-use-dco-ratios]] - DCO 比值定义、几何/对齐依赖、多解边界与 `178W` OSIRIS 实践案例。
+- [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]] - BrIcc 的 mixed-transition ICC、vacancy treatment 与 `delta`/energy uncertainty 传播主来源。
+- [[rusev-2009-multipole-mixing-ratios-11b]] - linearly polarized photon-beam asymmetry 提取 `delta` 的实验示例，并明确展示双解边界。
+- [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]] - 基于 ICC 及其理论/实验不确定度图解提取 `delta` 的方法来源。
 
 - [[zamfir-casten-1991-gamma-softness-triaxiality]] - γ-band staggering 区分 γ-soft/γ-rigid 的低能判据。
 - [[frauendorf-meng-1997-tilted-rotation-chirality]] - Aplanar TAC 与核转动手征性的奠基理论。
@@ -117,6 +121,7 @@ updated: 2026-07-10
 ## Observables
 
 - [[spin-alignment-attenuation-factor]] - `alpha2/alpha4` 这一由 pure-E2 angular distributions 反推的 alignment observable，以及它与 `sigma/I` 的边界。
+- [[internal-conversion-coefficient]] - 用于 multipolarity 与 `delta` 约束的 ICC observable，含 BrIcc 与图解误差传播边界。
 
 - [[gamma-band-energy-staggering]] - `S(J,J-1,J-2)` 与 γ 势判别。
 - [[signature-splitting]] - 奇 A 伙伴带能量劈裂。
@@ -139,6 +144,7 @@ updated: 2026-07-10
 - [[angular-distribution]] - γ 射线角分布分析及其 alignment、feeding 与 mixing-ratio 前提。
 - [[tracking-array]] - γ-ray tracking arrays 的连续角度 angular-distribution/correlation/polarization response-function 方法入口。
 - [[spin-parity-assignment]] - 组合角分布、DCO、偏振和能级序列证据的 `J^pi` 赋值方法页。
+- [[internal-conversion-analysis]] - 由 electron/gamma 或 X-ray/gamma 比、BrIcc 与 mixed-transition ICC 公式约束 `delta` 的方法页。
 - [[time-differential-perturbed-angular-distribution]] - TDPAD 振幅、alignment 与 hyperfine precession 的时间依赖方法边界。
 - [[g-factor-measurement]] - 核 `g` 因子测量与 TDPAD / hyperfine-field 条件依赖的最小方法入口。
 

@@ -31,6 +31,8 @@ tags: [alignment, angular-distribution, mixing-ratio, pado-support]
 
 [[summary-2013-bases-spin-parity-assignments]] 记录了 high-spin angular-distribution / DCO guide language 中常见的典型 `sigma/I = 0.3`，但这是 guide-level heuristic，不是 universal prior。
 
+[[kramer-flecken-1989-use-dco-ratios]] 进一步给出一个直接边界：近似常数的 `sigma/I` 经验规律只在较宽自旋区间内成立，低自旋 `I < 6` 区域会偏离这一经验关系。因此，低自旋工作不应无条件沿用高自旋 DCO / angular-correlation 语境中的固定 `sigma/I` 直觉。
+
 [[gray-2020-hyperfine-fields-g-factor-measurements]] 给出边界例子：经验性的 `sigma/I` expectation 在特定 TDPAD / host-specific context 中可能失效。
 
 ## User-Analysis Note (Not a Source Claim)
@@ -97,4 +99,5 @@ tags: [alignment, angular-distribution, mixing-ratio, pado-support]
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
 - [[chiara-2012-cu65-cu67-core-coupled-protons]]
 - [[summary-2013-bases-spin-parity-assignments]]
+- [[kramer-flecken-1989-use-dco-ratios]]
 - [[gray-2020-hyperfine-fields-g-factor-measurements]]

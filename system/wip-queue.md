@@ -10,7 +10,7 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-No active WIP entries.
+None currently.
 
 ## Legacy completed entries
 

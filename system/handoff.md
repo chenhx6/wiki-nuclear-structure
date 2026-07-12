@@ -8,37 +8,34 @@ updated: 2026-07-12
 ## Active handoff
 
 Current active task:
-None after this final Wiki-miss consistency closeout. The three-stage Git preflight lifecycle remains implemented.
+No active WIP. The four-source gamma-spectroscopy method review round has been finalized.
 
 Current branch / local commit:
-`main`; the open-knowledge-boundary governance is finalized, and `main` is aligned with `origin/main` after this handoff-only correction.
+`main`; the prior local `WIP ingest: gamma spectroscopy method sources for user review` has been amended to the final review commit `Finalize gamma spectroscopy method source review`. Per the user's latest instruction, the matching four-source BibTeX additions in `raw/zotero/wiki-inbox.bib` are included in the final commit, and the temporary `outputs/md-link-open-mode-probe*.md` UI-audit artifacts were removed.
 
 Last task status:
-Confirmed the final open-knowledge boundary: Wiki gaps are reported as evidence/context gaps, while ordinary answers may add stable general scientific background without presenting it as Wiki or externally verified evidence. Updated the detailed guide, quick guide, query workflow and checklist; no science content was modified.
+User review comments were applied. KF89 now records both the theoretical and experimental `R_DCO` formulas and uses the low-spin `I < 6` `sigma/I` boundary rather than the earlier misread notation. `[[dco-ratio]]`, `[[sigma-over-i]]`, and the sigma-over-I project were minimally extended with that boundary. `RU09-6` was tightened into a branch-selection author-judgment note rather than an observed-fact-style statement. QMD update/embed/status and wiki lint were rerun successfully.
 
 Unfinished items:
-None after checks, final commit, and push complete.
+1. Optional follow-up: map the user's actual P-ADO `sigma/I` convention, detector geometry, and calibration transitions to the source-level notation before writing code-facing or paper-facing equations.
 
 P0 focus:
-1. Run write-entry preflight before the first file write; read-only Q&A remains exempt.
-2. Treat script exit 1 as a classification gate, not automatic rejection of authorized substantive edits; exit 2 blocks writes.
-3. Resolve pending-WIP shared-file overlap before editing through merge, dependency, or deferral.
-4. Keep science work in local review WIPs; confirmed governance work may final directly after checks.
+P0: none identified for this finalized review round.
 
 Remaining P0:
-None for this task.
+None.
 
 Risks:
-Future answers must keep general background, Wiki-grounded evidence and external verification visibly distinct; strict paper claims still require direct-source verification.
+Do not generalize the KF89 `I < 6` boundary into a universal low-spin law. Keep Rusev-style polarized-photon asymmetry distinct from in-beam clover Compton asymmetry, and keep ICC, DCO, and polarization constraints complementary rather than interchangeable.
 
 Checks:
-Wiki-miss semantic audit, diff check, Skill validation and Wiki lint passed; no knowledge content, raw material or user state is part of this task.
+Write-entry and finalization checks were completed. `git diff --check` passed after normalizing `knowledge/overview.md` to LF. `python system/scripts/wiki_lint.py --fail-on error` passed with `0 error / 10 warning / 0 info`. `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` succeeded.
 
 Next prompt / continuation phrase:
-No continuation required after push. Future write tasks start with the new write-entry preflight.
+Continue sigma-over-I / P-ADO notation mapping after the gamma spectroscopy method review commit is pushed.
 
 Recent user decisions:
-User requires Wiki miss to remain an open knowledge boundary: report evidence limits, add stable general background when useful, and never confuse it with Wiki-grounded or externally verified evidence. Existing inline-link, preflight and WIP governance remain unchanged.
+User accepted the project-level method bundle, confirmed that KF89 should use `sigma/I` with the low-spin `I < 6` boundary and include the experimental `R_DCO` formula, and asked that the corrected knowledge be propagated only into the necessary connected pages.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

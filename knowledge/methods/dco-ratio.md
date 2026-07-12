@@ -3,7 +3,7 @@ type: method
 title: DCO 比值分析
 aliases: [DCO ratio, RDCO, directional correlation from oriented states]
 created: 2026-07-01
-updated: 2026-07-03
+updated: 2026-07-12
 status: active
 review_status: unreviewed
 method_type: gamma-ray-angular-correlation
@@ -24,6 +24,8 @@ tags: [multipolarity, gamma-spectroscopy]
 
 在已知 stretched E2 等门上构造非对称矩阵，比较实验 R_DCO 与给定几何下的理论值。
 
+[[kramer-flecken-1989-use-dco-ratios]] 给出一个更基本的定义层：理论上 `R_DCO = W(theta_2,theta_1,phi) / W(theta_1,theta_2,phi)`，实验上对应 `R_DCO = I_{theta_2}(Gate_{theta_1}) / I_{theta_1}(Gate_{theta_2})`。交换 gate 或探测角组合会把比值取倒数。
+
 ## What It Can Establish
 
 区分主要 dipole/quadrupole 特征，并与 ANGCOR 等计算联合约束 δ。
@@ -32,9 +34,15 @@ tags: [multipolarity, gamma-spectroscopy]
 
 有限角度和弱跃迁时不能唯一给出 δ 符号或排除全部解。
 
+Kramer-Flecken 1989 还明确指出：把 `sigma/I` 当作近似常数只是在较宽自旋区间内常用的经验简化，低自旋 `I < 6` 区域会偏离这条规律，因此低自旋 DCO 解释不应直接照搬高自旋经验宽度。
+
+Kramer-Flecken 1989 还明确指出：当允许 dipole-quadrupole mixing 时，同一个 DCO ratio 可对应多个自旋或 `delta` 解；一般 `Delta I = ±1` 不能单靠 DCO 唯一区分。
+
 ## Conventions and Systematics
 
 R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何有效。
+
+几何选择会直接改变判别力。Kramer-Flecken 1989 对 OSIRIS 的分析显示，把 detector angles 选在接近 `0°/180°` 与 `90°` 的组合，可放大不同 cascades 的 DCO 差异；相对效率修正也应尽量用能量相近、已知多极性的参考 cascade 标定。
 
 不要把 DCO 与 [[two-point-angular-correlation-ratio]] 混写：后者可设计为对 gating transition 多极性不敏感，但其经验标定仍依赖具体阵列。
 
@@ -58,6 +66,7 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 - [[domscheit-1999-triaxial-superdeformation-163lu]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[lv-2021-tilted-precession-135nd]]
+- [[kramer-flecken-1989-use-dco-ratios]]
 - [[summary-2013-bases-spin-parity-assignments]]
 
 ## Evolution Log
@@ -66,3 +75,4 @@ R_DCO 的“dipole≈0.5 / quadrupole≈1”等经验值只对特定门和几何
 - 2026-07-03：加入早期 Euroball 几何实例及“不跨阵列套用经验阈值”的限制。
 - 2026-07-03：加入 Matta 2015 的“正文给出结论但未列具体 DCO 数值”案例。
 - 2026-07-04：加入 Lv 2021 JUROGAM II `135Nd` 双 gate convention 与经验值。
+- 2026-07-12：加入 Kramer-Flecken 1989 的定义、几何依赖、效率修正和多解边界。

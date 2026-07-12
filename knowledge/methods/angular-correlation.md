@@ -3,7 +3,7 @@ type: method
 title: γ 射线角关联分析
 aliases: [angular correlation, gamma-ray angular correlation, particle-gamma angular correlation, gamma-gamma angular correlation]
 created: 2026-07-09
-updated: 2026-07-09
+updated: 2026-07-12
 status: ai-draft
 review_status: unreviewed
 method_type: gamma-ray-angular-correlation
@@ -30,6 +30,7 @@ tags: [multipolarity, alignment, attenuation, deorientation, pado-support]
 ## Boundary
 
 - angular correlation 与 [[angular-distribution]] 都使用角度依赖强度，但前者保留两个事件或一个粒子-γ 方向之间的相关性；不能与普通 single-γ angular distribution 静默合并。
+- [[kramer-flecken-1989-use-dco-ratios]] 展示了 DCO 是从 gamma-gamma angular correlation 压缩出来的一个 gate-与几何依赖比值，而不是脱离原始 correlation formalism 的普适常数。
 - Radeck 2012 的 particle-γ angular correlation correction 属于 inverse Coulomb excitation / RDDS 语境，不是 fusion-evaporation P-ADO 的直接 `σ/I` 来源。
 - detector finite-solid-angle factor `Qk` 与 nuclear alignment/deorientation factor `Gk` 是不同系统项。
 
@@ -49,3 +50,4 @@ Angular correlations do not by themselves define a universal side-feeding Gaussi
 
 - [[radeck-2012-deorientation-lifetime-98ru-rdds]]
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
+- [[kramer-flecken-1989-use-dco-ratios]]
