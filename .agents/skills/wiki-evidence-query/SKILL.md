@@ -87,9 +87,7 @@ Low-token answering reduces retrieval overhead, not source visibility.
   name and the exact line, for example:
 
   ```markdown
-  Angular distributions can admit multiple solutions when alignment and
-  mixing ratio are not independently constrained. [Angular Distribution（line
-  17）](E:/imp/wiki/knowledge/methods/angular-distribution.md:17)
+  Angular distributions can admit multiple solutions when alignment and mixing ratio are not independently constrained. [Angular Distribution（line 17）](E:/imp/wiki/knowledge/methods/angular-distribution.md:17)
   ```
 
 - For a synthesis or inference supported by several pages, say `综合来看`,

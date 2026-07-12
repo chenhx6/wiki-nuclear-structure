@@ -95,6 +95,18 @@
 
 可显式调用 `$wiki-evidence-query`。该 Skill 默认只读；知识库缺少足够出处时，应明确报告不足，不用模型记忆补写。
 
+### 回答中的 Wiki 证据链接
+
+Wiki 直接支持的事实或判断，会把已实际读取并核实的链接紧跟在对应句子或分句之后，例如：
+
+```markdown
+角分布可能因 alignment 和 mixing ratio 未独立约束而存在多个候选解。[Angular Distribution（line 17）](E:/imp/wiki/knowledge/methods/angular-distribution.md:17)
+```
+
+跨来源综合或推断应使用“综合来看”“可以推断”等校准措辞，并在该判断后并列最直接的少量链接。稳定、简单的一般专业背景不机械附 Wiki 链接；如果某个重要而具体的判断容易被误认为已有 Wiki 证据，但当前 Wiki 缺少直接支持，应在该判断处说明证据边界和 provenance。普通回答默认不在末尾重复列证据页；只有用户明确要求来源汇总、阅读清单、bibliography、claim-to-source table，或 strict paper review 确有需要时才增加独立来源区。
+
+链接文字使用可读的页面或文献名称和 `line N`。行号必须来自实际读取的承载 claim 的行、段落、表格或小节，不得猜测；若客户端不能跳转 `file.md:line`，改用带页面名称和已核实小节/claim 定位的文件链接，并说明 fallback。Wiki 正文中的 Obsidian Wikilink 不需要因此改写。
+
 ## 7. How to ingest papers daily / 如何日常摄入论文
 
 用户计划逐步形成每天至少摄入 2 篇 A≈130 质量区理论或实验文献的节奏。质量门优先于数量；每篇仍按独立闭环处理：

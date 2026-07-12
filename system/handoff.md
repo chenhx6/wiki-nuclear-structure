@@ -1,20 +1,20 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-11
+updated: 2026-07-12
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-None after this forward safety patch. The three-stage Git preflight lifecycle remains implemented.
+None after this inline evidence-link governance closeout. The three-stage Git preflight lifecycle remains implemented.
 
 Current branch / local commit:
-`main`, aligned with `origin/main` after the completed preflight governance finalization; this patch uses final commit message `Restrict EOL cleanup to LF/CRLF changes`.
+`main`; inline evidence-link governance closeout is the current final governance change.
 
 Last task status:
-Restricted automatic cleanup to provable LF/CRLF-only changes with `--ignore-cr-at-eol`. Ordinary trailing spaces, Markdown double-space line breaks, and Tabs remain substantive. Added post-restore status verification and a DryRun `Would restore` count without changing the existing preflight or WIP lifecycle.
+Consolidated Wiki evidence presentation around inline informative line links. The Skill is the complete authority; query workflow, USER_GUIDE, USER_GUIDE_DETAIL and check.md now provide concise consistent interfaces. The previous end-of-answer evidence list and generic anchor recommendations were removed; no science content was modified.
 
 Unfinished items:
 None after checks, final commit, and push complete.
@@ -29,16 +29,16 @@ Remaining P0:
 None for this task.
 
 Risks:
-The cleanup script intentionally leaves trailing whitespace, substantive, mixed, conflict, staged, and ambiguous states untouched. Codex must still classify authorization and WIP ownership from the baseline.
+Evidence links still require reading the target file and verifying the exact line. Generic anchors remain only as explicitly prohibited examples; future edits must not reintroduce them as recommendations.
 
 Checks:
-Safety tests passed for LF/CRLF-only cleanup; single/double trailing spaces and Tabs; Chinese/space paths; staged-only, mixed, rename, delete and conflict states; DryRun; and non-repository errors. Repository DryRun/default and strict ignore-CR checks returned 0; PowerShell parse and Skill validation passed; Wiki lint returned 0 errors / 9 existing warnings. No knowledge content changed.
+Targeted old-rule search is clean; the Skill example anchor is one physical line; diff check and Skill validation passed; Wiki lint returned 0 errors / 9 existing warnings. No knowledge content, raw material or user state is part of this task.
 
 Next prompt / continuation phrase:
 No continuation required after push. Future write tasks start with the new write-entry preflight.
 
 Recent user decisions:
-User requires automatic cleanup to mean LF/CRLF-only, never arbitrary trailing whitespace; restore success must be rechecked and DryRun must count candidates. Existing preflight and WIP governance remain unchanged.
+User requires inline informative line links, no default duplicate end section, no generic anchors, calibrated multi-source links, and local explanation of important Wiki evidence gaps. Existing preflight and WIP governance remain unchanged.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

@@ -2,7 +2,7 @@
 type: system-log
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-11
+updated: 2026-07-12
 ---
 
 # 操作日志
@@ -480,3 +480,8 @@ updated: 2026-07-11
 
 - Changed cleanup comparison from `--ignore-space-at-eol` to `--ignore-cr-at-eol`, preserving trailing spaces, Markdown double-space line breaks, and Tabs as substantive changes.
 - Added post-restore status verification, DryRun candidate counting, and expanded temporary-repository safety coverage including Chinese paths; no knowledge content was modified.
+
+## [2026-07-12] governance | completed inline evidence-link governance
+
+- Consolidated Wiki evidence presentation around inline informative page/source plus line links, removed the default duplicate end-of-answer evidence section, and documented the detailed user-facing behavior.
+- Kept generic anchors as prohibited examples only; synchronized query workflow and checklist without modifying knowledge content.
