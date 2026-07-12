@@ -8,13 +8,13 @@ updated: 2026-07-12
 ## Active handoff
 
 Current active task:
-None after this inline evidence-link governance closeout. The three-stage Git preflight lifecycle remains implemented.
+None after this final Wiki-miss consistency closeout. The three-stage Git preflight lifecycle remains implemented.
 
 Current branch / local commit:
 `main`; inline evidence-link governance closeout is the current final governance change.
 
 Last task status:
-Consolidated Wiki evidence presentation around inline informative line links. The Skill is the complete authority; query workflow, USER_GUIDE, USER_GUIDE_DETAIL and check.md now provide concise consistent interfaces. The previous end-of-answer evidence list and generic anchor recommendations were removed; no science content was modified.
+Confirmed the final open-knowledge boundary: Wiki gaps are reported as evidence/context gaps, while ordinary answers may add stable general scientific background without presenting it as Wiki or externally verified evidence. Updated the detailed guide, quick guide, query workflow and checklist; no science content was modified.
 
 Unfinished items:
 None after checks, final commit, and push complete.
@@ -29,16 +29,16 @@ Remaining P0:
 None for this task.
 
 Risks:
-Evidence links still require reading the target file and verifying the exact line. Generic anchors remain only as explicitly prohibited examples; future edits must not reintroduce them as recommendations.
+Future answers must keep general background, Wiki-grounded evidence and external verification visibly distinct; strict paper claims still require direct-source verification.
 
 Checks:
-Targeted old-rule search is clean; the Skill example anchor is one physical line; diff check and Skill validation passed; Wiki lint returned 0 errors / 9 existing warnings. No knowledge content, raw material or user state is part of this task.
+Wiki-miss semantic audit, diff check, Skill validation and Wiki lint passed; no knowledge content, raw material or user state is part of this task.
 
 Next prompt / continuation phrase:
 No continuation required after push. Future write tasks start with the new write-entry preflight.
 
 Recent user decisions:
-User requires inline informative line links, no default duplicate end section, no generic anchors, calibrated multi-source links, and local explanation of important Wiki evidence gaps. Existing preflight and WIP governance remain unchanged.
+User requires Wiki miss to remain an open knowledge boundary: report evidence limits, add stable general background when useful, and never confuse it with Wiki-grounded or externally verified evidence. Existing inline-link, preflight and WIP governance remain unchanged.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

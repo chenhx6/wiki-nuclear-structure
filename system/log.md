@@ -485,3 +485,8 @@ updated: 2026-07-12
 
 - Consolidated Wiki evidence presentation around inline informative page/source plus line links, removed the default duplicate end-of-answer evidence section, and documented the detailed user-facing behavior.
 - Kept generic anchors as prohibited examples only; synchronized query workflow and checklist without modifying knowledge content.
+
+## [2026-07-12] governance | closed Wiki-miss open-knowledge ambiguity
+
+- Replaced the over-absolute user-guide wording with a single rule: report Wiki evidence boundaries, add stable general background in ordinary Q&A when useful, and keep its provenance distinct from Wiki-grounded or externally verified evidence.
+- Added checklist coverage for non-refusal on Wiki misses and prevention of model-memory source fabrication; no knowledge content was modified.

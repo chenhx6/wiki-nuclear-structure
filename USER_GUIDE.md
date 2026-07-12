@@ -148,7 +148,7 @@ powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirt
 
 Codex 应自动把这类消息理解为“本轮人工审核已经结束”，记录本轮 Review history，并进入 review-finalization：按审核意见做最小修改，执行 overview/QMD/review commit/push 的默认流程，再独立判断 queue 是否继续保留。你不必使用固定短语；只要整体语义可以无歧义地判断本轮审核已经结束即可。如果你不想 finalization，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
 
-普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断。已核实的 Wiki 页面名称和行号链接直接放在它所支持的句子后面，方便立即核对；默认不再在末尾重复列出同一批证据页。一般专业背景不要求每句附链接，重要但 Wiki 尚无直接证据的判断会在出现位置说明。普通回答不默认展开 citation key、raw PDF、review 状态或长 evidence card；原文核查、论文级审查或 strict paper mode 再补充完整核查信息。Wiki 正文仍保留 Obsidian Wikilink，也不会为了改变打开界面而修改证据页或制造 Git diff。打开证据页可能让 `knowledge/*.md` 显示 modified；Codex 会在每次 commit/push preflight 中区分授权修改与 LF/CRLF-only dirty 状态，后者确认无实质差异后清理，存在实质差异时停止并要求用户确认。用户也应避免使用 `git add .`。论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认时才进入严格的 paper evidence mode；普通争议讨论本身不自动触发 strict mode。
+普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断。已核实的 Wiki 页面名称和行号链接直接放在它所支持的句子后面，方便立即核对；默认不再在末尾重复列出同一批证据页。一般专业背景不要求每句附链接；知识库未覆盖时仍可补充稳定的一般专业背景，但会说明它不是 Wiki-grounded 或 externally verified evidence。重要但 Wiki 尚无直接证据的判断会在出现位置说明。普通回答不默认展开 citation key、raw PDF、review 状态或长 evidence card；原文核查、论文级审查或 strict paper mode 再补充完整核查信息。Wiki 正文仍保留 Obsidian Wikilink，也不会为了改变打开界面而修改证据页或制造 Git diff。打开证据页可能让 `knowledge/*.md` 显示 modified；Codex 会在每次 commit/push preflight 中区分授权修改与 LF/CRLF-only dirty 状态，后者确认无实质差异后清理，存在实质差异时停止并要求用户确认。用户也应避免使用 `git add .`。论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认时才进入严格的 paper evidence mode；普通争议讨论本身不自动触发 strict mode。
 
 ## 4. Zotero 轻量连接
 

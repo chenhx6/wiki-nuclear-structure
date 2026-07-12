@@ -257,6 +257,8 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 回答明确区分直接事实、作者解释、模型结果、跨来源综合和暂时推断。
 - [ ] 证据不完整时已降低表述强度并说明限制，而不是无必要地拒绝回答。
 - [ ] 普通问答、研究讨论、综合分析或早期草稿没有误用投稿级 paper evidence gate。
+- [ ] Wiki miss 被表述为个人化上下文或已整理证据缺口，而不是自动拒答；普通问题在适当时仍补充稳定的一般专业背景。
+- [ ] 一般专业背景与 Wiki-grounded、human-reviewed、externally verified evidence 分开标明，没有被冒充为 Wiki 证据；没有用模型记忆虚构论文、数据、locator 或作者结论。
 - [ ] Wiki 直接支持的关键判断使用就地 informative line link；anchor text 让用户看出页面/文献名称和 `line N`，没有默认重复生成末尾证据区。
 - [ ] 没有使用 `[内容页]`、`[打开证据位置]`、`[证据页]` 或其它无信息 anchor；没有只给裸页面名、slug、反引号包裹的 `[[wikilink]]` 或裸 `[[wikilink]]`；名称或 alias 有多个候选时列出已解析路径，没有猜测。
 - [ ] 行号是在回答时读取目标文件后确定，落在直接承载判断的 claim、段落、表格行或小节内容，没有猜测行号或在可精确定位时只链接文件开头。
