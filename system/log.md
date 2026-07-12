@@ -500,3 +500,23 @@ updated: 2026-07-12
 
 - Applied user review to the four-source method bundle and the related sigma-over-I project notes.
 - Corrected the KF89 `sigma/I` low-spin `I < 6` wording, added the experimental `R_DCO` intensity-ratio formula, and tightened `RU09-6` into an author-judgment branch-selection note. QMD refresh and wiki lint succeeded.
+
+## [2026-07-13] ingest-checkpoint | Meng 2010 nuclear chirality review
+
+- Deep-read Meng 2010 and added a source note, core chirality/MχD concepts, TAC/PRM boundary updates, and the initial nuclear-chirality/MχD evidence-map project.
+- Safe-suspended before Ayangeakaa 2013 and Liu 2016 because repeated multi-file patch stalls made further expansion unreliable; next run must recover and amend the same local WIP.
+
+## [2026-07-13] ingest-checkpoint | Ayangeakaa 2013 133Ce MChD
+
+- Deep-read the `133Ce` PRL and added the source, two source-specific MChD pair pages, DCO/angular-distribution assignments, `S(I)`, RMF+TPRM model roles, lifetime gap, and triaxial-shape-coexistence boundary.
+- All `A13-1..12` remain pending joint human review; Liu 2016 is the next and final source in this WIP.
+
+## [2026-07-13] ingest-checkpoint | Liu 2016 78Br MChD and octupole correlations
+
+- Deep-read Liu 2016 and added `78Br` structure, ADO/polarization, two MChD pair pages, eight-E1-link evidence, octupole observables/terminology, and MDC-CDFT/TPRM boundaries.
+- The three-source project matrix and overview are complete locally; all 38 source claims await one joint user review, with QMD deferred to review finalization.
+
+## [2026-07-13] review | finalized nuclear-chirality/MχD source review
+
+- Applied the joint review to Meng 2010, Ayangeakaa 2013, and Liu 2016; all 39 source claims are now reviewed.
+- Clarified semiclassical TAC tunneling, `133Ce` bandheads and bounded `135Nd` systematics, `78Br` quartet future-observation wording, and the cross-source role of `S(I)`.

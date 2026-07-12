@@ -1,7 +1,7 @@
 ---
 type: system-review-history
 graph-excluded: true
-updated: 2026-07-10
+updated: 2026-07-13
 ---
 
 # Review history
@@ -11,6 +11,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 ## Completed review rounds
 
 <!-- Append real completed human-review rounds here. Do not backfill old history during framework setup. -->
+
+### 2026-07-13 — nuclear chirality and MχD sources — round 1
+
+- review scope: Meng 2010 `M10-1..11`, Ayangeakaa 2013 `A13-1..12`, and Liu 2016 `L16-1..15`
+- user decisions: all three source pages were reviewed; TAC tunneling limits must be attributed to the semiclassical mean-field description; RMF states a/b are Bands 2/5 bandheads; `135Nd` systematics can partially support but not replace missing `133Ce` lifetime data; `78Br` motivates future single-nucleus quartet observation rather than an established quartet assignment
+- corrections requested: add the Frauendorf 1997 link, add `A13-13` for the bounded `135Nd` comparison, clarify `L16-14`, and expand the existing chiral-band `S(I)` observable page
+- unresolved issues: none for the three source notes; the evidence-map project and derived knowledge pages retain independent page-level review status
+- next action: future work may add lifetime/absolute-transition-strength sources and competing interpretations without treating this three-source set as a complete bibliography
+- related pages: `knowledge/sources/meng-2010-open-problems-nuclear-chirality.md`, `knowledge/sources/ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce.md`, `knowledge/sources/liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br.md`, `knowledge/observables/energy-staggering-parameter.md`, `knowledge/projects/nuclear-chirality-and-multiple-chiral-doublet-bands.md`
+- review commit message: Finalize nuclear chirality and MChD source review
 
 ### 2026-07-12 — gamma spectroscopy method sources — round 1
 

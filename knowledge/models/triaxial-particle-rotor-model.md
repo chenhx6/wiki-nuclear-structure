@@ -41,6 +41,8 @@ tags: [triaxiality, odd-a, wobbling]
 - [[sensharma-2019-two-phonon-wobbling-135pr]] 沿用 `135Pr` 的 `ε=0.16, γ=26°`、上述三个转动惯量和尺度因子，扩展比较逐级 wobbling-phonon energy 与相对 E2 ratios。
 - [[guo-2022-low-spin-wobbling-187au]] 使用 `ε2=0.21, γ=12°`、Harris parameters `J0=25 ħ² MeV^-1, J1=8 ħ⁴ MeV^-3`、irrotational-flow-like γ dependence，并纳入 proton Fermi level 附近 9 个负宇称轨道。
 - [[lv-2021-tilted-precession-135nd]] 对 `135Nd` 使用 `β=0.19, γ=25°`、Harris `J0=5 ħ² MeV^-1, J1=71.4 ħ⁴ MeV^-3`、Coriolis attenuation 0.7、`g_s=0.6g_free`、`g_R=0.44` 与 neutron Fermi level 附近 7 个负宇称 orbitals。
+- [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] 对 `133Ce` 两对候选带使用 constrained RMF 的形变，调整 rotor moment of inertia 到实验能量，并对含低 `j` `g7/2` 的 Bands 2–3 使用 Coriolis attenuation `xi=0.7`。
+- [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] 对 `78Br` 正/负宇称候选对采用 MDC-CDFT 的形变、MoI 16/18 hbar2/MeV 与 attenuation 0.6。
 
 ## Predicted Observables
 
@@ -59,6 +61,10 @@ QTR 中近邻轨道混合会与 γ 同时改变 S(I)，因此单个最佳 γ 往
 Lawrie 2020 指出，QTR 对能带能量或大 E2 connecting transitions 的再现本身不能证明 transverse wobbling。对典型 transverse one-quasiparticle coupling，wobbling approximation 要求最大 MoI 轴——在该文 irrotational-flow convention 中为 intermediate axis（1 轴）——上的 rotational component 也为小量；作者计算的 `f(n,I)` 对 `135Pr/105Pd` 参数并不满足 `<<1`。该结论依赖 frozen-`j`、MoI ordering 和参数集合，仍是理论模型边界，不是实验裁决。
 
 `135Pr` QTR 低估 `B(E2_out)`、高估 `B(M1_out)`，并把 signature-partner excitation 高估约 500 keV；拟合能量后的转动惯量不能作为独立验证。
+
+`133Ce` TPRM 较好再现两对带的能量和总体 `B(M1)/B(E2)` 趋势，但没有再现实验中的小幅 odd-even staggering；RMF shape inputs、MoI adjustment 和 `xi` 使其属于模型支持而非独立实验验证。
+
+`78Br` TPRM 比较 energies、`S_chiral(I)`、`B(M1)/B(E2)` 和 effective angles；nonplanar angles 是模型几何。Band 3 deviations 被归因于计算忽略 `f5/2-p3/2` mixing，configuration 仍非唯一实验事实。
 
 Sensharma 2019 的 QTR 给出
 `E_TW1(I+1)-E_yrast(I) ≈ 2[E_TW2(I+2)-E_TW1(I+1)]`
@@ -86,6 +92,8 @@ Sensharma 2019 的 QTR 给出
 - [[guo-2022-low-spin-wobbling-187au]]
 - [[lawrie-2020-tilted-precession-wobbling]]
 - [[lv-2021-tilted-precession-135nd]]
+- [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]]
+- [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]]
 
 ## Evolution Log
 
@@ -97,3 +105,5 @@ Sensharma 2019 的 QTR 给出
 - 2026-07-04：加入 Guo 2022 的 `187Au` multi-orbital QTR single-particle reinterpretation 与 supplementary-material 边界。
 - 2026-07-04：加入 Lawrie 2020 对完整 3D QTR/TiP 与 harmonic wobbling approximation 的理论边界。
 - 2026-07-04：加入 Lv 2021 `135Nd` QTR parameters、wave-function assignment、transition ratios 与 pairing comparison。
+- 2026-07-13：加入 Ayangeakaa 2013 `133Ce` RMF-input TPRM、Coriolis attenuation 与 staggering discrepancy。
+- 2026-07-13：加入 Liu 2016 `78Br` MDC-CDFT-input TPRM、effective-angle geometry 与 orbital-mixing limitation。

@@ -1,41 +1,41 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-12
+updated: 2026-07-13
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-No active WIP. The four-source gamma-spectroscopy method review round has been finalized.
+Three-source nuclear-chirality/MχD review finalization complete.
 
 Current branch / local commit:
-`main`; the prior local `WIP ingest: gamma spectroscopy method sources for user review` has been amended to the final review commit `Finalize gamma spectroscopy method source review`. Per the user's latest instruction, the matching four-source BibTeX additions in `raw/zotero/wiki-inbox.bib` are included in the final commit, and the temporary `outputs/md-link-open-mode-probe*.md` UI-audit artifacts were removed.
+`main`; current HEAD is the final review commit `Finalize nuclear chirality and MChD source review` after amending the prior WIP. Verify remote synchronization before the next task. The user-owned `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
 
 Last task status:
-User review comments were applied. KF89 now records both the theoretical and experimental `R_DCO` formulas and uses the low-spin `I < 6` `sigma/I` boundary rather than the earlier misread notation. `[[dco-ratio]]`, `[[sigma-over-i]]`, and the sigma-over-I project were minimally extended with that boundary. `RU09-6` was tightened into a branch-selection author-judgment note rather than an observed-fact-style statement. QMD update/embed/status and wiki lint were rerun successfully.
+Meng 2010, Ayangeakaa 2013, and Liu 2016 completed joint human source review. All 39 claims are `needs_review: false`. Corrections clarify semiclassical TAC tunneling, states a/b as Bands 2/5 bandheads, bounded `135Nd` systematics for the missing `133Ce` lifetime information, and `78Br` quartet as a future-observation possibility. The existing `S(I)` observable page now connects all three sources.
 
 Unfinished items:
-1. Optional follow-up: map the user's actual P-ADO `sigma/I` convention, detector geometry, and calibration transitions to the source-level notation before writing code-facing or paper-facing equations.
+None for this source-review round. The project and derived knowledge pages retain independent page-level review status.
 
 P0 focus:
-P0: none identified for this finalized review round.
+None identified for the completed three-source review.
 
 Remaining P0:
 None.
 
 Risks:
-Do not generalize the KF89 `I < 6` boundary into a universal low-spin law. Keep Rusev-style polarized-photon asymmetry distinct from in-beam clover Compton asymmetry, and keep ICC, DCO, and polarization constraints complementary rather than interchangeable.
+Keep Meng review examples distinct from original experimental facts. Keep `133Ce` MχD/shape coexistence author/model-supported; `135Nd` systematics do not replace `133Ce` lifetimes. Keep `78Br` octupole correlations/softness distinct from stable octupole deformation; quartet remains a future-observation possibility rather than a direct assignment. Preserve the user-owned `.bib` diff.
 
 Checks:
-Write-entry and finalization checks were completed. `git diff --check` passed after normalizing `knowledge/overview.md` to LF. `python system/scripts/wiki_lint.py --fail-on error` passed with `0 error / 10 warning / 0 info`. `qmd.cmd update`, `qmd.cmd embed -c nuclear-knowledge`, and `qmd.cmd status` succeeded.
+Final review checks and QMD refresh were run in the finalization turn; consult the final response/log for exact results.
 
 Next prompt / continuation phrase:
-Continue sigma-over-I / P-ADO notation mapping after the gamma spectroscopy method review commit is pushed.
+继续 nuclear chirality 项目：选择 lifetime/absolute-transition-strength 或竞争解释 source，先检查与现有 project 的 evidence gap。
 
 Recent user decisions:
-User accepted the project-level method bundle, confirmed that KF89 should use `sigma/I` with the low-spin `I < 6` boundary and include the experimental `R_DCO` formula, and asked that the corrected knowledge be propagated only into the necessary connected pages.
+User completed the joint review and approved finalization/push after the five stated corrections. The project and derived pages were not automatically promoted to human-reviewed.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

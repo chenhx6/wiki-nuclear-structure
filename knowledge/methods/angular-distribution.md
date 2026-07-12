@@ -3,7 +3,7 @@ type: method
 title: γ 射线角分布分析
 aliases: [angular distribution, gamma-ray angular distribution, gamma angular distribution, in-beam angular distribution, ADO]
 created: 2026-07-08
-updated: 2026-07-09
+updated: 2026-07-13
 status: ai-draft
 review_status: unreviewed
 method_type: gamma-ray-angular-distribution
@@ -31,6 +31,8 @@ tags: [multipolarity, mixing-ratio, alignment, pado-support]
 
 Angular distribution 可与 [[multipole-mixing-ratio]]、[[dco-ratio]] 和线偏振共同约束 `δ`。不同实验几何、beam energy、projectile 或 target condition 下得到的角分布参数不能无条件混用。
 
+ADO（angular distribution from oriented states）ratio 是有限角组实现：在相同 gate 下比较不同探测器角组的归一化强度，并用本实验已知 multipolarities 标定 dipole/quadrupole 区域。[[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] 的 AFRODITE 几何给出 stretched quadrupole 约 1.1、pure stretched dipole 约 0.7；这些阈值不得跨阵列复用。
+
 ## Tracking-Array Formalism
 
 [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] gives a modern tracking-array notation for in-beam angular distributions: `omega(theta)=A0+alpha2 A2 P2(cos theta)+alpha4 A4 P4(cos theta)+...`. In that local formula, `Amax_k` contains the spin sequence, multipolarities and mixing ratio `delta`, while `alpha_k(J)` is the nuclear alignment/deorientation attenuation calculated from magnetic-substate population `Pm(J)`. The same source usually parameterizes `Pm(J)` as a Gaussian with normalized width `sigma/J`.
@@ -53,6 +55,8 @@ This `alpha_k` must not be merged with detector solid-angle attenuation. Laurits
 
 Angular-distribution evidence is one of the standard inputs collected on [[spin-parity-assignment]] pages.
 
+Liu 2016 将 ADO 与 linear polarization 联合用于 `78Br` linking transitions，并由 404.3 keV line 的 `R_ADO=0.79` 与负 polarization 支持 `M1/E2` 及相对 spin revision。
+
 ## Sources
 
 - [[draper-1970-gaussian-substate-side-feeding]]
@@ -61,3 +65,8 @@ Angular-distribution evidence is one of the standard inputs collected on [[spin-
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
 - [[chiara-2012-cu65-cu67-core-coupled-protons]]
 - [[summary-2013-bases-spin-parity-assignments]]
+- [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]]
+
+## Evolution Log
+
+- 2026-07-13：加入 Liu 2016 的 AFRODITE ADO calibration 与 ADO+polarization assignment 案例。

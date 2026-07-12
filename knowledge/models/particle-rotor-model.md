@@ -3,7 +3,7 @@ type: model
 title: 粒子-转子模型
 aliases: [particle rotor model, PRM, particle-plus-rotor model, PTR]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-13
 status: active
 review_status: unreviewed
 model_family: core-particle-coupling
@@ -48,6 +48,8 @@ tags: [collective-model, triaxiality]
 
 转动惯量可调带来歧义；软芯和价粒子之间的 Pauli/交换效应可能需要微观模型。
 
+[[meng-2010-open-problems-nuclear-chirality]] 对手征应用的限定是：常用 PRM 预设 rigid triaxial core、`beta/gamma` 和准粒子组态，因而不能自洽描述形变与三轴性随转动的响应；其优势是总角动量为好量子数并能得到左右手态隧穿劈裂。
+
 `187Au` 计算略低估 `E_wobb`，并高估 LW、低估 SP 的 `B(M1)_out/B(E2)_in`；作者认为偏差可能与 wobbling/SP state mixing 及 moments-of-inertia ratios 有关。
 
 ## Related Models
@@ -59,8 +61,10 @@ tags: [collective-model, triaxiality]
 - [[frauendorf-meng-1997-tilted-rotation-chirality]]
 - [[frauendorf-2024-wobbling-review]]
 - [[sensharma-2020-longitudinal-wobbling-187au]]
+- [[meng-2010-open-problems-nuclear-chirality]]
 
 ## Evolution Log
 
 - 2026-07-01：建立手征与 wobbling 两类用途。
 - 2026-07-03：加入 Sensharma 2020 的 `187Au` LW/SP 能量与 transition-ratio 比较。
+- 2026-07-13：加入 Meng 2010 的手征量子恢复优势与 rigid-core/input-parameter 限制。

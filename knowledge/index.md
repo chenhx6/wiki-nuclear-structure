@@ -9,6 +9,9 @@ updated: 2026-07-12
 
 ## Sources
 
+- [[meng-2010-open-problems-nuclear-chirality]] - 核手征几何、TAC/PRM 边界、fingerprint ambiguity 与 MχD/shape-coexistence 的 theory/review 背景。
+- [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] - `133Ce` 两对 MχD 候选的 Gammasphere/DCO/角分布事实及 RMF+TPRM 支持链。
+- [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] - `78Br` 两对 MχD、ADO/偏振、八条 E1 links 与 octupole-soft MDC-CDFT/TPRM 证据链。
 - [[ekstrom-1979-spin-alignment-attenuation-a61-a67]] - 汇编 pure-E2 angular distributions 为 `alpha2/alpha4`，检验 MANDY/CNR 对齐预测，给出 uncertainty budget，并指出简单 Gaussian magnetic-substate population 过于受限。
 - [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]] - `165Ho(alpha,2n)167Tm` 个案中检验 global Gaussian hypothesis，并用 Gaussian side feeding 加 discrete direct feeding 的模型改进 spin / `delta` 分析。
 - [[kramer-flecken-1989-use-dco-ratios]] - DCO 比值定义、几何/对齐依赖、多解边界与 `178W` OSIRIS 实践案例。
@@ -48,6 +51,7 @@ updated: 2026-07-12
 
 ## Nuclei
 
+- [[78br]] - A≈80 odd-odd nucleus；当前聚焦正/负宇称 MχD 候选与 octupole correlations/softness。
 - [[131xe]] - N=77 奇 A 核，当前聚焦 νh11/2 signature partners 与 wobbling 反证。
 - [[131ba]] - N=75 奇中子核，聚焦 `νg7/2[404]7/2+` 强耦合带。
 - [[133ce]] - 中高自旋多带、三轴性及 N=75 signature splitting。
@@ -59,6 +63,9 @@ updated: 2026-07-12
 - [[152dy]] - Lauritsen 2025 GRETINA tracking-array 方法示例中的 high-spin `152Dy` 实验信息入口。
 
 ## Bands
+
+- [[133ce-positive-parity-mchd-pair]] / [[133ce-negative-parity-mchd-pair]] - Ayangeakaa 2013 标签体系中的 Bands 2–3 与 5–6，保留 MχD candidate 和 lifetime gap。
+- [[78br-positive-parity-mchd-pair]] / [[78br-negative-parity-mchd-pair]] - Liu 2016 Bands 1–2 与 3–4；后者 configuration tentative。
 
 - [[131xe-nu-h11-2-favored-sequence]] - `131Xe` νh11/2 favored 负宇称基准序列。
 - [[131xe-negative-parity-yrare-sequence]] - 被提出为 unfavoured signature partner 的 yrare 序列。
@@ -73,6 +80,12 @@ updated: 2026-07-12
 
 ## Concepts
 
+- [[nuclear-chirality]] / [[chiral-doublet-bands]] - aplanar 左右手角动量几何、量子恢复与实验伙伴带的分层。
+- [[multiple-chiral-doublet-bands]] - 同一核中多于一对手征伙伴候选及其逐对证据要求。
+- [[chiral-vibration]] / [[static-chirality]] - 左右手软振动、有限隧穿与较稳定 aplanar regime 的动力学边界。
+- [[triaxial-shape-coexistence]] - 多个三轴形变/组态候选与实验带对应的模型—实验联合解释。
+- [[octupole-correlation]] / [[octupole-softness]] / [[octupole-deformation]] - 八极关联、软势能面与稳定八极形变的分层边界。
+- [[reflection-symmetry-breaking]] / [[chirality-parity-quartet-band]] - 内禀反射对称性与未观测 quartet future proposal。
 - [[direct-feeding]] - 与 side feeding 区分的离散 gamma feeding component；在 Ionescu 1981 的 feeding-aware population model 中是关键项。
 
 - [[triaxial-deformation]] - 三轴形状与更强结构解释的层级关系。
@@ -89,6 +102,7 @@ updated: 2026-07-12
 
 ## Experiments
 
+- [[ithembalabs-afrodite-diamant-78br-c12-60-65mev]] - 60/65 MeV `70Zn(12C,p3n)78Br`、AFRODITE clovers、DIAMANT charged-particle tagging。
 - [[vecc-131xe-alpha-38mev]] - `130Te(4He,3nγ)131Xe`、38 MeV、INGA 数据集。
 - [[atlas-133ce-ne22-112mev]] - `116Cd(22Ne,5n)133Ce`、112 MeV、Gammasphere。
 - [[jurogam2-137nd-ar40-152mev]] - `100Mo(40Ar,3n)137Nd`、152 MeV、JUROGAM II。
@@ -120,6 +134,9 @@ updated: 2026-07-12
 
 ## Observables
 
+- [[energy-staggering-parameter]] - chiral-candidate `S(I)=[E(I)-E(I-1)]/(2I)` 能谱量及其模型依赖。
+- [[be1-be2-ratio]] / [[energy-displacement]] - `78Br` octupole-correlation systematics 及 stable-deformation benchmark 边界。
+
 - [[spin-alignment-attenuation-factor]] - `alpha2/alpha4` 这一由 pure-E2 angular distributions 反推的 alignment observable，以及它与 `sigma/I` 的边界。
 - [[internal-conversion-coefficient]] - 用于 multipolarity 与 `delta` 约束的 ICC observable，含 BrIcc 与图解误差传播边界。
 
@@ -135,6 +152,7 @@ updated: 2026-07-12
 
 ## Methods
 
+- [[angular-distribution]] - 完整角分布与 ADO ratio 的阵列特定 multipolarity calibration；可与偏振联合使用。
 - [[gamma-gamma-coincidence]] - 建立级联与能级纲图。
 - [[angular-correlation]] - γ/particle-γ angular correlation 的 alignment、multipolarity 与 deorientation correction 入口。
 - [[dco-ratio]] / [[linear-polarization-asymmetry]] - 多极性和电磁性质约束。
@@ -159,6 +177,7 @@ updated: 2026-07-12
 
 ## Projects
 
+- [[nuclear-chirality-and-multiple-chiral-doublet-bands]] - 连接核手征理论、`133Ce`/`78Br` MχD 实验、shape coexistence 与 octupole correlations 的 evidence map。
 - [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
 - [[gamma-soft-deformation-evidence-map]] - 连接 γ-soft/γ-rigid 判据、模型、`136Sm` 实验参照、证据缺口与未来 `131Ce/133Ce` 数据的 evidence map。
 - [[135pr-wobbling-controversy]] - 跟踪 `135Pr` low-spin bands 的 wobbling/TiP 竞争解释与 supporting/counter evidence。

@@ -3,7 +3,7 @@ type: experiment
 title: "ATLAS Gammasphere 133Ce experiment"
 aliases: [116Cd(22Ne,5n)133Ce Gammasphere]
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-13
 status: active
 review_status: unreviewed
 experiment_id: atlas-133ce-ne22-112mev
@@ -16,7 +16,7 @@ evaporation_channel: 5n
 residual_nuclei: [133ce]
 detector_array: Gammasphere
 data_status: published
-sources: [ayangeakaa-2016-133ce-in-beam]
+sources: [ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce, ayangeakaa-2016-133ce-in-beam]
 tags: [fusion-evaporation, gammasphere, high-spin, a130]
 ---
 
@@ -59,9 +59,10 @@ Gammasphere 在两次实验中分别有 101、88 个有效 Compton-suppressed HP
 
 ## Sources
 
+- [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]]
 - [[ayangeakaa-2016-133ce-in-beam]]
 
 ## Evolution Log
 
 - 2026-07-01：由 2016 全谱学论文建立。
-
+- 2026-07-13：接入 2013 MχD PRL 对两次实验、`4.1 x 10^9` events 和 DCO/角分布用途的直接描述。

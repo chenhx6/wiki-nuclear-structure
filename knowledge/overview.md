@@ -2,12 +2,25 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-12
+updated: 2026-07-13
 ---
 
 # Knowledge Base Health Dashboard
 
-## Current Snapshot: 2026-07-12
+## Current Snapshot: 2026-07-13
+
+This snapshot records the completed joint source-review finalization for Meng 2010, Ayangeakaa 2013 (`133Ce`), and Liu 2016 (`78Br`). The user reviewed all three source pages; the finalization clarified the semiclassical TAC tunneling boundary, the `133Ce` bandhead and `135Nd` systematics, the `78Br` quartet future-observation wording, and the role of `S(I)`. Derived project/concept/nucleus/band pages retain independent page-level review status.
+
+| 项目 | 当前状态 | 说明 |
+|---|---:|---|
+| source pages | 38 | 新增 Meng 2010、Ayangeakaa 2013、Liu 2016 |
+| nucleus / band pages | 10 / 24 | 新增 `78Br` 与 `133Ce`/`78Br` 四个 source-specific MχD pair pages |
+| concept / observable / method pages | 31 / 16 / 15 | 新增 chirality dynamics、MχD、triaxial shape coexistence、octupole terminology、`S_chiral(I)`、E1/E2、`delta E` 与 ADO |
+| project pages | 7 | 新增 `[[nuclear-chirality-and-multiple-chiral-doublet-bands]]` evidence map |
+| reviewed source claims | 39 | `M10-1..11`、`A13-1..13`、`L16-1..15` 均为 `needs_review: false`；无缺失 locator/kind |
+| review boundary | source review complete | 三篇 source 已 human-reviewed；project 与派生知识页仍保留独立 page-level review 状态，正式论文使用仍按 claim-specific evidence gate 回原文核验 |
+
+## Previous Snapshot: 2026-07-12
 
 This snapshot reflects the finalized review round for the four gamma-spectroscopy method sources added on 2026-07-12: Rezynkina 2017, Kramer-Flecken 1989, Kibedi 2008, and Rusev 2009. The user review accepted the method/project bundle, corrected the KF89 `sigma/I` low-spin boundary and experimental `R_DCO` formula linkage, and required the Rusev branch-selection note to remain tightly framed as an author-judgment statement rather than a direct observable fact.
 

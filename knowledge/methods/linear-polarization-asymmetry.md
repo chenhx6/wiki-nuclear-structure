@@ -50,6 +50,8 @@ tags: [multipolarity, electric-magnetic-character]
 
 [[rusev-2009-multipole-mixing-ratios-11b]] 则给出另一种边界：即使 measured asymmetry 很干净，predicted asymmetry versus `delta` 仍可能给出两支解。该文对 `11B` 选择较小 `|delta|` branch，是因为大 `|delta|` branch 会对应异常大的 `E2` admixture，而不是因为 asymmetry 本身已经唯一选解。
 
+[[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] 用两个 90° AFRODITE clovers 作 Compton polarimeters，并与 [[angular-distribution]] 中的 ADO ratio 联合约束 `78Br` linking transitions；其 Fig.3 采用正值为 electric、负值为 magnetic 的本文约定。
+
 ## Sources
 
 - [[chakraborty-2023-131xe-wobbling-origin]]
@@ -57,6 +59,7 @@ tags: [multipolarity, electric-magnetic-character]
 - [[guo-2022-low-spin-wobbling-187au]]
 - [[rusev-2009-multipole-mixing-ratios-11b]]
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
+- [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]]
 
 ## Evolution Log
 
@@ -64,3 +67,4 @@ tags: [multipolarity, electric-magnetic-character]
 - 2026-07-03：加入 `135Pr` electric/M1 同核素偏振对照。
 - 2026-07-04：加入 Guo 2022 的联合 `P-R_ac` 选解与偏振误差低估风险。
 - 2026-07-12：加入 Rusev 2009 的 polarized-photon asymmetry 技术与双解边界。
+- 2026-07-13：加入 Liu 2016 AFRODITE ADO+polarization linking-transition 案例。
