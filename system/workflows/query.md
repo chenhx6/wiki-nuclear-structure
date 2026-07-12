@@ -103,8 +103,8 @@ qmd.cmd status
 - 已人工审核内容仍可在用户质疑、新证据冲突、精确核查或论文使用时重新检查。不得把 `human-reviewed` 当作永久正确、完整或已充分挖掘的保证。
 - synthesis 只能帮助综合和导航，不能替代原始 source/raw。
 - source/claim 引用继续以知识页和原始 locator 为准，不得只引用 vocabulary。
-- 相关回答末尾用轻量的“Wiki 中对应的主要证据入口”列出最直接支持当前判断的 source、project、synthesis、concept、observable、nucleus 或 band 内容。ordinary mode 每项固定为：`**文献或页面名称** — 证据：一句话说明支持什么。`，下一行给 `[内容页](E:/imp/wiki/真实文件.md:真实行号)`。当前 Codex 客户端会在实时渲染可编辑视图中打开实际 Wiki 文件；该入口只是回答依据导航，不表示内容已经人工审核。
-- 回答时必须读取目标文件并使用直接承载该判断的 claim、段落、表格行或小节内容的真实行号；不得猜测行号，也不得在已有精确位置时只链接文件开头。若当前客户端实测不支持 `文件.md:行号` 定位，退化为 `[内容页](E:/imp/wiki/真实文件.md)`，并紧随 `定位：## 实际小节 → claim/段落名称`，同时如实说明未实现直接行号跳转。不得只给裸页面名、slug、反引号包裹的 `[[wikilink]]` 或裸 `[[wikilink]]`；名称或 alias 对应多个文件时列出已解析的候选路径，不得猜测。ordinary mode 不默认显示 citation key、raw PDF、review 状态或完整 locator；用户要求原文核实、论文级审查或进入 strict paper mode 时，再补充 citation key、raw PDF、review 状态、locator 和 claim-to-source 表。该规则只约束 Codex/chat 输出，不要求改写 Wiki 正文中的现有 Wikilink；不得为改变打开界面而修改 source/project/synthesis、制造 fake/空白 diff 或创建临时 commit。
+- Wiki 直接支持的判断使用 inline evidence link，紧跟在被支持的句子或分句后；anchor text 写明可读的页面/文献名称和已核实的 `line N`。多来源综合用校准措辞并并列最直接的 1-3 个链接；一般背景不机械加链接；重要但 Wiki 缺少直接证据的判断就在原处说明证据缺口和 provenance。普通回答不默认生成末尾重复证据区，只有用户明确要求来源汇总或 strict review 需要时才增加独立来源区；详细格式以 Skill 为准。
+- 回答时必须读取目标文件并使用直接承载判断的真实行号，不得猜测或在已有精确位置时只链接文件开头。若客户端不支持 `文件.md:行号`，退化为带可读页面名称和已核实小节/claim 定位的可点击文件链接，并如实说明。不得使用 `[内容页]`、`[打开证据位置]`、`[证据页]` 等无信息 anchor，不得只给裸页面名、slug、反引号包裹的 `[[wikilink]]` 或裸 `[[wikilink]]`；名称或 alias 多候选时列出已解析路径，不得猜测。ordinary mode 不默认显示 citation key、raw PDF、review 状态或完整 locator；该规则只约束 Codex/chat 输出，不要求改写 Wiki 正文中的 Wikilink。
 - 纯查询保持 read-only，不运行 EOL 清理脚本。查询一旦转入持久化或文件修改，必须在第一次写入前执行 `check.md` 的 write-entry preflight；后续 commit/push 继续执行对应阶段，不在本 workflow 复制脚本实现。
 - 证据不完整时，应校准措辞、说明限制并指出值得补查的方向，而不是无必要地拒绝回答。
 - 不得把综合或推断伪装成某一来源直接报告的结论，也不得把“当前尚无直接证据”自动解释为“该判断一定错误”。

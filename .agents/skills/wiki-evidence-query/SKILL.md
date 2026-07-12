@@ -79,41 +79,53 @@ description: >-
 
 Low-token answering reduces retrieval overhead, not source visibility.
 
-When the Wiki already has a useful source page, citation key, data locator, or
-page entry, expose the best verification entry even for unreviewed material.
-Say what is missing when source or locator support is incomplete. For a citation
-request, use existing Wiki sources first, then retrieve externally if coverage,
-currency, or breadth is insufficient.
+## Inline evidence-link presentation
 
-End relevant answers with a lightweight `Wiki 中对应的主要证据入口` section.
-Use this fixed lightweight ordinary-mode form:
+- Put a verified Wiki link immediately after the sentence or clause it
+  supports. Do not default to a separate end-of-answer evidence section.
+- Use informative anchor text that identifies the readable page or literature
+  name and the exact line, for example:
 
-```markdown
-- **Literature or page name** — 证据：one sentence stating what it supports.
-  [内容页](E:/imp/wiki/knowledge/sources/example.md:42)
-```
+  ```markdown
+  Angular distributions can admit multiple solutions when alignment and
+  mixing ratio are not independently constrained. [Angular Distribution（line
+  17）](E:/imp/wiki/knowledge/methods/angular-distribution.md:17)
+  ```
 
-In the current Codex client this link opens the actual Wiki file in the live
-rendered editable view. It is navigation to the answer's evidence, not proof
-that the scientific content was human-reviewed. Read the target file during the
-answer and use the actual line carrying the claim, paragraph, table row, or
-section content; never guess a line number or point only to the file start when
-a precise evidence location is available. Prefer the source, project,
-synthesis, concept, observable, nucleus, or band location that most directly
-supports the answer.
-
-If the current client has been tested and does not navigate `file.md:line`,
-fall back to a clickable file link plus `定位：## actual section → claim or
-paragraph name`, and state that direct line navigation was not achieved.
-Never output only a page name, slug, a bare `[[wikilink]]`, or a Wiki entry
-wrapped in backticks. If a name or alias resolves to multiple files, list the
-candidate links instead of guessing. In ordinary answers, do not default to
-citation keys, raw PDF paths, review status, full locators, or long evidence
-cards. Add citation keys, raw PDF paths, review status, and full locators only
-when the user requests direct-source verification or strict paper review. This
-output rule does not require converting Wikilinks inside Wiki Markdown files.
-Do not modify source/project/synthesis pages, create fake or whitespace-only
-diffs, or make temporary commits merely to change how evidence links open.
+- For a synthesis or inference supported by several pages, say `综合来看`,
+  `可以推断`, or equivalent calibrated wording, then place the most direct
+  1-3 informative links after that sentence. Do not present a synthesis as one
+  source's direct report or stack links merely for completeness.
+- Stable, simple general scientific background need not carry a Wiki link.
+  Missing links do not by themselves mean that the Wiki lacks coverage.
+- If an important, specific judgment could be mistaken for Wiki evidence but
+  the Wiki lacks direct support, say so at that judgment and identify it as
+  general background, external evidence, or inference. Do not repeatedly warn
+  about ordinary background.
+- When the Wiki has a source page, citation key, data, locator, or page entry,
+  expose the most useful verification route even for unreviewed material. Use
+  Wiki sources first for source requests, then retrieve externally when
+  coverage, currency, or breadth is insufficient.
+- Only add a separate source list, bibliography, evidence-navigation section,
+  claim-to-source table, or similar evidence block when the user explicitly
+  asks for it or strict paper review needs it. Do not repeat inline links there.
+- Read the target file and use the actual line carrying the claim, paragraph,
+  table row, or section content. Never guess a line number or link only to the
+  file start when a precise location is available. If the client cannot
+  navigate `file.md:line`, use a clickable link with the readable page name and
+  the verified section/claim location, and state that line navigation was not
+  achieved.
+- Never use generic anchors such as `[内容页]`, `[打开证据位置]`, or
+  `[证据页]`; never output only a page name, slug, bare `[[wikilink]]`, or a
+  backtick-wrapped Wiki entry. If a page name or alias resolves to multiple
+  files, list the resolved candidate links instead of guessing.
+- In ordinary answers, do not default to citation keys, raw PDF paths, review
+  status, full locators, or long evidence cards. Add them when direct-source
+  verification or strict paper review requires them. This output rule only
+  governs Codex/chat answers; it does not require converting Wikilinks inside
+  Wiki Markdown files.
+- Do not modify source/project/synthesis pages, create fake or whitespace-only
+  diffs, or make temporary commits merely to change link presentation.
 
 ## Retrieval budget
 

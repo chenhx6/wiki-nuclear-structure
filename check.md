@@ -257,11 +257,11 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 回答明确区分直接事实、作者解释、模型结果、跨来源综合和暂时推断。
 - [ ] 证据不完整时已降低表述强度并说明限制，而不是无必要地拒绝回答。
 - [ ] 普通问答、研究讨论、综合分析或早期草稿没有误用投稿级 paper evidence gate。
-- [ ] 相关回答末尾的“Wiki 中对应的主要证据入口”优先链接最直接支持判断的 source/project/synthesis 等真实 Wiki 内容；ordinary mode 每项固定为 `**文献或页面名称** — 证据：一句话说明支持什么。`，下一行给精确的 `[内容页](E:/imp/wiki/真实文件.md:真实行号)`。
-- [ ] 回答没有只给裸页面名、slug、反引号包裹的 `[[wikilink]]` 或裸 `[[wikilink]]`；名称或 alias 有多个候选时列出已解析的候选路径，没有猜测。
+- [ ] Wiki 直接支持的关键判断使用就地 informative line link；anchor text 让用户看出页面/文献名称和 `line N`，没有默认重复生成末尾证据区。
+- [ ] 没有使用 `[内容页]`、`[打开证据位置]`、`[证据页]` 或其它无信息 anchor；没有只给裸页面名、slug、反引号包裹的 `[[wikilink]]` 或裸 `[[wikilink]]`；名称或 alias 有多个候选时列出已解析路径，没有猜测。
 - [ ] 行号是在回答时读取目标文件后确定，落在直接承载判断的 claim、段落、表格行或小节内容，没有猜测行号或在可精确定位时只链接文件开头。
-- [ ] 已如实说明当前行号链接打开实际 Wiki 文件的实时渲染可编辑视图；证据入口只是回答依据导航，没有写成已完成人工审核的证明。
-- [ ] 若当前客户端实测不支持 `文件.md:行号`，已退化为可点击文件链接加 `定位：## 实际小节 → claim/段落名称`，并如实说明未实现直接行号跳转；没有声称可保证 heading fragment。
+- [ ] 综合/推断使用校准措辞并并列最直接的 1-3 个链接；重要但 Wiki 缺直接证据的判断已在原处说明缺口和 provenance；一般背景没有被机械要求附链接。
+- [ ] 已如实说明行号链接打开实际 Wiki 文件的实时渲染可编辑视图；若客户端不支持 `文件.md:行号`，已使用带页面名称和已核实小节/claim 定位的可点击 fallback，并说明未实现直接行号跳转。
 - [ ] ordinary mode 没有默认显示 citation key、raw PDF、review 状态、完整 locator 或长 evidence card；原文核实、论文级审查或 strict paper mode 按需补充 citation key、raw PDF、review 状态、locator 和 claim-to-source 表，且未要求批量改写 Wiki 正文中的 Wikilink。
 - [ ] 没有为了改变证据入口的打开界面而修改 source/project/synthesis、制造 fake/空白 diff、使用 `code-comment` 冒充只读入口或创建临时 commit。
 - [ ] 综合或推断已标明其性质和主要支撑来源，没有伪装成来源直接结论。
