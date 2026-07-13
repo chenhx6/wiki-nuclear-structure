@@ -8,34 +8,34 @@ updated: 2026-07-13
 ## Active handoff
 
 Current active task:
-Three-source nuclear-chirality/MχD review finalization complete.
+Finalize the reviewed three-source gamma-ray linear-polarization and Compton-polarimetry bundle, including the two user-requested notation/display corrections and explicit BibTeX inclusion.
 
 Current branch / local commit:
-`main`; current HEAD is the final review commit `Finalize nuclear chirality and MChD source review` after amending the prior WIP. Verify remote synchronization before the next task. The user-owned `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
+`main`; the active WIP is being amended into the final review commit. The user explicitly authorized including the existing `raw/zotero/wiki-inbox.bib` diff in this commit.
 
 Last task status:
-Meng 2010, Ayangeakaa 2013, and Liu 2016 completed joint human source review. All 39 claims are `needs_review: false`. Corrections clarify semiclassical TAC tunneling, states a/b as Bands 2/5 bandheads, bounded `135Nd` systematics for the missing `133Ce` lifetime information, and `78Br` quartet as a future-observation possibility. The existing `S(I)` observable page now connects all three sources.
+Jones 2002, Go 2024 and Longfellow 2026 were deep-read and user-reviewed. J02-13 now escapes the `|P|` table pipes; G24-7 now carries the `nu_j` division index and defines `j`. Source and project claim-level review markers are cleared; derived method/observable pages retain independent page-level status.
 
 Unfinished items:
-None for this source-review round. The project and derived knowledge pages retain independent page-level review status.
+Run final lint/checks, refresh QMD, explicitly stage the reviewed bundle plus the authorized BibTeX file, amend the active WIP to the final commit, and push `origin main`.
 
 P0 focus:
-None identified for the completed three-source review.
+No unresolved source/project claim-level P0 remains after the user's review. Future work should preserve the P/A/Q, detector-response and Lorentz/Doppler boundaries.
 
 Remaining P0:
-None.
+None for this reviewed source/project bundle; derived pages and future paper use remain independently reviewable.
 
 Risks:
-Keep Meng review examples distinct from original experimental facts. Keep `133Ce` MχD/shape coexistence author/model-supported; `135Nd` systematics do not replace `133Ce` lifetimes. Keep `78Br` octupole correlations/softness distinct from stable octupole deformation; quartet remains a future-observation possibility rather than a direct assignment. Preserve the user-owned `.bib` diff.
+Keep physical P, measured A and detector Q separate; do not generalize Jones's maximum-alignment `|P|=1` examples. Keep Go's detector demonstration, simulations and inferred polarization distinct. Keep Longfellow's laboratory-frame Lorentz correction distinct from Doppler energy correction and do not present simple energy ordering as universally superior to full tracking. Stage the user-authorized `.bib` diff without rewriting it.
 
 Checks:
-Final review checks and QMD refresh were run in the finalization turn; consult the final response/log for exact results.
+Write-entry EOL cleanup returned zero unsafe knowledge changes. Final lint, QMD refresh, staged diff checks and push verification remain to be run after the two corrections.
 
 Next prompt / continuation phrase:
-继续 nuclear chirality 项目：选择 lifetime/absolute-transition-strength 或竞争解释 source，先检查与现有 project 的 evidence gap。
+After final checks, amend the active WIP as `Ingest gamma-ray linear polarization and relativistic correction sources` and push `origin main`; future work can map the reviewed method boundaries to a concrete P-ADO dataset.
 
 Recent user decisions:
-User completed the joint review and approved finalization/push after the five stated corrections. The project and derived pages were not automatically promoted to human-reviewed.
+The user reviewed all three source/project pages, requested only the J02-13 display and G24-7 `j`-index corrections, and explicitly authorized committing and pushing together with the existing `raw/zotero/wiki-inbox.bib` change. Do not stage raw PDFs or unrelated files.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

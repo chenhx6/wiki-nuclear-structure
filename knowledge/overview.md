@@ -9,6 +9,21 @@ updated: 2026-07-13
 
 ## Current Snapshot: 2026-07-13
 
+This snapshot records the completed user review of the three-source gamma-ray linear-polarization and Compton-polarimetry ingest. Jones 2002, Go 2024 and Longfellow 2026 have deep-read, claim-reviewed source pages; the evidence-map project separates physical polarization, measured asymmetry, detector sensitivity, efficiency, alignment, detector response and relativistic corrections. Derived method/observable pages retain their independent page-level review state.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 41 | Added Jones 2002, Go 2024 and Longfellow 2026. |
+| concept / method / observable pages | 33 / 17 / 19 | Added the minimal P/A/Q, Compton, modulation, efficiency and Lorentz/Doppler anchors. |
+| project pages | 8 | Added [[gamma-ray-linear-polarization-in-nuclear-spectroscopy]] evidence map. |
+| source pages unreviewed | 0 | Jones 2002, Go 2024 and Longfellow 2026 source pages were moved to `review_status: human-reviewed`; page-level review remains distinct from claim-level `needs_review`. |
+| source claim-level `needs_review: true` | 0 | The user-reviewed source bundle has no remaining claim-level review markers. |
+| claim missing locator / kind | 0 / 0 | Lint found no missing locator or claim kind in source tables. |
+| raw hash coverage | 41/41 | All source raw-file hashes match. |
+| review boundary | source/project review complete | The source bundle and evidence map are reviewed; derived pages and any paper use still require their own page/claim-specific checks. |
+
+## Previous Snapshot: 2026-07-13
+
 This snapshot records the completed joint source-review finalization for Meng 2010, Ayangeakaa 2013 (`133Ce`), and Liu 2016 (`78Br`). The user reviewed all three source pages; the finalization clarified the semiclassical TAC tunneling boundary, the `133Ce` bandhead and `135Nd` systematics, the `78Br` quartet future-observation wording, and the role of `S(I)`. Derived project/concept/nucleus/band pages retain independent page-level review status.
 
 | 项目 | 当前状态 | 说明 |

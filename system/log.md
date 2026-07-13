@@ -520,3 +520,38 @@ updated: 2026-07-12
 
 - Applied the joint review to Meng 2010, Ayangeakaa 2013, and Liu 2016; all 39 source claims are now reviewed.
 - Clarified semiclassical TAC tunneling, `133Ce` bandheads and bounded `135Nd` systematics, `78Br` quartet future-observation wording, and the cross-source role of `S(I)`.
+
+## [2026-07-13] ingest-checkpoint | Jones 2002 Compton polarimeter calibration
+
+- Deep-read Jones 2002 and added the source note with P/A/Q definitions, Klein-Nishina sensitivity, a2/a4 and Rose-Brink formalism, calibration examples, and low-energy detector boundaries.
+- Go 2024 and Longfellow 2026 remain to be ingested; detailed Jones sign-sensitive and numerical claims are pending human review.
+
+## [2026-07-13] ingest-checkpoint | Go 2024 CdTe Compton-camera demonstration
+
+- Deep-read Go 2024 and added the source note covering the 20-layer CdTe camera, `56Fe(p,p'gamma)` 847-keV calibration, two-hit event selection, Geant4/ComptonSoft response, likelihood inference, modulation factor and sensitivity-efficiency trade-off.
+- Longfellow 2026 remains to be ingested; Go numerical detector claims and response-inference locators are pending human review.
+
+## [2026-07-13] ingest-checkpoint | Longfellow 2026 GRETINA in-beam polarimetry
+
+- Deep-read Longfellow 2026 and added the source note covering energy ordering, Gaussian alignment, P/A0/Q, mixed-transition ambiguity, laboratory-frame Lorentz aberration/Jacobian and separate Doppler-energy correction.
+- All three source notes are complete; project/method-page updates and final checks remain. Formula-level and numerical claims await user review.
+
+## [2026-07-13] ingest-checkpoint | gamma-ray linear-polarization evidence map
+
+- Added the project `gamma-ray-linear-polarization-in-nuclear-spectroscopy` and minimal P/A/Q, Compton, modulation, efficiency, Lorentz and Doppler knowledge anchors; updated the index and overview.
+- Wiki lint passes with 0 errors; QMD and final Git checks remain before a local WIP commit. No push is authorized in this task.
+
+## [2026-07-13] ingest-checkpoint | gamma-ray linear-polarization QMD refresh
+
+- `qmd update`, `qmd embed -c nuclear-knowledge` and `qmd status` completed; the collection has 190 indexed Markdown files and 999 embedded vectors with no pending count shown.
+- Final Git checks and the local WIP checkpoint commit remain; no push is authorized.
+
+## [2026-07-13] ingest | gamma-ray linear-polarization WIP checkpoint
+
+- Created local `WIP ingest: gamma-ray linear polarization sources for user review` on `main` after explicit staging, lint/tests, QMD refresh and staged diff checks.
+- Post-commit cleanup/status show only the protected `raw/zotero/wiki-inbox.bib` change; no push was performed.
+
+## [2026-07-13] review | gamma-ray linear-polarization source bundle
+
+- User review completed for Jones 2002, Go 2024, Longfellow 2026 and the evidence map. Corrected the J02-13 table pipe escape and restored the Go Eq.3 `nu_j` division index; source/project claim review markers are cleared.
+- Existing `raw/zotero/wiki-inbox.bib` is explicitly authorized for the final amend/push; final lint, QMD refresh and Git checks remain.

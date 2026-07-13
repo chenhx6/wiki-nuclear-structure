@@ -49,6 +49,10 @@ updated: 2026-07-12
 - [[summary-2013-bases-spin-parity-assignments]] - Nuclear Data Sheets spin/parity assignment guide；高自旋 angular-distribution / DCO heuristic 使用典型 `σ/I = 0.3`。
 - [[gray-2020-hyperfine-fields-g-factor-measurements]] - TDPAD / `g`-factor host-field paper；作为 empirical `sigma/I` expectation 可能失效的边界案例。
 
+ - [[jones-2002-calibration-compton-polarimeters]] - Compton polarimeter calibration 的 `P`/`A`/`Q` 定义、Klein-Nishina sensitivity、a2/a4 与 Rose-Brink 混合跃迁形式。
+ - [[go-2024-demonstration-nuclear-gamma-ray-polarimetry-cdte]] - multi-layer CdTe Compton camera 的 `56Fe` 847-keV demonstration、响应模拟、modulation curve 与 sensitivity-efficiency trade-off。
+ - [[longfellow-2026-gretina-energy-ordering-polarization]] - GRETINA in-beam angular/polarization formalism、energy ordering、Lorentz angle correction 与 Doppler correction 分层。
+
 ## Nuclei
 
 - [[78br]] - A≈80 odd-odd nucleus；当前聚焦正/负宇称 MχD 候选与 octupole correlations/softness。
@@ -100,6 +104,9 @@ updated: 2026-07-12
 - [[tilted-precession-bands]] - 完整三维转动的倾斜进动带，以及与 harmonic wobbling approximation 的理论边界。
 - [[magnetic-substate-population]] / [[spin-alignment]] / [[deorientation]] / [[side-feeding]] / [[sigma-over-i]] - P-ADO/角分布分析中 alignment-width、deorientation 与 feeding dependence 的基础术语边界。
 
+ - [[gamma-ray-linear-polarization]] - physical photon polarization `P` 与 detector-level `A`/`Q` 的分层边界。
+ - [[lorentz-boost-correction]] - in-beam center-of-mass/laboratory angle aberration、solid-angle factor 与 polarization-ratio cancellation。
+
 ## Experiments
 
 - [[ithembalabs-afrodite-diamant-78br-c12-60-65mev]] - 60/65 MeV `70Zn(12C,p3n)78Br`、AFRODITE clovers、DIAMANT charged-particle tagging。
@@ -150,6 +157,10 @@ updated: 2026-07-12
 - [[transition-quadrupole-moment]] - 寿命/E2 集体性与形变尺度的诊断量。
 - [[angular-distribution-coefficient]] / [[attenuation-coefficient]] - 角分布 `A2/A4` 与 spin-alignment attenuation `αK` 的区分。
 
+ - [[experimental-asymmetry]] - Compton count/modulation asymmetry `A`/`A0` and its distinction from physical polarization `P`.
+ - [[polarization-sensitivity]] - detector/geometry response `Q`, modulation factor `Q'`, and `epsilon Q^2` efficiency trade-off.
+ - [[detection-efficiency]] - selected Compton-event efficiency and figure-of-merit boundary.
+
 ## Methods
 
 - [[angular-distribution]] - 完整角分布与 ADO ratio 的阵列特定 multipolarity calibration；可与偏振联合使用。
@@ -165,6 +176,10 @@ updated: 2026-07-12
 - [[internal-conversion-analysis]] - 由 electron/gamma 或 X-ray/gamma 比、BrIcc 与 mixed-transition ICC 公式约束 `delta` 的方法页。
 - [[time-differential-perturbed-angular-distribution]] - TDPAD 振幅、alignment 与 hyperfine precession 的时间依赖方法边界。
 - [[g-factor-measurement]] - 核 `g` 因子测量与 TDPAD / hyperfine-field 条件依赖的最小方法入口。
+
+ - [[compton-polarimetry]] - Klein-Nishina Compton-scattering analysis、detector response 与 P/A/Q calibration chain。
+ - [[modulation-curve]] - azimuthal modulation extraction、background/response normalization 与 `Q'`/`A0` fit forms。
+ - [[doppler-correction]] - event-by-event in-beam gamma energy correction，与 Lorentz angular correction 分开记录。
 
 ## Synthesis
 
@@ -184,6 +199,8 @@ updated: 2026-07-12
 - [[187au-longitudinal-wobbling-controversy]] - 已审核的 Sensharma 2020/Guo 2022 locator-level evidence matrix；跟踪 `187Au` LW、single-particle excitation、associated signature partner 与低自旋近似争议。
 - [[low-spin-wobbling-controversies]] - `135Pr/187Au` 低自旋 wobbling identification 跨案例证据地图；接入 γ-soft 背景、Lawrie 2020/TiP、`135Nd` reference 与 Nomura 2022 IBFM alternative。
 - [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]] - 支持 NST/P-ADO 写作的 `σ/I` 预设困难、alignment uncertainty 与 feeding dependence evidence map。
+
+ - [[gamma-ray-linear-polarization-in-nuclear-spectroscopy]] - P/A/Q formalism、Compton detector technologies、GRETINA relativistic corrections 与 P-ADO bridge 的 evidence map。
 
 ## Decisions and Failures
 

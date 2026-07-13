@@ -10,7 +10,7 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-None.
+No active entries. The gamma-ray linear-polarization WIP was reviewed and is being finalized in the current amend/push workflow.
 
 ## Legacy completed entries
 

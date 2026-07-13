@@ -31,6 +31,10 @@ tags: [gamma-ray-tracking, angular-distribution, angular-correlation, linear-pol
 
 Tracking arrays can reduce one classical detector-geometry correction, but they do not remove the need to model nuclear alignment, magnetic-substate population, deorientation or feeding history. In Lauritsen 2025, detector solid-angle attenuation and nuclear alignment attenuation are explicitly different uses of `alpha_k`.
 
+## Longfellow 2026 Connection
+
+Longfellow et al. demonstrate a GRETINA in-beam path that orders interaction points by energy, uses event-by-event Doppler correction, and applies the laboratory-frame Lorentz angle transformation before comparing angular distributions and polarization. Their result is a method characterization under stated conditions, not a claim that simple ordering is universally superior to full tracking. See [[lorentz-boost-correction]], [[doppler-correction]] and [[longfellow-2026-gretina-energy-ordering-polarization]].
+
 ## Project Relevance
 
 For [[sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction]], this page is only an instrumentation/method anchor. It supports the statement that a modern tracking-array formalism still contains explicit `Pm(J)` and `sigma/J` assumptions for in-beam angular distributions; it does not provide a universal `sigma/I` prior.

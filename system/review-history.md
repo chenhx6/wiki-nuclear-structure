@@ -32,6 +32,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 - related pages: `knowledge/sources/rezynkina-2017-graphical-extraction-multipole-mixing-ratios.md`, `knowledge/sources/kramer-flecken-1989-use-dco-ratios.md`, `knowledge/sources/kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc.md`, `knowledge/sources/rusev-2009-multipole-mixing-ratios-11b.md`, `knowledge/methods/dco-ratio.md`, `knowledge/concepts/sigma-over-i.md`, `knowledge/projects/sigma-over-i-uncertainty-in-pado-mixing-ratio-extraction.md`
 - review commit message: Finalize gamma spectroscopy method source review
 
+### 2026-07-13 - gamma-ray linear-polarization and Compton-polarimetry sources - round 1
+
+- review scope: Jones 2002 `J02-1..13`, Go 2024 `G24-1..15`, Longfellow 2026 `L26-1..16`, and the gamma-ray linear-polarization evidence map
+- user decisions: all reviewed content was accepted apart from the J02-13 table-display issue and the missing Go Eq.3 division index
+- corrections requested: escape the `|P|` pipes in J02-13; restore the `nu_j` normalization-factor index and define `j` as the division index in G24-7
+- unresolved issues: none for the reviewed source/project claim bundle; derived method/observable pages retain independent page-level review status
+- next action: use the reviewed P/A/Q, detector-response and Lorentz/Doppler boundaries for future detector-specific or P-ADO mapping work
+- related pages: `knowledge/sources/jones-2002-calibration-compton-polarimeters.md`, `knowledge/sources/go-2024-demonstration-nuclear-gamma-ray-polarimetry-cdte.md`, `knowledge/sources/longfellow-2026-gretina-energy-ordering-polarization.md`, `knowledge/projects/gamma-ray-linear-polarization-in-nuclear-spectroscopy.md`
+- review commit message: Ingest gamma-ray linear polarization and relativistic correction sources
+
 ## Entry template
 
 ```markdown
