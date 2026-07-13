@@ -22,6 +22,8 @@ tags: [high-spin, triaxiality, chirality]
 
 通过最小化 Routhian `H-ω·J` 并要求 ω 与 J 平行确定取向。
 
+Frauendorf 2001 makes the rotating-frame form explicit as `H-prime = H - omega dot J` (and `h-prime = h - omega dot J` for the mean field). A self-consistent solution couples deformation, quasiparticle configuration, rotational frequency and the orientation of `J`.
+
 ## Degrees of Freedom
 
 转动频率、形变和角动量方向；可得到 principal-axis、planar 或 aplanar 解。
@@ -60,12 +62,15 @@ tags: [high-spin, triaxiality, chirality]
 
 [[particle-rotor-model]]
 
+Use the symmetry labels explicitly: PAC preserves a signature-like operation; planar TAC breaks it in a principal plane; aplanar TAC breaks the relevant planar symmetry and yields opposite-handed intrinsic solutions. These are model classifications, not direct band labels.
+
 ## Sources
 
 - [[frauendorf-meng-1997-tilted-rotation-chirality]]
 - [[ayangeakaa-2016-133ce-in-beam]]
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[meng-2010-open-problems-nuclear-chirality]]
+- [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
 
 ## Evolution Log
 

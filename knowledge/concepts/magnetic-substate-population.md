@@ -74,9 +74,12 @@ P-ADO 或 in-beam angular-distribution / polarization fitting 的核心难点之
 
 本页作为 P-ADO / angular-distribution 项目的术语边界页使用。任何具体数值、拟合区间或 low-spin / high-spin 结论，都应回到 source locator 或明确标记为 project-level inference。
 
+Diamond 1966 provides an early heavy-ion example: entrance-channel orbital angular momentum is expected to populate substates near `m=0`, neutron evaporation broadens the distribution, and stretched-E2 `A2/A4` data are compared with a Gaussian reference. The paper also records deviations and extranuclear deorientation limits, so the Gaussian is not a universal population law.
+
 ## Sources
 
 - [[draper-1970-gaussian-substate-side-feeding]]
 - [[zobel-1980-magnetic-substate-distributions]]
 - [[zobel-1983-energy-projectile-alignment]]
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
+- [[diamond-1966-nuclear-alignment-heavy-ion-reactions]]

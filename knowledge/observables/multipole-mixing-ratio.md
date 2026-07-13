@@ -26,6 +26,8 @@ tags: [gamma-transition, multipolarity, wobbling]
 
 可由角分布、角关联/DCO、线偏振和内转换系数与理论响应比较得到。
 
+Diamond 1966 gives an early alignment-dependent route: if a pure transition from the same initial state calibrates the magnetic-substate alignment, a mixed E2/M1 angular distribution can constrain the amplitude mixing ratio. Without that calibration, the paper recommends a probable range rather than a unique value.
+
 ## Diagnostic Use
 
 较大的集体 E2 成分可支持 wobbling-band 间跃迁；接近纯 M1 更符合普通 signature partner。
@@ -75,6 +77,7 @@ ICC-based `delta` extraction 也可能带来明显非对称误差；当 experime
 - [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]]
 - [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]]
 - [[rusev-2009-multipole-mixing-ratios-11b]]
+- [[diamond-1966-nuclear-alignment-heavy-ion-reactions]]
 
 ## Evolution Log
 

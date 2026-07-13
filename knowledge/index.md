@@ -202,6 +202,12 @@ updated: 2026-07-12
 
  - [[gamma-ray-linear-polarization-in-nuclear-spectroscopy]] - P/A/Q formalism、Compton detector technologies、GRETINA relativistic corrections 与 P-ADO bridge 的 evidence map。
 
+## 2026-07-13 Ingest Additions
+
+- Sources: [[diamond-1966-nuclear-alignment-heavy-ion-reactions]] and [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]].
+- Rotating-nuclei theory anchors: [[rotating-mean-field]], [[spontaneous-symmetry-breaking]], [[magnetic-rotation]], [[antimagnetic-rotation]], [[shears-mechanism]], [[band-termination]], [[reflection-asymmetric-nuclei]], and [[routhian]].
+- Existing pages connected: [[nuclear-chirality]], [[tilted-axis-cranking]], [[rotational-bands]], [[angular-momentum-alignment]], [[magnetic-substate-population]], [[angular-distribution-coefficient]], and [[multipole-mixing-ratio]].
+
 ## Decisions and Failures
 
 尚无正式决策或失败记录。

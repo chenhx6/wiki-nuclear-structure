@@ -41,10 +41,13 @@ tags: [chirality, triaxiality, angular-momentum-geometry]
 
 核手征性是需要角动量几何、量子恢复和核素特定实验链共同支持的解释；近简并双带是候选入口而非充分证明。
 
+Frauendorf 2001 adds a broader symmetry map: principal-axis, planar TAC and aplanar/chiral solutions are distinguished by the discrete operations left unbroken by the rotating mean field. The left/right TAC solutions are intrinsic mean-field states; same-parity partner bands arise only after laboratory-frame quantization and symmetry restoration. Magnetic rotation, antimagnetic rotation and reflection-asymmetric rotation are related rotating-nucleus cases, not interchangeable explanations for a chiral doublet.
+
 ## Sources
 
 - [[frauendorf-meng-1997-tilted-rotation-chirality]]
 - [[meng-2010-open-problems-nuclear-chirality]]
+- [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
 
 ## Evolution Log
 

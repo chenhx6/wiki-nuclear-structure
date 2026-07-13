@@ -39,6 +39,9 @@ tags: [rotation, collective-motion, band-structure]
 
 “转动带”作为稳定结构描述使用；更强的模式指认必须依靠相应实验判据和竞争解释检查。
 
+Frauendorf 2001 uses smooth transition energies, electromagnetic links and gradually changing matrix elements as practical band-organizing criteria. At high spin, intrinsic configuration and rotation are coupled; magnetic, antimagnetic, chiral and terminating sequences can look regular without sharing one collective mechanism.
+
 ## Sources
 
 - [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]]
+- [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]

@@ -42,6 +42,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 - related pages: `knowledge/sources/jones-2002-calibration-compton-polarimeters.md`, `knowledge/sources/go-2024-demonstration-nuclear-gamma-ray-polarimetry-cdte.md`, `knowledge/sources/longfellow-2026-gretina-energy-ordering-polarization.md`, `knowledge/projects/gamma-ray-linear-polarization-in-nuclear-spectroscopy.md`
 - review commit message: Ingest gamma-ray linear polarization and relativistic correction sources
 
+### 2026-07-13 - nuclear alignment and rotating-symmetry sources - round 1
+
+- review scope: Diamond 1966 D66-1..11, Frauendorf 2001 F01-1..15, and directly linked alignment/rotating-nuclei pages
+- user decisions: all reviewed source claims accepted; preserve reaction alignment versus configuration alignment and review/background versus model versus laboratory observable boundaries
+- corrections requested: clear source `review_status` and claim-level `needs_review`; finalize the WIP and include the existing BibTeX change
+- unresolved issues: none for this source-review round; derived theory pages remain independently reviewable
+- next action: future additional alignment/rotating-nuclei or P-ADO sources
+- related pages: the two source pages, sigma-over-I project, nuclear-chirality project
+- review commit message: Finalize nuclear alignment and rotating-symmetry source review
+
 ## Entry template
 
 ```markdown

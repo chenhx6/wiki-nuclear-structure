@@ -8,34 +8,34 @@ updated: 2026-07-13
 ## Active handoff
 
 Current active task:
-The reviewed three-source gamma-ray linear-polarization and Compton-polarimetry bundle is finalized and pushed, including the two user-requested notation/display corrections and the explicitly authorized BibTeX update.
+Review finalization is complete for the deep-read Diamond 1966 nuclear-alignment source and Frauendorf 2001 rotating-symmetry review; the final review commit is prepared and the user-authorized push is pending.
 
 Current branch / local commit:
-`main`; final commit `086efc6` is pushed to `origin/main`. The user explicitly authorized including the existing `raw/zotero/wiki-inbox.bib` diff in that commit.
+`main`; final commit message is `Finalize nuclear alignment and rotating-symmetry source review`. The pre-existing `raw/zotero/wiki-inbox.bib` change is included by explicit user authorization; push remains pending.
 
 Last task status:
-Jones 2002, Go 2024 and Longfellow 2026 were deep-read and user-reviewed. J02-13 now escapes the `|P|` table pipes; G24-7 now carries the `nu_j` division index and defines `j`. Source and project claim-level review markers are cleared; derived method/observable pages retain independent page-level status.
+Diamond 1966 claims D66-1..11 and Frauendorf 2001 claims F01-1..15 were accepted in human review and now have `needs_review: false`; source pages are `human-reviewed`. Seven rotating-nuclei concepts and the Routhian model page were added; existing TAC, chirality, rotational-band, alignment, angular-distribution, mixing-ratio and sigma-over-I project links were minimally updated.
 
 Unfinished items:
-None for this review round. Future work can map the reviewed method boundaries to a concrete P-ADO dataset.
+Push the verified final review commit to `origin/main`.
 
 P0 focus:
-No unresolved source/project claim-level P0 remains after the user's review. Future work should preserve the P/A/Q, detector-response and Lorentz/Doppler boundaries.
+No unresolved source-claim P0 remains for D66/F01. Derived theory pages remain independently reviewable at page level.
 
 Remaining P0:
-None for this reviewed source/project bundle; derived pages and future paper use remain independently reviewable.
+Future paper use should still recheck the original locators; Frauendorf cited examples remain review/background rather than original experimental facts.
 
 Risks:
-Keep physical P, measured A and detector Q separate; do not generalize Jones's maximum-alignment `|P|=1` examples. Keep Go's detector demonstration, simulations and inferred polarization distinct. Keep Longfellow's laboratory-frame Lorentz correction distinct from Doppler energy correction and do not present simple energy ordering as universally superior to full tracking. Stage the user-authorized `.bib` diff without rewriting it.
+Do not universalize Diamond's Gaussian alignment or neutron-evaporation statement. Keep Frauendorf's review/background and cited experiments distinct from original observations; keep mean-field solutions separate from laboratory observables and preserve TAC/PRM limits.
 
 Checks:
-Write-entry EOL cleanup returned zero unsafe knowledge changes; lint passed with 0 errors, QMD refresh completed at 190 indexed files and 1030 vectors, unit tests passed (7/7), staged checks passed, and `origin/main` is at `086efc6`.
+Write-entry EOL cleanup returned zero unsafe knowledge changes. Source-marker lint passes with 0 errors and 0 claim-level needs-review infos; QMD refresh completed with 200 indexed Markdown files and 1112 vectors. Final staged checks passed; push remains pending.
 
 Next prompt / continuation phrase:
-Future continuation: map the reviewed P/A/Q and Lorentz/Doppler boundaries to a concrete P-ADO dataset or add a detector-specific calibration source.
+After the final push, future work can ingest another alignment/rotating-nuclei or P-ADO source; do not reopen the reviewed D66/F01 claims without a new source-level review.
 
 Recent user decisions:
-The user reviewed all three source/project pages, requested only the J02-13 display and G24-7 `j`-index corrections, and explicitly authorized committing and pushing together with the existing `raw/zotero/wiki-inbox.bib` change. Do not stage raw PDFs or unrelated files.
+This daily task is restricted to Diamond 1966 and Frauendorf 2001. The user accepted the source review and explicitly authorized including `raw/zotero/wiki-inbox.bib` and pushing the final commit. Do not stage raw PDFs, `.obsidian` files or unrelated files.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

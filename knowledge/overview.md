@@ -9,18 +9,18 @@ updated: 2026-07-13
 
 ## Current Snapshot: 2026-07-13
 
-This snapshot records the completed user review of the three-source gamma-ray linear-polarization and Compton-polarimetry ingest. Jones 2002, Go 2024 and Longfellow 2026 have deep-read, claim-reviewed source pages; the evidence-map project separates physical polarization, measured asymmetry, detector sensitivity, efficiency, alignment, detector response and relativistic corrections. Derived method/observable pages retain their independent page-level review state.
+This snapshot records the completed two-source nuclear-alignment and rotating-symmetry ingest. Diamond 1966 and Frauendorf 2001 have deep-read source notes with claim-level human review complete; the new pages connect heavy-ion magnetic-substate alignment, Routhian/TAC symmetry classification, magnetic and antimagnetic rotation, shears, band termination and reflection asymmetry. Page-level review remains distinct from claim-level `needs_review`.
 
 | metric | current value | note |
 |---|---:|---|
-| source pages | 41 | Added Jones 2002, Go 2024 and Longfellow 2026. |
-| concept / method / observable pages | 33 / 17 / 19 | Added the minimal P/A/Q, Compton, modulation, efficiency and Lorentz/Doppler anchors. |
+| source pages | 43 | Added Diamond 1966 and Frauendorf 2001. |
+| concept / method / model / observable pages | 40 / 17 / 15 / 19 | Added rotating-mean-field, symmetry, magnetic/antimagnetic, shears, termination, reflection-asymmetry and Routhian anchors. |
 | project pages | 8 | Added [[gamma-ray-linear-polarization-in-nuclear-spectroscopy]] evidence map. |
-| source pages unreviewed | 0 | Jones 2002, Go 2024 and Longfellow 2026 source pages were moved to `review_status: human-reviewed`; page-level review remains distinct from claim-level `needs_review`. |
-| source claim-level `needs_review: true` | 0 | The user-reviewed source bundle has no remaining claim-level review markers. |
+| source pages unreviewed | 0 | Diamond 1966 and Frauendorf 2001 source notes were moved to `review_status: human-reviewed`. |
+| source claim-level `needs_review: true` | 0 | D66-1..11 and F01-1..15 were cleared by user review on 2026-07-13. |
 | claim missing locator / kind | 0 / 0 | Lint found no missing locator or claim kind in source tables. |
-| raw hash coverage | 41/41 | All source raw-file hashes match. |
-| review boundary | source/project review complete | The source bundle and evidence map are reviewed; derived pages and any paper use still require their own page/claim-specific checks. |
+| raw hash coverage | 43/43 | All source raw-file hashes match. |
+| review boundary | source review complete | The Diamond/Frauendorf source claims are reviewed; newly linked theory pages remain independently reviewable at page level. |
 
 ## Previous Snapshot: 2026-07-13
 

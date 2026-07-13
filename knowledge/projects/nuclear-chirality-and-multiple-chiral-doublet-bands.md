@@ -18,6 +18,8 @@ tags: [nuclear-chirality, multiple-chiral-doublet, evidence-map, writing-support
 
 本页是 evidence map / writing-support project，不是论文草稿。Meng 2010、Ayangeakaa 2013 与 Liu 2016 均已 deep-read 并完成人工 source review；本 project 页仍保留独立 review 状态。所有解释必须与 observed facts、experimental assignments、author interpretations 和 model calculations 分层。
 
+Frauendorf 2001 is a reviewed review/background source for the rotating-mean-field symmetry map. It supplies PAC/planar/aplanar TAC distinctions, the TAC/PRM and symmetry-restoration boundary, and comparison mechanisms such as magnetic, antimagnetic and reflection-asymmetric rotation. It is not an additional original experiment and does not change the reviewed status of the Meng/Ayangeakaa/Liu claims.
+
 ## Research Question
 
 - What experimental and theoretical evidence is required to interpret doublet bands as nuclear chiral partners?
@@ -44,6 +46,8 @@ tags: [nuclear-chirality, multiple-chiral-doublet, evidence-map, writing-support
 | [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] | original experiment + method + model comparison | `78Br` 两对带、ADO/偏振、八条 E1 links、octupole systematics、MDC-CDFT+TPRM | MχD/octupole 是解释；Band 3/4 configuration tentative；quartet 是未来观测可能性，当前结构未被直接指认为 quartet |
 
 ## Theory Background
+
+- [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]] supplies the rotating-mean-field, Routhian and discrete-symmetry background needed to separate chiral geometry from magnetic rotation, antimagnetic rotation and band termination. Its cited examples remain review/background until their original papers are checked.
 
 - [[nuclear-chirality]]：高 `j` particle、core rotation 与高 `j` hole 的 aplanar 左右手几何。
 - [[tilted-axis-cranking]]：半经典 mean-field 几何；不完整处理左右手量子隧穿。

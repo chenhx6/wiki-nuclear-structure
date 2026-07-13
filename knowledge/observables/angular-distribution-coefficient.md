@@ -18,6 +18,8 @@ tags: [angular-distribution, mixing-ratio, alignment, pado-support]
 
 γ 射线角分布常写为 Legendre expansion。对 stretched E2 case，[[draper-1970-gaussian-substate-side-feeding]] 使用 `W(θ)=1+A2P2(cosθ)+A4P4(cosθ)`，其中 `A2` 与 `A4` 是待解释或拟合的角分布系数。
 
+Diamond 1966 uses the same Legendre form for stretched-E2 cascades and compares measured `A4`--`A2` points with a Gaussian `m=0` alignment reference. The reported deviations are part of the evidence boundary: a Gaussian can organize a calibration comparison without being an exact residual-population law.
+
 ## Dependence
 
 `A2/A4` 不是单纯的 transition label。它们依赖 emitting level 的 magnetic-substate population、spin sequence、multipolarity/mixing ratio、feeding history 和 detector/analysis treatment。
@@ -47,3 +49,4 @@ alignment 未知、side feeding 未处理、Doppler broadening、弱峰污染或
 - [[draper-1970-gaussian-substate-side-feeding]]
 - [[zobel-1980-magnetic-substate-distributions]]
 - [[zobel-1983-energy-projectile-alignment]]
+- [[diamond-1966-nuclear-alignment-heavy-ion-reactions]]

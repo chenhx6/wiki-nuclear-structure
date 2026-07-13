@@ -555,3 +555,24 @@ updated: 2026-07-12
 
 - User review completed for Jones 2002, Go 2024, Longfellow 2026 and the evidence map. Corrected the J02-13 table pipe escape and restored the Go Eq.3 `nu_j` division index; source/project claim review markers are cleared.
 - Existing `raw/zotero/wiki-inbox.bib` is explicitly authorized for the final amend/push; final lint, QMD refresh and Git checks remain.
+
+## [2026-07-13] ingest-checkpoint | Diamond 1966 nuclear alignment
+
+- Deep-read and added `knowledge/sources/diamond-1966-nuclear-alignment-heavy-ion-reactions.md` with claims D66-1..11 covering heavy-ion entrance alignment, Gaussian m-substate approximation, A2/A4 angular distributions, spin-sequence constraints, alignment-dependent mixing-ratio inference, and extranuclear deorientation limits.
+- Frauendorf 2001 remains in staged deep reading. The protected `raw/zotero/wiki-inbox.bib` change is still unstaged; no commit or push has been performed for this task.
+
+## [2026-07-13] ingest-checkpoint | nuclear alignment and rotating-symmetry sources
+
+- Completed deep-read source notes for Diamond 1966 (D66-1..11) and Frauendorf 2001 (F01-1..15), with source-level review markers retained.
+- Added rotating-mean-field, spontaneous-symmetry-breaking, magnetic/antimagnetic rotation, shears, band-termination, reflection-asymmetry and Routhian anchors; updated chirality, TAC, rotational-band, alignment, angular-distribution, mixing-ratio and sigma-over-I links.
+- Wiki lint passes with 0 errors, 12 existing warnings and 26 expected needs-review infos. Final explicit staging and local WIP commit remain; no push is authorized. The existing `raw/zotero/wiki-inbox.bib` change remains unstaged.
+
+## [2026-07-13] ingest | nuclear alignment and rotating-symmetry WIP checkpoint
+
+- Created local WIP commit (`Ingest nuclear alignment and rotating-symmetry sources`) on `main` after amending checkpoint metadata; current `HEAD` is the recovery pointer and no push was performed.
+- Only the protected pre-existing `raw/zotero/wiki-inbox.bib` remains unstaged. Human review is pending for D66-1..11, F01-1..15 and the new rotating-nuclei theory pages.
+
+## [2026-07-13] review-finalization | nuclear alignment and rotating-symmetry sources
+
+- User accepted D66-1..11 and F01-1..15; source review markers were cleared and the overview/project status was synchronized.
+- Final lint, QMD refresh, explicit staging and WIP amend completed; push remains pending. The user explicitly authorized staging the existing `raw/zotero/wiki-inbox.bib`.

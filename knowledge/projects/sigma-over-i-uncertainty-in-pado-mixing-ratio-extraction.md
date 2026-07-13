@@ -3,7 +3,7 @@ type: project
 title: "Sigma-over-I uncertainty in P-ADO mixing-ratio extraction"
 aliases: [sigma over I uncertainty, sigma/I uncertainty, P-ADO sigma over I, alignment uncertainty in P-ADO, NST sigma-over-I evidence map]
 created: 2026-07-08
-updated: 2026-07-12
+updated: 2026-07-13
 status: active
 review_status: human-reviewed
 project_stage: evidence-map
@@ -18,7 +18,7 @@ tags: [pado, mixing-ratio, angular-distribution, polarization, alignment, sigma-
 
 Current task: the earlier synthesis-planning round is complete, and a new four-source gamma-spectroscopy-method ingest has been attached to this project as additional evidence about how `delta` extraction can still remain assumption- or branch-dependent even when DCO, polarization, or ICC constraints are added.
 
-Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]; [[chiara-2012-cu65-cu67-core-coupled-protons]]; [[summary-2013-bases-spin-parity-assignments]]; [[gray-2020-hyperfine-fields-g-factor-measurements]]; [[ekstrom-1979-spin-alignment-attenuation-a61-a67]]; [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]]; [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]]; [[kramer-flecken-1989-use-dco-ratios]]; [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]]; [[rusev-2009-multipole-mixing-ratios-11b]].
+Completed source rows: [[draper-1970-gaussian-substate-side-feeding]]; [[zobel-1980-magnetic-substate-distributions]]; [[zobel-1983-energy-projectile-alignment]]; [[cejnar-1996-spin-deorientation-alpha-2n-gamma]]; [[radeck-2012-deorientation-lifetime-98ru-rdds]]; [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]; [[chiara-2012-cu65-cu67-core-coupled-protons]]; [[summary-2013-bases-spin-parity-assignments]]; [[gray-2020-hyperfine-fields-g-factor-measurements]]; [[ekstrom-1979-spin-alignment-attenuation-a61-a67]]; [[ionescu-1981-improved-angular-distribution-analysis-particle-xn]]; [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]]; [[kramer-flecken-1989-use-dco-ratios]]; [[kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc]]; [[rusev-2009-multipole-mixing-ratios-11b]]; [[diamond-1966-nuclear-alignment-heavy-ion-reactions]].
 
 In-progress / pending source rows: the 2026-07-12 four-source method round has now been user-reviewed. The project-level notes were accepted in that review round; the only intentionally retained claim-level recheck is source note `RU09-6`, where branch selection still depends on author-side physical-plausibility judgment.
 
@@ -80,6 +80,7 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | Source | Strategy | Direct contribution to project | Key claim IDs | Review priority |
 |---|---|---|---|---|
 | [[draper-1970-gaussian-substate-side-feeding]] | theory-ingest + method-ingest + project-ingest | Shows that stretched-E2 `A2/A4` depend on Gaussian side-feeding width, cascade feeding, and side-feeding intensities; provides exact treatment and allowed coefficient-space boundaries. | DR70-1 to DR70-10 | P0 resolved: DR70-3, DR70-6, DR70-7 |
+| [[diamond-1966-nuclear-alignment-heavy-ion-reactions]] | experiment-ingest + foundational-method-ingest + sigma-over-I-project-ingest | Early heavy-ion entrance-alignment and stretched-E2 `A2/A4` evidence; explains same-state pure-transition calibration before mixed E2/M1 `delta` extraction and records Gaussian/deorientation limits. | D66-1 to D66-11 | Source reviewed 2026-07-13; no source-level P0 remains |
 | [[zobel-1980-magnetic-substate-distributions]] | experiment-ingest + method-ingest + project-ingest | Shows that angular-distribution-only fitting has more unknowns than measured coefficients unless alignment is known or modeled; documents ALY/Gaussian assumptions, their conditions, and lifetime/Doppler effects on attenuation coefficients. | Z80-1 to Z80-13 | P0 resolved: Z80-2, Z80-3, Z80-10 |
 | [[zobel-1983-energy-projectile-alignment]] | experiment-ingest + method-ingest + project-ingest | Shows that attenuation coefficients vary with projectile, incident energy, and direct/cascade feeding balance; warns against combining angular-distribution and polarization data from different conditions. | Z83-1 to Z83-10 | P0 resolved: Z83-5, Z83-8, Z83-9 |
 | [[cejnar-1996-spin-deorientation-alpha-2n-gamma]] | theory-ingest + method-ingest + project-ingest | Calculates spin deorientation through angular-momentum routes, tests the side-feeding Gaussian hypothesis, and shows that the imposed `sigma` interval can change `delta` extraction. | C96-1 to C96-11 | P0 resolved: C96-4, C96-5, C96-10 |
@@ -96,6 +97,10 @@ Current evidence consists of Draper 1970 formal side-feeding treatment, Zobel 19
 | [[rusev-2009-multipole-mixing-ratios-11b]] | experiment-ingest + method-ingest + project-ingest | Shows a polarization-asymmetry-only `delta` extraction route and explicitly demonstrates that one measured asymmetry can correspond to two `delta` solutions, with branch selection still requiring author-side physical-plausibility judgment. | RU09-1 to RU09-7 | Reviewed on 2026-07-12; keep `RU09-6` as a source-level human-recheck note. |
 
 ## Experimental-Practice Evidence
+
+## Early Heavy-Ion Alignment Foundation
+
+Diamond 1966 is an early source for the reaction-side premise behind this project. It links heavy-ion entrance orbital angular momentum to an approximately aligned compound nucleus, compares stretched-E2 `A2/A4` values with a Gaussian `m=0` reference, and explains that a pure transition from the same state can calibrate alignment before a mixed-transition `delta` fit. The source also reports deviations from the Gaussian reference and warns that extranuclear interactions can attenuate the alignment. This is foundational context, not a universal `sigma/I` prior; D66-1..11 were source-reviewed on 2026-07-13.
 
 The article7-9 sources add a different layer from the earlier formalism and deorientation papers. They show that assumed or typical orientation parameters are embedded in real spectroscopy practice and reference-guide language, but that these assumptions remain notation-sensitive and context-sensitive.
 
