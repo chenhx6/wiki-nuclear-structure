@@ -8,16 +8,16 @@ updated: 2026-07-13
 ## Active handoff
 
 Current active task:
-Finalize the reviewed three-source gamma-ray linear-polarization and Compton-polarimetry bundle, including the two user-requested notation/display corrections and explicit BibTeX inclusion.
+The reviewed three-source gamma-ray linear-polarization and Compton-polarimetry bundle is finalized and pushed, including the two user-requested notation/display corrections and the explicitly authorized BibTeX update.
 
 Current branch / local commit:
-`main`; the active WIP is being amended into the final review commit. The user explicitly authorized including the existing `raw/zotero/wiki-inbox.bib` diff in this commit.
+`main`; final commit `086efc6` is pushed to `origin/main`. The user explicitly authorized including the existing `raw/zotero/wiki-inbox.bib` diff in that commit.
 
 Last task status:
 Jones 2002, Go 2024 and Longfellow 2026 were deep-read and user-reviewed. J02-13 now escapes the `|P|` table pipes; G24-7 now carries the `nu_j` division index and defines `j`. Source and project claim-level review markers are cleared; derived method/observable pages retain independent page-level status.
 
 Unfinished items:
-Run final lint/checks, refresh QMD, explicitly stage the reviewed bundle plus the authorized BibTeX file, amend the active WIP to the final commit, and push `origin main`.
+None for this review round. Future work can map the reviewed method boundaries to a concrete P-ADO dataset.
 
 P0 focus:
 No unresolved source/project claim-level P0 remains after the user's review. Future work should preserve the P/A/Q, detector-response and Lorentz/Doppler boundaries.
@@ -29,10 +29,10 @@ Risks:
 Keep physical P, measured A and detector Q separate; do not generalize Jones's maximum-alignment `|P|=1` examples. Keep Go's detector demonstration, simulations and inferred polarization distinct. Keep Longfellow's laboratory-frame Lorentz correction distinct from Doppler energy correction and do not present simple energy ordering as universally superior to full tracking. Stage the user-authorized `.bib` diff without rewriting it.
 
 Checks:
-Write-entry EOL cleanup returned zero unsafe knowledge changes. Final lint, QMD refresh, staged diff checks and push verification remain to be run after the two corrections.
+Write-entry EOL cleanup returned zero unsafe knowledge changes; lint passed with 0 errors, QMD refresh completed at 190 indexed files and 1030 vectors, unit tests passed (7/7), staged checks passed, and `origin/main` is at `086efc6`.
 
 Next prompt / continuation phrase:
-After final checks, amend the active WIP as `Ingest gamma-ray linear polarization and relativistic correction sources` and push `origin main`; future work can map the reviewed method boundaries to a concrete P-ADO dataset.
+Future continuation: map the reviewed P/A/Q and Lorentz/Doppler boundaries to a concrete P-ADO dataset or add a detector-specific calibration source.
 
 Recent user decisions:
 The user reviewed all three source/project pages, requested only the J02-13 display and G24-7 `j`-index corrections, and explicitly authorized committing and pushing together with the existing `raw/zotero/wiki-inbox.bib` change. Do not stage raw PDFs or unrelated files.
