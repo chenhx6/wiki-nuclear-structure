@@ -575,4 +575,4 @@ updated: 2026-07-12
 ## [2026-07-13] review-finalization | nuclear alignment and rotating-symmetry sources
 
 - User accepted D66-1..11 and F01-1..15; source review markers were cleared and the overview/project status was synchronized.
-- Final lint, QMD refresh, explicit staging and WIP amend completed; push remains pending. The user explicitly authorized staging the existing `raw/zotero/wiki-inbox.bib`.
+- Final lint, QMD refresh, explicit staging and WIP amend completed; the final review commit was pushed to `origin/main`. The user explicitly authorized staging the existing `raw/zotero/wiki-inbox.bib`.

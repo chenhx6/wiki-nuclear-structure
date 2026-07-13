@@ -8,16 +8,16 @@ updated: 2026-07-13
 ## Active handoff
 
 Current active task:
-Review finalization is complete for the deep-read Diamond 1966 nuclear-alignment source and Frauendorf 2001 rotating-symmetry review; the final review commit is prepared and the user-authorized push is pending.
+Review finalization is complete for the deep-read Diamond 1966 nuclear-alignment source and Frauendorf 2001 rotating-symmetry review; the final review commit is pushed to `origin/main`.
 
 Current branch / local commit:
-`main`; final commit message is `Finalize nuclear alignment and rotating-symmetry source review`. The pre-existing `raw/zotero/wiki-inbox.bib` change is included by explicit user authorization; push remains pending.
+`main`; final commit message is `Finalize nuclear alignment and rotating-symmetry source review`. The pre-existing `raw/zotero/wiki-inbox.bib` change is included by explicit user authorization and is pushed to `origin/main`.
 
 Last task status:
 Diamond 1966 claims D66-1..11 and Frauendorf 2001 claims F01-1..15 were accepted in human review and now have `needs_review: false`; source pages are `human-reviewed`. Seven rotating-nuclei concepts and the Routhian model page were added; existing TAC, chirality, rotational-band, alignment, angular-distribution, mixing-ratio and sigma-over-I project links were minimally updated.
 
 Unfinished items:
-Push the verified final review commit to `origin/main`.
+Future work can begin from the pushed review commit on `main`.
 
 P0 focus:
 No unresolved source-claim P0 remains for D66/F01. Derived theory pages remain independently reviewable at page level.
@@ -29,7 +29,7 @@ Risks:
 Do not universalize Diamond's Gaussian alignment or neutron-evaporation statement. Keep Frauendorf's review/background and cited experiments distinct from original observations; keep mean-field solutions separate from laboratory observables and preserve TAC/PRM limits.
 
 Checks:
-Write-entry EOL cleanup returned zero unsafe knowledge changes. Source-marker lint passes with 0 errors and 0 claim-level needs-review infos; QMD refresh completed with 200 indexed Markdown files and 1112 vectors. Final staged checks passed; push remains pending.
+Write-entry EOL cleanup returned zero unsafe knowledge changes. Source-marker lint passes with 0 errors and 0 claim-level needs-review infos; QMD refresh completed with 200 indexed Markdown files and 1112 vectors. Final staged checks passed and `origin/main` matches the review commit.
 
 Next prompt / continuation phrase:
 After the final push, future work can ingest another alignment/rotating-nuclei or P-ADO source; do not reopen the reviewed D66/F01 claims without a new source-level review.
