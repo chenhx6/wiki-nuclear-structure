@@ -1,41 +1,41 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-13
+updated: 2026-07-14
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Review finalization is complete for the deep-read Diamond 1966 nuclear-alignment source and Frauendorf 2001 rotating-symmetry review; the final review commit is pushed to `origin/main`.
+Nature Skills full installation for Codex is complete; Wiki has only lightweight governance records for the install.
 
 Current branch / local commit:
-`main`; final commit message is `Finalize nuclear alignment and rotating-symmetry source review`. The pre-existing `raw/zotero/wiki-inbox.bib` change is included by explicit user authorization and is pushed to `origin/main`.
+`main` at `6add991` before local record edits. Nature Skills clone is outside the Wiki at `C:\Users\22721\ai-skills\nature-skills`; Codex global skills target is `C:\Users\22721\.codex\skills`. No Wiki commit or push has been performed for this install-record task.
 
 Last task status:
-Diamond 1966 claims D66-1..11 and Frauendorf 2001 claims F01-1..15 were accepted in human review and now have `needs_review: false`; source pages are `human-reviewed`. Seven rotating-nuclei concepts and the Routhian model page were added; existing TAC, chirality, rotational-band, alignment, angular-distribution, mixing-ratio and sigma-over-I project links were minimally updated.
+Cloned `https://github.com/Yuan1z0825/nature-skills.git` to `C:\Users\22721\ai-skills\nature-skills` at commit `b98b53ef5e8f15d9159682bf7587301a16b0747f`. Because Git Bash lacked `rsync`, the top-level `skills/` directories were mirrored into `C:\Users\22721\.codex\skills` with `robocopy /MIR`, and the upstream `scripts/update-codex-skills.sh --check` reports `MATCH` for `_shared` and all `nature-*` directories.
 
 Unfinished items:
-Future work can begin from the pushed review commit on `main`.
+Open a new Codex conversation/session before expecting the newly installed Nature Skills to appear in the available skill list. Optional Python/MCP/API dependencies for individual skills were not installed and should be configured only when a concrete task needs them.
 
 P0 focus:
-No unresolved source-claim P0 remains for D66/F01. Derived theory pages remain independently reviewable at page level.
+When using Nature Skills for Wiki writing, first establish evidence boundaries from `knowledge/sources/`, `raw/`, locators and user judgement; Nature Skills may polish, draft, read, figure, cite or respond, but cannot override Wiki evidence policy or paper evidence gate.
 
 Remaining P0:
-Future paper use should still recheck the original locators; Frauendorf cited examples remain review/background rather than original experimental facts.
+No science-content P0 is introduced by this install. For future paper use, source/raw locator checks remain mandatory.
 
 Risks:
-Do not universalize Diamond's Gaussian alignment or neutron-evaporation statement. Keep Frauendorf's review/background and cited experiments distinct from original observations; keep mean-field solutions separate from laboratory observables and preserve TAC/PRM limits.
+The upstream install script could not copy because `rsync` is absent, so this install used equivalent directory mirroring plus upstream `--check`. Do not install optional dependencies or write credentials/API keys into the Wiki; configure them separately only when needed.
 
 Checks:
-Write-entry EOL cleanup returned zero unsafe knowledge changes. Source-marker lint passes with 0 errors and 0 claim-level needs-review infos; QMD refresh completed with 200 indexed Markdown files and 1112 vectors. Final staged checks passed and `origin/main` matches the review commit.
+Write-entry preflight was clean: `git status` had no diff/staged files, EOL cleanup reported 0 refreshed/restored/unsafe/mixed, and post-clean status stayed clean. Nature Skills upstream `--check` passed with all directories matching. Final `python system/scripts/wiki_lint.py --fail-on error` passed with 0 errors, 11 existing warnings and 0 info; `git diff --check` passed.
 
 Next prompt / continuation phrase:
-After the final push, future work can ingest another alignment/rotating-nuclei or P-ADO source; do not reopen the reviewed D66/F01 claims without a new source-level review.
+To update Nature Skills later: `cd C:\Users\22721\ai-skills\nature-skills`, run `git pull`, then run `scripts/update-codex-skills.sh --pull` if `rsync` is available, or mirror the same `skills/` directories and run `scripts/update-codex-skills.sh --check`.
 
 Recent user decisions:
-This daily task is restricted to Diamond 1966 and Frauendorf 2001. The user accepted the source review and explicitly authorized including `raw/zotero/wiki-inbox.bib` and pushing the final commit. Do not stage raw PDFs, `.obsidian` files or unrelated files.
+User changed the earlier Stable-only plan to full Nature Skills installation: "都下了吧，有啥用啥，省了再下". Do not add the full Nature Skills repo into Wiki Git; keep only lightweight records in `system/memory.md`, `system/handoff.md` and `system/log.md`.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

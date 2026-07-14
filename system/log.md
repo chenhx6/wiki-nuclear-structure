@@ -576,3 +576,8 @@ updated: 2026-07-12
 
 - User accepted D66-1..11 and F01-1..15; source review markers were cleared and the overview/project status was synchronized.
 - Final lint, QMD refresh, explicit staging and WIP amend completed; the final review commit was pushed to `origin/main`. The user explicitly authorized staging the existing `raw/zotero/wiki-inbox.bib`.
+
+## [2026-07-14] setup | full Nature Skills global install
+
+- Cloned `Yuan1z0825/nature-skills` to `C:\Users\22721\ai-skills\nature-skills` and installed all `_shared` / `nature-*` skill directories into `C:\Users\22721\.codex\skills`.
+- Upstream `scripts/update-codex-skills.sh --check` reports all installed directories match the clone. Optional per-skill Python/MCP/API dependencies were not installed.

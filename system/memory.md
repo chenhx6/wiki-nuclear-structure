@@ -1,7 +1,7 @@
 ---
 type: system-memory
 graph-excluded: true
-updated: 2026-07-10
+updated: 2026-07-14
 ---
 
 # 长期记忆
@@ -31,7 +31,8 @@ updated: 2026-07-10
 - 仓库用 `.gitattributes` 固定 Markdown 和常用文本格式为 LF；editable evidence view 仍可能产生 LF/CRLF-only dirty state。统一清理入口是 `system/scripts/clean_knowledge_eol_dirty.ps1`，写任务第一次写入前、commit 前和 push 前运行；纯 read-only 问答不运行。脚本只清理可证明为 LF/CRLF 行尾格式差异的 worktree 修改，不忽略普通行尾空格、Markdown 双空格或 Tab，也不审批科学修改；exit code `1` 由 Codex 按 dirty baseline、授权范围和 WIP 归属分类，exit code `2` 停止写操作。不得使用 `git add .`。
 - 文献摄入和科学内容修改默认本地 WIP、用户审核后 amend 为 final；推荐审核完成当前摄入后再开始下一篇。允许多个 pending WIP，但共享文件必须在写入前选择合并原 WIP、记录依赖或暂缓，不得静默重叠。方案和验收已确认、无科学内容且检查通过的治理/框架/脚本任务可直接 final commit。
 - 日常建设坚持一次摄入一篇论文，并在每次摄入后列出新增 claim、待审 claim、竞争解释和证据缺口。
-- 现阶段 Skill 只保留证据型知识问答入口；ingest/reflect/lint 等流程稳定后再考虑封装，写作 Skill 等数据处理与证据层成熟后再创建。
+- Wiki 仓库内自有 Skill 仍只保留 `.agents/skills/wiki-evidence-query` 这一证据型知识问答入口；ingest/reflect/lint 等 Wiki 治理流程稳定后再考虑仓库内封装。
+- Nature Skills 已按用户要求全量安装为 Codex 全局 skills：stable clone 位于 `C:\Users\22721\ai-skills\nature-skills`，同步目标为 `C:\Users\22721\.codex\skills`；后续更新使用该 clone 的 `scripts/update-codex-skills.sh --pull` 和 `--check`。这些写作、阅读、图件、引用、返修等外部 skills 是科研写作辅助层，不能覆盖 Wiki evidence policy、paper evidence gate、source/raw locator 复核和用户科学判断。
 - 经典高自旋综述不能仅因年代较早而被笼统降级：通用术语、γ 探测基础和物理成因框架可继续作为有效背景；应分别核对后来发展的物理模式、具体装置性能和单核素证据。
 - 本仓库采用 bounded initiative：允许与当前任务直接相关的必要最小同步，禁止非必要顺手优化；PowerShell 的 `PATH` 找不到 Git 时，必须先定位 Git 可执行文件并完成同等检查。
 - 中文科学页面中专业术语首次出现时保留英文名称或标准缩写；可能指向不同物理对象的简称必须写明具体对象，例如 two-band mixing 必须说明是哪两条带，避免后续查询只按中文词面误配。
