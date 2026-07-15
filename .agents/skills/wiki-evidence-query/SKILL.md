@@ -33,6 +33,11 @@ description: >-
   not be ingested before answering.
 - Default to read-only Q&A. Route ingestion, Wiki edits, planning, governance,
   data/raw changes, or Git work to the relevant workflow.
+- Treat `knowledge/research-notes/` as provisional research reasoning, not
+  source-grounded evidence. Ordinary Q&A excludes it by default. Only include
+  it for an explicit research-idea, hypothesis, transfer, reflect, project, or
+  synthesis task, and then label its status and verify factual premises against
+  its grounded source pages.
 
 ## Startup and conditional reads
 
@@ -66,6 +71,10 @@ description: >-
 - **Wiki-grounded:** use source, nucleus, band, concept, observable, project,
   and synthesis pages for personalized and traceable context. Claims described
   as Wiki-grounded must match the current record and its source/locator status.
+- **Provisional research reasoning:** research notes may preserve useful
+  hypotheses, transfer boundaries, reverse tests, or revision candidates. They
+  are excluded from ordinary evidence retrieval and never substitute for their
+  grounded sources, even when `reasoning_status: promoted`.
 - **General scientific background:** use stable nuclear-structure and
   spectroscopy knowledge when the Wiki is insufficient and the user did not
   request Wiki-only scope. It need not carry a citation on every basic sentence,
@@ -162,6 +171,11 @@ Retrieval routing:
    retrieval without expected information gain or scan the whole repo/raw for
    ordinary questions.
 5. A Wiki miss means missing personal context, not missing field knowledge.
+
+QMD uses one collection for `knowledge/**/*.md`. Before opening ordinary-Q&A
+candidates, discard paths under `knowledge/research-notes/` or pages with
+`type: research-note`. Research-task use of a note must also open its grounded
+sources; ranking or the note text alone cannot establish a fact.
 
 A source page is enough in ordinary mode when identity and locator are clear,
 wording is adequate for the question, no material conflict is known, and no

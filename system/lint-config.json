@@ -19,7 +19,8 @@
     "synthesis": "synthesis",
     "projects": "project",
     "decisions": "decision",
-    "failures": "failure"
+    "failures": "failure",
+    "research-notes": "research-note"
   },
   "common_required_fields": [
     "type",
@@ -48,6 +49,13 @@
     "skimmed",
     "read",
     "deep-read"
+  ],
+  "allowed_reasoning_status": [
+    "provisional",
+    "promoted",
+    "rejected",
+    "superseded",
+    "withdrawn"
   ],
   "type_required_fields": {
     "source": [
@@ -111,6 +119,11 @@
     ],
     "failure": [
       "failure_date"
+    ],
+    "research-note": [
+      "reasoning_status",
+      "evidence_sources",
+      "created_from"
     ]
   },
   "required_sections": {
@@ -210,6 +223,19 @@
       "Evidence",
       "Lesson",
       "Revival Conditions"
+    ],
+    "research-note": [
+      "Research Trigger",
+      "Grounded Evidence",
+      "Provisional Reasoning",
+      "Assumptions",
+      "Competing Explanations",
+      "Transfer Conditions",
+      "Failure Conditions",
+      "Falsification or Reverse Tests",
+      "Open Questions",
+      "Human Review",
+      "Promotion or Rejection History"
     ]
   },
   "required_paths": [

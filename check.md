@@ -104,6 +104,11 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 标准深入阅读逐项评估论文问题、动机、设计逻辑、证据链、假设/限制、比较、迁移边界、竞争解释、反向检验、研究问题和认识修正，但没有机械制造固定产量。
 - [ ] 作者明示内容与 `Analytical reconstruction` 分开；分析性重建列出 evidence、locator、推断步骤和不确定性，未冒充 source-grounded fact。
 - [ ] Ordinary Q&A 没有默认启动完整学习闭环或持久化 provisional reasoning；研究型任务按 query routing 进入 ingest/reflect。
+- [ ] Research note 只在授权研究任务且满足持久化门时创建；没有成为每篇文献的默认产物。
+- [ ] Research note 使用 `review_status: unreviewed` 与 `reasoning_status: provisional` 起步；`reasoning_status` 未重复 `unreviewed/reviewed`，`revised` 只作为 history event。
+- [ ] `Grounded Evidence` 与 `Provisional Reasoning` 明确分开；note 不替代 source evidence。
+- [ ] `promoted` note 有正式 promotion target、Human review 和 grounded-source 回链；rejected/superseded/withdrawn 保留处置依据。
+- [ ] Ordinary Q&A 已排除 `knowledge/research-notes/` / `type: research-note`；研究型任务使用 note 时显示 provisional 状态并回读 grounded sources。
 
 - [ ] 摄入前已查重并检查 aliases。
 - [ ] 摄入时区分了当前研究锚点与 Wiki 收录边界，没有把主线质量区当成知识库边界。

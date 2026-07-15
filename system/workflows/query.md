@@ -18,6 +18,8 @@ updated: 2026-07-10
 
 以下情形才进入研究型路由：文献摄入；reflect；project/synthesis；用户明确要求比较、批判、迁移、研究启发或假设形成；或者问题本身必须依赖这些分析才能可靠回答。研究型路由引用 `ingest.md`、`reflect.md` 和 `evidence-policy.md` 的 canonical 规则，本文件不复制完整学习闭环。Agent 可建议切换用户摄入模式，但不得自行切换；用户未响应时继续当前模式。
 
+`knowledge/research-notes/` 位于现有 `nuclear-knowledge` collection，但 ordinary Q&A 的候选过滤必须默认排除该路径或 `type: research-note`。只有 reflect、project、synthesis、用户明确要求研究启发/假设/迁移/暂定认识，或新证据可能修正既有 note 时才主动纳入。纳入后必须显示 `reasoning_status` 和 provisional 身份，并回到 `Grounded Evidence` 所列 source/locator 支撑事实；research note 本身不是正式 evidence。
+
 ## 2. 双语术语归一化
 
 1. 识别问题中的中文、英文、缩写、历史写法和实验口语。
@@ -82,6 +84,8 @@ qmd.cmd get "qmd://nuclear-knowledge/synthesis/example.md"
 1. 相关核素页、带结构页、概念页、模型页和观测量页；
 2. 这些页面指向的 `knowledge/sources/` 来源页；
 3. 必要时回到 `raw/` 原文核验页码、图表、能级和不确定度。
+
+若 QMD 返回 `knowledge/research-notes/`，ordinary Q&A 在全文回读前将其从候选集合排除；研究型路由使用它时，必须同时读取其 grounded sources。单一 collection 的隔离依赖这一候选过滤与 provenance 回读，不依赖排名分数。
 
 ### 3.4 索引维护
 

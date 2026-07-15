@@ -71,8 +71,12 @@
 | synthesis | 跨来源综合层，不是原始文献 |
 | evidence gap | 当前证据链缺失的来源、观测、定位或验证步骤 |
 | competing interpretation | 对同一现象或数据的竞争性解释 |
+| research-note | “暂定研究推理”；保存有跨任务价值但尚未成熟的假设、迁移边界、反向检验或认识修正候选，不是正式 evidence |
+| `reasoning_status` | 暂定推理的科学成熟度/处置状态；与页面审核状态分离 |
 
 页面级 `review_status` 和 claim-level `needs_review` 是两个独立状态。Lint 通过只说明自动检查未发现阻断性结构问题，不代表科学内容全部复核完成。
+
+Research note 还使用第三个独立状态：`reasoning_status`。新 note 为 `review_status: unreviewed`、`reasoning_status: provisional`；审核只改变人工流程状态，不能自动把推理晋升为正式知识。`promoted`、`rejected`、`superseded`、`withdrawn` 记录科学处置，修订本身写 history。
 
 ## 6. How to ask knowledge questions / 如何提问
 
@@ -210,6 +214,12 @@ Project 不必等到一个月后或数据处理全部结束才建立。出现以
 
 Project 可以记录研究问题、连接数据处理结果、汇总 source 与 synthesis、比较竞争解释、梳理创新点候选，并保存失败经验和研究决策。它连接已有证据，不替代 source，也不预先决定最终创新性。
 
+### 暂定研究推理如何使用
+
+在已授权的 ingest、reflect、project 或 synthesis 任务中，如果一项推理具有跨来源/跨任务价值、可检验性、可能改变现有判断，或丢失会造成明显研究损失，Codex 可以创建 research note。它必须把 `Grounded Evidence` 与 `Provisional Reasoning` 分开，并在 Human review triage 中告知你。普通联想、重复摘要和低价值问题不会持久化。
+
+你可以要求保留 provisional、修改、晋升、拒绝、撤回或标记 superseded。晋升需要 Human review，并由正式 project/synthesis/method/concept 吸收、回链原始 source；research note 自身始终不替代论文证据。
+
 ## 10. How to prepare for writing / 如何为写作准备
 
 未来写作 Skill 可基于 source、synthesis、project、citation key、数据处理结果和用户确认结论辅助：
@@ -235,7 +245,7 @@ Project 可以记录研究问题、连接数据处理结果、汇总 source 与 
 
 ### QMD 与 Skill 的关系
 
-QMD 是 `$wiki-evidence-query` 和普通查询流程可自动调用的底层检索工具，不是另一个知识库，也不需要用户在每条问题中点名。当前 `nuclear-knowledge` collection 只索引 `knowledge/**/*.md`；索引数据库保存在被忽略的 `.qmd/`，模型保存在用户缓存，两者都不进入 Git。
+QMD 是 `$wiki-evidence-query` 和普通查询流程可自动调用的底层检索工具，不是另一个知识库，也不需要用户在每条问题中点名。当前 `nuclear-knowledge` collection 只索引 `knowledge/**/*.md`；research notes 仍在同一 collection，但 ordinary Q&A 会按路径/type 排除。研究型任务使用 note 时必须同时回读其 grounded sources。索引数据库保存在被忽略的 `.qmd/`，模型保存在用户缓存，两者都不进入 Git。
 
 推荐分层：
 
@@ -266,7 +276,7 @@ qmd.cmd embed -c nuclear-knowledge
 
 多篇文献如果用户要求逐篇摄入，应逐篇完成 source、claim、locator、project relation 和 P0/P1 triage；每篇都有自己的 source-level / claim-level 审核重点，不应合并成粗略批处理。
 
-用户主要看最终复盘中的 Result status、commit hash、是否 push、P0 focus、Remaining P0、P1、精力有限时建议先看的 3-5 个位置和检查结果。
+用户主要看最终复盘中的 Result status、commit hash、是否 push、完整 P0（可分批但不隐藏）、可审核 P1、精力有限时建议先看的顺序和检查结果。
 
 `knowledge/overview.md` 是阶段性地图，不需要每篇 source 都更新；source、project 和 synthesis 才是主要知识承载。overview deferred 不代表摄入失败。大型 project/synthesis 可维护 `Agent active summary` 作为导航入口，但 active summary 不是 source，不替代 project/synthesis 主体，也不替代原文 locator。
 ## 13. Git and safety / Git 与安全边界

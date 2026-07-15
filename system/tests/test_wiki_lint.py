@@ -43,6 +43,37 @@ class LinkTests(unittest.TestCase):
 
 
 class ScientificGuardrailTests(unittest.TestCase):
+    def test_research_note_state_and_promotion_target(self) -> None:
+        config = wiki_lint.load_config(REPO_ROOT / "system" / "lint-config.json")
+        base_meta = {
+            "type": "research-note",
+            "title": "Example reasoning",
+            "aliases": [],
+            "created": "2026-07-15",
+            "updated": "2026-07-15",
+            "status": "ai-draft",
+            "review_status": "unreviewed",
+            "tags": [],
+            "evidence_sources": ["example-source"],
+            "created_from": "reflect",
+        }
+        page = wiki_lint.Page(
+            path=Path("knowledge/research-notes/example.md"),
+            relative="knowledge/research-notes/example.md",
+            slug="example",
+            expected_type="research-note",
+            meta={**base_meta, "reasoning_status": "unreviewed"},
+            body="",
+        )
+        issues: list[wiki_lint.Issue] = []
+        wiki_lint.validate_page(page, config, issues)
+        self.assertIn("REASONING_STATUS_VALUE", {issue.code for issue in issues})
+
+        page.meta = {**base_meta, "reasoning_status": "promoted", "promotion_target": ""}
+        issues = []
+        wiki_lint.validate_page(page, config, issues)
+        self.assertIn("PROMOTION_TARGET_MISSING", {issue.code for issue in issues})
+
     def test_high_confidence_requires_human_confirmation(self) -> None:
         page = wiki_lint.Page(
             path=Path("knowledge/concepts/example.md"),

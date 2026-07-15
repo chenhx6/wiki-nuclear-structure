@@ -8,7 +8,7 @@ upgrade: continuous-research-learning
 baseline_branch: main
 baseline_commit: 803a19d6a92546475c6a7ab18386b8e1bcb4b45c
 implementation_branch: codex/continuous-research-learning-upgrade
-validation_status: phase-1-in-progress
+validation_status: phase-2-in-progress
 final_push_target: origin/main
 push_authorization: not-authorized
 push_state: not-ready
@@ -20,12 +20,12 @@ This page is the release record for the planned upgrade from an evidence databas
 
 ## Current phase and scope
 
-- Current phase: Phase 1 — core governance.
+- Current phase: Phase 2 — controlled research-note layer.
 - Architecture status: `planned`.
 - Baseline: `main` at `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`, aligned with `origin/main` and clean at Phase 0 entry.
 - Implementation branch: `codex/continuous-research-learning-upgrade`.
 - Phase 1 is authorized as part of the user-approved continuous Goal execution through Phase 5; no push is authorized.
-- Phase 1 changes only canonical governance, schema clarification, the source template, and derived checks. No science page, source, project, synthesis, QMD configuration, or research-note instance is changed.
+- Phase 1 is committed as `2201f4a`. Phase 2 adds only controlled research-note infrastructure, routing, structural validation, and derived documentation. No real research-note instance, science page, source, project, synthesis, or QMD collection is changed.
 
 ## Upgrade motivation
 
@@ -178,7 +178,7 @@ In progress: separate user modes from reading states; define the standard deep-i
 
 ### Phase 2 — controlled research-note layer
 
-Planned only: finalize the `reasoning_status` enum, add the directory/type/template, implement lifecycle and promotion/rejection rules, add query/QMD routing, lint/check support, and derived user guidance. Phase 2 is not authorized.
+In progress: the enum is fixed as `provisional`, `promoted`, `rejected`, `superseded`, and `withdrawn`; `revised` is a history event. Add the directory/type/template, lifecycle and promotion/rejection rules, single-collection query isolation, lint/check support, and thin Skill/Guide synchronization. No note instance is created before a task passes the persistence gate.
 
 ### Phase 3 — two-paper pilot
 
@@ -217,7 +217,7 @@ Planned only: complete this record, compatibility and validation results; synchr
 
 ## Deferred decisions
 
-- Final `reasoning_status` schema enum: Phase 2 approval gate.
+- Final `reasoning_status` schema enum: resolved in Phase 2 as the five user-approved stable values; human review remains solely in `review_status`.
 - Exact two pilot papers: user reconfirmation before Phase 3.
 - Independent QMD collection: evaluate only in Phase 4 if the single-collection isolation test fails.
 - Performance benchmark: separate future task requiring explicit authorization.
@@ -227,8 +227,9 @@ Planned only: complete this record, compatibility and validation results; synchr
 
 - Phase 0 baseline commit: `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`.
 - Phase 0 checkpoint: created as the current branch HEAD with message `Record continuous research-learning upgrade Phase 0`; the exact hash is recorded by Git and the final task report.
-- Phase 1 implementation: in progress; commit hash will be recorded by Git/handoff/log after validation.
-- Phase 2–5 implementation commits: not started.
+- Phase 1 implementation: `2201f4a Define continuous research-learning core governance`.
+- Phase 2 implementation: in progress; commit will be recorded by Git/handoff/log after validation.
+- Phase 3–5 implementation commits: not started.
 - Pilot result: not started.
 - Validation result: not started.
 - Final push target: `origin/main`.

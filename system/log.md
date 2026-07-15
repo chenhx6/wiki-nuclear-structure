@@ -591,3 +591,8 @@ updated: 2026-07-15
 
 - Separated user ingest modes from completed `reading_depth`, added the standard research-learning loop and analytical-reconstruction boundary, clarified provisional promotion and ordinary/research routing, and removed the P0 hard-cap behavior.
 - No science page, research-note instance, QMD configuration or push was included; Phase 1 validation and local checkpoint commit follow.
+
+## [2026-07-15] architecture | continuous research-learning upgrade Phase 2
+
+- Added the controlled `research-note` type, five-state maturity model, template, persistence/promotion lifecycle, ordinary-query exclusion, structural lint/test coverage, and thin Skill/Guide routing.
+- No real research-note instance, science page, QMD collection change or push was included; Phase 2 validation and local checkpoint commit follow.

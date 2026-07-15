@@ -41,6 +41,22 @@ Project 用于承载特定研究问题下的证据组织、候选解释和决策
 
 暂定研究推理、迁移假设、反向检验和认识修正候选不得直接写成正式 project/synthesis 结论。晋升时至少记录：此前认识、新认识、触发证据与 locator、支持/冲突来源、关键假设、仍存不确定性、Human review 结果和晋升目标。被修正、拒绝或取代的认识保留简短 history，不静默删除。
 
+### Research-note 创建与生命周期
+
+在用户已授权的 ingest、reflect、project 或 synthesis 写入任务中，Agent 只有在暂定推理满足至少一项持久化门时才可创建 `knowledge/research-notes/` 页面：具有明确跨来源或跨任务复用价值；形成可检验预测/问题；可能改变 project/synthesis；存在真实竞争解释；值得长期追踪；或当次输出结束后丢失会造成明显研究损失。普通联想、关键词关系、重复摘要和低价值问题不持久化。
+
+创建时必须有 grounded evidence、locator/证据入口、创建理由，并使用 `review_status: unreviewed`、`reasoning_status: provisional`。创建不等于审核或晋升，必须进入 Human review triage。普通 Q&A 不创建 research note。
+
+生命周期：
+
+1. `provisional`：证据与推理已分开，但尚未晋升；可保持 `unreviewed`，只有可能改变科学结论、project/synthesis 或 paper evidence 的项进入 P0，其余高价值判断进入 P1。
+2. `promoted`：用户完成相称审核，正式 owning page 吸收结论并回链 note/source；记录 promotion target、日期、理由和触发证据。
+3. `rejected`：当前推理被审核否决；保留否决依据。
+4. `superseded`：由更完整 note 或正式认识取代；链接后继页面。
+5. `withdrawn`：创建者/用户主动撤回且不再作为活动候选；保留原因。
+
+修订记录写入 history，状态回到适用稳定值。不得通过静默删除掩盖错误认识；用户明确要求删除尚未正式接纳的草稿时，按用户指令处理。Research note 不得成为所有文献的默认产物，也不得反向替代其 grounded sources。
+
 
 ## Stage 2.5：Project / synthesis active summary
 

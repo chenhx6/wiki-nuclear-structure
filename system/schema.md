@@ -23,6 +23,7 @@ updated: 2026-07-02
 | project | `knowledge/projects/` | 当前研究项目状态 |
 | decision | `knowledge/decisions/` | 有依据的研究决策 |
 | failure | `knowledge/failures/` | 失败路线、原因与复活条件 |
+| research-note | `knowledge/research-notes/` | 受控保存高价值、尚未成熟的暂定研究推理 |
 | output | `outputs/` | 可复用报告、草稿或审计结果 |
 
 ## 所有正式知识页的公共字段
@@ -63,6 +64,24 @@ tags: []
 - `deep-read`：在完整正文主线基础上，核查关键方法、数据、图表/公式及与任务相关的补充证据。
 
 source 还应在正文明确记录 `Covered scope` 与 `Not covered`。局部问题即使核查很深，也不能据此把未完整阅读的全文标记为 `deep-read`。三种用户摄入模式由 `system/workflows/ingest.md` 定义，不得从 `reading_depth` 反推用户模式，也不得建立一一对应关系。
+
+## Research-note 状态与字段
+
+`research-note` 是“暂定研究推理”的受控中间层，不是 source 或正式 synthesis。三个状态字段职责不可重叠：
+
+- `status`：页面的一般生命周期；沿用公共枚举。
+- `review_status`：人工审核流程；新 note 为 `unreviewed`。
+- `reasoning_status`：推理的科学成熟度与处置；允许值仅为 `provisional`、`promoted`、`rejected`、`superseded`、`withdrawn`。
+
+新 note 必须使用 `review_status: unreviewed` 与 `reasoning_status: provisional`。`unreviewed` / `reviewed` 不得写入 `reasoning_status`。`revised` 是 `Promotion or Rejection History` 中的历史事件，不是稳定状态；修订后仍回到相应稳定枚举。
+
+Research note 还必须包含：
+
+- `evidence_sources`：至少一个现有 source 或可核查证据入口；
+- `created_from`：产生该推理的授权任务类型，例如 ingest、reflect、project 或 synthesis；
+- `promotion_target`：尚未晋升时可留空，晋升后指向正式 project/synthesis/method/concept 等 owning page。
+
+`promoted` 表示推理已经经过相称 Human review，并被正式页面吸收且保留回链；它不把 research note 自身变成 source evidence。`rejected`、`superseded`、`withdrawn` 均保留简短处置原因和触发证据，不静默删除历史。
 
 ## 科学主张字段
 

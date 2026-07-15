@@ -254,6 +254,25 @@ def validate_page(page: Page, config: dict[str, Any], issues: list[Issue]) -> No
     if meta.get("review_status") == "needs-human-review":
         add(issues, "info", "HUMAN_REVIEW", page.relative, "page awaits human review")
 
+    if page.expected_type == "research-note":
+        reasoning_status = meta.get("reasoning_status")
+        if reasoning_status not in config["allowed_reasoning_status"]:
+            add(
+                issues,
+                "error",
+                "REASONING_STATUS_VALUE",
+                page.relative,
+                f"invalid reasoning_status {reasoning_status!r}",
+            )
+        if reasoning_status == "promoted" and value_missing(meta, "promotion_target"):
+            add(
+                issues,
+                "error",
+                "PROMOTION_TARGET_MISSING",
+                page.relative,
+                "promoted research-note requires promotion_target",
+            )
+
     for field in ("created", "updated"):
         raw = str(meta.get(field, ""))
         if not DATE_RE.fullmatch(raw):

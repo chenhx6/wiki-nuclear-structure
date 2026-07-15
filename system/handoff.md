@@ -8,31 +8,31 @@ updated: 2026-07-15
 ## Active handoff
 
 Current active task:
-Phase 1 of the continuous research-learning upgrade: core governance is being implemented and validated before the controlled research-note layer.
+Phase 2 of the continuous research-learning upgrade: controlled research-note infrastructure and ordinary-query isolation are being implemented and validated.
 
 Current branch / local commit:
-`codex/continuous-research-learning-upgrade`; Phase 0 checkpoint `13d803e` is the parent baseline. Phase 1 changes are local and uncommitted until its validation gate; no push is authorized.
+`codex/continuous-research-learning-upgrade`; Phase 1 commit is `2201f4a`. Phase 2 changes are local and uncommitted until validation; no push is authorized.
 
 Last task status:
-Phase 1 core rules now separate user mode from completed `reading_depth`, define the default standard learning loop, source analytical-reconstruction boundary, provisional reasoning/promotion boundary, ordinary/research query routing, project/synthesis revision rules, and P0 review without a hard cap. Validation and the independent Phase 1 commit remain.
+Phase 1 passed lint and was committed independently. Phase 2 now defines the `research-note` type, five-state `reasoning_status`, template, persistence/promotion lifecycle, single-QMD-collection query isolation, lint/tests, Skill routing and user guidance. No real note is created.
 
 Unfinished items:
-Complete Phase 1 checks and checkpoint commit, then continue to Phase 2 under the approved Goal. Phase 2 must finalize the non-overlapping `reasoning_status` enum and controlled research-note infrastructure. Phase 3 pilot candidates are fixed by the current Goal unless a science P0 forces a pause. Performance benchmarking remains a separately authorized future task.
+Complete Phase 2 checks and independent commit, then run the fixed Phase 3 pilots: Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM. Pause only if pilot science produces P0. Performance benchmarking remains a separately authorized future task.
 
 P0 focus:
-No science-content P0 is present in Phase 1. Do not create research-note instances, start pilot science work before the Phase 2 commit, or push.
+No science-content P0 is present in Phase 2 infrastructure. Do not create research-note instances before a real pilot passes the persistence gate, or push.
 
 Remaining P0:
-None identified for Phase 1 governance. Future pilot science P0 items do not exist yet.
+None identified for Phase 2 infrastructure. Future pilot science P0 items do not exist yet.
 
 Risks:
-The architecture update is a release record, not a canonical rule owner. Phase 1 must avoid leaving conflicting duplicate P0 or reading-depth rules in derived files. Phase 2 state fields must not create contradictory sources of truth.
+Single-collection isolation depends on query/Skill candidate filtering and grounded-source readback; Phase 4 must test it. Lint is structural and cannot validate scientific reasoning quality.
 
 Checks:
-Phase 1 entry was clean at `13d803e`; EOL cleanup reported 0 refreshed/restored/unsafe/mixed. Phase 1 final checks are pending.
+Phase 1 lint passed with 0 errors and 11 existing warnings; commit `2201f4a` contains only governance files. Phase 2 final lint/tests are pending.
 
 Next prompt / continuation phrase:
-Continue the approved Goal: validate and commit Phase 1, then implement Phase 2 without pushing.
+Continue the approved Goal: validate and commit Phase 2, then execute the two fixed pilots without pushing.
 
 Recent user decisions:
 Approved continuous Phase 1–5 execution with per-phase local commits and no push. Fixed pilot papers for Phase 3 are Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM unless a science P0 requires user review.
