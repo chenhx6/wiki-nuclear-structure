@@ -2,10 +2,25 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-13
+updated: 2026-07-16
 ---
 
 # Knowledge Base Health Dashboard
+
+## Current Snapshot: 2026-07-16
+
+This snapshot records the operational closure of the continuous wobbling-source batch. Petrache 2016, Chakraborty 2023 and Mullins 1993 were reviewed at source level; PE16-2 now distinguishes the two ATLAS target assemblies, and the Mullins DOI/pagination are corrected. The ten theory/review sources and the WOB-REFL/WOB-PROJ-REF analytical notes remain unreviewed working knowledge with `needs_review: true`; their review is deferred until actual use rather than retained as an active batch WIP.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 55 | Includes the 13 main papers in this batch; the Chen publisher erratum is linked as a correction, not a separate full source page. |
+| concept / method / model / observable pages | 40 / 17 / 15 / 19 | Added only minimal source links for magnetic rotation, antimagnetic rotation, shears, band termination and TAC. |
+| project / synthesis pages | 8 / 6 | Updated the existing low-spin wobbling project and synthesis with batch REFLECT notes; no duplicate project was created. |
+| source pages unreviewed | 10 | The ten theory/review source pages remain unreviewed under the `review deferred until use` strategy. |
+| claim-level `needs_review: true` | 107 | Lint total after clearing only PE16-1..12 and MU93-1..10; theory/review and batch-reflection claims remain pending targeted review. |
+| claim missing locator / kind | 0 / 0 | Current lint result. |
+| raw hash coverage | 55/55 | All source raw-file hashes match after the Clark hash correction. |
+| review boundary | batch operationally closed | Three experimental source pages were reviewed; theory/review and batch-reflection claims remain provisional and require targeted review before consequential use. |
 
 ## Current Snapshot: 2026-07-13
 

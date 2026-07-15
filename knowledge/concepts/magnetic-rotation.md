@@ -37,6 +37,8 @@ Band regularity, M1/E2 strengths, B(M1) decrease with spin, transition multipola
 ## Supporting Evidence
 
 - [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
+- [[clark-2000-shears-mechanism]]
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]]
 
 ## Counter-evidence and Competing Interpretations
 
@@ -49,6 +51,8 @@ Treat magnetic rotation as a configuration-dependent interpretation supported by
 ## Sources
 
 - [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
+- [[clark-2000-shears-mechanism]]
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]]
 
 ## Review Status
 

@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-12
+updated: 2026-07-15
 ---
 
 # Wiki Index
@@ -39,6 +39,18 @@ updated: 2026-07-12
 - [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]] - `128,130Xe` 中配对振动与三轴形状自由度耦合的玻色子数非守恒 IBM 研究。
 - [[babra-2019-deformation-change-136sm]] - `136Sm` yrast 寿命、`Q_t` 下降与带交叉处形变演化的实验-模型证据链。
 - [[nomura-2022-questioning-wobbling-ibfm]] - 对 `135Pr/133La/127Xe/105Pd` reported low-spin wobbling bands 的 γ-soft IBFM 替代理论解释与 E2/M1 comparison。
+- [[hamamoto-2002-wobbling-excitations-odd-a-high-j-aligned-particles]] - 高-j 对齐粒子与三轴转子 wobbling 激发的模型基础。
+- [[hamamoto-2003-quantized-wobbling-excitations-alignments]] - alignment-dependent quantized wobbling energy、B(E2) 与 `163Lu` theory comparison。
+- [[frauendorf-2014-transverse-wobbling]] - transverse/longitudinal QTR/HFA geometry、wobbling-energy trend 与 `163Lu/135Pr` model comparisons。
+- [[streck-2018-behavior-collective-rotor-wobbling]] - `135Pr` PRM rotor probability distributions、transverse-to-longitudinal evolution 与 signature-partner model diagnostic。
+- [[chen-2019-transverse-wobbling-even-even]] - `130Ba` two-quasiparticle transverse-wobbling CDFT/TAC+PRM model source与 mixing-ratio branch limitation。
+- [[chen-2022-study-wobbling-spin-coherent-state-maps]] - SCS maps、PTR topology、flip mode 与 finite-space wobbling/signature-partner interpretation；含 Fig.15 publisher correction。
+- [[jia-2022-possible-wobbling-multiple-chiral-doublets]] - ideal odd-odd PRM 中 MχD mixing-ratio/E2-fraction 与 core-wobbling future proposal。
+- [[petrache-2016-134ce-triaxiality-exotic-rotations]] - `134Ce` Gammasphere level scheme、DCO/Rac、alignment 与 CNS triaxial/high-spin interpretation。
+- [[mullins-1993-141gd-perturbed-alignments]] - `141Gd` i13/2 intruder、DCO/alignment、gradual upbend 与 CSM/TRS limitation。
+- [[ye-2024-physics-exotic-nuclei]] - exotic nuclei、核力/多体模型、壳演化、滴线、halo、cluster 与 RIB 方法的 review/background。
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]] - MR/AMR 大样本汇编、shears 判据、寿命缺口与 tentative-assignment 边界。
+- [[clark-2000-shears-mechanism]] - shears 角动量几何、TAC/半经典有效相互作用与 MR/core-rotation 竞争背景。
 - [[draper-1970-gaussian-substate-side-feeding]] - Gaussian magnetic-substate side feeding 对 stretched-E2 `A2/A4` 的形式化处理。
 - [[zobel-1980-magnetic-substate-distributions]] - fusion-evaporation alignment attenuation coefficients、ALY curve 与 Gaussian hypothesis 条件。
 - [[zobel-1983-energy-projectile-alignment]] - `67Ga` alignment attenuation 的 projectile、energy 与 direct/cascade feeding dependence。

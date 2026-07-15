@@ -37,6 +37,8 @@ Spin-dependent angular momentum, frequency, B(M1), B(E2), and lifetime trends ar
 ## Supporting Evidence
 
 - [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
+- [[clark-2000-shears-mechanism]]
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]]
 
 ## Counter-evidence and Competing Interpretations
 
@@ -49,6 +51,8 @@ Keep shears-blade alignment distinct from reaction alignment and magnetic-substa
 ## Sources
 
 - [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
+- [[clark-2000-shears-mechanism]]
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]]
 - [[angular-momentum-alignment]]
 
 ## Review Status

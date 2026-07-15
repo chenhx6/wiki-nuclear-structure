@@ -626,3 +626,28 @@ updated: 2026-07-15
 
 - External final review passed with no science/framework P0; fast-forward merge, annotated tag, and push were explicitly authorized.
 - Actual publication result will be recorded by Git and the final report; no post-push status-only commit will be created.
+
+## [2026-07-15] checkpoint | triaxial wobbling source batch
+
+- Completed first ten main sources in order: Hamamoto 2002/2003, Frauendorf-Dönau 2014, Streck 2018, Chen 2019, Chen-Frauendorf 2022 plus associated publisher erratum, Jia 2022, Petrache 2016, Chakraborty 2023 canonical-key metadata update, and Mullins 1993.
+- Current step: batch-level wobbling REFLECT before Ye 2024, Kumar 2025 and Clark 2000.
+- New claims remain `needs_review: true`; no raw PDF, `.bib` or unrelated framework file was staged or modified. `git diff --check` is clean.
+- Next continuation: add minimum theory-lineage/transfer-boundary reflection to existing wobbling project/synthesis, then continue Ye 2024.
+## [2026-07-15] checkpoint | triaxial wobbling source batch (final three reviews)
+- Completed Ye 2024, Kumar 2025 and Clark 2000 review/background source notes after the first-ten-paper wobbling REFLECT; no separate source page was created for the Chen publisher erratum.
+- Updated index, overview, minimal MR/AMR/shears/band-termination/TAC source links, and Active handoff. New claims remain pending human review.
+- Checks so far: `git diff --check` clean; wiki lint 0 errors / 24 warnings / 129 info. QMD refresh and WIP commit remain.
+
+## [2026-07-15] checkpoint | triaxial wobbling source batch WIP
+- Created local WIP with message `WIP ingest: triaxial wobbling source batch for user review`; no push.
+- Post-commit protected-path check is clean; only user `raw/zotero/wiki-inbox.bib` remains uncommitted. Review queue remains open for new source claims and wobbling REFLECT notes.
+
+## [2026-07-16] checkpoint | Chakraborty 2023 source-framework migration
+
+- Added current-framework `Analytical Reconstruction`, `Project Relation`, historical review record, Human Review Triage and `Review Status` sections to the already reviewed C23 source.
+- Preserved `C23-1..C23-7` and `needs_review: false`; this is an on-touch format migration, not a new scientific review round. Protected user BibTeX remains unstaged.
+
+## [2026-07-16] review finalization | triaxial wobbling source batch
+
+- User reviewed Petrache 2016, Chakraborty 2023 and Mullins 1993; corrected PE16 two-run target assemblies and MU93 DOI/pagination, then cleared only the reviewed experimental claims.
+- Operationally closed the batch. Ten theory/review sources and WOB-REFL/WOB-PROJ-REF claims remain unreviewed with `review deferred until use`; final amend/push was explicitly authorized, with Git as the publication record.

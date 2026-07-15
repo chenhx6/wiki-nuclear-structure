@@ -37,6 +37,7 @@ Regular Delta I=2 sequences, small B(E2), dynamic moment of inertia and transiti
 ## Supporting Evidence
 
 - [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]]
 
 ## Counter-evidence and Competing Interpretations
 
@@ -49,6 +50,7 @@ Use the antimagnetic label only when the shears-cancellation interpretation is t
 ## Sources
 
 - [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]]
 
 ## Review Status
 

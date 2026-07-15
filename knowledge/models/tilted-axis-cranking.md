@@ -71,6 +71,8 @@ Use the symmetry labels explicitly: PAC preserves a signature-like operation; pl
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[meng-2010-open-problems-nuclear-chirality]]
 - [[frauendorf-2001-spontaneous-symmetry-breaking-rotating-nuclei]]
+- [[clark-2000-shears-mechanism]]
+- [[kumar-2025-review-magnetic-antimagnetic-rotational-structures]]
 
 ## Evolution Log
 

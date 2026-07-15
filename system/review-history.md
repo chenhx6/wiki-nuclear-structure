@@ -1,7 +1,7 @@
 ---
 type: system-review-history
 graph-excluded: true
-updated: 2026-07-15
+updated: 2026-07-16
 ---
 
 # Review history
@@ -61,6 +61,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 - next action: future additional alignment/rotating-nuclei or P-ADO sources
 - related pages: the two source pages, sigma-over-I project, nuclear-chirality project
 - review commit message: Finalize nuclear alignment and rotating-symmetry source review
+
+### 2026-07-16 — triaxial wobbling experimental sources — round 1
+
+- review scope: Petrache 2016 `PE16-1..12`, Chakraborty 2023 `C23-1..7`, Mullins 1993 `MU93-1..10`, including source-level boundaries, project relations and P0/P1 triage
+- user decisions: the three experimental sources are accepted after the stated corrections; the ten theory/review sources and batch REFLECT claims remain unreviewed working knowledge with review deferred until use
+- corrections requested: distinguish the two Petrache ATLAS target assemblies in PE16-2; correct the Mullins DOI, canonical source and Rapid Communication pagination
+- unresolved issues: no active source-review blocker; theory/review and WOB-REFL/WOB-PROJ-REF claims retain `needs_review: true` for future targeted review
+- next action: trigger claim-specific review only when content enters paper writing, a key project decision, synthesis finalization or a paper-level evidence pool
+- related pages: the three experimental source pages, ten theory/review source pages, low-spin wobbling project and synthesis
+- review commit message: Finalize triaxial wobbling source batch review
 
 ## Entry template
 

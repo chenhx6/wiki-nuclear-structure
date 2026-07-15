@@ -3,7 +3,7 @@ type: synthesis
 title: "Low-spin wobbling, gamma-soft deformation, and alternative interpretations"
 aliases: [低自旋 wobbling 与 gamma-soft 替代解释综合, wobbling gamma-soft TiP IBFM research map]
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-07-16
 status: active
 review_status: human-reviewed
 scope: low-spin-wobbling-gamma-soft-tip-ibfm-cross-project
@@ -162,7 +162,34 @@ PRM/QTR/TiP 依赖 MoI ordering、形变、pairing、included orbitals 与 froze
 
 最有用的中间产物是：标注门条件和污染的 level scheme/gated spectra；DCO/ADO 与 polarization 表；完整 `χ²(δ)` 或 likelihood 图；分开的 E2/M1 relative ratios；寿命/absolute matrix elements；band-energy staggering、alignment 和 `E_wobb` 图；以及各模型在 common inputs 下的逐 observable residuals。
 
+## Batch Reflect: Wobbling Theory Lineage and Transfer Boundaries (2026-07-15)
+
+The first ten sources change the map in a specific way: the wobbling label is not a single model output but a chain from triaxial-rotor assumptions, high-j alignment and angular-momentum topology to energy and electromagnetic observables. Hamamoto 2002/2003 establish the aligned-particle and quantized-phonon limits; Frauendorf-Dönau 2014 gives the transverse/longitudinal QTR/HFA geometry; Streck 2018 and Chen-Frauendorf 2022 expose the full PRM/PTR wave-function topology, finite-angular-momentum effects, flip regime and signature-partner mixing. Chen 2019 extends the model chain to a two-quasiparticle even-even configuration, while Petrache 2016 and Mullins 1993 provide experimental triaxial/alignment method contexts rather than wobbling proof. Chakraborty 2023 remains a direct experimental counterexample in which triaxiality and a band structure do not automatically yield wobbling.
+
+| ID | Batch-level reflection | Source basis and locator | Boundary / reverse test | needs_review |
+|---|---|---|---|---|
+| WOB-REFL-1 | High-j alignment and the ordering of rotor moments of inertia determine whether a wobbling-like excitation is transverse, longitudinal or unstable in the QTR/PRM model; the same energy trend cannot be interpreted without these inputs. | H02-1/H02-8, pp.1-8; H03-1/H03-10, pp.1-8; F14-1/F14-12, pp.2-12 | Refit MoI, pairing, deformation and particle orientation before transferring a trend between nuclei. | true |
+| WOB-REFL-2 | Decreasing or increasing `E_wobb` and enhanced adjacent-band E2 links are recurring model/experimental criteria, but they are conditional consequences of the adopted topology and phonon assignment, not model-independent sufficient tests. | F14-4/F14-5, pp.3-7; ST18-3/ST18-8, pp.4-9; CF22-7/CF22-12, pp.14-26 | Require stable band identity, multipolarity/`delta`, competing signature-partner calculation and preferably absolute strengths. | true |
+| WOB-REFL-3 | PRM/PTR probability distributions, SCS maps and azimuthal/KR plots can distinguish calculated TW, LW, flip and signature-partner structures, but they are model wave-function diagnostics rather than direct measured angular-momentum orientations. | ST18-5/ST18-8, pp.5-9; CF22-1/CF22-10, pp.2-4,16-19 | Compare common observables across PRM/QTR, TAC/TiP, TPSM and gamma-soft IBFM; do not promote a map topology to observed fact. | true |
+| WOB-REFL-4 | The harmonic/frozen-alignment approximation can fail early at low or transitional spin; finite Hilbert-space effects, Coriolis reorientation, pairing and wobbling/signature-partner coupling shift the apparent critical spin and phonon labels. | H03-8/H03-10, pp.5-8; ST18-9, pp.4-6; CF22-6/CF22-10, pp.13-19 | Use full PTR/QTR or an explicitly controlled approximation test; retain flip/transitional states as unresolved when topology is mixed. | true |
+| WOB-REFL-5 | The `130Ba` two-quasiparticle calculation shows how CDFT/TAC shape input, PRM energies and mixing-ratio-derived strengths can form a coherent supporting chain, while the two-branch `delta` ambiguity remains an experimental gate. | CH19-1/CH19-7, pp.1-4, Table I | Recheck the original angular-distribution source and both `delta` solutions; do not use the theory paper as a replacement experiment. | true |
+| WOB-REFL-6 | `134Ce` high-spin spectroscopy and `141Gd` intruder alignment provide transferable methods for level identity, DCO/angular-distribution constraints, alignment and shape interpretation, but neither paper establishes a wobbling band. | PE16-1/PE16-8, pp.2-18; MU93-2/MU93-9, pp.1-5 | Keep reaction/alignment evidence separate from wobbling interpretation and test CNS/CSM/TRS assumptions. | true |
+| WOB-REFL-7 | `131Xe` demonstrates the reverse boundary: a triaxial model and a well-defined band can coexist with M1-dominated links and a signature-partner interpretation rather than wobbling. | C23-1/C23-7, pp.2-8 (canonical source `chakraborty_2023_Searchorigin`) | Do not infer wobbling from triaxiality, near-degeneracy or model agreement alone. | true |
+| WOB-REFL-8 | The theory-to-experiment transfer is therefore conditional: observables such as `E_wobb`, E2/M1 ratios, alignment and signature splitting must be recorded with model assumptions, competing interpretations and evidence independence. | H02-H03; F14; ST18; CH19; CF22; PE16; MU93; C23 | This batch does not revise the `135Pr`/`187Au` verdict; it supplies a theory/method scaffold for future common-input audits. | true |
+
+The batch is operationally closed. WOB-REFL-1 through WOB-REFL-8 remain provisional analytical reconstruction with `needs_review: true`; review is deferred until a specific statement is used for paper writing, a key project decision, synthesis finalization or a paper-level evidence pool. The completed PE16, C23 and MU93 source review does not promote these cross-source reflections.
+
+### Migration Boundary
+
+These sources can directly enrich the existing wobbling and triaxiality knowledge graph, but they do not create a universal rule for `135Pr`, `187Au`, `131Xe`, `130Ba` or `134Ce`. In particular, `E_wobb` trends, E2-rich links, SCS/PRM topology and fitted MoI should be linked to the relevant source page and claim kind. They cannot substitute for the original experimental transition tables, polarization/DCO fits, lifetimes or band-identity checks in the low-spin controversy projects.
+
 ## Human Review Triage
+
+Deferred targeted review items for the 2026-07-15 batch reflection; these are not active-WIP blockers:
+
+- **WOB-REFL-1/WOB-REFL-2, H02/H03/F14/ST18/CF22 locators.** Verify that the theory lineage and `E_wobb`/E2 criteria are explicitly model-conditioned and not presented as universal or observed facts.
+- **WOB-REFL-3/WOB-REFL-4, ST18/CF22 locators.** Check the distinction between calculated SCS/PRM topology, finite-space/flip effects and direct experimental observables.
+- **WOB-REFL-5/WOB-REFL-6/WOB-REFL-7, CH19/PE16/MU93/C23 locators.** Verify the migration boundaries: model comparison and alignment method context must not replace original experimental evidence or turn triaxiality into wobbling proof.
 
 本轮人工审核已完成：LSW-GSAI-SYN-1 至 LSW-GSAI-SYN-10 均已改为 `needs_review: false`，页面升级为 `review_status: human-reviewed`。后续若新增跨案例 claim，应重新建立 P0/P1 队列，而不自动继承本轮审核结论。
 

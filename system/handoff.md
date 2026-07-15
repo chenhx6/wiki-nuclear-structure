@@ -1,41 +1,41 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-15
+updated: 2026-07-16
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Continuous Research-Learning v1 Gate 2B release approval is complete; authorized publication steps are ready to execute.
+The 13-source triaxial-wobbling batch is operationally closed. Petrache 2016, Chakraborty 2023 and Mullins 1993 are source-level human-reviewed; ten theory/review sources and WOB-REFL/WOB-PROJ-REF notes remain searchable working knowledge under `review deferred until use`.
 
 Current branch / local commit:
-`codex/continuous-research-learning-upgrade`; current HEAD carries `Prepare Continuous Research-Learning v1 release`. Working tree and staged area are clean; merge, tag, and push are authorized, and the actual remote state is Git-authoritative.
+`main`; the active WIP is being amended to final commit `Finalize triaxial wobbling source batch review`. The user explicitly authorized push to `origin/main`; Git is authoritative for the resulting hash and remote synchronization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
 
 Last task status:
-Gate 2B external review passed with no unresolved science or framework P0. All three Gate 1 blockers are fixed, on-touch migration is current, and the release commit is ready for fast-forward publication.
+Implemented the completed human-review round. PE16-2 now distinguishes the two ATLAS target assemblies at PDF p. 2; PE16-1..12, C23-1..7 and MU93-1..10 are reviewed. MU93 DOI/canonical source/pagination now use `10.1103/PhysRevC.47.R2447` and R2447-R2451. Theory/review and batch-reflection claims remain unreviewed and provisional; no PDF or BibTeX was modified.
 
 Unfinished items:
-Execute fast-forward merge, create the annotated `continuous-research-learning-v1` tag, push `main` and the tag atomically, and verify the remote state. Real-note ranking and promoted-note operational backlink behavior remain future natural-case validation and do not block release. No new framework content WIP exists.
+No active ingest/review WIP remains after final commit and push. Deferred claims require targeted review only when used for paper writing, a key project decision, synthesis finalization or a paper-level evidence pool.
 
 P0 focus:
-None identified; Gate 2B external review is complete.
+None for operational closure. The prior theory/review and REFLECT triage remains available on the relevant pages as deferred targeted-review guidance, not as an active-WIP blocker.
 
 Complete unresolved P0 inventory:
-None. Real-note operational validation is deferred and non-blocking.
+No unresolved P0 or locator gap for the three reviewed experimental sources. Chakraborty 2023 retains canonical key `chakraborty_2023_Searchorigin`; no duplicate source is required.
 
 Risks:
-Only real-note ranking and promoted-note operational backlink validation are deferred; protected user files and old knowledge pages remain outside this release.
+Do not infer that deferred theory/review claims were user-verified. Keep their `needs_review: true` status until a targeted review. Continue protecting `raw/zotero/wiki-inbox.bib`, raw PDFs, `.obsidian`, PLAN and schema.
 
 Checks:
-Gate 2A/2A.1 checks complete: EOL, diff-check, Wiki lint, 10 tests, QMD status only, protected-path and staged-files audits. No knowledge Markdown changed, so QMD update/embed was not rerun; final publication verification remains.
+Pre-finalization lint reports 0 errors / 22 warnings / 107 info, with 10 source pages and 107 claims intentionally unreviewed. Final EOL, QMD, staged protected-path, commit and push checks are part of this finalization run.
 
 Next prompt / continuation phrase:
-Execute the authorized fast-forward merge, annotated tag, atomic push, and post-publication verification; stop and report if any remote check differs.
+Start the next literature task normally. If a framework audit is requested, record the dated audit under `outputs/framework-audit-YYYY-MM-DD.md` and keep only its active pointer/result in handoff/log; no empty audit placeholder was created in this batch.
 
 Recent user decisions:
-Gate 2B external review passed; user authorized amending the release commit, fast-forward merge, annotated tag `continuous-research-learning-v1`, and push `main` plus the tag.
+User accepted the three experimental source pages after the PE16 target correction and MU93 DOI correction. User explicitly closed the batch without reviewing every theory/review source; those pages and their analytical reconstruction remain unreviewed working knowledge with review deferred until use. User authorized final amend and push to GitHub while prohibiting changes to `raw/zotero/wiki-inbox.bib`.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

@@ -3,7 +3,7 @@ type: project
 title: "Low-spin wobbling controversies"
 aliases: [low-spin wobbling evidence map, low-spin wobbling identification controversies, 低自旋 wobbling 争议]
 created: 2026-07-04
-updated: 2026-07-06
+updated: 2026-07-16
 status: active
 review_status: human-reviewed
 project_stage: cross-case-evidence-map
@@ -379,6 +379,21 @@ Lawrie 2020 与 Lv 2021 已分别建立 TiP 的理论层和 `135Nd` 实验案例
 
 LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` derived pages，并检查 TiP 是否对 `135Pr` 或 `187Au` 给出直接、可检验的 nucleus-specific calculation。本项目仍不把 `135Pr` 或 `187Au` 改判为 TiP。
 
+## Batch Reflect: Triaxial Wobbling Theory Lineage (2026-07-15)
+
+The first ten sources add a theory-to-experiment scaffold without changing the existing `135Pr` or `187Au` verdicts. Hamamoto 2002/2003 establish aligned high-j and quantized-wobbling limits; Frauendorf-Dönau 2014 and Streck 2018 connect transverse/longitudinal geometry to QTR/PRM energies and angular-momentum distributions; Chen-Frauendorf 2022 generalizes the classification with finite-space SCS topology and a flip regime; Chen 2019 supplies an even-even two-quasiparticle model case. Petrache 2016 and Mullins 1993 contribute original level-scheme, DCO/alignment and shape-analysis methods, while Chakraborty 2023 supplies a direct `131Xe` counterexample to the inference “triaxiality plus a band equals wobbling.”
+
+| ID | Reflective note | Source basis / locator | Boundary and next test | needs_review |
+|---|---|---|---|---|
+| WOB-PROJ-REF-1 | The wobbling theory lineage links high-j alignment, MoI ordering, QTR/PRM geometry, phonon energy and E2/M1 observables; the linkage is model conditioned. | H02-1/H02-8; H03-1/H03-10; F14-1/F14-12; ST18-3/ST18-8 | Compare common MoI, pairing and configuration inputs before transferring criteria to a controversy case. | true |
+| WOB-PROJ-REF-2 | `E_wobb` trend and enhanced adjacent-band E2 are useful criteria only when band identity, `delta` branch and competing signature-partner/TiP explanations are stable. | F14-4/F14-5; ST18-4/ST18-8; CF22-7/CF22-12 | Add original transition/lifetime sources and full fit landscapes for each nucleus. | true |
+| WOB-PROJ-REF-3 | SCS/PRM azimuthal, R/KR and transition-density maps clarify calculated TW/LW/flip/SP topology but are not direct experimental angular-momentum observations. | ST18-5/ST18-8; CF22-1/CF22-10 | Use maps as model results and compare against electromagnetic observables; do not promote topology to fact. | true |
+| WOB-PROJ-REF-4 | Low-spin/transitional failure of harmonic or frozen-alignment approximations is a cross-case risk; finite Hilbert space, Coriolis reorientation and mode mixing can move the apparent critical spin. | H03-8; ST18-9; CF22-6/CF22-10 | Keep flip/transitional labels provisional and test full PTR/QTR or TiP/IBFM alternatives. | true |
+| WOB-PROJ-REF-5 | `134Ce` and `141Gd` show reusable experimental routes for level identity, DCO/angular distributions, alignment and shape inference, but they are not wobbling evidence. | PE16-1/PE16-8; MU93-2/MU93-9 | Link methods to the data-analysis bridge without importing their configurations or shapes into `135Pr/187Au`. | true |
+| WOB-PROJ-REF-6 | The `131Xe` canonical source remains a counterexample: triaxial model support and a band sequence coexist with M1-dominated links and a signature-partner interpretation. | C23-1/C23-7, pp.2-8 | Preserve the distinction between triaxiality background and wobbling identity in all future cases. | true |
+
+This reflection is a research-map update, not a final physical judgment. The 2026-07-15 batch is operationally closed, but WOB-PROJ-REF-1 through WOB-PROJ-REF-6 remain `needs_review: true`; targeted review is deferred until a note is used for paper writing, a key project decision, synthesis finalization or a paper-level evidence pool. Review of PE16, C23 and MU93 source claims does not automatically review these project-level statements.
+
 ## Data-Analysis Bridge for User's Future Work
 
 当前没有写入用户尚未提供的数据结果。未来若对任一案例重分析，建议每条关键 transition 使用同一记录 schema：
@@ -442,6 +457,7 @@ LSW-TIP project notes 已完成人工审核；下一步仍需审核 `135Nd` deri
 - 两个下位 project 及其引用的 source claims 已审核；其状态不会自动升级本页。
 - [[nomura-2022-questioning-wobbling-ibfm]] 为 `human-reviewed`，NOM22-1 至 NOM22-15 已改为 `needs_review: false`；LSW-IBFM-1 至 LSW-IBFM-4 也已改为 `needs_review: false`。
 - LSW-XPROJ-1 至 LSW-XPROJ-5 已改为 `needs_review: false`；对应完整 synthesis 的 LSW-GSAI-SYN-1 至 LSW-GSAI-SYN-10 也已完成本轮人工审核。
+- 本批次新增 WOB-PROJ-REF-1 至 WOB-PROJ-REF-6 继续保持 `needs_review: true`，不能继承 source 或既有 project claim 的审核状态；其人工复核采用 `review deferred until use`，不再构成本批次的 active WIP。
 
 ## Decisions
 
