@@ -53,6 +53,17 @@ tags: []
 
 页面级 `review_status` 与 claim-level `needs_review` 独立。页面升级为 `human-reviewed` 时，不得批量改写 claim-level 状态。
 
+## Source 阅读完成状态
+
+`reading_depth` 是 source 的实际阅读完成状态，不是用户摄入模式。允许值为：
+
+- `metadata-only`：只完成元数据整理；
+- `skimmed`：完成摘要、结论或选定关键位置的初步阅读；
+- `read`：完成正文主线阅读；
+- `deep-read`：在完整正文主线基础上，核查关键方法、数据、图表/公式及与任务相关的补充证据。
+
+source 还应在正文明确记录 `Covered scope` 与 `Not covered`。局部问题即使核查很深，也不能据此把未完整阅读的全文标记为 `deep-read`。三种用户摄入模式由 `system/workflows/ingest.md` 定义，不得从 `reading_depth` 反推用户模式，也不得建立一一对应关系。
+
 ## 科学主张字段
 
 不要求每条主张单独建文件，但重要结论必须在正文或表格中记录：

@@ -33,6 +33,8 @@ updated: 2026-07-07
 
 ## Human review triage protocol
 
+本节提供分类示例和详细说明；P0/P1/P2/P3 的运行时输出与批次规则以 [ingest-strategies.md](ingest-strategies.md) 为 canonical owner。若本节示例与短规则冲突，以短规则为准。
+
 审核优先级描述“用户应先审哪里”，与页面级 `review_status` 和 claim-level `needs_review` 分别维护。`needs_review: true` 不自动等于 P0；优先级应由该项对科学结论、证据链、project/synthesis 主线和论文级使用的影响决定。
 
 ### P0：必须审核
@@ -119,8 +121,8 @@ P3 快速扫过：
 
 输出约束：
 
-1. P0 全部列出；没有 P0 时明确写 `P0: none identified`。
-2. P1 最多逐项列出前 10 个最重要位置，其余按文件聚合。
+1. P0 无总量硬上限并全部逐项可审核；可分批但不得聚合隐藏、降级或遗漏。没有 P0 时明确写 `P0: none identified`。
+2. P1 可按认知负担分组；每个重要判断仍须呈现 evidence、Agent inference 和审核目的，不得只给文件名。
 3. P2/P3 只聚合，不逐条列 claim。
 4. 始终给出精力有限时最值得先看的 3–5 个位置；不足 3 个时列出全部实际审核点，不虚构。
 5. 不把低风险 index/overview/handoff/log 与科学 claim 混为同一优先级。

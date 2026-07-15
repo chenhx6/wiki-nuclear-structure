@@ -35,6 +35,12 @@ updated: 2026-07-08
 - 说明模型依赖、参数依赖和约定；
 - 使用 `system/templates/synthesis-template.md` 写入综合页。
 
+## Stage 2.2：认识修正与晋升
+
+Project 用于承载特定研究问题下的证据组织、候选解释和决策状态；synthesis 用于承载具有跨任务复用价值、证据边界清楚且经过相称审核的跨来源综合。只有新证据真实改变证据矩阵、解释强度、适用条件或开放问题时才更新这些页面，不因每篇新文献机械重写。
+
+暂定研究推理、迁移假设、反向检验和认识修正候选不得直接写成正式 project/synthesis 结论。晋升时至少记录：此前认识、新认识、触发证据与 locator、支持/冲突来源、关键假设、仍存不确定性、Human review 结果和晋升目标。被修正、拒绝或取代的认识保留简短 history，不静默删除。
+
 
 ## Stage 2.5：Project / synthesis active summary
 
@@ -71,7 +77,7 @@ Project、synthesis 或跨来源 reflect 完成后，必须按 `system/workflows
 - Motivation/why this matters 中可能过强的判断；
 - innovation candidate notes、data-analysis bridge 和争议性解释总结。
 
-主结论、evidence matrix 归类、用户数据解释、创新点候选和 paper evidence gate 候选通常属于 P0/P1。Planning notes、follow-up sources 与低风险导航可归入 P2/P3。最终复盘采用 compact final recap；P0 分为 `P0 focus: top 3-5` 和 `Remaining P0`，P1 最多逐项列 5 个最重要位置，P2/P3 聚合，并给出“精力有限时建议先看”的 3-5 个具体位置。
+主结论、evidence matrix 归类、用户数据解释、创新点候选和 paper evidence gate 候选通常属于 P0/P1。Planning notes、follow-up sources 与低风险导航可归入 P2/P3。所有 P0 无总量硬上限，必须逐项展示实际判断、证据、Agent inference、locator、审核目的和不审核风险；可分批但不得聚合隐藏。P1 可分组但不能退化为纯文件名列表。
 
 综合主体完成、等待用户审核时，若用户未明确禁止任何本地 commit，按 `AGENTS.md` 创建单个本地 `WIP review: <task short name> for user review`，不 push，并在 `system/wip-queue.md` 写入或更新 pending entry。queue 只保留继续审核所需的最新 branch/commit/next action；若后续 amend/rebase 改变 WIP hash，只更新到最新 commit。用户审核完成并要求 final commit/push 后，必须把该 WIP amend 为 final commit，不得另建 review/final commit；用户指定 final message 时原样使用，未指定时由 Codex 推荐直接相关的 message 并在最终报告中说明。
 

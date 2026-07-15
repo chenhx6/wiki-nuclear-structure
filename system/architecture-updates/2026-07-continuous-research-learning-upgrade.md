@@ -8,7 +8,7 @@ upgrade: continuous-research-learning
 baseline_branch: main
 baseline_commit: 803a19d6a92546475c6a7ab18386b8e1bcb4b45c
 implementation_branch: codex/continuous-research-learning-upgrade
-validation_status: not-started
+validation_status: phase-1-in-progress
 final_push_target: origin/main
 push_authorization: not-authorized
 push_state: not-ready
@@ -20,12 +20,12 @@ This page is the release record for the planned upgrade from an evidence databas
 
 ## Current phase and scope
 
-- Current phase: Phase 0 — decisions and baseline.
+- Current phase: Phase 1 — core governance.
 - Architecture status: `planned`.
 - Baseline: `main` at `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`, aligned with `origin/main` and clean at Phase 0 entry.
 - Implementation branch: `codex/continuous-research-learning-upgrade`.
-- Phase 1 is not authorized.
-- No science page, source, project, synthesis, schema, template, workflow, Skill, Guide, check, QMD configuration, or research-note infrastructure is changed in Phase 0.
+- Phase 1 is authorized as part of the user-approved continuous Goal execution through Phase 5; no push is authorized.
+- Phase 1 changes only canonical governance, schema clarification, the source template, and derived checks. No science page, source, project, synthesis, QMD configuration, or research-note instance is changed.
 
 ## Upgrade motivation
 
@@ -153,7 +153,7 @@ Performance benchmarking is deferred to a separately authorized task in a dispos
 
 ## Planned canonical ownership
 
-This section records direction only; active repository rules remain unchanged until their phases are authorized and implemented.
+This section records release-level ownership decisions; active rules remain in the listed canonical files rather than this release record.
 
 - Ingest modes and the standard deep-ingest loop: ingest workflow.
 - Reading-state fields and research-note type/fields: schema.
@@ -174,7 +174,7 @@ Record the clean baseline, approved decisions, implementation branch, deferred d
 
 ### Phase 1 — core governance
 
-Planned only: separate user modes from reading states; define the standard deep-ingest loop, analytical-reconstruction boundary, provisional reasoning and promotion boundary, Human review behavior, ordinary/research routing, and canonical ownership. Phase 1 is not authorized.
+In progress: separate user modes from reading states; define the standard deep-ingest loop, analytical-reconstruction boundary, provisional reasoning and promotion boundary, Human review behavior, ordinary/research routing, project/synthesis revision, and canonical ownership. Phase 1 must be committed independently before Phase 2 infrastructure begins.
 
 ### Phase 2 — controlled research-note layer
 
@@ -221,13 +221,14 @@ Planned only: complete this record, compatibility and validation results; synchr
 - Exact two pilot papers: user reconfirmation before Phase 3.
 - Independent QMD collection: evaluate only in Phase 4 if the single-collection isolation test fails.
 - Performance benchmark: separate future task requiring explicit authorization.
-- Phase 1 scope and execution: requires explicit user approval after Phase 0 report.
+- Phase 1–5 execution is authorized on the implementation branch; each phase receives an internal checkpoint commit, and no push occurs without a later explicit authorization.
 
 ## Implementation and validation record
 
 - Phase 0 baseline commit: `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`.
 - Phase 0 checkpoint: created as the current branch HEAD with message `Record continuous research-learning upgrade Phase 0`; the exact hash is recorded by Git and the final task report.
-- Phase 1–5 implementation commits: not started.
+- Phase 1 implementation: in progress; commit hash will be recorded by Git/handoff/log after validation.
+- Phase 2–5 implementation commits: not started.
 - Pilot result: not started.
 - Validation result: not started.
 - Final push target: `origin/main`.

@@ -8,34 +8,34 @@ updated: 2026-07-15
 ## Active handoff
 
 Current active task:
-Phase 0 of the continuous research-learning upgrade: user decisions and implementation baseline are recorded; work is stopped at the Phase 1 approval gate.
+Phase 1 of the continuous research-learning upgrade: core governance is being implemented and validated before the controlled research-note layer.
 
 Current branch / local commit:
-`codex/continuous-research-learning-upgrade` from clean baseline `main@803a19d6a92546475c6a7ab18386b8e1bcb4b45c`. The Phase 0 checkpoint is the current HEAD with message `Record continuous research-learning upgrade Phase 0`; no push is authorized.
+`codex/continuous-research-learning-upgrade`; Phase 0 checkpoint `13d803e` is the parent baseline. Phase 1 changes are local and uncommitted until its validation gate; no push is authorized.
 
 Last task status:
-The ten Phase 0 decisions were confirmed. Added a planned architecture update record with the three user modes, user-mode/`reading_depth` separation, approved research-note identity, state-field responsibilities, query/QMD boundary, P0 behavior, pilot candidates, phased roadmap, compatibility, rollback, and push-state semantics. No Phase 1 rule has been implemented.
+Phase 1 core rules now separate user mode from completed `reading_depth`, define the default standard learning loop, source analytical-reconstruction boundary, provisional reasoning/promotion boundary, ordinary/research query routing, project/synthesis revision rules, and P0 review without a hard cap. Validation and the independent Phase 1 commit remain.
 
 Unfinished items:
-Wait for explicit user approval before Phase 1. The final `reasoning_status` enum is a Phase 2 approval gate. The two pilot papers must be reconfirmed before Phase 3. Performance benchmarking remains a separately authorized future task.
+Complete Phase 1 checks and checkpoint commit, then continue to Phase 2 under the approved Goal. Phase 2 must finalize the non-overlapping `reasoning_status` enum and controlled research-note infrastructure. Phase 3 pilot candidates are fixed by the current Goal unless a science P0 forces a pause. Performance benchmarking remains a separately authorized future task.
 
 P0 focus:
-No science-content P0 was introduced. Do not enter Phase 1, create `knowledge/research-notes/`, modify active rules, run a pilot, or push without the user's explicit approval.
+No science-content P0 is present in Phase 1. Do not create research-note instances, start pilot science work before the Phase 2 commit, or push.
 
 Remaining P0:
-None for Phase 0. Future research-note and pilot P0 items do not exist yet.
+None identified for Phase 1 governance. Future pilot science P0 items do not exist yet.
 
 Risks:
-The architecture update is a release record, not a canonical rule owner. Current schema/workflow/query behavior remains unchanged until its phase is separately approved and implemented. Pilot candidates are not final selections.
+The architecture update is a release record, not a canonical rule owner. Phase 1 must avoid leaving conflicting duplicate P0 or reading-depth rules in derived files. Phase 2 state fields must not create contradictory sources of truth.
 
 Checks:
-Phase 0 entry baseline was clean and aligned with `origin/main`; no merge/rebase/cherry-pick was active. EOL cleanup reported 0 refreshed/restored/unsafe/mixed. Wiki lint passed with 0 errors, 11 existing warnings and 0 info; final Git diff checks passed.
+Phase 1 entry was clean at `13d803e`; EOL cleanup reported 0 refreshed/restored/unsafe/mixed. Phase 1 final checks are pending.
 
 Next prompt / continuation phrase:
-Review the Phase 0 report. To authorize the next phase, explicitly say: “批准进入 Phase 1”。
+Continue the approved Goal: validate and commit Phase 1, then implement Phase 2 without pushing.
 
 Recent user decisions:
-Approved the three ingest-mode names and boundaries; independent implementation branch; `research-note` under `knowledge/research-notes/`; separate `status` / `review_status` / `reasoning_status` responsibilities; revision as history; threshold-based Agent creation in authorized research tasks; one QMD collection for MVP; `ready-for-push` plus Git/handoff/log outcome tracking; provisional pilot candidates requiring Phase 3 reconfirmation; and a separately authorized future performance benchmark.
+Approved continuous Phase 1–5 execution with per-phase local commits and no push. Fixed pilot papers for Phase 3 are Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM unless a science P0 requires user review.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

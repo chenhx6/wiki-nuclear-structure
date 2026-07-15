@@ -12,6 +12,12 @@ updated: 2026-07-10
 - 明确问题对应的核素、能区、能带、观测量、模型和时间范围。
 - 区分用户是在问实验事实、文献观点、领域共识，还是要求我们的综合判断。
 
+### 1.1 任务路由
+
+普通 Wiki 问答以直接回答、必要 inline evidence links 和证据边界为目标，不默认执行完整持续学习闭环，不自动追加迁移案例、失效检验、反向检验或研究问题，也不自动创建或默认检索 provisional research reasoning。
+
+以下情形才进入研究型路由：文献摄入；reflect；project/synthesis；用户明确要求比较、批判、迁移、研究启发或假设形成；或者问题本身必须依赖这些分析才能可靠回答。研究型路由引用 `ingest.md`、`reflect.md` 和 `evidence-policy.md` 的 canonical 规则，本文件不复制完整学习闭环。Agent 可建议切换用户摄入模式，但不得自行切换；用户未响应时继续当前模式。
+
 ## 2. 双语术语归一化
 
 1. 识别问题中的中文、英文、缩写、历史写法和实验口语。
@@ -119,6 +125,8 @@ qmd.cmd status
 - 明确暴露了重要证据缺口。
 
 普通问答不机械归档。
+
+普通问答产生的联想、迁移候选或研究问题默认停留在当次输出。只有进入授权研究型任务、通过价值门并遵守暂定推理与晋升边界时，才考虑持久化；即使被检索到，provisional reasoning 也不得作为 source-grounded evidence 使用。
 
 涉及论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认，或用户明确要求执行 paper evidence review 时，额外遵循 `system/paper-evidence-gate.md`。普通争议讨论本身不自动进入 strict mode。未通过 paper evidence gate 不禁止讨论、谨慎综合或初稿生成；它只表示正式提交前仍需补查直接来源、精确 locator、适用条件、竞争解释和引用风险。当前 Wiki 没有覆盖到的文献不能被推断为“不存在”。
 

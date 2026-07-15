@@ -99,6 +99,12 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ## F. 摄入、查询与综合
 
+- [ ] 用户未指定摄入模式时采用标准深入阅读模式；Agent 只建议切换，没有自行升级或降低。
+- [ ] 三种用户模式与 `reading_depth` 四值保持分离；source 的 `reading_depth`、Covered scope 和 Not covered 反映实际完成范围，未从局部深查推断全文 `deep-read`。
+- [ ] 标准深入阅读逐项评估论文问题、动机、设计逻辑、证据链、假设/限制、比较、迁移边界、竞争解释、反向检验、研究问题和认识修正，但没有机械制造固定产量。
+- [ ] 作者明示内容与 `Analytical reconstruction` 分开；分析性重建列出 evidence、locator、推断步骤和不确定性，未冒充 source-grounded fact。
+- [ ] Ordinary Q&A 没有默认启动完整学习闭环或持久化 provisional reasoning；研究型任务按 query routing 进入 ingest/reflect。
+
 - [ ] 摄入前已查重并检查 aliases。
 - [ ] 摄入时区分了当前研究锚点与 Wiki 收录边界，没有把主线质量区当成知识库边界。
 - [ ] 没有把质量区本身当成唯一排除标准或唯一纳入标准。
@@ -121,7 +127,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 如果本轮修改了大型 project/synthesis 主体，已同步最小更新该页 `Agent active summary`；若页面缺失 active summary 且本轮实际修改该页，已创建短 summary。
 - [ ] 用户明确要求补充 project/synthesis 时，没有只修改 active summary。
 - [ ] Active summary 仅作为导航和 section 定位，没有替代 source locator、project/synthesis 主体或原文证据。
-- [ ] PDF staged evidence reading 被作为阅读顺序优化执行，不被解释为降低深度读取标准；默认正式摄入不应停留在 `metadata-only` 或 `skimmed`。
+- [ ] PDF staged evidence reading 被作为阅读顺序优化执行，不被解释为降低用户模式要求；最终 `reading_depth` 如实反映实际完成范围。
 - [ ] 如果核心 PDF 读取未完成，已 safe suspend 并列出已读范围、未读 section/figure/table/locator，而不是省略核心读取。
 ### QMD 本地检索
 
@@ -137,9 +143,9 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 - [ ] 文献摄入、project、synthesis、data-analysis-bridge 或 claim-review-update 的最终复盘包含 Human review triage。
 - [ ] Triage 明确列出 P0/P1/P2/P3；没有 P0 时写明 `P0: none identified`。
-- [ ] P0 分为 `P0 focus: top 3-5` 和 `Remaining P0`；P0/P1 给出具体文件、section/段落、claim ID（如有）和 source locator（如有）。
-- [ ] 每个 P0/P1 说明为什么重要以及用户需要检查什么；P0 还说明不审核的风险。
-- [ ] 没有把所有 `needs_review` 等权重铺开；Remaining P0 压缩列出，P1 最多逐项列 5 个最重要位置，其余按文件聚合，P2/P3 按文件聚合。
+- [ ] P0 无总量硬上限；所有 P0 逐项给出实际判断、文件、section/段落、claim ID（如有）、source locator、grounded evidence、Agent inference、审核目的和不审核风险。
+- [ ] P0 可以分批但没有聚合隐藏、降级、删除或直接晋升；后续未审 P0 队列完整保留。
+- [ ] 没有把所有 `needs_review` 等权重铺开；P1 可按文件分组但重要判断仍可审核，P2/P3 按文件聚合。
 - [ ] 审核点较多时给出“精力有限时建议先看”的 3-5 个位置。
 - [ ] 低风险 index/overview/handoff/log、格式和导航更新与科学 claim 分开。
 - [ ] Paper evidence gate 候选被列为 P0/P1；未完成 P0/P1 审核时没有描述为可直接用于论文。

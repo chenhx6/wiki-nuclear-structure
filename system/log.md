@@ -586,3 +586,8 @@ updated: 2026-07-15
 
 - Recorded the user-approved Phase 0 decisions and clean `main@803a19d` baseline on `codex/continuous-research-learning-upgrade` in a planned architecture update.
 - Created the single local Phase 0 checkpoint commit with only the architecture update, Active handoff and this short log; no active rule, science page, research-note infrastructure, QMD configuration, pilot, or push was performed. Phase 1 requires explicit user approval.
+
+## [2026-07-15] architecture | continuous research-learning upgrade Phase 1
+
+- Separated user ingest modes from completed `reading_depth`, added the standard research-learning loop and analytical-reconstruction boundary, clarified provisional promotion and ordinary/research routing, and removed the P0 hard-cap behavior.
+- No science page, research-note instance, QMD configuration or push was included; Phase 1 validation and local checkpoint commit follow.

@@ -39,6 +39,23 @@ tags: []
 
 ## Scope and Reading Depth
 
+- Completed reading_depth:
+- Covered scope:
+- Not covered:
+- Coverage caveats:
+
+## Paper Question and Scientific Motivation
+
+- Author-explicit motivation and locator:
+
+## Method and Design Logic
+
+- Author-explicit design logic and locator:
+
+## Key Evidence and Reasoning Chain
+
+- Evidence step → inference/author conclusion → locator:
+
 ## Summary
 
 ## Experimental or Theoretical Setup
@@ -56,6 +73,15 @@ tags: []
 
 ## Competing Interpretations and Limitations
 
+## Analytical Reconstruction
+
+仅在需要时填写；不得与作者明示内容混写。
+
+- Grounded evidence and locator:
+- Reconstruction steps:
+- Assumptions and uncertainty:
+- Persistence/review decision:
+
 ## Extracted Pages
 
 - Nuclei:
@@ -63,4 +89,6 @@ tags: []
 - Concepts:
 - Methods:
 
-## Personal Notes
+## Non-source Notes and Persistence Decision
+
+普通联想留在当次输出；未经分类、溯源和审核的推理不得写成 source evidence。
