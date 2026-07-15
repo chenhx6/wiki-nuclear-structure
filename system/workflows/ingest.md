@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: ingest
-updated: 2026-07-10
+updated: 2026-07-15
 ---
 
 # INGEST：来源摄入流程
@@ -142,6 +142,8 @@ A source outside the current main research anchor may still justify lightweight 
 
 ## 5. 更新领域页面
 
+重用旧 source、nucleus、band、concept、method、project 或 synthesis 页面时，只按本轮实际需要做最小 on-touch migration；不得因为旧格式本身扩大任务范围、批量补历史 ingest mode、创建 research-note、转换 Personal Notes 或统一补 frontmatter。若修改科学 claim、interpretation、review/reasoning state 或知识关系，必须进入 Human review triage；未触及的历史页面保持不变。
+
 1. 核素信息更新到 `knowledge/nuclei/`。
 2. 具体能带或双重带更新到 `knowledge/bands/`。
 3. 物理现象和解释框架更新到 `knowledge/concepts/`。
@@ -167,7 +169,7 @@ A source outside the current main research anchor may still justify lightweight 
 
 ## 7. 收尾与 WIP lifecycle
 
-- 更新 `knowledge/index.md`；`knowledge/overview.md` 按阶段性更新规则判断是否 deferred。
+- 按本轮新增或修改页面判断是否需要对 `knowledge/index.md` 做必要的最小入口同步；无需时不机械重写。`knowledge/overview.md` 按下述触发条件判断是否 deferred。
 - 普通单篇摄入如果只是新增 source、少量 claims 或最小 project relation，overview update 可以 deferred；最终复盘写明 `overview update deferred`、原因和建议补跑时机。
 - 新建或显著更新 project/synthesis、批量摄入、主题知识地图结构性变化、paper evidence gate 或 major concept map 变化，或用户明确要求时，才更新 overview。
 - 若实际修改大型 project/synthesis 主体、添加 evidence row/source relation/evidence gap/next action，必须同步最小更新该页 `Agent active summary`；如果页面没有 active summary 且本轮实际修改该页，应创建短 summary。
@@ -198,7 +200,7 @@ WIP ingest 只表示等待用户审核的本地检查点，不表示科学内容
 
 用户审核后，若上一轮处于 `WIP ingest:` / source review / waiting for user review / waiting for user P0/P1 review 状态，且用户给出实质性审核意见，并明确表示或根据当前消息与上下文可以无歧义地判断本轮人工审核已经结束，应识别为 human-review completion event，并在适用时进入 `review-finalization request`。
 
-不要求固定触发短语；若存在歧义，不得自动写入 `system/review-history.md`。除非用户明确说“不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”“只修改，不提交”“只 commit，不 push”，默认进入 finalization。
+不要求固定触发短语；若存在歧义，不得自动写入 `system/review-history.md`。用户明确要求“只修改不 finalization”“只修改，不提交”或“只 commit，不进行其它收尾”时，不进入本地 finalization；“不要更新 overview”或“不要刷新 QMD”只覆盖对应步骤。“不要 push”只表示继续不 push，不取消 review-finalization 或本地 commit，因为 push 本来就不是默认动作。没有这些覆盖要求时，默认进入适用的 finalization。
 
 Finalization 包括：
 
@@ -206,13 +208,13 @@ Finalization 包括：
 2. 不自动清除审核报告未提到的 `needs_review`；
 3. 处理用户明确确认范围内的 `needs_review` 状态；
 4. 若仍有 unresolved P0、未核查 locator gaps、审核意见未落实，或 source 仍存在高风险不确定内容，不得强行 finalization，应 safe suspend 或报告阻塞；
-5. 若审核意见已落实且无 unresolved P0，更新 `knowledge/overview.md`；
+5. 若审核意见已落实且无 unresolved P0，重新评估本 workflow 的 overview 触发条件；只有新证据改变综合判断、关键知识关系或 project/synthesis 证据结构，用户明确要求，或本轮明确判定为必要同步时才更新 `knowledge/overview.md`，否则记录 `overview update deferred` 及理由；
 6. 执行 QMD refresh（`qmd.cmd update`、`qmd.cmd embed -c nuclear-knowledge`、`qmd.cmd status`）；
 7. 重新运行 Git 检查和 Wiki lint；
 8. 重新输出 Human review triage，列明已处理项目、仍保留的 P0/P1 和 paper evidence gate 影响；
 9. 确认 HEAD 是对应的 WIP ingest commit 后，使用 `git commit --amend` 把 WIP 转换为 review/final commit，不新建额外 review commit；
 10. 用户指定本轮提交 message 时原样使用；未指定时由 Codex 根据实际摄入与审核修改推荐直接相关的 message，并在最终报告中说明；
-11. 默认执行 `git push origin main`；若用户明确“不要 push”，只 final commit 不 push；
+11. 完成本地 review/final commit 后停在 `ready-for-push`，并报告 commit hash、检查结果和远端状态；push 始终需要用户明确授权，用户未说“不要 push”不能视为授权；
 12. 为本轮明确结束的人工审核追加 `system/review-history.md` 条目；记录审核范围、用户判断、要求修改、遗留问题、下一步、相关页面，以及 `review commit message`（若本轮实际创建或 amend 了 review commit）；
 13. 在同一个 finalization 流程中刷新 `system/handoff.md` Active handoff，并独立判断 `system/wip-queue.md` 对应 entry 是继续保留、更新还是清除；不得使用简单的 queue-to-history 自动迁移模型；
 14. 向 `system/log.md` 追加短记录；

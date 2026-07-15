@@ -104,6 +104,9 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 标准深入阅读逐项评估论文问题、动机、设计逻辑、证据链、假设/限制、比较、迁移边界、竞争解释、反向检验、研究问题和认识修正，但没有机械制造固定产量。
 - [ ] 作者明示内容与 `Analytical reconstruction` 分开；分析性重建列出 evidence、locator、推断步骤和不确定性，未冒充 source-grounded fact。
 - [ ] Ordinary Q&A 没有默认启动完整学习闭环或持久化 provisional reasoning；研究型任务按 query routing 进入 ingest/reflect。
+- [ ] Ordinary Q&A 保持 read-only，没有因读取旧页面而静默写回；发现迁移需求时只报告并路由到授权 workflow。
+- [ ] on-touch migration 只处理当前授权 ingest/reflect/project/synthesis/claim-review-update/研究写作任务实际使用的旧页面，没有批量升级未触及历史页。
+- [ ] 没有批量补历史 ingest mode、research-note、Personal Notes 或统一 frontmatter；科学 claim、interpretation、review/reasoning state 或知识关系变化已进入 Human review triage。
 - [ ] Research note 只在授权研究任务且满足持久化门时创建；没有成为每篇文献的默认产物。
 - [ ] Research note 使用 `review_status: unreviewed` 与 `reasoning_status: provisional` 起步；`reasoning_status` 未重复 `unreviewed/reviewed`，`revised` 只作为 history event。
 - [ ] `Grounded Evidence` 与 `Provisional Reasoning` 明确分开；note 不替代 source evidence。
@@ -203,9 +206,9 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] Review finalization 已按用户审核意见做最小修改，并只处理用户明确确认范围内的 `review_status` / `needs_review`。
 - [ ] Review history 不要求 task closed 后才能写入，并允许与 Pending WIP queue 同时存在。
 - [ ] 已判断当前任务在本轮审核后是否应写入 `system/review-history.md`，以及 queue 应继续保留、更新还是清理。
-- [ ] Review finalization 默认更新 `knowledge/overview.md`；若用户明确不要 overview，最终复盘已说明。
+- [ ] Review finalization 已按 ingest workflow 评估 `knowledge/overview.md` 触发条件；触发时最小同步，未触发时记录 deferred 理由，而不是机械更新。
 - [ ] Review finalization 默认执行 QMD refresh；若用户明确不要 QMD 或 QMD 失败，最终复盘已说明。
-- [ ] Review finalization 已按 WIP lifecycle amend/创建相应本地 commit；push 只有在用户明确授权时执行，未授权时停在 `ready-for-push`，没有把“用户未说不要 push”解释为授权。
+- [ ] Review finalization 已按 WIP lifecycle amend/创建相应本地 commit；没有默认 push，push 只有在用户明确授权时执行，沉默或“不要 push”未被混淆为授权，未授权时停在 `ready-for-push`。
 - [ ] Review history 条目记录了审核范围、用户判断、要求修改和遗留问题，没有伪装成 Git/push 历史。
 - [ ] Review history 使用 `review commit message`，不使用 `Git reference` 或 `final commit message`，且没有记录 commit hash 或 push 状态。
 - [ ] Review history 中的 `review commit message` 与实际 commit message 一致，且没有把它解释为 task closure、finalization complete 或 push complete。

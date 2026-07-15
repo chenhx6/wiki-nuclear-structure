@@ -10,16 +10,9 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-### Continuous research-learning upgrade release
+No active entries.
 
-- status: pilot source review completed; release cleanup is locally `ready-for-push`, with final external review pending
-- branch: `codex/continuous-research-learning-upgrade`
-- commit: local cleanup/review commit at current HEAD after final checks
-- files: architecture/framework upgrade plus the two reviewed pilot source reconstructions
-- review needed: no remaining pilot P0/P1; external release review and explicit merge/push authorization remain
-- overview/QMD: overview unchanged because governance statistics and knowledge map did not change; incremental QMD update/embed/status succeeded after the compact source-table rewrite
-- next action: review the cleanup commit, then explicitly authorize the desired merge/push action or request revisions
-- risks: real research-note ranking and promotion backlinks remain untested until a genuine note passes the creation gate
+Continuous Research-Learning v1 completed Gate 2B release approval; publication state is Git-authoritative.
 
 ## Legacy completed entries
 

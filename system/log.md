@@ -616,3 +616,13 @@ updated: 2026-07-15
 
 - User accepted both pilot Analytical Reconstruction sections; restored their source pages to `human-reviewed` and converted the reviewed reasoning to compact evidence-separated tables.
 - Removed duplicated Personal Notes reasoning and clarified that review finalization may create local commits but push always requires explicit authorization; lint/tests and incremental QMD refresh pass, with no merge or push.
+
+## [2026-07-15] release-cleanup | Continuous Research-Learning v1 Gate 2A
+
+- Gate 1 identified push-authorization, overview-trigger, and on-touch migration blockers; Gate 2A applies the minimal framework cleanup, current-system wording, release index, and workflow contract tests.
+- The planned local `Prepare Continuous Research-Learning v1 release` commit stays on the implementation branch; no merge, tag, or push is performed.
+
+## [2026-07-15] release | Continuous Research-Learning v1 Gate 2B
+
+- External final review passed with no science/framework P0; fast-forward merge, annotated tag, and push were explicitly authorized.
+- Actual publication result will be recorded by Git and the final report; no post-push status-only commit will be created.

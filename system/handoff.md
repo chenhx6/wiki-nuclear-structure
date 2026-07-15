@@ -8,34 +8,34 @@ updated: 2026-07-15
 ## Active handoff
 
 Current active task:
-Continuous research-learning release cleanup and pilot source Human review are complete locally; the branch remains at `ready-for-push` for final external review and explicit merge/push authorization.
+Continuous Research-Learning v1 Gate 2B release approval is complete; authorized publication steps are ready to execute.
 
 Current branch / local commit:
-`codex/continuous-research-learning-upgrade`; Phase 0--5 commits remain unchanged. The independent cleanup/review commit becomes current local HEAD after final checks; no push is authorized.
+`codex/continuous-research-learning-upgrade`; current HEAD carries `Prepare Continuous Research-Learning v1 release`. Working tree and staged area are clean; merge, tag, and push are authorized, and the actual remote state is Git-authoritative.
 
 Last task status:
-The user accepted both pilot Analytical Reconstruction sections. Their source pages return to `human-reviewed`, the content is presented in compact evidence-separated tables, duplicated Personal Notes reasoning is removed, and push authorization semantics are clarified.
+Gate 2B external review passed with no unresolved science or framework P0. All three Gate 1 blockers are fixed, on-touch migration is current, and the release commit is ready for fast-forward publication.
 
 Unfinished items:
-Final external review and explicit merge/push authorization remain. Real-note ranking and promoted-note operational backlink behavior remain deferred until a genuine note passes the creation gate.
+Execute fast-forward merge, create the annotated `continuous-research-learning-v1` tag, push `main` and the tag atomically, and verify the remote state. Real-note ranking and promoted-note operational backlink behavior remain future natural-case validation and do not block release. No new framework content WIP exists.
 
 P0 focus:
-P0: none identified for the architecture release or two-paper pilot.
+None identified; Gate 2B external review is complete.
 
 Complete unresolved P0 inventory:
-None. The two former pilot P1 sections were explicitly accepted by the user on 2026-07-15.
+None. Real-note operational validation is deferred and non-blocking.
 
 Risks:
-Single-collection isolation is validated at the workflow/Skill/test level, but real-note ranking has not been observed because no genuine note met the persistence gate. Push still requires explicit authorization.
+Only real-note ranking and promoted-note operational backlink validation are deferred; protected user files and old knowledge pages remain outside this release.
 
 Checks:
-Cleanup Wiki lint passes with 0 errors, 11 existing warnings and 0 info; nine tests pass. QMD incrementally updated two source files and embedded 19 chunks. EOL preflight classified exactly the two authorized source edits as substantive with no unsafe/mixed files; diff checks pass, and staged audit/commit remain.
+Gate 2A/2A.1 checks complete: EOL, diff-check, Wiki lint, 10 tests, QMD status only, protected-path and staged-files audits. No knowledge Markdown changed, so QMD update/embed was not rerun; final publication verification remains.
 
 Next prompt / continuation phrase:
-Review the independent cleanup/review commit, then explicitly authorize the desired merge/push action or request revisions.
+Execute the authorized fast-forward merge, annotated tag, atomic push, and post-publication verification; stop and report if any remote check differs.
 
 Recent user decisions:
-Accepted both pilot source reconstructions and authorized this independent cleanup/review commit, but explicitly prohibited merge and push.
+Gate 2B external review passed; user authorized amending the release commit, fast-forward merge, annotated tag `continuous-research-learning-v1`, and push `main` plus the tag.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

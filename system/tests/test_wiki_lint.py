@@ -96,6 +96,37 @@ class ScientificGuardrailTests(unittest.TestCase):
         self.assertIn("discard paths under `knowledge/research-notes/`", skill)
         self.assertIn("grounded sources", skill)
 
+    def test_gate2a_workflow_contracts(self) -> None:
+        agents = (REPO_ROOT / "AGENTS.md").read_text(encoding="utf-8-sig")
+        ingest_workflow = (REPO_ROOT / "system" / "workflows" / "ingest.md").read_text(
+            encoding="utf-8-sig"
+        )
+        query_workflow = (REPO_ROOT / "system" / "workflows" / "query.md").read_text(
+            encoding="utf-8-sig"
+        )
+        user_guide = (REPO_ROOT / "USER_GUIDE.md").read_text(encoding="utf-8-sig")
+        check_text = (REPO_ROOT / "check.md").read_text(encoding="utf-8-sig")
+
+        explicit_push = "push \u59cb\u7ec8\u9700\u8981\u7528\u6237\u660e\u786e\u6388\u6743"
+        old_push_opt_out = "\u9664\u975e\u7528\u6237\u660e\u786e\u8bf4\u201c\u4e0d\u8981 push\u201d"
+        self.assertIn(explicit_push, agents)
+        self.assertIn(explicit_push, ingest_workflow)
+        for text in (agents, ingest_workflow, user_guide):
+            self.assertNotIn(old_push_opt_out, text)
+
+        self.assertIn("ready-for-push", ingest_workflow)
+        self.assertIn("push", ingest_workflow)
+        self.assertNotIn("默认执行 `git push origin main`", ingest_workflow)
+        self.assertIn("不要 push\u201d只", agents)
+        self.assertIn("不要 push\u201d只", ingest_workflow)
+        self.assertIn("不要 push\u201d只", user_guide)
+        self.assertIn("overview update deferred", ingest_workflow)
+        self.assertIn("普通 Q&A 保持 read-only", query_workflow)
+        self.assertIn("最小 on-touch migration", query_workflow)
+        self.assertIn("未触及的历史页面不批量升级", query_workflow)
+        self.assertIn("Human review triage", ingest_workflow)
+        self.assertIn("ready-for-push", check_text)
+
     def test_high_confidence_requires_human_confirmation(self) -> None:
         page = wiki_lint.Page(
             path=Path("knowledge/concepts/example.md"),

@@ -2,7 +2,7 @@
 
 这套 Wiki 面向熔合蒸发反应和低能原子核结构研究。Obsidian 是人的浏览、审阅和写作界面；Agent 负责摄入、交叉引用、综合、检查与维护；Markdown 文件是双方共享的长期记忆。
 
-当前系统是证据型研究 Wiki 原型，主要服务于知识问答、证据追踪、研究辅助和创新点梳理。它是证据导航系统，不是最终权威；不保证文献完整覆盖，也不能替代原文阅读和人工科学判断。
+当前系统是 Continuous Research-Learning v1（硅基研究生）：面向低能核结构研究的 Human-in-the-loop research Wiki。它支持可追溯证据、问题/设计逻辑重建、竞争解释、迁移边界、反向检验、受控暂定研究推理和人工审阅；ordinary Q&A 保持轻量。A≈130 是当前研究锚点，不是收录边界。详细架构见 [architecture update](system/architecture-updates/2026-07-continuous-research-learning-upgrade.md)。Wiki 不是最终权威，不保证文献完整覆盖，不能替代原文阅读和人工科学判断。
 
 本文件是快速使用指南。需要了解目录层级、证据术语、人工审阅、project、写作准备和可复制提示词时，请查看 [USER_GUIDE_DETAIL.md](USER_GUIDE_DETAIL.md)。
 
@@ -146,7 +146,7 @@ powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirt
 审核完毕，除了以上几点外无问题。
 ```
 
-Codex 应自动把这类消息理解为“本轮人工审核已经结束”，记录本轮 Review history，并进入 review-finalization：按审核意见做最小修改，执行 overview/QMD/review commit/push 的默认流程，再独立判断 queue 是否继续保留。你不必使用固定短语；只要整体语义可以无歧义地判断本轮审核已经结束即可。如果你不想 finalization，需要明确写“不要更新 overview”“不要刷新 QMD”“不要 push”或“只修改不 finalization”。
+Codex 应自动把这类消息理解为“本轮人工审核已经结束”，记录本轮 Review history，并进入 review-finalization：按审核意见做最小修改，按 workflow 触发条件评估 overview/QMD，完成本地 review/final commit，再独立判断 queue 是否继续保留。push 始终 opt-in；你未明确授权时停在 `ready-for-push`，不能把沉默理解为授权。“不要 push”只表示继续不 push，不会取消已经明确结束的人工审核或本地 finalization。你不必使用固定短语；只要整体语义可以无歧义地判断本轮人工审核已经结束即可。如果你不想进行本地 finalization，需要明确写“只修改不 finalization”“只修改，不提交”或“只 commit，不进行其它收尾”；“不要更新 overview”或“不要刷新 QMD”只覆盖对应收尾步骤。
 
 普通问答、跨来源比较、研究讨论和早期草稿默认采用 evidence-calibrated ordinary mode：Codex 会基于当前已有证据给出最佳可支持答案，区分事实、作者解释、模型结果、综合判断和暂时推断。已核实的 Wiki 页面名称和行号链接直接放在它所支持的句子后面，方便立即核对；默认不再在末尾重复列出同一批证据页。一般专业背景不要求每句附链接；知识库未覆盖时仍可补充稳定的一般专业背景，但会说明它不是 Wiki-grounded 或 externally verified evidence。重要但 Wiki 尚无直接证据的判断会在出现位置说明。普通回答不默认展开 citation key、raw PDF、review 状态或长 evidence card；原文核查、论文级审查或 strict paper mode 再补充完整核查信息。Wiki 正文仍保留 Obsidian Wikilink，也不会为了改变打开界面而修改证据页或制造 Git diff。打开证据页可能让 `knowledge/*.md` 显示 modified；Codex 会在每次 commit/push preflight 中区分授权修改与 LF/CRLF-only dirty 状态，后者确认无实质差异后清理，存在实质差异时停止并要求用户确认。用户也应避免使用 `git add .`。论文或投稿核查、正式引用、直接来源或原文引文、精确 locator、关键科学 claim 确认时才进入严格的 paper evidence mode；普通争议讨论本身不自动触发 strict mode。
 

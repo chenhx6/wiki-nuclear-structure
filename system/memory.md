@@ -21,8 +21,8 @@ updated: 2026-07-14
 - Markdown 知识库使用公开 GitHub 仓库 `chenhx6/wiki-nuclear-structure` 作为异地远端。未发表内容、合作材料、审稿材料、个人数据、敏感原始材料和 PDF 不得进入公开远端或普通 Git 历史。
 - 用户在仓库根目录维护 `PLAN.md`，用于宏观阶段计划、个人好奇心备忘和研究方向草稿；它由用户拥有，不是 cite-key 文献清单、执行日志或 Agent 可自由改写的任务列表。
 - `PLAN.md` 按任务条件读取并管理方向与优先级；`system/handoff.md` 管理最近执行事实与交接细节。无法分类的冲突必须询问用户。
-- 执行余量不足且任务无法稳定完成时进入 safe suspend：停止扩大范围、完成 Git 检查、写完整 handoff，并等待用户在额度刷新后发送“继续”；不自动创建 automation 或 commit/push。
-- 当前 Wiki 是证据型研究 Wiki 原型和证据导航系统，主要用于知识问答、证据追踪、研究辅助与创新点梳理；不保证文献完整性，不替代原文阅读或人工科学判断。
+- 执行余量不足且任务无法稳定完成时进入 safe suspend：停止扩大范围、完成 Git 检查、写完整 handoff，并等待用户在额度刷新后发送“继续”；不自动 push，若大量 diff 或恢复风险符合门槛，可创建本地 WIP checkpoint，但它不等于 review finalization 或 push 授权。
+- 当前系统为 Continuous Research-Learning v1（硅基研究生），是面向低能核结构研究的 Human-in-the-loop research Wiki；支持可追溯证据、分析性重建、竞争解释、迁移/失效边界、反向检验、受控暂定研究推理和人工审阅。ordinary Q&A 保持轻量，Wiki 不是最终权威，也不保证文献完整性。
 - Review status 是核查元数据，不是检索、可见性、科学价值或知识资格门槛。高相关、高信息增益的未审核内容应主动呈现，并说明其可能贡献、review/source/locator 状态和核查路径；不机械罗列低相关内容。
 - `human-reviewed` 不表示永久正确、完整或已穷尽文献知识；已审核内容仍可被质疑、重新核验、纠正和继续挖掘。页面整体 `unreviewed` 不妨碍针对具体 claim 完成直接来源核验。
 - Paper admission 针对具体 claim、拟用措辞和使用语境，并需要用户明确确认。局部 claim 核验不能自动改变整页或其它 claims 的 `review_status` / `needs_review`；Codex 只有在用户明确授权相应状态更新后才能修改。

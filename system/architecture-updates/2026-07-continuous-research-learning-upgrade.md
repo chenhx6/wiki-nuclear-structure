@@ -10,7 +10,7 @@ baseline_commit: 803a19d6a92546475c6a7ab18386b8e1bcb4b45c
 implementation_branch: codex/continuous-research-learning-upgrade
 validation_status: validated
 final_push_target: origin/main
-push_authorization: not-authorized
+push_authorization: authorized
 push_state: ready-for-push
 ---
 
@@ -20,12 +20,13 @@ This page is the release record for the upgrade from an evidence database with l
 
 ## Current phase and scope
 
-- Current phase: Phase 5 complete — local release closeout at `ready-for-push`.
+- Current phase: Gate 2B approved — local release state at `ready-for-push`; fast-forward merge, annotated tag, and push are authorized, with actual remote publication pending Git execution.
 - Architecture status: `validated`.
 - Baseline: `main` at `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`, aligned with `origin/main` and clean at Phase 0 entry.
 - Implementation branch: `codex/continuous-research-learning-upgrade`.
-- The user-approved continuous Goal execution through Phase 5 is complete on the implementation branch; no push is authorized.
+- The user-approved continuous Goal execution through Phase 5 is complete on the implementation branch; Gate 2B external review passed and the release actions are authorized, with actual remote publication pending.
 - Phase 1 is `2201f4a`, Phase 2 is `c0d9201`, Phase 3 is `4515497`, and Phase 4 is `25945ab`. Phase 5 records the validated local release state without changing science conclusions or the QMD collection definition.
+- Gate 1 read-only consistency review identified push-authorization, overview-trigger, and current-position wording conflicts. Gate 2A applies only the minimal framework cleanup for those blockers and on-touch migration routing; merge, tag, and push remain out of scope.
 
 ## Upgrade motivation
 
@@ -138,7 +139,7 @@ The two-paper pilot must test this isolation. A separate collection is considere
 
 This record retains final push target, user authorization, validation result, and `ready-for-push`. Actual commit hashes and push success are recorded by Git, Active handoff, and the short log. Do not create a pure status-fix commit merely to write `pushed: true` here.
 
-Phase 0 had no push authorization, and the completed local upgrade still has no push authorization.
+Phase 0 had no push authorization; the current release authorization is recorded in the front matter and remains pending actual Git execution.
 
 ### 10. Pilot and performance decisions
 
@@ -225,7 +226,11 @@ Completed in `25945ab`: tightened nonempty evidence and promotion/review consist
 
 ### Phase 5 — release closeout
 
-Completed locally: finalized this release record, compatibility and validation results, derived guidance and short state records; refreshed the existing QMD index after the two-source pilot; audited checks and staged files; and stopped at `ready-for-push`. Push remains explicitly unauthorized.
+Completed locally at that stage: finalized this release record, compatibility and validation results, derived guidance and short state records; refreshed the existing QMD index after the two-source pilot; audited checks and staged files; and stopped at `ready-for-push` before Gate 2B authorization. Publication was intentionally not attempted at that stage.
+
+### Gate 2A.1 — final state consistency
+
+Gate 1's push-authorization, overview-trigger, and on-touch migration blockers were fixed in Gate 2A. Gate 2A validation completed with Wiki lint at 0 errors, 10 tests passed, and Git/EOL/protected-path/staged-files audits passing. Phase 4/5 previously completed the QMD update/embed/status cycle in the unchanged single collection; Gate 2A changed no knowledge Markdown and therefore ran QMD status only. Gate 2B external review passed with no science/framework P0; the current local state is `ready-for-push`, and fast-forward merge, annotated tag, and push are authorized. Actual remote publication remains Git-authoritative.
 
 ## Release outcome
 
@@ -277,15 +282,16 @@ Completed locally: finalized this release record, compatibility and validation r
 - Phase 4 implementation: `25945ab Validate continuous research-learning isolation`.
 - Phase 5 implementation: local release/closeout commit recorded by Git; this file intentionally does not self-record its own commit hash.
 - Pilot result: two existing sources supplemented; no science P0, two scoped P1 sections later accepted by the user, no research note, and no shared project/synthesis/overview change.
-- Validation result: after release cleanup, Wiki lint reports 0 errors, 11 known warnings and 0 info; 9 unit/integration tests pass; QMD update/embed/status succeeds in the unchanged single collection; Git and EOL audits pass.
+- Phase 4/5 validation: Wiki lint reports 0 errors, 11 known warnings and 0 info; the Phase 4 test suite had 9 passing tests; QMD update/embed/status succeeded in the unchanged single collection; Git and EOL audits passed.
+- Gate 2A validation: Wiki lint reports 0 errors, 11 known warnings and 0 info; 10 tests pass; no knowledge Markdown changed, so QMD status only was run; Git, EOL, protected-path, and staged-files audits passed.
 - Final push target: `origin/main`.
-- Push authorization: not authorized.
-- Push state: `ready-for-push` locally; no push has been attempted.
+- Push authorization: authorized by the user for fast-forward merge, annotated tag, and push; actual remote result is pending Git execution.
+- Push state: `ready-for-push` locally; no push has been attempted yet.
 
 ## Phase 0 acceptance
 
 - Ten architecture decisions are recorded.
 - The implementation branch is isolated from `main`.
 - The baseline is recorded.
-- No Phase 1 rule, science content, research-note directory, schema, template, workflow, Skill, Guide, check, QMD configuration, pilot, benchmark, commit, or push is performed.
+- Phase 0 created local checkpoint commit `13d803e`; it did not implement Phase 1 rules, science content, research-note instances, schema, template, workflow, Skill, Guide, check, QMD configuration, pilot, or benchmark, and it did not push.
 - Phase 0 stops for a user decision before Phase 1.
