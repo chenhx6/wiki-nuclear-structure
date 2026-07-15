@@ -8,34 +8,34 @@ updated: 2026-07-15
 ## Active handoff
 
 Current active task:
-Phase 4 of the continuous research-learning upgrade: routing, lifecycle consistency, single-collection isolation and pilot-derived complexity are being validated before release closeout.
+Continuous research-learning upgrade Phase 5 is complete locally and stopped at `ready-for-push` for external review and explicit user authorization.
 
 Current branch / local commit:
-`codex/continuous-research-learning-upgrade`; Phase 1 is `2201f4a`, Phase 2 is `c0d9201`, Phase 3 is `4515497`. Phase 4 changes are local and uncommitted; no push is authorized.
+`codex/continuous-research-learning-upgrade`; Phase 0 is `13d803e`, Phase 1 `2201f4a`, Phase 2 `c0d9201`, Phase 3 `4515497`, and Phase 4 `25945ab`. The Phase 5 closeout commit is the current local HEAD after final checks; no push is authorized.
 
 Last task status:
-Phase 3 passed lint and was committed independently with no science P0. Phase 4 added structural guards for nonempty grounded evidence and reviewed promotion, a static ordinary-query isolation test, and corrected remaining mode/depth wording. QMD status confirms the existing single collection is available; no refresh was run.
+Phases 0–4 are committed independently. Phase 5 finalized the architecture record and guidance, refreshed the unchanged single QMD collection after the two-source pilot, and completed release checks without pushing.
 
 Unfinished items:
-Complete Phase 4 checks and independent commit, then perform Phase 5 release closeout and stop at ready-for-push. Real promoted-note backlink behavior remains deferred until a genuine note passes the creation gate.
+External review, focused human review of the two pilot Analytical Reconstruction sections, and explicit merge/push authorization remain. Real-note ranking and promoted-note operational backlink behavior remain deferred until a genuine note passes the creation gate.
 
 P0 focus:
-P0: none identified. Phase 4 is structural/behavioral validation only.
+P0: none identified for the architecture release or two-paper pilot.
 
 Complete unresolved P0 inventory:
 None. Pilot P1 remains limited to the two new `Analytical Reconstruction` sections; it does not block architecture closeout or imply scientific acceptance.
 
 Risks:
-Single-collection isolation is proven at the contract/test level and current collection has no research-note Markdown instance; future real-note ranking behavior is not yet empirically observed. Do not manufacture a note merely to satisfy this test.
+Single-collection isolation is validated at the workflow/Skill/test level, but real-note ranking has not been observed because no genuine note met the persistence gate. Architecture readiness does not approve the two P1 scientific reconstructions.
 
 Checks:
-Phase 4 lint passes with 0 errors, 11 existing warnings and two expected pilot review infos; nine tests pass. QMD status is available; update/embed were not run.
+Final Wiki lint passes with 0 errors, 11 existing warnings and two expected pilot review infos; nine tests pass. QMD update/embed/status succeeds for 200 indexed files and 1129 vectors; EOL/Git checks pass.
 
 Next prompt / continuation phrase:
-Continue the approved Goal: validate and commit Phase 4, then complete Phase 5 and stop at ready-for-push without pushing.
+Review the ready-for-push architecture branch and the two P1 pilot sections; then explicitly authorize the desired merge/push action or request revisions.
 
 Recent user decisions:
-Approved continuous Phase 1–5 execution with per-phase local commits and no push. Fixed pilot papers for Phase 3 are Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM unless a science P0 requires user review.
+Approved continuous Phase 1–5 execution with per-phase local commits and no push. The release must remain on the isolated branch until explicit merge/push authorization.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

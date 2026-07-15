@@ -195,7 +195,7 @@ P0/P1 是当前关键 claim 或证据项的 focused review 优先级，不要求
 
 审核时，source 重点核对原文与 locator；project 重点核对证据归类、研究问题和数据桥；synthesis 重点核对跨来源结论是否过强；data-analysis-bridge 重点核对数据事实、分析结果、物理解释和创新点候选是否分层。页面级 `human-reviewed` 与 claim-level `needs_review` 仍然独立，不能因整页通过就自动清除具体 claim 的待审状态。
 
-审核点很多时，先看“精力有限时建议先看”的 3–5 个位置。对每个 P0/P1，审核报告可明确写：
+审核点很多时，完整 P0 inventory 仍须保留且可分轮审核；“精力有限时建议先看”的 3–5 个位置只是当前阅读顺序，不得隐藏、聚合或降级其它 P0。对每个 P0/P1，审核报告可明确写：
 
 ```text
 <文件 / claim ID>：通过 / 需要修改；

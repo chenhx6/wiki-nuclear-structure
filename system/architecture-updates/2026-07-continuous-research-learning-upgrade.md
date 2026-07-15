@@ -1,31 +1,31 @@
 ---
 type: system-architecture-update
 graph-excluded: true
-status: planned
+status: validated
 created: 2026-07-15
 updated: 2026-07-15
 upgrade: continuous-research-learning
 baseline_branch: main
 baseline_commit: 803a19d6a92546475c6a7ab18386b8e1bcb4b45c
 implementation_branch: codex/continuous-research-learning-upgrade
-validation_status: phase-4-in-progress
+validation_status: validated
 final_push_target: origin/main
 push_authorization: not-authorized
-push_state: not-ready
+push_state: ready-for-push
 ---
 
 # Continuous research learning upgrade
 
-This page is the release record for the planned upgrade from an evidence database with local research workspaces to an auditable continuous research-learning system. It records motivation, approved architecture decisions, phase gates, compatibility, validation, and rollback. It is not the canonical owner of active schema, workflow, evidence, review, query, or Skill rules.
+This page is the release record for the upgrade from an evidence database with local research workspaces to an auditable continuous research-learning system. It records motivation, approved architecture decisions, phase gates, compatibility, validation, and rollback. It is not the canonical owner of active schema, workflow, evidence, review, query, or Skill rules.
 
 ## Current phase and scope
 
-- Current phase: Phase 4 — revision and validation.
-- Architecture status: `planned`.
+- Current phase: Phase 5 complete — local release closeout at `ready-for-push`.
+- Architecture status: `validated`.
 - Baseline: `main` at `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`, aligned with `origin/main` and clean at Phase 0 entry.
 - Implementation branch: `codex/continuous-research-learning-upgrade`.
-- Phase 1 is authorized as part of the user-approved continuous Goal execution through Phase 5; no push is authorized.
-- Phase 1 is `2201f4a`, Phase 2 is `c0d9201`, and Phase 3 is `4515497`. Phase 4 tightens structural consistency and validates routing without changing science content or the QMD collection.
+- The user-approved continuous Goal execution through Phase 5 is complete on the implementation branch; no push is authorized.
+- Phase 1 is `2201f4a`, Phase 2 is `c0d9201`, Phase 3 is `4515497`, and Phase 4 is `25945ab`. Phase 5 records the validated local release state without changing science conclusions or the QMD collection definition.
 
 ## Upgrade motivation
 
@@ -99,7 +99,7 @@ Research notes may preserve high-value grounded but immature cross-source reason
 
 ### 5. State-field responsibilities
 
-The planned responsibilities are:
+The implemented responsibilities are:
 
 | Field | Responsibility |
 |---|---|
@@ -109,7 +109,7 @@ The planned responsibilities are:
 
 A new note should use `review_status: unreviewed` and `reasoning_status: provisional`. `unreviewed` must not be duplicated in `reasoning_status`.
 
-The current proposed stable `reasoning_status` values are `provisional`, `promoted`, `rejected`, `superseded`, and `withdrawn`. The final schema enum remains a Phase 2 decision and must be reviewed before implementation. The three fields must not create contradictory sources of truth.
+The stable `reasoning_status` values are `provisional`, `promoted`, `rejected`, `superseded`, and `withdrawn`, as implemented in Phase 2. The three fields must not create contradictory sources of truth.
 
 `revised` is a history event, not a stable maturity state. After revision, the note returns to the appropriate stable reasoning state; human-review state remains in `review_status`. Revision history records the reason and triggering evidence.
 
@@ -136,22 +136,22 @@ The two-paper pilot must test this isolation. A separate collection is considere
 
 ### 9. Push-state semantics
 
-This record will eventually retain final push target, user authorization, validation result, and `ready-for-push`. Actual commit hashes and push success are recorded by Git, Active handoff, and the short log. Do not create a pure status-fix commit merely to write `pushed: true` here.
+This record retains final push target, user authorization, validation result, and `ready-for-push`. Actual commit hashes and push success are recorded by Git, Active handoff, and the short log. Do not create a pure status-fix commit merely to write `pushed: true` here.
 
-Phase 0 has no push authorization. Phase 1 is also not yet authorized.
+Phase 0 had no push authorization, and the completed local upgrade still has no push authorization.
 
 ### 10. Pilot and performance decisions
 
-Pilot candidates, not final selections:
+The candidates were later fixed for the Goal-authorized pilot:
 
 - method/criterion candidate: Kibédi 2008 BrIcc;
 - project-related candidate: Nomura 2022 low-spin wobbling IBFM.
 
-The user must confirm the actual two papers again before Phase 3. No pilot may start from these candidates automatically.
+They were not started from the Phase 0 candidate list alone; the later Goal authorization explicitly fixed both papers before Phase 3.
 
 Performance benchmarking is deferred to a separately authorized task in a disposable worktree or otherwise isolated environment. It is not an MVP blocker and must not be mixed with science WIP or the two-paper pilot.
 
-## Planned canonical ownership
+## Canonical ownership
 
 This section records release-level ownership decisions; active rules remain in the listed canonical files rather than this release record.
 
@@ -170,19 +170,19 @@ This section records release-level ownership decisions; active rules remain in t
 
 ### Phase 0 — decisions and baseline
 
-Record the clean baseline, approved decisions, implementation branch, deferred decisions, compatibility, and rollback. Do not change active rules or science content. Stop and obtain explicit user approval before Phase 1.
+Completed in `13d803e`: recorded the clean baseline, approved decisions, implementation branch, deferred decisions, compatibility, and rollback without changing active rules or science content.
 
 ### Phase 1 — core governance
 
-In progress: separate user modes from reading states; define the standard deep-ingest loop, analytical-reconstruction boundary, provisional reasoning and promotion boundary, Human review behavior, ordinary/research routing, project/synthesis revision, and canonical ownership. Phase 1 must be committed independently before Phase 2 infrastructure begins.
+Completed in `2201f4a`: separated user modes from reading states and defined the standard deep-ingest loop, analytical-reconstruction boundary, provisional reasoning and promotion boundary, Human review behavior, ordinary/research routing, project/synthesis revision, and canonical ownership.
 
 ### Phase 2 — controlled research-note layer
 
-In progress: the enum is fixed as `provisional`, `promoted`, `rejected`, `superseded`, and `withdrawn`; `revised` is a history event. Add the directory/type/template, lifecycle and promotion/rejection rules, single-collection query isolation, lint/check support, and thin Skill/Guide synchronization. No note instance is created before a task passes the persistence gate.
+Completed in `c0d9201`: fixed the five-state enum, treated `revised` as a history event, and added the directory/type/template, lifecycle and promotion/rejection rules, single-collection query isolation, lint/check support, and thin Skill/Guide synchronization. No note instance was created because neither pilot passed the persistence gate.
 
 ### Phase 3 — two-paper pilot
 
-In progress with the fixed Goal candidates: Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM. The pilot adds auditable paper question, design logic, evidence chain, analytical reconstruction, transfer/failure/reverse-test assessment, and persistence decision without changing existing claim IDs.
+Completed in `4515497` with Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM. The pilot added auditable paper question, design logic, evidence chain, analytical reconstruction, transfer/failure/reverse-test assessment, and persistence decisions without changing existing claim IDs.
 
 ## Phase 3 pilot outcome
 
@@ -209,7 +209,7 @@ In progress with the fixed Goal candidates: Kibédi 2008 BrIcc and Nomura 2022 l
 
 ### Phase 4 — revision and validation
 
-In progress: tighten nonempty evidence and promotion/review consistency checks; validate ordinary-Q&A exclusion in both query workflow and evidence-query Skill; verify that user mode remains separate from reading completion; and assess the existing single QMD collection without refreshing it.
+Completed in `25945ab`: tightened nonempty evidence and promotion/review consistency checks; validated ordinary-Q&A exclusion in both query workflow and evidence-query Skill; verified that user mode remains separate from reading completion; and retained the existing single QMD collection.
 
 ## Phase 4 validation result
 
@@ -225,11 +225,20 @@ In progress: tighten nonempty evidence and promotion/review consistency checks; 
 
 ### Phase 5 — release closeout
 
-Planned only: complete this record, compatibility and validation results; synchronize necessary derived documentation and short state records; audit staged files; create approved commits; and push only with explicit user authorization. Phase 5 is not authorized.
+Completed locally: finalized this release record, compatibility and validation results, derived guidance and short state records; refreshed the existing QMD index after the two-source pilot; audited checks and staged files; and stopped at `ready-for-push`. Push remains explicitly unauthorized.
+
+## Release outcome
+
+- The Wiki now has a canonical default standard deep-ingest loop that evaluates understanding, evidence-chain reconstruction, conditional transfer, failure boundaries, competing explanations, reverse tests, research questions, revision need, persistence and Human review without imposing output quotas.
+- User ingest modes and completed `reading_depth` are separate concepts; source pages record actual coverage rather than inferred task mode.
+- The controlled `research-note` layer exists with distinct lifecycle, review and scientific-maturity fields. No real note was created because the pilot persistence gate rejected duplication and low-value persistence.
+- Ordinary Q&A excludes research notes by path/type contract; research tasks must label provisional use and return to grounded sources. Static tests pass; ranking behavior with a genuine future note remains deferred.
+- P0 has no total hard cap and cannot be hidden by aggregation. The pilot identified no P0 and two scoped P1 analytical sections.
+- Project, synthesis and overview were not mechanically rewritten; neither pilot changed their formal knowledge state.
 
 ## Compatibility and migration
 
-- New ingests adopt the future workflow only after its phase is implemented and validated.
+- New ingests use the implemented workflow after this branch is reviewed and integrated.
 - Existing sources are upgraded only when reused, reviewed, or admitted to paper evidence.
 - Do not infer historical user mode from `reading_depth`.
 - Do not backfill user mode across old sources.
@@ -238,7 +247,7 @@ Planned only: complete this record, compatibility and validation results; synchr
 - Existing claim-kind variants remain forward-compatible until a separately reviewed migration policy exists.
 - Do not add new frontmatter to all historical pages.
 - Project and synthesis pages change only when evidence causes a real knowledge revision.
-- QMD continues with the existing collection during the MVP unless Phase 4 evidence justifies separation.
+- QMD continues with the existing collection during the MVP; reconsider separation only if genuine notes later crowd or contaminate ordinary retrieval.
 
 ## Rollback strategy
 
@@ -253,25 +262,25 @@ Planned only: complete this record, compatibility and validation results; synchr
 ## Deferred decisions
 
 - Final `reasoning_status` schema enum: resolved in Phase 2 as the five user-approved stable values; human review remains solely in `review_status`.
-- Exact two pilot papers: user reconfirmation before Phase 3.
-- Independent QMD collection: evaluate only in Phase 4 if the single-collection isolation test fails.
+- Real-note retrieval ranking and promoted-note operational backlink behavior: evaluate when a genuine research note passes the creation gate; do not manufacture one for testing.
+- Independent QMD collection: not justified by the current MVP evidence; reconsider only if genuine notes crowd or contaminate ordinary retrieval.
 - Performance benchmark: separate future task requiring explicit authorization.
-- Phase 1–5 execution is authorized on the implementation branch; each phase receives an internal checkpoint commit, and no push occurs without a later explicit authorization.
+- The two pilot `Analytical Reconstruction` sections remain P1 for focused human review; architecture validation does not imply scientific acceptance.
 
 ## Implementation and validation record
 
 - Phase 0 baseline commit: `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`.
-- Phase 0 checkpoint: created as the current branch HEAD with message `Record continuous research-learning upgrade Phase 0`; the exact hash is recorded by Git and the final task report.
+- Phase 0 checkpoint: `13d803e Record continuous research-learning upgrade Phase 0`.
 - Phase 1 implementation: `2201f4a Define continuous research-learning core governance`.
-- Phase 2 implementation: in progress; commit will be recorded by Git/handoff/log after validation.
+- Phase 2 implementation: `c0d9201 Add controlled provisional research notes`.
 - Phase 3 implementation: `4515497 Pilot continuous research learning on two sources`.
-- Phase 4 implementation: in progress; commit will be recorded by Git/handoff/log after validation.
-- Phase 5 implementation: not started.
+- Phase 4 implementation: `25945ab Validate continuous research-learning isolation`.
+- Phase 5 implementation: local release/closeout commit recorded by Git; this file intentionally does not self-record its own commit hash.
 - Pilot result: two existing sources supplemented; no science P0, two scoped P1 sections, no research note, and no shared project/synthesis/overview change.
-- Validation result: not started.
+- Validation result: Wiki lint 0 errors with 11 known warnings and two expected review infos; 9 unit/integration tests pass; QMD update/embed/status succeeds in the unchanged single collection; Git and EOL audits pass.
 - Final push target: `origin/main`.
 - Push authorization: not authorized.
-- Push state: not ready.
+- Push state: `ready-for-push` locally; no push has been attempted.
 
 ## Phase 0 acceptance
 

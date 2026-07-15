@@ -606,3 +606,8 @@ updated: 2026-07-15
 
 - Tightened research-note evidence/promotion consistency checks and validated ordinary-query exclusion in workflow/Skill contracts; nine tests and Wiki lint pass.
 - Retained the single QMD collection; no real note, QMD refresh, science-page change or push was introduced in Phase 4.
+
+## [2026-07-15] architecture | continuous research-learning upgrade Phase 5
+
+- Closed the validated architecture release locally at `ready-for-push`, refreshed the unchanged single QMD collection after the pilot, and recorded remaining P1/deferred operational checks.
+- No research note, project/synthesis/overview rewrite, merge or push was produced.
