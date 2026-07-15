@@ -596,3 +596,8 @@ updated: 2026-07-15
 
 - Added the controlled `research-note` type, five-state maturity model, template, persistence/promotion lifecycle, ordinary-query exclusion, structural lint/test coverage, and thin Skill/Guide routing.
 - No real research-note instance, science page, QMD collection change or push was included; Phase 2 validation and local checkpoint commit follow.
+
+## [2026-07-15] pilot | continuous research-learning upgrade Phase 3
+
+- Supplemented Kibédi 2008 BrIcc and Nomura 2022 IBFM with auditable question, design, evidence-chain, transfer/failure and persistence assessments.
+- No science P0, research note, project/synthesis/overview update or push was produced; two scoped analytical sections remain P1 for user review.

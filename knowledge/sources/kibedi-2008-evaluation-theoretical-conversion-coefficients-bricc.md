@@ -5,7 +5,7 @@ aliases: [Kibedi 2008 BrIcc, BrIcc theoretical conversion coefficients, Kibedi 2
 created: 2026-07-12
 updated: 2026-07-12
 status: ai-draft
-review_status: human-reviewed
+review_status: needs-human-review
 source_type: method-review-article
 reading_depth: read
 title_original: "Evaluation of Theoretical Conversion Coefficients Using BrIcc"
@@ -42,6 +42,32 @@ The BibTeX key matches uniquely by title, year and DOI. Local file size is `1111
 The full 28-page article was read with targeted focus on the introduction, the ENSDF/ICC formalism in Secs.2--3, the mixing-ratio uncertainty treatment in Sec.3.4, the BrIccFO/BrIccNH discussion in Sec.4.1, and the interpolation/summary sections in Sec.5--6. Appendix tables were skimmed only as reference data tables rather than page-by-page evidence content.
 
 This is a `review-ingest + theory-ingest` source. It should be used as a method/theory/database anchor for internal-conversion coefficients and their uncertainty handling, not as a primary experimental source for any single nucleus.
+
+## Paper Question and Scientific Motivation
+
+**Author-explicit.** The paper asks how accurate theoretical internal-conversion coefficients can be made accessible in an ENSDF-compatible evaluation tool while retaining the uncertainty and atomic-vacancy treatments needed for multipolarity and mixing-ratio work. The motivation is that experimental ICCs are compared with theory to determine transition multipolarities and mixing ratios, while modern calculations had reached percent-level accuracy that experiments could test (p.202, Abstract and Sec.1).
+
+## Method and Design Logic
+
+**Author-explicit.** The design follows the data-evaluation chain rather than a single-nucleus analysis: define the ENSDF transition inputs; give formulae for pure and mixed transitions; propagate theoretical-table, transition-energy and mixing-ratio uncertainties; compare vacancy treatments against compiled experimental ICCs; then package the adopted tables and interpolation rules in BrIcc (pp.202--207, Secs.1--4.1; pp.211--214, Secs.4.3--6).
+
+## Key Evidence and Reasoning Chain
+
+1. Experimental ICC use requires a theoretical coefficient for a specified `Z`, energy, shell and multipolarity (pp.202--203, Secs.1--3).
+2. Mixed-transition ICCs depend on pure components and `delta^2`, so the coefficient cannot determine the sign of `delta` (p.203, Eqs.(1)--(5)).
+3. The final uncertainty depends separately on the theoretical table, transition energy and mixing-ratio distribution; zero-crossing or limited `delta` cases are not captured by a single symmetric Gaussian error (pp.203--205, Secs.3.2--3.4, Fig.1).
+4. Comparison with compiled experimental coefficients supports the Frozen-Orbitals vacancy treatment as the adopted default, while interpolation and nonunique multipolarity labels impose additional operational boundaries (pp.206--213, Secs.4.1--5.1).
+5. Therefore BrIcc is useful as a controlled theory/database input to an ICC analysis, not as independent experimental evidence for a particular nuclear assignment (p.214, Summary; source boundary above).
+
+## Analytical Reconstruction
+
+**Pilot assessment; P1 review.** The reusable research strategy is to treat ICC inference as a forward-model problem: declare candidate multipolarities and the adopted atomic calculation, propagate all input uncertainties through `alpha(delta)`, and only then invert or compare with experiment. This reconstruction is supported by Eqs.(1)--(5), Secs.3.2--3.4 and the vacancy/interpolation tests; it is not a sentence quoted from the authors.
+
+- **Transfer conditions:** the transition energy, `Z`, shell/total coefficient convention, candidate multipolarities, `delta` convention and uncertainty model are explicit, and the selected BrIcc table covers the case.
+- **Failure conditions:** nonunique multipolarity input, an unmodelled third component/E0 admixture, direct interpolation of nonmonotonic total ICC, or a `delta` distribution crossing zero without adequate likelihood treatment.
+- **Reverse test:** compare an inferred `delta` against independent angular-distribution/polarization constraints or repeat the forward calculation with the relevant vacancy/table choice; disagreement localizes whether the conflict is experimental, atomic-model or multipolarity-input dependent.
+- **Persistence decision:** no research note is created. The transferable content is already source-grounded and canonically owned by [[internal-conversion-analysis]]; the pilot did not produce a new cross-source hypothesis whose loss would cause research harm.
+- **Shared-page decision:** no project/synthesis update is justified because this assessment does not change their evidence state.
 
 ## Summary
 

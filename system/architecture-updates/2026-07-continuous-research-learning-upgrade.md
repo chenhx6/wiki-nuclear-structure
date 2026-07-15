@@ -8,7 +8,7 @@ upgrade: continuous-research-learning
 baseline_branch: main
 baseline_commit: 803a19d6a92546475c6a7ab18386b8e1bcb4b45c
 implementation_branch: codex/continuous-research-learning-upgrade
-validation_status: phase-2-in-progress
+validation_status: phase-3-in-progress
 final_push_target: origin/main
 push_authorization: not-authorized
 push_state: not-ready
@@ -20,12 +20,12 @@ This page is the release record for the planned upgrade from an evidence databas
 
 ## Current phase and scope
 
-- Current phase: Phase 2 — controlled research-note layer.
+- Current phase: Phase 3 — two-paper pilot.
 - Architecture status: `planned`.
 - Baseline: `main` at `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`, aligned with `origin/main` and clean at Phase 0 entry.
 - Implementation branch: `codex/continuous-research-learning-upgrade`.
 - Phase 1 is authorized as part of the user-approved continuous Goal execution through Phase 5; no push is authorized.
-- Phase 1 is committed as `2201f4a`. Phase 2 adds only controlled research-note infrastructure, routing, structural validation, and derived documentation. No real research-note instance, science page, source, project, synthesis, or QMD collection is changed.
+- Phase 1 is committed as `2201f4a`; Phase 2 is committed as `c0d9201`. Phase 3 supplements only the two fixed existing source pages and this release/state record. It does not re-ingest evidence, create a research note, update project/synthesis/overview, or change the QMD collection.
 
 ## Upgrade motivation
 
@@ -182,7 +182,30 @@ In progress: the enum is fixed as `provisional`, `promoted`, `rejected`, `supers
 
 ### Phase 3 — two-paper pilot
 
-Planned only: ask the user to select the two papers again, run one method/criterion and one project-related pilot, perform staged Human review, and measure reasoning quality, query isolation, review cost, and file-change scope. Phase 3 is not authorized.
+In progress with the fixed Goal candidates: Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM. The pilot adds auditable paper question, design logic, evidence chain, analytical reconstruction, transfer/failure/reverse-test assessment, and persistence decision without changing existing claim IDs.
+
+## Phase 3 pilot outcome
+
+### Kibédi 2008 BrIcc
+
+- Existing evidence quality was sufficient; the source already contained formulas, uncertainty boundaries, vacancy/interpolation limits and canonical method links.
+- The supplement reconstructs the data-evaluation design and identifies transfer/failure conditions for ICC-based mixing-ratio inference.
+- No research note was justified: the transferable result is source-grounded and already owned by `internal-conversion-analysis`; no new cross-source hypothesis would be lost.
+- No project/synthesis/overview update was justified.
+
+### Nomura 2022 low-spin wobbling IBFM
+
+- Existing evidence quality was sufficient; the source already separated model results, experimental comparisons, author interpretation, exceptions and limitations.
+- The supplement reconstructs the EDF-to-IBFM-to-electromagnetic-observable reasoning chain and makes the model-transfer boundary explicit.
+- No research note was justified: the high-value cross-source question and competing-model boundary are already owned by the low-spin-wobbling project and synthesis; a note would duplicate them.
+- No project/synthesis/overview update was justified because no evidence matrix or current conclusion changed.
+
+### Pilot review and cost
+
+- Science P0: none identified.
+- P1: the two new `Analytical Reconstruction` sections require scoped user review; both source pages are marked `needs-human-review` without changing claim-level review states.
+- Science-content files changed: two source pages. Shared science pages changed: zero. Research notes created: zero.
+- The pilot demonstrates that “no reliable new persistent inference” is a valid outcome and that the new loop need not create extra pages.
 
 ### Phase 4 — revision and validation
 
@@ -230,7 +253,7 @@ Planned only: complete this record, compatibility and validation results; synchr
 - Phase 1 implementation: `2201f4a Define continuous research-learning core governance`.
 - Phase 2 implementation: in progress; commit will be recorded by Git/handoff/log after validation.
 - Phase 3–5 implementation commits: not started.
-- Pilot result: not started.
+- Pilot result: two existing sources supplemented; no science P0, two scoped P1 sections, no research note, and no shared project/synthesis/overview change.
 - Validation result: not started.
 - Final push target: `origin/main`.
 - Push authorization: not authorized.
