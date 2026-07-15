@@ -272,6 +272,28 @@ def validate_page(page: Page, config: dict[str, Any], issues: list[Issue]) -> No
                 page.relative,
                 "promoted research-note requires promotion_target",
             )
+        evidence_sources = meta.get("evidence_sources")
+        if not isinstance(evidence_sources, list) or not any(
+            str(source).strip() for source in evidence_sources
+        ):
+            add(
+                issues,
+                "error",
+                "EVIDENCE_SOURCES_EMPTY",
+                page.relative,
+                "research-note requires at least one grounded evidence source",
+            )
+        if reasoning_status == "promoted" and meta.get("review_status") not in {
+            "human-reviewed",
+            "verified",
+        }:
+            add(
+                issues,
+                "error",
+                "PROMOTED_WITHOUT_REVIEW",
+                page.relative,
+                "promoted research-note requires human-reviewed or verified review_status",
+            )
 
     for field in ("created", "updated"):
         raw = str(meta.get(field, ""))

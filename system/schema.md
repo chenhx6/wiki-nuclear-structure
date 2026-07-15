@@ -1,8 +1,8 @@
 ---
 type: system-schema
 graph-excluded: true
-version: 0.1.0
-updated: 2026-07-02
+version: 0.2.0
+updated: 2026-07-15
 ---
 
 # 页面类型与字段规范

@@ -601,3 +601,8 @@ updated: 2026-07-15
 
 - Supplemented Kibédi 2008 BrIcc and Nomura 2022 IBFM with auditable question, design, evidence-chain, transfer/failure and persistence assessments.
 - No science P0, research note, project/synthesis/overview update or push was produced; two scoped analytical sections remain P1 for user review.
+
+## [2026-07-15] validation | continuous research-learning upgrade Phase 4
+
+- Tightened research-note evidence/promotion consistency checks and validated ordinary-query exclusion in workflow/Skill contracts; nine tests and Wiki lint pass.
+- Retained the single QMD collection; no real note, QMD refresh, science-page change or push was introduced in Phase 4.

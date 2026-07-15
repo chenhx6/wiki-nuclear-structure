@@ -44,7 +44,7 @@ tags: []
 
 - Review scope:
 - Decision:
-- Remaining P0/P1:
+- Complete unresolved P0/P1 inventory:
 
 ## Promotion or Rejection History
 

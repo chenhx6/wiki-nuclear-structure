@@ -268,11 +268,11 @@ qmd.cmd embed -c nuclear-knowledge
 
 ## 12. How to reduce ingest overhead without losing evidence quality / 如何减少 Codex 摄入固定开销而不牺牲证据质量
 
-用户日常仍然可以使用短提示词启动文献摄入；深度阅读核心文献仍是默认要求。优化目标是减少启动文件、长 handoff/log、无过滤全库扫描、每篇强制 QMD embed、过长策略文件和超长复盘带来的浪费，不是减少对文献核心内容的阅读。
+用户日常仍然可以使用短提示词启动文献摄入；未指定模式时采用标准深入阅读模式。优化目标是减少启动文件、长 handoff/log、无过滤全库扫描、每篇强制 QMD embed、过长策略文件和超长复盘带来的浪费，不是降低用户模式要求。`reading_depth` 只在完成后记录实际覆盖状态，不从默认模式预先推定。
 
 `ingest-strategies-detail.md` 的 detail 是 workflow detail：策略说明、长示例、复杂案例和历史说明；不是 PDF reading depth。不默认读取 detail 教程不代表降低文献阅读深度，也不代表可以省略关键图表、公式、数值或 locator 核查。需要长说明时，可以单独要求 “输出 detailed workflow recap” 或 “输出 detailed strategy-policy audit”，这两者都不是“仔细阅读 PDF”的同义词。
 
-不应被节省的内容包括：关键 claims、locator、图表和公式、数值、transition、observable、model assumption、author interpretation，以及 observed fact / model result / author interpretation / Wiki synthesis 的分层。PDF staged evidence reading 是阅读顺序优化：先建立论文主线和结构地图，再围绕关键证据、图表、表格、公式和 locator 深入读取。默认正式摄入应认真阅读文献；若核心读取未完成，Codex 应 safe suspend，说明已读范围和未完成 section / figure / table / locator，而不是降低读取标准。
+不应被节省的内容包括：关键 claims、locator、图表和公式、数值、transition、observable、model assumption、author interpretation，以及 observed fact / model result / author interpretation / Wiki synthesis 的分层。PDF staged evidence reading 是阅读顺序优化：先建立论文主线和结构地图，再围绕关键证据、图表、表格、公式和 locator 深入读取。若当前模式要求的核心读取未完成，Codex 应 safe suspend，说明已读范围和未完成 section / figure / table / locator，而不是伪装成更高 `reading_depth`。
 
 多篇文献如果用户要求逐篇摄入，应逐篇完成 source、claim、locator、project relation 和 P0/P1 triage；每篇都有自己的 source-level / claim-level 审核重点，不应合并成粗略批处理。
 

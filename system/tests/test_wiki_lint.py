@@ -73,6 +73,28 @@ class ScientificGuardrailTests(unittest.TestCase):
         issues = []
         wiki_lint.validate_page(page, config, issues)
         self.assertIn("PROMOTION_TARGET_MISSING", {issue.code for issue in issues})
+        self.assertIn("PROMOTED_WITHOUT_REVIEW", {issue.code for issue in issues})
+
+        page.meta = {
+            **base_meta,
+            "reasoning_status": "provisional",
+            "evidence_sources": [],
+        }
+        issues = []
+        wiki_lint.validate_page(page, config, issues)
+        self.assertIn("EVIDENCE_SOURCES_EMPTY", {issue.code for issue in issues})
+
+    def test_ordinary_query_research_note_candidate_is_excluded_by_contract(self) -> None:
+        query_workflow = (REPO_ROOT / "system" / "workflows" / "query.md").read_text(
+            encoding="utf-8-sig"
+        )
+        skill = (
+            REPO_ROOT / ".agents" / "skills" / "wiki-evidence-query" / "SKILL.md"
+        ).read_text(encoding="utf-8-sig")
+        self.assertIn("ordinary Q&A 的候选过滤必须默认排除", query_workflow)
+        self.assertIn("knowledge/research-notes/", query_workflow)
+        self.assertIn("discard paths under `knowledge/research-notes/`", skill)
+        self.assertIn("grounded sources", skill)
 
     def test_high_confidence_requires_human_confirmation(self) -> None:
         page = wiki_lint.Page(

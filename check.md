@@ -109,6 +109,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] `Grounded Evidence` 与 `Provisional Reasoning` 明确分开；note 不替代 source evidence。
 - [ ] `promoted` note 有正式 promotion target、Human review 和 grounded-source 回链；rejected/superseded/withdrawn 保留处置依据。
 - [ ] Ordinary Q&A 已排除 `knowledge/research-notes/` / `type: research-note`；研究型任务使用 note 时显示 provisional 状态并回读 grounded sources。
+- [ ] Lint 只验证 research-note 的结构、枚举、grounded-source 非空和 promotion/review 一致性；没有把 lint 通过解释为推理科学正确。
 
 - [ ] 摄入前已查重并检查 aliases。
 - [ ] 摄入时区分了当前研究锚点与 Wiki 收录边界，没有把主线质量区当成知识库边界。

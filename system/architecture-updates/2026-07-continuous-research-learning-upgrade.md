@@ -8,7 +8,7 @@ upgrade: continuous-research-learning
 baseline_branch: main
 baseline_commit: 803a19d6a92546475c6a7ab18386b8e1bcb4b45c
 implementation_branch: codex/continuous-research-learning-upgrade
-validation_status: phase-3-in-progress
+validation_status: phase-4-in-progress
 final_push_target: origin/main
 push_authorization: not-authorized
 push_state: not-ready
@@ -20,12 +20,12 @@ This page is the release record for the planned upgrade from an evidence databas
 
 ## Current phase and scope
 
-- Current phase: Phase 3 — two-paper pilot.
+- Current phase: Phase 4 — revision and validation.
 - Architecture status: `planned`.
 - Baseline: `main` at `803a19d6a92546475c6a7ab18386b8e1bcb4b45c`, aligned with `origin/main` and clean at Phase 0 entry.
 - Implementation branch: `codex/continuous-research-learning-upgrade`.
 - Phase 1 is authorized as part of the user-approved continuous Goal execution through Phase 5; no push is authorized.
-- Phase 1 is committed as `2201f4a`; Phase 2 is committed as `c0d9201`. Phase 3 supplements only the two fixed existing source pages and this release/state record. It does not re-ingest evidence, create a research note, update project/synthesis/overview, or change the QMD collection.
+- Phase 1 is `2201f4a`, Phase 2 is `c0d9201`, and Phase 3 is `4515497`. Phase 4 tightens structural consistency and validates routing without changing science content or the QMD collection.
 
 ## Upgrade motivation
 
@@ -209,7 +209,19 @@ In progress with the fixed Goal candidates: Kibédi 2008 BrIcc and Nomura 2022 l
 
 ### Phase 4 — revision and validation
 
-Planned only: remove ineffective complexity, validate ordinary Q&A, evidence query, project/synthesis revision, research-note lifecycle, Human review, safe suspend/recovery, and decide whether QMD collection separation is needed. Phase 4 is not authorized.
+In progress: tighten nonempty evidence and promotion/review consistency checks; validate ordinary-Q&A exclusion in both query workflow and evidence-query Skill; verify that user mode remains separate from reading completion; and assess the existing single QMD collection without refreshing it.
+
+## Phase 4 validation result
+
+- Wiki lint: 0 errors; 11 pre-existing reaction/element warnings; two expected Human-review infos for pilot sections.
+- Unit/integration tests: 9 passed, including invalid maturity state, missing promotion target, empty grounded evidence, promoted-without-review, and ordinary-query exclusion contract.
+- QMD: available with the existing `nuclear-knowledge` single collection; status was read only. No research-note Markdown instance exists, so current retrieval cannot surface one. The workflow/Skill path/type filter and grounded-source readback contract are in place for future notes.
+- Collection decision: retain one collection for MVP. There is no observed crowding or misuse evidence that would justify a second collection; real-note retrieval behavior remains a future operational observation.
+- Ingest modes and reading state: canonical rules and derived guidance consistently separate them; residual language that preassigned a depth state was removed.
+- Project/synthesis promotion: no pilot evidence changed formal conclusions, so the no-update gate worked; no provisional reasoning was silently promoted.
+- Human review: P0 remains uncapped and fully identifiable; the pilot produced no P0 and two scoped P1 sections. Lint is explicitly structural, not scientific approval.
+- Safe suspend/recovery: existing branch/WIP/handoff rules remain compatible; no runtime suspend was required in the pilot.
+- Promoted-note backlink behavior is structurally enforced but cannot be demonstrated on a real note because neither pilot met the creation gate. This is a transparent deferred operational validation, not a reason to create a synthetic knowledge page.
 
 ### Phase 5 — release closeout
 
@@ -252,7 +264,9 @@ Planned only: complete this record, compatibility and validation results; synchr
 - Phase 0 checkpoint: created as the current branch HEAD with message `Record continuous research-learning upgrade Phase 0`; the exact hash is recorded by Git and the final task report.
 - Phase 1 implementation: `2201f4a Define continuous research-learning core governance`.
 - Phase 2 implementation: in progress; commit will be recorded by Git/handoff/log after validation.
-- Phase 3–5 implementation commits: not started.
+- Phase 3 implementation: `4515497 Pilot continuous research learning on two sources`.
+- Phase 4 implementation: in progress; commit will be recorded by Git/handoff/log after validation.
+- Phase 5 implementation: not started.
 - Pilot result: two existing sources supplemented; no science P0, two scoped P1 sections, no research note, and no shared project/synthesis/overview change.
 - Validation result: not started.
 - Final push target: `origin/main`.
