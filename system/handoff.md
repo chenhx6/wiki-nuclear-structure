@@ -1,41 +1,41 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-14
+updated: 2026-07-15
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Nature Skills full installation for Codex is complete; Wiki has only lightweight governance records for the install.
+Phase 0 of the continuous research-learning upgrade: user decisions and implementation baseline are recorded; work is stopped at the Phase 1 approval gate.
 
 Current branch / local commit:
-`main` at `6add991` before local record edits. Nature Skills clone is outside the Wiki at `C:\Users\22721\ai-skills\nature-skills`; Codex global skills target is `C:\Users\22721\.codex\skills`. No Wiki commit or push has been performed for this install-record task.
+`codex/continuous-research-learning-upgrade` from clean baseline `main@803a19d6a92546475c6a7ab18386b8e1bcb4b45c`. The Phase 0 checkpoint is the current HEAD with message `Record continuous research-learning upgrade Phase 0`; no push is authorized.
 
 Last task status:
-Cloned `https://github.com/Yuan1z0825/nature-skills.git` to `C:\Users\22721\ai-skills\nature-skills` at commit `b98b53ef5e8f15d9159682bf7587301a16b0747f`. Because Git Bash lacked `rsync`, the top-level `skills/` directories were mirrored into `C:\Users\22721\.codex\skills` with `robocopy /MIR`, and the upstream `scripts/update-codex-skills.sh --check` reports `MATCH` for `_shared` and all `nature-*` directories.
+The ten Phase 0 decisions were confirmed. Added a planned architecture update record with the three user modes, user-mode/`reading_depth` separation, approved research-note identity, state-field responsibilities, query/QMD boundary, P0 behavior, pilot candidates, phased roadmap, compatibility, rollback, and push-state semantics. No Phase 1 rule has been implemented.
 
 Unfinished items:
-Open a new Codex conversation/session before expecting the newly installed Nature Skills to appear in the available skill list. Optional Python/MCP/API dependencies for individual skills were not installed and should be configured only when a concrete task needs them.
+Wait for explicit user approval before Phase 1. The final `reasoning_status` enum is a Phase 2 approval gate. The two pilot papers must be reconfirmed before Phase 3. Performance benchmarking remains a separately authorized future task.
 
 P0 focus:
-When using Nature Skills for Wiki writing, first establish evidence boundaries from `knowledge/sources/`, `raw/`, locators and user judgement; Nature Skills may polish, draft, read, figure, cite or respond, but cannot override Wiki evidence policy or paper evidence gate.
+No science-content P0 was introduced. Do not enter Phase 1, create `knowledge/research-notes/`, modify active rules, run a pilot, or push without the user's explicit approval.
 
 Remaining P0:
-No science-content P0 is introduced by this install. For future paper use, source/raw locator checks remain mandatory.
+None for Phase 0. Future research-note and pilot P0 items do not exist yet.
 
 Risks:
-The upstream install script could not copy because `rsync` is absent, so this install used equivalent directory mirroring plus upstream `--check`. Do not install optional dependencies or write credentials/API keys into the Wiki; configure them separately only when needed.
+The architecture update is a release record, not a canonical rule owner. Current schema/workflow/query behavior remains unchanged until its phase is separately approved and implemented. Pilot candidates are not final selections.
 
 Checks:
-Write-entry preflight was clean: `git status` had no diff/staged files, EOL cleanup reported 0 refreshed/restored/unsafe/mixed, and post-clean status stayed clean. Nature Skills upstream `--check` passed with all directories matching. Final `python system/scripts/wiki_lint.py --fail-on error` passed with 0 errors, 11 existing warnings and 0 info; `git diff --check` passed.
+Phase 0 entry baseline was clean and aligned with `origin/main`; no merge/rebase/cherry-pick was active. EOL cleanup reported 0 refreshed/restored/unsafe/mixed. Wiki lint passed with 0 errors, 11 existing warnings and 0 info; final Git diff checks passed.
 
 Next prompt / continuation phrase:
-To update Nature Skills later: `cd C:\Users\22721\ai-skills\nature-skills`, run `git pull`, then run `scripts/update-codex-skills.sh --pull` if `rsync` is available, or mirror the same `skills/` directories and run `scripts/update-codex-skills.sh --check`.
+Review the Phase 0 report. To authorize the next phase, explicitly say: “批准进入 Phase 1”。
 
 Recent user decisions:
-User changed the earlier Stable-only plan to full Nature Skills installation: "都下了吧，有啥用啥，省了再下". Do not add the full Nature Skills repo into Wiki Git; keep only lightweight records in `system/memory.md`, `system/handoff.md` and `system/log.md`.
+Approved the three ingest-mode names and boundaries; independent implementation branch; `research-note` under `knowledge/research-notes/`; separate `status` / `review_status` / `reasoning_status` responsibilities; revision as history; threshold-based Agent creation in authorized research tasks; one QMD collection for MVP; `ready-for-push` plus Git/handoff/log outcome tracking; provisional pilot candidates requiring Phase 3 reconfirmation; and a separately authorized future performance benchmark.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

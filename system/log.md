@@ -2,7 +2,7 @@
 type: system-log
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-12
+updated: 2026-07-15
 ---
 
 # 操作日志
@@ -581,3 +581,8 @@ updated: 2026-07-12
 
 - Cloned `Yuan1z0825/nature-skills` to `C:\Users\22721\ai-skills\nature-skills` and installed all `_shared` / `nature-*` skill directories into `C:\Users\22721\.codex\skills`.
 - Upstream `scripts/update-codex-skills.sh --check` reports all installed directories match the clone. Optional per-skill Python/MCP/API dependencies were not installed.
+
+## [2026-07-15] architecture | continuous research-learning upgrade Phase 0
+
+- Recorded the user-approved Phase 0 decisions and clean `main@803a19d` baseline on `codex/continuous-research-learning-upgrade` in a planned architecture update.
+- Created the single local Phase 0 checkpoint commit with only the architecture update, Active handoff and this short log; no active rule, science page, research-note infrastructure, QMD configuration, pilot, or push was performed. Phase 1 requires explicit user approval.
