@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: query
-updated: 2026-07-10
+updated: 2026-07-15
 ---
 
 # QUERY：知识库查询流程
@@ -101,7 +101,7 @@ qmd.cmd status
 
 ## 4. 回答要求
 
-- 默认模式是 ordinary Wiki questions / exploratory synthesis / research discussion / early drafting，而不是严格 paper evidence gate。
+- Ordinary query scope 包括 ordinary Wiki questions / exploratory synthesis / research discussion / early drafting；它不等同于三种用户摄入模式，也不自动进入严格 paper evidence gate。
 - 凡被表述为 Wiki 已收录或 external source 已核验的核心结论，都应追溯到来源页或直接来源；ordinary mode 下的稳定一般专业背景可以使用，但不得伪装成 Wiki 已收录事实。
 - 关键数值在已有直接来源时附单位、不确定度和 locator；若精确 locator 暂缺但仍能给出有价值回答，应降低措辞强度并说明限制。
 - 术语首次出现时优先使用“中文（English, abbreviation）”；必要时说明 canonical term、用户原词和原文术语的关系。

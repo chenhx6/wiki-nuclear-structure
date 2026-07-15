@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: reflect
-updated: 2026-07-08
+updated: 2026-07-15
 ---
 
 # REFLECT：综合与反向检验
@@ -101,11 +101,11 @@ Project、synthesis 或跨来源 reflect 完成后，必须按 `system/workflows
 
 不要求固定触发短语；若存在歧义，不得自动写入 `system/review-history.md`。
 
-除非用户明确说“不要更新 overview”“不要刷新 QMD”“不要 push”“只修改不 finalization”“只修改，不提交”“只 commit，不 push”，默认执行：按审核意见做最小修改，处理用户明确确认范围内的 `needs_review`，确认无 unresolved P0/locator gaps 后更新 `knowledge/overview.md`，执行 QMD refresh，运行检查，将对应 WIP amend 为 review/final commit，按本轮审核追加 `system/review-history.md` 条目，再独立判断 queue 是否继续保留，刷新 Active handoff，追加 short log，并在最终复盘报告 overview/QMD/commit/push/handoff/queue/review history/log 状态。
+Review finalization 在规则允许时可以默认完成审核意见对应的最小修改、检查、本地 commit 与状态同步；push 始终需要用户明确授权。用户没有说“不要 push”不等于已经授权 push；缺少明确授权时必须停在 `ready-for-push`。完整 Git 边界由根目录 `AGENTS.md` 的 Review-finalization / Safe suspend 规则和 `check.md` 的 Git preflight 维护，本 workflow 不复制。其余收尾按审核范围处理：仅更新用户明确确认的 `needs_review`，确认无 unresolved P0/locator gaps 后按触发条件处理 overview/QMD，追加 `system/review-history.md`，独立判断 queue，刷新 Active handoff 和 short log。
 
 若仍有 unresolved P0、locator gaps、审核意见未落实、审核意见无法唯一映射到具体 project/synthesis statement、project/synthesis 仍存在高风险不确定内容，或 HEAD 不是对应 WIP 且无法确认归属，不得强行 finalization；应停止并报告阻塞，必要时 safe suspend。
 
-若用户明确不要 overview/QMD/push/只修改不 finalization，或 push 状态无法确认，Review history 仍可记录本轮已经明确结束的人工审核，但 queue 是否保留必须独立判断。
+若用户明确不要 overview/QMD、只修改不 finalization，或 push 未获授权/状态无法确认，Review history 仍可记录本轮已经明确结束的人工审核，但 queue 是否保留必须独立判断。
 
 Project、synthesis、cross-project synthesis 或 framework 任务正常结束后，必须自动刷新 `system/handoff.md` 的 Active handoff 并向 `system/log.md` 追加一条简短记录；用户不需要每次手动要求。Active handoff 写当前任务状态、commit/push 状态、未完成事项、P0/P1 审核重点、风险和下一步；若任务结束为 WIP、未 push、push 状态 uncertain 或等待审核，同步更新 `system/wip-queue.md`。
 

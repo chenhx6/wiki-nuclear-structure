@@ -8,34 +8,34 @@ updated: 2026-07-15
 ## Active handoff
 
 Current active task:
-Continuous research-learning upgrade Phase 5 is complete locally and stopped at `ready-for-push` for external review and explicit user authorization.
+Continuous research-learning release cleanup and pilot source Human review are complete locally; the branch remains at `ready-for-push` for final external review and explicit merge/push authorization.
 
 Current branch / local commit:
-`codex/continuous-research-learning-upgrade`; Phase 0 is `13d803e`, Phase 1 `2201f4a`, Phase 2 `c0d9201`, Phase 3 `4515497`, and Phase 4 `25945ab`. The Phase 5 closeout commit is the current local HEAD after final checks; no push is authorized.
+`codex/continuous-research-learning-upgrade`; Phase 0--5 commits remain unchanged. The independent cleanup/review commit becomes current local HEAD after final checks; no push is authorized.
 
 Last task status:
-Phases 0–4 are committed independently. Phase 5 finalized the architecture record and guidance, refreshed the unchanged single QMD collection after the two-source pilot, and completed release checks without pushing.
+The user accepted both pilot Analytical Reconstruction sections. Their source pages return to `human-reviewed`, the content is presented in compact evidence-separated tables, duplicated Personal Notes reasoning is removed, and push authorization semantics are clarified.
 
 Unfinished items:
-External review, focused human review of the two pilot Analytical Reconstruction sections, and explicit merge/push authorization remain. Real-note ranking and promoted-note operational backlink behavior remain deferred until a genuine note passes the creation gate.
+Final external review and explicit merge/push authorization remain. Real-note ranking and promoted-note operational backlink behavior remain deferred until a genuine note passes the creation gate.
 
 P0 focus:
 P0: none identified for the architecture release or two-paper pilot.
 
 Complete unresolved P0 inventory:
-None. Pilot P1 remains limited to the two new `Analytical Reconstruction` sections; it does not block architecture closeout or imply scientific acceptance.
+None. The two former pilot P1 sections were explicitly accepted by the user on 2026-07-15.
 
 Risks:
-Single-collection isolation is validated at the workflow/Skill/test level, but real-note ranking has not been observed because no genuine note met the persistence gate. Architecture readiness does not approve the two P1 scientific reconstructions.
+Single-collection isolation is validated at the workflow/Skill/test level, but real-note ranking has not been observed because no genuine note met the persistence gate. Push still requires explicit authorization.
 
 Checks:
-Final Wiki lint passes with 0 errors, 11 existing warnings and two expected pilot review infos; nine tests pass. QMD update/embed/status succeeds for 200 indexed files and 1129 vectors; EOL/Git checks pass.
+Cleanup Wiki lint passes with 0 errors, 11 existing warnings and 0 info; nine tests pass. QMD incrementally updated two source files and embedded 19 chunks. EOL preflight classified exactly the two authorized source edits as substantive with no unsafe/mixed files; diff checks pass, and staged audit/commit remain.
 
 Next prompt / continuation phrase:
-Review the ready-for-push architecture branch and the two P1 pilot sections; then explicitly authorize the desired merge/push action or request revisions.
+Review the independent cleanup/review commit, then explicitly authorize the desired merge/push action or request revisions.
 
 Recent user decisions:
-Approved continuous Phase 1–5 execution with per-phase local commits and no push. The release must remain on the isolated branch until explicit merge/push authorization.
+Accepted both pilot source reconstructions and authorized this independent cleanup/review commit, but explicitly prohibited merge and push.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

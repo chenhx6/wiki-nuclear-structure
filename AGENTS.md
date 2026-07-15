@@ -300,7 +300,7 @@ Do not backfill old completed reviews during routine framework maintenance.
 4. 若审核意见已落实且无 unresolved P0，更新 `knowledge/overview.md`，并说明 overview 状态；
 5. 执行 QMD refresh（`qmd.cmd update`、`qmd.cmd embed -c nuclear-knowledge`、`qmd.cmd status`），失败时如实报告并不得伪造刷新成功；
 6. 运行与本次修改相称的检查；
-7. 按 WIP lifecycle 将对应 WIP amend 为 review commit / final commit，并默认 push；若用户明确“不要 push”或“只 commit，不 push”，则只提交本地 commit 不 push；
+7. 按 WIP lifecycle 将对应 WIP amend 为 review commit / final commit；push 始终需要用户明确授权。用户没有说“不要 push”不等于已经授权 push；未获授权时停在 `ready-for-push`；
 8. 为本轮明确结束的人工审核追加 `system/review-history.md` 条目；该条目记录审核范围、用户判断、要求修改、遗留问题、下一步、相关页面，以及 `review commit message`（若本轮实际创建或 amend 了 review commit）；
 9. 独立判断 `system/wip-queue.md` 对应 entry 是否继续保留、需要更新，还是已经可以清除；不得使用简单的 `Pending WIP → Review history` 单向迁移模型；
 10. 刷新 `system/handoff.md` 的 Active handoff；

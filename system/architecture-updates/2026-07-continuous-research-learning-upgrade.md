@@ -203,7 +203,7 @@ Completed in `4515497` with Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling
 ### Pilot review and cost
 
 - Science P0: none identified.
-- P1: the two new `Analytical Reconstruction` sections require scoped user review; both source pages are marked `needs-human-review` without changing claim-level review states.
+- P1 review completed on 2026-07-15: the user accepted both `Analytical Reconstruction` sections without scientific objection. Both source pages returned to `human-reviewed`; existing claim IDs and claim-level `needs_review` were unchanged.
 - Science-content files changed: two source pages. Shared science pages changed: zero. Research notes created: zero.
 - The pilot demonstrates that “no reliable new persistent inference” is a valid outcome and that the new loop need not create extra pages.
 
@@ -233,7 +233,7 @@ Completed locally: finalized this release record, compatibility and validation r
 - User ingest modes and completed `reading_depth` are separate concepts; source pages record actual coverage rather than inferred task mode.
 - The controlled `research-note` layer exists with distinct lifecycle, review and scientific-maturity fields. No real note was created because the pilot persistence gate rejected duplication and low-value persistence.
 - Ordinary Q&A excludes research notes by path/type contract; research tasks must label provisional use and return to grounded sources. Static tests pass; ranking behavior with a genuine future note remains deferred.
-- P0 has no total hard cap and cannot be hidden by aggregation. The pilot identified no P0 and two scoped P1 analytical sections.
+- P0 has no total hard cap and cannot be hidden by aggregation. The pilot identified no P0; its two scoped P1 analytical sections were subsequently accepted by the user.
 - Project, synthesis and overview were not mechanically rewritten; neither pilot changed their formal knowledge state.
 
 ## Compatibility and migration
@@ -265,7 +265,7 @@ Completed locally: finalized this release record, compatibility and validation r
 - Real-note retrieval ranking and promoted-note operational backlink behavior: evaluate when a genuine research note passes the creation gate; do not manufacture one for testing.
 - Independent QMD collection: not justified by the current MVP evidence; reconsider only if genuine notes crowd or contaminate ordinary retrieval.
 - Performance benchmark: separate future task requiring explicit authorization.
-- The two pilot `Analytical Reconstruction` sections remain P1 for focused human review; architecture validation does not imply scientific acceptance.
+- The two pilot `Analytical Reconstruction` sections completed focused human review on 2026-07-15; this acceptance is recorded independently from the architecture validation.
 
 ## Implementation and validation record
 
@@ -276,8 +276,8 @@ Completed locally: finalized this release record, compatibility and validation r
 - Phase 3 implementation: `4515497 Pilot continuous research learning on two sources`.
 - Phase 4 implementation: `25945ab Validate continuous research-learning isolation`.
 - Phase 5 implementation: local release/closeout commit recorded by Git; this file intentionally does not self-record its own commit hash.
-- Pilot result: two existing sources supplemented; no science P0, two scoped P1 sections, no research note, and no shared project/synthesis/overview change.
-- Validation result: Wiki lint 0 errors with 11 known warnings and two expected review infos; 9 unit/integration tests pass; QMD update/embed/status succeeds in the unchanged single collection; Git and EOL audits pass.
+- Pilot result: two existing sources supplemented; no science P0, two scoped P1 sections later accepted by the user, no research note, and no shared project/synthesis/overview change.
+- Validation result: after release cleanup, Wiki lint reports 0 errors, 11 known warnings and 0 info; 9 unit/integration tests pass; QMD update/embed/status succeeds in the unchanged single collection; Git and EOL audits pass.
 - Final push target: `origin/main`.
 - Push authorization: not authorized.
 - Push state: `ready-for-push` locally; no push has been attempted.

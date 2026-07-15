@@ -1,7 +1,7 @@
 ---
 type: system-review-history
 graph-excluded: true
-updated: 2026-07-13
+updated: 2026-07-15
 ---
 
 # Review history
@@ -11,6 +11,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 ## Completed review rounds
 
 <!-- Append real completed human-review rounds here. Do not backfill old history during framework setup. -->
+
+### 2026-07-15 — continuous research-learning pilot sources — round 1
+
+- review scope: `Analytical Reconstruction` in Kibédi 2008 BrIcc and Nomura 2022 low-spin wobbling IBFM
+- user decisions: both reconstructions were reviewed and accepted without scientific objection; existing claim IDs and claim-level `needs_review` remain unchanged
+- corrections requested: restore both source pages to `human-reviewed`, convert the reconstructions to a compact evidence-separated review table, and remove duplicated scientific reasoning from Personal Notes
+- unresolved issues: none for the two reviewed source reconstructions; real research-note retrieval/promotion behavior remains a future operational validation
+- next action: complete external release review, then await explicit merge/push authorization
+- related pages: `knowledge/sources/kibedi-2008-evaluation-theoretical-conversion-coefficients-bricc.md`, `knowledge/sources/nomura-2022-questioning-wobbling-ibfm.md`
+- review commit message: Finalize continuous research-learning pilot review
 
 ### 2026-07-13 — nuclear chirality and MχD sources — round 1
 

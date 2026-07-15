@@ -3,9 +3,9 @@ type: source
 title: "Evaluation of Theoretical Conversion Coefficients Using BrIcc"
 aliases: [Kibedi 2008 BrIcc, BrIcc theoretical conversion coefficients, Kibedi 2008 ICC uncertainties]
 created: 2026-07-12
-updated: 2026-07-12
+updated: 2026-07-15
 status: ai-draft
-review_status: needs-human-review
+review_status: human-reviewed
 source_type: method-review-article
 reading_depth: read
 title_original: "Evaluation of Theoretical Conversion Coefficients Using BrIcc"
@@ -61,13 +61,16 @@ This is a `review-ingest + theory-ingest` source. It should be used as a method/
 
 ## Analytical Reconstruction
 
-**Pilot assessment; P1 review.** The reusable research strategy is to treat ICC inference as a forward-model problem: declare candidate multipolarities and the adopted atomic calculation, propagate all input uncertainties through `alpha(delta)`, and only then invert or compare with experiment. This reconstruction is supported by Eqs.(1)--(5), Secs.3.2--3.4 and the vacancy/interpolation tests; it is not a sentence quoted from the authors.
+The table separates source-grounded locators from Agent reconstruction. User review on 2026-07-15 accepted all rows without changing the existing source claims.
 
-- **Transfer conditions:** the transition energy, `Z`, shell/total coefficient convention, candidate multipolarities, `delta` convention and uncertainty model are explicit, and the selected BrIcc table covers the case.
-- **Failure conditions:** nonunique multipolarity input, an unmodelled third component/E0 admixture, direct interpolation of nonmonotonic total ICC, or a `delta` distribution crossing zero without adequate likelihood treatment.
-- **Reverse test:** compare an inferred `delta` against independent angular-distribution/polarization constraints or repeat the forward calculation with the relevant vacancy/table choice; disagreement localizes whether the conflict is experimental, atomic-model or multipolarity-input dependent.
-- **Persistence decision:** no research note is created. The transferable content is already source-grounded and canonically owned by [[internal-conversion-analysis]]; the pilot did not produce a new cross-source hypothesis whose loss would cause research harm.
-- **Shared-page decision:** no project/synthesis update is justified because this assessment does not change their evidence state.
+| ID | 审核项 | Agent 判断 | Evidence / locator | 审核状态 |
+|---|---|---|---|---|
+| AR-KB08-1 | Core reconstruction | Treat ICC inference as a forward-model problem: declare candidate multipolarities and the adopted atomic calculation, propagate all input uncertainties through `alpha(delta)`, and only then invert or compare with experiment. This is an Agent reconstruction, not a sentence quoted from the authors. | Eqs.(1)--(5), Secs.3.2--3.4; vacancy and interpolation tests in Secs.4.1 and 5.1 | human-reviewed |
+| AR-KB08-2 | Transfer conditions | Transfer is justified only when transition energy, `Z`, shell/total coefficient convention, candidate multipolarities, `delta` convention and uncertainty model are explicit and the selected BrIcc table covers the case. | pp.203--205, Secs.3--3.4; pp.206--213, Secs.4.1 and 5.1 | human-reviewed |
+| AR-KB08-3 | Failure conditions | Do not transfer silently for nonunique multipolarity input, an unmodelled third component/E0 admixture, direct interpolation of nonmonotonic total ICC, or a `delta` distribution crossing zero without adequate likelihood treatment. | p.203, Sec.2; pp.204--205, Sec.3.4 and Fig.1; p.211, Sec.4.3 | human-reviewed |
+| AR-KB08-4 | Reverse/falsification test | Compare an inferred `delta` against independent angular-distribution/polarization constraints or repeat the forward calculation with the relevant vacancy/table choice; disagreement can localize whether the conflict is experimental, atomic-model or multipolarity-input dependent. | Forward relations in p.203, Eqs.(1)--(5); vacancy comparison in pp.206--207, Sec.4.1.1 | human-reviewed |
+| AR-KB08-5 | Research-question decision | Not created: the reviewed reconstruction did not produce an independent research question beyond the stated ICC inference and reverse-test boundaries; no question is added merely to fill the framework. | Assessment of the complete reconstruction above; no additional source claim | human-reviewed |
+| AR-KB08-6 | Persistence/shared-page decision | No research note or project/synthesis update. The transferable content is source-grounded and already owned by [[internal-conversion-analysis]]; no new cross-source hypothesis or evidence-state change would be lost. | Existing source claims KB08-1--8 and linked method ownership | human-reviewed |
 
 ## Summary
 
@@ -129,4 +132,4 @@ This source is not a nucleus-specific structure paper. The many listed nuclei or
 
 ## Personal Notes
 
-This is the anchor source for saying "ICC-based `delta` extraction is only as clean as its theoretical table, its energy interpolation, and its `delta` uncertainty propagation." It is especially useful together with Rezynkina 2017, which shows what those propagated uncertainties do to the final `delta` interval.
+Navigation only: use this source with [[rezynkina-2017-graphical-extraction-multipole-mixing-ratios]] and [[internal-conversion-analysis]] for future ICC/mixing-ratio work. Scientific reconstruction is owned by the table above; no additional provisional reasoning is stored here.

@@ -205,7 +205,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 已判断当前任务在本轮审核后是否应写入 `system/review-history.md`，以及 queue 应继续保留、更新还是清理。
 - [ ] Review finalization 默认更新 `knowledge/overview.md`；若用户明确不要 overview，最终复盘已说明。
 - [ ] Review finalization 默认执行 QMD refresh；若用户明确不要 QMD 或 QMD 失败，最终复盘已说明。
-- [ ] Review finalization 已按 WIP lifecycle amend 为 final commit，并默认 push；若用户明确不要 push，最终复盘已说明 not pushed。
+- [ ] Review finalization 已按 WIP lifecycle amend/创建相应本地 commit；push 只有在用户明确授权时执行，未授权时停在 `ready-for-push`，没有把“用户未说不要 push”解释为授权。
 - [ ] Review history 条目记录了审核范围、用户判断、要求修改和遗留问题，没有伪装成 Git/push 历史。
 - [ ] Review history 使用 `review commit message`，不使用 `Git reference` 或 `final commit message`，且没有记录 commit hash 或 push 状态。
 - [ ] Review history 中的 `review commit message` 与实际 commit message 一致，且没有把它解释为 task closure、finalization complete 或 push complete。

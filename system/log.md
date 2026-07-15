@@ -611,3 +611,8 @@ updated: 2026-07-15
 
 - Closed the validated architecture release locally at `ready-for-push`, refreshed the unchanged single QMD collection after the pilot, and recorded remaining P1/deferred operational checks.
 - No research note, project/synthesis/overview rewrite, merge or push was produced.
+
+## [2026-07-15] review | continuous research-learning pilot sources
+
+- User accepted both pilot Analytical Reconstruction sections; restored their source pages to `human-reviewed` and converted the reviewed reasoning to compact evidence-separated tables.
+- Removed duplicated Personal Notes reasoning and clarified that review finalization may create local commits but push always requires explicit authorization; lint/tests and incremental QMD refresh pass, with no merge or push.
