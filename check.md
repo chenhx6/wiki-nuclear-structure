@@ -104,7 +104,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 标准深入阅读逐项评估论文问题、动机、设计逻辑、证据链、假设/限制、比较、迁移边界、竞争解释、反向检验、研究问题和认识修正，但没有机械制造固定产量。
 - [ ] 标准深入阅读已记录简短 Knowledge Impact and Learning Decision；`no material change` / `source-only` 被视为合法结果，没有机械创建 project、synthesis、research-note 或 overview。
 - [ ] 重要 Related Knowledge / Project Relation 使用受控 relation type 并附具体说明；普通链接未被强制类型化，`retrospective-connection` 与 `not-direct-evidence` 的边界未被误用。
-- [ ] 多篇直接相关来源达到触发条件时，已在自然主题阶段执行 thematic batch REFLECT；核心论文阶段没有因后续宽泛综述而被推迟，且无持久化时记录了具体 no-persistence decision。
+- [ ] 多篇摄入任务达到触发条件时，已在自然主题阶段执行 thematic batch REFLECT；单篇重要来源只执行 Knowledge Impact，没有单独触发 batch REFLECT；核心论文阶段没有因后续宽泛综述而被推迟，且无持久化时记录了具体 no-persistence decision。
 - [ ] 作者明示内容与 `Analytical reconstruction` 分开；分析性重建列出 evidence、locator、推断步骤和不确定性，未冒充 source-grounded fact。
 - [ ] Ordinary Q&A 没有默认启动完整学习闭环或持久化 provisional reasoning；研究型任务按 query routing 进入 ingest/reflect。
 - [ ] Ordinary Q&A 保持 read-only，没有因读取旧页面而静默写回；发现迁移需求时只报告并路由到授权 workflow。

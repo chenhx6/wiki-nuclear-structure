@@ -101,9 +101,11 @@ tags: []
 
 只记录对知识判断有价值的主要关系；普通导航链接无需全部改写。每个 relation type 必须配合具体说明。
 
+Allowed relation types: `supports`, `limits`, `conflicts`, `foundational-background`, `methodological-bridge`, `competing-interpretation`, `retrospective-connection`, `not-direct-evidence`.
+
 | Relation type | Target | Specific relation |
 |---|---|---|
-| supports / limits / conflicts / foundational-background / methodological-bridge / competing-interpretation / retrospective-connection / not-direct-evidence |  |  |
+| `<choose one type>` |  |  |
 
 `retrospective-connection` 表示后来形成的术语或分类与早期来源之间的回顾性联系，不把后来的概念框架倒灌为原作者表述。`not-direct-evidence` 表示该来源只提供理论、方法或历史背景，不能直接支持所链接的具体实验结论。
 
@@ -114,6 +116,6 @@ tags: []
 - Concepts:
 - Methods:
 
-## Non-source Notes and Persistence Decision
+## Non-source Notes and Follow-up
 
 本节只保存局部维护、导航或后续处理说明，不是 provisional reasoning 的默认容器。普通联想留在当次输出；科学推理由 Analytical Reconstruction、受控 research-note 或 synthesis 承载，未经分类、溯源和审核不得写成 source evidence。

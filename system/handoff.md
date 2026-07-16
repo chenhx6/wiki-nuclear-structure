@@ -8,13 +8,13 @@ updated: 2026-07-16
 ## Active handoff
 
 Current active task:
-Continuous Research-Learning v1 received a bounded framework refinement for source-level Knowledge Impact decisions, typed knowledge relations and thematic batch REFLECT. No science content or review/evidence boundary was changed.
+Continuous Research-Learning v1 received a minimal wording polish: the source template now avoids duplicate persistence headings and unsafe typed-relation examples, while thematic batch REFLECT is explicitly limited to multi-source ingest tasks.
 
 Current branch / local commit:
-`main`; this framework-only task uses a new independent commit `Refine source learning impact and thematic reflection` and is authorized for push to the configured upstream. Git is authoritative for the resulting hash and remote synchronization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
+`main`; this framework-only polish uses a new independent commit `Polish source learning and batch-reflect rules` and is authorized for push to the configured upstream. Git is authoritative for the resulting hash and remote synchronization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
 
 Last task status:
-Added a compact source-template decision block, an eight-value relation vocabulary with required explanations, and a natural-theme-stage REFLECT trigger/checklist in the short ingest strategy. Existing analytical reconstruction, persistence gates and Human review boundaries remain unchanged.
+Renamed the non-source follow-up section, moved allowed relation types outside the example table, and clarified that a single important source performs Knowledge Impact without triggering batch REFLECT.
 
 Unfinished items:
 No science migration or historical backfill is required. Real-note retrieval ranking and other previously deferred architecture work remain separate future tasks.
@@ -26,7 +26,7 @@ Complete unresolved P0 inventory:
 None introduced by this task.
 
 Risks:
-Do not backfill historical source pages or reinterpret existing links mechanically. Continue protecting science pages, review/evidence boundaries, `raw/zotero/wiki-inbox.bib`, raw PDFs, `.obsidian`, PLAN and schema.
+Do not migrate historical source pages or alter Review state, review/evidence boundaries, science pages, `raw/zotero/wiki-inbox.bib`, raw PDFs, `.obsidian`, PLAN or schema.
 
 Checks:
 Write-entry EOL/Git preflight passed with only the protected user BibTeX dirty. Framework diff/internal-link/workflow checks pass; Wiki lint reports 0 errors / 22 existing warnings / 107 existing review infos, and QMD status is healthy without a required refresh. Staged-file, commit and push checks remain part of this run.
@@ -35,7 +35,7 @@ Next prompt / continuation phrase:
 Use the refined standard ingest workflow on future sources; do not migrate historical pages unless they are touched by an authorized task.
 
 Recent user decisions:
-User limited this round to Knowledge Impact, typed relations and thematic batch REFLECT, authorized an independent framework commit and upstream push, and explicitly deferred any audit or modification of unreviewed / needs_review / Human review / paper-level or manuscript-grade evidence boundaries.
+User requested only this template/wording polish, authorized a new independent commit and push, and explicitly deferred any audit or modification of unreviewed / needs_review / Human review or evidence boundaries.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

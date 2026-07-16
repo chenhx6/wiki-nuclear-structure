@@ -655,3 +655,7 @@ updated: 2026-07-15
 ## [2026-07-16] framework | Continuous Research-Learning v1 refinement
 
 - Added compact Knowledge Impact decisions, typed major knowledge relations and natural-theme-stage batch REFLECT rules without changing science content or review/evidence boundaries.
+
+## [2026-07-16] framework | source learning wording polish
+
+- Removed duplicate persistence wording, made typed-relation examples single-choice, and limited thematic batch REFLECT to multi-source ingest tasks.
