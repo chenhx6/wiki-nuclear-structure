@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: ingest-strategies
-updated: 2026-07-07
+updated: 2026-07-16
 ---
 
 # INGEST STRATEGIES：运行时短规则
@@ -22,6 +22,8 @@ updated: 2026-07-07
 9. 普通单篇摄入不强制 QMD embed；可把 QMD refresh 写为 deferred，并说明原因与建议补跑时机。
 10. 普通单篇摄入不默认更新 `knowledge/overview.md`；overview 是阶段性地图。
 11. 只做与本轮任务直接相关的最小同步；有帮助但非必要的优化只列建议。
+12. 标准深入阅读必须做简短 Knowledge Impact and Learning Decision：说明来源对既有 Wiki 认识是 supports、limits、revises、conflicts 还是 no material change，并选择 source-only、project、synthesis、provisional research-note 或 overview 的持久化落点；不要求长篇填写或机械创建页面。
+13. Related Knowledge / Project Relation 只为重要关系使用 `supports`、`limits`、`conflicts`、`foundational-background`、`methodological-bridge`、`competing-interpretation`、`retrospective-connection` 或 `not-direct-evidence`，并附具体说明；普通 Wiki 链接无需类型化。
 
 ## 默认读取清单
 
@@ -32,6 +34,22 @@ updated: 2026-07-07
 普通单篇摄入指：一篇目标文献、明确 PDF 路径、明确 BibTeX key、明确摄入策略、明确研究主题、明确 project 关系，且不要求跨文献综合、修改 workflow、解释摄入策略、detailed workflow recap 或 detailed strategy-policy audit。不默认读取 detail 教程只表示不读取长 workflow 教程，不表示降低 PDF 阅读深度；PDF 阅读深度由 source note 的 `reading-depth` / evidence-reading 状态决定。
 
 多篇摄入不自动等于复杂摄入。若用户要求逐篇摄入，按顺序一篇一篇完成；每篇都必须有独立 source note、claim kind、locator、needs_review、project relation、source-level / claim-level 审核重点和 P0/P1 triage。不得因为多篇在同一提示词出现而合并成粗略批处理。只有多篇之间需要跨文献比较、冲突证据判断、project/synthesis 大综合、策略选择不明确，或用户要求 detailed strategy-policy audit 时，才读取 detail 教程。
+
+## Thematic batch REFLECT
+
+同一任务连续摄入至少三篇直接相关来源、形成明确的理论/实验/方法主题阶段，或新来源可能改变 project/synthesis 证据结构时，在自然主题阶段结束处执行一次批次级 REFLECT；不必等待整个大批次完成。对“核心研究论文 + 后续宽泛综述”的批次，核心论文阶段结束后先 REFLECT，综述完成后再判断是否补充或修正，不得用尚未完成的宽泛综述推迟已经成熟的核心主题综合。
+
+REFLECT 应产生跨来源认识，而不是拼接逐篇摘要，并至少检查：
+
+1. 理论、实验或方法的演化谱系；
+2. 各来源的假设、适用条件和失效边界；
+3. supporting、limiting 和 conflicting evidence；
+4. 竞争解释及区分它们所需的观测量或检验；
+5. 对现有 project/synthesis 认识的影响；
+6. 是否需要 project、synthesis、provisional research-note 或 overview 更新；
+7. 若不持久化综合结果，记录 no-persistence decision 和具体原因。
+
+不机械创建页面，不要求固定篇幅、固定数量的研究问题、竞争解释或 reverse tests，也不重复抄写逐篇 source 已经完成的内容。
 
 ## PDF staged evidence reading
 

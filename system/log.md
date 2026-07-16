@@ -651,3 +651,7 @@ updated: 2026-07-15
 
 - User reviewed Petrache 2016, Chakraborty 2023 and Mullins 1993; corrected PE16 two-run target assemblies and MU93 DOI/pagination, then cleared only the reviewed experimental claims.
 - Operationally closed the batch. Ten theory/review sources and WOB-REFL/WOB-PROJ-REF claims remain unreviewed with `review deferred until use`; final amend/push was explicitly authorized, with Git as the publication record.
+
+## [2026-07-16] framework | Continuous Research-Learning v1 refinement
+
+- Added compact Knowledge Impact decisions, typed major knowledge relations and natural-theme-stage batch REFLECT rules without changing science content or review/evidence boundaries.

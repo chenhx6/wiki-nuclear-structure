@@ -8,34 +8,34 @@ updated: 2026-07-16
 ## Active handoff
 
 Current active task:
-The 13-source triaxial-wobbling batch is operationally closed. Petrache 2016, Chakraborty 2023 and Mullins 1993 are source-level human-reviewed; ten theory/review sources and WOB-REFL/WOB-PROJ-REF notes remain searchable working knowledge under `review deferred until use`.
+Continuous Research-Learning v1 received a bounded framework refinement for source-level Knowledge Impact decisions, typed knowledge relations and thematic batch REFLECT. No science content or review/evidence boundary was changed.
 
 Current branch / local commit:
-`main`; the active WIP is being amended to final commit `Finalize triaxial wobbling source batch review`. The user explicitly authorized push to `origin/main`; Git is authoritative for the resulting hash and remote synchronization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
+`main`; this framework-only task uses a new independent commit `Refine source learning impact and thematic reflection` and is authorized for push to the configured upstream. Git is authoritative for the resulting hash and remote synchronization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
 
 Last task status:
-Implemented the completed human-review round. PE16-2 now distinguishes the two ATLAS target assemblies at PDF p. 2; PE16-1..12, C23-1..7 and MU93-1..10 are reviewed. MU93 DOI/canonical source/pagination now use `10.1103/PhysRevC.47.R2447` and R2447-R2451. Theory/review and batch-reflection claims remain unreviewed and provisional; no PDF or BibTeX was modified.
+Added a compact source-template decision block, an eight-value relation vocabulary with required explanations, and a natural-theme-stage REFLECT trigger/checklist in the short ingest strategy. Existing analytical reconstruction, persistence gates and Human review boundaries remain unchanged.
 
 Unfinished items:
-No active ingest/review WIP remains after final commit and push. Deferred claims require targeted review only when used for paper writing, a key project decision, synthesis finalization or a paper-level evidence pool.
+No science migration or historical backfill is required. Real-note retrieval ranking and other previously deferred architecture work remain separate future tasks.
 
 P0 focus:
-None for operational closure. The prior theory/review and REFLECT triage remains available on the relevant pages as deferred targeted-review guidance, not as an active-WIP blocker.
+None; this is a framework-only change.
 
 Complete unresolved P0 inventory:
-No unresolved P0 or locator gap for the three reviewed experimental sources. Chakraborty 2023 retains canonical key `chakraborty_2023_Searchorigin`; no duplicate source is required.
+None introduced by this task.
 
 Risks:
-Do not infer that deferred theory/review claims were user-verified. Keep their `needs_review: true` status until a targeted review. Continue protecting `raw/zotero/wiki-inbox.bib`, raw PDFs, `.obsidian`, PLAN and schema.
+Do not backfill historical source pages or reinterpret existing links mechanically. Continue protecting science pages, review/evidence boundaries, `raw/zotero/wiki-inbox.bib`, raw PDFs, `.obsidian`, PLAN and schema.
 
 Checks:
-Pre-finalization lint reports 0 errors / 22 warnings / 107 info, with 10 source pages and 107 claims intentionally unreviewed. Final EOL, QMD, staged protected-path, commit and push checks are part of this finalization run.
+Write-entry EOL/Git preflight passed with only the protected user BibTeX dirty. Framework diff/internal-link/workflow checks pass; Wiki lint reports 0 errors / 22 existing warnings / 107 existing review infos, and QMD status is healthy without a required refresh. Staged-file, commit and push checks remain part of this run.
 
 Next prompt / continuation phrase:
-Start the next literature task normally. If a framework audit is requested, record the dated audit under `outputs/framework-audit-YYYY-MM-DD.md` and keep only its active pointer/result in handoff/log; no empty audit placeholder was created in this batch.
+Use the refined standard ingest workflow on future sources; do not migrate historical pages unless they are touched by an authorized task.
 
 Recent user decisions:
-User accepted the three experimental source pages after the PE16 target correction and MU93 DOI correction. User explicitly closed the batch without reviewing every theory/review source; those pages and their analytical reconstruction remain unreviewed working knowledge with review deferred until use. User authorized final amend and push to GitHub while prohibiting changes to `raw/zotero/wiki-inbox.bib`.
+User limited this round to Knowledge Impact, typed relations and thematic batch REFLECT, authorized an independent framework commit and upstream push, and explicitly deferred any audit or modification of unreviewed / needs_review / Human review / paper-level or manuscript-grade evidence boundaries.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

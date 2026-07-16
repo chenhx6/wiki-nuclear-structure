@@ -33,7 +33,7 @@ methods: []
 tags: []
 ---
 
-<!-- Template maintained: 2026-07-15. Replace created/updated placeholders when instantiating. -->
+<!-- Template maintained: 2026-07-16. Replace created/updated placeholders when instantiating. -->
 
 # 来源题名
 
@@ -86,7 +86,26 @@ tags: []
 | AR-3 | Failure conditions |  |  | unreviewed |
 | AR-4 | Reverse/falsification test |  |  | unreviewed |
 | AR-5 | Research-question decision |  |  | unreviewed |
-| AR-6 | Persistence/shared-page decision |  |  | unreviewed |
+
+## Knowledge Impact and Learning Decision
+
+标准深入阅读必须检查本节，但结论可以简短。`no material change` 与 `source-only` 都是正常结果；不为形式完整机械创建长期知识产物。
+
+- Existing Wiki understanding:
+- Effect of this source: supports / limits / revises / conflicts / no material change
+- Reason:
+- Persistence decision: source-only / project update / synthesis update / provisional research-note / overview update
+- Review state:
+
+## Related Knowledge and Project Relations
+
+只记录对知识判断有价值的主要关系；普通导航链接无需全部改写。每个 relation type 必须配合具体说明。
+
+| Relation type | Target | Specific relation |
+|---|---|---|
+| supports / limits / conflicts / foundational-background / methodological-bridge / competing-interpretation / retrospective-connection / not-direct-evidence |  |  |
+
+`retrospective-connection` 表示后来形成的术语或分类与早期来源之间的回顾性联系，不把后来的概念框架倒灌为原作者表述。`not-direct-evidence` 表示该来源只提供理论、方法或历史背景，不能直接支持所链接的具体实验结论。
 
 ## Extracted Pages
 
