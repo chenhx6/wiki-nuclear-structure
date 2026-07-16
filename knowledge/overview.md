@@ -2,10 +2,27 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-16
+updated: 2026-07-25
 ---
 
 # Knowledge Base Health Dashboard
+
+## Current Snapshot: 2026-07-25 experimental wobbling batch review
+
+This snapshot records completion of a rough page-level human review of 15 experimental/reanalysis wobbling sources after all PDF-title/DOI/BibTeX and duplicate checks passed. The review accepted the current evidence-calibrated wording and explicit limitations without correction; it does not convert page-level review into exhaustive claim-by-claim paper certification.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 70 | Added 15 ordered source notes; 14 are `deep-read`, Guo 2024 is `read` because its key Supplemental Material table is not in the supplied raw PDF. |
+| nucleus / band pages | 23 / 25 | Added 13 lightweight nucleus pages and `163Lu` TSD3; updated `163Lu` TSD1/TSD2. |
+| concept / method / model / observable pages | 40 / 17 / 15 / 19 | Updated the wobbling concept only; no new method/model/observable page was required. |
+| project / synthesis pages | 8 / 7 | Updated low-spin wobbling and chirality projects; added [[experimental-wobbling-evidence-strength-map]]. |
+| source pages unreviewed | 10 | The 15 experimental/reanalysis sources are now page-level `human-reviewed`; ten previously deferred theory/review sources remain unreviewed. |
+| claim-level `needs_review: true` | 209 | The rough page-level review did not clear 102 source claims mechanically; claim-specific paper use still triggers targeted verification. Synthesis/project and previously deferred claims also remain pending. |
+| claim missing locator / kind | 0 / 0 | Current lint result. |
+| raw hash coverage | 70/70 | All source pages have matching raw hashes. |
+| automated lint | 0 errors / 28 warnings / 209 info | `page_unreviewed=161`, `source_unreviewed=10`; warnings are existing reaction/element/orphan configuration notices plus the protected user BibTeX dirty state. |
+| review boundary | page-level review complete; final push authorized | Guo 2024 remains `reading_depth: read` because the Supplemental Material is absent. Exact or paper-facing reuse still returns to the recorded locators and P0/P1 prompts. |
 
 ## Current Snapshot: 2026-07-16
 

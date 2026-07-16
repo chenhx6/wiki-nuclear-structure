@@ -154,6 +154,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 ### Human review triage
 
 - [ ] 文献摄入、project、synthesis、data-analysis-bridge 或 claim-review-update 的最终复盘包含 Human review triage。
+- [ ] 每篇 source-specific triage 已写回对应 source 页面而非只存在于聊天/复盘，并直接采用现有 P0/P1/P2/P3 定义。Human Review Notes/Human Review Record 只在实际批注或审核事件发生后实例化。
 - [ ] Triage 明确列出 P0/P1/P2/P3；没有 P0 时写明 `P0: none identified`。
 - [ ] P0 无总量硬上限；所有 P0 逐项给出实际判断、文件、section/段落、claim ID（如有）、source locator、grounded evidence、Agent inference、审核目的和不审核风险。
 - [ ] P0 可以分批但没有聚合隐藏、降级、删除或直接晋升；后续未审 P0 队列完整保留。

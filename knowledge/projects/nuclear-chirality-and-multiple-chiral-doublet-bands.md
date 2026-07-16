@@ -3,12 +3,12 @@ type: project
 title: "Nuclear chirality and multiple chiral doublet bands"
 aliases: [核手征与多个手征双带证据图, MχD evidence map]
 created: 2026-07-13
-updated: 2026-07-13
+updated: 2026-07-16
 status: active
 review_status: unreviewed
 project_stage: evidence-mapping
 confidentiality: private
-nuclei: [133ce, 78br]
+nuclei: [74br, 78br, 133ce]
 tags: [nuclear-chirality, multiple-chiral-doublet, evidence-map, writing-support]
 ---
 
@@ -17,6 +17,8 @@ tags: [nuclear-chirality, multiple-chiral-doublet, evidence-map, writing-support
 ## Active Summary for Agents
 
 本页是 evidence map / writing-support project，不是论文草稿。Meng 2010、Ayangeakaa 2013 与 Liu 2016 均已 deep-read 并完成人工 source review；本 project 页仍保留独立 review 状态。所有解释必须与 observed facts、experimental assignments、author interpretations 和 model calculations 分层。
+
+Guo 2024 adds an unreviewed `74Br` chiral-wobbler candidate with ADO/polarization, DSAM lifetimes, transition probabilities and PRM. It extends the scope but does not alter the reviewed `133Ce/78Br` source claims.
 
 Frauendorf 2001 is a reviewed review/background source for the rotating-mean-field symmetry map. It supplies PAC/planar/aplanar TAC distinctions, the TAC/PRM and symmetry-restoration boundary, and comparison mechanisms such as magnetic, antimagnetic and reflection-asymmetric rotation. It is not an additional original experiment and does not change the reviewed status of the Meng/Ayangeakaa/Liu claims.
 
@@ -44,6 +46,7 @@ Frauendorf 2001 is a reviewed review/background source for the rotating-mean-fie
 | [[meng-2010-open-problems-nuclear-chirality]] | theory/review/open problems | 几何、TAC/PRM 边界、fingerprint ambiguity、MχD/shape-coexistence 背景 | 不提供新的核素实验事实；具体案例需回原始来源 |
 | [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] | original experiment + model comparison | `133Ce` 两对带、DCO/角分布、energy/`S(I)`/`B(M1)/B(E2)`、RMF+TPRM | MχD/shape coexistence 是作者解释；无 lifetime measurements，以 `135Nd` 相同建议组态的系统学作有限补充 |
 | [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] | original experiment + method + model comparison | `78Br` 两对带、ADO/偏振、八条 E1 links、octupole systematics、MDC-CDFT+TPRM | MχD/octupole 是解释；Band 3/4 configuration tentative；quartet 是未来观测可能性，当前结构未被直接指认为 quartet |
+| [[guo-2024-chiral-wobbler-74br]] | original experiment + lifetime + PRM | `74Br` B1/B2 chiral-partner interpretation and B1/B3 wobbling interpretation with a common assigned configuration | 主文已读但 Supplemental Material 数值表未在 raw 中；same-configuration coexistence 与 angular-momentum geometry 仍为模型支持解释 |
 
 ## Theory Background
 
@@ -74,6 +77,13 @@ Meng 2010 总结的 constrained triaxial RMF 工作以多个三轴形变/组态�
 - Experimental criteria: [[angular-distribution]] 中的 ADO ratio、linear polarization、[[be1-be2-ratio]] 与 [[energy-displacement]]。
 - Model support: TPRM energies/ratios/effective angles；MDC-CDFT `beta30` softness。
 - Boundary: evidence supports [[octupole-correlation]]/[[octupole-softness]]，不建立 stable [[octupole-deformation]]；作者认为共存证据指向在单核中观测 [[chirality-parity-quartet-band]] 的未来可能性，但未把当前四条带直接指认为 quartet。
+
+## Chiral Wobbler Candidate in 74Br
+
+| ID | Project statement | Source basis | Boundary | needs_review |
+|---|---|---|---|---|
+| CHIR-PROJ-74BR-1 | Guo 2024 interprets B1/B2 as chiral partners and B3 as one-phonon wobbling on B1, all with assigned `πg9/2⊗νg9/2` configuration. | GU24-1, GU24-4 to GU24-7; PDF Figs.5-7 | This is experiment + PRM interpretation; not a model-independent proof of coexistence. | true |
+| CHIR-PROJ-74BR-2 | DSAM lifetimes and absolute transition probabilities strengthen the band comparison beyond energy fingerprints alone. | GU24-3 to GU24-5; PDF Fig.4, Table I, Fig.6 | Exact transition table is in missing Supplemental Material and remains a paper-evidence gap. | true |
 
 ## Observed Facts versus Interpretations
 
@@ -109,6 +119,7 @@ Meng 2010 总结的 constrained triaxial RMF 工作以多个三轴形变/组态�
 - `133Ce` 两对候选带缺 lifetime/absolute transition-probability 独立确认；`135Nd` 相同建议组态的系统学只提供补充支持。
 - `78Br` 的 absolute E1/E2 information、configuration mixing 与 stable-deformation exclusions 仍可由后续来源加强。
 - 当前三篇不足以构成 MχD 或 octupole-chirality 领域完整书目。
+- Guo 2024 Supplemental Material and independent configuration-sensitive observables such as `g` factors remain missing for the `74Br` chiral-wobbler claim.
 - 缺 model-independent electromagnetic selection rule。
 - 综述中的候选核总结不能替代原始实验论文。
 
@@ -142,3 +153,4 @@ Meng 2010 总结的 constrained triaxial RMF 工作以多个三轴形变/组态�
 - 2026-07-13：以 Meng 2010 建立理论背景、模型边界和后续两篇实验 source 的证据容器。
 - 2026-07-13：接入 Ayangeakaa 2013 的 `133Ce` 两对带、实验判据、RMF/TPRM 和 lifetime/model-discrepancy 边界。
 - 2026-07-13：接入 Liu 2016 的 `78Br` ADO/偏振、两对带、八条 E1 links、octupole systematics 与 MDC-CDFT/TPRM；明确 stable deformation/quartet exclusions。
+- 2026-07-16：接入 Guo 2024 `74Br` chiral-wobbler candidate；新增 project claims 保持 `needs_review: true`，不改变既有 reviewed source claims。

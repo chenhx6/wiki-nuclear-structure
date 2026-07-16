@@ -1,7 +1,7 @@
 ---
 type: system-review-history
 graph-excluded: true
-updated: 2026-07-16
+updated: 2026-07-25
 ---
 
 # Review history
@@ -11,6 +11,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 ## Completed review rounds
 
 <!-- Append real completed human-review rounds here. Do not backfill old history during framework setup. -->
+
+### 2026-07-25 - experimental wobbling evidence sources - round 1
+
+- review scope: page-level rough review of the 15 ordered experimental/reanalysis sources from Ødegård 2001 through Chakraborty 2024, including calibrated conclusion strength, source-local P0/P1 and stated evidence limitations
+- user decisions: all 15 source pages were accepted without correction and authorized for final commit/push; page-level review does not imply exhaustive claim-by-claim certification
+- corrections requested: none
+- unresolved issues: Guo 2024 Supplemental Material remains unavailable; all 102 source claims and the Analytical Reconstruction markers retain their claim-specific review state for future strict paper use
+- next action: develop a higher-autonomy L3-L4 research loop that can generate, test and prioritize scientific hypotheses beyond ingestion and simple association
+- related pages: the 15 experimental wobbling source pages, `knowledge/synthesis/experimental-wobbling-evidence-strength-map.md`, `knowledge/projects/low-spin-wobbling-controversies.md`, `knowledge/projects/nuclear-chirality-and-multiple-chiral-doublet-bands.md`
+- review commit message: Finalize experimental wobbling evidence source review
 
 ### 2026-07-15 — continuous research-learning pilot sources — round 1
 

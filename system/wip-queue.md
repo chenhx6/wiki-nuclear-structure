@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-07-16
+updated: 2026-07-25
 ---
 
 # Pending WIP queue
@@ -10,7 +10,7 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-None. The triaxial wobbling batch is operationally closed; deferred theory/review and batch-reflection claim review is triggered by use and is not retained as an active WIP.
+None. The experimental wobbling evidence WIP completed page-level human review on 2026-07-25 and was authorized for final amend/push. Its claim-level prompts remain ordinary future paper-use verification work rather than an active WIP.
 
 Continuous Research-Learning v1 completed Gate 2B release approval; publication state is Git-authoritative.
 

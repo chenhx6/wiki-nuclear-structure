@@ -659,3 +659,19 @@ updated: 2026-07-15
 ## [2026-07-16] framework | source learning wording polish
 
 - Removed duplicate persistence wording, made typed-relation examples single-choice, and limited thematic batch REFLECT to multi-source ingest tasks.
+
+## [2026-07-16] checkpoint | experimental wobbling evidence batch
+
+- Duplicate/PDF-title/DOI/BibTeX precheck passed for 15 ordered sources; all were ingested with calibrated claim strength and locator-level experimental criteria.
+- Added 15 source notes, 13 nucleus pages, `163Lu` TSD3, and a cross-mass evidence-strength synthesis; updated wobbling/chirality projects and overview.
+- All new claims remain `needs_review: true`; Guo 2024 Supplemental Material is missing, no raw/BibTeX file was modified, and no push is authorized.
+
+## [2026-07-16] checkpoint | experimental wobbling source-template alignment
+
+- Realigned all 15 WIP source pages to the current deep-reading template and persisted source-local P0/P1 triage without changing existing Key Results or review state.
+- Added the six-part Analytical Reconstruction and event-driven Human Review Notes/Record rules; the current WIP remains unpushed for user review.
+
+## [2026-07-25] review | experimental wobbling evidence sources
+
+- User completed a rough page-level review of all 15 sources and accepted the current calibrated wording and explicit limitations without correction.
+- Marked the source pages `human-reviewed` while retaining claim-level and Analytical Reconstruction review markers for future strict paper use; authorized final amend/push.

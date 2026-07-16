@@ -1,41 +1,41 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-16
+updated: 2026-07-25
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Continuous Research-Learning v1 received a minimal wording polish: the source template now avoids duplicate persistence headings and unsafe typed-relation examples, while thematic batch REFLECT is explicitly limited to multi-source ingest tasks.
+Finalize and push the 15-paper experimental/reanalysis wobbling batch after the user's rough page-level review accepted all source pages without correction.
 
 Current branch / local commit:
-`main`; this framework-only polish uses a new independent commit `Polish source learning and batch-reflect rules` and is authorized for push to the configured upstream. Git is authoritative for the resulting hash and remote synchronization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
+`main`; amend the existing WIP to `Finalize experimental wobbling evidence source review` and push to `origin/main` under explicit user authorization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
 
 Last task status:
-Renamed the non-source follow-up section, moved allowed relation types outside the example table, and clarified that a single important source performs Knowledge Impact without triggering batch REFLECT.
+All 15 source pages are page-level `human-reviewed`; the user accepted their current calibrated claims, locators, attribution boundaries and explicit limitations without correction. Claim-level `needs_review` and Analytical Reconstruction markers remain unchanged because the review was rough rather than exhaustive.
 
 Unfinished items:
-No science migration or historical backfill is required. Real-note retrieval ranking and other previously deferred architecture work remain separate future tasks.
+No ingest-review blocker remains. Guo 2024 Supplemental Material is not present in raw, so exact per-transition numerical audit remains a future strict-use verification item. Synthesis/project claims retain independent review state.
 
 P0 focus:
-None; this is a framework-only change.
+No remaining ingest-blocking P0. Source-local P0/P1 entries are retained as future strict paper-use checks, especially mixing-ratio branch selection, contaminated links, model-normalized strengths, the `136Nd` M1-dominated exception, and the missing Guo 2024 supplement.
 
 Complete unresolved P0 inventory:
-None introduced by this task.
+None for this ingest review. All source claims remain `needs_review: true` for future claim-specific paper certification; synthesis/project claims remain pending independently.
 
 Risks:
-Do not migrate historical source pages or alter Review state, review/evidence boundaries, science pages, `raw/zotero/wiki-inbox.bib`, raw PDFs, `.obsidian`, PLAN or schema.
+Do not normalize all paper conclusions to “confirmed.” Preserve `evidence`, `observation`, `suggest`, `possibility` and model-support distinctions. Page-level review does not waive future claim-specific verification; do not modify raw/BibTeX.
 
 Checks:
-Write-entry EOL/Git preflight passed with only the protected user BibTeX dirty. Framework diff/internal-link/workflow checks pass; Wiki lint reports 0 errors / 22 existing warnings / 107 existing review infos, and QMD status is healthy without a required refresh. Staged-file, commit and push checks remain part of this run.
+Write-entry preflight passed with only protected user BibTeX dirty. QMD update/embed/status succeeded with 242 indexed files and 1759 vectors. Wiki lint passes with 0 errors / 28 warnings / 209 review infos; governance `page_unreviewed=161`, `source_unreviewed=10`, `claim_missing_locator=0`, `claim_missing_kind=0`, raw hashes 70/70. Final staged-diff, amend and push checks remain.
 
 Next prompt / continuation phrase:
-Use the refined standard ingest workflow on future sources; do not migrate historical pages unless they are touched by an authorized task.
+Design the L3-L4 autonomous research loop: define which research decisions AI may take independently, which evidence-risk gates require human escalation, and how hypothesis generation, falsification and project prioritization should be benchmarked.
 
 Recent user decisions:
-User requested only this template/wording polish, authorized a new independent commit and push, and explicitly deferred any audit or modification of unreviewed / needs_review / Human review or evidence boundaries.
+User completed a rough review of all 15 sources without corrections, explicitly authorized final commit/push, and judged the current ingestion-plus-simple-association behavior to be only L0-L1 rather than the intended L3-L4 silicon-graduate level.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 

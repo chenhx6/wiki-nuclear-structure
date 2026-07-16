@@ -82,10 +82,11 @@ tags: []
 | ID | 审核项 | Agent 判断 | Evidence / locator | 审核状态 |
 |---|---|---|---|---|
 | AR-1 | Core reconstruction |  |  | unreviewed |
-| AR-2 | Transfer conditions |  |  | unreviewed |
-| AR-3 | Failure conditions |  |  | unreviewed |
-| AR-4 | Reverse/falsification test |  |  | unreviewed |
-| AR-5 | Research-question decision |  |  | unreviewed |
+| AR-2 | Assumptions and dependencies |  |  | unreviewed |
+| AR-3 | Transfer conditions |  |  | unreviewed |
+| AR-4 | Failure conditions |  |  | unreviewed |
+| AR-5 | Reverse/falsification test |  |  | unreviewed |
+| AR-6 | Research-question decision |  |  | unreviewed |
 
 ## Knowledge Impact and Learning Decision
 
@@ -108,6 +109,32 @@ Allowed relation types: `supports`, `limits`, `conflicts`, `foundational-backgro
 | `<choose one type>` |  |  |
 
 `retrospective-connection` 表示后来形成的术语或分类与早期来源之间的回顾性联系，不把后来的概念框架倒灌为原作者表述。`not-direct-evidence` 表示该来源只提供理论、方法或历史背景，不能直接支持所链接的具体实验结论。
+
+## Human Review Triage
+
+Use the canonical P0/P1/P2/P3 definitions in `system/workflows/ingest-strategies.md`. Persist source-specific review priorities here; do not leave them only in chat or the final report. Each P0 must identify the claim/section, locator, grounded evidence, Agent inference, user check, and risk. Write `P0: none identified` when applicable.
+
+### P0
+
+### P1
+
+### P2/P3
+
+<!-- Optional: instantiate only after the user gives actual review comments.
+## Human Review Notes
+
+Agent-organized notes may compress or reorder the user's wording for clarity, but must preserve meaning and judgment strength. Keep user judgments separate from Agent inference.
+-->
+
+<!-- Optional: instantiate only after a real human-review event.
+## Human Review Record
+
+- Date:
+- Scope:
+- User decision:
+- Changes requested:
+- Remaining issues:
+-->
 
 ## Extracted Pages
 

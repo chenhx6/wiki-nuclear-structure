@@ -94,6 +94,7 @@ P0/P1 是复盘重点，不把所有 `needs_review` 等权重铺开；但科学�
 - `P1`：允许软性展示预算和按文件分组，但每个重要判断仍须显示 evidence、Agent inference 与审核目的，不能退化为纯文件名列表。
 - `P2/P3`：按文件或内容类型聚合；低风险 index/overview/handoff/log 与科学 claim 分开。
 - 没有 P0 时写 `P0: none identified`。
+- Source-specific triage 必须持久化到对应 source 页面，不得只保留在聊天或最终报告；页面直接引用本节定义，不复制第二套分级规则。Human Review Notes/Human Review Record 只在用户批注或审核事件真实发生后加入。
 - 若 P0 较多，当前轮说明本批范围和后续未审 P0 队列；“精力有限时建议先看”只决定顺序，不改变总清单。
 
 ## Compact final recap

@@ -140,6 +140,8 @@ A source outside the current main research anchor may still justify lightweight 
 
 来源页中的 scientific motivation、method/design logic、reasoning chain 和 limitations，若为作者明确陈述，应给出 locator 并标为作者内容。若由 Agent 根据原文分析性重建，必须单列为 `Analytical reconstruction` 或 `provisional interpretation`，列出证据、locator、关键推断步骤与不确定性，不得写成 source-grounded fact。重要或存在歧义的分析性重建进入 P0/P1；低复用内容留在当次输出，高复用且值得长期保留的内容按受控暂定研究推理流程处理，未经审核不得晋升为正式 synthesis/project 判断。
 
+每篇 source 必须把 source-specific Human review triage 写回页面，直接采用短版 strategy 的 P0/P1/P2/P3 定义，不在 source 或聊天中另建分级规则。Triage 不得只存在于最终报告。Human Review Notes 与 Human Review Record 为事件驱动的可选区块：前者只在用户实际给出批注后加入，Agent 可为清晰度压缩、重排或整理用户表达，但必须保持原意和判断强度并与 Agent inference 分开；后者只记录真实发生的审核事件。
+
 重要的 Related Knowledge / Project Relation 可使用轻量关系类型：`supports`、`limits`、`conflicts`、`foundational-background`、`methodological-bridge`、`competing-interpretation`、`retrospective-connection`、`not-direct-evidence`。只标注有助于知识判断的主要关系，并附简短具体说明；普通链接无需全部类型化。`retrospective-connection` 不得把后来术语倒灌为早期作者表述，`not-direct-evidence` 明确理论、方法或历史背景不能直接支持具体实验结论。
 
 新建页面默认 `review_status: unreviewed`。页面级人工审阅与 claim-level `needs_review` 分开维护；Codex 不得因用户浏览过页面而自动清除具体 claim 的待审状态。
@@ -207,6 +209,8 @@ WIP ingest 只表示等待用户审核的本地检查点，不表示科学内容
 不要求固定触发短语；若存在歧义，不得自动写入 `system/review-history.md`。用户明确要求“只修改不 finalization”“只修改，不提交”或“只 commit，不进行其它收尾”时，不进入本地 finalization；“不要更新 overview”或“不要刷新 QMD”只覆盖对应步骤。“不要 push”只表示继续不 push，不取消 review-finalization 或本地 commit，因为 push 本来就不是默认动作。没有这些覆盖要求时，默认进入适用的 finalization。
 
 Finalization 包括：
+
+在执行下列步骤时，将用户实际批注按原意整理进适用 source 的 Human Review Notes，并为本轮真实发生的审核事件追加简短 Human Review Record；不得为未发生的审核预建记录。
 
 1. 只根据审核报告修改明确提到的 source、claim、project 或 `review_status`；
 2. 不自动清除审核报告未提到的 `needs_review`；

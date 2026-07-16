@@ -220,6 +220,36 @@ updated: 2026-07-15
 - Rotating-nuclei theory anchors: [[rotating-mean-field]], [[spontaneous-symmetry-breaking]], [[magnetic-rotation]], [[antimagnetic-rotation]], [[shears-mechanism]], [[band-termination]], [[reflection-asymmetric-nuclei]], and [[routhian]].
 - Existing pages connected: [[nuclear-chirality]], [[tilted-axis-cranking]], [[rotational-bands]], [[angular-momentum-alignment]], [[magnetic-substate-population]], [[angular-distribution-coefficient]], and [[multipole-mixing-ratio]].
 
+## 2026-07-16 Experimental Wobbling Batch
+
+### Sources
+
+- [[odegard-2001-evidence-wobbling-163lu]]
+- [[jensen-2002-second-phonon-wobbling-163lu]]
+- [[schonwasser-2003-wobbling-165lu]]
+- [[amro-2003-wobbling-167lu]]
+- [[bringel-2005-wobbling-161lu]]
+- [[hartley-2009-wobbling-167ta]]
+- [[timar-2019-transverse-wobbling-105pd]]
+- [[biswas-2019-longitudinal-wobbling-133la]]
+- [[nandi-2020-multiple-transverse-wobbling-183au]]
+- [[chakraborty-2020-multiphonon-longitudinal-wobbling-127xe]]
+- [[rojeeta-devi-2021-multiphonon-transverse-wobbling-133ba]]
+- [[lv-2022-transverse-wobbling-136nd]]
+- [[mukherjee-2023-transverse-wobbling-151eu]]
+- [[guo-2024-chiral-wobbler-74br]]
+- [[chakraborty-2024-possibility-wobbling-129ba]]
+
+### Nuclei and Bands
+
+- [[74br]], [[105pd]], [[127xe]], [[129ba]], [[133ba]], [[133la]], [[136nd]], [[151eu]], [[161lu]], [[165lu]], [[167lu]], [[167ta]], [[183au]]
+- [[163lu-tsd3]]
+
+### Synthesis and Projects
+
+- [[experimental-wobbling-evidence-strength-map]]
+- Updated [[low-spin-wobbling-controversies]] and [[nuclear-chirality-and-multiple-chiral-doublet-bands]].
+
 ## Decisions and Failures
 
 尚无正式决策或失败记录。

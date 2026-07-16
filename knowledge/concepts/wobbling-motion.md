@@ -3,7 +3,7 @@ type: concept
 title: 摇摆运动
 aliases: [wobbling motion, nuclear wobbling, wobbling excitation, wobbling band]
 created: 2026-07-01
-updated: 2026-07-04
+updated: 2026-07-16
 status: active
 review_status: unreviewed
 concept_type: rotational-collective-mode
@@ -36,11 +36,18 @@ tags: [triaxiality, collective-motion, high-spin]
 - 模型中的角动量取向和进动锥。
 - approximation-condition function 与 phonon-number quantization。
 
+The 2026-07-16 experimental batch adds two important boundaries:
+
+- `E_wob` rising or falling is model/configuration/spin-interval dependent and cannot be used alone; [[nandi-2020-multiple-transverse-wobbling-183au]] reports an increasing initial transverse branch.
+- Predominant interband E2 is characteristic of many one-quasiparticle cases, but [[lv-2022-transverse-wobbling-136nd]] explicitly treats a two-quasiparticle candidate with an M1-dominated 751-keV link.
+
 ## Supporting Evidence
 
 [[frauendorf-2024-wobbling-review]] 把集体增强 interband E2 作为核心实验标志。
 
 [[matta-2015-transverse-wobbling-135pr]] 报告 `135Pr` 候选带间 ΔI=1 transitions 的较大 E2 fractions 与正 polarization asymmetry，并由此提出 zero-/one-phonon wobbling pair。
+
+[[odegard-2001-evidence-wobbling-163lu]] provides the high-spin benchmark with polarization-selected E2-dominated links. [[timar-2019-transverse-wobbling-105pd]], [[biswas-2019-longitudinal-wobbling-133la]] and [[mukherjee-2023-transverse-wobbling-151eu]] extend the link-character paradigm to normal-deformed cases with different model interpretations.
 
 ## Counter-evidence and Competing Interpretations
 
@@ -68,6 +75,7 @@ Lawrie 2020 的 QTR/TiP comparison 显示 TiP bands 也可有 large mixing ratio
 - [[matta-2015-transverse-wobbling-135pr]]
 - [[guo-2022-low-spin-wobbling-187au]]
 - [[lawrie-2020-tilted-precession-wobbling]]
+- [[experimental-wobbling-evidence-strength-map]]
 
 ## Evolution Log
 
