@@ -675,3 +675,13 @@ updated: 2026-07-15
 
 - User completed a rough page-level review of all 15 sources and accepted the current calibrated wording and explicit limitations without correction.
 - Marked the source pages `human-reviewed` while retaining claim-level and Analytical Reconstruction review markers for future strict paper use; authorized final amend/push.
+
+## [2026-07-26] setup | Nature Skills full update
+
+- Fast-forwarded the external Nature Skills clone from `b98b53e` to `8d674eb` and synchronized all 19 top-level skills into the global Codex skills directory.
+- Added `nature-paper-card` and `nature-shared`, pruned obsolete `_shared`, and verified every installed file against the clone by SHA-256. Optional dependencies and integrations were not installed.
+
+## [2026-07-26] setup | Nature Skills non-API runtime
+
+- Installed and verified the downloader, patent-document and Playwright dependencies; pinned a compatible `pdfplumber 0.11.4` / `Pillow 10.4.0` pair and installed Playwright Chromium.
+- Registered the global `academic-search` MCP through `uv`, verified no-key PubMed/CrossRef access, and stored the contact and institutional settings only in local user configuration. API-key providers remain deliberately unconfigured.

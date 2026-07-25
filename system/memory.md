@@ -1,7 +1,7 @@
 ---
 type: system-memory
 graph-excluded: true
-updated: 2026-07-16
+updated: 2026-07-26
 ---
 
 # 长期记忆
@@ -33,7 +33,8 @@ updated: 2026-07-16
 - 文献摄入和科学内容修改默认本地 WIP、用户审核后 amend 为 final；推荐审核完成当前摄入后再开始下一篇。允许多个 pending WIP，但共享文件必须在写入前选择合并原 WIP、记录依赖或暂缓，不得静默重叠。方案和验收已确认、无科学内容且检查通过的治理/框架/脚本任务可直接 final commit。
 - 日常建设坚持一次摄入一篇论文，并在每次摄入后列出新增 claim、待审 claim、竞争解释和证据缺口。
 - Wiki 仓库内自有 Skill 仍只保留 `.agents/skills/wiki-evidence-query` 这一证据型知识问答入口；ingest/reflect/lint 等 Wiki 治理流程稳定后再考虑仓库内封装。
-- Nature Skills 已按用户要求全量安装为 Codex 全局 skills：stable clone 位于 `C:\Users\22721\ai-skills\nature-skills`，同步目标为 `C:\Users\22721\.codex\skills`；后续更新使用该 clone 的 `scripts/update-codex-skills.sh --pull` 和 `--check`。这些写作、阅读、图件、引用、返修等外部 skills 是科研写作辅助层，不能覆盖 Wiki evidence policy、paper evidence gate、source/raw locator 复核和用户科学判断。
+- Nature Skills 已按用户要求全量安装为 Codex 全局 skills：stable clone 位于 `C:\Users\22721\ai-skills\nature-skills`，同步目标为 `C:\Users\22721\.codex\skills`。2026-07-26 已更新至 `8d674eb50454d4b49d3e0be625a121ad4863840b`，安装 19 个顶层 skills；`nature-shared` 已替代旧 `_shared`，并新增 `nature-paper-card`。后续优先使用该 clone 的 `scripts/update-codex-skills.sh --pull`、`--prune` 和 `--check`；Windows 环境缺少 `rsync` 时，可采用仅限 manifest 所列 Nature 目录的受控镜像同步与逐文件哈希核验。这些写作、阅读、图件、引用、返修等外部 skills 是科研写作辅助层，不能覆盖 Wiki evidence policy、paper evidence gate、source/raw locator 复核和用户科学判断。
+- Nature Skills 的非 API 本机依赖已配置：下载/PDF、专利文档和 CNIPA Playwright Python 依赖已安装，Playwright Chromium 已就绪，Academic Search MCP 通过 `uv` 隔离环境全局注册并使用本机联系邮箱访问无需 key 的 PubMed/CrossRef/OpenAlex 路由。出版商、NCBI 和 Semantic Scholar API key 暂不申请、不配置；Scopus/ScienceDirect 等 key-dependent provider 保持按需禁用。机构入口与联系邮箱只保存在用户本机配置，不写入公开 Wiki 或 Git 历史。
 - 经典高自旋综述不能仅因年代较早而被笼统降级：通用术语、γ 探测基础和物理成因框架可继续作为有效背景；应分别核对后来发展的物理模式、具体装置性能和单核素证据。
 - 本仓库采用 bounded initiative：允许与当前任务直接相关的必要最小同步，禁止非必要顺手优化；PowerShell 的 `PATH` 找不到 Git 时，必须先定位 Git 可执行文件并完成同等检查。
 - 中文科学页面中专业术语首次出现时保留英文名称或标准缩写；可能指向不同物理对象的简称必须写明具体对象，例如 two-band mixing 必须说明是哪两条带，避免后续查询只按中文词面误配。

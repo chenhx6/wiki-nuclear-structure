@@ -1,41 +1,41 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-25
+updated: 2026-07-26
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Finalize and push the 15-paper experimental/reanalysis wobbling batch after the user's rough page-level review accepted all source pages without correction.
+Configure all practical Nature Skills runtime dependencies except API keys, then commit and push the related Wiki records.
 
 Current branch / local commit:
-`main`; amend the existing WIP to `Finalize experimental wobbling evidence source review` and push to `origin/main` under explicit user authorization. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged.
+Wiki `main` at `96c3745`, aligned with `origin/main`; final commit and push are explicitly authorized for the three Nature setup records only. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged. Nature Skills clone is at `8d674eb50454d4b49d3e0be625a121ad4863840b`.
 
 Last task status:
-All 15 source pages are page-level `human-reviewed`; the user accepted their current calibrated claims, locators, attribution boundaries and explicit limitations without correction. Claim-level `needs_review` and Analytical Reconstruction markers remain unchanged because the review was rough rather than exhaustive.
+Installed the downloader, patent-document and CNIPA/Playwright Python requirements, resolved the existing Gradio compatibility boundary with `pdfplumber 0.11.4` plus `Pillow 10.4.0`, installed Playwright Chromium, and registered the global `academic-search` MCP through an isolated `uv` runtime. No API key was requested, stored or configured.
 
 Unfinished items:
-No ingest-review blocker remains. Guo 2024 Supplemental Material is not present in raw, so exact per-transition numerical audit remains a future strict-use verification item. Synthesis/project claims retain independent review state.
+Restart Codex or open a new task before using the newly registered MCP tools. Institutional access still requires the user's authenticated browser session; the configured library entry failed its current network health check and may require campus/VPN routing or manual browser authentication. The previously proposed L3-L4 autonomy design remains a separate future task.
 
 P0 focus:
-No remaining ingest-blocking P0. Source-local P0/P1 entries are retained as future strict paper-use checks, especially mixing-ratio branch selection, contaminated links, model-normalized strengths, the `136Nd` M1-dominated exception, and the missing Guo 2024 supplement.
+No dependency-installation P0 remains. When Nature Skills are used for manuscript work, preserve the Wiki evidence policy, paper evidence gate, source/raw locator checks and user scientific judgment.
 
 Complete unresolved P0 inventory:
-None for this ingest review. All source claims remain `needs_review: true` for future claim-specific paper certification; synthesis/project claims remain pending independently.
+None for dependency installation. The institution route is configured but not network-verified.
 
 Risks:
-Do not normalize all paper conclusions to “confirmed.” Preserve `evidence`, `observation`, `suggest`, `possibility` and model-support distinctions. Page-level review does not waive future claim-specific verification; do not modify raw/BibTeX.
+API-key routes remain deliberately unconfigured. Scopus/ScienceDirect and other key-dependent providers must not be reported as available. Do not let `nature-downloader` write directly into protected Wiki evidence paths without explicit authorization and source verification, and never store personal email, institutional credentials, cookies or tokens in the public Wiki.
 
 Checks:
-Write-entry preflight passed with only protected user BibTeX dirty. QMD update/embed/status succeeded with 242 indexed files and 1759 vectors. Wiki lint passes with 0 errors / 28 warnings / 209 review infos; governance `page_unreviewed=161`, `source_unreviewed=10`, `claim_missing_locator=0`, `claim_missing_kind=0`, raw hashes 70/70. Final staged-diff, amend and push checks remain.
+Write-entry preflight passed with cleanup exit 0. `pip check` reports no broken requirements; downloader/patent imports pass; Playwright lists Chromium, headless shell and FFmpeg; Node is `v24.18.0`; the citation converter reaches PubMed and CrossRef successfully; `academic-search` is globally registered and enabled. Downloader credentials remain empty. Only protected `raw/zotero/wiki-inbox.bib` and the three authorized system records are dirty.
 
 Next prompt / continuation phrase:
-Design the L3-L4 autonomous research loop: define which research decisions AI may take independently, which evidence-risk gates require human escalation, and how hypothesis generation, falsification and project prioritization should be benchmarked.
+After restarting Codex, verify that the `academic-search` MCP tools appear, then run one small PubMed/CrossRef literature search and one OA-only downloader test outside protected Wiki paths.
 
 Recent user decisions:
-User completed a rough review of all 15 sources without corrections, explicitly authorized final commit/push, and judged the current ingestion-plus-simple-association behavior to be only L0-L1 rather than the intended L3-L4 silicon-graduate level.
+User explicitly deferred all API-key applications because they cannot be obtained quickly, supplied a local contact email and two institutional entry candidates for configuration, and authorized the remaining automatic setup plus final commit and push. Personal configuration values must remain outside the public repository.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 
