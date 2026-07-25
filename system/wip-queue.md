@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-07-25
+updated: 2026-07-26
 ---
 
 # Pending WIP queue
@@ -10,7 +10,15 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-None. The experimental wobbling evidence WIP completed page-level human review on 2026-07-25 and was authorized for final amend/push. Its claim-level prompts remain ordinary future paper-use verification work rather than an active WIP.
+- task: Wiki-scoped L3 boundary and Nature-first literature ingress
+- status: finalized local commit, all Wiki boundary and ordinary-project isolation checks pass; not pushed; L3 trial deferred
+- branch: `main`
+- commit: current HEAD local final `Finalize Wiki-scoped L3 boundary and literature ingress`; not pushed
+- files: existing first-phase WIP; project `.codex/config.toml`; permission governance/user-guide/checklist sync; handoff/log/queue
+- review needed: none for the permission boundary; ordinary control showed host `auto_review` as a recorded P1 distinct from Wiki profile leakage
+- overview/QMD: not applicable; no scientific knowledge page changed and QMD refresh is intentionally skipped
+- next action: user may start an L3 trial with a concrete research question or explicitly authorize push
+- risks: host-managed user config hash changed while selected permission fields remained correct; use runtime control rather than whole-file hash. The current WIP remains uncommitted; `raw/zotero/wiki-inbox.bib` must remain unstaged and unchanged from baseline SHA-256 `94C7B0370B4CC75206463E5E5D594E71C2EDFC92DE2E602260CCFB4111667B35`
 
 Continuous Research-Learning v1 completed Gate 2B release approval; publication state is Git-authoritative.
 

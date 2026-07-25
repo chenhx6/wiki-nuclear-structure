@@ -685,3 +685,76 @@ updated: 2026-07-15
 
 - Installed and verified the downloader, patent-document and Playwright dependencies; pinned a compatible `pdfplumber 0.11.4` / `Pillow 10.4.0` pair and installed Playwright Chromium.
 - Registered the global `academic-search` MCP through `uv`, verified no-key PubMed/CrossRef access, and stored the contact and institutional settings only in local user configuration. API-key providers remain deliberately unconfigured.
+
+## [2026-07-26] setup | Wiki-only L3 boundary staged
+
+- Wrote the system-enforced `wiki_l3` permission profile and migrated the user configuration away from legacy `sandbox_mode`; all runtime/cache paths now target Wiki-local `tmp/` locations. The settings require a complete Codex restart and runtime acceptance tests before L3 is considered active.
+- Added the Nature-first acquisition route, Agent-managed `raw/papers/gpt/` and `raw/zotero/gpt.bib` entry points, sanitized acquisition-manifest contract, and explicit protection for `raw/zotero/wiki-inbox.bib`. No scientific knowledge page or QMD index was changed.
+
+## [2026-07-26] correction | L3 boundary changed from machine-wide to Wiki-scoped
+
+- Removed the Windows system `requirements.toml` so other Codex projects are no longer forced read-only; restored user defaults to `:workspace + on-request` and removed global Wiki TEMP/cache redirects.
+- Added a trusted project-level `wiki_l3 + never` configuration for `E:\imp\wiki`, including Wiki-local runtime paths, public/local network access and self-protection for project config. Wiki tasks prohibit Computer Use and external state changes; restart acceptance remains pending.
+
+## [2026-07-26] correction | Wiki escalation reserved for explicit user approval
+
+- Replaced Wiki `approval_policy = never` with `on-request` and fixed `approvals_reviewer = user`, so external writes remain denied by default but a specifically described operation may proceed after explicit user approval; Codex and automatic reviewers cannot self-approve.
+
+## [2026-07-26] correction | Wiki escalation requires a three-step handshake
+
+- Tightened temporary external writes to user-initiated requests only: Codex must restate the exact path, action and impact, then receive a subsequent explicit user approval before issuing the system permission request. Initial instructions, Codex initiative and automatic review are insufficient.
+
+## [2026-07-26] acceptance | Wiki-scoped L3 first restart blocked
+
+- The repaired project config loads and Wiki CRUD, root `.codex` protection, Wiki-local runtime paths, external program execution and public command-line network access pass.
+- L3 remains closed because nested `.codex` is writable, `.git` staging is denied, the effective reviewer is still `auto_review`, and Academic Search MCP tools are not exposed. Downloader and escalation tests were not run; protected user BibTeX remained unchanged.
+
+## [2026-07-26] correction | strict nested-config and Git profile applied
+
+- With explicit user approval, added exact Wiki `.git` write access and deny-only arbitrary nested `.codex` rules while retaining root `.codex` read access. The user accepted that nested `.codex` becomes unreadable as well as unwritable and reported disabling Auto-review.
+- Codex 0.143 strict configuration parsing passed. Runtime, reviewer and MCP validation require a fresh task; no download, escalation, commit or push was performed.
+
+## [2026-07-26] acceptance | Wiki-scoped L3 third round blocked
+
+- Academic Search MCP, Wiki-local runtime/cache paths, user-level fallback policy and protected-BibTeX invariance passed, but the current task still reports `auto_review`, default shell setup refresh fails, and root/nested `.codex` patch writes unexpectedly succeed.
+- Removed all three Wiki-local probe files, stopped before `.git`, downloader or external-write tests, and kept L3 closed pending a full runtime restart/reload.
+
+## [2026-07-26] acceptance | Wiki-scoped L3 fourth round blocked
+
+- Default Windows PowerShell startup recovered and root `.codex` patch writes are denied, but root `.codex` is hidden from Git and arbitrary nested `.codex` remains patch-writable.
+- A no-side-effect escalation auto-executed without user review and an exact Wiki `.git` file write was denied. Removed the nested probe file, ran no later acceptance rows, and kept L3 closed.
+
+## [2026-07-26] acceptance | Wiki-scoped L3 phase-one runtime limits
+
+- After the user manually applied the first-phase profile and restarted into a fresh task, root `.codex` remained hidden, dynamically created nested `.codex` remained writable, exact `.git` writes remained denied, and a no-side-effect escalation was still auto-reviewed.
+- Official Codex 0.143 behavior shows the original project-only hard-boundary combination is not currently enforceable as specified; all probes were removed, later acceptance rows stayed closed, and the task now awaits a user decision on a practical revised boundary.
+
+## [2026-07-26] safeguard | Wiki file-edit guard prepared
+
+- Added a tested, hash-pinned project-hook guard for supported writes to any `.codex` path and the user-owned Zotero Inbox, with ordinary Wiki edits and protected-path reads left available.
+- L3 positioning is deferred. The guard remains inactive until the user manually installs and trusts `.codex/hooks.json` in a fresh task; no protected file was modified or staged. The current runtime denied `.git/index.lock` even after escalation, so the existing WIP could not be amended.
+
+## [2026-07-27] correction | Wiki no-escalation boundary and orphan ACL recovery
+
+- Replaced the conflicting project hook design with `wiki_l3 + approval_policy=never`; removed the hook/guard artifacts and synchronized governance so Wiki tools can write inside the repository while external writes cannot request escalation.
+- The user safely removed six orphaned DENY ACEs from `.codex`; restart verification passed there. Acceptance then found six stale capability-SID DENY ACEs on each of `.agents` and `.git`; `.agents` write failed, later probes stopped, and no commit or push was performed.
+
+## [2026-07-27] acceptance | Wiki internal boundary and new external writes pass
+
+- After the user removed orphan DENY ACEs from `.agents` and `.git`, all three special paths passed restart ACL checks, Wiki CRUD, Node writes and Git index write/unstage; all file probes were removed.
+- PowerShell and Node external-file creation were directly denied, state JSON and new sandbox logs were clean, and Wiki lint passed with 0 errors. Existing-file external mutation and an ordinary-project runtime control remain before final amend; no push was performed.
+
+## [2026-07-27] acceptance | Wiki external existing-file mutation denied
+
+- The user-created external probe retained SHA-256 `7FAF13C2EA0CE01C529BB934595B5D8C14955FD43326D32B5B3D703ACC3FDD56`; overwrite and rename were denied, delete was rejected before command launch, and no alternate target appeared.
+- The first ordinary-project control was invalid because it still ran at `E:\imp\wiki` with `wiki_l3`. A genuinely independent non-Wiki task remains before final amend; no push was performed.
+
+## [2026-07-27] acceptance | Ordinary-project isolation control completed
+
+- A fresh task rooted at `C:\Users\22721\AppData\Local\Temp\codex-wiki-profile-control` had no Wiki hook or `wiki_l3` environment value and completed local create/read/delete without touching the Wiki, confirming project-profile isolation.
+- The host reported reviewer state `auto_review` despite the user config selecting `approvals_reviewer=user`; this remains a recorded P1 unrelated to Wiki profile leakage. Exact temporary-artifact cleanup and final amend remain; no push was performed.
+
+## [2026-07-27] finalization | Wiki-scoped L3 filesystem boundary accepted
+
+- Removed all disposable probes and ACL backups after Wiki-internal CRUD/Git, external mutation denial, sandbox state/log and independent ordinary-project controls passed; the project hook design remains removed and `approval_policy=never` is canonical for Wiki sessions.
+- Finalized the existing WIP as `Finalize Wiki-scoped L3 boundary and literature ingress`; the protected user BibTeX remains unstaged, L3 scientific autonomy remains deferred, and no push was authorized.

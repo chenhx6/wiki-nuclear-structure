@@ -9,7 +9,7 @@
 ## 1. 目录怎么理解
 
 ```text
-raw/         原始论文、笔记、图像和数据；由你管理，Agent 只读
+raw/         原始论文、笔记、图像和数据；默认由你管理，Agent 仅管理约定的 gpt 文献入口
 knowledge/   经过证据化整理的科研知识；Agent 维护，你审阅
 system/      schema、模板、流程、记忆、日志和交接状态
 outputs/     审计、报告、文章草稿和演示产物
@@ -22,6 +22,8 @@ outputs/     审计、报告、文章草稿和演示产物
 - `knowledge/overview.md`：健康概览；
 - `knowledge/questions.md`：开放科研问题；
 - `system/handoff.md`：最近任务做到哪里、改了什么、下一步是什么；
+
+Wiki 使用项目级 `wiki_l3`：Codex 可完整维护 `E:\imp\wiki`，但 Wiki 外默认只能读取和运行已确认不会产生外部写入的程序。确需临时写外部文件时，必须由你先发起；Codex再复述精确路径、操作和影响；你明确批准后才进入系统审批。Codex和自动审查器不能主动发起或代批，批准只覆盖当次列明的路径与操作。其他项目继续使用普通 workspace 权限并按需审批。Wiki 任务不使用 Computer Use，避免 GUI 程序绕过文件边界。
 - `system/log.md`：只追加的操作历史；
 - `check.md`：系统与科学质量检查。
 
@@ -98,6 +100,8 @@ SORT file.name ASC
 
 一次处理一篇。不要把整个 Zotero 库批量倒进来。
 
+需要 Agent 查找新文献时采用 Nature-first 路由：先以结构化学术检索核对 DOI、作者、年份和期刊，再补查 Google Scholar（不通时用学术镜像），最后由下载技能写入 Wiki 内的隔离区。候选 PDF 通过首页、DOI、页数、文件签名、SHA-256 与重复检查后，才从 `raw/papers/gpt/_incoming/<run-id>/` 晋升到 `raw/papers/gpt/`；书目只追加到 `raw/zotero/gpt.bib`。允许下载文件，但 Agent 必须显式指定 Wiki 目标路径；无法控制目标路径、会默认落入外部 Downloads 的浏览器下载交给用户处理。APS/PRC 或 Scholar 出现验证码或真人验证时，由你在原标签页完成后再让 Codex 继续。
+
 日常摄入按以下闭环执行：
 
 1. 你提供一篇新论文或指定 `raw/papers/` 中的新文件；
@@ -163,7 +167,7 @@ Better BibTeX 可将 `Wiki Inbox` 自动导出为 BibTeX/Better BibTeX JSON。�
 
 没有导出元数据时也可摄入，Agent 会从 PDF 和文件名提取信息并标记待核对项。
 
-当前自动导出文件为 `raw/zotero/wiki-inbox.bib`，由 Zotero/Better BibTeX 更新，Agent 只读。把新论文加入 `Wiki Inbox` 后，应确认该文件出现对应 citation key，再请求摄入。
+当前自动导出文件为 `raw/zotero/wiki-inbox.bib`，由 Zotero/Better BibTeX 更新，Agent 只读且不会暂存。把新论文加入 `Wiki Inbox` 后，应确认该文件出现对应 citation key，再请求摄入。Agent 自主获取并验证的书目单独写入 `raw/zotero/gpt.bib`，不得覆盖或合并回 `wiki-inbox.bib`。
 
 截至 2026-07-02，`wiki-inbox.bib` 的 9 条记录通过 DOI、题名和文件名覆盖 `raw/papers/` 中的 9 个 PDF；现有 7 个 source 页均可唯一匹配 citation key。citation key 缺失主要影响未来 BibTeX 写作链稳定性，不表示科学内容错误。
 

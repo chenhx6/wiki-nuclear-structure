@@ -105,11 +105,16 @@ Test-Path 'C:\Program Files\Git\bin\git.exe'
 
 入口 baseline 至少区分 initial authorized scope、authorized inherited changes、protected pre-existing changes 和 unresolved/overlapping changes。任务中发现新的必要关联文件时，可动态扩展 authorized scope，但每个新文件在第一次写入前必须对照 baseline、pending WIP queue、既有 substantive diff 和修改必要性；来源不明、mixed/conflict 或 WIP overlap 无法区分时先暂停。任务期间不要求每次编辑后重跑脚本，除非工作树异常变化、再次打开大量证据页、跨会话恢复或怀疑出现无关修改。
 
-创建或 amend WIP、创建 final commit，以及 commit 后 push 前，均须再次执行 `check.md` 对应阶段。属于本轮授权的 knowledge 修改必须保留并显式 stage；无关真实修改不得 restore、修改、stage 或 commit。不得提交 LF/CRLF-only dirty state，不得使用 `git add .`，也不得把无关 `knowledge/`、`.obsidian/`、`raw/` 或任务前 staged 文件带入提交。
+创建或 amend WIP、创建 final commit，以及 commit 后 push 前，均须再次执行 `check.md` 对应阶段。属于本轮授权的 knowledge 修改必须保留并显式 stage；无关真实修改不得 restore、修改、stage 或 commit。不得提交 LF/CRLF-only dirty state，不得使用 `git add .`，也不得把无关 `knowledge/`、`.obsidian/`、`raw/` 或任务前 staged 文件带入提交。即使本轮获准写入 Agent 管理的 raw 入口，也必须逐文件显式暂存。
 
 ## 权限边界
 
-- `raw/` 是原始证据层，由人类拥有。Agent 只能读取，不得修改、重命名、移动或删除。
+- Wiki 使用受信任的项目级 `.codex/config.toml` 启用 `wiki_l3`；机器级 Codex requirements 不得用于锁定所有项目。Wiki 会话允许写入 `E:\imp\wiki`（包括 `.codex/`、`.git/`、`.agents/` 与按任务授权的 raw 路径），Wiki 外只允许读取和执行。Wiki 固定 `approval_policy = never`，Codex 不得请求或使用外部写入权限；确需外部状态变更时必须停止并交给用户在 Codex 外手动完成，随后由新会话只读核验。Codex Desktop 自身维护的日志和 sandbox 状态属于宿主运行数据，不构成 Wiki 工具的外部写权限。
+- 运行 Wiki 外程序前，必须确认其工作目录、TEMP/TMP、缓存、日志、配置和输出全部约束到 Wiki；无法证明零外部写入的安装器、GUI 程序或系统管理工具不得在 Wiki 会话中执行。Windows 没有由 Codex 单独管理的 X 文件位；“可执行”不等于允许程序写入外部状态。
+- Wiki 任务禁止调用 Computer Use。Web Search、Browser、Chrome、MCP 和命令行下载仍可使用；Browser/Chrome 只用于检索、登录和真人验证，不得触发无法指定目标路径且会默认写入 Downloads、桌面或其他外部目录的下载。
+- Wiki 固定 `approval_policy = never`。递归删除、大规模移动、`git reset --hard`、force push、历史重写、删除或覆盖 raw 原始证据、大规模不可逆迁移、治理核心规则修改和 push 仍需用户明确授权；即使用户授权，也只能在 Wiki 内执行。概括性的“自行判断”或“充分自主”不得扩张为无关的破坏性授权。
+- `raw/` 是原始证据层，默认由人类拥有。物理沙盒允许写入整个 Wiki，但这不构成修改 raw 的一般授权；除下述 Agent 管理例外外，Agent 仍不得自行修改、重命名、移动或删除 raw 内容。
+- `raw/papers/gpt/**` 与 `raw/zotero/gpt.bib` 是已授权 Nature-first 文献获取的 Agent 管理入口。候选 PDF 只能先进入 `raw/papers/gpt/_incoming/<run-id>/`，通过文件、首页、DOI、元数据、哈希与重复检查后才能晋升到 `raw/papers/gpt/` 并写入 `gpt.bib`。`raw/zotero/wiki-inbox.bib` 始终由用户/Zotero 管理，Agent 不得修改或暂存。
 - `share_message/` 是外部分享材料，只作为设计参考，不是本 Wiki 的行为契约。
 - `knowledge/` 是编译后的知识层，Agent 可按本契约维护。
 - `system/` 是治理层。修改规则前必须说明影响，并同步更新相关检查项和用户指南。
@@ -153,6 +158,10 @@ Codex 不得自行推断某实验与用户个人履历直接相关、长期关�
 - 跨来源综合与反向检验：遵循 `system/workflows/reflect.md`
 - 健康检查：遵循 `system/workflows/lint.md` 和根目录 `check.md`
 - 定时续跑或无人值守任务：遵循 `system/workflows/scheduled-continuation.md`
+
+已授权的文献发现与获取采用 Nature-first 路由：先用 `nature-academic-search` 对低能核结构主题并行检索 CrossRef 与 arXiv、交叉核验 DOI/作者/年份/期刊并去重；随后必须补查 Google Scholar，无法访问时再用学术镜像。Scholar 或镜像发现的 PDF 可进入隔离区校验，不因入口不稳定而直接丢弃。候选列表确定后交给 `nature-downloader`。允许下载，但 Agent 只能使用能够显式指定 Wiki 输出路径的 downloader、命令行或 browser-context 下载；若浏览器只能默认写入外部 Downloads，则交接用户或改用可控下载方式。
+
+每次获取生成 `run_id`，精简且去除凭据的记录写入 `outputs/literature-acquisition/<run-id>.json`；下载、PDF 校验、BibTeX 写入与 ingest 必须分别记录状态。APS/PRC 或 Scholar 出现 Turnstile、图片验证码、QR、OTP、登录或反复安全验证时立即保留原标签页并交接给用户，不循环重试；普通无身份 Continue/确认最多尝试一次。
 
 普通 Wiki 问答保持只读，不因读取旧页面而静默写回。已授权的 ingest、reflect、project、synthesis、claim-review-update 或研究写作任务若实际使用旧页面，可按当前任务做最小 on-touch migration；未触及的历史页面不批量升级，科学内容或状态变化必须进入 Human review triage。
 
@@ -371,7 +380,7 @@ Human review triage 必须优先列 P0/P1。P0 无总量硬上限，全部逐项
 4. 专业术语或别名是否变化？单篇来源新增术语或页面别名优先记录在页面 `aliases`；只有需要跨库统一、存在歧义或重复 slug/aliases 风险，或用户明确要求时，才更新治理层 `system/vocabulary.md`。不确定时先询问或只列最终建议，不得在普通摄入中顺手修改。
 5. 是否完成实质任务？若是，更新 `system/handoff.md` 与只追加的 `system/log.md`。
 6. 是否摄入或修改知识？若是，更新 `knowledge/index.md`，按 overview 阶段性更新规则判断是否更新 `knowledge/overview.md`，并检查 `knowledge/questions.md`。
-7. Git 可用时检查最终 diff，确认 `raw/` 未被 Agent 修改。
+7. Git 可用时检查最终 diff，确认 `raw/` 只有本轮明确授权的 Agent 管理入口发生变化，且 `raw/zotero/wiki-inbox.bib`、其他 PDF、数据和个人材料均未被误改或误提交。
 
 即使 `USER_GUIDE.md` 不需要修改，也必须在内部完成判断；不得因为“这次只是小改动”而省略。
 

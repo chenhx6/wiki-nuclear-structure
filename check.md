@@ -41,6 +41,10 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] `system/memory.md` 只保存稳定规则与用户确认过的偏好，不保存临时聊天摘要。
 - [ ] 已判断本次是否需要更新 `USER_GUIDE.md`；需要时已经同步。
 - [ ] 本次规则修改已同步到 `AGENTS.md`、`check.md` 和相应工作流。
+- [ ] Wiki 会话实际加载项目级 `wiki_l3 + approval_policy=never`，机器级 `requirements.toml` 不存在；普通项目仍使用全局 `:workspace + on-request`。Wiki 外部写入被直接拒绝且没有提权入口；宿主自身日志与 sandbox 状态已作为运行数据例外单独识别。
+- [ ] Wiki 外仅执行已确认零外部写入的程序；工作目录、TEMP/TMP、缓存、日志、配置和输出均约束到 Wiki，未调用安装器、系统管理工具或会修改外部状态的 GUI 程序。
+- [ ] Wiki 任务未调用 Computer Use；浏览器下载要么显式输出到 Wiki，要么交接用户，未触发默认外部 Downloads。
+- [ ] 递归删除、历史重写、raw 证据删除/覆盖、治理核心修改和 push 等危险操作均有用户明确授权，未把概括性自主授权解释为破坏性授权。
 - [ ] `system/log.md` 只追加，没有重写历史记录；启动或普通恢复未用 `ReadAllText(system/log.md)` 读取完整 log。
 - [ ] 若使用定时续跑，已遵循 `system/workflows/scheduled-continuation.md`，并说明本机应用、调度服务与电脑可用性前提。
 - [ ] 定时任务的“一次/重复”、时区和下次运行时间在界面中无歧义；一次性请求未显示为“每天”。
@@ -57,7 +61,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 搜索已限定到 `knowledge/`、`system/`、`AGENTS.md`、`check.md`、`USER_GUIDE_DETAIL.md` 或明确目标文件；未无目的扫描 `.git/`、`.qmd/`、`.obsidian/`、`tmp/`、`raw/`、`outputs/`、`share_message/`、`__pycache__/`、`.pytest_cache/`。
 ## B. 原始证据完整性
 
-- [ ] `raw/` 中的文件未被 Agent 修改、移动、重命名或删除。
+- [ ] `raw/` 只有本轮明确授权的 Agent 管理入口发生变化；`raw/zotero/wiki-inbox.bib` 与其他未授权 raw 文件未被修改、移动、重命名或删除。
 - [ ] 每个已摄入来源均记录 `raw_file` 与 `raw_sha256`。
 - [ ] 哈希变化被标记为 `source-modified`，并进入重新摄入流程。
 - [ ] DOI、期刊、卷页、年份、实验或理论类型等元数据尽可能完整。
@@ -225,7 +229,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 用户审核后通过 `git commit --amend` 把对应 WIP 转为 final commit，没有保留独立 WIP 或累积额外 review/final commits。
 - [ ] 用户指定本轮提交 message 时已原样使用；未指定时由 Codex 根据实际修改推荐直接相关的 message，并在最终报告中说明。
 - [ ] 对应 active WIP + 用户审核完成 + final commit/push 指令已按仓库内明确 amend 授权处理，没有错误套用通用“不主动 amend”约束。
-- [ ] WIP/final commit 均未包含 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib`、raw PDF、论文、数据、图片、未经授权的 `PLAN.md` 或无关文件。
+- [ ] WIP/final commit 均未包含 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib`、未经本轮授权的 raw PDF、论文、数据、图片、`PLAN.md` 或无关文件；获准进入 `raw/papers/gpt/**` / `raw/zotero/gpt.bib` 的文件已逐项核验并显式暂存。
 - [ ] Safe suspend 遇到大量 Markdown diff 时，已优先判断并尝试本地 WIP checkpoint。
 - [ ] 文献摄入、project、synthesis 或 framework 任务正常结束时，已自动刷新 Active handoff 并向 `system/log.md` 追加简短记录；用户不需要每次手动要求 handoff/log 收尾。
 - [ ] Safe suspend 仍然禁止自动 push。
@@ -257,7 +261,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] pending WIP 的预期文件已检查 overlap：无重叠可独立；同一范围继续并 amend；依赖关系写入 queue；共享文件无法隔离时先 final 上游或暂缓，没有静默创建两个独立冲突 WIP。
 - [ ] 科学内容、摄入、project/synthesis 和 claim-review 默认创建本地 WIP、不 push；方案已确认且检查通过的治理、框架、脚本和说明任务可直接 final commit。
 - [ ] 没有使用 `git add .` 或其它宽泛 stage；只显式 stage 本轮实际修改且用户授权的文件。
-- [ ] commit 前已运行 `git diff --cached --name-only`、`git diff --cached --stat` 和 `git diff --cached --check`，完整 index 不含无关 `knowledge/`、`.obsidian/`、`raw/` 或历史 staged 文件。
+- [ ] commit 前已运行 `git diff --cached --name-only`、`git diff --cached --stat` 和 `git diff --cached --check`，完整 index 不含无关 `knowledge/`、`.obsidian/`、未授权 `raw/` 或历史 staged 文件。
 
 ### H3. Post-commit / pre-push final check
 

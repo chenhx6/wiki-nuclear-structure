@@ -39,7 +39,7 @@
 
 | 层级或页面 | 作用 |
 | --- | --- |
-| `raw/` | 原始论文、笔记、数据和图片；由用户管理，Agent 只读 |
+| `raw/` | 原始论文、笔记、数据和图片；默认由用户管理，只有 `raw/papers/gpt/**` 与 `raw/zotero/gpt.bib` 是已授权的 Agent 文献入口 |
 | `knowledge/` | 从来源中整理出的可检索、可交叉引用知识层 |
 | source | 记录一篇来源实际报告了什么，并连接 raw 与 citation key |
 | nucleus | 汇总一个核素的结构、相关能带、实验和来源 |
@@ -123,6 +123,12 @@ Wiki 直接支持的事实或判断，会把已实际读取并核实的链接紧
 6. 可能用于论文的具体 claim 完成直接来源、locator、适用条件和竞争解释核验，并由用户确认当前拟用措辞后，才进入论文级证据池；页面整体无需先完成全面审核。
 
 不要把聊天内容或整批未读文献机械倒入 knowledge。新文献应先检查重复、书目信息、citation key 和原始文件定位。
+
+Agent 主动查找文献时采用 Nature-first 路由：先调用 `nature-academic-search`，低能核结构默认并行查询 CrossRef 与 arXiv并按 DOI、题名和第一作者去重；随后必须补查 Google Scholar，无法访问时再用学术镜像。Scholar 或镜像提供的 PDF 可以先进入 `raw/papers/gpt/_incoming/<run-id>/`，不能因入口不稳定直接丢弃；只有文件签名、页数、首页题名、作者、年份、DOI、SHA-256 和全库重复检查均通过，才晋升到 `raw/papers/gpt/`，并把完整核对后的 BibTeX 追加到 `raw/zotero/gpt.bib`。`raw/zotero/wiki-inbox.bib` 始终由用户/Zotero 管理，Agent 不得修改或暂存。每次获取的去凭据记录保存在 `outputs/literature-acquisition/<run-id>.json`，下载、校验、BibTeX 与 ingest 使用独立状态。
+
+APS/PRC 或 Google Scholar 出现 Turnstile、图片验证码、QR、OTP、登录或反复安全验证时，Codex 保留原标签页并交给用户处理，不循环重试。这里的“禁用浏览器原生 Download”只禁止无法指定路径、会默认写入 Wiki 外 Downloads 的下载方式，不是禁止下载：`nature-downloader`、命令行下载器、browser-context downloader 或可靠的“另存为 Wiki 路径”均可使用。用户若手工下载到外部目录，Agent 只能读取并复制到 Wiki，不得移动、删除或清理外部原文件。
+
+Wiki 项目级 `wiki_l3` 允许维护整个 `E:\imp\wiki`，外部仅可读和执行。运行外部程序前必须把工作目录、临时目录、缓存、日志、配置和输出约束到 Wiki；安装器、系统管理工具或无法证明零外部写入的 GUI 程序不得自行执行。Wiki 固定 `approval_policy = never`，Codex 不得请求外部写入权限；确需外部状态变更时应停止并交给用户在 Codex 外手动完成，随后由新会话只读核验。Wiki 任务行为上禁用 Computer Use，但保留 Web Search、Browser、Chrome 和 MCP。其他项目仍使用普通 workspace 权限并在越界安装或系统修改时按需审批。
 
 用户可以明确声明某篇文献、核素、反应体系或实验方法属于当前分析、未来课题或论文写作重点。例如：
 

@@ -8,34 +8,34 @@ updated: 2026-07-26
 ## Active handoff
 
 Current active task:
-Configure all practical Nature Skills runtime dependencies except API keys, then commit and push the related Wiki records.
+Wiki-scoped filesystem-boundary repair and acceptance are complete: sandbox capability is writable inside `E:\imp\wiki`, read-only outside with `approval_policy=never`, and repository governance remains in force. L3 scientific autonomy is not active and awaits a separate user-started research question.
 
 Current branch / local commit:
-Wiki `main` at `96c3745`, aligned with `origin/main`; final commit and push are explicitly authorized for the three Nature setup records only. User `raw/zotero/wiki-inbox.bib` remains protected and unstaged. Nature Skills clone is at `8d674eb50454d4b49d3e0be625a121ad4863840b`.
+`main` contains the finalized local commit `Finalize Wiki-scoped L3 boundary and literature ingress`, one commit ahead of `origin/main`, not pushed. The protected pre-existing `raw/zotero/wiki-inbox.bib` change remains unstaged at baseline SHA-256 `94C7B0370B4CC75206463E5E5D594E71C2EDFC92DE2E602260CCFB4111667B35`.
 
 Last task status:
-Installed the downloader, patent-document and CNIPA/Playwright Python requirements, resolved the existing Gradio compatibility boundary with `pdfplumber 0.11.4` plus `Pillow 10.4.0`, installed Playwright Chromium, and registered the global `academic-search` MCP through an isolated `uv` runtime. No API key was requested, stored or configured.
+The user removed all orphan DENY ACEs from `.codex`, `.agents` and `.git`; restart verification shows zero explicit DENY on all three. Project config/hash, hook absence, TOML parse, PowerShell/Node startup, Wiki-internal CRUD, Git index write/unstage, external create/overwrite/rename/delete denial, valid empty state JSON, clean new sandbox logs, `git diff --check` and Wiki lint all pass. A genuinely independent ordinary project also passed local CRUD with no Wiki hook or `wiki_l3` environment value.
 
 Unfinished items:
-Restart Codex or open a new task before using the newly registered MCP tools. Institutional access still requires the user's authenticated browser session; the configured library entry failed its current network health check and may require campus/VPN routing or manual browser authentication. The previously proposed L3-L4 autonomy design remains a separate future task.
+No permission-boundary item remains. Optional next actions are a user-started L3 research trial and, only with explicit authorization, pushing the finalized local commit.
 
 P0 focus:
-No dependency-installation P0 remains. When Nature Skills are used for manuscript work, preserve the Wiki evidence policy, paper evidence gate, source/raw locator checks and user scientific judgment.
+No permission-boundary P0 remains.
 
 Complete unresolved P0 inventory:
-None for dependency installation. The institution route is configured but not network-verified.
+None. L3 scientific behavior and downloader trials remain out of scope and require a later user-started task.
 
 Risks:
-API-key routes remain deliberately unconfigured. Scopus/ScienceDirect and other key-dependent providers must not be reported as available. Do not let `nature-downloader` write directly into protected Wiki evidence paths without explicit authorization and source verification, and never store personal email, institutional credentials, cookies or tokens in the public Wiki.
+The user-level config file hash changed during restart even though its selected permission semantics remain `:workspace + on-request + user`, with no global custom profile and no machine requirements. The ordinary control reported host reviewer state `auto_review`; this is a P1 runtime discrepancy from `approvals_reviewer=user`, not evidence that Wiki `wiki_l3` leaked. Shell `Remove-Item` policy is distinct from filesystem ACLs; file deletion was verified through `apply_patch`.
 
 Checks:
-Write-entry preflight passed with cleanup exit 0. `pip check` reports no broken requirements; downloader/patent imports pass; Playwright lists Chromium, headless shell and FFmpeg; Node is `v24.18.0`; the citation converter reaches PubMed and CrossRef successfully; `academic-search` is globally registered and enabled. Downloader credentials remain empty. Only protected `raw/zotero/wiki-inbox.bib` and the three authorized system records are dirty.
+All temporary probes and ACL backups were removed. Config SHA-256 is `988956B8D295C72A4A00B71D5698DAE72904CE8C62A94AC1167AB13552CDFE99`; all three special directories have zero explicit DENY; state JSON is 22 bytes, zero NUL and zero principals; the new log segment has zero deny-read parse/apply/setup errors. Internal CRUD/Git index, external mutation denial and ordinary-project isolation pass. Wiki lint: 0 errors, 28 existing warnings, 209 review infos. Protected BibTeX remains unchanged and unstaged.
 
 Next prompt / continuation phrase:
-After restarting Codex, verify that the `academic-search` MCP tools appear, then run one small PubMed/CrossRef literature search and one OA-only downloader test outside protected Wiki paths.
+To start the deferred scientific-autonomy trial: `开始 L3 试验：<具体研究问题>`
 
 Recent user decisions:
-User explicitly deferred all API-key applications because they cannot be obtained quickly, supplied a local contact email and two institutional entry candidates for configuration, and authorized the remaining automatic setup plus final commit and push. Personal configuration values must remain outside the public repository.
+Wiki-inside sandbox capability is fully writable, but AGENTS governance for raw evidence, PLAN, destructive actions and push remains. Wiki external writes are mechanically unavailable with `approval_policy=never`; external changes are user-manual only. L3 experimentation will be started separately by the user after this boundary passes. Push is not authorized.
 
 ## Previous active handoff (superseded 2026-07-10 pre-review-correction synthesis planning)
 
