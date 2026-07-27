@@ -41,6 +41,10 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] `system/memory.md` 只保存稳定规则与用户确认过的偏好，不保存临时聊天摘要。
 - [ ] 已判断本次是否需要更新 `USER_GUIDE.md`；需要时已经同步。
 - [ ] 本次规则修改已同步到 `AGENTS.md`、`check.md` 和相应工作流。
+- [ ] L0-L4 完整定义只存在于 `system/workflows/autonomous-research.md`；AGENTS/query/reflect/ingest/Skill 仅保留短路由，没有复制漂移或堆积第二套规则。
+- [ ] ordinary Q&A 未误触发写入；授权 ingest/reflect/project/synthesis 默认运行 L2；高价值问题进入 L3 时有明确 scope/milestone；L4 已形成 candidate、safe suspend 并由用户确认数据后手动启动。
+- [ ] 每周自测没有机械限制检索次数，也没有无价值无限扩张；继续/暂停/升级基于重要性、证据充分度、信息增益、资源和权限边界。
+- [ ] 有实质变化的每周自测生成 `outputs/self-tests/` P0/P1 报告和本地 WIP；用户审核前未 push，无实质变化时未制造空 commit。
 - [ ] Wiki 会话实际加载项目级 `wiki_l3 + approval_policy=never`，机器级 `requirements.toml` 不存在；普通项目仍使用全局 `:workspace + on-request`。Wiki 外部写入被直接拒绝且没有提权入口；宿主自身日志与 sandbox 状态已作为运行数据例外单独识别。
 - [ ] Wiki 外仅执行已确认零外部写入的程序；工作目录、TEMP/TMP、缓存、日志、配置和输出均约束到 Wiki，未调用安装器、系统管理工具或会修改外部状态的 GUI 程序。
 - [ ] Wiki 任务未调用 Computer Use；浏览器下载要么显式输出到 Wiki，要么交接用户，未触发默认外部 Downloads。
@@ -115,6 +119,8 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] on-touch migration 只处理当前授权 ingest/reflect/project/synthesis/claim-review-update/研究写作任务实际使用的旧页面，没有批量升级未触及历史页。
 - [ ] 没有批量补历史 ingest mode、research-note、Personal Notes 或统一 frontmatter；科学 claim、interpretation、review/reasoning state 或知识关系变化已进入 Human review triage。
 - [ ] Research note 只在授权研究任务且满足持久化门时创建；没有成为每篇文献的默认产物。
+- [ ] L2 只记录高价值、可检验的未决问题；L3 包含背景/已有工作、候选课题、假设、反证、信息增益与 milestone；L4 记录数据身份、运行复现、失败和 belief revision，没有用文献综合、作图或写作冒充数据研究。
+- [ ] Codex 自审核未伪装成 Human review，未自行清除 `needs_review`、设置 `confidence: high` 或晋升正式 synthesis。
 - [ ] Research note 使用 `review_status: unreviewed` 与 `reasoning_status: provisional` 起步；`reasoning_status` 未重复 `unreviewed/reviewed`，`revised` 只作为 history event。
 - [ ] `Grounded Evidence` 与 `Provisional Reasoning` 明确分开；note 不替代 source evidence。
 - [ ] `promoted` note 有正式 promotion target、Human review 和 grounded-source 回链；rejected/superseded/withdrawn 保留处置依据。

@@ -2,7 +2,7 @@
 
 这套 Wiki 面向熔合蒸发反应和低能原子核结构研究。Obsidian 是人的浏览、审阅和写作界面；Agent 负责摄入、交叉引用、综合、检查与维护；Markdown 文件是双方共享的长期记忆。
 
-当前系统是 Continuous Research-Learning v1（硅基研究生）：面向低能核结构研究的 Human-in-the-loop research Wiki。它支持可追溯证据、问题/设计逻辑重建、竞争解释、迁移边界、反向检验、受控暂定研究推理和人工审阅；ordinary Q&A 保持轻量。A≈130 是当前研究锚点，不是收录边界。详细架构见 [architecture update](system/architecture-updates/2026-07-continuous-research-learning-upgrade.md)。Wiki 不是最终权威，不保证文献完整覆盖，不能替代原文阅读和人工科学判断。
+当前系统是 Continuous Research-Learning v1（硅基研究生）：面向低能核结构研究的 Human-in-the-loop research Wiki。授权摄入/综合任务默认可运行 L2 研究学习闭环，用户可启动研究问题级 L3，自有数据到位后可启动 L4 数据—分析—失败—修正闭环；ordinary Q&A 保持轻量。A≈130 是当前研究锚点，不是收录边界。详细架构见 [architecture updates](system/architecture-updates/README.md)。Wiki 不是最终权威，不保证文献完整覆盖，不能替代原文阅读和人工科学判断。
 
 本文件是快速使用指南。需要了解目录层级、证据术语、人工审阅、project、写作准备和可复制提示词时，请查看 [USER_GUIDE_DETAIL.md](USER_GUIDE_DETAIL.md)。
 
@@ -23,7 +23,17 @@ outputs/     审计、报告、文章草稿和演示产物
 - `knowledge/questions.md`：开放科研问题；
 - `system/handoff.md`：最近任务做到哪里、改了什么、下一步是什么；
 
-Wiki 使用项目级 `wiki_l3`：Codex 可完整维护 `E:\imp\wiki`，但 Wiki 外默认只能读取和运行已确认不会产生外部写入的程序。确需临时写外部文件时，必须由你先发起；Codex再复述精确路径、操作和影响；你明确批准后才进入系统审批。Codex和自动审查器不能主动发起或代批，批准只覆盖当次列明的路径与操作。其他项目继续使用普通 workspace 权限并按需审批。Wiki 任务不使用 Computer Use，避免 GUI 程序绕过文件边界。
+Wiki 使用项目级 `wiki_l3`：Codex 可维护 `E:\imp\wiki`，Wiki 外只读且 `approval_policy=never`，不存在外部写入提权入口。确需改变外部状态时，Codex 必须停止，由你在 Codex 外手动完成，再由新任务只读核验。其他项目继续使用普通 workspace 权限。Wiki 任务不使用 Computer Use，避免 GUI 程序绕过文件边界。
+
+### 硅基研究生 L0-L4
+
+- L0：按指定文献精读并摄入；
+- L1：在阅读基础上建立可靠联想和边界；
+- L2：摄入/综合时默认固化通用知识、质疑、验证，并把高价值未决问题写入 `knowledge/questions.md`；
+- L3：调查研究背景和已有工作，形成课题/假设、寻找反证并决定下一步；高价值摄入或每周自测可以自然进入 L3；
+- L4：使用真实、公开或可靠模拟数据实际研究。Codex 先形成 candidate 并 safe suspend，只有你确认数据后才手动启动。
+
+完整定义和每周自测规则只在 `system/workflows/autonomous-research.md` 维护。建议自测时间为每周一 19:20；有实质变化时建立本地 WIP 和 P0/P1 报告，经你审核后才合入并 push main。`wiki_l3` 是文件权限 profile 名称，不是科学等级上限。
 - `system/log.md`：只追加的操作历史；
 - `check.md`：系统与科学质量检查。
 
@@ -175,7 +185,7 @@ Better BibTeX 可将 `Wiki Inbox` 自动导出为 BibTeX/Better BibTeX JSON。�
 
 可显式使用 `$wiki-evidence-query` 进行默认只读、区分证据类型并给出处的核结构知识问答。
 
-`knowledge/research-notes/` 保存少量高价值、尚未成熟的“暂定研究推理”。普通问答默认不把它当作正式证据，也不会自动检索或创建；只有你明确要求研究启发、假设、迁移、reflect/project/synthesis 时才会使用，并会标明 provisional 状态、回到原始 source 核查。创建 note 不等于人工审核或知识晋升。
+`knowledge/research-notes/` 保存少量高价值、尚未成熟的“暂定研究推理”。普通问答默认不把它当作正式证据，也不会自动检索或创建；授权 L2、活跃 L3/L4、reflect/project/synthesis 只有在满足持久化门时才使用，并会标明 provisional 状态、回到原始 source 核查。创建 note 或 Codex 自审核不等于人工审核或知识晋升。
 
 查询会使用 `system/vocabulary.md` 和页面 aliases 做中英文双向扩展：“壳模型”与 `shell model` 会归一到同一泛称入口；“开门”或 `gate by x keV` 会在 γ 谱学语境中扩展到 coincidence gating。泛称可能对应 CSM、PSM、TPSM 等多个候选时，回答会列出候选，不会擅自合并。
 

@@ -302,6 +302,8 @@ expand externally as the question requires.
 
 ## Read-only boundary
 
+When the user starts an L3/L4 research task, this skill supplies evidence retrieval and provenance discipline but does not force the task back into ordinary read-only Q&A. Route persistence, autonomous hypothesis work and data-analysis state to `system/workflows/autonomous-research.md`, then use ingest/reflect/project rules for writes. Keep ordinary invocations read-only.
+
 Pure Q&A is read-only: do not modify the Wiki or update handoff, log, WIP queue,
 Review history, Git commits, or remotes. If resources run low, stop expanding,
 return the verified or reliable portion, state the remaining gap, and offer one

@@ -758,3 +758,8 @@ updated: 2026-07-15
 
 - Removed all disposable probes and ACL backups after Wiki-internal CRUD/Git, external mutation denial, sandbox state/log and independent ordinary-project controls passed; the project hook design remains removed and `approval_policy=never` is canonical for Wiki sessions.
 - Finalized the existing WIP as `Finalize Wiki-scoped L3 boundary and literature ingress`; the protected user BibTeX remains unstaged, L3 scientific autonomy remains deferred, and no push was authorized.
+
+## [2026-07-27] architecture | autonomous L2, L3 and manual-L4 governance
+
+- Consolidated L0-L4, P0/P1 state, dynamic L3 escalation, the manual L4 data gate and weekly self-test lifecycle into one canonical workflow; AGENTS, query, ingest, reflect, Skill, guide and checklist retain only short routing.
+- Reverted the stopped draft's unauthorized PLAN addition, duplicate memory text and unproven global template expansion. Governance lint passes; the user-managed Zotero Inbox remains protected and unstaged.

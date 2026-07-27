@@ -16,9 +16,11 @@ updated: 2026-07-15
 
 普通 Wiki 问答以直接回答、必要 inline evidence links 和证据边界为目标，不默认执行完整持续学习闭环，不自动追加迁移案例、失效检验、反向检验或研究问题，也不自动创建或默认检索 provisional research reasoning。
 
+L0-L4 路由由 `autonomous-research.md` 维护。普通问答保持只读；授权摄入/综合默认进入 L2，高价值问题可进入 L3；L4 必须由用户确认数据后手动启动。不要在本文件复制等级定义。
+
 普通 Q&A 保持 read-only，不因读取或发现旧页面格式而自动写回；可以在回答中报告潜在 migration 需求。需要写入时，必须转入用户已授权的 ingest、reflect、project、synthesis、claim-review-update 或研究写作 workflow，由该 workflow 对实际使用的旧页面做最小 on-touch migration，未触及的历史页面不批量升级。
 
-以下情形才进入研究型路由：文献摄入；reflect；project/synthesis；用户明确要求比较、批判、迁移、研究启发或假设形成；或者问题本身必须依赖这些分析才能可靠回答。研究型路由引用 `ingest.md`、`reflect.md` 和 `evidence-policy.md` 的 canonical 规则，本文件不复制完整学习闭环。Agent 可建议切换用户摄入模式，但不得自行切换；用户未响应时继续当前模式。
+以下情形才进入研究型路由：文献摄入；reflect；project/synthesis；用户明确要求比较、批判、迁移、研究启发或假设形成；或者问题本身必须依赖这些分析才能可靠回答。研究型路由引用 `ingest.md`、`reflect.md`、`autonomous-research.md` 和 `evidence-policy.md`。ordinary research route 仍由用户控制阅读模式；活跃 L3/L4 可按信息增益自主切换并记录理由、覆盖范围和未覆盖部分。
 
 `knowledge/research-notes/` 位于现有 `nuclear-knowledge` collection，但 ordinary Q&A 的候选过滤必须默认排除该路径或 `type: research-note`。只有 reflect、project、synthesis、用户明确要求研究启发/假设/迁移/暂定认识，或新证据可能修正既有 note 时才主动纳入。纳入后必须显示 `reasoning_status` 和 provisional 身份，并回到 `Grounded Evidence` 所列 source/locator 支撑事实；research note 本身不是正式 evidence。
 

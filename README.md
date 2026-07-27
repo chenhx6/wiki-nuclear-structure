@@ -4,7 +4,7 @@
 
 ## 当前定位
 
-当前系统是 **Continuous Research-Learning v1（硅基研究生）**：面向低能核结构研究的 Human-in-the-loop research Wiki。它支持 traceable evidence、paper question/design logic reconstruction、competing interpretations、transfer/failure boundaries、reverse tests、controlled provisional research reasoning 和 Human review；ordinary Q&A 保持轻量。
+当前系统是 **Continuous Research-Learning v1（硅基研究生）**：面向低能核结构研究的 Human-in-the-loop research Wiki。它支持 traceable evidence、摄入默认 L2、课题调查型 L3 和手动启动的数据研究型 L4；ordinary Q&A 保持轻量，正式知识晋升仍由 Human review 控制。
 
 A≈130 是当前研究锚点，不是 Wiki 的收录边界。详细架构记录见 [continuous research-learning upgrade](system/architecture-updates/2026-07-continuous-research-learning-upgrade.md)。Wiki 仍不是最终权威，也不保证文献完整覆盖；论文级结论必须回到 `knowledge/sources/`、`raw/` 原文、精确 locator 和人工复核，并遵循 [system/paper-evidence-gate.md](system/paper-evidence-gate.md)。
 

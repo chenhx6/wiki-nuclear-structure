@@ -40,7 +40,7 @@
 
 ## Bounded initiative / 有限主动性
 
-以下四条有限主动性原则继续有效，不得放宽为自由发挥：
+以下四条是 ordinary task 的默认边界。用户启动 L3/L4 后，只在已声明的研究问题、milestone 和 `system/workflows/autonomous-research.md` 范围内扩大科研主动性；这不构成无关修改或破坏性操作授权。
 
 1. 不确定就问，别猜；
 2. 没要求且非必要同步的不写；
@@ -76,6 +76,10 @@ Codex 可以执行与当前任务直接相关、低风险、可解释、可回�
 - 修改 `raw/`、论文、数据或图片。
 
 若无法判断某项修改属于必要同步还是顺手优化，停止并询问用户，不得猜测。
+
+## Research autonomy / L0-L4
+
+L0-L4、P0/P1 状态、每周自测和人类保留关口由 `system/workflows/autonomous-research.md` 统一维护。ordinary Q&A 仍只读；已授权的 ingest/reflect/project/synthesis 默认运行 L2，高价值问题可按该 workflow 自然进入 L3。L4 必须形成 candidate、safe suspend，并由用户确认数据后手动启动。不得在本文件或其它 workflow 复制第二套完整定义。
 
 ## Windows PowerShell Git PATH fallback
 
@@ -156,6 +160,7 @@ Codex 不得自行推断某实验与用户个人履历直接相关、长期关�
 - 摄入论文或笔记：遵循 `system/workflows/ingest.md`
 - 查询与回答：遵循 `system/workflows/query.md`
 - 跨来源综合与反向检验：遵循 `system/workflows/reflect.md`
+- L0-L4 科研自治与数据闭环：遵循 `system/workflows/autonomous-research.md`
 - 健康检查：遵循 `system/workflows/lint.md` 和根目录 `check.md`
 - 定时续跑或无人值守任务：遵循 `system/workflows/scheduled-continuation.md`
 
