@@ -9,6 +9,7 @@ updated: 2026-07-15
 
 ## Sources
 
+- [[alwaleedi-2013-band-structures-131ce]] - `131Ce` Bands 1–7 的 Gammasphere 纲图、crossing/alignment、组态图与带 `δ=0` 假设的 `B(M1)/B(E2)` 基线。
 - [[meng-2010-open-problems-nuclear-chirality]] - 核手征几何、TAC/PRM 边界、fingerprint ambiguity 与 MχD/shape-coexistence 的 theory/review 背景。
 - [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] - `133Ce` 两对 MχD 候选的 Gammasphere/DCO/角分布事实及 RMF+TPRM 支持链。
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] - `78Br` 两对 MχD、ADO/偏振、八条 E1 links 与 octupole-soft MDC-CDFT/TPRM 证据链。
@@ -67,6 +68,7 @@ updated: 2026-07-15
 
 ## Nuclei
 
+- [[131ce]] - N=73 奇中子核；当前以 Bands 1–7 的高自旋组态、crossing 与集体模式判别为重点。
 - [[78br]] - A≈80 odd-odd nucleus；当前聚焦正/负宇称 MχD 候选与 octupole correlations/softness。
 - [[131xe]] - N=77 奇 A 核，当前聚焦 νh11/2 signature partners 与 wobbling 反证。
 - [[131ba]] - N=75 奇中子核，聚焦 `νg7/2[404]7/2+` 强耦合带。
@@ -121,6 +123,7 @@ updated: 2026-07-15
 
 ## Experiments
 
+- [[atlas-gammasphere-131ce-s36-165mev]] - 165 MeV `100Mo(36S,5nγ)131Ce`、101-detector Gammasphere 数据集。
 - [[ithembalabs-afrodite-diamant-78br-c12-60-65mev]] - 60/65 MeV `70Zn(12C,p3n)78Br`、AFRODITE clovers、DIAMANT charged-particle tagging。
 - [[vecc-131xe-alpha-38mev]] - `130Te(4He,3nγ)131Xe`、38 MeV、INGA 数据集。
 - [[atlas-133ce-ne22-112mev]] - `116Cd(22Ne,5n)133Ce`、112 MeV、Gammasphere。
