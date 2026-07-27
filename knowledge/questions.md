@@ -9,6 +9,7 @@ updated: 2026-07-08
 
 ## Open
 
+- [ ] `131Ce` Bands 1–7 的连接跃迁 mixing ratios/偏振与多带寿命，能否把“signature/configuration coupling + γ-soft core background”同 wobbling、chirality 和 shape coexistence 区分开？（opened 2026-07-27；scope: 131ce/l3；project: [[131ce-collective-mode-discrimination]]）
 - [ ] `131Xe` yrast 13/2- 起始序列的组态与集体性质是什么？（opened 2026-07-01；scope: 131xe）
 - [ ] `131Xe` 的三轴形变更接近 γ-soft 还是具有稳定 γ 局域？需要哪些独立观测量？（opened 2026-07-01；scope: 131xe/triaxiality）
 - [ ] A≈130 中哪些 wobbling 指认具有独立的寿命、mixing ratio 和绝对 B(E2) 证据？（opened 2026-07-01；scope: wobbling）

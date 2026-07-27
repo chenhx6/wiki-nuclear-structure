@@ -81,13 +81,13 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 |---|---|---|---|---|---|
 | AW13-1 | 新建立强耦合 Bands 4 和 7，并扩展 Bands 1、2、6；完整关系见 Bands 1–7 能级纲图。 | observed-fact | direct | Abstract; Chapter 4; Figure 4.1; Tables 4.1–4.7 | true |
 | AW13-2 | Band 1 被扩展到更高自旋，并通过新连接跃迁与 Band 4 建立结构关系。 | experimental-assignment | direct | Chapter 4, Bands 1 and 4; Figure 4.1 | true |
-| AW13-3 | Band 2 的正宇称序列被扩展，作者用 alignment 与 crossing 行为讨论低-j 正宇称中子轨道。 | experimental-assignment | direct | Chapter 4, Band 2; Chapter 5; Figures 5.2–5.4 | true |
+| AW13-3 | Band 2 的正宇称序列被扩展，作者用 alignment 与 crossing 行为讨论低-j 正宇称中子轨道。Figure 4.1、Tables 4.5–4.6 和 Section 5.2.2 相互一致。 | experimental-assignment | direct | Figure 4.1; Tables 4.5–4.6; Section 5.2.2 | true |
 | AW13-4 | 作者把 Band 4 指认为与 γ 振动耦合的 e/f 序列，把 Band 7 指认为 a/b⊗AE；这是组态解释。 | author-interpretation | direct | Chapter 5; Table 5.3 | true |
 | AW13-5 | Table 5.1 给出 Band 1 两个 signature 的 crossing frequencies 0.329、0.367 MeV/ℏ，Band 2 两个 signature 均为 0.316 MeV/ℏ。 | model-assisted-measurement | direct | Table 5.1 | true |
 | AW13-6 | Woods–Saxon/TRS 计算采用或得到 β2=0.218、β4=-0.023、γ=0° 的轴对称形变背景。 | model-result | direct | Chapter 5, Woods–Saxon/TRS discussion | true |
 | AW13-7 | 作者认为 alignment 后行为提示 spin-dependent core polarization，并允许非轴形变在更高自旋处变得重要。 | author-interpretation | direct | Chapter 5, crossing/alignment discussion | true |
 | AW13-8 | Table 5.3 将 Bands 1–7 映射为 e/f⊗EF、a/b⊗EF、c/d、γ⊗e/f、e/f⊗AE(→AEFG)、efg/feh 和 a/b⊗AE 等组态。 | author-interpretation | direct | Table 5.3 | true |
-| AW13-9 | 实验 B(M1)/B(E2) 由分支强度和 γ 能量计算，并明确假定 E2/M1 mixing ratio δ=0；不是绝对 B(M1) 或 B(E2)。 | derived-observable | direct | Equations 5.6–5.7; Section 5.4; Table 5.4 | true |
+| AW13-9 | 实验 B(M1)/B(E2) 由分支强度和 γ 能量计算，并明确假定 E2/M1 mixing ratio δ=0；不是绝对 B(M1) 或 B(E2)。对同一分支数据，`R(δ)=R(0)/(1+δ²)`。 | derived-observable | direct | Equations 5.6–5.7; Section 5.3; Table 5.4 | true |
 | AW13-10 | 作者认为 Figure 5.5 中实验与半经典理论比值的总体一致性加强了组态指认。 | author-interpretation | direct | Figure 5.5 and discussion | true |
 | AW13-11 | 本数据集没有寿命、绝对 B(E2)、线偏振或直接 γ 刚性测量，不能仅凭本论文裁决 wobbling、chirality、shape coexistence 或 γ-soft/γ-rigid。 | analytical-boundary | inferred | Dataset/method inventory across Chapters 3–5 | true |
 
@@ -96,6 +96,10 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 - Bands 1–7 的来源编号只在本论文语境中使用；与其它 131Ce 文献对齐时必须依赖 bandhead、parity、signature、linking transitions 和组态，不能只按编号合并。
 - Band 1 与 Band 4 围绕负宇称 νh11/2 类轨道及其耦合展开；Band 2 与 Band 7 涉及正宇称低-j 中子轨道和对齐质子对。
 - crossing frequency 与 alignment 是组态约束量，但模型轨道标签和形变依赖 Woods–Saxon 参数化。
+
+### Working parity map
+
+用户依据 Figure 4.1 提出本轮 provisional working assignment：Bands 2、3、5 为正宇称，Bands 1、4、6、7 为负宇称。该判断已与 Figure 4.1、Tables 4.1–4.7 及 Chapter 5 的带讨论交叉核验，整体一致；它是 claim-level 人工判断，不把整页升级为 `human-reviewed`。Table 5.1 中 Band 2 的负宇称单元仍按原样保留为来源内部冲突。
 
 ## Authors' Interpretation
 
@@ -109,9 +113,9 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 
 ## Competing Interpretations and Limitations
 
-- Table 5.1 抽取文本把 Band 2 标为负宇称，而 Chapter 4 将 Band 2 作为正宇称带讨论；这是来源内部不一致/潜在排版错误，不能静默修正。
+- Table 5.1 原表把 Band 2 标为负宇称，而 Figure 4.1、Tables 4.5–4.6 和 Section 5.2.2 均支持正宇称；当前分类为来源内部冲突、`probable typo`。原表记录不得改写，crossing frequency 可用，但该 parity 单元不用于正式宇称结论。
 - Band 5 高自旋组态行按原表出现 f⊗AE → e⊗AEFG，可能是换 signature 或表格笔误；使用前需再次视觉复核。
-- B(M1)/B(E2) 对 δ=0 敏感，趋势一致性不是绝对电磁矩阵元测量。
+- B(M1)/B(E2) 必须始终携带 δ=0 假设。由 Equations 5.6–5.7，`R(δ)=R(0)/(1+δ²)`；若 `|δ|≤0.5`，δ=0 结果相对真实值最多高估 25%，而两者差值相对 δ=0 结果最多为 20%。δ 的符号不改变这项幅值修正，但仍影响偏振和相位判断。
 - 轴对称 TRS 极小值和高自旋非轴 core polarization 不等价于已经测得 γ-soft 或 rigid-triaxial 势面。
 - 近简并、signature splitting 或相似 alignment 可由普通 signature partners、组态混合、粒子—芯耦合及不同集体模式产生，需要额外电磁和形变 observable 区分。
 
@@ -147,11 +151,11 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 
 ### P0
 
-- AW13-5：Table 5.1 的 Band 2 宇称与 Chapter 4 不一致。已隔离为来源内部不一致，不据此改写宇称；状态 `remains-open`，不阻塞 source 摄入，但阻止该行用于正式宇称结论。
+- AW13-5：Table 5.1 的 Band 2 宇称与 Figure 4.1、Tables 4.5–4.6 及 Section 5.2.2 不一致。视觉复核后降级为 `probable typo`，但保留原始冲突并隔离该 parity 单元；crossing 数值仍可按来源使用。
 
 ### P1
 
-- AW13-9：后续引用 B(M1)/B(E2) 时必须携带 δ=0 假设。
+- AW13-9：后续引用 B(M1)/B(E2) 时必须携带 δ=0 假设和 `R(δ)=R(0)/(1+δ²)`；`|δ|≤0.5` 的 25%/20% 是两种不同分母的误差口径，不得与 ICC 反演文献中约 25% 的实验误差混同。
 - AW13-11：将寿命/绝对 B(E2)、mixing ratio/偏振和形变敏感量作为 L3 裁决 observable。
 - Table 5.3 Band 5 高自旋标签需在精细 band mapping 前再次视觉复核。
 

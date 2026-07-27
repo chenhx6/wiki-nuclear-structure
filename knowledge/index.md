@@ -207,6 +207,7 @@ updated: 2026-07-15
 
 ## Projects
 
+- [[131ce-collective-mode-discrimination]] - 以 Alwaleedi 纲图为基线，比较 `131Ce/133Ce` 的 configuration coupling、γ-soft core、wobbling、chirality 与 shape coexistence。
 - [[nuclear-chirality-and-multiple-chiral-doublet-bands]] - 连接核手征理论、`133Ce`/`78Br` MχD 实验、shape coexistence 与 octupole correlations 的 evidence map。
 - [[a130-high-spin-collective-modes-evidence-map]] - 连接 A≈130 sources、竞争解释与后续数据处理结果的轻量工作台。
 - [[gamma-soft-deformation-evidence-map]] - 连接 γ-soft/γ-rigid 判据、模型、`136Sm` 实验参照、证据缺口与未来 `131Ce/133Ce` 数据的 evidence map。
