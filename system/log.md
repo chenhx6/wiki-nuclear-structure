@@ -763,3 +763,29 @@ updated: 2026-07-15
 
 - Consolidated L0-L4, P0/P1 state, dynamic L3 escalation, the manual L4 data gate and weekly self-test lifecycle into one canonical workflow; AGENTS, query, ingest, reflect, Skill, guide and checklist retain only short routing.
 - Reverted the stopped draft's unauthorized PLAN addition, duplicate memory text and unproven global template expansion. Governance lint passes; the user-managed Zotero Inbox remains protected and unstaged.
+
+## [2026-07-27] ingest | Alwaleedi 2013 `131Ce` thesis
+
+- Deep-read the 97-page thesis in structure-grounded fallback mode, created source/nucleus/experiment pages and a 16-section Paper Card, and committed the ingest as `19a3495`; the Paper Card auditor passed with one expected no-bundle warning.
+- Preserved the Table 5.1 Band 2 parity inconsistency and `δ=0` ratio assumption as review boundaries; the user-managed Zotero Inbox was not staged.
+
+## [2026-07-27] L3 milestone | `131Ce/133Ce` collective-mode discrimination
+
+- Completed an evidence/anti-evidence matrix and provisional research prospectus: configuration/signature coupling plus a γ-soft or spin-evolving non-axial core is preferred for `131Ce`; wobbling is unsupported by current interband E2 evidence, while `133Ce` chirality/shape coexistence remain model-assisted candidates.
+- Built local evidence branch `codex/131ce-l3-evidence-pilot@4f1e9fb`; fetch/push failed because GitHub network/credentials were unavailable. L4 is a candidate only and is safe-suspended pending explicit user data confirmation and manual start.
+
+## [2026-07-27] L4 milestone | `131Ce` thesis-only quantitative baseline
+
+- Built a seven-band crosswalk and recomputed 35 table-intensity proxy ratios across `δ=0, ±0.1, ..., ±0.5`; three formula tests pass. Ten proxies cannot be reconciled with Figure 5.5 because its gated branching inputs are not tabulated, so ratio-based configuration support is downgraded in independent weight.
+- Verified the 2016 lifetime DOI and metadata, but lawful full text remains blocked by closed OA and Springer identity access. Science-only branch `09c12ac` is locally ready; fresh fetch and direct main push failed with `SEC_E_NO_CREDENTIALS`. No global credential, permission or raw user-data change was made.
+
+## [2026-07-28] L4 milestone | `131Ce` lifetime-informed update and v2 audit
+
+- Deep-read and visually verified Singh 2016, Li 2004 and Petrache 1998; created source pages, audited Paper Cards and a reproducible lifetime package with six passing tests. Independent lineages are preserved, the HD band stays separate, and Li's reused rows are not double-counted.
+- Singh finite points give `Q_t=2.579±0.099 eb` and slope `−0.030±0.047 eb/ℏ`, so the apparent decrease is not significant in this subset. γ-soft/core response gains bounded support; shape coexistence becomes a nuclear-level candidate, while chirality/wobbling do not upgrade.
+- Compressed duplicate v2 guidance and recorded four weekly-self-test dry runs. Science-only direct-main push remains authentication-blocked after a successful fetch; no global credential, permission, raw PDF or user BibTeX mutation occurred.
+
+## [2026-07-28] review | Li 2004 lifetime P0 accepted and v2 finalization authorized
+
+- The user accepted the visual transcription for LI04-1–4 while keeping LI04-5 and the source page unreviewed; Li 2004 and Singh 2016 current results remain independent experiments, but Singh's copied Li rows are dependency-only and are not counted again.
+- Continuous Research-Learning v2 local finalization is authorized. Science-only direct-main push still exits at authentication after a successful fetch, so remote main/tag publication remains blocked without changing credentials or force pushing.

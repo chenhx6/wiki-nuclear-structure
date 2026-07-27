@@ -39,7 +39,7 @@
 |---|---|---|---|
 | 能级纲图不完整 | 多条带在高自旋处终止或连接不足 | 统计量与弱连接跃迁受限 | [Paper: Chapter 4; Figure 4.1] |
 | 组态并非直接可见 | 相似谱学行为可对应不同轨道 | 需结合 alignment、crossing 和 Routhian | [Paper: Chapter 5; Tables 5.1–5.3] |
-| 跃迁强度信息有限 | 只能从 branching ratio 推导相对比值 | 无寿命且采用 `δ=0` | [Paper: Equations 5.6–5.7; Figure 5.5] |
+| 跃迁强度信息有限 | Figure 5.5 使用在目标能级以上设门的 branching intensities，但这些输入未列表 | 无寿命且采用 `δ=0`；Tables 4.1–4.7 是相对 508 keV 的全局强度 | [Paper: Tables 4.1–4.7; Equations 5.6–5.7; Figure 5.5] |
 
 ## 06 核心思想
 
@@ -65,7 +65,7 @@
 
 ## 09 必要公式与符号
 
-- Equations 5.6–5.7：由带内 ΔI=1 与 crossover ΔI=2 分支强度及 γ 能量构造 `B(M1)/B(E2)`；`δ` 为 ΔI=1 跃迁的 E2/M1 mixing ratio，本论文取 `δ=0`。用途是比较组态模型的相对趋势，不能恢复绝对矩阵元。
+- Equations 5.6–5.7：由带内 ΔI=1 与 crossover ΔI=2 分支强度及 γ 能量构造 `B(M1)/B(E2)`；`δ` 为 ΔI=1 跃迁的 E2/M1 mixing ratio，本论文取 `δ=0`。固定其它输入时 `R(δ)=R(0)/(1+δ²)`；`|δ|≤0.5` 时 δ=0 相对真实值最多高估 25%，相对 `R(0)` 的差值最多 20%。用途是比较组态模型的相对趋势，不能恢复绝对矩阵元。[Paper: Equations 5.6–5.7]
 - rotational frequency 与 alignment 的定义用于定位 band crossing；具体实现见 Chapter 5 的 alignment plots 和 Table 5.1。
 
 ## 10 实验设计与证据链
@@ -77,13 +77,14 @@
 |---|---|---|---|---|---|---|
 | level-scheme analysis | 新带与扩展是否存在 | 多重 coincidences | 新 Bands 4、7；扩展 1、2、6 | Bands 1–7 结构基线 | 集体模式唯一性 | Fig. 4.1; Tables 4.1–4.7 |
 | crossing analysis | 组态是否与对齐轨道一致 | experimental i_x vs model | Table 5.1 频率与 Table 5.3 map | 候选组态排序 | 直接形变测量 | Tables 5.1–5.3 |
-| ratio comparison | 指认是否符合电磁趋势 | `δ=0`, semiclassical inputs | 总体趋势相符 | 组态解释获支持 | absolute B values 或 wobbling/chirality 证明 | Eqs. 5.6–5.7; Fig. 5.5 |
+| ratio comparison | 指认是否符合电磁趋势 | `δ=0`, semiclassical inputs；gated branching inputs 未列表 | 作者报告总体趋势相符；L4 无法从表中全局强度独立复现 | 论文内部的组态一致性支持 | 可独立复算的 absolute B values 或 wobbling/chirality 证明 | Eqs. 5.6–5.7; Fig. 5.5 |
 
 ## 11 结论的正确解释
 
 - 任务边界：这是特定 fusion-evaporation 布居窗口中的高自旋谱学，不是 `131Ce` 全能区结构测量。
 - 模型依赖：轨道与形变指认依赖 Woods–Saxon/TRS 和半经典输入。
-- 不确定性：弱 links、多极性、Table 5.1 的 Band 2 宇称不一致和 `δ=0` 都限制结论强度。
+- 不确定性：弱 links、多极性、Table 5.1 的 Band 2 宇称不一致、未列表的 gated branching inputs 和 `δ=0` 都限制结论强度。
+- `[User]` Figure 4.1-based working parity 为 Bands 2/3/5 正宇称、1/4/6/7 负宇称；Figure 4.1、Tables 4.1–4.7 与 Chapter 5 整体支持该 provisional map。Table 5.1 的 Band 2 负宇称保留为 probable typo/source conflict。
 - 有界重述：论文可靠扩展了 `131Ce` 纲图并给出自洽的 configuration-coupling 解释，但没有独立验证 γ 势刚性或新型集体模式。
 
 ## 12 作者明确承认的局限
@@ -96,6 +97,7 @@
 |---|---|---|---|---|
 | Table 5.1 Band 2 宇称与正文不一致 | 表格 typo 或 band mapping error | 会污染 crossing 的 parity 分类 | 回看原表、正文与早期 source | Table 5.1 vs Chapter 4 |
 | `δ=0` 固定 | mixed M1/E2 会移动 ratio | 影响 configuration comparison | angular correlation + polarization 测 δ | Eqs. 5.6–5.7 |
+| Figure 5.5 输入不可复算 | 35 对全局强度 proxy 中有 10 对在 `|δ|≤0.5` 后仍超出图示包络；最大值 23.30/34.79 | ratio agreement 不能作为独立可复现证据 | 发布 gated spectra/intensities 或以原始矩阵重提分支 | Tables 4.1–4.7 vs Section 5.3/Figure 5.5; [L4 report](../l4/131ce-thesis-baseline/report.md) |
 | 形变由单一模型背景给出 | γ-soft core 或组态混合也可产生相似谱 | 决定 collective-mode 命名 | lifetime/Q_t、E2 branching、系统模型比较 | Chapter 5 |
 | 近邻系统学可能被过度迁移 | `133Ce` chirality 不自动适用于 `131Ce` | 防止按核区标签倒灌结论 | 逐带 identity 与 observable matrix | external Wiki sources |
 
@@ -121,7 +123,7 @@
 1. **最小 observable 判别集**
    - 起点：本论文缺少 lifetime、absolute B(E2)、polarization 与 measured δ。
    - 假设：把带间/带内 E2 strength、δ 和 polarization 联合起来，可显著改变 wobbling、chirality 与 signature-partner 的排序。
-   - Initial method：先建立各解释的可证伪预测矩阵，再用公开数值或用户数据逐项填充。
+   - Initial method：先建立各解释的可证伪预测矩阵，再用公开数值或用户数据逐项填充；gated branching inputs 与 lifetime 数据分开建 manifest。
    - Validation：检查新增 observable 是否改变模型排序并能排除至少一个候选。
    - Possible failure modes：band identity 无法跨来源对齐，或公开数据不含误差与 mixing ratio。
    - Innovation status: `unverified`。

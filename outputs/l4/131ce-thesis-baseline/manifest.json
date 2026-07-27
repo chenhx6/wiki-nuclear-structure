@@ -1,0 +1,42 @@
+{
+  "dataset_id": "alwaleedi-2013-131ce-thesis-baseline-v1",
+  "created": "2026-07-27",
+  "source": {
+    "title": "Band Structures of 131Ce",
+    "author": "Mohammed Abdullah Alwaleedi",
+    "year": 2013,
+    "doi": "10.17638/00015073",
+    "citation_key": "mohammedabdullahalwaleedi_2013_Bandstructures",
+    "pdf_path": "raw/papers/Band structures of 131Ce.pdf",
+    "pdf_sha256": "B50C22877418DE560F06002588BB46D34F5BA670C6880E30A89D1509C79AD8C1"
+  },
+  "locators": {
+    "level_scheme": "Figure 4.1; thesis page 53",
+    "transition_tables": "Tables 4.1-4.7; thesis pages 63-72",
+    "crossings": "Table 5.1; thesis page 76",
+    "configurations": "Table 5.3; thesis page 80",
+    "ratio_equation": "Equations 5.6-5.7; thesis page 86",
+    "ratio_comparison": "Figure 5.5; thesis page 85"
+  },
+  "units": {
+    "egamma": "keV in CSV; converted to MeV for Equation 5.6",
+    "intensity": "relative to the 507.9/508 keV Band 1 transition",
+    "ratio": "(mu_N/eb)^2",
+    "crossing_frequency": "MeV/hbar"
+  },
+  "assumptions": [
+    "Every reported ratio is explicitly conditional on delta=0 unless a scan value is stated.",
+    "R(delta)=R(0)/(1+delta^2), directly from Equations 5.6-5.7.",
+    "Only same-initial-spin E2 and M1/E2 branches that can be paired without inventing a transition are analyzed.",
+    "Tables 4.1-4.7 report global intensities relative to 508 keV, whereas Section 5.3 says Figure 5.5 used spectra gated above each level. Table-based ratios are therefore diagnostic proxies, not reproductions of the published Figure 5.5 values.",
+    "Intensity uncertainties are propagated independently; gamma-energy uncertainties were not tabulated and are omitted.",
+    "The normalized Band 1 507.9 keV intensity is treated as exact for propagation, so that one uncertainty is underestimated.",
+    "Working parity is a user Figure 4.1-based provisional assignment cross-checked against Tables 4.1-4.7 and Chapter 5."
+  ],
+  "excluded_data": [
+    "Absolute excitation energies not explicitly readable from the cited text are left blank rather than inferred from drawing position.",
+    "Transitions without a unique same-initial-state partner are not used in the table-intensity proxy calculation.",
+    "The unpublished gated branching intensities used for Figure 5.5 are not reconstructed or guessed.",
+    "The user's independent 131Ce experiment is a separate, unavailable dataset and is not represented here."
+  ]
+}

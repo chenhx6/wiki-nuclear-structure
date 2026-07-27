@@ -1,0 +1,6 @@
+crosswalk_id,source,citation_key,source_band,thesis_band,identity_status,parity,configuration,anchor_transitions_keV,evidence,exclusion
+CW1,Alwaleedi 2013,mohammedabdullahalwaleedi_2013_Bandstructures,Band 1,Band 1,baseline,-,e/f to e/fxEF,"507.9;641.2;749.8;825.4;887.3",Figure 4.1 and Tables 4.1/5.3,
+CW2,Singh 2016,singh_2016_Lifetimemeasurements,negative-parity yrast nu-h11/2,Band 1,high-confidence-provisional,-,nu-h11/2,"510;642;750;827;892",spin parity gamma energies and configuration all agree,
+CW3,Li 2004,guang-sheng_2004_LifetimesExcited,negative-parity yrast,Band 1,high-confidence-provisional,-,[514]9/2- h11/2,"510;642;750;827;892",Figure 1 sequence agrees with thesis and Singh,
+CW4,Li 2004,guang-sheng_2004_LifetimesExcited,positive-parity yrast,unmapped-positive-sequence,separate,+,[404]7/2+ g7/2,"610;725;796;649",different parity and bandhead from thesis Band 1,Do not merge with Band 1
+CW5,Petrache 1998,petrache_1998_Lifetimemeasurements,yrast highly-deformed band,HD-independent,separate,not-restated,highly-deformed configuration,,Q0 7.3(4) eb and distinct high-spin HD sequence,Do not merge by nucleus or yrast label

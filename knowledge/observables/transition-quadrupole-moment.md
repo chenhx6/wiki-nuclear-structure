@@ -3,7 +3,7 @@ type: observable
 title: 跃迁四极矩
 aliases: [transition quadrupole moment, quadrupole moment, Qt, Q_t, QSD, QND]
 created: 2026-07-03
-updated: 2026-07-05
+updated: 2026-07-28
 status: active
 review_status: unreviewed
 observable_kind: electromagnetic-collectivity
@@ -53,6 +53,16 @@ tags: [e2, lifetime, deformation, superdeformation]
 
 - [[domscheit-1999-triaxial-superdeformation-163lu]]
 - [[babra-2019-deformation-change-136sm]]
+- [[singh-2016-lifetime-131ce-133pr]]
+- [[li-2004-lifetimes-131ce]]
+- [[petrache-1998-highly-deformed-lifetimes-131ce-nd]]
+
+## `131Ce` cross-source boundary
+
+- Singh 2016 的 normal-deformed Band-1-like 序列用寿命得到 `Q_t`；Li 2004 给出同一负宇称谱系及另一条正宇称谱系的早期值。Singh 表中转载/再算的 Li 行不能重复计权。
+- Petrache 1998 报告独立高度形变带的 intrinsic `Q0`。`Q0` 与 normal-deformed `Q_t` 的几何、K mixing 和形变假设不同，只能分层比较，不能直接把比值解释为形变比。
+- 单侧寿命限值与矩限值方向相反：`τ` 上限给 `Q_t` 下限，`τ` 下限给 `Q_t` 上限。
+- 在 pure-E2、branching=1、ICC=0 和 source-specific K 的诊断复算中，Singh 有限点与报道值相容到约 15% 内；该检查不是对完整 side-feeding 分析的替代。
 
 ## Evolution Log
 

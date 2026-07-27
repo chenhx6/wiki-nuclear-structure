@@ -1,11 +1,42 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-26
+updated: 2026-07-28
 ---
 
 # 跨会话交接
 ## Active handoff
+
+Current active task:
+Finalize and validate the local Continuous Research-Learning v2（硅基研究生 V2）release candidate. Li 2004 Table 1 claim-level review is complete; remote main/tag publication remains blocked because the audited science-only push exits at Git authentication even though fetch succeeds.
+
+Current branch / local commit:
+Integration branch `codex/l3-l4-131ce-pilot` is being finalized by amending its sole WIP to `Complete 131Ce lifetime-informed L4 and Continuous Research-Learning v2`. Local science branch `codex/131ce-l3-evidence-pilot@09c12ac` remains a fast-forward descendant of `origin/main@3d7c22a` and contains thesis/L3 science only. The local release branch is rebuilt from that science lineage; no remote update or tag has occurred.
+
+Last task status:
+Three lifetime sources, Paper Cards and reproducible L4 packages are complete. The user accepted Li 2004 `LI04-1`–`LI04-4`; Li and Singh-current remain independent experiments, while Singh's copied Li rows are dependent and excluded from duplicate counting. Singh finite points retain the bounded-null slope `−0.030±0.047 eb/ℏ`. Other mappings and physical conclusions remain provisional. v2 has one canonical autonomy owner and four weekly-self-test policy dry runs.
+
+Unfinished items:
+1. Complete full tests, Wiki lint, QMD, secret/raw/config/ancestry audits and the local release commit.
+2. When Git authentication works, fresh-fetch and publish the already validated fast-forward release candidate to main.
+3. Wait for GitHub Wiki lint to pass, then create and push annotated tag `continuous-research-learning-v2` with message `硅基研究生 V2`.
+
+P0/P1 review focus:
+Resolved P0: Li 2004 `LI04-1`–`LI04-4` visual transcription. Remaining isolated/review-on-use items: provisional Band-1 mapping, Singh/Li copied-row dependency, Petrache HD separation, TRS/CHFB model boundaries and missing Figure 5.5 gated inputs. These do not become formal or high-confidence conclusions in v2.
+
+Risks:
+Git push authentication remains unresolved; do not inspect or rewrite the user's token/credential helper, change global credentials, or force push. `raw/zotero/wiki-inbox.bib` remains protected at entry SHA-256 `D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`, unstaged. User experimental data remain out of scope.
+
+Checks:
+Prior checks: thesis tests 3/3, lifetime tests 6/6 and three Paper Card audits pass. Full system tests, Wiki lint, QMD, public-secret scan and final Git audits are being rerun after release edits. Project config/ACL/hooks/user config were not changed; no user PDF or BibTeX is staged.
+
+Next prompt / continuation phrase:
+After authentication is repaired, send: `继续发布硅基研究生 V2 main 与 tag`。
+
+Recent user decisions:
+The user accepted Li 2004 Table 1 and source-local P0, requested no further blanket scientific review, and authorized full-repository v2 finalization. Li 2004 and Singh 2016 current results are independent experiments; Singh's copied Li rows are not additional evidence, and recency alone does not prove correctness. No remote evidence branch, force push, automatic L4, or premature tag is allowed.
+
+## Previous active handoff (superseded 2026-07-27 before L3/L4 pilot)
 
 Current active task:
 Wiki-scoped filesystem-boundary repair and acceptance are complete: sandbox capability is writable inside `E:\imp\wiki`, read-only outside with `approval_policy=never`, and repository governance remains in force. L3 scientific autonomy is not active and awaits a separate user-started research question.

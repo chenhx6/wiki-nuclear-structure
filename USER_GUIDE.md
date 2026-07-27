@@ -25,15 +25,9 @@ outputs/     审计、报告、文章草稿和演示产物
 
 Wiki 使用项目级 `wiki_l3`：Codex 可维护 `E:\imp\wiki`，Wiki 外只读且 `approval_policy=never`，不存在外部写入提权入口。确需改变外部状态时，Codex 必须停止，由你在 Codex 外手动完成，再由新任务只读核验。其他项目继续使用普通 workspace 权限。Wiki 任务不使用 Computer Use，避免 GUI 程序绕过文件边界。
 
-### 硅基研究生 L0-L4
+### 科研自治入口
 
-- L0：按指定文献精读并摄入；
-- L1：在阅读基础上建立可靠联想和边界；
-- L2：摄入/综合时默认固化通用知识、质疑、验证，并把高价值未决问题写入 `knowledge/questions.md`；
-- L3：调查研究背景和已有工作，形成课题/假设、寻找反证并决定下一步；高价值摄入或每周自测可以自然进入 L3；
-- L4：使用真实、公开或可靠模拟数据实际研究。Codex 先形成 candidate 并 safe suspend，只有你确认数据后才手动启动。
-
-完整定义和每周自测规则只在 `system/workflows/autonomous-research.md` 维护。建议自测时间为每周一 19:20；有实质变化时建立本地 WIP 和 P0/P1 报告，经你审核后才合入并 push main。`wiki_l3` 是文件权限 profile 名称，不是科学等级上限。
+完整 L0–L4、每周自测、P0/P1 和人工关口只在 [autonomous-research workflow](system/workflows/autonomous-research.md) 维护。常用触发示例：`摄入 <文献>` 默认完成 L0–L2；`开始 L3 研究：<问题>` 启动课题调查；L4 必须先有数据候选并由你发送 `开始 <项目> L4：数据=<Wiki 内路径>`。`wiki_l3` 只是文件权限 profile 名称，不是科学等级上限。每周自测有实质变化时先建立本地 WIP 和集中 P0/P1 报告，经你审核后才发布。
 - `system/log.md`：只追加的操作历史；
 - `check.md`：系统与科学质量检查。
 

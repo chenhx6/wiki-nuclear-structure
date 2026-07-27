@@ -1,0 +1,8 @@
+band,representative_spin,excitation_energy_keV,energy_status,source_parity,working_parity,working_parity_provenance,configuration_low_spin,configuration_high_spin,crossing_frequency_MeV_hbar,conflict_status,locator
+1,9/2,,not_transcribed,-,-,Figure 4.1 and Tables 4.1-4.2 user-reviewed working assignment,e/f,e/f x EF,"0.329;0.367",none,"Figure 4.1; Tables 4.1-4.2; Tables 5.1 and 5.3"
+2,7/2,,not_transcribed,+,+,Figure 4.1 and Tables 4.5-4.6 user-reviewed working assignment,a/b,a/b x EF,"0.316;0.316",Table 5.1 prints negative parity probable typo,"Figure 4.1; Tables 4.5-4.6; Section 5.2.2; Tables 5.1 and 5.3"
+3,1/2,61.8,direct_text,+,+,Figure 4.1 and Section 5.2.2 user-reviewed working assignment,c/d,c/d,,none,"Figure 4.1; Section 5.2.2; Table 5.3"
+4,15/2,,not_transcribed,-,-,Figure 4.1 and Table 4.4 user-reviewed working assignment,gamma x e/f,gamma x e/f,,none,"Figure 4.1; Table 4.4; Table 5.3"
+5,15/2,,not_transcribed,+,+,Figure 4.1 Table 4.7 and Section 5.2.2 user-reviewed working assignment,e/f x AE,e/f x AEFG,0.45,Table 5.3 second high-spin row prints e rather than f,"Figure 4.1; Table 4.7; Section 5.2.2; Table 5.3"
+6,31/2,,not_transcribed,-,-,Figure 4.1 and Table 4.3 user-reviewed working assignment,efg/feh,efg/feh,,none,"Figure 4.1; Table 4.3; Table 5.3"
+7,29/2,,not_transcribed,-,-,Figure 4.1 and Table 4.3 user-reviewed working assignment,a/b x AE,a/b x AE,,none,"Figure 4.1; Table 4.3; Table 5.3"

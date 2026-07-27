@@ -1,0 +1,25 @@
+{
+  "run_id": "131ce-lifetime-2016-20260727",
+  "target": {
+    "doi": "10.1007/s12043-016-1218-6",
+    "title": "Lifetime measurements in the yrast band of the gamma-soft nuclei 131Ce and 133Pr",
+    "journal": "Pramana",
+    "year": 2016,
+    "publisher": "Springer Science and Business Media LLC"
+  },
+  "metadata": {
+    "crossref": "verified",
+    "openalex_id": "https://openalex.org/W2432074357",
+    "openalex_oa_status": "closed",
+    "repository_fulltext": false
+  },
+  "download": {
+    "si_choice": "no-si;正文优先，只有正文证明关键 SI 必需时才追加",
+    "nature_downloader_status": "credentials_missing",
+    "oa_attempt": "oa_not_found",
+    "publisher_pdf_probe": "redirected_to_springer_identity_login_html",
+    "pdf_downloaded": false,
+    "final_status": "blocked-needs-source"
+  },
+  "boundary": "No institutional login, global credential change, mirror bypass, or external write was attempted. No numerical or physical claim from the unseen full text was used."
+}

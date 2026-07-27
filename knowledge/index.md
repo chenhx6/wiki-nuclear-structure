@@ -10,6 +10,9 @@ updated: 2026-07-15
 ## Sources
 
 - [[alwaleedi-2013-band-structures-131ce]] - `131Ce` Bands 1–7 的 Gammasphere 纲图、crossing/alignment、组态图与带 `δ=0` 假设的 `B(M1)/B(E2)` 基线。
+- [[singh-2016-lifetime-131ce-133pr]] - `131Ce/133Pr` yrast 带寿命、`Q_t` 与 γ-soft/TRS 解释；2016 当前值与 2004 依赖行分层。
+- [[li-2004-lifetimes-131ce]] - `131Ce` 正负宇称序列的早期 DSAM 寿命与 `Q_t` 原始谱系。
+- [[petrache-1998-highly-deformed-lifetimes-131ce-nd]] - `131Ce` 独立高度形变带 `Q0`、side feeding 与 CHFB 比较。
 - [[meng-2010-open-problems-nuclear-chirality]] - 核手征几何、TAC/PRM 边界、fingerprint ambiguity 与 MχD/shape-coexistence 的 theory/review 背景。
 - [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] - `133Ce` 两对 MχD 候选的 Gammasphere/DCO/角分布事实及 RMF+TPRM 支持链。
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] - `78Br` 两对 MχD、ADO/偏振、八条 E1 links 与 octupole-soft MDC-CDFT/TPRM 证据链。

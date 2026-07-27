@@ -1,0 +1,141 @@
+{
+  "run_id": "131ce-lifetime-update-20260728",
+  "independent_lineages": [
+    "singh2016-current",
+    "li2004-original",
+    "petrache1998-original"
+  ],
+  "excluded_from_independent_count": [
+    "Singh 2016 Table 1 rows attributed to Li 2004"
+  ],
+  "singh_finite_qt_points": 4,
+  "singh_weighted_mean_qt_eb": 2.578943578373181,
+  "singh_weighted_mean_sigma_eb": 0.09866467099839166,
+  "singh_weighted_linear_fit": {
+    "slope_eb_per_hbar": -0.03017498260088472,
+    "slope_sigma": 0.04721469579236458,
+    "intercept_eb": 3.041845171211141
+  },
+  "rotor_cross_checks": [
+    {
+      "row_id": "S15",
+      "predicted_tau_ps": 8.537417557568684,
+      "reported_tau_ps": 9.6,
+      "relative_residual": -0.11068567108659537,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "S27",
+      "predicted_tau_ps": 1.192784732472585,
+      "reported_tau_ps": 1.25,
+      "relative_residual": -0.04577221402193192,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "S31",
+      "predicted_tau_ps": 0.5835528238654173,
+      "reported_tau_ps": 0.51,
+      "relative_residual": 0.14422122326552408,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "S35",
+      "predicted_tau_ps": 0.5878591073677035,
+      "reported_tau_ps": 0.6,
+      "relative_residual": -0.020234821053827422,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "L23",
+      "predicted_tau_ps": 1.1519266607451504,
+      "reported_tau_ps": 1.44,
+      "relative_residual": -0.20005093003809,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "L27",
+      "predicted_tau_ps": 1.0611657032892525,
+      "reported_tau_ps": 1.23,
+      "relative_residual": -0.1372636558623963,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "LP13",
+      "predicted_tau_ps": 1.4471861509725594,
+      "reported_tau_ps": 1.46,
+      "relative_residual": -0.008776608922904479,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "LP17",
+      "predicted_tau_ps": 1.30960054470684,
+      "reported_tau_ps": 1.32,
+      "relative_residual": -0.007878375222090991,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    },
+    {
+      "row_id": "LP21",
+      "predicted_tau_ps": 0.5936832824097291,
+      "reported_tau_ps": 0.6,
+      "relative_residual": -0.010527862650451433,
+      "assumptions": "pure E2; branching=1; ICC=0; source-specific K"
+    }
+  ],
+  "max_abs_rotor_residual_singh": 0.14422122326552408,
+  "hd_q0_to_singh_mean_scale_ratio": 2.8306164048012636,
+  "scale_ratio_warning": "Q0 and Qt use different geometry/shape assumptions; this is a scale comparison, not a direct deformation ratio.",
+  "bm1_be2_delta_scan": [
+    {
+      "delta": -0.5,
+      "ratio_to_delta0": 0.8
+    },
+    {
+      "delta": -0.4,
+      "ratio_to_delta0": 0.8620689655172413
+    },
+    {
+      "delta": -0.3,
+      "ratio_to_delta0": 0.9174311926605504
+    },
+    {
+      "delta": -0.2,
+      "ratio_to_delta0": 0.9615384615384615
+    },
+    {
+      "delta": -0.1,
+      "ratio_to_delta0": 0.9900990099009901
+    },
+    {
+      "delta": 0.0,
+      "ratio_to_delta0": 1.0
+    },
+    {
+      "delta": 0.1,
+      "ratio_to_delta0": 0.9900990099009901
+    },
+    {
+      "delta": 0.2,
+      "ratio_to_delta0": 0.9615384615384615
+    },
+    {
+      "delta": 0.3,
+      "ratio_to_delta0": 0.9174311926605504
+    },
+    {
+      "delta": 0.4,
+      "ratio_to_delta0": 0.8620689655172413
+    },
+    {
+      "delta": 0.5,
+      "ratio_to_delta0": 0.8
+    }
+  ],
+  "belief_revision": {
+    "signature_configuration_coupling": "remains leading for band identity and crossing systematics",
+    "gamma_soft_core_response": "strengthened as a complementary deformation background by band-mapped Qt and TRS, still model-dependent",
+    "shape_coexistence": "raised from unsupported to plausible nuclear-level candidate because an independent HD minimum exists, but not established for thesis Bands 1-7",
+    "chirality": "not established; lifetime points do not supply partner-band electromagnetic symmetry",
+    "wobbling": "not established; no collective out-of-band E2 matrix is added"
+  },
+  "hard_gap": "Alwaleedi Figure 5.5 gated branching intensities remain unavailable; lifetime data are orthogonal and do not reconstruct them."
+}

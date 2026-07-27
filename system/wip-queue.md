@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-07-26
+updated: 2026-07-28
 ---
 
 # Pending WIP queue
@@ -10,15 +10,15 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-- task: Wiki-scoped L3 boundary and Nature-first literature ingress
-- status: finalized local commit, all Wiki boundary and ordinary-project isolation checks pass; not pushed; L3 trial deferred
-- branch: `main`
-- commit: current HEAD local final `Finalize Wiki-scoped L3 boundary and literature ingress`; not pushed
-- files: existing first-phase WIP; project `.codex/config.toml`; permission governance/user-guide/checklist sync; handoff/log/queue
-- review needed: none for the permission boundary; ordinary control showed host `auto_review` as a recorded P1 distinct from Wiki profile leakage
-- overview/QMD: not applicable; no scientific knowledge page changed and QMD refresh is intentionally skipped
-- next action: user may start an L3 trial with a concrete research question or explicitly authorize push
-- risks: host-managed user config hash changed while selected permission fields remained correct; use runtime control rather than whole-file hash. The current WIP remains uncommitted; `raw/zotero/wiki-inbox.bib` must remain unstaged and unchanged from baseline SHA-256 `94C7B0370B4CC75206463E5E5D594E71C2EDFC92DE2E602260CCFB4111667B35`
+- task: Continuous Research-Learning v2 / `131Ce` lifetime-informed L4
+- status: Li 2004 claim-level P0 review complete; L4 completed-provisional; local v2 release candidate in final validation; remote main/tag publication authentication-blocked
+- branch: integration `codex/l3-l4-131ce-pilot`; evidence `codex/131ce-l3-evidence-pilot`
+- commit: integration sole WIP is amended in place as `Complete 131Ce lifetime-informed L4 and Continuous Research-Learning v2`; science-only branch `09c12ac`; release commit is created only after full local validation
+- files: canonical autonomy/governance routes; thesis/L3 science; three lifetime sources and Paper Cards; `outputs/l4/131ce-thesis-baseline/`; `outputs/l4/131ce-lifetime-update/`; v2 audit; handoff/log/queue
+- review needed: no further blanket review in this release; remaining band mapping/model conclusions are provisional and review-on-use
+- overview/QMD: overview and QMD are refreshed on the release branch before publication
+- next action: finish local release audit; after authentication works, fresh-fetch, fast-forward push main, wait for Wiki lint, then create/push the annotated v2 tag
+- risks: direct-main push authentication remains blocked despite successful fetch; Figure 5.5 gated inputs remain missing; L4 conclusions are provisional. `raw/zotero/wiki-inbox.bib` remains protected and unstaged
 
 Continuous Research-Learning v1 completed Gate 2B release approval; publication state is Git-authoritative.
 

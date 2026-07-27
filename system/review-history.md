@@ -1,7 +1,7 @@
 ---
 type: system-review-history
 graph-excluded: true
-updated: 2026-07-25
+updated: 2026-07-28
 ---
 
 # Review history
@@ -81,6 +81,26 @@ This page tracks completed human-review rounds. A review round is recorded when 
 - next action: trigger claim-specific review only when content enters paper writing, a key project decision, synthesis finalization or a paper-level evidence pool
 - related pages: the three experimental source pages, ten theory/review source pages, low-spin wobbling project and synthesis
 - review commit message: Finalize triaxial wobbling source batch review
+
+### 2026-07-27 — `131Ce` L3 scientific assumptions — round 1
+
+- review scope: Alwaleedi 2013 parity map, `B(M1)/B(E2)` mixing-ratio assumption, thesis versus user experimental data identity, and L4 start boundary
+- user decisions: Bands 2/3/5 are provisional positive parity and 1/4/6/7 negative based on Figure 4.1; every derived ratio must carry δ=0; thesis data are the current L4 baseline; the user's independent experiment remains separate
+- corrections requested: verify the 25% statement, preserve Table 5.1 conflict, continue science-only publication, and start thesis-only L4
+- unresolved issues: Figure 5.5 gated branching inputs are unpublished; Singh et al. 2016 full text remains blocked by access
+- next action: centralized review of the L4 report and v2 integration WIP
+- related pages: `knowledge/sources/alwaleedi-2013-band-structures-131ce.md`, `knowledge/projects/131ce-collective-mode-discrimination.md`, `outputs/l4/131ce-thesis-baseline/report.md`
+- review commit message: Validate L3 research scouting for 131Ce collective modes
+
+### 2026-07-28 — Li 2004 lifetime Table 1 and evidence lineage — round 1
+
+- review scope: Li 2004 Table 1 claims `LI04-1`–`LI04-4`, source-local P0, and the Li 2004 / Singh 2016 measurement-lineage distinction
+- user decisions: the visual transcription is accepted; Li 2004 and Singh 2016 current results are independent experiments; Singh's copied/recomputed Li rows are not a third measurement; Singh may serve as a newer working baseline but recency alone does not establish correctness
+- corrections requested: clear `needs_review` only for `LI04-1`–`LI04-4`; preserve `LI04-5` and page-level `unreviewed`; do not use a simple weighted average to adjudicate the two experiments
+- unresolved issues: `LI04-5`, Band-1 mapping and collective-mode interpretation remain provisional and review-on-use; Figure 5.5 gated inputs remain unavailable
+- next action: publish the validated local v2 candidate when Git authentication and remote CI permit; future user `131Ce` data require a separate manifest and mapping
+- related pages: `knowledge/sources/li-2004-lifetimes-131ce.md`, `knowledge/sources/singh-2016-lifetime-131ce-133pr.md`, `knowledge/projects/131ce-collective-mode-discrimination.md`, `outputs/l4/131ce-lifetime-update/report.md`
+- review commit message: Complete 131Ce lifetime-informed L4 and Continuous Research-Learning v2
 
 ## Entry template
 

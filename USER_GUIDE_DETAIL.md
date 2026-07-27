@@ -113,7 +113,7 @@ Wiki 直接支持的事实或判断，会把已实际读取并核实的链接紧
 
 ## 7. How to ingest papers daily / 如何日常摄入论文
 
-用户计划逐步形成每天至少摄入 2 篇 A≈130 质量区理论或实验文献的节奏。质量门优先于数量；每篇仍按独立闭环处理：
+文献摄入与自主研究按问题价值、证据缺口、信息增益和资源成本动态推进，不采用“每天至少若干篇”或固定检索次数等机械指标；每篇仍按独立闭环处理：
 
 1. 用户提供论文，或指定 `raw/papers/` 中的新文件；
 2. Codex 阅读原文，建立或更新 source 页；
@@ -192,7 +192,7 @@ Codex 应自动理解为：本轮人工审核已经结束，可以记录一条 R
 
 文献摄入、project、synthesis、data-analysis-bridge 和 claim-review-update 完成后，Codex 应提供 Human review triage：
 
-- **P0 必须审核**：影响核心科学结论、关键数值/指认、主线综合或论文级证据门的位置。P0 未审核前不建议 final amend 或 push。
+- **P0 优先处置**：影响核心科学结论、关键数值/指认、数据/权限安全或论文级证据门的位置。Codex 可通过自校验、隔离、降级、L3/L4 调查或标记受阻来处置研究型 P0；只有未隔离的 hard P0、正式结论越级或权限/数据风险必须阻止 finalization 与 push。
 - **P1 优先审核**：关键 source claims、evidence matrix、模型假设、跨来源总结、定义和高歧义 aliases。有时间应优先看。
 - **P2 可抽查**：背景摘要、follow-up sources、evidence gaps 和 planning notes，按文件抽查即可。
 - **P3 快速扫过**：index、overview、handoff/log、普通反链、格式和低风险导航。
