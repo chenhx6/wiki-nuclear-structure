@@ -3,13 +3,13 @@ type: system-architecture-update
 graph-excluded: true
 title: Research Autonomy L3 and L4 Foundation
 date: 2026-07-28
-status: local-release-candidate-auth-blocked
+status: released
 branch: codex/continuous-research-learning-v2-release
 ---
 
 # Research Autonomy L3 and L4 Foundation
 
-Release name: **Continuous Research-Learning v2（硅基研究生 V2）**. Planned annotated tag: `continuous-research-learning-v2`; the tag is not created until main push and GitHub Wiki lint succeed.
+Release name: **Continuous Research-Learning v2（硅基研究生 V2）**. Canonical annotated tag: `continuous-research-learning-v2`.
 
 ## Decision
 
@@ -39,6 +39,6 @@ L4 workflow 已通过“真实公开数据 → manifest → 代码/测试 → nu
 
 ## Release state
 
-- Science-only thesis/L3 staging branch 已审计；`fetch` 成功，但 direct-main push 仍停在 Git authentication，未修改全局凭据或远端。
-- 集成 WIP 已获本轮用户审核与收口授权；本地 release candidate 可完成，但在认证和远端 CI 成功前不得写成已发布，也不得创建或推送标签。
-- 恢复发布时必须 fresh fetch、确认可 fast-forward、推送 main、等待 Wiki lint 绿色，再创建 annotated tag `continuous-research-learning-v2`；不 force push。
+- thesis/L3 science-only lineage 与完整 v2 release lineage 均经审计后直接 fast-forward 发布到 `origin/main`；未创建远端 evidence branch，也未使用 force push。
+- Codex push 阻塞来自 Git 调用 repo-local PowerShell credential helper 时的嵌套进程挂起，而不是 PAT repository/workflow scope 不足。发布使用 Codex bundled Git 2.53、命令级 `GIT_EXEC_PATH` 和 repo-local DPAPI 密文包装器，仅在子进程注入精确仓库 URL 的 Authorization header；未修改全局凭据、SSL 校验或系统 Git。
+- 初始 release commit `e3aeebd` 的 GitHub Wiki lint 已通过（run `30373076310`）。最终 annotated tag `continuous-research-learning-v2` 只指向同样通过 Wiki lint 的 main release commit；实际 commit 与远端发布状态以 Git refs 为权威。

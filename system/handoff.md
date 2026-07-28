@@ -8,30 +8,28 @@ updated: 2026-07-28
 ## Active handoff
 
 Current active task:
-The Continuous Research-Learning v2（硅基研究生 V2）local release candidate is complete on its isolated release branch. Li 2004 Table 1 claim-level review is complete. Remote main/tag publication is blocked: Codex bundled Git 2.53 with command-scoped `GIT_EXEC_PATH` can read the public remote, but non-force push dry-run exits 128 without a usable authentication diagnostic.
+Continuous Research-Learning v2（硅基研究生 V2）has completed its repository-wide review and release transaction. Li 2004 Table 1 claim-level review is complete; the L4 workflow is validated while the physical conclusions remain provisional. Git refs are authoritative for the final main commit and annotated tag `continuous-research-learning-v2`.
 
 Current branch / local commit:
-Release branch `codex/continuous-research-learning-v2-release` is rebuilt from `codex/131ce-l3-evidence-pilot@09c12ac` plus the permission, autonomy-governance and finalized L4/v2 commits. Integration final commit is `95896b9`; the release commit message is `Release Silicon Graduate Student V2`. `origin/main` is verified at `3d7c22a`; no remote update or tag has occurred.
+Release branch `codex/continuous-research-learning-v2-release` was rebuilt from the audited science-only lineage plus the permission, autonomy-governance and finalized L4/v2 commits. `e3aeebd` was published to `origin/main` by non-force fast-forward and passed GitHub Wiki lint; the release-state commit carrying this handoff is the final tag target after its own Wiki lint passes.
 
 Last task status:
 Three lifetime sources, Paper Cards and reproducible L4 packages are complete. The user accepted Li 2004 `LI04-1`–`LI04-4`; Li and Singh-current remain independent experiments, while Singh's copied Li rows are dependent and excluded from duplicate counting. Singh finite points retain the bounded-null slope `−0.030±0.047 eb/ℏ`. Other mappings and physical conclusions remain provisional. v2 has one canonical autonomy owner and four weekly-self-test policy dry runs.
 
 Unfinished items:
-1. When bundled-Git authentication works, fresh-fetch and publish the already validated fast-forward release candidate to main.
-2. Do not use system Git 2.55; use Codex bundled Git 2.53 and command-scoped `GIT_EXEC_PATH` pointing to its `mingw64\bin` helper directory.
-3. Wait for GitHub Wiki lint to pass, then create and push annotated tag `continuous-research-learning-v2` with message `硅基研究生 V2`.
+No v2 implementation or blanket scientific-review item remains. The next substantive task begins only when the user supplies a Wiki-local path for the independent `131Ce` data and manually starts a new L4 run.
 
 P0/P1 review focus:
 Resolved P0: Li 2004 `LI04-1`–`LI04-4` visual transcription. Remaining isolated/review-on-use items: provisional Band-1 mapping, Singh/Li copied-row dependency, Petrache HD separation, TRS/CHFB model boundaries and missing Figure 5.5 gated inputs. These do not become formal or high-confidence conclusions in v2.
 
 Risks:
-Git push authentication remains unresolved; do not inspect or rewrite the user's token/credential helper, change global credentials, fall back to system Git 2.55, or force push. `raw/zotero/wiki-inbox.bib` remains protected at entry SHA-256 `D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`, unstaged. User experimental data remain out of scope.
+The push path is repaired only for this repository: `.git/codex-credential/push.ps1` decrypts the existing DPAPI blob at runtime and adds an exact-URL header in the child process. Keep using Codex bundled Git 2.53 from the trusted repository root; do not print the token, use system Git 2.55, change global credentials or force push. `raw/zotero/wiki-inbox.bib` remains protected at entry SHA-256 `D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`, unstaged. User experimental data remain out of scope.
 
 Checks:
-Checks: thesis tests 3/3, lifetime tests 6/6, system tests 10/10 and three Paper Card audits 14/14 pass. Release-checkout Wiki lint has 0 errors; expected `RAW_MISSING` warnings reflect untracked PDFs. QMD update/embed/status succeeded for the canonical collection (249 documents, 1872 vectors). Secret candidates, tracked PDFs and tracked cache/temp are all zero; one personal-path hit remains only in preserved historical `system/log.md`. Config SHA-256 is `988956B8D295C72A4A00B71D5698DAE72904CE8C62A94AC1167AB13552CDFE99`, hooks are absent, ancestry is fast-forwardable and no raw file is staged.
+Checks: thesis tests 3/3, lifetime tests 6/6, system tests 10/10 and three Paper Card audits 14/14 pass. Release-checkout Wiki lint has 0 errors; GitHub Wiki lint run `30373076310` passed for `e3aeebd`. QMD update/embed/status succeeded for the canonical collection (249 documents, 1872 vectors). Secret candidates, tracked PDFs and tracked cache/temp are all zero; one personal-path hit remains only in preserved historical `system/log.md`. Config SHA-256 is `988956B8D295C72A4A00B71D5698DAE72904CE8C62A94AC1167AB13552CDFE99`, hooks are absent and no raw file is staged.
 
 Next prompt / continuation phrase:
-After authentication is repaired, send: `继续发布硅基研究生 V2 main 与 tag`。
+For the next data-backed study, send: `开始 131Ce L4：数据=<Wiki 内路径>；问题=<可省略>`。
 
 Recent user decisions:
 The user accepted Li 2004 Table 1 and source-local P0, requested no further blanket scientific review, and authorized full-repository v2 finalization. Li 2004 and Singh 2016 current results are independent experiments; Singh's copied Li rows are not additional evidence, and recency alone does not prove correctness. No remote evidence branch, force push, automatic L4, or premature tag is allowed.

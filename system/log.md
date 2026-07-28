@@ -796,3 +796,8 @@ updated: 2026-07-15
 - README, PLAN, guides, memory, architecture index, overview and CI paths were aligned to v2. The branch remains a local candidate because direct-main authentication failed; no remote main update or tag is claimed.
 - Canonical QMD update/embed/status completed with 249 documents and 1872 vectors; the collection is bound to the primary worktree, so the release-only overview revision is indexed after main alignment rather than through the isolated worktree.
 - Codex bundled Git 2.53 was retried with command-scoped `GIT_EXEC_PATH` pointed to its actual `mingw64\bin` helpers. Public remote reads succeeded, but non-force push dry-run exited 128 without a usable authentication diagnostic; `origin/main` remained `3d7c22a`, and no tag was created.
+
+## [2026-07-28] release | 硅基研究生 V2 main publication and push repair
+
+- Diagnosed the remaining push failure as a nested Git-to-PowerShell credential-helper hang after GitHub's Basic challenge. A repo-local DPAPI wrapper now supplies the existing fine-grained PAT only as an exact-URL, process-scoped Authorization header to Codex bundled Git 2.53; no plaintext credential, global Git setting, system Git 2.55 or force push was used.
+- Non-force fast-forward publication moved `origin/main` from `3d7c22a` to `e3aeebd`; GitHub Wiki lint run `30373076310` completed successfully. The protected Zotero Inbox and raw PDFs remained unstaged and unmodified.

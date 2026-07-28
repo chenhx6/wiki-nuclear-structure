@@ -7,13 +7,13 @@
 - Evidence Wiki v0 与 Continuous Research-Learning v1 已建立可追溯 source、claim、locator、review、QMD 和 Git 治理。
 - 关键高自旋谱学方法、wobbling/chirality、γ-soft/γ-rigid、shape coexistence、TiP 与 `sigma/I` 证据已形成可复用知识层。
 - Wiki 项目级文件边界完成验收：Wiki 内可写，Wiki 外只读且不可提权，不影响其它项目。
-- Continuous Research-Learning v2 已完成本地 pilot：摄入默认 L2；L3 可调查课题和竞争解释；L4 由用户确认数据后手动启动并形成 manifest、代码、测试、失败检查与 belief revision。
+- Continuous Research-Learning v2（硅基研究生 V2）已完成 pilot 与发布验收：摄入默认 L2；L3 可调查课题和竞争解释；L4 由用户确认数据后手动启动并形成 manifest、代码、测试、失败检查与 belief revision。
 - `131Ce` 已建立 Alwaleedi 2013 结构基线、L3 竞争解释地图，以及 Singh 2016、Li 2004、Petrache 1998 lifetime-informed L4。物理结论保持 provisional。
 
-## 当前发布任务
+## 当前发布状态
 
-- 完成 Continuous Research-Learning v2（硅基研究生 V2）的全仓库检查、去重与公开内容审计。
-- Git 认证恢复后，只以 fast-forward 推送 `main`；GitHub Wiki lint 通过后创建 annotated tag `continuous-research-learning-v2`，不 force push。
+- Continuous Research-Learning v2（硅基研究生 V2）已完成全仓库检查、去重、公开内容审计与非 force fast-forward 发布。
+- canonical Git reference 为 annotated tag `continuous-research-learning-v2`；实际远端状态以 Git ref 和 GitHub Wiki lint 为准。
 
 ## 下一阶段：用户独立 `131Ce` 数据
 
