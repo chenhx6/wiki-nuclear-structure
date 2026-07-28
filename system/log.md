@@ -801,3 +801,9 @@ updated: 2026-07-15
 
 - Diagnosed the remaining push failure as a nested Git-to-PowerShell credential-helper hang after GitHub's Basic challenge. A repo-local DPAPI wrapper now supplies the existing fine-grained PAT only as an exact-URL, process-scoped Authorization header to Codex bundled Git 2.53; no plaintext credential, global Git setting, system Git 2.55 or force push was used.
 - Non-force fast-forward publication moved `origin/main` from `3d7c22a` to `e3aeebd`; GitHub Wiki lint run `30373076310` completed successfully. The protected Zotero Inbox and raw PDFs remained unstaged and unmodified.
+
+## [2026-07-28] maintenance | Wiki-local authenticated push generalized
+
+- Replaced the release-only PowerShell wrapper path with a repository-local native AskPass backed by the existing DPAPI-protected credential; ordinary Git now performs authentication without printing or embedding the token.
+- Codex bundled Git 2.53 and system Git 2.55 both passed exact-refspec branch dry-runs and no-op `main` pushes. Git version is no longer treated as a permission boundary; repository scope, preflight, non-force semantics and explicit push authorization remain mandatory.
+- No global/system Git setting or other project was changed. Failed and legacy helper prototypes were moved to ignored `tmp/git-diagnostic/`; no remote probe ref was created.

@@ -8,31 +8,31 @@ updated: 2026-07-28
 ## Active handoff
 
 Current active task:
-Continuous Research-Learning v2（硅基研究生 V2）has completed its repository-wide review and release transaction. Li 2004 Table 1 claim-level review is complete; the L4 workflow is validated while the physical conclusions remain provisional. Git refs are authoritative for the final main commit and annotated tag `continuous-research-learning-v2`.
+Generalize authenticated Git push for Codex sessions working inside this Wiki without making Git version a permission boundary. Continuous Research-Learning v2（硅基研究生 V2）remains released at the authoritative `origin/main` and annotated tag.
 
 Current branch / local commit:
-Release branch `codex/continuous-research-learning-v2-release` was rebuilt from the audited science-only lineage plus the permission, autonomy-governance and finalized L4/v2 commits. `e3aeebd` was published to `origin/main` by non-force fast-forward and passed GitHub Wiki lint; the release-state commit carrying this handoff is the final tag target after its own Wiki lint passes.
+Local branch `codex/wiki-push-generalization` is based on released main `ecc6b52`. Its checked final commit is `Route Wiki pushes through repo-local AskPass`; no new tracked commit has been pushed.
 
 Last task status:
-Three lifetime sources, Paper Cards and reproducible L4 packages are complete. The user accepted Li 2004 `LI04-1`–`LI04-4`; Li and Singh-current remain independent experiments, while Singh's copied Li rows are dependent and excluded from duplicate counting. Singh finite points retain the bounded-null slope `−0.030±0.047 eb/ℏ`. Other mappings and physical conclusions remain provisional. v2 has one canonical autonomy owner and four weekly-self-test policy dry runs.
+Repository-local native AskPass now supplies the existing DPAPI-protected GitHub credential to ordinary Git. Codex bundled Git 2.53 and system Git 2.55 both passed exact-refspec new-branch dry-runs and actual no-op `main` pushes; neither probe left a remote branch. Failed and legacy helper prototypes were moved to ignored `tmp/git-diagnostic/` and are not configured.
 
 Unfinished items:
-No v2 implementation or blanket scientific-review item remains. The next substantive task begins only when the user supplies a Wiki-local path for the independent `131Ce` data and manually starts a new L4 run.
+Pushing the local governance commit still requires explicit user authorization. The next scientific task begins only when the user supplies a Wiki-local path for the independent `131Ce` data and manually starts a new L4 run.
 
 P0/P1 review focus:
-Resolved P0: Li 2004 `LI04-1`–`LI04-4` visual transcription. Remaining isolated/review-on-use items: provisional Band-1 mapping, Singh/Li copied-row dependency, Petrache HD separation, TRS/CHFB model boundaries and missing Figure 5.5 gated inputs. These do not become formal or high-confidence conclusions in v2.
+No hard P0 is known for the push path. Review focus is limited to repository scope, AskPass path integrity, non-disclosure of the token, exact-refspec dry-run, non-force semantics and the absence of global/system configuration changes.
 
 Risks:
-The push path is repaired only for this repository: `.git/codex-credential/push.ps1` decrypts the existing DPAPI blob at runtime and adds an exact-URL header in the child process. Keep using Codex bundled Git 2.53 from the trusted repository root; do not print the token, use system Git 2.55, change global credentials or force push. `raw/zotero/wiki-inbox.bib` remains protected at entry SHA-256 `D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`, unstaged. User experimental data remain out of scope.
+The repair is intentionally local to this Wiki's `.git/config` and `.git/codex-credential/`; it does not configure other projects. Git version is not a policy boundary, but every selected runtime must pass the same preflight. Never print/decrypt the token for diagnostics, copy the credential files, alter global credentials, disable TLS verification or force push. GitHub, network or token revocation can still cause future failures. `raw/zotero/wiki-inbox.bib` remains protected and unstaged; user experimental data remain out of scope.
 
 Checks:
-Checks: thesis tests 3/3, lifetime tests 6/6, system tests 10/10 and three Paper Card audits 14/14 pass. Release-checkout Wiki lint has 0 errors; GitHub Wiki lint run `30373076310` passed for `e3aeebd`. QMD update/embed/status succeeded for the canonical collection (249 documents, 1872 vectors). Secret candidates, tracked PDFs and tracked cache/temp are all zero; one personal-path hit remains only in preserved historical `system/log.md`. Config SHA-256 is `988956B8D295C72A4A00B71D5698DAE72904CE8C62A94AC1167AB13552CDFE99`, hooks are absent and no raw file is staged.
+Current config inspection confirms repo-local `core.askPass`, exact-URL empty helper reset, scoped username, `useHttpPath=true` and URL-scoped OpenSSL. The active AskPass source/executable hashes match their maintenance record and no complete token pattern is embedded. Both Git runtimes passed the final dry-run/no-op regression; explicit access to the owner-mismatched primary worktree was verified with exact command-scoped `safe.directory`. Wiki lint has 0 errors, all 10 system tests pass, and EOL/diff/staged audits pass.
 
 Next prompt / continuation phrase:
-For the next data-backed study, send: `开始 131Ce L4：数据=<Wiki 内路径>；问题=<可省略>`。
+After reviewing the local patch, send: `推送 Wiki push 泛化补丁`。For the next data-backed study, send: `开始 131Ce L4：数据=<Wiki 内路径>；问题=<可省略>`。
 
 Recent user decisions:
-The user accepted Li 2004 Table 1 and source-local P0, requested no further blanket scientific review, and authorized full-repository v2 finalization. Li 2004 and Singh 2016 current results are independent experiments; Singh's copied Li rows are not additional evidence, and recency alone does not prove correctness. No remote evidence branch, force push, automatic L4, or premature tag is allowed.
+The user clarified that the objective is reliable push from Codex working in this Wiki and that Git version numbers are not restriction objects. System Git 2.55 and bundled Git 2.53 are both acceptable after repository-level validation. The generalization must affect only this Wiki; force push remains prohibited.
 
 ## Previous active handoff (superseded 2026-07-27 before L3/L4 pilot)
 

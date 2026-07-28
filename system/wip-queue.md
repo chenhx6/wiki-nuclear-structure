@@ -10,7 +10,14 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-None. The Continuous Research-Learning v2 release is closed; a future user-data-backed `131Ce` L4 run becomes a new entry only after the user supplies a Wiki-local data path and manually starts it.
+### Wiki-local authenticated push generalization
+- status: checked local final commit; not pushed
+- branch: `codex/wiki-push-generalization`
+- commit: planned local final commit `Route Wiki pushes through repo-local AskPass`
+- files: `AGENTS.md`, `check.md`, Active handoff, WIP queue and log; authentication executable and DPAPI state remain ignored local Git metadata
+- review needed: confirm version-agnostic Git wording and Wiki-only scope before push
+- next action: wait for explicit push authorization, then rerun push preflight and fast-forward `main` without force
+- risks: token must never enter output or history; no global/system credential changes and no force push
 
 Continuous Research-Learning v1 completed Gate 2B release approval; publication state is Git-authoritative.
 

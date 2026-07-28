@@ -103,6 +103,16 @@ Test-Path 'C:\Program Files\Git\bin\git.exe'
 
 若仍找不到 Git，停止并报告执行环境问题；不得假设仓库状态，也不得跳过提交边界审查。不要安装 Git、修改系统 `PATH`，或用其他工具替代 Git 状态检查。
 
+## Wiki authenticated Git push runtime
+
+Git 版本号不是本 Wiki 的 push 权限边界。可使用当前 Wiki 会话中可用且通过仓库级认证预检的 Git；`PATH` 中的 system Git、Codex bundled Git 或其它已知运行时均不因版本号本身被允许或拒绝。切换运行时时不得修改系统 `PATH`；若 bundled Git 需要 `GIT_EXEC_PATH`，只为该命令设置为同一 Git 发行版的路径。
+
+若某个显式 `-C E:\imp\wiki` 调用因沙箱身份与目录所有者不同而触发 dubious-ownership，只能为该条命令增加 `-c safe.directory=E:/imp/wiki`，不得写入 global/system `safe.directory`，也不得把通配符或其它项目加入信任范围。Codex 已为当前工作目录注入精确的命令级 safe-directory 时无需重复设置。
+
+当前 Wiki 的认证仅由该仓库 `.git/config` 中的 repo-local AskPass 提供：URL-scoped helper 为空重置、用户名限定到本仓库 URL，`core.askPass` 指向 common Git dir 下受保护的 DPAPI executable。该 executable、密文和熵文件都属于本地 Git metadata，不得读取/输出 token、不得暂存或提交，也不得复制到其它项目。
+
+用户明确授权 push 且 `check.md` H3 全部通过后，对同一精确 refspec 先 dry-run、再非 force push。某个 Git 运行时未通过 dry-run 时，可以改用另一已知运行时重新执行完整预检；若 AskPass 缺失、配置不再是 repo-local、所有可用运行时均失败或远端发生未知漂移，停止并报告。不得修改全局凭据、SSL 校验或权限边界，也不得使用旧 PowerShell credential helper 作为自动回退。完整检查由 `check.md` 维护，本节不复制第二套清单。
+
 ## Git write-entry / commit / push preflight
 
 `check.md` 的 `Git write-entry / commit / push preflight` 是完整权威清单。纯读取、搜索、普通问答和只给建议不运行清理脚本；任何会新增、删除、移动、重命名或修改仓库文件的任务，必须在第一次写入前运行 status、`system/scripts/clean_knowledge_eol_dirty.ps1` 和再次 status，并建立当前会话的 dirty baseline。脚本 exit code `1` 表示仍有 substantive/mixed/unsafe knowledge 状态，需要按本轮授权范围、既有 WIP 和 baseline 分类，不是无条件中断；exit code `2` 必须停止写操作并报告。

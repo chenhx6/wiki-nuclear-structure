@@ -274,6 +274,10 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] commit 后、push 前已重新运行清理脚本，再运行 `git status -sb`、`git status --short`、`git diff --stat`、`git diff --cached --name-only` 和 `git diff --cached --check`。
 - [ ] commit 后新出现的 unrelated `knowledge/**/*.md` 已按脚本结果和 baseline 分类；无法确认无实质差异、存在 mixed/conflict 或 overlap 未解决时没有 push。
 - [ ] 没有提交 LF/CRLF-only dirty state；脚本未审批科学修改，也未替代 Codex 对授权范围、baseline 和 pending WIP 归属的判断。
+- [ ] 已记录实际使用的 Git executable 与 `git --version`；Git 版本号不作为许可或拒绝条件。normal/system Git 与 Codex bundled Git 均可使用，但所选运行时必须通过以下仓库级预检；若 bundled Git 需要 `GIT_EXEC_PATH`，仅对该命令使用同一发行版的路径，未修改系统 `PATH`。
+- [ ] `git rev-parse --git-common-dir` 已解析到当前 Wiki 的 common Git dir；若主工作树触发 dubious-ownership，只对该条命令使用精确的 `-c safe.directory=E:/imp/wiki`，未写 global/system `safe.directory`、通配符或其它项目路径。
+- [ ] `.git/config` 的 AskPass、精确仓库 URL-scoped empty helper reset 和用户名均为 repo-local。AskPass 位于该 common Git dir 的受保护 credential 目录，未读取、打印、复制、暂存或提交 token/DPAPI 文件。
+- [ ] fresh fetch、remote ref 和 ancestry 检查通过后，已对最终精确 refspec 执行 `push --dry-run`，再使用同一 refspec 非 force push。某个 Git 运行时失败时，只可改用另一已知运行时重新执行完整预检；认证或远端状态仍异常时已停止，未修改全局凭据、SSL 校验或权限边界，也未回退到旧 PowerShell credential helper。
 
 - [ ] Git 工作树状态已检查；用户已有修改未被覆盖。
 - [ ] `.gitignore` 没有把应持久化的 Markdown 知识页排除。
