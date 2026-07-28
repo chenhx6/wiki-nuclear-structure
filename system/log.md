@@ -807,3 +807,8 @@ updated: 2026-07-15
 - Replaced the release-only PowerShell wrapper path with a repository-local native AskPass backed by the existing DPAPI-protected credential; ordinary Git now performs authentication without printing or embedding the token.
 - Codex bundled Git 2.53 and system Git 2.55 both passed exact-refspec branch dry-runs and no-op `main` pushes. Git version is no longer treated as a permission boundary; repository scope, preflight, non-force semantics and explicit push authorization remain mandatory.
 - No global/system Git setting or other project was changed. Failed and legacy helper prototypes were moved to ignored `tmp/git-diagnostic/`; no remote probe ref was created.
+
+## [2026-07-29] publication | Wiki-local authenticated push generalization
+
+- After fresh fetch, repository-scope, secret/raw, ancestry, lint and system-test checks, system Git 2.55 published `dee0b36` to `origin/main` by exact-refspec non-force fast-forward.
+- Local HEAD, the tracking ref and remote `main` agreed after the push. The protected Zotero Inbox remained unstaged; no global/system credential, SSL, PATH, permission or other-project setting changed.

@@ -1,38 +1,38 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-28
+updated: 2026-07-29
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Generalize authenticated Git push for Codex sessions working inside this Wiki without making Git version a permission boundary. Continuous Research-Learning v2（硅基研究生 V2）remains released at the authoritative `origin/main` and annotated tag.
+Wiki-local authenticated Git push generalization is complete and published. Continuous Research-Learning v2（硅基研究生 V2）remains released at the authoritative `origin/main` and annotated tag.
 
 Current branch / local commit:
-Local branch `codex/wiki-push-generalization` is based on released main `ecc6b52`. Its checked final commit is `Route Wiki pushes through repo-local AskPass`; no new tracked commit has been pushed.
+Functional commit `dee0b36` (`Route Wiki pushes through repo-local AskPass`) was published to `origin/main` by non-force fast-forward. This publication-state commit closes the pending queue; Git refs remain authoritative.
 
 Last task status:
-Repository-local native AskPass now supplies the existing DPAPI-protected GitHub credential to ordinary Git. Codex bundled Git 2.53 and system Git 2.55 both passed exact-refspec new-branch dry-runs and actual no-op `main` pushes; neither probe left a remote branch. Failed and legacy helper prototypes were moved to ignored `tmp/git-diagnostic/` and are not configured.
+Repository-local native AskPass supplies the existing DPAPI-protected GitHub credential to ordinary Git. System Git 2.55 performed the final authenticated publication; system Git 2.55 and bundled Git 2.53 both previously passed exact-refspec probes, and no probe branch remains. Failed and legacy helper prototypes stay ignored and unconfigured under `tmp/git-diagnostic/`.
 
 Unfinished items:
-Pushing the local governance commit still requires explicit user authorization. The next scientific task begins only when the user supplies a Wiki-local path for the independent `131Ce` data and manually starts a new L4 run.
+No push-generalization implementation or publication item remains. The next scientific task begins only when the user supplies a Wiki-local path for the independent `131Ce` data and manually starts a new L4 run.
 
 P0/P1 review focus:
-No hard P0 is known for the push path. Review focus is limited to repository scope, AskPass path integrity, non-disclosure of the token, exact-refspec dry-run, non-force semantics and the absence of global/system configuration changes.
+No hard P0 remains for the push path. Future push failures should be diagnosed without exposing the token or changing global/system configuration; remote drift, token revocation and network failures remain ordinary stop conditions.
 
 Risks:
 The repair is intentionally local to this Wiki's `.git/config` and `.git/codex-credential/`; it does not configure other projects. Git version is not a policy boundary, but every selected runtime must pass the same preflight. Never print/decrypt the token for diagnostics, copy the credential files, alter global credentials, disable TLS verification or force push. GitHub, network or token revocation can still cause future failures. `raw/zotero/wiki-inbox.bib` remains protected and unstaged; user experimental data remain out of scope.
 
 Checks:
-Current config inspection confirms repo-local `core.askPass`, exact-URL empty helper reset, scoped username, `useHttpPath=true` and URL-scoped OpenSSL. The active AskPass source/executable hashes match their maintenance record and no complete token pattern is embedded. Both Git runtimes passed the final dry-run/no-op regression; explicit access to the owner-mismatched primary worktree was verified with exact command-scoped `safe.directory`. Wiki lint has 0 errors, all 10 system tests pass, and EOL/diff/staged audits pass.
+Final pre-push checks confirmed repo-local AskPass/config scope, clean publication worktree, protected user BibTeX, no secret/raw content in the commit, fast-forward ancestry and exact-refspec dry-run. Wiki lint has 0 errors, all 10 system tests pass, and local HEAD, `origin/main` and remote `main` agreed at `dee0b36` after the functional push.
 
 Next prompt / continuation phrase:
-After reviewing the local patch, send: `推送 Wiki push 泛化补丁`。For the next data-backed study, send: `开始 131Ce L4：数据=<Wiki 内路径>；问题=<可省略>`。
+For the next data-backed study, send: `开始 131Ce L4：数据=<Wiki 内路径>；问题=<可省略>`。
 
 Recent user decisions:
-The user clarified that the objective is reliable push from Codex working in this Wiki and that Git version numbers are not restriction objects. System Git 2.55 and bundled Git 2.53 are both acceptable after repository-level validation. The generalization must affect only this Wiki; force push remains prohibited.
+The user authorized publishing the Wiki push generalization and clarified that Git version numbers are not restriction objects. Any runtime that passes the repository-level preflight is acceptable; the setup remains Wiki-only and force push remains prohibited.
 
 ## Previous active handoff (superseded 2026-07-27 before L3/L4 pilot)
 
