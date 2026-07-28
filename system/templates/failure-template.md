@@ -5,7 +5,7 @@ aliases: []
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 status: active
-review_status: human-reviewed
+review_status: unreviewed
 project:
 failure_date: YYYY-MM-DD
 revive_when:
@@ -27,4 +27,3 @@ tags: []
 ## Lesson
 
 ## Revival Conditions
-

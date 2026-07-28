@@ -1,97 +1,56 @@
-# Wiki 阶段计划与用户备忘
+# Wiki 阶段计划（用户拥有）
 
-> 本文件由用户拥有和维护。Agent 仅在任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、多步骤知识库建设，或用户明确要求时读取；除非用户明确要求，不得覆盖、重写、删除或重排其中内容。
+> 本文件由用户拥有和维护。Agent 仅在用户明确要求时修改；它记录宏观方向、研究优先级和未来问题，不替代执行日志、WIP queue 或 handoff。
 
-## 当前阶段目标
+## 已完成里程碑
 
-第一版 Wiki 结构、代表性文献摄入和自动 lint 已经建立。当前目标是补齐关键原始证据链，并让知识库开始服务一个真实研究项目，而不是只作为文献百科。
+- Evidence Wiki v0 与 Continuous Research-Learning v1 已建立可追溯 source、claim、locator、review、QMD 和 Git 治理。
+- 关键高自旋谱学方法、wobbling/chirality、γ-soft/γ-rigid、shape coexistence、TiP 与 `sigma/I` 证据已形成可复用知识层。
+- Wiki 项目级文件边界完成验收：Wiki 内可写，Wiki 外只读且不可提权，不影响其它项目。
+- Continuous Research-Learning v2 已完成本地 pilot：摄入默认 L2；L3 可调查课题和竞争解释；L4 由用户确认数据后手动启动并形成 manifest、代码、测试、失败检查与 belief revision。
+- `131Ce` 已建立 Alwaleedi 2013 结构基线、L3 竞争解释地图，以及 Singh 2016、Li 2004、Petrache 1998 lifetime-informed L4。物理结论保持 provisional。
 
-## 待办事项
+## 当前发布任务
 
-1. 将 2020 `137Nd`、2021 `131Ba/133Ce` 加入 Zotero `Wiki Inbox`，回填 citation key；
-2. 摄入 `133Ce` 2013 MχD 原始论文；
-3. 摄入 `131Ba` 手征带原始论文；
-4. 补充 `137Nd`、`133Ce` 等核素的寿命、B(M1)、B(E2) 原始测量；
-5. 确认 GitHub 的 `Wiki lint` Action 为绿色。
-6. 继续补充 `ionescu_1981_Improvedanalysis`：关注用 branching ratios 提取、且带模型依赖的混合比 `delta` 证据，并补入 source 页。
+- 完成 Continuous Research-Learning v2（硅基研究生 V2）的全仓库检查、去重与公开内容审计。
+- Git 认证恢复后，只以 fast-forward 推送 `main`；GitHub Wiki lint 通过后创建 annotated tag `continuous-research-learning-v2`，不 force push。
 
-## 中期计划
+## 下一阶段：用户独立 `131Ce` 数据
 
-在 `knowledge/projects/` 建立第一个真实研究项目页，例如“A≈130 某核素的 wobbling/chirality 竞争解释”。项目页记录：
+用户提供 Wiki 内数据路径并手动启动 L4 后：
 
-- 当前研究问题；
-- 数据和核素；
-- 候选组态；
-- 已有证据；
-- 缺失观测量；
-- 当前分析状态；
-- 下一步计算或实验任务。
+1. 为独立实验建立单独 manifest，记录身份、哈希、单位、不确定度、校准、角度覆盖和处理版本；
+2. 完成 level/band/transition identity mapping，不预设其扩展博士论文能级纲图；
+3. 与 thesis 和 lifetime 数据分层比较，不静默合并统计量或重复证据；
+4. 依据数据实际包含的偏振、角关联、mixing ratio、寿命或符合关系，选择能够最大改变解释排序的分析；
+5. 结果先作为 provisional finding，只有通过针对性科学审核后才能进入正式论文结论。
 
-下一步充实 tilted precession（TiP）相关的理论与实验知识，重点整理 TiP 的角动量几何、与 wobbling 的判别边界、代表性模型计算和原始实验案例。
+启动格式：
 
-## 形变背景层与 `131Ce` 数据分析
-
-wobbling 相关知识之后，下一阶段补充 γ-soft / γ-rigid / stable triaxial、shape coexistence、band crossing 与自旋驱动形变演化等形变背景层。该层面服务后续 `131Ce` 数据分析：在讨论 wobbling、chirality、signature partner 或其他具体物理模式前，先尽量判断核形变背景与证据强弱，避免由主观先验过早指认一个数据层面并不充分支持的物理图像。
-
-这些内容在本页只作为研究方向和好奇心备忘，不展开具体文献、判据或结论；具体来源、证据分层与综合判断留给 source、project 或 synthesis 页面处理。
-
-未来建立“γ-soft→γ-rigid / stable-triaxial transition”专题摄入链。该方向是当前 A≈130 核结构研究的重要问题，优先补充：
-
-- 跨自旋或带交叉的寿命、绝对 B(E2)、`Q_t` 与 E2 matrix elements；
-- 由 Coulomb excitation 或其他多矩阵元分析得到的形状不变量与 γ 涨落约束；
-- 同一核、同一 γ 约定和尽量 common input 下，允许 γ 涨落的集体模型与固定三轴模型比较；
-- pairing、奇粒子-芯耦合、shape coexistence 与准粒子对齐对 soft-to-rigid localization 的影响；
-- `131Ce/133Ce` 及相关 A≈130 核的 nucleus-specific sources，避免用 `136Sm` 或偶偶邻核直接替代；
-- 手征双重带与 wobbling bands 作为稳定三轴形变研究的重要候选集体指纹，同时分别保留其模式判据、竞争解释与“候选带不单独证明 γ-rigid”的证据边界。
-
-Lawrie 2020 *Tilted precession and wobbling in triaxial nuclei* 与 Lv 2021 `135Nd` tilted-precession 原始文献现已进入 `raw/papers/` 和 `wiki-inbox.bib`。完成这两篇来源摄入后，启动 `knowledge/projects/low-spin-wobbling-controversies.md` umbrella project，把 `135Pr`、`187Au` 及后续直接 counter-source 按 observed facts、experimental criteria、author interpretations 与 model results 分层比较；在此之前不提前建立空壳页面。
-
-## 长期节奏
-
-- 每篇论文：一次精确摄入；
-- 每 5 篇相关论文：做一次 synthesis；
-- 每 10 篇：做一次系统审计；
-- 每周：查看 [knowledge/questions.md](knowledge/questions.md) 和 [system/handoff.md](system/handoff.md)；
-- 开始写文章前：先建立证据矩阵，再生成正文。
-
-## 当前边界
-
-暂时不批量导入全部 Zotero 文献，不堆积 Obsidian 插件。QMD 已在 Windows 启用，当前只索引 `knowledge/**/*.md`，作为 Agent 的本地候选检索层；它不替代 source/raw 核验，不接管 Git，也不推动批量摄入。当前仍优先补齐关键原始论文，并让知识库服务真实研究项目。
-
-## 暂缓事项：QMD MCP 常驻服务接入
-
-QMD 已通过 CLI 正式接入 Wiki，并采用 project-local 索引。当前阶段暂不接入 QMD MCP daemon / 常驻服务。
-
-当前策略：
-
-- 已知页面优先直接读取；
-- 精确核素、作者、DOI、术语与关键词使用 `rg` 或 `qmd search`；
-- 机制、近义表达和概念关联使用 `qmd vsearch`；
-- 复杂跨文献综合时才使用完整 `qmd query`；
-- QMD 结果只作为候选导航，不能替代完整页面、source 页面和 raw 原始材料核验；
-- 知识更新后继续使用 CLI 执行 `qmd.cmd update` 和 `qmd.cmd embed -c nuclear-knowledge`；
-- 禁止使用 `qmd update --pull`，避免 QMD 操作 Git。
-
-暂缓 MCP 常驻服务的原因是：当前 Wiki 仍处于真实科研查询试运行阶段，CLI 已能覆盖关键词检索、语义检索、混合检索和全文回读；过早接入 MCP daemon 会增加后台服务、路径、环境变量和资源占用等维护成本。
-
-后续满足以下情况时再重新评估是否接入：
-
-- 已完成约 10 次真实科研查询，并确认 QMD 召回质量稳定；
-- 经常需要 Agent 自动调用 Wiki 检索，而不是人工手动执行 QMD 命令；
-- 完整 hybrid 查询的冷启动时间成为明显负担；
-- Wiki 页面规模显著扩大，且反复加载模型影响工作流效率。
-
-可能的后续命令仅作为备忘：
-
-```powershell
-qmd.cmd mcp --http --daemon
+```text
+开始 131Ce L4：数据=<Wiki 内路径>；问题=<可省略>
 ```
 
-在正式接入前，不将 MCP daemon 写入默认启动流程，也不要求每次会话自动开启。
+## 真实证据缺口
 
-## 维护规则
+- Alwaleedi Figure 5.5 的 gated branching intensities；
+- Bands 1–7 连接跃迁的 measured mixing ratio `δ`、符号与线偏振；
+- 伙伴带之间可比较的 absolute `B(E2)`、`B(M1)`、`Q_t` 与带间/带内矩阵；
+- normal-deformed 与 highly-deformed 序列之间的 linking/decay-out、混合或共同形变不变量；
+- 能把 signature/configuration coupling、γ-soft core response、chirality、wobbling 和 shape coexistence 明确区分的最小 observable 组合。
 
-- 用户负责决定和维护本文件中的阶段目标、优先级与备忘；
-- Agent 仅在任务涉及阶段计划、研究优先级、文献选择方向、项目建立、长期探索方向、多步骤知识库建设，或用户明确要求时读取本文件；
-- Agent 不得擅自覆盖、重写、删除或重排本文件内容；
-- 只有用户明确要求时，Agent 才能修改本文件。
+## 动态研究节奏与每周自测
+
+- 不采用“每天至少若干篇”或“每 5/10 篇固定综合”的机械指标；是否继续、暂停或进入 L3 取决于问题价值、信息增益、证据充分度、资源成本和权限边界。
+- 每周自测用于纠正知识、发现反证和形成高价值问题；可自然进入 L3，但 L4 candidate 必须 safe suspend 并等待用户确认数据和手动启动。
+- 有实质变化时建立本地 commit 与 P0/P1 报告；用户集中审核后才能 push。无实质变化时不制造空 commit。
+- 自动调度尚未创建；未来由用户在 Codex 应用中启用后，Wiki 只记录并核验真实运行回执。
+
+## QMD MCP 暂缓
+
+当前继续使用 project-local QMD CLI 作为 `knowledge/**/*.md` 的可重建候选检索层。MCP daemon/常驻服务暂缓，直到多轮真实查询表明 CLI 成为稳定瓶颈且收益超过后台服务、路径与资源维护成本；QMD 不接管 Git，也不替代 source/raw 复核。
+
+## 维护边界
+
+- 用户维护本文件中的阶段目标、优先级和备忘；Agent 不把它改写为 cite-key 清单或执行流水账。
+- 当前执行事实写入 `system/handoff.md`，未完成检查点写入 `system/wip-queue.md`，历史事件追加到 `system/log.md`。

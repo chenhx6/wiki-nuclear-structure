@@ -4,19 +4,27 @@ on:
   push:
     paths:
       - ".github/workflows/wiki-lint.yml"
+      - "README.md"
+      - "PLAN.md"
       - "knowledge/**"
       - "system/**"
       - "AGENTS.md"
       - "USER_GUIDE.md"
+      - "USER_GUIDE_DETAIL.md"
+      - ".agents/skills/wiki-evidence-query/**"
       - "check.md"
       - "profile.md"
   pull_request:
     paths:
       - ".github/workflows/wiki-lint.yml"
+      - "README.md"
+      - "PLAN.md"
       - "knowledge/**"
       - "system/**"
       - "AGENTS.md"
       - "USER_GUIDE.md"
+      - "USER_GUIDE_DETAIL.md"
+      - ".agents/skills/wiki-evidence-query/**"
       - "check.md"
       - "profile.md"
   workflow_dispatch:

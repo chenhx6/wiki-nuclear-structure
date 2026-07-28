@@ -789,3 +789,10 @@ updated: 2026-07-15
 
 - The user accepted the visual transcription for LI04-1–4 while keeping LI04-5 and the source page unreviewed; Li 2004 and Singh 2016 current results remain independent experiments, but Singh's copied Li rows are dependency-only and are not counted again.
 - Continuous Research-Learning v2 local finalization is authorized. Science-only direct-main push still exits at authentication after a successful fetch, so remote main/tag publication remains blocked without changing credentials or force pushing.
+
+## [2026-07-28] release-candidate | 硅基研究生 V2 local topology rebuilt
+
+- Rebuilt `codex/continuous-research-learning-v2-release` from the audited science-only lineage, then replayed the permission boundary, canonical autonomy governance and finalized lifetime-informed L4 changes without duplicating thesis/L3 science commits.
+- README, PLAN, guides, memory, architecture index, overview and CI paths were aligned to v2. The branch remains a local candidate because direct-main authentication failed; no remote main update or tag is claimed.
+- Canonical QMD update/embed/status completed with 249 documents and 1872 vectors; the collection is bound to the primary worktree, so the release-only overview revision is indexed after main alignment rather than through the isolated worktree.
+- Codex bundled Git 2.53 was retried with command-scoped `GIT_EXEC_PATH` pointed to its actual `mingw64\bin` helpers. Public remote reads succeeded, but non-force push dry-run exited 128 without a usable authentication diagnostic; `origin/main` remained `3d7c22a`, and no tag was created.

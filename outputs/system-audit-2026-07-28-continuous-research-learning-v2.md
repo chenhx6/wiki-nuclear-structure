@@ -16,7 +16,7 @@ Audit the canonical ownership, trigger logic, weekly self-test behavior, `131Ce`
 
 ## P0
 
-1. **Science-only main push:** blocked at Git authentication. `fetch origin` succeeds through the repo-local URL-scoped OpenSSL setting; the audited science branch is fast-forwardable and contains no governance/L4/raw/config files. No remote mutation occurred.
+1. **Remote publication:** blocked at Git authentication. Codex bundled Git 2.53 with command-scoped `GIT_EXEC_PATH` can read `origin/main`, but non-force push dry-run exits 128 without a usable diagnostic. The audited release candidate preserves fast-forward ancestry and contains no user PDFs or Zotero changes. System Git 2.55, force push and credential reconfiguration were not used; no remote mutation or tag creation occurred.
 2. **Formal science status:** all lifetime-informed physical conclusions remain provisional. Li 2004 Table 1 claims LI04-1–4 passed claim-level human visual review; LI04-5, the source page as a whole, band mapping and model interpretation remain unreviewed or review-on-use. Singh/Li dependency and Petrache HD identity are isolated in data lineage.
 3. **Permission/raw:** `.codex/config.toml`, ACLs, hooks, user config and other projects were not changed. The three user PDFs and `wiki-inbox.bib` were read-only and excluded from staging.
 
@@ -25,7 +25,7 @@ Audit the canonical ownership, trigger logic, weekly self-test behavior, `131Ce`
 - `system/workflows/autonomous-research.md` remains the sole full owner of L0–L4, statuses, weekly self-test and manual L4 gate.
 - `USER_GUIDE.md` no longer carries a second level-by-level definition; it provides trigger examples and a canonical link.
 - The architecture update was compressed from a duplicate operating manual to a decision record, permission-repair conclusion, pilot result and release state.
-- README remains v1 until final release; no premature v2 claim was written.
+- The isolated release branch identifies itself as v2 while explicitly recording `local-release-candidate-auth-blocked`; remote publication is not claimed.
 - query/ingest/reflect and Wiki evidence-query Skill are short routers; `check.md` remains executable acceptance criteria rather than a second workflow.
 
 ## Weekly self-test dry runs

@@ -1,7 +1,7 @@
 ---
 type: system-memory
 graph-excluded: true
-updated: 2026-07-26
+updated: 2026-07-28
 ---
 
 # 长期记忆
@@ -22,7 +22,7 @@ updated: 2026-07-26
 - 用户在仓库根目录维护 `PLAN.md`，用于宏观阶段计划、个人好奇心备忘和研究方向草稿；它由用户拥有，不是 cite-key 文献清单、执行日志或 Agent 可自由改写的任务列表。
 - `PLAN.md` 按任务条件读取并管理方向与优先级；`system/handoff.md` 管理最近执行事实与交接细节。无法分类的冲突必须询问用户。
 - 执行余量不足且任务无法稳定完成时进入 safe suspend：停止扩大范围、完成 Git 检查、写完整 handoff，并等待用户在额度刷新后发送“继续”；不自动 push，若大量 diff 或恢复风险符合门槛，可创建本地 WIP checkpoint，但它不等于 review finalization 或 push 授权。
-- 当前系统为 Continuous Research-Learning v1（硅基研究生），是面向低能核结构研究的 Human-in-the-loop research Wiki；支持可追溯证据、分析性重建、竞争解释、迁移/失效边界、反向检验、受控暂定研究推理和人工审阅。ordinary Q&A 保持轻量，Wiki 不是最终权威，也不保证文献完整性。
+- 当前系统为 Continuous Research-Learning v2（硅基研究生 V2），是面向低能核结构研究的 Human-in-the-loop research Wiki；摄入默认运行 L0–L2，高价值问题可进入 L3，L4 必须由用户确认数据后手动启动并形成可复现分析。完整等级、状态、每周自测和人工关口只由 `system/workflows/autonomous-research.md` 维护；ordinary Q&A 保持轻量，Wiki 不是最终权威，也不保证文献完整性。
 - Review status 是核查元数据，不是检索、可见性、科学价值或知识资格门槛。高相关、高信息增益的未审核内容应主动呈现，并说明其可能贡献、review/source/locator 状态和核查路径；不机械罗列低相关内容。
 - `human-reviewed` 不表示永久正确、完整或已穷尽文献知识；已审核内容仍可被质疑、重新核验、纠正和继续挖掘。页面整体 `unreviewed` 不妨碍针对具体 claim 完成直接来源核验。
 - Paper admission 针对具体 claim、拟用措辞和使用语境，并需要用户明确确认。局部 claim 核验不能自动改变整页或其它 claims 的 `review_status` / `needs_review`；Codex 只有在用户明确授权相应状态更新后才能修改。
@@ -33,7 +33,7 @@ updated: 2026-07-26
 - 文献摄入和科学内容修改默认本地 WIP、用户审核后 amend 为 final；推荐审核完成当前摄入后再开始下一篇。允许多个 pending WIP，但共享文件必须在写入前选择合并原 WIP、记录依赖或暂缓，不得静默重叠。方案和验收已确认、无科学内容且检查通过的治理/框架/脚本任务可直接 final commit。
 - 日常建设坚持一次摄入一篇论文，并在每次摄入后列出新增 claim、待审 claim、竞争解释和证据缺口。
 - Wiki 仓库内自有 Skill 仍只保留 `.agents/skills/wiki-evidence-query` 这一证据型知识问答入口；ingest/reflect/lint 等 Wiki 治理流程稳定后再考虑仓库内封装。
-- Nature Skills 已按用户要求全量安装为 Codex 全局 skills：stable clone 位于 `C:\Users\22721\ai-skills\nature-skills`，同步目标为 `C:\Users\22721\.codex\skills`。2026-07-26 已更新至 `8d674eb50454d4b49d3e0be625a121ad4863840b`，安装 19 个顶层 skills；`nature-shared` 已替代旧 `_shared`，并新增 `nature-paper-card`。后续优先使用该 clone 的 `scripts/update-codex-skills.sh --pull`、`--prune` 和 `--check`；Windows 环境缺少 `rsync` 时，可采用仅限 manifest 所列 Nature 目录的受控镜像同步与逐文件哈希核验。这些写作、阅读、图件、引用、返修等外部 skills 是科研写作辅助层，不能覆盖 Wiki evidence policy、paper evidence gate、source/raw locator 复核和用户科学判断。
+- Nature Skills 已按用户要求全量安装为 Codex 全局 skills：stable clone 位于 `%USERPROFILE%\ai-skills\nature-skills`，同步目标为 `%USERPROFILE%\.codex\skills`。2026-07-26 已更新至 `8d674eb50454d4b49d3e0be625a121ad4863840b`，安装 19 个顶层 skills；`nature-shared` 已替代旧 `_shared`，并新增 `nature-paper-card`。后续优先使用该 clone 的 `scripts/update-codex-skills.sh --pull`、`--prune` 和 `--check`；Windows 环境缺少 `rsync` 时，可采用仅限 manifest 所列 Nature 目录的受控镜像同步与逐文件哈希核验。这些写作、阅读、图件、引用、返修等外部 skills 是科研写作辅助层，不能覆盖 Wiki evidence policy、paper evidence gate、source/raw locator 复核和用户科学判断。
 - Nature Skills 的非 API 本机依赖已配置：下载/PDF、专利文档和 CNIPA Playwright Python 依赖已安装，Playwright Chromium 已就绪，Academic Search MCP 通过 `uv` 隔离环境全局注册并使用本机联系邮箱访问无需 key 的 PubMed/CrossRef/OpenAlex 路由。出版商、NCBI 和 Semantic Scholar API key 暂不申请、不配置；Scopus/ScienceDirect 等 key-dependent provider 保持按需禁用。机构入口与联系邮箱只保存在用户本机配置，不写入公开 Wiki 或 Git 历史。
 - L3 边界只作用于受信任的 `E:\imp\wiki`：项目级 `.codex/config.toml` 选择 `wiki_l3 + approval_policy=never`，Wiki 内可写，Wiki 外只读并仅执行可证明零外部写入的程序。Codex 不得请求外部写入权限；外部状态变更只能由用户在 Codex 外手动完成，再由新会话只读核验。机器级 requirements 不得锁定其他项目；其他项目使用 `:workspace + on-request`。Wiki 会话允许公网、局域网、localhost 与代理，行为上禁用 Computer Use；Browser/Chrome 只做检索、验证和显式 Wiki 路径下载。权限边界验收完成后，L3 科学自治仍须由用户另行发起。
 - Nature-first 文献入口固定为：先用 `nature-academic-search` 核对结构化元数据，再补查 Google Scholar 或学术镜像，候选下载交给 `nature-downloader`；Scholar/镜像发现的 PDF 不因入口不稳定直接丢弃，而是在 `raw/papers/gpt/_incoming/<run-id>/` 校验。已验证 PDF 晋升到 `raw/papers/gpt/`，Agent BibTeX 只写 `raw/zotero/gpt.bib`，去凭据 manifest 写入 `outputs/literature-acquisition/`；`raw/zotero/wiki-inbox.bib` 始终保持用户/Zotero 管理和 Agent 只读。APS/PRC 或 Scholar 的真人验证由用户在原标签页完成。

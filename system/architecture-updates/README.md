@@ -2,7 +2,7 @@
 type: system-architecture-index
 graph-excluded: true
 status: active
-updated: 2026-07-27
+updated: 2026-07-28
 ---
 
 # Major architecture releases
@@ -13,6 +13,6 @@ Git history.
 
 | Date       | Release                                       | System effect                                                | Detailed record                                              | Git reference                              |
 | ---------- | --------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ |
-| 2026-07-27 | Research Autonomy L3 + L4 Foundation          | Default L2 ingestion, topic-investigation L3, manually started data-research L4, weekly self-test governance, and permission repair record | [Architecture record](2026-07-l3-autonomy-l4-foundation.md) | `codex/l3-l4-131ce-pilot`                  |
+| 2026-07-28 | Continuous Research-Learning v2（硅基研究生 V2） | Default L2 ingestion, topic-investigation L3, manually started reproducible L4, weekly self-test governance, and the validated `131Ce` pilot | [Architecture record](2026-07-l3-autonomy-l4-foundation.md) | `continuous-research-learning-v2` (local candidate; remote tag pending) |
 | 2026-07-15 | Continuous Research-Learning v1（硅基研究生） | Human-in-the-loop research learning with traceable evidence, analytical reconstruction, controlled provisional reasoning, and Human review | [Architecture record](2026-07-continuous-research-learning-upgrade.md) | `continuous-research-learning-v1`          |
 | 2026-07-01 | Evidence Wiki v0（证据型研究 Wiki 原型）      | Traceable source ingestion, structured knowledge pages, claim locators, review metadata, QMD retrieval, and Git-governed knowledge maintenance | [Previous system](2026-07-continuous-research-learning-upgrade.md#previous-behavior) | `803a19d6a92546475c6a7ab18386b8e1bcb4b45c` |

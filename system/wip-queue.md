@@ -11,14 +11,14 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 ## Active entries
 
 - task: Continuous Research-Learning v2 / `131Ce` lifetime-informed L4
-- status: Li 2004 claim-level P0 review complete; L4 completed-provisional; local v2 release candidate in final validation; remote main/tag publication authentication-blocked
-- branch: integration `codex/l3-l4-131ce-pilot`; evidence `codex/131ce-l3-evidence-pilot`
-- commit: integration sole WIP is amended in place as `Complete 131Ce lifetime-informed L4 and Continuous Research-Learning v2`; science-only branch `09c12ac`; release commit is created only after full local validation
-- files: canonical autonomy/governance routes; thesis/L3 science; three lifetime sources and Paper Cards; `outputs/l4/131ce-thesis-baseline/`; `outputs/l4/131ce-lifetime-update/`; v2 audit; handoff/log/queue
+- status: Li 2004 claim-level P0 review complete; L4 completed-provisional; local v2 release candidate validated; remote main/tag publication authentication-blocked
+- branch: release `codex/continuous-research-learning-v2-release`; integration `codex/l3-l4-131ce-pilot`; evidence `codex/131ce-l3-evidence-pilot`
+- commit: integration final `95896b9`; science-only `09c12ac`; release commit `Release Silicon Graduate Student V2` is created only after full local validation
+- files: canonical autonomy/governance routes; thesis/L3 science; three lifetime sources and Paper Cards; both L4 packages; README/PLAN/guides/memory/architecture/overview; CI path filter; handoff/log/queue
 - review needed: no further blanket review in this release; remaining band mapping/model conclusions are provisional and review-on-use
-- overview/QMD: overview and QMD are refreshed on the release branch before publication
-- next action: finish local release audit; after authentication works, fresh-fetch, fast-forward push main, wait for Wiki lint, then create/push the annotated v2 tag
-- risks: direct-main push authentication remains blocked despite successful fetch; Figure 5.5 gated inputs remain missing; L4 conclusions are provisional. `raw/zotero/wiki-inbox.bib` remains protected and unstaged
+- overview/QMD: release overview refreshed; canonical QMD update/embed/status passed, with the release-only overview scheduled to enter the collection after main alignment
+- next action: with Codex bundled Git 2.53 and command-scoped `GIT_EXEC_PATH=...\mingw64\bin`, repair/confirm authentication outside this task, then fresh-fetch, fast-forward push main, wait for Wiki lint, and create/push the annotated v2 tag
+- risks: public remote reads succeed but non-force push dry-run exits 128 without a usable diagnostic; do not use system Git 2.55, alter credentials or force push. Figure 5.5 inputs remain missing; L4 conclusions are provisional; `wiki-inbox.bib` remains protected and unstaged
 
 Continuous Research-Learning v1 completed Gate 2B release approval; publication state is Git-authoritative.
 

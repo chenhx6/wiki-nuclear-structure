@@ -54,6 +54,8 @@ tags: []
 
 页面级 `review_status` 与 claim-level `needs_review` 独立。页面升级为 `human-reviewed` 时，不得批量改写 claim-level 状态。
 
+Agent 新建的 project、decision 和 failure 页面必须从 `review_status: unreviewed` 开始；只有真实完成的用户审核才能将页面标为 `human-reviewed`。`confidentiality` 只是描述性元数据，不实施访问控制；公开 Git 仓库中的 tracked 内容不会因该字段而变为保密内容。
+
 ## Source 阅读完成状态
 
 `reading_depth` 是 source 的实际阅读完成状态，不是用户摄入模式。允许值为：

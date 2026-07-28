@@ -5,7 +5,7 @@ aliases: []
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 status: active
-review_status: human-reviewed
+review_status: unreviewed
 decision_date: YYYY-MM-DD
 project:
 revisit_when:
@@ -25,4 +25,3 @@ tags: []
 ## Risks
 
 ## Revisit Conditions
-

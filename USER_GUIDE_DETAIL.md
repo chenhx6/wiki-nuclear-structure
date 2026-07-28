@@ -211,6 +211,8 @@ needs_review：保留 true / 可改为 false；
 
 ## 9. How to use projects / 如何使用 project
 
+Agent 新建的 project、decision 和 failure 默认保持 `unreviewed`。`confidentiality` 仅用于描述，不能限制公开 Git 仓库中的可见性；未公开的用户或合作实验数据在获得明确发布授权并建立数据 manifest 边界前，不得写入通常会被跟踪的知识页或输出文件。
+
 Project 不必等到一个月后或数据处理全部结束才建立。出现以下任一情况即可进入 project 工作流：
 
 - 有具体研究问题；

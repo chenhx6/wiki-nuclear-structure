@@ -2,10 +2,26 @@
 type: system-overview
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-25
+updated: 2026-07-28
 ---
 
 # Knowledge Base Health Dashboard
+
+## Current Snapshot: 2026-07-28 Continuous Research-Learning v2 candidate
+
+This snapshot records the locally validated v2 architecture and the completed-provisional `131Ce` L3/L4 pilot. Li 2004 claims LI04-1–4 passed claim-level human visual review; the source page, LI04-5, band mapping and collective-mode conclusions remain unreviewed or provisional as recorded. Remote main/tag publication is not claimed while Git push authentication is blocked.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 74 | Added Alwaleedi 2013 plus Singh 2016, Li 2004 and Petrache 1998 lifetime lineages. |
+| nucleus / band pages | 24 / 25 | Added `131Ce`; no speculative per-band page expansion. |
+| concept / method / model / observable pages | 40 / 17 / 15 / 19 | Reused existing owners; added no parallel analysis framework. |
+| project / synthesis pages | 9 / 7 | Added the `131Ce/133Ce` collective-mode discrimination project. |
+| source pages unreviewed | 14 | Li 2004 remains page-level unreviewed despite LI04-1–4 claim review. |
+| claim-level `needs_review: true` | 231 | Remaining items are reviewed on use; this count is not a task queue. |
+| claim missing locator / kind | 0 / 0 | Current lint result. |
+| automated lint | 0 errors / 102 warnings / 231 info | A clean public checkout lacks ignored raw PDFs, so most warnings are expected `RAW_MISSING`; remaining warnings are existing reaction/element/orphan notices. The integration worktree separately reports its protected user BibTeX dirty signal. |
+| v2 acceptance | local release candidate | Thesis tests 3/3, lifetime tests 6/6, system tests 10/10 and three Paper Card audits 14/14 pass. |
 
 ## Current Snapshot: 2026-07-25 experimental wobbling batch review
 

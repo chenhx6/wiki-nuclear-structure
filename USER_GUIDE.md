@@ -2,7 +2,7 @@
 
 这套 Wiki 面向熔合蒸发反应和低能原子核结构研究。Obsidian 是人的浏览、审阅和写作界面；Agent 负责摄入、交叉引用、综合、检查与维护；Markdown 文件是双方共享的长期记忆。
 
-当前系统是 Continuous Research-Learning v1（硅基研究生）：面向低能核结构研究的 Human-in-the-loop research Wiki。授权摄入/综合任务默认可运行 L2 研究学习闭环，用户可启动研究问题级 L3，自有数据到位后可启动 L4 数据—分析—失败—修正闭环；ordinary Q&A 保持轻量。A≈130 是当前研究锚点，不是收录边界。详细架构见 [architecture updates](system/architecture-updates/README.md)。Wiki 不是最终权威，不保证文献完整覆盖，不能替代原文阅读和人工科学判断。
+当前系统是 Continuous Research-Learning v2（硅基研究生 V2）：面向低能核结构研究的 Human-in-the-loop research Wiki。授权摄入/综合任务默认运行 L2 研究学习闭环，高价值问题可进入 L3；真实、公开或可靠模拟数据到位并由用户手动启动后，L4 执行可复现的数据—分析—失败—修正闭环。ordinary Q&A 保持轻量。A≈130 是当前研究锚点，不是收录边界。详细架构见 [architecture updates](system/architecture-updates/README.md)。Wiki 不是最终权威，不保证文献完整覆盖，不能替代原文阅读和人工科学判断。
 
 本文件是快速使用指南。需要了解目录层级、证据术语、人工审阅、project、写作准备和可复制提示词时，请查看 [USER_GUIDE_DETAIL.md](USER_GUIDE_DETAIL.md)。
 

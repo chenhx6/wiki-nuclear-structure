@@ -1,5 +1,7 @@
 # L3 milestone report：`131Ce/133Ce` 集体模式判别
 
+> Subsequent status (2026-07-28): Singh 2016、Li 2004 与 Petrache 1998 的 lifetime 来源在本 milestone 之后已摄入；crosswalk 与 belief revision 见 [lifetime-informed L4 report](../l4/131ce-lifetime-update/report.md)。下文保留当时的检索状态，作为历史 milestone 记录。
+
 日期：2026-07-27
 
 状态：`awaiting-milestone-review`

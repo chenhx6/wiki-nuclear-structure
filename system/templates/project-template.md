@@ -5,9 +5,10 @@ aliases: []
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 status: active
-review_status: human-reviewed
+review_status: unreviewed
 project_stage:
-confidentiality: private
+# Descriptive metadata only; it does not restrict Git visibility or access.
+confidentiality:
 nuclei: []
 tags: []
 ---
@@ -29,4 +30,3 @@ tags: []
 ## Next Actions
 
 ## Related Sources and Pages
-

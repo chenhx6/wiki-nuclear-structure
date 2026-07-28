@@ -3,11 +3,13 @@ type: system-architecture-update
 graph-excluded: true
 title: Research Autonomy L3 and L4 Foundation
 date: 2026-07-28
-status: local-release-candidate
-branch: codex/l3-l4-131ce-pilot
+status: local-release-candidate-auth-blocked
+branch: codex/continuous-research-learning-v2-release
 ---
 
 # Research Autonomy L3 and L4 Foundation
+
+Release name: **Continuous Research-Learning v2（硅基研究生 V2）**. Planned annotated tag: `continuous-research-learning-v2`; the tag is not created until main push and GitHub Wiki lint succeed.
 
 ## Decision
 

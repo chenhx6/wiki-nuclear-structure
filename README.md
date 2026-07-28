@@ -4,9 +4,9 @@
 
 ## 当前定位
 
-当前系统是 **Continuous Research-Learning v1（硅基研究生）**：面向低能核结构研究的 Human-in-the-loop research Wiki。它支持 traceable evidence、摄入默认 L2、课题调查型 L3 和手动启动的数据研究型 L4；ordinary Q&A 保持轻量，正式知识晋升仍由 Human review 控制。
+当前系统是 **Continuous Research-Learning v2（硅基研究生 V2）**：面向低能核结构研究的 Human-in-the-loop research Wiki。它支持 traceable evidence、摄入默认 L2、课题调查型 L3、手动启动且可复现的数据研究型 L4，以及以 P0/P1 为中心的集中审核；ordinary Q&A 保持轻量，正式知识晋升仍由 Human review 控制。
 
-A≈130 是当前研究锚点，不是 Wiki 的收录边界。详细架构记录见 [continuous research-learning upgrade](system/architecture-updates/2026-07-continuous-research-learning-upgrade.md)。Wiki 仍不是最终权威，也不保证文献完整覆盖；论文级结论必须回到 `knowledge/sources/`、`raw/` 原文、精确 locator 和人工复核，并遵循 [system/paper-evidence-gate.md](system/paper-evidence-gate.md)。
+A≈130 是当前研究锚点，不是 Wiki 的收录边界。v2 的设计决策与 `131Ce` pilot 见 [Continuous Research-Learning v2 architecture record](system/architecture-updates/2026-07-l3-autonomy-l4-foundation.md)；完整 L0–L4 状态机只在 [autonomous-research workflow](system/workflows/autonomous-research.md) 维护。Wiki 仍不是最终权威，也不保证文献完整覆盖；论文级结论必须回到 `knowledge/sources/`、`raw/` 原文、精确 locator 和人工复核，并遵循 [system/paper-evidence-gate.md](system/paper-evidence-gate.md)。
 
 ## 研究范围
 
@@ -32,6 +32,7 @@ A≈130 是当前研究锚点，不是 Wiki 的收录边界。详细架构记录
 | 摄入论文 | [system/workflows/ingest.md](system/workflows/ingest.md) |
 | 查询知识库 | [system/workflows/query.md](system/workflows/query.md) |
 | 跨来源综合与反向检验 | [system/workflows/reflect.md](system/workflows/reflect.md) |
+| L0–L4 科研自治、每周自测与人工关口 | [system/workflows/autonomous-research.md](system/workflows/autonomous-research.md) |
 | 自动检查 | [system/workflows/lint.md](system/workflows/lint.md) |
 | 字段、页面类型和命名规则 | [system/schema.md](system/schema.md) |
 | 术语和禁止混并的概念 | [system/vocabulary.md](system/vocabulary.md) |
