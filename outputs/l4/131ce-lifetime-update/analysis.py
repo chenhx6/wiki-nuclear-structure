@@ -101,14 +101,18 @@ def run() -> dict:
         "bm1_be2_delta_scan": delta_scan,
         "belief_revision": {
             "signature_configuration_coupling": "remains leading for band identity and crossing systematics",
-            "gamma_soft_core_response": "strengthened as a complementary deformation background by band-mapped Qt and TRS, still model-dependent",
+            "gamma_soft_core_response": "Qt constrains E2 collectivity/core response; gamma softness remains TRS/model-assisted rather than independently established by lifetime data",
             "shape_coexistence": "raised from unsupported to plausible nuclear-level candidate because an independent HD minimum exists, but not established for thesis Bands 1-7",
             "chirality": "not established; lifetime points do not supply partner-band electromagnetic symmetry",
             "wobbling": "not established; no collective out-of-band E2 matrix is added"
         },
         "hard_gap": "Alwaleedi Figure 5.5 gated branching intensities remain unavailable; lifetime data are orthogonal and do not reconstruct them."
     }
-    (ROOT / "results.json").write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "results.json").write_text(
+        json.dumps(results, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     return results
 
 

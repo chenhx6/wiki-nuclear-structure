@@ -3,7 +3,7 @@ type: project
 title: 131Ce/133Ce 集体模式判别
 aliases: [131Ce collective-mode discrimination]
 created: 2026-07-27
-updated: 2026-07-28
+updated: 2026-08-04
 status: active
 review_status: unreviewed
 project_stage: l4-milestone-awaiting-review
@@ -28,12 +28,12 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4]
 | 排序 | 假设 | 当前状态 | 核心理由 | 会改变排序的证据 |
 |---|---|---|---|---|
 | 1 | signature-partner/configuration coupling 叠加 spin-dependent core response | provisionally preferred | `131Ce` 有完整 crossing/alignment/configuration 链；未出现要求新集体 phonon 的必要证据 | 精确连接跃迁 δ/偏振和寿命显示强集体带间 E2 |
-| 2 | γ-soft particle-core coupling / 随自旋变化的非轴响应 | strengthened viable background | Band-1-like 序列已有寿命/`Q_t`，与 TRS 联合支持 γ-soft、组态依赖的芯响应；四个有限点的加权斜率仍不足 1σ | 更完整的多带 `Q_t`、measured δ/偏振及统一模型计算 |
+| 2 | γ-soft particle-core coupling / 随自旋变化的非轴响应 | viable model-assisted background | Band-1-like 寿命/`Q_t` 直接约束 E2 集体性与芯响应；γ-soft 标签主要来自 TRS/作者解释，且四个有限点的加权斜率不足 1σ | 更完整的多带 `Q_t`、measured δ/偏振及统一 soft-vs-rigid 模型计算 |
 | 3 | chirality | viable for selected `133Ce` pairs; unsupported for `131Ce` baseline | `133Ce` 两组候选有同宇称 links、能量与 ratio fingerprints，但缺 lifetime；`131Ce` 没有等价闭合链 | 同组态双带的 absolute B(E2)/B(M1)、interband transitions 与几何一致性 |
 | 4 | shape coexistence | plausible nuclear-level candidate; unestablished for thesis Bands 1–7 | `131Ce` 独立 HD 带有 `Q0=7.3(4) eb`，证明同核存在更高形变尺度；没有证据把它与 thesis Bands 1–7 连接成共存伙伴 | HD–ND links、decay-out、E0/invariants 或共同 PES/配置验证 |
 | 5 | wobbling | not supported for current `131Ce` bands | 没有相邻 phonon band identity、enhanced out-of-band E2、可靠 δ/偏振或 wobbling geometry | 明确的 ΔI=1 collective E2 links、B(E2)out/B(E2)in 和一致的 E_wob/角动量几何 |
 
-关键合并判断：`signature/configuration coupling` 描述带身份机制，`γ-soft/core response` 描述形变背景，两者并不互斥；当前最节约假设的组合是“组态耦合主导、γ-soft 或随自旋演化的非轴芯作为背景”，不是固定 γ-rigid rotor，也不是已经证明的 chirality/wobbling。
+关键合并判断：`signature/configuration coupling` 描述带身份机制，寿命/`Q_t` 约束 E2 集体性与芯响应，TRS 则提供 γ-soft/非轴形变解释；三层不能互相替代。当前最节约假设的组合是“组态耦合主导、芯响应随自旋或组态变化”，而 γ-soft 是可行但模型辅助的背景，不是寿命独立证明的性质，也不是已经证明的 chirality/wobbling。
 
 ## Evidence Available
 
@@ -42,7 +42,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4]
 | 证据 | 支持 | 限制/反证 | 独立性与权重 |
 |---|---|---|---|
 | `131Ce` Bands 1–7 的 coincidence、angular ratios、crossings、alignments 与 Table 5.3 组态图 | signature/configuration coupling；spin-dependent core response | `B(M1)/B(E2)` 采用 `δ=0`；无 lifetime/absolute B(E2)/polarization；Table 5.1 Band 2 parity 为 probable typo/source conflict | 目标核直接来源，当前最高权重；[[alwaleedi-2013-band-structures-131ce]] AW13-1–11 |
-| `131Ce` 负宇称 yrast/Band-1-like 序列的 RDDS/DSAM 寿命与 `Q_t` | normal-deformed E2 集体性；γ-soft/core-response 的正交约束 | 四个有限点的加权斜率 `−0.030±0.047 eb/ℏ`，不足以建立显著下降；TRS γ 值有模型依赖 | [[singh-2016-lifetime-131ce-133pr]] 与 [[li-2004-lifetimes-131ce]] 是独立实验；Singh 表内转载的 Li 行不重复计权；不以简单加权平均裁决两者 |
+| `131Ce` 负宇称 yrast/Band-1-like 序列的 RDDS/DSAM 寿命与 `Q_t` | normal-deformed E2 集体性与芯响应的正交约束；不独立证明 γ-softness | 四个有限点的加权斜率 `−0.030±0.047 eb/ℏ`，不足以建立显著下降；γ-soft/具体 γ 仍来自 TRS 和作者解释 | [[singh-2016-lifetime-131ce-133pr]] 与 [[li-2004-lifetimes-131ce]] 是独立实验；Singh 表内转载的 Li 行不重复计权；不以简单加权平均裁决两者 |
 | `131Ce` 独立 HD band 的 `Q0=7.3(4) eb` | 同核存在强形变序列，提升多极小/shape-coexistence 可行性 | 与 normal-deformed `Q_t` 的几何和 band identity 不同，不能直接合并或认作共存伙伴 | 独立来源；[[petrache-1998-highly-deformed-lifetimes-131ce-nd]] |
 | `133Ce` 两组候选伙伴带的同宇称 links、S(I)、relative `B(M1)/B(E2)` 与 RMF+TPRM | chirality 和不同三轴极小/shape coexistence 的作者解释 | 无 lifetime；TPRM 有 moment-of-inertia 调整和 Coriolis attenuation；模型未完全再现 staggering | 同一数据集的实验+模型链，不是独立多源确认；[[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] A13-3–13 |
 | `133Ce` 2016 完整中高自旋谱学地图 | 多组态竞争、显著三轴模型背景、不同轴/倾斜轴转动 | 旧 Q5/Q7 近简并 signature-partner 解释被新 links 推翻；弱带头和模型匹配非唯一 | 结构更新价值高，但部分复用 2013 数据；[[ayangeakaa-2016-133ce-in-beam]] A16-1–6 |
@@ -63,7 +63,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4]
 | 解释 | 若成立应优先看到 | 当前 `131Ce` 状态 |
 |---|---|---|
 | signature/configuration coupling | 同组态 signature 序列、可解释 splitting/crossing、links 以 M1 或普通 mixed M1/E2 为主 | 前两项较强；连接跃迁 δ/偏振不足 |
-| γ-soft particle-core coupling | γ-sensitive staggering 与多带谱可由同一软芯参数描述，E2 分支随 core collectivity 有一致趋势 | 已有 Band-1-like `Q_t`，但趋势显著性低且具体 γ 仍依赖 TRS；缺目标核多带统一计算 |
+| γ-soft particle-core coupling | γ-sensitive staggering 与多带谱可由同一软芯参数描述，E2 分支随 core collectivity 有一致趋势 | 已有 Band-1-like `Q_t` 尺度，但未建立显著自旋趋势；这些寿命不独立判定 γ-soft，具体 γ 仍依赖 TRS；缺目标核多带统一计算 |
 | wobbling | 明确 n_w→n_w−1 的 enhanced out-of-band E2、可靠 δ 与 B(E2)out/B(E2)in、合理 E_wob | 未建立 |
 | chirality | 同组态近简并 ΔI=1 双带、相似 intraband B(M1)/B(E2)、可解释 interband transitions 与手征几何 | `133Ce` 部分满足；`131Ce` 未建立候选对 |
 | shape coexistence | 不同带有可重复的不同 Q_t/绝对 E2 或 invariants，并有受控配置/混合证据 | `131Ce` 有独立 HD 大矩尺度，但缺 HD–ND linking/mixing；未建立 thesis 带间 coexistence |
@@ -74,11 +74,11 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4]
 - L4 thesis-only milestone: completed；35 对 proxy 与 11 点 δ 扫描见 [thesis-only report](../../outputs/l4/131ce-thesis-baseline/report.md)。
 - L4 lifetime update: completed-provisional；三条独立实验谱系、band crosswalk、限值和公式检查见 [lifetime-informed report](../../outputs/l4/131ce-lifetime-update/report.md)。
 - Quantitative null result: Singh 四个有限 `Q_t` 点的加权斜率为 `−0.030±0.047 eb/ℏ`；“随自旋下降”在本子集不足 1σ。
-- Confidence: configuration/signature 机制为 medium；γ-soft/core background 为 low-to-medium；HD 结构存在为高权重直接证据，但它与 thesis Bands 1–7 的 coexistence 关系为 low。
+- Confidence: configuration/signature 机制为 medium；E2 集体性/芯响应约束为 medium；γ-soft background 因依赖 TRS/作者解释维持 low；HD 结构存在为高权重直接证据，但它与 thesis Bands 1–7 的 coexistence 关系为 low。
 
 ## Decisions
 
-1. **Provisional milestone conclusion**：`131Ce` 当前最符合 signature/configuration coupling 主导、叠加 γ-soft 或随自旋增强的非轴 core response。
+1. **Provisional milestone conclusion**：`131Ce` 当前最符合 signature/configuration coupling 主导、叠加随自旋或组态变化的 core response；γ-soft/nonaxial 是 TRS 支持的可行背景，而非寿命独立建立的实验属性。
 2. 不把 Alwaleedi 的轴对称 TRS 点解释为 γ-rigid 实验证据，也不把其 core-polarization 讨论升级为 shape coexistence。
 3. `131Ce` lifetime 消除了“目标带完全没有绝对 E2 约束”的旧缺口，但没有提供伙伴带电磁对称性；chirality/wobbling 状态不升级。
 4. wobbling 在当前 `131Ce` Bands 1–7 中没有满足电磁优先判据，状态为 `unsupported`, 不是 `falsified for the nucleus`。
@@ -106,7 +106,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4]
 - 最小数据字段：band/level identity、Eγ、Ei/Ef、Iiπ/Ifπ、intensity 与误差、multipolarity/δ 及误差/分支、polarization、lifetime 或 B(E2)/B(M1)、source locator。
 - 可能创新点：把“模式标签争论”转换为可审计的 observable-discrimination score，并量化哪一项新测量提供最大信息增益。
 - 定量新发现：Figure 5.5 gated-input P0 未被寿命恢复；Singh 有限点加权平均 `Q_t=2.579±0.099 eb`、斜率 `−0.030±0.047 eb/ℏ`；HD `Q0` 与该均值的尺度比约 2.83，但因 `Q0/Q_t` 几何不同只作尺度提示。
-- 解释排序：signature/configuration coupling 仍主导 band identity；γ-soft/core response 获得正交支持但不升为高置信；shape coexistence 从“无目标核直接线索”修订为“同核有独立 HD 极小、但 thesis 带关系未建立”；chirality/wobbling 不升级。
+- 解释排序：signature/configuration coupling 仍主导 band identity；寿命/`Q_t` 对 E2 集体性与 core response 提供正交约束，γ-softness 仍是 TRS/作者解释层且不升为高置信；shape coexistence 从“无目标核直接线索”修订为“同核有独立 HD 极小、但 thesis 带关系未建立”；chirality/wobbling 不升级。
 
 ## Next Actions
 

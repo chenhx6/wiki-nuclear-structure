@@ -3,14 +3,14 @@ type: synthesis
 title: "γ-soft deformation: diagnostics, coupling, and deformation evolution"
 aliases: [γ-soft 与 γ-rigid 的低能谱判别, gamma-soft deformation synthesis]
 created: 2026-07-01
-updated: 2026-07-05
+updated: 2026-08-04
 status: ai-draft
 review_status: human-reviewed
 scope: gamma-soft-deformation-a130-and-nearby-evidence
 confidence: medium
 high_confirmed_by:
 high_confirmed_date:
-sources: [zamfir-casten-1991-gamma-softness-triaxiality, nomura-2017-odd-mass-gamma-soft-shape-transitions, nomura-2021-pairing-triaxial-vibrations-gamma-soft, babra-2019-deformation-change-136sm, frauendorf-2024-wobbling-review]
+sources: [zamfir-casten-1991-gamma-softness-triaxiality, nomura-2017-odd-mass-gamma-soft-shape-transitions, nomura-2021-pairing-triaxial-vibrations-gamma-soft, babra-2019-deformation-change-136sm, frauendorf-2024-wobbling-review, singh-2016-lifetime-131ce-133pr]
 tags: [gamma-softness, gamma-rigidity, shape-phase-transition, pairing-vibration, deformation-evolution, evidence-matrix]
 ---
 
@@ -18,7 +18,7 @@ tags: [gamma-softness, gamma-rigidity, shape-phase-transition, pairing-vibration
 
 ## Question and Scope
 
-基于四篇已审核核心 source，阶段性综合 γ-soft deformation 的定义、与 γ-rigid triaxiality 的区别、A≈130 形状相变、配对-三轴振动耦合和 `136Sm` 随自旋形变变化。[[frauendorf-2024-wobbling-review]] 只用于 low-spin collective-band relation。本文不是 paper conclusion；每项主张仍须回到 source、raw 与 locator。
+基于四篇已审核核心 source，阶段性综合 γ-soft deformation 的定义、与 γ-rigid triaxiality 的区别、A≈130 形状相变、配对-三轴振动耦合和 `136Sm` 随自旋形变变化。[[frauendorf-2024-wobbling-review]] 只用于 low-spin collective-band relation；未审核的 [[singh-2016-lifetime-131ce-133pr]] 仅作为 `131Ce` targeted update，并保留独立 P1。本文不是 paper conclusion；每项主张仍须回到 source、raw 与 locator。
 
 ## Evidence Matrix
 
@@ -31,6 +31,7 @@ tags: [gamma-softness, gamma-rigidity, shape-phase-transition, pairing-vibration
 | `136Sm` 带交叉后 E2 集体性下降 | B19-1 至 B19-5、B19-8；PDF pp.1-3, Table I; p.6, Fig.8 | `Q_t` 系统误差与 feeding；只到 20+ | 带混合、多个竞争形变极小 | 独立实验来源 | medium |
 | `136Sm` 从 γ-soft 到稳定三轴的演化是模型支持的作者解释 | B19-6 至 B19-12；PDF pp.4-9, Figs.6-10 | TRS/TPSM 参数化；第二交叉以上寿命不足 | oblate / highly deformed prolate / triaxial coexistence | 同一实验内的两模型比较，不是独立实验复现 | low |
 | γ-softness 只能作为 low-spin band interpretation 的形变背景 | F24-3/F24-7；PDF pp.22-26；[[low-spin-wobbling-controversies]] LSW-SYN-1 | review 不是原始实验；wobbling 仍需 band identity 与电磁判据 | signature partner、TiP、β/γ vibration、其他 qp excitation | review + 已审 project navigation | low |
+| `131Ce` Band-1-like 寿命补上目标核 E2 集体性约束，但不独立建立 γ-softness | SI16-1 至 SI16-7；PDF pp.5-10, Table 1, Figs.5,9-12 | 四个有限 `Q_t` 点的下降仅 `0.64σ`；γ-soft/具体 γ 来自 TRS 与作者解释 | 组态/带交叉响应、其他非轴芯响应、分析系统学 | Singh 与 Li 当前测量是独立实验；Singh 转载 Li 行不重复计权 | low / needs review |
 
 ## Synthesis
 
@@ -116,15 +117,16 @@ Babra 2019 的实验层建立了寿命、`Q_t`、alignment 与带交叉。12+ �
 | GSD-SYN-5 | `136Sm` 建立了一个可定位的 γ-soft→rigid/stable-triaxial transition 候选证据链：实验寿命/`Q_t` 和带交叉约束集体性变化，TRS/TPSM 给出交叉前后的不同形变极小/输入，作者据此提出 soft-to-rigid 演化；该 transition 是未来 A≈130 形变研究的重点，而不是已由单一实验量直接证明的普遍结论 | B19-1 至 B19-12；PDF pp.1-9, Table I, Figs.5-10, Conclusions | 模型参数与 γ 约定依赖；第二交叉以上多极小未闭合；`136Sm` 不能代替 `131Ce/133Ce` nucleus-specific evidence | false |
 | GSD-SYN-6 | 形变背景可随自旋改变，因此固定形变输入的 collective-band interpretation 需跨带交叉复核 | B19-7 至 B19-12, PDF pp.5-9 | 邻近 Sm 案例不能代替 Ce 证据 | false |
 | GSD-SYN-7 | γ-softness 是 wobbling/chirality/signature 分析的背景层，但不是任一模式的充分或必要身份标签 | F24-3/F24-7, PDF pp.22-26；low-spin umbrella LSW-SYN-1 | 仍需逐带电磁与几何判据 | false |
-| GSD-SYN-8 | 当前四源足以建立 bounded evidence framework，但不足以裁决 `131Ce/133Ce` 的具体形变动力学 | 四个核心 source 全部已审 | 缺 nucleus-specific lifetime/E2 invariants 与 common-input calculations | false |
+| GSD-SYN-8 | 截至 2026-07-05，四源足以建立 bounded evidence framework，但不足以裁决 `131Ce/133Ce` 的具体形变动力学 | 四个核心 source 全部已审 | 当时缺 nucleus-specific lifetime/E2；后续 Singh 2016 更新见 GSD-SYN-9，common-input calculations 仍缺 | false |
+| GSD-SYN-9 | Singh 2016 补上 `131Ce` nucleus-specific 寿命/`Q_t`，直接约束 E2 集体性/core response；`3→2.5 eb` 是作者目视概括，有限点斜率仅 `0.64σ`，γ-softness 仍为 TRS/作者解释层 | SI16-1 至 SI16-7；PDF pp.5-10, Table 1, Figs.5,9-12；[[131ce-collective-mode-discrimination]] | 缺多带 absolute E2、shape invariants 和 common-input soft-vs-rigid calculation，不能由寿命单独裁决 γ 动力学 | false |
 
 ## Confidence Notes
 
-W-J/D-F 相位差和 `136Sm` 寿命/`Q_t` 数值为可定位证据；GSD-SYN-1 至 GSD-SYN-8 已完成人工审核，总体框架维持 medium。对具体 `131Ce/133Ce`、奇 A 高自旋 γ-rigid/soft 判断和 wobbling relation 仍维持 low，等待 nucleus-specific sources。
+W-J/D-F 相位差和 `136Sm` 寿命/`Q_t` 数值为可定位证据；GSD-SYN-1 至 GSD-SYN-9 已完成相应人工审核，总体框架维持 medium。GSD-SYN-9 把“没有目标核寿命入口”修正为“已有 Band-1-like E2 约束，但 γ-soft 仍未被实验独立裁决”；Singh source 页面整体与其它 source claims 的 review 状态不随该 targeted synthesis review 改变。
 
 ## Limitations and Missing Evidence
 
-- 缺 `131Ce` nucleus-specific source 与 `131Ce/133Ce` 寿命、绝对 B(E2)、E2 matrix elements；
+- `131Ce` 已有 Band-1-like nucleus-specific 寿命/`Q_t`，但 `131Ce/133Ce` 仍缺多带 absolute B(E2)、E2 matrix elements 与 shape invariants；
 - 缺现代偶偶 Xe/Ba/Ce/Nd Coulomb-excitation 不变量；
 - 缺 common-input、common-γ-convention 的 soft collective model 与 rigid triaxial/odd-particle model 比较；
 - 缺第二个独立理论链复核 Nomura 2017/2021；
@@ -138,9 +140,11 @@ W-J/D-F 相位差和 `136Sm` 寿命/`Q_t` 数值为可定位证据；GSD-SYN-1 �
 - [[nomura-2021-pairing-triaxial-vibrations-gamma-soft]]
 - [[babra-2019-deformation-change-136sm]]
 - [[frauendorf-2024-wobbling-review]]
+- [[singh-2016-lifetime-131ce-133pr]]（GSD-SYN-9 targeted synthesis statement 已审；source 页面整体仍未审核）
 - Project: [[gamma-soft-deformation-evidence-map]]
 
 ## Evolution Log
 
 - 2026-07-01：首次建立低能判据与外推边界。
 - 2026-07-05：基于三篇新审核 source 扩展为 shape-phase transition、pairing-triaxial coupling、`136Sm` deformation-change 与 low-spin relation 的阶段性综合；GSD-SYN-1 至 GSD-SYN-8 经用户审核，并按批注扩展 γ-soft→rigid/stable-triaxial transition 的分层证据链。
+- 2026-08-04：每周自测保留 GSD-SYN-1 至 8 的审核历史；用户随后完成 GSD-SYN-9 targeted review，接受 `131Ce` 寿命约束 E2 集体性/core response、γ-softness 仍由 TRS/作者解释支持的分层。

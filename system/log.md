@@ -828,3 +828,15 @@ updated: 2026-07-15
 - A controlled `Run now` safe-stopped because the scheduled runner omitted the diagnostic `CODEX_PERMISSION_PROFILE` marker; startup, Git, raw and science work did not run, and the same automation was paused.
 - Schema 2 now attests the project config and actual capabilities, treats a missing marker as a warning, and still blocks a non-empty mismatch. A real missing-marker simulation passed without ACL, global, raw or remote changes.
 - The same `ID=wiki` prompt was updated through the automation function with the corrected semantics and kept `PAUSED`; no duplicate or controlled run was created.
+
+## [2026-08-04] weekly self-test | `131Ce` lifetime and γ-soft boundary
+
+- Schema-2 permission preflight passed with the expected missing-marker warning; protected BibTeX, root/`.git` probes and protected reads remained safe.
+- Corrected the `131Ce` evidence chain so lifetime/`Q_t` directly constrains E2 collectivity/core response, while γ-softness remains TRS/model-assisted; the author's `3→2.5 eb` visual summary is separated from the Wiki's `0.64σ` null trend.
+- Added a reviewable P0/P1 report and new pending GSD-PROJ-8/GSD-SYN-9 without overwriting prior human-review history. Tests and lint passed; no push occurred.
+
+## [2026-08-04] review | `131Ce` lifetime and γ-soft boundary accepted
+
+- The user completed the targeted P1 review without corrections and authorized push.
+- GSD-PROJ-8/GSD-SYN-9 are accepted; the Singh source's unrelated claim-level review states remain unchanged.
+- Finalization will amend the existing scientific WIP, replay the dependent governance final and use exact-refspec non-force push after H3.

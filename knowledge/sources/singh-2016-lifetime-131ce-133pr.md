@@ -3,7 +3,7 @@ type: source
 title: "Lifetime measurements in the yrast band of the gamma-soft nuclei 131Ce and 133Pr"
 aliases: [Singh 2016 131Ce lifetime]
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-08-04
 status: ai-draft
 review_status: unreviewed
 source_type: journal-article-experiment
@@ -40,7 +40,7 @@ R. P. Singh 等，*Pramana – Journal of Physics* **87**, 7 (2016)，DOI `10.10
 
 ## Summary
 
-论文用 plunger 与 DSAM 测得 `131Ce` 负宇称 `νh11/2` yrast 带的 4 个寿命和 3 个限值，并给出 `Q_t`。直接实验结果支持该带从低自旋约 `3 eb` 向较高自旋约 `2.5 eb` 的温和下降；作者结合 TRS 把它解释为 γ-soft、随频率向强非轴区域演化的芯背景。后者是模型辅助解释，不是寿命直接测得的 γ 值。
+论文用 plunger 与 DSAM 测得 `131Ce` 负宇称 `νh11/2` yrast 带的 4 个寿命和 3 个限值，并给出 `Q_t`。作者从 Figure 5 目视概括该带由低自旋约 `3 eb` 向较高自旋约 `2.5 eb` 温和下降；Wiki 对四个有限点的重分析只得到 `0.64σ` 的负斜率，因此该下降不是由当前有限点统计建立的实验趋势。作者结合 TRS 把这一图景解释为 γ-soft、随频率向强非轴区域演化的芯背景；这是模型辅助解释，不是寿命直接测得的 γ 值。
 
 ## Experimental Setup
 
@@ -69,7 +69,7 @@ Li 2004 原实验与 Singh 2016 当前实验是两条独立测量谱系；本文
 
 ## Interpretation Boundaries
 
-- `Q_t` 下降约束 E2 集体性，但不能单独决定 γ 刚/软、γ 符号或建立 wobbling/chirality。
+- 寿命与 `Q_t` 直接约束 E2 集体性及可能的芯响应；当前有限点未建立显著下降，也不能单独决定 γ 刚/软、γ 符号或建立 wobbling/chirality。
 - `β2/γ` 来自 TRS 与转子映射；side feeding、K mixing、branching 和 stopping treatment 都是模型/分析依赖。
 - lifetime 数据不能恢复 Alwaleedi Figure 5.5 未列表的 gated branching intensities。
 
@@ -86,7 +86,7 @@ Li 2004 原实验与 Singh 2016 当前实验是两条独立测量谱系；本文
 
 ### P1
 
-- SI16-5：`Q_t` 的自旋趋势为 γ-soft/core-response 提供正交约束，但当前点数、限值和系统误差不足以形成高置信形状裁决。
+- SI16-5：作者的 `3→2.5 eb` 目视概括与 Wiki 的 `0.64σ` 有限点重分析必须分层；寿命/`Q_t` 为 E2 集体性和芯响应提供正交约束，但 γ-softness 本身仍主要由 TRS 与作者解释支持。
 
 ## Related Knowledge
 

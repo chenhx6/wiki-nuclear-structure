@@ -11,14 +11,25 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 ## Active entries
 
 ### Wiki automation protected-path permission matrix
-- status: scheduled-runner profile-marker false-negative fixed locally; automation remains paused and a new controlled receipt is pending
+- status: scheduled-runner profile-marker false-negative fixed locally; controlled schema-2 receipt passed, local final remains unpushed
 - branch: `codex/wiki-automation-permission-preflight`
 - commit: local final `Fix Wiki scheduled profile marker preflight`, not pushed
 - files: `AGENTS.md`; `check.md`; `system/memory.md`; preflight script/tests; scheduled-continuation workflow; handoff/log/queue
-- review needed: controlled automation receipt before any `131Ce` continuation
+- review needed: publication/final branch decision only; controlled automation receipt itself passed
 - overview/QMD: not modified; explicitly out of scope
-- next action: keep the unique `ID=wiki` paused after its prompt is updated; only a later explicit authorization may restore `ACTIVE` and perform one controlled `Run now`
+- next action: preserve as the upstream dependency of the weekly scientific WIP; do not push without explicit authorization
 - risks: do not self-inject the profile marker or treat its absence as permission failure; automation must not exercise profile `write` on `.codex`/`.agents`; do not stage `raw/zotero/wiki-inbox.bib`, clean ACLs, alter global/other-project settings, activate duplicate automation, or push
+
+### Weekly self-test 2026-08-04: 131Ce lifetime/γ-soft boundary
+- status: targeted P1 human review completed without corrections; local scientific final created and post-commit reconciliation in progress
+- branch: `codex/weekly-self-test-20260804-131ce-lifetime-gamma-soft-boundary`
+- commit: current branch HEAD is local final `Finalize weekly self-test 2026-08-04: 131Ce lifetime/γ-soft boundary`, not pushed
+- depends on: local automation-preflight commit `e29c1cc`
+- files: Singh 2016 source; `131Ce` nucleus/project; gamma-soft project/synthesis; lifetime L4 code/report/result; self-test report; handoff/log/queue
+- review needed: none for this targeted P1 round; unrelated Singh source claim states remain unchanged
+- overview/QMD: overview not triggered; QMD update/embed/status succeeded during review finalization
+- next action: complete post-commit reconciliation, replay the dependent governance final, run integrated H3 and execute the authorized non-force main push
+- risks: do not convert automation self-audit to Human review, clear new `needs_review`, stage protected BibTeX, modify user raw/PLAN/config/Skill, or create a second weekly WIP
 
 ## Legacy completed entries
 

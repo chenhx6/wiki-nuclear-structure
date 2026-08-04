@@ -12,6 +12,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 
 <!-- Append real completed human-review rounds here. Do not backfill old history during framework setup. -->
 
+### 2026-08-04 — `131Ce` lifetime and γ-soft evidence boundary — round 1
+
+- review scope: Singh Summary/P1 wording, the `131Ce` collective-mode hypothesis/evidence rows, and GSD-PROJ-8/GSD-SYN-9
+- user decisions: the calibrated separation of measured `τ/Q_t`, the author visual trend, the Wiki `0.64σ` reanalysis, and TRS γ-soft interpretation is accepted without correction; push is authorized
+- corrections requested: none
+- unresolved issues: Singh source claims not explicitly reviewed against raw retain their existing claim-level state; multi-band absolute E2, shape invariants and common-input soft-vs-rigid calculations remain evidence gaps
+- next action: finalize the existing scientific WIP, replay the dependent governance final, run H3 and push the single lineage to main
+- related pages: `knowledge/sources/singh-2016-lifetime-131ce-133pr.md`, `knowledge/projects/131ce-collective-mode-discrimination.md`, `knowledge/projects/gamma-soft-deformation-evidence-map.md`, `knowledge/synthesis/gamma-soft-vs-gamma-rigid-diagnostics.md`, `outputs/self-tests/2026-08-04-131ce-lifetime-gamma-soft-boundary.md`
+- review commit message: Finalize weekly self-test 2026-08-04: 131Ce lifetime/γ-soft boundary
+
 ### 2026-07-25 - experimental wobbling evidence sources - round 1
 
 - review scope: page-level rough review of the 15 ordered experimental/reanalysis sources from Ødegård 2001 through Chakraborty 2024, including calibrated conclusion strength, source-local P0/P1 and stated evidence limitations

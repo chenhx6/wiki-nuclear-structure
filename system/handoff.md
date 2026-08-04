@@ -8,31 +8,31 @@ updated: 2026-08-04
 ## Active handoff
 
 Current active task:
-Wiki scheduled-runner profile-marker false-negative repair is implemented locally. Schema 2 now treats the trusted project config and real capability checks as authoritative; a missing `CODEX_PERMISSION_PROFILE` is a warning rather than a failure. Automation and the `131Ce` weekly self-test remain paused by current user instruction.
+The user completed the scoped `131Ce` lifetime/γ-soft evidence-boundary review without corrections and authorized push. The targeted scientific review is finalized on the original branch; the dependent governance final still needs to be replayed before the authorized push.
 
 Current branch / local commit:
-Branch `codex/wiki-automation-permission-preflight`; local final commit `Fix Wiki scheduled profile marker preflight`, not pushed.
+Branch `codex/weekly-self-test-20260804-131ce-lifetime-gamma-soft-boundary`; current branch HEAD is the local final `Finalize weekly self-test 2026-08-04: 131Ce lifetime/γ-soft boundary`, not yet pushed.
 
 Last task status:
-The controlled `Run now` safely stopped before startup/Git/raw/science because the scheduled runner did not export `CODEX_PERMISSION_PROFILE`; the same `ID=wiki` then paused itself. No repository or external write occurred. The repaired preflight first attests `.codex/config.toml` and then runs the existing capability matrix; a real Wiki simulation with the marker removed returned exit `0`, preserved the protected BibTeX hash, passed both write probes and both read sentinels, and left no probe residue.
+The user accepted the separation of measured `τ/Q_t`, the author's `3→2.5 eb` visual summary, the Wiki `0.64σ` null trend, and TRS γ-soft interpretation. GSD-PROJ-8/GSD-SYN-9 are the only claim states cleared; Singh source claims not explicitly checked against raw remain unchanged.
 
 Unfinished items:
-The unique `ID=wiki` prompt has been updated in place through the Codex automation function with the corrected marker semantics and remains explicitly `PAUSED`; no duplicate or run was created. A later user-authorized task may restore `ACTIVE` and perform one controlled `Run now`; do not run it in this task.
+Complete post-commit reconciliation; replay `Fix Wiki WIP post-commit reconciliation` onto the finalized lineage; run the integrated checks/H3, fresh fetch, exact-refspec dry-run and non-force push to main.
 
 P0/P1 review focus:
-The local P0 false-negative is closed by the script/tests/governance commit and paused prompt update. P1 remains a new controlled automation receipt with schema 2 exit `0`, Git/raw audit and no Wiki-external writes. Scientific `131Ce` work remains out of scope until that later rollout gate passes.
+P0: none. Targeted P1 review is complete without corrections. Remaining source-level `needs_review` items were outside this review and are preserved.
 
 Risks:
-Do not self-inject `CODEX_PERMISSION_PROFILE`, treat a missing marker as proof of missing permissions, edit `.codex`/`.agents`, clean runtime protective DENY, activate or run automation in this task, modify global/other-project settings, push, or stage raw. `raw/zotero/wiki-inbox.bib` remains protected and unstaged at SHA-256 `D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`.
+Do not clear unrelated Singh source claims, elevate γ-soft confidence, create a second weekly WIP, fold the dependent governance commit into the science amend, stage protected BibTeX, edit config/Skill/PLAN/raw, force push, or bypass exact-refspec H3.
 
 Checks:
-All 18 system tests pass. Wiki lint reports 0 errors, 29 warnings and 231 info. A real Wiki run with `CODEX_PERMISSION_PROFILE` removed exited `0`: config attestation, BibTeX hash, root/`.git` probes and both protected reads passed with the expected warning and no residue. H2, `git diff --check`, explicit staged audit and raw/hash audit pass.
+H1 and H2 passed with only protected `raw/zotero/wiki-inbox.bib` dirty and hash-matched; QMD refresh, 6/6 lifetime tests, 18/18 branch-local system tests, and Wiki lint (0 errors, 29 warnings, 231 info) passed. Integrated H3 and remote checks remain pending.
 
 Next prompt / continuation phrase:
-After this paused fix is accepted, send: `确认恢复 ID=wiki ACTIVE 并再次受控 Run now；不要 push`.
+`继续 2026-08-04 周测 finalization 与已授权 push`
 
 Recent user decisions:
-The user confirmed the scheduled-runner profile-marker false-negative should be fixed while `ID=wiki` remains paused. `wiki_l3` retains `write` for `.codex` and `.agents`; the weekly task still treats them as read-only targets. The inactive `unelevated` workaround must not be restored, and runtime host DENY must not be cleaned.
+The user stated the targeted weekly review is complete, requested no scientific corrections, and explicitly authorized push.
 
 ## Previous active handoff (superseded 2026-07-27 before L3/L4 pilot)
 

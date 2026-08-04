@@ -2,7 +2,7 @@
 type: output
 title: 131Ce lifetime-informed L4 update
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-08-04
 status: provisional
 review_status: unreviewed
 tags: [l4, 131ce, lifetime, qt, evidence-lineage]
@@ -35,12 +35,12 @@ No raw/Git/permission anomaly was introduced. Science-only main publication rema
 ## Belief revision
 
 1. **Signature/configuration coupling:** remains the leading explanation of band identity and crossings.
-2. **γ-soft particle–core/core response:** strengthened as a complementary deformation background by band-mapped lifetime data and TRS, but not promoted beyond low-to-medium confidence.
+2. **γ-soft particle–core/core response:** lifetime/`Q_t` independently constrains E2 collectivity and possible core response, while the γ-soft label remains TRS/model-assisted; it is not independently established by the lifetime data and stays at low confidence.
 3. **Shape coexistence:** revised from “no direct `131Ce` target-nucleus clue” to “plausible at the nuclear level because an independent HD sequence exists”; it remains unestablished for thesis Bands 1–7.
 4. **Chirality:** unchanged—no partner-band lifetime/electromagnetic symmetry matrix.
 5. **Wobbling:** unchanged—no enhanced collective out-of-band E2 evidence.
 
-The leading synthesis is still configuration/signature coupling embedded in a γ-soft or spin-dependent non-axial core. These are complementary layers, not mutually exclusive labels.
+The leading synthesis is still configuration/signature coupling with a spin- or configuration-dependent core response. A γ-soft/non-axial core is a viable TRS-assisted interpretation, not a shape property independently demonstrated by the lifetime data.
 
 ## Formula and uncertainty checks
 
