@@ -24,7 +24,7 @@ This run resumed only the previously isolated `131Ce` lifetime/collective-mode q
 1. **Direct observable versus shape interpretation.** The four finite Singh `Q_t` points give slope `−0.030±0.047 eb/ℏ`, so the negative trend is only `0.64σ`. The paper's `3→2.5 eb` statement is retained as an author-level visual summary, not promoted to a statistically established experimental trend.
 2. **γ-softness boundary.** Lifetime/`Q_t` directly constrains E2 collectivity and possible core response. The γ-soft/non-axial label remains supported mainly by TRS and the authors' interpretation; it is not an independent lifetime observable.
 3. **Review-state preservation.** Previously human-reviewed GSD-PROJ-1–7 and GSD-SYN-1–8 were not silently re-reviewed. Their old “no `131Ce` source” wording is dated as historical; GSD-PROJ-8 and GSD-SYN-9 were subsequently accepted in a targeted human-review round without changing the Singh source page's other claim states.
-4. **Remote receipt warning.** Local `origin/main` remains at `63ef3ef`, but `git ls-remote` could not reach GitHub in this run. No push is authorized or attempted, so this is a verification warning rather than a scientific blocker.
+4. **Remote publication blocker.** Fresh fetch verified `origin/main` at `63ef3ef` and as an ancestor of the integrated final. The user authorized push, but both system and bundled Git stopped at exact-refspec dry-run because the protected repo-local AskPass could not be spawned (`Permission denied`). No remote update occurred; this is a runtime/authentication blocker, not a scientific one.
 
 ## Low-risk summary
 
@@ -58,9 +58,9 @@ On 2026-08-04 the user completed the targeted review and accepted the calibrated
 
 - Branch: `codex/weekly-self-test-20260804-131ce-lifetime-gamma-soft-boundary`, based on local automation-preflight commit `e29c1cc`; this scientific WIP therefore depends on the unpushed automation-preflight lineage.
 - Final commit: current branch HEAD `Finalize weekly self-test 2026-08-04: 131Ce lifetime/γ-soft boundary`, not yet pushed.
-- Push: authorized by the user; execute only after the final lineage passes H3 and exact-refspec dry-run.
+- Push: authorized by the user but not performed; local H3 and remote ancestry passed, while exact-refspec dry-run failed at protected AskPass execution in the current runtime.
 - Reproducible analysis: reran successfully; `results.json` matches `analysis.py` and is emitted with repository-required LF endings.
-- Tests: 6/6 lifetime-analysis tests and 18/18 system tests passed.
+- Tests: 6/6 lifetime-analysis tests and all 19 integrated system tests passed after the dependent governance final was replayed.
 - Wiki lint: passed with 0 errors, 29 warnings, and 231 info; warnings are the existing reaction/element/orphan inventory plus the protected raw-change notice.
 - Wording audit: passed for the scoped files; no remaining scoped wording treats lifetime as independent γ-soft proof or an author visual trend as statistically established.
 - QMD: update/embed/status succeeded after review finalization; the `nuclear-knowledge` collection contains 249 files and 1918 vectors.

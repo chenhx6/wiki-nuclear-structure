@@ -265,6 +265,10 @@ Safe suspend 的目标是保护当前工作、停止低余量扩张、留下可�
 
 如果 wiki lint 来不及完整运行，可以创建未验证的 `WIP suspend` commit，但 handoff 和最终报告必须明确写明：“wiki lint 未执行，本 WIP checkpoint commit 未验证为可提交状态。”
 
+提交前的 handoff、WIP queue 或报告只能把尚未发生的提交写成 `commit target` / `checkpoint commit message`，不得在最终状态字段中把 `planned`、`will create`、`expected checkpoint` 等未来时态冒充为已经存在的 commit。提交成功后必须立即执行一次 **post-commit reconciliation**：解析实际 branch、HEAD subject、提交文件和工作树/index 状态，把 Active handoff、queue 和报告中的未来时态改为实际的本地 WIP/final 状态；若这些状态文件属于刚创建的当前任务 commit，则显式暂存它们并 amend 同一个 commit 一次，再重新运行 H3。不得为状态对账创建第二个 WIP 或独立的纯状态 commit。
+
+任何 commit 都不得在其自身包含的文件中记录自己的精确 hash，因为 amend 会改变该 hash。仓库内对当前 commit 使用 branch + subject（例如 `current branch HEAD` 或明确 branch 上的 local WIP subject）作为稳定指针；最终精确 hash 只写入任务回执。引用父提交、其它分支或已经固定的外部 commit 时可以记录其 hash。
+
 Commit message 统一使用：
 
 - 未完成任务：`WIP suspend: <task short name>`；
@@ -298,7 +302,7 @@ Queue entries record only task short name, status, branch, commit, files, review
 
 Multiple pending WIPs are allowed, but a new ingest/project/synthesis must check its expected files against relevant queue entries before first write. No overlap permits an independent WIP. If files overlap, continue and amend the same WIP when the scope is shared; record an explicit upstream dependency for a dependent WIP; or defer the shared-file edit until the upstream WIP is finalized. Never create two supposedly independent WIPs that silently modify the same file. If ownership cannot be resolved, pause before editing the shared file.
 
-If a WIP commit hash changes after amend or rebase, update the queue to the latest branch/commit pointer. Review history and Pending WIP are not mutually exclusive: after a human-review round is completed, append review history first, then independently decide whether the queue entry should remain, be updated, or be cleared. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
+If a referenced parent, other-branch, or already-fixed WIP commit hash changes after amend or rebase, update the queue to the latest branch/commit pointer. A queue entry contained by the WIP itself must use its branch + subject rather than its own hash. Review history and Pending WIP are not mutually exclusive: after a human-review round is completed, append review history first, then independently decide whether the queue entry should remain, be updated, or be cleared. If queue, Git state, and handoff conflict during recovery, review-finalization, or safe suspend, follow the current user instruction first, then verify against Git and the relevant source/project files; ask the user if ownership remains unclear.
 
 ### Review history
 

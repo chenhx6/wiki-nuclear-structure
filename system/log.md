@@ -840,3 +840,31 @@ updated: 2026-07-15
 - The user completed the targeted P1 review without corrections and authorized push.
 - GSD-PROJ-8/GSD-SYN-9 are accepted; the Singh source's unrelated claim-level review states remain unchanged.
 - Finalization will amend the existing scientific WIP, replay the dependent governance final and use exact-refspec non-force push after H3.
+
+## [2026-08-04] governance | WIP post-commit reconciliation
+
+- Corrected the weekly WIP's stale pre-commit wording and amended the same scientific WIP from `6beee7d` to `4dcb9b1` without changing science.
+- Added a mandatory no-push-inclusive H3 reconciliation: repository state uses branch + subject, self-hashes are forbidden, and any status correction amends the same commit rather than creating a second WIP/status commit.
+- The governance work remained on a dependent local branch until the reviewed scientific lineage was finalized; protected raw, automation, ACLs and remote state were not changed.
+
+## [2026-08-04] integration | reviewed weekly lineage assembled
+
+- Integrated the accepted `131Ce` scientific final with the dependent WIP-reconciliation governance final; no additional scientific claim state changed.
+- Used an ignored Wiki-internal temporary worktree so the protected user BibTeX remained untouched and unstaged in the primary worktree.
+- The integrated tests passed; final primary-worktree lint, H3 and the user-authorized exact-refspec push remain the publication gate.
+
+## [2026-08-04] safe suspend | reviewed weekly lineage push
+
+- Local H3, fresh fetch and remote ancestry passed for the integrated reviewed lineage.
+- System and bundled Git both failed the exact-refspec dry-run because the protected repo-local AskPass could not be spawned in the current runtime; no push occurred.
+- Preserved the integrated local final and protected BibTeX; resume in a fresh Wiki runtime without changing ACLs or credentials.
+
+## [2026-08-05] safe suspend | reviewed weekly lineage fetch gate
+
+- Current H3 stopped at fresh fetch because `.git/FETCH_HEAD` was denied after the guardian restored the known explicit DENY rules; no status transaction, dry-run, or push was performed.
+- Preserved the integrated local final and protected BibTeX; resolve the Desktop `.git` write lifecycle outside Codex before retrying.
+
+## [2026-08-05] publication | reviewed weekly lineage
+
+- After the user precisely removed the known guardian DENY rules outside Codex, schema-2 root/`.git` probes, fresh fetch, ancestry, tests, lint and the complete H3 passed in the Wiki runtime.
+- Published the reviewed `131Ce` scientific final and dependent WIP-reconciliation governance final to `origin/main` by exact-refspec non-force fast-forward; protected BibTeX remained unstaged and hash-matched.

@@ -1,35 +1,35 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-08-04
+updated: 2026-08-05
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-The user completed the scoped `131Ce` lifetime/γ-soft evidence-boundary review without corrections and authorized push. The targeted scientific review is finalized on the original branch; the dependent governance final still needs to be replayed before the authorized push.
+The reviewed `131Ce` lifetime/γ-soft evidence-boundary lineage and its dependent WIP-reconciliation governance fix are finalized and published to `origin/main` by exact-refspec non-force fast-forward.
 
 Current branch / local commit:
-Branch `codex/weekly-self-test-20260804-131ce-lifetime-gamma-soft-boundary`; current branch HEAD is the local final `Finalize weekly self-test 2026-08-04: 131Ce lifetime/γ-soft boundary`, not yet pushed.
+Branch `codex/wiki-wip-postcommit-reconciliation`; current branch HEAD is the published integrated final `Fix Wiki WIP post-commit reconciliation`, with parent `Finalize weekly self-test 2026-08-04: 131Ce lifetime/γ-soft boundary`. The exact published hash is recorded in the task receipt rather than inside its own commit.
 
 Last task status:
-The user accepted the separation of measured `τ/Q_t`, the author's `3→2.5 eb` visual summary, the Wiki `0.64σ` null trend, and TRS γ-soft interpretation. GSD-PROJ-8/GSD-SYN-9 are the only claim states cleared; Singh source claims not explicitly checked against raw remain unchanged.
+The user accepted the separation of measured `τ/Q_t`, the author's `3→2.5 eb` visual summary, the Wiki `0.64σ` null trend, and TRS γ-soft interpretation. GSD-PROJ-8/GSD-SYN-9 are the only claim states cleared; Singh source claims not explicitly checked against raw remain unchanged. After the user precisely removed the known guardian DENY rules outside Codex, schema-2 write probes and fresh fetch passed in the Wiki runtime; the integrated final then passed H3 and was published without changing science.
 
 Unfinished items:
-Complete post-commit reconciliation; replay `Fix Wiki WIP post-commit reconciliation` onto the finalized lineage; run the integrated checks/H3, fresh fetch, exact-refspec dry-run and non-force push to main.
+No unfinished item remains for this reviewed lineage. Future work may address unrelated Singh source-level `needs_review` claims or begin a new research task without reopening this completed review.
 
 P0/P1 review focus:
 P0: none. Targeted P1 review is complete without corrections. Remaining source-level `needs_review` items were outside this review and are preserved.
 
 Risks:
-Do not clear unrelated Singh source claims, elevate γ-soft confidence, create a second weekly WIP, fold the dependent governance commit into the science amend, stage protected BibTeX, edit config/Skill/PLAN/raw, force push, or bypass exact-refspec H3.
+Do not clear unrelated Singh source claims, elevate γ-soft confidence, create a post-push status-only commit, stage protected BibTeX, edit config/Skill/PLAN/raw/ACL/credentials, force push, or rebuild the finalized lineage.
 
 Checks:
-H1 and H2 passed with only protected `raw/zotero/wiki-inbox.bib` dirty and hash-matched; QMD refresh, 6/6 lifetime tests, 18/18 branch-local system tests, and Wiki lint (0 errors, 29 warnings, 231 info) passed. Integrated H3 and remote checks remain pending.
+Schema-2 permission preflight passed with root and `.git` CreateNew/read/delete probes, protected sentinels readable, zero explicit DENY and no probe residue. H1/H2/H3 passed with only protected `raw/zotero/wiki-inbox.bib` dirty at the expected SHA-256; QMD refresh succeeded; 6/6 lifetime tests and all 19 system tests passed; Wiki lint passed with 0 errors, 29 warnings and 231 info. Fresh fetch, ancestry, exact-refspec dry-run, non-force push and remote-ref verification passed.
 
 Next prompt / continuation phrase:
-`继续 2026-08-04 周测 finalization 与已授权 push`
+`开始新的 Wiki 任务；已审核的 2026-08-04 周测 lineage 已发布，不重新审核或制造状态提交`
 
 Recent user decisions:
 The user stated the targeted weekly review is complete, requested no scientific corrections, and explicitly authorized push.

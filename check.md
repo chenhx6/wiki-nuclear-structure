@@ -271,9 +271,14 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 科学内容、摄入、project/synthesis 和 claim-review 默认创建本地 WIP、不 push；方案已确认且检查通过的治理、框架、脚本和说明任务可直接 final commit。
 - [ ] 没有使用 `git add .` 或其它宽泛 stage；只显式 stage 本轮实际修改且用户授权的文件。
 - [ ] commit 前已运行 `git diff --cached --name-only`、`git diff --cached --stat` 和 `git diff --cached --check`，完整 index 不含无关 `knowledge/`、`.obsidian/`、未授权 `raw/` 或历史 staged 文件。
+- [ ] 提交前若 handoff/queue/report 需要描述尚未发生的 commit，只使用 `commit target` / `checkpoint commit message`；没有把 `planned`、`will create` 或 `expected checkpoint` 留作最终实际状态。
 
 ### H3. Post-commit / pre-push final check
 
+- [ ] 每个 WIP、amend 或 final commit 成功后都执行 H3，即使本轮不准备 push；只有远端/fetch/dry-run 条目可因未获 push 授权而跳过。
+- [ ] 已用 Git 解析实际 branch、HEAD subject、最终 commit hash 和提交文件，并核对 Active handoff、WIP queue 与报告；实际状态字段不再声称该 commit 仍是 `planned`、`will create` 或 `expected checkpoint`。
+- [ ] 当前 commit 包含的仓库文件没有记录该 commit 自身的精确 hash；仓库内使用 branch + subject 作为稳定指针，最终 hash 只写入任务回执。父提交、其它分支或已固定 commit 的 hash 已明确区分。
+- [ ] 若 post-commit reconciliation 需要修正当前任务的 handoff/queue/report，已显式暂存这些文件并 amend 同一 commit 一次，随后从头重跑 H3；未创建第二个 WIP 或纯状态 commit。
 - [ ] commit 后、push 前已重新运行清理脚本，再运行 `git status -sb`、`git status --short`、`git diff --stat`、`git diff --cached --name-only` 和 `git diff --cached --check`。
 - [ ] commit 后新出现的 unrelated `knowledge/**/*.md` 已按脚本结果和 baseline 分类；无法确认无实质差异、存在 mixed/conflict 或 overlap 未解决时没有 push。
 - [ ] 没有提交 LF/CRLF-only dirty state；脚本未审批科学修改，也未替代 Codex 对授权范围、baseline 和 pending WIP 归属的判断。

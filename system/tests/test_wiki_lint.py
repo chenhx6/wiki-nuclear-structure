@@ -127,6 +127,20 @@ class ScientificGuardrailTests(unittest.TestCase):
         self.assertIn("Human review triage", ingest_workflow)
         self.assertIn("ready-for-push", check_text)
 
+    def test_post_commit_reconciliation_contract(self) -> None:
+        agents = (REPO_ROOT / "AGENTS.md").read_text(encoding="utf-8-sig")
+        check_text = (REPO_ROOT / "check.md").read_text(encoding="utf-8-sig")
+        autonomous = (
+            REPO_ROOT / "system" / "workflows" / "autonomous-research.md"
+        ).read_text(encoding="utf-8-sig")
+
+        for text in (agents, check_text, autonomous):
+            self.assertIn("post-commit reconciliation", text)
+            self.assertIn("branch + subject", text)
+        self.assertIn("最终精确 hash 只写入任务回执", agents)
+        self.assertIn("即使本轮不准备 push", check_text)
+        self.assertIn("最终 hash 只在任务回执中报告", autonomous)
+
     def test_high_confidence_requires_human_confirmation(self) -> None:
         page = wiki_lint.Page(
             path=Path("knowledge/concepts/example.md"),

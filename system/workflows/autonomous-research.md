@@ -162,6 +162,8 @@ L4 必须同时包含：
 
 有实质变化时完成 Git 检查、Wiki lint、显式 stage 并创建 `WIP review: weekly self-test YYYY-MM-DD for user review`；未完成 L3 或 L4 candidate safe suspend 使用 `WIP suspend: weekly L3 YYYY-MM-DD <topic>`。同一分支继续时 amend，不创建第二个 active WIP。无实质变化不制造空 commit。
 
+WIP 创建或 amend 成功后，即使不准备 push，也必须按 `check.md` H3 完成 post-commit reconciliation：用实际 branch + subject（subject 取自 HEAD）核对报告、Active handoff 和 WIP queue，把提交前的 `planned` / `expected checkpoint` 未来时态改为实际本地 WIP 状态；需要修正时 amend 同一个 WIP 一次并重跑 H3。WIP 自身不得在其包含的文件中记录自己的精确 hash；最终 hash 只在任务回执中报告。
+
 用户审核完成后，落实意见、隔离 hard P0、刷新 QMD 和检查，将 WIP amend 为 `Finalize weekly self-test YYYY-MM-DD: <topic>`；远端无漂移时 fast-forward main 并 push。未审核、存在 hard P0、权限异常或正式结论越级时不得 push。
 
 ## 共同停止条件
