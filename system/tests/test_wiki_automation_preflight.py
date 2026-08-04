@@ -37,9 +37,12 @@ class WikiAutomationPreflightTests(unittest.TestCase):
     def tearDown(self) -> None:
         shutil.rmtree(self.tmp_root, ignore_errors=True)
 
-    def invoke(self, *, profile: str = "wiki_l3", expected_hash: str | None = None):
+    def invoke(self, *, profile: str | None = "wiki_l3", expected_hash: str | None = None):
         env = os.environ.copy()
-        env["CODEX_PERMISSION_PROFILE"] = profile
+        if profile is None:
+            env.pop("CODEX_PERMISSION_PROFILE", None)
+        else:
+            env["CODEX_PERMISSION_PROFILE"] = profile
         command = [
             str(POWERSHELL),
             "-NoProfile",
@@ -91,6 +94,10 @@ class WikiAutomationPreflightTests(unittest.TestCase):
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertEqual(payload["schema_version"], 2)
         self.assertTrue(payload["ok"])
+        self.assertEqual(payload["profile_attestation"]["config_default"], "wiki_l3")
+        self.assertTrue(payload["profile_attestation"]["config_matches"])
+        self.assertEqual(payload["profile_attestation"]["marker_status"], "matched")
+        self.assertEqual(payload["warnings"], [])
         self.assertEqual(len(payload["write_probes"]), 2)
         self.assertEqual(
             [Path(item["path"]).name for item in payload["write_probes"]],
@@ -111,12 +118,56 @@ class WikiAutomationPreflightTests(unittest.TestCase):
         self.assertEqual(self.protected_tree_snapshot(), protected_before)
         self.assert_no_probe_files()
 
+    def test_missing_profile_marker_warns_and_runs_capability_checks(self) -> None:
+        completed, payload = self.invoke(profile=None)
+
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertTrue(payload["ok"])
+        self.assertIsNone(payload["actual_profile"])
+        self.assertEqual(payload["profile_attestation"]["config_default"], "wiki_l3")
+        self.assertTrue(payload["profile_attestation"]["config_matches"])
+        self.assertEqual(payload["profile_attestation"]["marker_status"], "missing")
+        self.assertEqual(
+            [item["code"] for item in payload["warnings"]],
+            ["permission_profile_marker_missing"],
+        )
+        self.assertEqual(len(payload["write_probes"]), 2)
+        self.assertEqual(len(payload["protected_read_checks"]), 2)
+        self.assert_no_probe_files()
+
     def test_profile_mismatch_fails_before_probes(self) -> None:
         completed, payload = self.invoke(profile="wrong-profile")
 
         self.assertEqual(completed.returncode, 1)
         self.assertFalse(payload["ok"])
         self.assertEqual(payload["error"]["code"], "permission_profile_mismatch")
+        self.assertEqual(payload["profile_attestation"]["marker_status"], "mismatch")
+        self.assertEqual(payload["write_probes"], [])
+        self.assertEqual(payload["protected_read_checks"], [])
+
+    def test_project_config_profile_mismatch_fails_before_probes(self) -> None:
+        (self.tmp_root / ".codex" / "config.toml").write_text(
+            'default_permissions = "wrong-profile"\n', encoding="utf-8"
+        )
+
+        completed, payload = self.invoke()
+
+        self.assertEqual(completed.returncode, 1)
+        self.assertFalse(payload["ok"])
+        self.assertEqual(payload["error"]["code"], "project_config_profile_mismatch")
+        self.assertEqual(payload["profile_attestation"]["config_default"], "wrong-profile")
+        self.assertFalse(payload["profile_attestation"]["config_matches"])
+        self.assertEqual(payload["write_probes"], [])
+        self.assertEqual(payload["protected_read_checks"], [])
+
+    def test_missing_project_config_fails_before_probes(self) -> None:
+        (self.tmp_root / ".codex" / "config.toml").unlink()
+
+        completed, payload = self.invoke()
+
+        self.assertEqual(completed.returncode, 1)
+        self.assertFalse(payload["ok"])
+        self.assertEqual(payload["error"]["code"], "project_config_profile_unreadable")
         self.assertEqual(payload["write_probes"], [])
         self.assertEqual(payload["protected_read_checks"], [])
 

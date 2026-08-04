@@ -60,6 +60,12 @@ create/read/delete probes only in the Wiki root and `.git`, then open
 read-only sentinel checks. It must never create a file in `.codex` or `.agents`.
 The project profile may retain `write` for Wiki-local maintenance; the scheduled
 task must not exercise that grant on these two paths.
+Before the capability checks, the script must attest that the active top-level
+`default_permissions` in `.codex/config.toml` is exactly `wiki_l3`.
+`CODEX_PERMISSION_PROFILE` is an optional diagnostic marker, not the authority:
+a matching value confirms the attestation, a missing value emits a warning and
+continues, and a non-empty mismatch fails with exit `1`. The task must not
+self-inject the marker.
 Its single JSON result and exit code are authoritative:
 
 - exit `0` permits the normal Git and task gates to continue;

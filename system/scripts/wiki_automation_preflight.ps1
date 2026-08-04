@@ -20,6 +20,13 @@ $result = [ordered]@{
     cwd = $null
     expected_profile = $ExpectedProfile
     actual_profile = [Environment]::GetEnvironmentVariable('CODEX_PERMISSION_PROFILE', 'Process')
+    profile_attestation = [ordered]@{
+        config_path = '.codex/config.toml'
+        config_default = $null
+        config_matches = $false
+        marker_status = $null
+    }
+    warnings = @()
     protected_bib = [ordered]@{
         path = 'raw/zotero/wiki-inbox.bib'
         expected_sha256 = $ProtectedBibHash.ToUpperInvariant()
@@ -45,6 +52,35 @@ function Add-ErrorRecord {
         code = $Code
         message = $Message
     }
+}
+
+function Get-ProjectDefaultPermission {
+    param([string]$ConfigPath)
+
+    $values = @()
+    $inTopLevel = $true
+
+    foreach ($line in [IO.File]::ReadAllLines($ConfigPath, [Text.Encoding]::UTF8)) {
+        $trimmed = $line.Trim()
+
+        if ([string]::IsNullOrWhiteSpace($trimmed) -or $trimmed.StartsWith('#')) {
+            continue
+        }
+        if ($trimmed.StartsWith('[')) {
+            $inTopLevel = $false
+            continue
+        }
+        if ($inTopLevel -and
+            $trimmed -match '^default_permissions\s*=\s*["'']([^"'']+)["'']\s*(?:#.*)?$') {
+            $values += $Matches[1]
+        }
+    }
+
+    if ($values.Count -ne 1) {
+        throw "expected exactly one active top-level default_permissions entry, found $($values.Count)"
+    }
+
+    return $values[0]
 }
 
 function Get-AclDiagnostic {
@@ -82,10 +118,39 @@ try {
 
     if (-not [string]::Equals($resolvedCwd, $resolvedRoot, [StringComparison]::OrdinalIgnoreCase)) {
         Add-ErrorRecord 'cwd_mismatch' "cwd '$($result.cwd)' is not the requested Wiki root '$resolvedRoot'"
-    } elseif ([string]::IsNullOrWhiteSpace($result.actual_profile) -or
-        -not [string]::Equals($result.actual_profile, $ExpectedProfile, [StringComparison]::OrdinalIgnoreCase)) {
-        Add-ErrorRecord 'permission_profile_mismatch' "expected '$ExpectedProfile', got '$($result.actual_profile)'"
     } else {
+        $configPath = Join-Path $resolvedRoot '.codex\config.toml'
+
+        try {
+            $configDefault = Get-ProjectDefaultPermission $configPath
+            $result.profile_attestation.config_default = $configDefault
+            $result.profile_attestation.config_matches = [string]::Equals(
+                $configDefault,
+                $ExpectedProfile,
+                [StringComparison]::OrdinalIgnoreCase
+            )
+        } catch {
+            Add-ErrorRecord 'project_config_profile_unreadable' "could not attest project default_permissions: $($_.Exception.Message)"
+        }
+
+        if ($null -eq $result.error -and -not $result.profile_attestation.config_matches) {
+            Add-ErrorRecord 'project_config_profile_mismatch' "project default_permissions is '$($result.profile_attestation.config_default)', expected '$ExpectedProfile'"
+        } elseif ($null -eq $result.error -and [string]::IsNullOrWhiteSpace($result.actual_profile)) {
+            $result.profile_attestation.marker_status = 'missing'
+            $result.warnings += [ordered]@{
+                code = 'permission_profile_marker_missing'
+                message = 'CODEX_PERMISSION_PROFILE is not exported; project config attestation and real capability checks remain authoritative'
+            }
+        } elseif ($null -eq $result.error -and
+            -not [string]::Equals($result.actual_profile, $ExpectedProfile, [StringComparison]::OrdinalIgnoreCase)) {
+            $result.profile_attestation.marker_status = 'mismatch'
+            Add-ErrorRecord 'permission_profile_mismatch' "expected '$ExpectedProfile', got '$($result.actual_profile)'"
+        } elseif ($null -eq $result.error) {
+            $result.profile_attestation.marker_status = 'matched'
+        }
+    }
+
+    if ($null -eq $result.error) {
         $bibPath = Join-Path $resolvedRoot 'raw\zotero\wiki-inbox.bib'
         $actualHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $bibPath -ErrorAction Stop).Hash.ToUpperInvariant()
         $result.protected_bib.actual_sha256 = $actualHash

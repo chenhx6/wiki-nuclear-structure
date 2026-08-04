@@ -822,3 +822,9 @@ updated: 2026-07-15
 
 - After the `unelevated` project override was made inactive, two consecutive schema-2 preflights passed without ACL cleanup: root and `.git` were writable, both protected sentinels were readable, and no probe remained.
 - The user retained `.codex`/`.agents` as `write` in `wiki_l3`; automation alone is forbidden to exercise that grant. Tests, lint and diff checks passed, while automation, `131Ce`, raw staging and push remained paused.
+
+## [2026-08-04] correction | Scheduled profile marker false negative
+
+- A controlled `Run now` safe-stopped because the scheduled runner omitted the diagnostic `CODEX_PERMISSION_PROFILE` marker; startup, Git, raw and science work did not run, and the same automation was paused.
+- Schema 2 now attests the project config and actual capabilities, treats a missing marker as a warning, and still blocks a non-empty mismatch. A real missing-marker simulation passed without ACL, global, raw or remote changes.
+- The same `ID=wiki` prompt was updated through the automation function with the corrected semantics and kept `PAUSED`; no duplicate or controlled run was created.

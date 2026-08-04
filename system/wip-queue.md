@@ -11,14 +11,14 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 ## Active entries
 
 ### Wiki automation protected-path permission matrix
-- status: local final commit ready after cold-start double validation; automation rollout remains pending and no push is authorized
+- status: scheduled-runner profile-marker false-negative fixed locally; automation remains paused and a new controlled receipt is pending
 - branch: `codex/wiki-automation-permission-preflight`
-- commit: current HEAD final `Fix Wiki automation protected-path permission matrix`, not pushed
-- files: `.codex/config.toml`; `AGENTS.md`; `check.md`; `system/memory.md`; preflight script/tests; scheduled-continuation workflow; handoff/log/queue
+- commit: local final `Fix Wiki scheduled profile marker preflight`, not pushed
+- files: `AGENTS.md`; `check.md`; `system/memory.md`; preflight script/tests; scheduled-continuation workflow; handoff/log/queue
 - review needed: controlled automation receipt before any `131Ce` continuation
 - overview/QMD: not modified; explicitly out of scope
-- next action: in a separate authorized task, inspect and update the unique `ID=wiki` through the automation function, then perform one controlled `Run now` and audit its real receipt
-- risks: automation must not exercise profile `write` on `.codex`/`.agents`; do not stage `raw/zotero/wiki-inbox.bib`, clean ACLs, alter global/other-project settings, activate duplicate automation, or push
+- next action: keep the unique `ID=wiki` paused after its prompt is updated; only a later explicit authorization may restore `ACTIVE` and perform one controlled `Run now`
+- risks: do not self-inject the profile marker or treat its absence as permission failure; automation must not exercise profile `write` on `.codex`/`.agents`; do not stage `raw/zotero/wiki-inbox.bib`, clean ACLs, alter global/other-project settings, activate duplicate automation, or push
 
 ## Legacy completed entries
 
