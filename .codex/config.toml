@@ -1,6 +1,9 @@
 approval_policy = "never"
 default_permissions = "wiki_l3"
 
+# [windows]
+# sandbox = "unelevated"
+
 [permissions.wiki_l3]
 description = "Read and execute outside the Wiki without external writes; full write access inside E:\\imp\\wiki."
 

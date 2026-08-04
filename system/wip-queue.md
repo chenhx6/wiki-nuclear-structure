@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-07-29
+updated: 2026-08-04
 ---
 
 # Pending WIP queue
@@ -10,9 +10,15 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-None. Continuous Research-Learning v2 and the Wiki-local authenticated push generalization are published. A future user-data-backed `131Ce` L4 run becomes a new entry only after the user supplies a Wiki-local data path and manually starts it.
-
-Continuous Research-Learning v1 completed Gate 2B release approval; publication state is Git-authoritative.
+### Wiki automation protected-path permission matrix
+- status: local final commit ready after cold-start double validation; automation rollout remains pending and no push is authorized
+- branch: `codex/wiki-automation-permission-preflight`
+- commit: current HEAD final `Fix Wiki automation protected-path permission matrix`, not pushed
+- files: `.codex/config.toml`; `AGENTS.md`; `check.md`; `system/memory.md`; preflight script/tests; scheduled-continuation workflow; handoff/log/queue
+- review needed: controlled automation receipt before any `131Ce` continuation
+- overview/QMD: not modified; explicitly out of scope
+- next action: in a separate authorized task, inspect and update the unique `ID=wiki` through the automation function, then perform one controlled `Run now` and audit its real receipt
+- risks: automation must not exercise profile `write` on `.codex`/`.agents`; do not stage `raw/zotero/wiki-inbox.bib`, clean ACLs, alter global/other-project settings, activate duplicate automation, or push
 
 ## Legacy completed entries
 

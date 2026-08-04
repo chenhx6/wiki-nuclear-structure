@@ -812,3 +812,13 @@ updated: 2026-07-15
 
 - After fresh fetch, repository-scope, secret/raw, ancestry, lint and system-test checks, system Git 2.55 published `dee0b36` to `origin/main` by exact-refspec non-force fast-forward.
 - Local HEAD, the tracking ref and remote `main` agreed after the push. The protected Zotero Inbox remained unstaged; no global/system credential, SSL, PATH, permission or other-project setting changed.
+
+## [2026-08-04] maintenance | Wiki automation protected-path permission matrix
+
+- Upgraded the Wiki-local automation preflight to schema 2: root and `.git` use real write probes, while `.codex/config.toml` and the repository Skill are read-only sentinels; protected-directory DENY remains diagnostic.
+- A real protected-DENY run exited `0`, 15 system tests passed, Wiki lint had 0 errors, and probe cleanup succeeded. The host rejected the project-config patch, so automation and `131Ce` remain paused pending a Desktop-exited Wiki-local config edit and cold-start validation; no ACL, raw, global setting or remote was changed.
+
+## [2026-08-04] acceptance | Wiki automation permission matrix cold start
+
+- After the `unelevated` project override was made inactive, two consecutive schema-2 preflights passed without ACL cleanup: root and `.git` were writable, both protected sentinels were readable, and no probe remained.
+- The user retained `.codex`/`.agents` as `write` in `wiki_l3`; automation alone is forbidden to exercise that grant. Tests, lint and diff checks passed, while automation, `131Ce`, raw staging and push remained paused.

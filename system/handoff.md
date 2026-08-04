@@ -1,38 +1,38 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-07-29
+updated: 2026-08-04
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Wiki-local authenticated Git push generalization is complete and published. Continuous Research-Learning v2（硅基研究生 V2）remains released at the authoritative `origin/main` and annotated tag.
+Wiki automation protected-path permission matrix repair has passed its cold-start double validation. Schema 2 writes only the Wiki root and `.git` and performs read-only sentinel checks on `.codex`/`.agents`; the project profile retains Wiki-internal `write`. Automation and the `131Ce` weekly self-test remain paused by current user instruction.
 
 Current branch / local commit:
-Functional commit `dee0b36` (`Route Wiki pushes through repo-local AskPass`) was published to `origin/main` by non-force fast-forward. This publication-state commit closes the pending queue; Git refs remain authoritative.
+Branch `codex/wiki-automation-permission-preflight`; current HEAD will be the amended local final commit `Fix Wiki automation protected-path permission matrix`, not pushed.
 
 Last task status:
-Repository-local native AskPass supplies the existing DPAPI-protected GitHub credential to ordinary Git. System Git 2.55 performed the final authenticated publication; system Git 2.55 and bundled Git 2.53 both previously passed exact-refspec probes, and no probe branch remains. Failed and legacy helper prototypes stay ignored and unconfigured under `tmp/git-diagnostic/`.
+After a full Desktop exit, the obsolete project `[windows] sandbox = "unelevated"` override is inactive while `.codex`/`.agents` remain `write` in `wiki_l3`. Two consecutive real schema-2 preflights returned exit `0` without ACL cleanup: root/`.git` CreateNew-read-delete passed, both protected sentinels were readable, the protected directories retained their runtime DENY diagnostics, and all probes were removed.
 
 Unfinished items:
-No push-generalization implementation or publication item remains. The next scientific task begins only when the user supplies a Wiki-local path for the independent `131Ce` data and manually starts a new L4 run.
+No permission-matrix implementation item remains after final amend. A later user-authorized task must use the Codex automation function to inspect and update the unique `ID=wiki`, keep its schedule/project/model/no-push rules, then perform one controlled `Run now` and verify the real receipt. Do not start that rollout in this task.
 
 P0/P1 review focus:
-No hard P0 remains for the push path. Future push failures should be diagnosed without exposing the token or changing global/system configuration; remote drift, token revocation and network failures remain ordinary stop conditions.
+The project/config/manual-task P0 gate is closed by the double preflight. P1 remains a real controlled automation receipt with schema 2 exit `0`, Git/raw audit and no Wiki-external writes. Scientific `131Ce` work remains out of scope until that rollout gate passes.
 
 Risks:
-The repair is intentionally local to this Wiki's `.git/config` and `.git/codex-credential/`; it does not configure other projects. Git version is not a policy boundary, but every selected runtime must pass the same preflight. Never print/decrypt the token for diagnostics, copy the credential files, alter global credentials, disable TLS verification or force push. GitHub, network or token revocation can still cause future failures. `raw/zotero/wiki-inbox.bib` remains protected and unstaged; user experimental data remain out of scope.
+Do not treat profile `write` as permission for the weekly task to edit `.codex`/`.agents`, clean runtime protective DENY, activate automation without the separate rollout request, modify global/other-project settings, push, or stage raw. `raw/zotero/wiki-inbox.bib` remains protected and unstaged at SHA-256 `D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`.
 
 Checks:
-Final pre-push checks confirmed repo-local AskPass/config scope, clean publication worktree, protected user BibTeX, no secret/raw content in the commit, fast-forward ancestry and exact-refspec dry-run. Wiki lint has 0 errors, all 10 system tests pass, and local HEAD, `origin/main` and remote `main` agreed at `dee0b36` after the functional push.
+Both cold-start schema-2 preflights exited `0` with no probe residue. The intervening system tests and Wiki lint passed; lint reported 0 errors, 29 warnings and 231 info. H1 cleanup and `git diff --check` passed. The protected BibTeX hash matched and the file remains unstaged.
 
 Next prompt / continuation phrase:
-For the next data-backed study, send: `开始 131Ce L4：数据=<Wiki 内路径>；问题=<可省略>`。
+For the separate rollout task, send: `继续更新现有 ID=wiki 并执行受控 Run now；先核验唯一任务，不要 push`.
 
 Recent user decisions:
-The user authorized publishing the Wiki push generalization and clarified that Git version numbers are not restriction objects. Any runtime that passes the repository-level preflight is acceptable; the setup remains Wiki-only and force push remains prohibited.
+The user clarified that `wiki_l3` should retain `write` for `.codex` and `.agents`; only the automation contract treats them as read-only targets. The inactive `unelevated` workaround must not be restored, and runtime host DENY must not be cleaned.
 
 ## Previous active handoff (superseded 2026-07-27 before L3/L4 pilot)
 

@@ -14,7 +14,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $result = [ordered]@{
-    schema_version = 1
+    schema_version = 2
     ok = $false
     root = $Root
     cwd = $null
@@ -26,7 +26,8 @@ $result = [ordered]@{
         actual_sha256 = $null
         ok = $false
     }
-    probes = @()
+    write_probes = @()
+    protected_read_checks = @()
     acl_diagnostics = @()
     error = $null
 }
@@ -97,7 +98,23 @@ try {
         if (-not $result.protected_bib.ok) {
             Add-ErrorRecord 'protected_hash_mismatch' "protected BibTeX hash does not match the expected value"
         } else {
-            $targets = @(
+            $writeTargets = @(
+                $resolvedRoot,
+                (Join-Path $resolvedRoot '.git')
+            )
+            $protectedReadTargets = @(
+                [ordered]@{
+                    path = (Join-Path $resolvedRoot '.codex')
+                    sentinel = '.codex/config.toml'
+                    sentinel_path = (Join-Path $resolvedRoot '.codex\config.toml')
+                },
+                [ordered]@{
+                    path = (Join-Path $resolvedRoot '.agents')
+                    sentinel = '.agents/skills/wiki-evidence-query/SKILL.md'
+                    sentinel_path = (Join-Path $resolvedRoot '.agents\skills\wiki-evidence-query\SKILL.md')
+                }
+            )
+            $diagnosticTargets = @(
                 $resolvedRoot,
                 (Join-Path $resolvedRoot '.git'),
                 (Join-Path $resolvedRoot '.codex'),
@@ -108,7 +125,7 @@ try {
             $gateFailed = $false
             $cleanupFailed = $false
 
-            foreach ($target in $targets) {
+            foreach ($target in $writeTargets) {
                 $probePath = Join-Path $target ".codex-write-probe-$probeId.tmp"
                 $createdByUs = $false
                 $probeError = $null
@@ -155,7 +172,7 @@ try {
                     error = $probeError
                     cleanup_error = $cleanupError
                 }
-                $result.probes += $record
+                $result.write_probes += $record
 
                 if ($null -ne $cleanupError) {
                     $cleanupFailed = $true
@@ -169,7 +186,38 @@ try {
                 }
             }
 
-            foreach ($target in $targets) {
+            if (-not $cleanupFailed -and -not $gateFailed) {
+                foreach ($target in $protectedReadTargets) {
+                    $readError = $null
+
+                    try {
+                        $stream = [IO.File]::Open(
+                            $target.sentinel_path,
+                            [IO.FileMode]::Open,
+                            [IO.FileAccess]::Read,
+                            [IO.FileShare]::ReadWrite
+                        )
+                        $stream.Dispose()
+                    } catch {
+                        $readError = $_.Exception.Message
+                    }
+
+                    $result.protected_read_checks += [ordered]@{
+                        path = $target.path
+                        sentinel = $target.sentinel
+                        readable = $null -eq $readError
+                        error = $readError
+                    }
+
+                    if ($null -ne $readError) {
+                        $gateFailed = $true
+                        Add-ErrorRecord 'protected_read_failed' "protected sentinel '$($target.sentinel)' is not readable: $readError"
+                        break
+                    }
+                }
+            }
+
+            foreach ($target in $diagnosticTargets) {
                 $result.acl_diagnostics += Get-AclDiagnostic $target
             }
 

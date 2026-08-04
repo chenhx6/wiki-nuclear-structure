@@ -51,7 +51,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 递归删除、历史重写、raw 证据删除/覆盖、治理核心修改和 push 等危险操作均有用户明确授权，未把概括性自主授权解释为破坏性授权。
 - [ ] `system/log.md` 只追加，没有重写历史记录；启动或普通恢复未用 `ReadAllText(system/log.md)` 读取完整 log。
 - [ ] 若使用定时续跑，已遵循 `system/workflows/scheduled-continuation.md`，并说明本机应用、调度服务与电脑可用性前提。
-- [ ] Wiki local-project cron 在任何 Git 或 Wiki 写入前调用 `system/scripts/wiki_automation_preflight.ps1`；exit `0` 才放行四目录真实创建—回读—删除探针，exit `1`/`2` 立即只读 safe-suspend；orphan DENY 只作为诊断警告。
+- [ ] Wiki local-project cron 在任何 Git 或 Wiki 写入前调用 `system/scripts/wiki_automation_preflight.ps1`；schema 2 只在 Wiki 根目录和 `.git` 执行真实创建—回读—删除探针，并只读打开 `.codex/config.toml` 与 `.agents/skills/wiki-evidence-query/SKILL.md`；即使 profile 为两处保留 `write`，cron 也不得使用该授权；exit `0` 才放行，exit `1`/`2` 立即只读 safe-suspend，运行时保护 DENY 只作为诊断警告。
 - [ ] 定时任务正文未通过 shell、补丁或文件 API 读写 Codex 宿主 automation memory、global state、sandbox state 或任何 Wiki 外文件；宿主状态仅由 Codex automation 功能维护。
 - [ ] 定时任务的“一次/重复”、时区和下次运行时间在界面中无歧义；一次性请求未显示为“每天”。
 - [ ] 只有在存在运行回执且产物已核验时，才把定时任务报告为“已执行/已完成”；无回执明确写为“未触发/未验证”。
@@ -253,7 +253,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ### H1. Write-entry preflight
 
-- [ ] Wiki local-project cron 的首个 Git 门之前已验证 cwd、`CODEX_PERMISSION_PROFILE=wiki_l3`、受保护 BibTeX SHA-256，以及 Wiki 根目录、`.git`、`.codex`、`.agents` 四处真实探针；JSON 中无残留探针文件，显式 DENY 仅记录为 warning。
+- [ ] Wiki local-project cron 的首个 Git 门之前已验证 cwd、`CODEX_PERMISSION_PROFILE=wiki_l3`、受保护 BibTeX SHA-256，完成 Wiki 根目录和 `.git` 的真实写探针，并只读核验 `.codex/config.toml` 与 `.agents/skills/wiki-evidence-query/SKILL.md`；JSON schema 2 中无残留探针文件，保护目录显式 DENY 仅记录为 warning。
 - [ ] 第一次新增、删除、移动、重命名或修改仓库文件前，已依次运行 `git status -sb`、`git status --short`、`powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirty.ps1`，再运行两次 status。
 - [ ] 已检查 `git diff --cached --name-only` 和 `git diff --cached --stat`，没有让任务前已 staged 的无关文件静默进入本轮 commit；未擅自 unstage 或覆盖用户内容。
 - [ ] 已建立入口 dirty baseline，并将现有变化分为 initial authorized scope、authorized inherited changes、protected pre-existing changes 和 unresolved/overlapping changes。

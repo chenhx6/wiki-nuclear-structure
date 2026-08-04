@@ -54,9 +54,13 @@ Every Wiki local-project cron run must begin in `E:\imp\wiki` by invoking
 `system/scripts/wiki_automation_preflight.ps1` with `-ExpectedProfile wiki_l3`
 and the protected `raw/zotero/wiki-inbox.bib` SHA-256
 `D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`.
-The script is the permission gate and must perform the four real
-create/read/delete probes in this order: the Wiki root, `.git`, `.codex`, and
-`.agents`. Its single JSON result and exit code are authoritative:
+The script is the schema-2 permission gate. It must perform real
+create/read/delete probes only in the Wiki root and `.git`, then open
+`.codex/config.toml` and `.agents/skills/wiki-evidence-query/SKILL.md` for
+read-only sentinel checks. It must never create a file in `.codex` or `.agents`.
+The project profile may retain `write` for Wiki-local maintenance; the scheduled
+task must not exercise that grant on these two paths.
+Its single JSON result and exit code are authoritative:
 
 - exit `0` permits the normal Git and task gates to continue;
 - exit `1` stops the run before `clean_knowledge_eol_dirty.ps1`, repository
@@ -65,17 +69,21 @@ create/read/delete probes in this order: the Wiki root, `.git`, `.codex`, and
 - exit `2` is a probe-cleanup failure and follows the same stop rule, with the
   cleanup error preserved in the JSON result.
 
-The script reports explicit non-inherited DENY entries as diagnostics only.
-An orphan DENY warning does not replace or block a successful real probe, and
-the task must not change ACLs. A failed real probe is the only permission-gate
-failure. Probe files must be unique and absent after every run.
+The script reports explicit non-inherited DENY entries for all four directories
+as diagnostics only. Runtime host DENY entries on `.codex` and `.agents` are
+protection behavior, not a rewrite of the project profile, and do not block a
+successful protected-read check. The task must not change ACLs. A failed
+root/`.git` write probe or protected-sentinel read
+is a permission-gate failure. Probe files must be unique and absent after every
+run.
 
-The task body must not use shell, patches, or file APIs to read or write Codex
-host automation memory, global state, sandbox state, or any file outside the
-Wiki. Host-managed internal persistence is not a task write grant. Recovery
-state is reported through task output and Wiki `handoff`/WIP/Git artifacts;
-it must not be inferred from host memory. Automation changes, including a
-failure pause, are made only through the Codex automation function.
+The task body must not modify project configuration or repository Skills. It
+must not use shell, patches, or file APIs to read or write Codex host automation
+memory, global state, sandbox state, or any file outside the Wiki. Host-managed
+internal persistence is not a task write grant. Recovery state is reported
+through task output and Wiki `handoff`/WIP/Git artifacts; it must not be inferred
+from host memory. Automation changes, including a failure pause, are made only
+through the Codex automation function.
 
 ## Safe suspend
 

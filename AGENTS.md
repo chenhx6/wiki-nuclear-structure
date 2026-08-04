@@ -123,7 +123,7 @@ Git 版本号不是本 Wiki 的 push 权限边界。可使用当前 Wiki 会话�
 
 ## 权限边界
 
-- Wiki 使用受信任的项目级 `.codex/config.toml` 启用 `wiki_l3`；机器级 Codex requirements 不得用于锁定所有项目。Wiki 会话允许写入 `E:\imp\wiki`（包括 `.codex/`、`.git/`、`.agents/` 与按任务授权的 raw 路径），Wiki 外只允许读取和执行。Wiki 固定 `approval_policy = never`，Codex 不得请求或使用外部写入权限；确需外部状态变更时必须停止并交给用户在 Codex 外手动完成，随后由新会话只读核验。Codex Desktop 自身维护的日志和 sandbox 状态属于宿主运行数据，不构成 Wiki 工具的外部写权限。
+- Wiki 使用受信任的项目级 `.codex/config.toml` 启用 `wiki_l3`；机器级 Codex requirements 不得用于锁定所有项目。该 profile 保留整个 `E:\imp\wiki`（包括 `.git/`、`.codex/`、`.agents/` 与按任务授权的 raw 路径）的 `write`，Wiki 外只允许读取和执行；具体任务仍受 bounded initiative、raw 边界和周测专用规则约束。Codex Desktop 可在运行时对 `.codex/` 与 `.agents/` 施加宿主保护 DENY；这不改变 profile 的 Wiki 内 write 设计，也不要求清理 ACL。周测不得修改项目配置或仓库 Skill，只对两处执行只读哨兵检查；若其它任务确需维护它们而当前运行时拒绝写入，必须完全退出 Desktop 后由用户在 Codex 外精确修改，再由全新 Wiki 会话核验。Wiki 固定 `approval_policy = never`，Codex 不得请求或使用外部写入权限；确需其它外部状态变更时必须停止并交给用户在 Codex 外手动完成。Codex Desktop 自身维护的日志和 sandbox 状态属于宿主运行数据，不构成 Wiki 工具的外部写权限。
 - 运行 Wiki 外程序前，必须确认其工作目录、TEMP/TMP、缓存、日志、配置和输出全部约束到 Wiki；无法证明零外部写入的安装器、GUI 程序或系统管理工具不得在 Wiki 会话中执行。Windows 没有由 Codex 单独管理的 X 文件位；“可执行”不等于允许程序写入外部状态。
 - Wiki 任务禁止调用 Computer Use。Web Search、Browser、Chrome、MCP 和命令行下载仍可使用；Browser/Chrome 只用于检索、登录和真人验证，不得触发无法指定目标路径且会默认写入 Downloads、桌面或其他外部目录的下载。
 - Wiki 固定 `approval_policy = never`。递归删除、大规模移动、`git reset --hard`、force push、历史重写、删除或覆盖 raw 原始证据、大规模不可逆迁移、治理核心规则修改和 push 仍需用户明确授权；即使用户授权，也只能在 Wiki 内执行。概括性的“自行判断”或“充分自主”不得扩张为无关的破坏性授权。
