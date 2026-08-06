@@ -1,0 +1,6 @@
+# Direct dependencies for the Windows-only local NNDC MCP server.
+mcp==1.29.0
+httpx>=0.28,<0.29
+beautifulsoup4>=4.12,<5
+lxml>=5,<7
+pytest>=8,<10

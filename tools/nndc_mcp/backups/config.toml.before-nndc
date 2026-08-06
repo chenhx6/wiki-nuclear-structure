@@ -35,13 +35,3 @@ TEMP = 'E:\imp\wiki\tmp\codex-runtime'
 TMP = 'E:\imp\wiki\tmp\codex-runtime'
 TMPDIR = 'E:\imp\wiki\tmp\codex-runtime'
 UV_CACHE_DIR = 'E:\imp\wiki\tmp\uv-cache'
-
-[mcp_servers.nndc]
-command = "tools/nndc_mcp/.venv/Scripts/python.exe"
-args = ["tools/nndc_mcp/server.py"]
-cwd = "."
-enabled = true
-required = false
-startup_timeout_sec = 20
-tool_timeout_sec = 120
-env_vars = ["HTTP_PROXY", "HTTPS_PROXY", "NO_PROXY"]

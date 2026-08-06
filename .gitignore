@@ -24,6 +24,10 @@ __pycache__/
 .trash/
 .qmd/
 
+# Local NNDC MCP runtime and response cache
+tools/nndc_mcp/.cache/
+tools/nndc_mcp/.venv/
+
 # Obsidian machine-local state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json

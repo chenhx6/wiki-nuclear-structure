@@ -410,3 +410,11 @@ Human review triage 必须优先列 P0/P1。P0 无总量硬上限，全部逐项
 - Wikilink 使用文件 slug，例如 `[[wobbling-motion]]`、`[[130ba]]`。
 - 中文、英文缩写和历史叫法统一记录在 `aliases` 中。
 - 系统文件不参与知识图谱，不从科学页面建立指向 `index`、`log`、`check` 或工作流文件的 wikilink。
+
+## NNDC MCP (Windows, read-only)
+
+- For nuclide levels, gamma transitions, adopted levels/gammas, ENSDF, or NuDat data, prefer the project-local `nndc` MCP first.
+- If an MCP query fails, check its project-local cache and `nndc_check_access` before using another route.
+- Fall back only to read-only official NNDC web pages when the MCP cannot provide the requested data. Do not replace NNDC with non-official secondary sites unless the user explicitly asks.
+- Never describe an inference, stale cache, or failed parse as an NNDC-reported value. Preserve the connector's source URL, nuclide, retrieval date, cache state, parse status, and warnings in the answer.
+- The configured connector is Windows-only for this project; do not add a WSL MCP entry for the NNDC service unless the user explicitly requests a separate configuration.
