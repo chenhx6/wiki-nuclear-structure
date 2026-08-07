@@ -35,3 +35,6 @@ tools/nndc_mcp/.venv/
 .obsidian/plugins/
 
 /raw/writing/
+
+# Local paper comment/review Markdown (kept outside Git tracking)
+raw/notes/comment/**/*.md
