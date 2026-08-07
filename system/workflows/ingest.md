@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: ingest
-updated: 2026-07-16
+updated: 2026-08-06
 ---
 
 # INGEST：来源摄入流程
@@ -93,6 +93,12 @@ Staged evidence reading 只是阅读顺序优化，不是降低摄入标准，�
 10. 新证据是否要求修正现有认识；
 11. 该内容应留在当次输出、进入受控暂定推理层，还是经审核后晋升到正式知识；
 12. Human review 与 promotion decision。
+
+### 2.2.1 伴随观测与反证审计（高风险谱学 claim）
+
+对 γ feeding、level scheme、decay assignment、branching ratio 或单线身份等高风险主张，增加一轮最小反证审计：若主张成立，哪些 companion transitions、branch ratios、级联或中间跃迁是必要伴随预测？伴随信号是否观测到？若未见，当前统计、效率、gate、能量分辨率、图表显示阈值和 binning 是否足以把它标成 `absence candidate`？目标峰附近是否存在 annihilation line、Compton/backscatter continuum、pile-up 或 detector-response contamination？衰变路径、组态、自旋宇称和中间跃迁是否整体闭合？
+
+结果使用 `observed`、`expected-but-not-established`、`absence candidate`、`blocked-needs-raw/event-level data`，而不是笼统写成“需要更多统计”。无法闭合且可能改变核心判断的伴随证据记为 P1 或 `active-L3`；不要求每篇文献机械生成固定数量的替代解释。
 
 不得为满足模板制造固定数量的迁移案例、反向检验、竞争解释或研究问题。没有可靠依据时，应简要说明为何不生成或不持久化。标准模式不要求穷尽所有关联、全文逐句注释、自动读取全部 supplementary、每篇都更新 project/synthesis/overview、每篇都创建暂定推理页，或自动生成 manuscript-grade 段落；这些高成本动作只在严格模式、用户明确要求或真实证据变化需要时执行。
 

@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: reflect
-updated: 2026-07-15
+updated: 2026-08-06
 ---
 
 # REFLECT：综合与反向检验
@@ -19,14 +19,26 @@ updated: 2026-07-15
 - 同一实验数据的不同解释；
 - 来源之间并非独立的证据链。
 
+对每个高风险主张固定追问：
+
+1. 主张成立时最小必要的 companion observable 是什么？
+2. companion 是否被观测到？
+3. 若未观测，是否有足够的统计、效率、gate、分辨率和 binning 灵敏度把它视为反证？
+4. 是否存在更简单的背景、选择偏差或谱线混淆解释？
+5. 哪个新结果会触发 belief revision？
+
+“Expected-but-absent” 先写成 conditional contradiction，不直接写成已证伪。
+
+导师 comment 或审稿意见可作为高价值 external counter-argument；在未读取其底层原始来源前，不得写成独立核验事实，但也不得隐藏它可能改变核心判断的价值。
+
 未找到反证时，写明“未找到”而不是“没有反证”。
 
 ## Stage 1：证据矩阵
 
 建议按下表组织：
 
-| 主张 | 支持证据 | 反证/限制 | 替代解释 | 来源独立性 | 当前置信度 |
-|---|---|---|---|---|---|
+| 主张 | 支持证据 | 反证/限制 | 替代解释 | 来源独立性 | 当前置信度 | 必要伴随预测（可选） | 当前观测/缺失状态（可选） | 缺失的灵敏度条件（可选） | Falsifier（可选） | Belief revision 触发条件（可选） |
+|---|---|---|---|---|---|---|---|---|---|---|
 
 对 wobbling、chiral doublet、γ-soft/γ-rigid 等主题，不能省略“替代解释”和“判据前提”。
 

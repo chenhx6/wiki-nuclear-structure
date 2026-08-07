@@ -8,6 +8,32 @@ updated: 2026-08-05
 ## Active handoff
 
 Current active task:
+The completed 116Cs counter-evidence workflow reinforcement is finalized for the user-authorized exact-refspec publication transaction; the actual push receipt is external to this commit.
+
+Current branch / local commit:
+Branch `main`; current branch HEAD is the final `Strengthen counter-evidence research workflows`.
+
+Last task status:
+The intended framework files and required governance reconciliation passed Wiki lint and H2. After VPN recovery, command-level HTTP/1.1 fresh fetch, remote ancestry and exact-refspec dry-run passed; publication is authorized and completed externally in the task receipt without a post-push status commit.
+
+Unfinished items:
+No framework or review item remains. Future work may independently verify the underlying `115I` source if the external mentor counter-comment is to be promoted beyond method example status.
+
+P0/P1 review focus:
+P0: none. P1: none in the committed framework scope.
+
+Risks:
+Do not promote the external mentor counter-comment into independently verified nuclear-structure knowledge without reading its underlying source. Keep `.gitignore` and `raw/zotero/wiki-inbox.bib` outside this commit.
+
+Next prompt / continuation phrase:
+`开始下一项 Wiki 任务；116Cs 反证式证据链框架已完成发布，不重复提交`
+
+Recent user decisions:
+The user explicitly authorized commit and push on 2026-08-07.
+
+## Previous active handoff (superseded 2026-08-07)
+
+Current active task:
 The reviewed `131Ce` lifetime/γ-soft evidence-boundary lineage and its dependent WIP-reconciliation governance fix are finalized and published to `origin/main` by exact-refspec non-force fast-forward.
 
 Current branch / local commit:

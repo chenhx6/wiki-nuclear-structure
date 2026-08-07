@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: autonomous-research
-updated: 2026-07-27
+updated: 2026-08-06
 ---
 
 # Autonomous Research：L0-L4 科研自治
@@ -175,3 +175,11 @@ WIP 创建或 amend 成功后，即使不准备 push，也必须按 `check.md` H
 - 上下文、执行时间或资源不足以可靠完成。
 
 停止不是丢弃：记录状态、依据、剩余 gap、下一步和 continuation prompt。正式外发、论文主张、`confidence: high`、用户 raw 修改、权限变化和 push 仍遵守相应人工关口。
+
+## Counter-evidence requirements (all levels)
+
+For each high-risk claim, the next L3 milestone must record the core claim, necessary companion observable, support, counter-evidence, alternative explanation, sensitivity of any missing signal to statistics/efficiency/gate/resolution/binning, discriminating prediction, falsifier, belief-revision trigger, and stop condition. If the judgment rests only on visual impression, coarse binning, or a single feeding line, retain `active-L3` or `blocked-needs-source`.
+
+Before entering `candidate-L4`, the data manifest and analysis plan must list expected-but-absent observables, detector-response/background templates, gate/threshold/binning sensitivity, negative or random-window controls, and how a missing companion signal changes model ranking. A suspicious counter-signal never starts L4 automatically.
+
+Each weekly self-test of a high-risk claim must include one necessary-companion check, one background/resolution/gate check, one source-independence check, and one explicit belief-revision condition. Reports record missing necessary evidence alongside newly discovered facts.
