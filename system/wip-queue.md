@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-08-07
+updated: 2026-08-11
 ---
 
 # Pending WIP queue
@@ -9,6 +9,26 @@ updated: 2026-08-07
 This page tracks pending local WIP/review tasks that still need follow-up work. Keep entries short. Do not store long reports here. `system/review-history.md` records completed human-review rounds; the same task may appear in both places.
 
 ## Active entries
+
+### Weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity
+- status: user review completed; local final created; publication deferred as commit 1 of the two-commit plan
+- branch: `codex/weekly-self-test-20260810-131ce-band5-configuration`
+- commit: current branch HEAD final `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity`
+- files: Alwaleedi 2013 source; `131Ce` nucleus; collective-mode project; Guo 2024 source hash metadata; weekly report; handoff/log/review-history/queue
+- review needed: none for AW13-12/AW13-13; user retained the literal table mappings and withdrew the `f⊗AEFG` reconstruction
+- overview/QMD: no overview trigger; QMD update/embed/status completed
+- next action: retain this local final as the parent of the rolling corpus WIP; do not push it separately
+- risks: repeated high-spin `e⊗AEFG` lacks independent explanation; protected BibTeX must remain unstaged
+
+### Nuclear-chirality corpus ingest: 23-paper sequence
+- status: safe-suspended before first knowledge write; Zotero duplicate-key hard gate remains open
+- branch: not yet created; must branch from the Band 5 local final above
+- commit: none yet; planned rolling subject `WIP ingest: nuclear chirality corpus for user review`
+- files: none written for this corpus yet
+- review needed: source-level scientific review after the rolling corpus ingest reaches a stable checkpoint
+- overview/QMD: deferred until corpus pages exist; refresh at batch checkpoints and finalization
+- next action: user re-exports `raw/zotero/wiki-inbox.bib` without `h.amro_2024_EvidenceChiral` and `frauendorf_2024_Firstevidencea`; then start with Petrache 1996
+- risks: never edit or stage the user-managed BibTeX; preserve one active rolling WIP; do not push until both local commits are complete
 
 ## Legacy completed entries
 

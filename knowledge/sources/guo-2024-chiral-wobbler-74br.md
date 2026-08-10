@@ -3,7 +3,7 @@ type: source
 title: "Guo et al. 2024 - Evidence for Chiral Wobbler in Nuclei"
 aliases: [Guo 2024 74Br chiral wobbler]
 created: 2026-07-16
-updated: 2026-07-25
+updated: 2026-08-11
 status: active
 review_status: human-reviewed
 source_type: journal-article
@@ -18,7 +18,7 @@ doi: 10.1103/PhysRevLett.132.092501
 canonical_source: https://doi.org/10.1103/PhysRevLett.132.092501
 citation_key: guo_2024_EvidenceChiral
 raw_file: "raw/papers/2024_Guo et al_Evidence for Chiral Wobbler in Nuclei.pdf"
-raw_sha256: F8CA78604264FC3CF5081D8DDD20C2A8E708E3FE4526D73FA037F1F75C532FE6
+raw_sha256: 1783B784C3843E15DE39406182613757F9C3B928A2791E45A7D650F117EA4333
 nuclei: [74br]
 reactions: ["58Ni(19F,2p1n)74Br"]
 experiments: []
@@ -32,7 +32,7 @@ tags: [experiment-ingest, chiral-wobbler, chirality, wobbling, lifetime, odd-odd
 
 ## Bibliographic Record
 
-PRL 132, 092501 (2024), DOI `10.1103/PhysRevLett.132.092501`; PDF/BibTeX identity checked.
+PRL 132, 092501 (2024), DOI `10.1103/PhysRevLett.132.092501`; PDF/BibTeX identity checked. On 2026-08-11 the local PDF identity was reverified from its title page, author list, journal/article number and DOI, and `raw_sha256` was synchronized to the current local binary; the raw PDF itself was not modified.
 
 ## Scope and Reading Depth
 

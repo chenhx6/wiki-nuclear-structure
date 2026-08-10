@@ -873,3 +873,15 @@ updated: 2026-07-15
 
 - Created local final `Strengthen counter-evidence research workflows` for the 116Cs-derived method/governance reinforcement; Wiki lint passed with 0 errors.
 - Two fresh-fetch attempts failed because TCP connectivity to `github.com:443` was unavailable, so exact-refspec dry-run and push were not attempted; protected `.gitignore` and `raw/zotero/wiki-inbox.bib` remained unstaged.
+
+## [2026-08-10] weekly self-test | `131Ce` Band 5 configuration continuity
+
+- Direct page rendering confirmed that Alwaleedi Table 5.3 prints `f⊗AE → e⊗AEFG`; this is not OCR noise.
+- Table 5.2 signature labels and the Band 5 `eAE/fAE + FG crossing` discussion support `f⊗AEFG` only as a probable-typo working reconstruction pending user review and independent confirmation; no push occurred.
+
+## [2026-08-11] review | `131Ce` Band 5 Table 5.3 mapping
+
+- The user retained the literal `e⊗AE → e⊗AEFG` and `f⊗AE → e⊗AEFG` mappings and rejected the Agent's `f⊗AEFG` reconstruction.
+- AW13-12/AW13-13 and directly propagated nucleus/project/report wording are the only scientific review scope; unrelated claims remain unchanged.
+- The weekly WIP was amended to local final `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity` as commit 1 of the two-commit plan. Guo 2024's current local PDF identity was reverified and its source hash metadata synchronized without modifying raw evidence or scientific claims.
+- Publication remains deferred. Corpus write-entry is safe-suspended until the user-managed Zotero export removes the two duplicate alias keys.

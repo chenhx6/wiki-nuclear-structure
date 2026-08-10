@@ -3,7 +3,7 @@ type: source
 title: Band Structures of 131Ce
 aliases: [Alwaleedi 2013 131Ce thesis]
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-08-11
 status: active
 review_status: unreviewed
 source_type: phd-thesis-experiment
@@ -90,6 +90,8 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 | AW13-9 | 实验 B(M1)/B(E2) 由分支强度和 γ 能量计算，并明确假定 E2/M1 mixing ratio δ=0；不是绝对 B(M1) 或 B(E2)。对同一分支数据，`R(δ)=R(0)/(1+δ²)`。 | derived-observable | direct | Equations 5.6–5.7; Section 5.3; Table 5.4 | true |
 | AW13-10 | 作者认为 Figure 5.5 中实验与半经典理论比值的总体一致性加强了组态指认。 | author-interpretation | direct | Figure 5.5 and discussion | true |
 | AW13-11 | 本数据集没有寿命、绝对 B(E2)、线偏振或直接 γ 刚性测量，不能仅凭本论文裁决 wobbling、chirality、shape coexistence 或 γ-soft/γ-rigid。 | analytical-boundary | inferred | Dataset/method inventory across Chapters 3–5 | true |
+| AW13-12 | Table 5.3 排版原文把 Band 5 两个 signature 分量的高自旋端都写成 `e⊗AEFG`：`e⊗AE → e⊗AEFG` 与 `f⊗AE → e⊗AEFG`；180 dpi 页面视觉复核确认这不是文本提取误差。 | observed-fact | direct | Table 5.3, thesis p.80 | false |
+| AW13-13 | 2026-08-11 用户审核决定按 Table 5.3 原文保留上述两条映射，不以 signature 连续性把第二行改写为 `f⊗AEFG`。重复的高自旋 `e⊗AEFG` 标签在物理上如何对应两个低自旋 signature 分量仍未解决，需独立来源或作者勘误才能重映射。 | analytical-boundary | inferred | Table 5.2; Table 5.3; Section 5.2.2 Band 5; user review 2026-08-11 | false |
 
 ## Nuclear Structure Information
 
@@ -114,7 +116,7 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 ## Competing Interpretations and Limitations
 
 - Table 5.1 原表把 Band 2 标为负宇称，而 Figure 4.1、Tables 4.5–4.6 和 Section 5.2.2 均支持正宇称；当前分类为来源内部冲突、`probable typo`。原表记录不得改写，crossing frequency 可用，但该 parity 单元不用于正式宇称结论。
-- Band 5 高自旋组态行按原表出现 f⊗AE → e⊗AEFG，可能是换 signature 或表格笔误；使用前需再次视觉复核。
+- Band 5 的 Table 5.3 原文给出 `e⊗AE → e⊗AEFG` 与 `f⊗AE → e⊗AEFG`；页面视觉复核已排除 OCR/文本提取误差。2026-08-11 用户审核决定忠实保留这两条映射，不引入 `f⊗AEFG` 修正；重复高自旋标签与 signature 连续性之间的张力保持为未解决来源边界。
 - B(M1)/B(E2) 必须始终携带 δ=0 假设。由 Equations 5.6–5.7，`R(δ)=R(0)/(1+δ²)`；若 `|δ|≤0.5`，δ=0 结果相对真实值最多高估 25%，而两者差值相对 δ=0 结果最多为 20%。δ 的符号不改变这项幅值修正，但仍影响偏振和相位判断。
 - 轴对称 TRS 极小值和高自旋非轴 core polarization 不等价于已经测得 γ-soft 或 rigid-triaxial 势面。
 - 近简并、signature splitting 或相似 alignment 可由普通 signature partners、组态混合、粒子—芯耦合及不同集体模式产生，需要额外电磁和形变 observable 区分。
@@ -129,6 +131,7 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 | AR-4 | Failure conditions | 若寿命、偏振或 mixing ratio 显示不同电磁性质，现有解释排序应改变。 | Missing-observable inventory | unreviewed |
 | AR-5 | Reverse/falsification test | 用绝对/相对跃迁强度、偏振、精确 δ 和形变敏感量检验竞争解释。 | Chapter 5 limits; AW13-9–11 | unreviewed |
 | AR-6 | Research-question decision | 进入 L3：与 133Ce 及必要邻核对照，寻找裁决集体模式的最小 observable 集。 | AW13-11; A≈130 projects | active-L3 |
+| AR-7 | Band 5 signature-preserving reconstruction | withdrawn：Agent 曾依据 signature 连续性提出把第二行重构为 `f⊗AEFG`；2026-08-11 用户审核要求按原表 `f⊗AE → e⊗AEFG` 使用，因此该重构不再作为 working mapping。只有独立来源或作者勘误才能重新开启标签修正。 | Tables 5.2–5.3; Section 5.2.2 Band 5; user review 2026-08-11 | withdrawn-by-human-review |
 
 ## Knowledge Impact and Learning Decision
 
@@ -136,7 +139,7 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 - Effect of this source: supports and limits。
 - Reason: 补全 131Ce 的实验带结构与组态基线，同时暴露电磁跃迁和形变判据缺口。
 - Persistence decision: 新建 source、nucleus、experiment 页面并进入 L3 project；不机械为 Bands 1–7 全部建页。
-- Review state: Agent self-audited; human review not yet performed。
+- Review state: 页面整体仍为 `unreviewed`；2026-08-11 用户仅完成 AW13-12/AW13-13 的 claim-level review。
 
 ## Related Knowledge and Project Relations
 
@@ -157,11 +160,23 @@ Mohammed Abdullah Alwaleedi，*Band Structures of 131Ce*，University of Liverpo
 
 - AW13-9：后续引用 B(M1)/B(E2) 时必须携带 δ=0 假设和 `R(δ)=R(0)/(1+δ²)`；`|δ|≤0.5` 的 25%/20% 是两种不同分母的误差口径，不得与 ICC 反演文献中约 25% 的实验误差混同。
 - AW13-11：将寿命/绝对 B(E2)、mixing ratio/偏振和形变敏感量作为 L3 裁决 observable。
-- Table 5.3 Band 5 高自旋标签需在精细 band mapping 前再次视觉复核。
+- AW13-12/AW13-13：2026-08-11 claim-level review 已完成。按原表保留 `e⊗AE → e⊗AEFG` 与 `f⊗AE → e⊗AEFG`，撤回 `f⊗AEFG` reconstruction；标签的物理连续性问题留待独立来源。
 
 ### P2/P3
 
 - 校对学校/实验室在最终 BibTeX 导出中的字段组织；source 页已保存重建引用所需的核心元数据。
+
+## Human Review Notes
+
+### 2026-08-11 — Band 5 Table 5.3 mapping
+
+- 用户要求忠实采用原表的 `e⊗AE → e⊗AEFG` 与 `f⊗AE → e⊗AEFG`。
+- 用户未接受把第二行改写成 `f⊗AEFG`；该 Agent reconstruction 已撤回。
+- 本轮只审核 AW13-12/AW13-13，不升级 source 页面整体状态，也不处理其它 claim-level `needs_review`。
+
+## Human Review Record
+
+- 2026-08-11：AW13-12/AW13-13 claim-level review 完成；原表映射获确认，signature-preserving reconstruction 被撤回。
 
 ## Extracted Pages
 

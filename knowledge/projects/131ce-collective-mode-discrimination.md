@@ -3,7 +3,7 @@ type: project
 title: 131Ce/133Ce 集体模式判别
 aliases: [131Ce collective-mode discrimination]
 created: 2026-07-27
-updated: 2026-08-04
+updated: 2026-08-11
 status: active
 review_status: unreviewed
 project_stage: l4-milestone-awaiting-review
@@ -41,7 +41,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4]
 
 | 证据 | 支持 | 限制/反证 | 独立性与权重 |
 |---|---|---|---|
-| `131Ce` Bands 1–7 的 coincidence、angular ratios、crossings、alignments 与 Table 5.3 组态图 | signature/configuration coupling；spin-dependent core response | `B(M1)/B(E2)` 采用 `δ=0`；无 lifetime/absolute B(E2)/polarization；Table 5.1 Band 2 parity 为 probable typo/source conflict | 目标核直接来源，当前最高权重；[[alwaleedi-2013-band-structures-131ce]] AW13-1–11 |
+| `131Ce` Bands 1–7 的 coincidence、angular ratios、crossings、alignments 与 Table 5.3 组态图 | signature/configuration coupling；spin-dependent core response | `B(M1)/B(E2)` 采用 `δ=0`；无 lifetime/absolute B(E2)/polarization；Table 5.1 Band 2 parity 有 probable typo/source conflict；Table 5.3 对 Band 5 两个低自旋 signature 分量都给出高自旋 `e⊗AEFG` | 目标核直接来源，当前最高权重；[[alwaleedi-2013-band-structures-131ce]] AW13-1–13；2026-08-11 用户审核要求按原表使用，不作 `f⊗AEFG` 重映射 |
 | `131Ce` 负宇称 yrast/Band-1-like 序列的 RDDS/DSAM 寿命与 `Q_t` | normal-deformed E2 集体性与芯响应的正交约束；不独立证明 γ-softness | 四个有限点的加权斜率 `−0.030±0.047 eb/ℏ`，不足以建立显著下降；γ-soft/具体 γ 仍来自 TRS 和作者解释 | [[singh-2016-lifetime-131ce-133pr]] 与 [[li-2004-lifetimes-131ce]] 是独立实验；Singh 表内转载的 Li 行不重复计权；不以简单加权平均裁决两者 |
 | `131Ce` 独立 HD band 的 `Q0=7.3(4) eb` | 同核存在强形变序列，提升多极小/shape-coexistence 可行性 | 与 normal-deformed `Q_t` 的几何和 band identity 不同，不能直接合并或认作共存伙伴 | 独立来源；[[petrache-1998-highly-deformed-lifetimes-131ce-nd]] |
 | `133Ce` 两组候选伙伴带的同宇称 links、S(I)、relative `B(M1)/B(E2)` 与 RMF+TPRM | chirality 和不同三轴极小/shape coexistence 的作者解释 | 无 lifetime；TPRM 有 moment-of-inertia 调整和 Coriolis attenuation；模型未完全再现 staggering | 同一数据集的实验+模型链，不是独立多源确认；[[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] A13-3–13 |
@@ -93,7 +93,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4]
 - **P0 / downgraded**：视觉复核显示 Alwaleedi Table 5.1 的 Band 2 负宇称与 Figure 4.1、Tables 4.5–4.6 和 Section 5.2.2 冲突，当前为 probable typo；原始单元已隔离，不用于 working parity。用户基于 Figure 4.1 的 provisional map 为 Bands 2/3/5 正宇称、1/4/6/7 负宇称。
 - **P0 / resolved by claim-level human review**：Li 2004 文本层损坏，但用户已对照 p.3 接受 LI04-1–4 的 Table 1 视觉转录；LI04-5 作者解释仍待审，source 页面整体不升级。
 - **P0 / isolated**：Singh 2016 转载 Li 2004 行不重复计权；Petrache 1998 HD band 保持独立，不并入 thesis Band 1。
-- **P1 / remains-open**：Alwaleedi Table 5.3 Band 5 高自旋标签可能存在 signature/排版歧义。
+- **P1 / resolved by claim-level human review**：Alwaleedi Table 5.3 对 Band 5 给出 `e⊗AE → e⊗AEFG` 与 `f⊗AE → e⊗AEFG`，180 dpi 视觉核验排除了 OCR 误差。2026-08-11 用户要求按原表使用并撤回 `f⊗AEFG` reconstruction；重复高自旋标签的物理连续性仍需独立来源，不影响当前集体模式排序。
 - `133Ce` MχD 与 shape-coexistence 证据存在共享数据/模型依赖，独立性低于论文数量表面值。
 - 公开来源尚未给出 `131Ce` Bands 1–7 的统一 measured δ、polarization 和 lifetime matrix。
 

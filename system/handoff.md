@@ -1,35 +1,35 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-08-05
+updated: 2026-08-11
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-The completed 116Cs counter-evidence workflow reinforcement is finalized for the user-authorized exact-refspec publication transaction; the actual push receipt is external to this commit.
+Resume the rolling nuclear-chirality corpus ingest as commit 2 after the Zotero duplicate-key gate is cleared.
 
 Current branch / local commit:
-Branch `main`; current branch HEAD is the final `Strengthen counter-evidence research workflows`.
+Branch `codex/weekly-self-test-20260810-131ce-band5-configuration`; current branch HEAD is local final `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity` and is the intended parent of the corpus branch.
 
 Last task status:
-The intended framework files and required governance reconciliation passed Wiki lint and H2. After VPN recovery, command-level HTTP/1.1 fresh fetch, remote ancestry and exact-refspec dry-run passed; publication is authorized and completed externally in the task receipt without a post-push status commit.
+Commit 1 is locally finalized. AW13-12/AW13-13 retain `e⊗AE → e⊗AEFG` and `f⊗AE → e⊗AEFG` exactly as printed, and the Agent's `f⊗AEFG` reconstruction is withdrawn. QMD refresh, tests, Wiki lint, H2 and post-commit H3 passed. No push was attempted.
 
 Unfinished items:
-No framework or review item remains. Future work may independently verify the underlying `115I` source if the external mentor counter-comment is to be promoted beyond method example status.
+The user-managed Zotero export still contains duplicate aliases `h.amro_2024_EvidenceChiral` and `frauendorf_2024_Firstevidencea`; this hard gate blocks the first corpus knowledge write. After re-export removes them, create the corpus branch from current HEAD, ingest Petrache 1996 first, and amend one rolling `WIP ingest:` commit after each paper. Do not push until the corpus commit is complete and finalized.
 
 P0/P1 review focus:
-P0: none. P1: none in the committed framework scope.
+P0: none identified. P1: AW13-12/AW13-13 resolved by user review; the repeated high-spin label remains an unresolved source boundary, not a corrected mapping.
 
 Risks:
-Do not promote the external mentor counter-comment into independently verified nuclear-structure knowledge without reading its underlying source. Keep `.gitignore` and `raw/zotero/wiki-inbox.bib` outside this commit.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Corpus ingestion must not begin until `h.amro_2024_EvidenceChiral` and `frauendorf_2024_Firstevidencea` disappear from the Zotero export. Do not publish commit 1 alone.
 
 Next prompt / continuation phrase:
-`开始下一项 Wiki 任务；116Cs 反证式证据链框架已完成发布，不重复提交`
+`wiki-inbox.bib 已重新导出并去重；继续核手征 corpus ingest，从 Petrache 1996 开始`
 
 Recent user decisions:
-The user explicitly authorized commit and push on 2026-08-07.
+The user rejected the `f⊗AEFG` reconstruction, authorized the two-commit local plan, and deferred the only push attempt until both commits are complete.
 
 ## Previous active handoff (superseded 2026-08-07)
 

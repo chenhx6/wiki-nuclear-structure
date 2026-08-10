@@ -1,7 +1,7 @@
 ---
 type: system-review-history
 graph-excluded: true
-updated: 2026-07-28
+updated: 2026-08-11
 ---
 
 # Review history
@@ -11,6 +11,16 @@ This page tracks completed human-review rounds. A review round is recorded when 
 ## Completed review rounds
 
 <!-- Append real completed human-review rounds here. Do not backfill old history during framework setup. -->
+
+### 2026-08-11 — `131Ce` Band 5 Table 5.3 mapping — round 1
+
+- review scope: Alwaleedi 2013 AW13-12/AW13-13, the Band 5 configuration-continuity weekly report, and directly propagated nucleus/project wording
+- user decisions: retain the literal mappings `e⊗AE → e⊗AEFG` and `f⊗AE → e⊗AEFG`; do not replace the second high-spin label with `f⊗AEFG`
+- corrections requested: withdraw the signature-preserving probable-typo reconstruction while preserving the original table and the unresolved physical-continuity boundary
+- unresolved issues: the repeated high-spin `e⊗AEFG` label lacks independent confirmation or an author erratum; unrelated source claims remain unchanged
+- next action: after the Zotero duplicate-key gate is cleared, use the local final as parent and begin the separately tracked nuclear-chirality corpus ingest
+- related pages: `knowledge/sources/alwaleedi-2013-band-structures-131ce.md`, `knowledge/nuclei/131ce.md`, `knowledge/projects/131ce-collective-mode-discrimination.md`, `outputs/self-tests/2026-08-10-131ce-band5-configuration-continuity.md`
+- review commit message: Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity
 
 ### 2026-08-04 — `131Ce` lifetime and γ-soft evidence boundary — round 1
 
