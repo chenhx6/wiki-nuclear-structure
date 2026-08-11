@@ -286,6 +286,12 @@ git push -u origin main
 
 若 `git remote -v` 已显示 `origin`，不要重复执行 `remote add`。未发表内容、合作材料、审稿材料、个人数据和敏感原始材料应继续留在被忽略的私有目录，不进入公开远端。
 
+### Push 前的 DENY 故障分类
+
+任何创建分支、提交、fetch 或 push 的 Git 写入口，先在 Wiki 根目录运行 schema-2 `system/scripts/wiki_automation_preflight.ps1`，把当前任务提示词或 `system/handoff.md` 中经用户明确确认的 BibTeX 哈希作为 `-ProtectedBibHash`。只有 exit `0`、根目录和 `.git` 写探针成功且保护读取成功，才进入 Git 检查；`acl_diagnostics` 中不匹配当前 token 的旧 SID DENY 只是诊断，不会阻断 dry-run 或 push，也不需要每次执行 `/remove:d`。
+
+若 `github.com:443` 连接失败，这是网络问题：执行一次 `ls-remote`，再做一次有界重试。AskPass、401/403 或 credential helper 报错走认证诊断。只有 `.git` 写探针明确返回 `Access denied` 时，才检查 `runtime_token` 与 `token_matching_deny_*`，然后 safe-suspend，交给 Codex 外做最小、明确范围的 ACL 处理。不要为了追求“零 DENY”而重置或递归修改权限；真实探针能力和保护读取才是放行依据。
+
 ## 8. 自动 lint
 
 在 PowerShell 中进入仓库根目录后运行：

@@ -1028,3 +1028,9 @@ updated: 2026-07-15
 
 - User clarified that ordinary literature ingest is completed like a graduate student's own reading: the Agent performs full-text/locator/evidence-layer/P0-P1 self-audit and publishes without waiting for per-paper human review. Agent self-audit does not create Human Review history, promote `review_status`, or clear `needs_review`; claim/evidence statements are reviewed later when used in Q&A or research.
 - The completed 23-paper nuclear-chirality rolling WIP has no unresolved hard P0 and was amended to current branch HEAD final `Ingest 23-paper nuclear chirality corpus`, preserving the Band-5 final as commit 1 and corpus final as commit 2 before exact-refspec publication preflight.
+
+## [2026-08-11] governance | schema-2 push DENY hardening
+
+- Added runtime token user/group SID reporting and SID-normalized token-matching versus nonmatching explicit DENY diagnostics; real root/`.git` probes and protected reads remain the only capability gate.
+- Confirmed the current `.git` stale DENY entries are nonmatching and do not block schema-2 exit `0`; added a temporary ACL regression test and synchronized push/network/authentication failure routing without changing ACLs, project config, Skills, credentials or protected BibTeX.
+- Governance final commit and non-force publication remain pending H2/H3 reconciliation.

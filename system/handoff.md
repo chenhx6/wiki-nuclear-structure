@@ -8,28 +8,28 @@ updated: 2026-08-11
 ## Active handoff
 
 Current active task:
-The full 23-paper nuclear-chirality corpus ingest is complete and Agent-self-reviewed. The rolling WIP has been amended to the final corpus commit; the authorized two-commit remote publication preflight is now in progress.
+Wiki push-DENY minimal governance hardening is in progress on the dedicated repair branch. The reviewed Band-5 weekly self-test and 23-paper corpus are already published; this task only changes the schema-2 gate, failure classification, and related governance text.
 
 Current branch / local commit:
-Branch `codex/nuclear-chirality-corpus`; current branch HEAD is final `Ingest 23-paper nuclear chirality corpus`, based on the local Band 5 final parent `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity`.
+Branch `codex/wiki-push-deny-hardening`, based on published commit `eda271b` (`Ingest 23-paper nuclear chirality corpus`). Commit target: `Harden Wiki push preflight against stale sandbox DENY`.
 
 Last task status:
-Papers 1-23 are complete. Bark et al. 2024 was fully read and all 32 PDF pages were visually checked. Its source, a lightweight secondary `106Ag` counterexample page and updates to `193,194,198Tl`, chiral/MχD/model/method pages and the corpus project were added. The final REFLECT separates evidence layers, nulls/counterexamples, realistic fingerprint limits, band-manifold/pair mapping and provenance independence. Bark Table 1 prints `82Se`, reconciling Wang 2023's `82Ge` conflict within the related-review lineage; Bark Eq.(5) is algebraically misprinted and quarantined. QMD update/embed/status completed with 357 indexed documents and 2390 vectors; targeted Bark/Wang searches succeeded. Wiki lint passed with zero errors, 69 warnings and 576 review infos. No remote action was attempted.
+The preflight script now records runtime user/group SIDs, classifies explicit DENY entries as token-matching or nonmatching diagnostics, and keeps real write probes/protected reads authoritative. Governance text and a temporary nonmatching-DENY test are being added; no ACL, project config, Skill, raw file, credential or global setting is changed.
 
 Unfinished items:
-Run H3 for the reconciled final commit. Retain the local Band-5 final as commit 1 and the corpus final as commit 2; run fresh fetch, remote ancestry, exact-refspec dry-run and non-force push to `origin/main`. Safe suspend on authentication, remote drift or check failure.
+Run the full unit/lint/diff and staged audits, create the final governance commit, then run H3 with a fresh preflight before exact-refspec dry-run and non-force push. After publication, the user should fully exit and cold-start Codex for the read-only acceptance preflight/dry-run.
 
 P0/P1 review focus:
-P0: none identified for papers 1-23 after Agent self-audit. P1 is not a publication blocker; it remains the future claim-specific verification queue for Q&A/research use, prioritizing evidence/provenance independence; strict ideal versus realistic QTR fingerprints; `106Ag` two-/four-quasiparticle counterexample; `193,194Tl` three-observed/four-calculated non-unique pairing; Wang `82Ge` versus Bark `82Se` related-review reconciliation; Bark polarization Eq.(5) source error; and the un-ingested original/Bayesian-DSAM dependencies.
+P0: none for the already published corpus. P1: confirm that this governance change preserves exit-code compatibility, does not treat nonmatching DENY as a gate, and distinguishes network/authentication errors from a real `.git` Access denied probe.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged at SHA-256 `037EA133DE204270AD36961CA66B3AB36C0913B7D472B45F8FD013C8293BE5BE`. Preserve exactly the two intended local commits and do not publish either alone. Agent self-audit must not be recorded as Human review, must not promote pages to `human-reviewed`, and must not clear `needs_review`. Safe suspend if execution margin or checks become unsafe.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged at SHA-256 `037EA133DE204270AD36961CA66B3AB36C0913B7D472B45F8FD013C8293BE5BE`. Do not edit project config, repository Skills, PLAN, ACLs, credentials or host automation. Never auto-run `/remove:d`; safe-suspend only when a real `.git` write probe reports Access denied or H3 finds authentication, remote drift or another blocking failure.
 
 Next prompt / continuation phrase:
-`继续核手征 23-paper corpus finalization：保持两提交边界，从 H3 / fresh fetch / exact-refspec dry-run 恢复；异常即 safe suspend`
+`继续 Wiki push-DENY hardening：从单元测试、H2 staged 审计和 H3 fresh fetch 恢复；真实 .git Access denied 或远端漂移即 safe suspend`
 
 Recent user decisions:
-The user required continuous ingestion through all 23 papers, retained the single rolling WIP and two-commit publication plan, and clarified the durable review boundary: ordinary ingest is read, self-audited and pushed by the Agent; the user reviews claim/evidence statements when they are later used in Q&A or research. Agent self-audit is not Human review. Authentication, remote drift or check failure requires safe suspension.
+The user selected minimal governance: retain `wiki_l3` and the elevated sandbox, do not reset ACLs or rebuild the host, and let schema-2 write probes/protected reads—not DENY count—decide capability. The current BibTeX hash is explicitly confirmed as `037EA133DE204270AD36961CA66B3AB36C0913B7D472B45F8FD013C8293BE5BE`; final publication is authorized as a non-force push after H3.
 
 ## Previous active handoff (superseded 2026-08-07)
 

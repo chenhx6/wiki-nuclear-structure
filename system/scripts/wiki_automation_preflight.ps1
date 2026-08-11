@@ -36,6 +36,15 @@ $result = [ordered]@{
     write_probes = @()
     protected_read_checks = @()
     acl_diagnostics = @()
+    runtime_token = [ordered]@{
+        user_sid = $null
+        group_sids = @()
+        error = $null
+    }
+    capability_policy = [ordered]@{
+        authority = 'write_probes_and_protected_reads'
+        acl_diagnostics_only = $true
+    }
     error = $null
 }
 
@@ -84,12 +93,37 @@ function Get-ProjectDefaultPermission {
 }
 
 function Get-AclDiagnostic {
-    param([string]$Path)
+    param(
+        [string]$Path,
+        [string[]]$TokenSids
+    )
 
     try {
         $acl = Get-Acl -LiteralPath $Path -ErrorAction Stop
         $denies = @($acl.Access | Where-Object {
             -not $_.IsInherited -and $_.AccessControlType -eq 'Deny'
+        })
+        $deniesWithSid = @($denies | ForEach-Object {
+            $principal = $_.IdentityReference
+            $sid = $null
+            try {
+                $sid = $principal.Translate([Security.Principal.SecurityIdentifier]).Value
+            } catch {
+                $rawValue = [string]$principal.Value
+                if ($rawValue -match '^S-\d-\d+(?:-\d+)+$') {
+                    $sid = $rawValue
+                }
+            }
+            [pscustomobject]@{
+                rule = $_
+                sid = $sid
+            }
+        })
+        $matchingDenies = @($deniesWithSid | Where-Object {
+            $null -ne $_.sid -and $TokenSids -contains $_.sid
+        })
+        $nonmatchingDenies = @($deniesWithSid | Where-Object {
+            $null -eq $_.sid -or $TokenSids -notcontains $_.sid
         })
         return [ordered]@{
             path = $Path
@@ -97,6 +131,14 @@ function Get-AclDiagnostic {
             explicit_deny_count = $denies.Count
             principals = @($denies | ForEach-Object {
                 $_.IdentityReference.Value
+            } | Sort-Object -Unique)
+            token_matching_deny_count = $matchingDenies.Count
+            token_matching_deny_principals = @($matchingDenies | ForEach-Object {
+                $_.rule.IdentityReference.Value
+            } | Sort-Object -Unique)
+            nonmatching_deny_count = $nonmatchingDenies.Count
+            nonmatching_deny_principals = @($nonmatchingDenies | ForEach-Object {
+                $_.rule.IdentityReference.Value
             } | Sort-Object -Unique)
             error = $null
         }
@@ -106,6 +148,30 @@ function Get-AclDiagnostic {
             readable = $false
             explicit_deny_count = $null
             principals = @()
+            token_matching_deny_count = $null
+            token_matching_deny_principals = @()
+            nonmatching_deny_count = $null
+            nonmatching_deny_principals = @()
+            error = $_.Exception.Message
+        }
+    }
+}
+
+function Get-RuntimeToken {
+    try {
+        $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
+        $groupSids = @($identity.Groups | ForEach-Object {
+            $_.Value
+        } | Sort-Object -Unique)
+        return [ordered]@{
+            user_sid = $identity.User.Value
+            group_sids = $groupSids
+            error = $null
+        }
+    } catch {
+        return [ordered]@{
+            user_sid = $null
+            group_sids = @()
             error = $_.Exception.Message
         }
     }
@@ -185,6 +251,14 @@ try {
                 (Join-Path $resolvedRoot '.codex'),
                 (Join-Path $resolvedRoot '.agents')
             )
+            $runtimeToken = Get-RuntimeToken
+            $result.runtime_token = $runtimeToken
+            $runtimeSids = @()
+            if ($null -ne $runtimeToken.user_sid) {
+                $runtimeSids += $runtimeToken.user_sid
+            }
+            $runtimeSids += @($runtimeToken.group_sids)
+            $runtimeSids = @($runtimeSids | Sort-Object -Unique)
             $probeId = [Guid]::NewGuid().ToString('N')
             $payload = "wiki-automation-preflight/$probeId"
             $gateFailed = $false
@@ -283,7 +357,7 @@ try {
             }
 
             foreach ($target in $diagnosticTargets) {
-                $result.acl_diagnostics += Get-AclDiagnostic $target
+                $result.acl_diagnostics += Get-AclDiagnostic $target $runtimeSids
             }
 
             if ($cleanupFailed) {

@@ -111,11 +111,13 @@ Git 版本号不是本 Wiki 的 push 权限边界。可使用当前 Wiki 会话�
 
 当前 Wiki 的认证仅由该仓库 `.git/config` 中的 repo-local AskPass 提供：URL-scoped helper 为空重置、用户名限定到本仓库 URL，`core.askPass` 指向 common Git dir 下受保护的 DPAPI executable。该 executable、密文和熵文件都属于本地 Git metadata，不得读取/输出 token、不得暂存或提交，也不得复制到其它项目。
 
-用户明确授权 push 且 `check.md` H3 全部通过后，对同一精确 refspec 先 dry-run、再非 force push。某个 Git 运行时未通过 dry-run 时，可以改用另一已知运行时重新执行完整预检；若 AskPass 缺失、配置不再是 repo-local、所有可用运行时均失败或远端发生未知漂移，停止并报告。不得修改全局凭据、SSL 校验或权限边界，也不得使用旧 PowerShell credential helper 作为自动回退。完整检查由 `check.md` 维护，本节不复制第二套清单。
+所有会创建分支、提交、fetch 或 push 的 Git 写入口，都必须先运行 schema-2 `wiki_automation_preflight.ps1`。其 exit `0`、真实根目录/`.git` 写探针和保护读取是能力依据；`acl_diagnostics` 以及旧 SID DENY 只用于诊断。即使存在不匹配当前运行时 token 的 DENY，也继续正常 Git 流程；只有 `.git` 写探针明确 `Access denied` 时，才按 `runtime_token` 与 `token_matching_deny_*` 做分类并 safe-suspend，交给 Codex 外的最小 ACL 处理。不得在每次 push 前自动执行 `icacls /remove:d`，也不得把 ACL 清零当作 push 前置条件。
+
+用户明确授权 push 且 `check.md` H3 全部通过后，对同一精确 refspec 先 dry-run、再非 force push。`github.com:443` 连接失败属于网络故障：只执行一次 `ls-remote` 和一次有界重试；AskPass、401/403 或 credential helper 报错属于认证诊断；`.git` 写探针的 `Access denied` 才属于 ACL 诊断。某个 Git 运行时未通过 dry-run 时，可以改用另一已知运行时重新执行完整预检；若 AskPass 缺失、配置不再是 repo-local、所有可用运行时均失败或远端发生未知漂移，停止并报告。不得修改全局凭据、SSL 校验或权限边界，也不得使用旧 PowerShell credential helper 作为自动回退。完整检查由 `check.md` 维护，本节不复制第二套清单。
 
 ## Git write-entry / commit / push preflight
 
-`check.md` 的 `Git write-entry / commit / push preflight` 是完整权威清单。纯读取、搜索、普通问答和只给建议不运行清理脚本；任何会新增、删除、移动、重命名或修改仓库文件的任务，必须在第一次写入前运行 status、`system/scripts/clean_knowledge_eol_dirty.ps1` 和再次 status，并建立当前会话的 dirty baseline。脚本 exit code `1` 表示仍有 substantive/mixed/unsafe knowledge 状态，需要按本轮授权范围、既有 WIP 和 baseline 分类，不是无条件中断；exit code `2` 必须停止写操作并报告。
+`check.md` 的 `Git write-entry / commit / push preflight` 是完整权威清单。纯读取、搜索、普通问答和只给建议不运行清理脚本；任何会新增、删除、移动、重命名或修改仓库文件的任务，必须在第一次写入前运行 status、`system/scripts/clean_knowledge_eol_dirty.ps1` 和再次 status，并建立当前会话的 dirty baseline。涉及 fetch/push 的 H3 在 fresh fetch 前再次运行 schema-2 preflight。脚本 exit code `1` 表示仍有 substantive/mixed/unsafe knowledge 状态，需要按本轮授权范围、既有 WIP 和 baseline 分类，不是无条件中断；exit code `2` 必须停止写操作并报告。
 
 入口 baseline 至少区分 initial authorized scope、authorized inherited changes、protected pre-existing changes 和 unresolved/overlapping changes。任务中发现新的必要关联文件时，可动态扩展 authorized scope，但每个新文件在第一次写入前必须对照 baseline、pending WIP queue、既有 substantive diff 和修改必要性；来源不明、mixed/conflict 或 WIP overlap 无法区分时先暂停。任务期间不要求每次编辑后重跑脚本，除非工作树异常变化、再次打开大量证据页、跨会话恢复或怀疑出现无关修改。
 

@@ -51,7 +51,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 递归删除、历史重写、raw 证据删除/覆盖、治理核心修改和 push 等危险操作均有用户明确授权，未把概括性自主授权解释为破坏性授权。
 - [ ] `system/log.md` 只追加，没有重写历史记录；启动或普通恢复未用 `ReadAllText(system/log.md)` 读取完整 log。
 - [ ] 若使用定时续跑，已遵循 `system/workflows/scheduled-continuation.md`，并说明本机应用、调度服务与电脑可用性前提。
-- [ ] Wiki local-project cron 在任何 Git 或 Wiki 写入前调用 `system/scripts/wiki_automation_preflight.ps1`；schema 2 先核验 `.codex/config.toml` 顶层 `default_permissions=wiki_l3`，再只在 Wiki 根目录和 `.git` 执行真实创建—回读—删除探针，并只读打开 `.codex/config.toml` 与 `.agents/skills/wiki-evidence-query/SKILL.md`；`CODEX_PERMISSION_PROFILE` 缺失只告警，非空且不匹配才阻断，任务不得自行注入；即使 profile 为两处保留 `write`，cron 也不得使用该授权；exit `0` 才放行，exit `1`/`2` 立即只读 safe-suspend，运行时保护 DENY 只作为诊断警告。
+- [ ] Wiki local-project cron 以及任何会创建分支、提交、fetch 或 push 的 Git 写入口，在第一次 Git 写操作前调用 `system/scripts/wiki_automation_preflight.ps1`；schema 2 先核验 `.codex/config.toml` 顶层 `default_permissions=wiki_l3`，再只在 Wiki 根目录和 `.git` 执行真实创建—回读—删除探针，并只读打开 `.codex/config.toml` 与 `.agents/skills/wiki-evidence-query/SKILL.md`；`CODEX_PERMISSION_PROFILE` 缺失只告警，非空且不匹配才阻断，任务不得自行注入；即使 profile 为两处保留 `write`，任务也不得在保护目录创建文件；exit `0` 才放行，exit `1`/`2` 立即只读 safe-suspend。`runtime_token` 与 `token_matching_deny_*` 只分类当前 token，ACL 数量和不匹配 DENY 不改变 exit code；只有真实 `.git` 写探针明确 `Access denied` 才进入 ACL 诊断，不得每次 push 前自动 `/remove:d`。
 - [ ] 定时任务正文未通过 shell、补丁或文件 API 读写 Codex 宿主 automation memory、global state、sandbox state 或任何 Wiki 外文件；宿主状态仅由 Codex automation 功能维护。
 - [ ] 定时任务的“一次/重复”、时区和下次运行时间在界面中无歧义；一次性请求未显示为“每天”。
 - [ ] 只有在存在运行回执且产物已核验时，才把定时任务报告为“已执行/已完成”；无回执明确写为“未触发/未验证”。
@@ -253,7 +253,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ### H1. Write-entry preflight
 
-- [ ] Wiki local-project cron 的首个 Git 门之前已验证 cwd、`.codex/config.toml` 顶层 `default_permissions=wiki_l3` 和受保护 BibTeX SHA-256，完成 Wiki 根目录和 `.git` 的真实写探针，并只读核验 `.codex/config.toml` 与 `.agents/skills/wiki-evidence-query/SKILL.md`；`CODEX_PERMISSION_PROFILE` 仅作诊断 marker，缺失时 warning 后继续、非空不匹配时阻断且未自行注入；JSON schema 2 中无残留探针文件，保护目录显式 DENY 仅记录为 warning。
+- [ ] 首个 Git 门之前已验证 cwd、`.codex/config.toml` 顶层 `default_permissions=wiki_l3` 和当前任务明确确认的受保护 BibTeX SHA-256，完成 Wiki 根目录和 `.git` 的真实写探针，并只读核验 `.codex/config.toml` 与 `.agents/skills/wiki-evidence-query/SKILL.md`；`CODEX_PERMISSION_PROFILE` 仅作诊断 marker，缺失时 warning 后继续、非空不匹配时阻断且未自行注入；JSON schema 2 中包含 `runtime_token` 和匹配/不匹配 DENY 分类字段且无残留探针文件，ACL 诊断不单独阻断。
 - [ ] 第一次新增、删除、移动、重命名或修改仓库文件前，已依次运行 `git status -sb`、`git status --short`、`powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirty.ps1`，再运行两次 status。
 - [ ] 已检查 `git diff --cached --name-only` 和 `git diff --cached --stat`，没有让任务前已 staged 的无关文件静默进入本轮 commit；未擅自 unstage 或覆盖用户内容。
 - [ ] 已建立入口 dirty baseline，并将现有变化分为 initial authorized scope、authorized inherited changes、protected pre-existing changes 和 unresolved/overlapping changes。
@@ -285,7 +285,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 已记录实际使用的 Git executable 与 `git --version`；Git 版本号不作为许可或拒绝条件。normal/system Git 与 Codex bundled Git 均可使用，但所选运行时必须通过以下仓库级预检；若 bundled Git 需要 `GIT_EXEC_PATH`，仅对该命令使用同一发行版的路径，未修改系统 `PATH`。
 - [ ] `git rev-parse --git-common-dir` 已解析到当前 Wiki 的 common Git dir；若主工作树触发 dubious-ownership，只对该条命令使用精确的 `-c safe.directory=E:/imp/wiki`，未写 global/system `safe.directory`、通配符或其它项目路径。
 - [ ] `.git/config` 的 AskPass、精确仓库 URL-scoped empty helper reset 和用户名均为 repo-local。AskPass 位于该 common Git dir 的受保护 credential 目录，未读取、打印、复制、暂存或提交 token/DPAPI 文件。
-- [ ] fresh fetch、remote ref 和 ancestry 检查通过后，已对最终精确 refspec 执行 `push --dry-run`，再使用同一 refspec 非 force push。某个 Git 运行时失败时，只可改用另一已知运行时重新执行完整预检；认证或远端状态仍异常时已停止，未修改全局凭据、SSL 校验或权限边界，也未回退到旧 PowerShell credential helper。
+- [ ] H3 fresh fetch 前已再次运行 schema-2 preflight；exit `0` 后即使存在不匹配当前 token 的 DENY 也继续。`github.com:443` 失败按网络问题只做一次 `ls-remote` 和一次有界重试；AskPass/401/403/credential 报错按认证诊断处理；只有 `.git` 写探针明确 `Access denied` 才按匹配 SID 进入 ACL safe-suspend。remote ref 和 ancestry 检查通过后，已对最终精确 refspec 执行 `push --dry-run`，再使用同一 refspec 非 force push。某个 Git 运行时失败时，只可改用另一已知运行时重新执行完整预检；认证或远端状态仍异常时已停止，未修改全局凭据、SSL 校验或权限边界，也未回退到旧 PowerShell credential helper。
 
 - [ ] Git 工作树状态已检查；用户已有修改未被覆盖。
 - [ ] `.gitignore` 没有把应持久化的 Markdown 知识页排除。

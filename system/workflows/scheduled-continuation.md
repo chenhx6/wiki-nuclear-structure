@@ -2,7 +2,7 @@
 type: system-workflow
 graph-excluded: true
 operation: scheduled-continuation
-updated: 2026-08-04
+updated: 2026-08-11
 ---
 
 # SCHEDULED CONTINUATION：定时续跑流程
@@ -52,8 +52,10 @@ updated: 2026-08-04
 
 Every Wiki local-project cron run must begin in `E:\imp\wiki` by invoking
 `system/scripts/wiki_automation_preflight.ps1` with `-ExpectedProfile wiki_l3`
-and the protected `raw/zotero/wiki-inbox.bib` SHA-256
-`D01BDB305D07B582DCA30F3C1BAE600F5E6AB3E9E9F5C8EF8C7ACE1E09E2C5AA`.
+and the protected `raw/zotero/wiki-inbox.bib` SHA-256 supplied by the current
+task prompt or by an explicitly user-confirmed value in the Active handoff.
+The hash is a run input, not a repository constant: if it is missing or
+conflicts with the current user confirmation, stop before the preflight.
 The script is the schema-2 permission gate. It must perform real
 create/read/delete probes only in the Wiki root and `.git`, then open
 `.codex/config.toml` and `.agents/skills/wiki-evidence-query/SKILL.md` for
@@ -76,12 +78,22 @@ Its single JSON result and exit code are authoritative:
   cleanup error preserved in the JSON result.
 
 The script reports explicit non-inherited DENY entries for all four directories
-as diagnostics only. Runtime host DENY entries on `.codex` and `.agents` are
-protection behavior, not a rewrite of the project profile, and do not block a
-successful protected-read check. The task must not change ACLs. A failed
-root/`.git` write probe or protected-sentinel read
-is a permission-gate failure. Probe files must be unique and absent after every
-run.
+as diagnostics only and records the runtime token's user/group SIDs plus
+token-matching versus nonmatching DENY principals. Runtime host DENY entries on
+`.codex` and `.agents` are protection behavior, not a rewrite of the project
+profile, and do not block a successful protected-read check. The task must not
+change ACLs. A failed root/`.git` write probe or protected-sentinel read is a
+permission-gate failure; DENY counts alone never change the exit code. Probe
+files must be unique and absent after every run.
+
+For Git write operations, schema-2 preflight is the single entry gate: run it
+once before the first branch/commit and again in H3 immediately before fresh
+fetch. After exit `0`, continue fetch, dry-run and non-force push even when
+nonmatching DENY entries remain. Only an explicit `.git` probe `Access denied`
+opens the current-token ACL diagnosis and safe-suspend path; never run
+`icacls /remove:d` automatically before each push. Treat `github.com:443` as a
+network failure (one `ls-remote` plus one bounded retry) and AskPass/401/403 as
+authentication failures, not as ACL failures.
 
 The task body must not modify project configuration or repository Skills. It
 must not use shell, patches, or file APIs to read or write Codex host automation

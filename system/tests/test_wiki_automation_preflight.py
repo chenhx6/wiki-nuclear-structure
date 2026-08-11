@@ -86,6 +86,26 @@ class WikiAutomationPreflightTests(unittest.TestCase):
         ):
             self.assertEqual(list(target.glob(".codex-write-probe-*.tmp")), [])
 
+    def set_explicit_deny(self, path: Path, sid: str) -> None:
+        completed = subprocess.run(
+            ["icacls", str(path), "/deny", f"*{sid}:(W)"],
+            cwd=self.tmp_root,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr or completed.stdout)
+
+    def remove_explicit_deny(self, path: Path, sid: str) -> None:
+        completed = subprocess.run(
+            ["icacls", str(path), "/remove:d", f"*{sid}"],
+            cwd=self.tmp_root,
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        self.assertEqual(completed.returncode, 0, completed.stderr or completed.stdout)
+
     def test_schema_2_success_checks_permission_matrix_and_leaves_no_files(self) -> None:
         protected_before = self.protected_tree_snapshot()
 
@@ -98,6 +118,15 @@ class WikiAutomationPreflightTests(unittest.TestCase):
         self.assertTrue(payload["profile_attestation"]["config_matches"])
         self.assertEqual(payload["profile_attestation"]["marker_status"], "matched")
         self.assertEqual(payload["warnings"], [])
+        self.assertEqual(
+            payload["capability_policy"],
+            {
+                "authority": "write_probes_and_protected_reads",
+                "acl_diagnostics_only": True,
+            },
+        )
+        self.assertRegex(payload["runtime_token"]["user_sid"], r"^S-1-")
+        self.assertIsNone(payload["runtime_token"]["error"])
         self.assertEqual(len(payload["write_probes"]), 2)
         self.assertEqual(
             [Path(item["path"]).name for item in payload["write_probes"]],
@@ -115,6 +144,15 @@ class WikiAutomationPreflightTests(unittest.TestCase):
                 ".agents/skills/wiki-evidence-query/SKILL.md",
             ],
         )
+        self.assertEqual(len(payload["acl_diagnostics"]), 4)
+        for diagnostic in payload["acl_diagnostics"]:
+            for key in (
+                "token_matching_deny_count",
+                "token_matching_deny_principals",
+                "nonmatching_deny_count",
+                "nonmatching_deny_principals",
+            ):
+                self.assertIn(key, diagnostic)
         self.assertEqual(self.protected_tree_snapshot(), protected_before)
         self.assert_no_probe_files()
 
@@ -133,6 +171,32 @@ class WikiAutomationPreflightTests(unittest.TestCase):
         )
         self.assertEqual(len(payload["write_probes"]), 2)
         self.assertEqual(len(payload["protected_read_checks"]), 2)
+        self.assertIn("user_sid", payload["runtime_token"])
+        self.assertIn("group_sids", payload["runtime_token"])
+        self.assertTrue(all("token_matching_deny_count" in item for item in payload["acl_diagnostics"]))
+        self.assert_no_probe_files()
+
+    def test_nonmatching_deny_is_diagnostic_only(self) -> None:
+        guests_sid = "S-1-5-32-546"
+        git_path = self.tmp_root / ".git"
+        self.set_explicit_deny(git_path, guests_sid)
+        try:
+            completed, payload = self.invoke()
+        finally:
+            self.remove_explicit_deny(git_path, guests_sid)
+
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertTrue(payload["ok"])
+        git_diagnostic = next(
+            item for item in payload["acl_diagnostics"] if Path(item["path"]).name == ".git"
+        )
+        self.assertGreaterEqual(git_diagnostic["explicit_deny_count"], 1)
+        self.assertEqual(git_diagnostic["token_matching_deny_count"], 0)
+        self.assertGreaterEqual(git_diagnostic["nonmatching_deny_count"], 1)
+        self.assertTrue(
+            guests_sid in git_diagnostic["nonmatching_deny_principals"]
+            or "BUILTIN\\Guests" in git_diagnostic["nonmatching_deny_principals"]
+        )
         self.assert_no_probe_files()
 
     def test_profile_mismatch_fails_before_probes(self) -> None:
