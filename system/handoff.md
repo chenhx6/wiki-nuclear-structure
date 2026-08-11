@@ -8,25 +8,25 @@ updated: 2026-08-11
 ## Active handoff
 
 Current active task:
-Repair Wiki automation state drift and rebuild the bounded weekly self-test automation. The reviewed Band-5 weekly self-test and 23-paper corpus are already published; this task changes only governance, preflight semantics, and automation instructions.
+Repair Wiki automation state drift and rebuild the bounded weekly self-test automation — completed and published. The reviewed Band-5 weekly self-test and 23-paper corpus remain published; this round changed only governance, preflight semantics, and automation instructions.
 
 Current branch / local commit:
-Branch `codex/wiki-governance-clean`; current local final HEAD subject is `Repair Wiki automation state and BibTeX baseline` (parent `d98975a`, exact current hash belongs only in the task receipt).
+Publication target/main checkout branch `codex/wiki-push-deny-hardening`; current reconciliation commit subject is `Reconcile Wiki automation completion state` (the prior governance commit is its parent; exact current hash belongs only in the task receipt).
 
 Last task status:
-The external user-run ACL repair removed the two known stale DENY ACEs from `E:\imp\wiki\.git`; a read-only check now reports zero explicit DENY and the exact ACL backup remains until successful H3 publication. The schema-3 preflight and bounded weekly self-test rules are included in the current local final commit. Unit tests, lint, QMD, H2 cleaning, explicit staging and cached audits passed; no ACL, project config, Skill, PLAN, raw file or credential was changed.
+The external user-run ACL repair removed the two known stale DENY ACEs from `E:\imp\wiki\.git`; post-push schema-3 H3 reports zero `.git` explicit DENY, root/`.git` probes and protected reads pass, and the exact ACL backup was removed only after remote verification. The schema-3 preflight and bounded weekly self-test rules are published; the main checkout fast-forwarded without touching the protected BibTeX. The replacement automation `wiki-replacement` is active under the Wiki project at Monday 19:20 Asia/Shanghai with the name “Wiki 每周自主知识自测”; old ID `wiki` is deleted. Unit tests, lint, QMD, H2 cleaning, explicit staging and cached audits passed; no ACL, project config, Skill, PLAN, raw file or credential was changed.
 
 Unfinished items:
-Run H3 with the run-local baseline before exact-refspec dry-run and non-force push, fast-forward `E:\imp\wiki` without touching the protected BibTeX, then recreate automation ID `wiki` through the Codex automation function. Delete the ACL backup only after remote verification and confirm the stale DENY entries remain absent.
+None for this governance round. The next weekly run should begin with the schema-3 preflight, establish a new run-local BibTeX baseline, and resume only explicitly allowed self-test/WIP work.
 
 P0/P1 review focus:
-P0: none for the already published corpus. P1: confirm schema-3 exit semantics, same-run BibTeX stability, no protected-file staging, no status drift, no more than two active research issues, and correct L4 nonblocking behavior.
+P0: none for the already published corpus. P1: future weekly runs must preserve schema-3 same-run BibTeX stability, no protected-file staging, no more than two active research issues, deferred-issue recording and nonblocking L4 readiness.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged; this run's baseline is established by schema 3 and must not become a durable configuration hash. Do not edit project config, repository Skills, PLAN, ACLs, credentials or host automation memory. Never auto-run `/remove:d`; safe-suspend only when a real `.git` write probe reports Access denied or H3 finds authentication, remote drift or another blocking failure. The temporary `.governance-worktree` is agent-created and must be removed only after successful push/fast-forward.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged; future runs establish their own schema-3 baseline and must not persist a fixed hash. Do not edit project config, repository Skills, PLAN, ACLs, credentials or host automation memory. Never auto-run `/remove:d`; safe-suspend only when a real `.git` write probe reports Access denied or H3 finds authentication or remote drift. The stale `.git` guardian DENY issue is resolved for the two known SIDs; host `.codex`/`.agents` DENY diagnostics remain nonmatching protection behavior and are not a push gate.
 
 Next prompt / continuation phrase:
-`继续 Wiki automation governance：从 H2 staged 审计和 H3 schema-3 fresh fetch 恢复；真实 .git Access denied、远端漂移或 automation API 失败即 safe suspend`
+`开始下一次 Wiki 每周自主知识自测：先运行 schema-3 preflight，读取 Active handoff，恢复明确允许的 WIP，并最多选择两个重要问题`
 
 Recent user decisions:
 The user authorized the governance repair and non-force publication, confirmed the external precise ACL cleanup, chose a run-local BibTeX baseline instead of a persistent SHA-256, limited each weekly run to two active important problems with no fixed literature count, requested isotope/isotone comparison and L3/L4 expansion within bounds, and selected GPT-5.6-Codex with interface reasoning label Extra high for the replacement Monday 19:20 Asia/Shanghai automation. The automation itself must never push.

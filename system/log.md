@@ -1039,3 +1039,8 @@ updated: 2026-07-15
 
 - Replaced the persistent `wiki-inbox.bib` hash gate with a per-run schema-3 baseline and same-run stability checks; independent Zotero updates now establish a fresh baseline. The two stale `.git` guardian DENY ACEs were removed by the user outside Codex and are being rechecked as diagnostics only.
 - Bounded weekly self-test scope to at most two important active problems, with no fixed literature count, finite relevant batches, isotope/isotone comparison, deferred-issue recording and nonblocking L4 readiness reports. Governance finalization and non-force publication remain pending H2/H3.
+
+## [2026-08-11] governance-finalization | automation replacement published
+
+- Published the schema-3/run-local-baseline governance repair by exact-refspec non-force fast-forward; the main checkout retained only the protected user BibTeX modification, and the two known `.git` guardian DENY SIDs remained absent after H3.
+- Rebuilt the Wiki Monday 19:20 Asia/Shanghai local cron as `wiki-replacement`, enabled it with the bounded two-problem/no-fixed-literature-count/L3-L4 readiness contract, and removed the stale `wiki` automation ID. No scientific content or raw evidence was changed.
