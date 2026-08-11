@@ -272,9 +272,11 @@ Safe suspend 的目标是保护当前工作、停止低余量扩张、留下可�
 Commit message 统一使用：
 
 - 未完成任务：`WIP suspend: <task short name>`；
-- 摄入主体完成、等待用户审核：`WIP ingest: <paper short name> for user review`；
+- 摄入尚未完成、存在未隔离 hard P0、或用户明确要求先审核：`WIP ingest: <paper short name> for user review`；
 - project、synthesis 或跨来源综合主体完成、等待用户审核：`WIP review: <task short name> for user review`；
 - 未完成的 workflow/framework 修正：`WIP suspend: <workflow short name>`。
+
+普通文献摄入由 Agent 按 ingest workflow 完成全文回查、locator/claim-kind/证据层校验、竞争解释审计和 P0/P1 自审；自审通过且不存在未隔离 hard P0 时，直接使用与实际摄入范围相符的 final commit message。Agent 自审不得写成 Human review event，不得把页面升级为 `human-reviewed`，也不得自行清除 `needs_review`。
 
 ### Active WIP 限制与 amend
 
@@ -282,7 +284,8 @@ Commit message 统一使用：
 
 恢复任务时先检查 HEAD、handoff、工作树、用户/无关文件，以及是否可以继续 amend 当前 WIP。任务完成后的处理：
 
-- 文献摄入完成但未审核：保留本地 WIP ingest，不 push；
+- 文献摄入完成且 Agent 自审通过：将对应 rolling WIP amend 为 final commit；本仓库用户已为普通 ingest 建立持续 push 授权，除非当前指令明确要求不 push，否则按 H3、fresh fetch、remote ancestry、精确 refspec dry-run 和非 force push 发布；
+- 文献摄入尚未完成、存在未隔离 hard P0、检查失败或用户明确要求先审核：保留本地 WIP ingest，不 push；
 - project、synthesis 或跨来源综合完成但未审核：保留本地 WIP review，不 push；
 - 用户审核完成：按审核报告修改并确认待提交文件均为本轮 human-review 收口内容后，将对应 WIP amend 为 review/final commit，不得另建 review/final commit；只有用户允许时才 push；
 - 用户指定本轮提交 message 时原样使用；未指定时由 Codex 给出与本轮内容直接相关的建议 message，并在最终报告中说明；
@@ -290,7 +293,7 @@ Commit message 统一使用：
 
 仓库中存在对应 active WIP、用户已完成审核并要求 final commit/push 时，上述规则即构成对 `git commit --amend` 的明确本地授权，优先于通用的“除非用户明确要求，否则不要 amend”约束。不得因该通用约束而保留独立 WIP，再额外创建 final commit。
 
-科学内容与文献摄入、source/claim、nucleus/band/concept/observable、project/synthesis 和需要用户科学判断的修改，默认按本地 WIP → 用户审核 → amend 为 final → 用户允许后 push 的生命周期执行。推荐完成当前文献摄入的审核与 finalization 后再摄入下一篇；并行 WIP 不是禁止项，但必须先解决共享文件 overlap。
+普通文献摄入及其直接必要的 source/claim、nucleus/band/concept/observable、project relation 和主题收尾，默认按 rolling WIP（长任务/中断时）→ Agent 自审 → amend 为 final → 已授权 push 的生命周期执行，不等待用户逐篇审核。Human review triage 在这里是未来问答、研究和论文证据使用时的核验优先级，不是普通 ingest 发布门槛；未隔离 hard P0、检查失败或远端异常仍必须 safe suspend。独立 project/synthesis、跨来源研究结论、claim-review-update 和需要用户科学判断的修改仍按本地 WIP → 用户审核 → amend 为 final → 用户允许后 push 执行。多篇摄入仍必须解决共享文件 overlap，并保持逐篇 source-level / claim-level 证据审计。
 
 治理、框架、脚本和说明文档任务若方案与验收标准已由用户确认、无科学内容修改、无新增重大设计选择、检查通过且文件归属清楚，可直接创建 final commit 并按用户指令 push，不因多文件修改而机械等待 WIP 审核。只有设计分歧、范围异常扩大、核心检查失败、迁移需裁决、文件归属/overlap 不明、用户要求先审核或执行余量不足时，才使用 WIP 或 safe suspend。
 

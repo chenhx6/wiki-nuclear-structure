@@ -1,9 +1,9 @@
 ---
 type: source
 title: "Lifetime measurements of highly deformed bands in 134,135Nd and 131Ce"
-aliases: [Petrache 1998 131Ce HD lifetime]
+aliases: [Petrache 1998 HD-band lifetimes, Petrache 1998 134Nd 135Nd 131Ce]
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-08-11
 status: ai-draft
 review_status: unreviewed
 source_type: journal-article-experiment
@@ -21,14 +21,14 @@ citation_key: petrache_1998_Lifetimemeasurements
 raw_file: "raw/papers/1998_Petrache et al_Lifetime measurements of highly deformed bands in 1 3 4 , 1 3 5 Nd and 131 Ce.pdf"
 raw_sha256: 9D2297ED085012D2F8633A5FAECFA7020CBCA96AC06CF2EB5E88D97A24B90E5F
 nuclei: [131ce, 134nd, 135nd]
-reactions: [110Pd(28Si,alpha3n)131Ce]
-models: [cranked-hartree-fock-bogoliubov]
+reactions: [110Pd(28Si,4n)134Nd, 110Pd(28Si,3n)135Nd, 110Pd(28Si,alpha3n)131Ce]
+models: [cranked-shell-model]
 observables: [transition-quadrupole-moment]
 methods: [doppler-shift-attenuation]
-tags: [131ce, highly-deformed, lifetime, q0, dsam]
+tags: [experiment-ingest, project-ingest, a130, highly-deformed, lifetime, quadrupole-moment, dsam]
 ---
 
-# Petrache 等（1998）：`131Ce` 高度形变带寿命
+# Petrache 等（1998）：`134,135Nd` 与 `131Ce` 高度形变带寿命
 
 ## Bibliographic Record
 
@@ -36,60 +36,150 @@ C. M. Petrache 等，*Physical Review C* **57**, R10–R14 (1998)，DOI `10.1103
 
 ## Scope and Reading Depth
 
-全文 5 页逐页阅读并视觉复核，覆盖实验、Table I、DSAM/side-feeding 处理、CHFB 比较与结论。
+- Reading mode: standard deep reading；5 个 PDF pages 全文逐页阅读并视觉复核。
+- Covered: motivation、single-reaction multi-channel design、GASP+ISIS channel selection、DSAM fractional-shift analysis、side-feeding/stopping-power treatment、Table I 的五条本次测量带、extended cranked Strutinsky-type calculations 与结论。
+- Not covered: 本文所依赖的早期 level-scheme/configuration papers 的独立复核；逐 transition lifetime（本数据统计不足）；后来的 `135Nd` chiral-band literature。
+- Strategy: `experiment-ingest + project-ingest`。本轮把旧卡片从仅 `131Ce` 摘要升级为三核比较来源，并纠正模型标注；所有新增/改写 claim 保持 `needs_review: true`。
+
+## Paper Question and Scientific Motivation
+
+论文检验 A≈130 高度形变带的 charge quadrupole moment 是否随占据的 neutron `i13/2` intruder 轨道数呈可加、单调的形变增强。`134Nd` 同一核中在不同频率区间包含零、一或两个 `νi13/2` 占据的候选带，因此可在尽量共享 stopping power、beam/target 与探测器系统误差的条件下比较相对 `Q0`（PDF pp. 1-2 / journal pp. R10-R11）。
+
+## Method and Design Logic
+
+- 132 MeV `28Si + 110Pd` 在同一厚靶实验中布居 `134Nd`、`135Nd` 与 `131Ce`；GASP 测 γ rays，ISIS 通过 charged-particle coincidence/veto 分离 `4n` 与 `α3n` 等通道（PDF pp. 1-2 / journal pp. R10-R11）。
+- 不同角度 peak centroids 给出 fractional Doppler shift `F(τ)`；对 in-band `Q0` 与 unresolved side-feeding cascade 的 `Q_sf` 做二维 `χ²` 拟合（PDF pp. 2-3 / journal pp. R11-R12）。
+- 由于 stopping powers 与 unresolved feeding 是 DSAM 的主要系统限制，作者强调同一测量中的相对 quadrupole moments 比绝对值更稳健（PDF pp. 2-3 / journal pp. R11-R12）。
+- extended cranked Strutinsky-type calculations 含 quadrupole/monopole pairing，并逐频率对 `β2, β4, γ` 极小化 total Routhian；它是对 shape evolution 的模型比较，不是 CHFB（PDF p. 4 / journal p. R13）。
+
+## Key Evidence and Reasoning Chain
+
+- shared reaction/systematics + ISIS channel separation + angle-dependent centroids → 五条带的可比 `F(τ)` 曲线（PDF pp. 2-3; Figs. 1-2）。
+- DSAM + common side-feeding treatment → Table I 中 `134Nd` yrast/excited HD、Band 3、`135Nd` HD 与 `131Ce` yrast HD 的 `Q0/Q_sf`（PDF pp. 2-4; Fig. 2; Table I）。
+- `134Nd` 中不同 `νi13/2` occupancy candidates 的 `Q0` 不呈简单单调增加 → intruder polarization 不能按 A≈150 的简单 additivity 直接外推（PDF pp. 3-4 / journal pp. R12-R13）。
+- cranked-Strutinsky predicted high-spin shrinkage 与 intruder polarization 的补偿 → calculated `F(τ)` 大体符合数据；但统计不足以逐 transition 测寿命，因此 shrinkage 本身没有被直接解析出来（PDF p. 4 / journal p. R13）。
 
 ## Summary
 
-论文用 DSAM 测量 `134,135Nd` 和 `131Ce` 高度形变带。`131Ce` yrast HD 带得到 `Q0=7.3(4) eb`、`β2=0.38(2)`，与模型的随自旋收缩趋势相容。该 HD 序列属于与 normal-deformed thesis Band 1 不同的形变/自旋区，不能按同核素或 “yrast” 标签直接合并。
+本文最强的实验结论不是单个 `131Ce` 数值，而是同一实验下五条 A≈130 高度形变带的相对四极矩比较：`Q0` 没有随 `νi13/2` 占据数显示清楚的单调依赖。作者用 rotation-induced shrinking 抵消 intruder shape polarization 解释这一结果。论文不讨论 nuclear chirality；其 HD bands 与后来 `135Nd` chiral doublets 或 `131Ce` normal-deformed bands 没有建立 band-identity crosswalk。
 
-## Experimental Setup
+## Experimental or Theoretical Setup
 
-- 132 MeV `110Pd(28Si,xn yα)`，GASP + ISIS；`131Ce` 经 `α3n` 道布居。
-- DSAM 线形拟合包含 side-feeding cascade；提取量依赖 stopping powers、side-feeding 时标与模型参数。
-- CHFB 用于给出 `Q0` 随自旋变化和形变收缩的理论比较。
+| Item | Source-grounded value |
+|---|---|
+| beam/target | 132 MeV `28Si`; 1 mg/cm² enriched `110Pd` on 10 mg/cm² Au backing |
+| detector | 40 Compton-suppressed GASP HPGe + 80-element BGO inner ball; 40-telescope ISIS |
+| trigger/statistics | ≥3 Ge + ≥4 BGO; `1.9×10^9` triple-and-higher-fold Compton-suppressed events |
+| angle groups | `36°, 60°, 72°, 90°, 108°, 120°, 144°` |
+| recoil velocities | Nd `v0/c=0.0202(2)`; Monte-Carlo-corrected `131Ce` `v0/c=0.0192(2)` |
+| DSAM stopping | Northcliffe-Schilling electronic stopping scaled following Sie et al.; nuclear stopping by Monte Carlo; Blaugrund multiple scattering |
+| side feeding | one effective rotational cascade; constant `Q_sf` and average `J_sf^(2)` per band |
+| calculation | paired cranked Strutinsky-type total-Routhian minimization in `β2, β4, γ` |
 
 ## Key Results
 
-| ID | 陈述 | claim_kind | evidence_level | locator | needs_review |
+| ID | Claim | claim_kind | evidence_level | locator | needs_review |
 |---|---|---|---|---|---|
-| PE98-1 | `131Ce` yrast HD 带的实验 `Q0=7.3(4) eb`，side-feeding `Qsf=6(1) eb`。 | derived-observable | direct | PDF p.3, Table I | true |
-| PE98-2 | 在无三轴性假设下，作者由该矩估计 `β2=0.38(2)`。 | model-assisted-inference | direct | PDF p.3, Table I and caption | true |
-| PE98-3 | CHFB 给出 `131Ce` 理论 `Q0` 从 `I=20.5` 的约 `7.5 eb` 降到 `I=40.5` 的约 `6.7 eb`。 | model-result | direct | PDF p.3, Table I | true |
-| PE98-4 | 作者报告该结果与 Clark 等的 `7.4(3) eb` 一致，并高于更早约 `6` 与 `5.5 eb` 的结果。 | author-comparison | direct | PDF pp.3–4, discussion | true |
-| PE98-5 | 作者认为数据与 rotation-induced shrinking 相容，但没有发现 `Q0` 对 `i13/2` intruder 轨道数目的简单单调依赖。 | author-interpretation | direct | PDF pp.4–5, Conclusions | true |
+| PE98-1 | 同一 132 MeV `110Pd(28Si,xnyα)` 厚靶实验配合 GASP+ISIS，同时获得 `134Nd`、`135Nd` 与 `131Ce` 高度形变带的 angle-dependent coincidence spectra；ISIS 对 `4n` veto 与 `α3n` selection 对分离 `134Nd/131Ce` 近简并峰是关键。 | method-fact | direct | PDF pp. 1-2 / journal pp. R10-R11; Fig. 1 | true |
+| PE98-2 | 作者指出 stopping powers 与 unresolved feeding 是 DSAM 的两项严重限制，并明确把同一实验中的相对 quadrupole moments 视为最显著结果。 | method-limitation | direct | PDF pp. 2-3 / journal pp. R11-R12 | true |
+| PE98-3 | `134Nd` yrast HD band 得到 `Q0=6.8(3) eb`、`Q_sf=6(1) eb`；无三轴假设下对应 `β2=0.35(1)`。 | derived-observable | direct | PDF p. 3 / journal p. R12; Table I; Fig. 2 | true |
+| PE98-4 | `134Nd` excited HD band 得到 `Q0=6.4(4) eb`、`Q_sf=6(1) eb`、`β2=0.33(2)`。 | derived-observable | direct | PDF p. 3 / journal p. R12; Table I; Fig. 2 | true |
+| PE98-5 | `134Nd` Band 3 crossing 前后分别拟合为 `Q0=4.9(3) eb` 与约 `6.5 eb`，但上段只有四个低灵敏度点且误差约 20-30%；全带单一 `Q0=5.0(3) eb` 的拟合也不能由当前统计 firm 排除。 | derived-observable | direct | PDF pp. 3-4 / journal pp. R12-R13; Table I; Fig. 2 | true |
+| PE98-6 | `135Nd` HD band 得到 `Q0=7.3(10) eb`，合理拟合要求较慢/较弱 side feeding（正文 `Q_sf=4.0(5) eb`，Table I 列 `3.0(5) eb`）；作者把小 `Q_sf` 解释为 high-spin near-yrast quasicontinuum 可能以小形变三轴带为主。 | source-conflict | direct | PDF pp. 3-4 / journal pp. R12-R13; Table I and first paragraph on R13 | true |
+| PE98-7 | `131Ce` yrast HD band 得到 `Q0=7.3(4) eb`、`Q_sf=6(1) eb`；无三轴假设下 `β2=0.38(2)`，与 Clark 等的 `7.4(3) eb` 一致。 | derived-observable | direct | PDF pp. 3-4 / journal pp. R12-R13; Table I; Fig. 2 | true |
+| PE98-8 | 三条 `134Nd` high-spin bands 的 measured `Q0` 未显示对占据 `νi13/2` 数目的直接、简单关系；论文结论推广为本次五条分析带没有清楚的单调依赖。 | author-interpretation | direct | PDF pp. 3-4 / journal pp. R12-R13; Abstract and Conclusions | true |
+| PE98-9 | 对 occupancy 平滑的 HD bands，cranked-Strutinsky calculations 预测 `Q0` 随自旋下降约 20%；例如 `134Nd` yrast 从 `7.4 eb` (`I=19`) 降至 `5.9 eb` (`I=39`)，`131Ce` 从 `7.5 eb` (`I=20.5`) 降至 `6.7 eb` (`I=40.5`)。 | model-result | direct | PDF pp. 3-4 / journal pp. R12-R13; Table I | true |
+| PE98-10 | 作者用 rotation-induced shrinking 与新增 `νi13/2` 轨道的 shape-polarizing force 相互补偿，解释 `134Nd` excited HD/Band 3 在增加 intruder occupancy 后没有显著 `Q0` 增长。 | author-interpretation | indirect | PDF p. 4 / journal p. R13; Conclusions | true |
+| PE98-11 | 当前统计不足以测出每条 individual transition lifetime，因此模型预测的 spin-dependent shrinkage 不能由本实验直接确定；实验 `Q0` 是以 spin-independent constant 拟合 `F(τ)`。 | method-limitation | direct | PDF p. 4 / journal p. R13 | true |
+| PE98-12 | Table I 的 `β2` 均明确假设无三轴性；`Q0` 是更接近 DSAM 拟合的量，`β2` 不是 geometry-independent experimental observable。 | model-assisted-inference | direct | PDF p. 3 / journal p. R12; Table I caption | true |
+| PE98-13 | 全文不使用 nuclear-chirality interpretation，也未把这些 HD bands 映射到后来 `135Nd` chiral doublets 或 `131Ce` normal-deformed sequences。 | source-scope-fact | direct | full-paper scope; PDF pp. 1-5 | true |
 
-## Data Lineage and Band Identity
+## Nuclear Structure Information
 
-本页的 `131Ce` HD band 以高形变、独立级联和更高自旋区定义。它只与 thesis/2016 normal-deformed 序列做分层尺度比较；当前没有证据把二者认作同一连续带。
+| Nucleus/band | Experimental result | Source interpretation/boundary |
+|---|---|---|
+| `134Nd` yrast HD | `Q0=6.8(3) eb`, `β2=0.35(1)` | one `νi13/2` candidate; calculated shrinkage |
+| `134Nd` excited HD | `Q0=6.4(4) eb`, `β2=0.33(2)` | crossing from one to two `νi13/2`; polarization/shrinkage compensation |
+| `134Nd` Band 3 | lower `4.9(3) eb`; upper `~6.5 eb` tentative; whole `5.0(3) eb` | crossing near `I≈30ℏ`; current data cannot choose one- versus two-`Q0` fit firmly |
+| `135Nd` HD | `Q0=7.3(10) eb` | one `νi13/2`; `Q_sf` differs between Table I and prose |
+| `131Ce` yrast HD | `Q0=7.3(4) eb`, `β2=0.38(2)` | strong HD collectivity; distinct from later Wiki normal-deformed band numbering |
 
-## Interpretation Boundaries
+## Authors' Interpretation
 
-- `β2=0.38(2)` 依赖轴对称映射；`Q0` 是更接近实验拟合的量。
-- HD 与 normal-deformed 的 `Q0/Q_t` 不具有完全相同的几何和 K-mixing 约定。
-- 同一核中存在高度形变序列提高多极小/shape coexistence 的可行性，但不能证明 thesis Bands 1–7 构成共存伙伴。
+作者认为 A≈130 区 `νi13/2` 的 shape-polarizing effect 会被 high-spin rotation-induced shrinking 削弱，从而破坏 A≈150 superdeformed region 中较清楚的 quadrupole-moment additivity。Calculated charge quadrupole moments 生成的 `F(τ)` 曲线整体与实验相容，因此被视为 cranked-Strutinsky deformation calculation 的支持，而不是对单一 microscopic configuration 的直接测量。
 
 ## Competing Interpretations and Limitations
 
-大 `Q0` 直接支持强 E2 集体性；`β2`、随自旋收缩和 intruder 轨道作用依赖轴对称映射与 CHFB。HD 序列可能体现独立形变极小，也可能只是在不同自旋/组态区的结构；缺少 HD–ND linking 使两者不能裁决。
+- `134Nd` Band 3 的上段 `Q0≈6.5 eb` 是低统计、低灵敏度拟合；单一 `Q0=5.0(3) eb` 仍可接受，不能把 crossing 两侧的 deformation jump 写成已确立事实。
+- `135Nd` side-feeding moment 在 Table I (`3.0(5) eb`) 与正文 (`4.0(5) eb`) 不一致，当前保持 source conflict，不代替作者裁决。
+- stopping powers、unresolved feeding、constant `Q0/Q_sf` 与 reaction-kinematics correction 共同限制绝对值；相对比较更稳健但仍非无模型。
+- `β2` 依赖 axial mapping；作者对小 `Q_sf` 的 triaxial-quasicontinuum解释是间接推断。
+- 论文不研究 chirality。HD collectivity、shape coexistence feasibility 或邻核系统学均不能把本文的带自动改名为 chiral partners。
+
+## Analytical Reconstruction
+
+| ID | Reconstruction role | Wiki synthesis | Source basis | status |
+|---|---|---|---|---|
+| AR-1 | Core reconstruction | 本文的可复用核心是 shared-systematics relative-`Q0` experiment，而不是 `131Ce` 的单点寿命。 | PE98-1 to PE98-8 | unreviewed |
+| AR-2 | Claim-chain extraction | ISIS channel separation → comparable `F(τ)` → DSAM `Q0/Q_sf` → cross-band occupancy comparison → no simple `νi13/2` additivity. | PE98-1 to PE98-8; Figs. 1-2; Table I | unreviewed |
+| AR-3 | Model-boundary extraction | shrinking/polarization compensation is a paired cranked-Strutinsky explanation; individual lifetime shrinkage was not experimentally resolved. | PE98-9 to PE98-12 | unreviewed |
+| AR-4 | Failure conditions | Band 3 upper/lower deformation change fails as an established claim if the acceptable single-`Q0` fit is ignored; `135Nd Q_sf` fails if Table/prose conflict is silently harmonized. | PE98-5, PE98-6 | unreviewed |
+| AR-5 | Corpus decision | Retain as lifetime/deformation control context only. Do not count it as direct nuclear-chirality evidence or as lifetime evidence for later chiral partner bands without an explicit band crosswalk. | PE98-13 and full-paper scope | unreviewed |
+
+### Companion Evidence Audit
+
+- Five analyzed bands and their Table I/Fig. 2 values: directly usable with stated DSAM/model limitations.
+- `132Ce` yrast HD row: imported from Ref. 6, not a new measurement in this experiment; comparison-only companion evidence.
+- Earlier configuration assignments for `134Nd`: reused from Refs. 2/8, not independently re-established here.
+- `135Nd Q_sf`: source-conflicted between table and prose; not harmonized.
+- Later chiral-band identity: absent; not established.
+
+## Knowledge Impact and Learning Decision
+
+- Existing Wiki understanding: `131Ce` has a distinct strongly deformed HD sequence with `Q0=7.3(4) eb`, separate from normal-deformed Bands 1-7.
+- New or corrected information: restore the paper's actual three-nucleus comparison; add `134Nd` three-band `Q0` evidence, `135Nd` HD result, Band 3 fit ambiguity, Table/prose `Q_sf` conflict and shared-systematics rationale; replace the incorrect CHFB label with cranked Strutinsky-type calculations.
+- Persistence decision: update this source; create `134Nd` and the common GASP+ISIS experiment page; minimally update `135Nd`, `131Ce`, index and nuclear-chirality project. Defer band pages because band identity depends on earlier level-scheme sources and is not crosswalked to later chirality papers.
+
+## Related Knowledge and Project Relations
+
+| Relation | Target | Boundary |
+|---|---|---|
+| nucleus | [[134nd]] | Three bands measured; Band 3 two-`Q0` fit remains unresolved. |
+| nucleus | [[135nd]] | HD band is separate from later D1/TiP/chiral-band nomenclature. |
+| nucleus | [[131ce]] | Yrast HD band is separate from Wiki normal-deformed Bands 1-7. |
+| experiment | [[lnl-gasp-isis-pd110-si28-132mev]] | Shared thick-target DSAM data and channel separation. |
+| observable | [[transition-quadrupole-moment]] | `Q0` is DSAM-derived; `β2` adds axial geometry. |
+| model | [[cranked-shell-model]] | Source implementation is paired cranked Strutinsky-type total-Routhian minimization. |
+| context-not-direct-evidence | [[nuclear-chirality-and-multiple-chiral-doublet-bands]] | Deformation/lifetime control source only; no chiral assignment or band crosswalk. |
+| project | [[131ce-collective-mode-discrimination]] | Constrains the separate `131Ce` HD shape sector. |
 
 ## Human Review Triage
 
+Use the canonical P0/P1/P2/P3 definitions in `system/workflows/ingest-strategies.md`.
+
 ### P0
 
-- PE98-1：HD band 必须保持独立身份，不得错误并入 thesis Band 1 或 2016 yrast sequence。
+P0: none identified after the full-paper reconstruction.
 
 ### P1
 
-- PE98-2–5：大 `Q0` 是强形变的定量证据；形状、intruder 计数和随自旋收缩仍有模型依赖。
+- **PE98-5 / AR-4 — `134Nd` Band 3 deformation change.** Grounded evidence: two-region fit gives `4.9(3)` and `~6.5 eb`, but only four upper points and a single `5.0(3) eb` fit remain acceptable. User check: preserve the upper value as tentative and the fit choice as unresolved. Risk: upgrading an underconstrained change into a measured shape jump.
+- **PE98-6 — `135Nd Q_sf` source conflict.** Grounded evidence: Table I gives `3.0(5) eb`, prose gives `4.0(5) eb`. User check: decide whether later erratum/independent source resolves it; until then quote both with locators. Risk: silent numerical harmonization.
+- **PE98-9 to PE98-13 / AR-3/5 — model and chirality boundary.** Grounded evidence: constant experimental `Q0`, paired cranked-Strutinsky spin-dependent calculation, no individual lifetimes and no chirality terminology. User check: do not call the predicted shrinkage directly observed or use this paper as lifetime evidence for later chiral partners. Risk: model-to-data and band-identity overreach.
 
-## Related Knowledge
+### P2/P3
 
-- [[131ce]]
-- [[transition-quadrupole-moment]]
-- [[131ce-collective-mode-discrimination]]
+- P2: reaction-kinematics/stopping-power implementation details and imported `132Ce` comparison row.
+- P3: bibliographic typography and detector nomenclature after identity is stable.
 
 ## Extracted Pages
 
-- Nucleus: [[131ce]]。
-- Observable: [[transition-quadrupole-moment]]。
-- Project: [[131ce-collective-mode-discrimination]]。
+- Nuclei: [[134nd]], [[135nd]], [[131ce]].
+- Experiment: [[lnl-gasp-isis-pd110-si28-132mev]].
+- Observable/model: [[transition-quadrupole-moment]], [[cranked-shell-model]].
+- Bands: deferred pending explicit crosswalk to the earlier `134Nd/135Nd` level-scheme sources.
+- Projects: [[131ce-collective-mode-discrimination]]; contextual non-evidence relation to [[nuclear-chirality-and-multiple-chiral-doublet-bands]].
+
+## Non-source Notes and Follow-up
+
+Before using any `135Nd` lifetime in a chiral argument, identify the later chiral-band labels and prove whether they match this 1998 HD band. The common nucleus name and large `Q0` are not a band crosswalk.

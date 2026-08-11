@@ -3,7 +3,7 @@ type: model
 title: 三轴粒子-转子模型
 aliases: [triaxial particle rotor model, TPRM, quasiparticle triaxial rotor, QTR]
 created: 2026-07-01
-updated: 2026-07-04
+updated: 2026-08-11
 status: active
 review_status: unreviewed
 model_family: core-particle-coupling
@@ -43,6 +43,8 @@ tags: [triaxiality, odd-a, wobbling]
 - [[lv-2021-tilted-precession-135nd]] 对 `135Nd` 使用 `β=0.19, γ=25°`、Harris `J0=5 ħ² MeV^-1, J1=71.4 ħ⁴ MeV^-3`、Coriolis attenuation 0.7、`g_s=0.6g_free`、`g_R=0.44` 与 neutron Fermi level 附近 7 个负宇称 orbitals。
 - [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] 对 `133Ce` 两对候选带使用 constrained RMF 的形变，调整 rotor moment of inertia 到实验能量，并对含低 `j` `g7/2` 的 Bands 2–3 使用 Coriolis attenuation `xi=0.7`。
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] 对 `78Br` 正/负宇称候选对采用 MDC-CDFT 的形变、MoI 16/18 hbar2/MeV 与 attenuation 0.6。
+- [[xiao-2022-chirality-octupole-correlations-74as]] 对 `74As` Bands 1/2 固定 earlier-RMF `β2=0.37`，再以实验 energies/ratios 调整到 `γ=21.6°`、`J=12 hbar2/MeV`。
+- [[bark-2024-investigations-nuclear-chirality-ithembalabs]] 对比 restricted single-orbital 与 realistic multi-orbital QTR/PRM spaces，并汇总 A≈80/190 多准粒子案例；其多个数值来自被综述的 earlier model papers。
 
 ## Predicted Observables
 
@@ -65,6 +67,12 @@ Lawrie 2020 指出，QTR 对能带能量或大 E2 connecting transitions 的再�
 `133Ce` TPRM 较好再现两对带的能量和总体 `B(M1)/B(E2)` 趋势，但没有再现实验中的小幅 odd-even staggering；RMF shape inputs、MoI adjustment 和 `xi` 使其属于模型支持而非独立实验验证。
 
 `78Br` TPRM 比较 energies、`S_chiral(I)`、`B(M1)/B(E2)` 和 effective angles；nonplanar angles 是模型几何。Band 3 deviations 被归因于计算忽略 `f5/2-p3/2` mixing，configuration 仍非唯一实验事实。
+
+`74As` TPRM reproduces pair energies, `S(I)` and the magnitude/staggering phase of `B(M1)/B(E2)`, but `γ` and `J` are fitted to those observables. Core/proton favor intermediate/short axes while the neutron mixes across all three; total `I` is aplanar without the ideal long-axis neutron alignment.
+
+Bark 2024 汇总的 restricted/non-restricted calculation 显示，固定 particle/hole angular momenta 的 ideal model 才产生 exact partner equality、prescribed `B(M1)` staggering 与 vanishing `S(I)` staggering。扩大 single-particle space 后，Coriolis-driven orbital mixing 和 `<10%` planar components 可造成显著差异，即使 dominant geometry 仍 aplanar。该结果限制 universal fingerprints，但不能反向证明任意 nondegenerate doublet 都是 chiral。
+
+同一综述中的多带计算还显示：按能量把 4-6 条 same-configuration bands 分对可能与 quasiparticle angular-momentum similarity 不一致；`193,194Tl` 的 observed/calculated band counts 进一步暴露 missing-band 和 non-unique-pairing 问题。
 
 Sensharma 2019 的 QTR 给出
 `E_TW1(I+1)-E_yrast(I) ≈ 2[E_TW2(I+2)-E_TW1(I+1)]`
@@ -94,6 +102,8 @@ Sensharma 2019 的 QTR 给出
 - [[lv-2021-tilted-precession-135nd]]
 - [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]]
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]]
+- [[xiao-2022-chirality-octupole-correlations-74as]]
+- [[bark-2024-investigations-nuclear-chirality-ithembalabs]]
 
 ## Evolution Log
 
@@ -107,3 +117,5 @@ Sensharma 2019 的 QTR 给出
 - 2026-07-04：加入 Lv 2021 `135Nd` QTR parameters、wave-function assignment、transition ratios 与 pairing comparison。
 - 2026-07-13：加入 Ayangeakaa 2013 `133Ce` RMF-input TPRM、Coriolis attenuation 与 staggering discrepancy。
 - 2026-07-13：加入 Liu 2016 `78Br` MDC-CDFT-input TPRM、effective-angle geometry 与 orbital-mixing limitation。
+- 2026-08-11：加入 Xiao 2022 `74As` fitted `β2/γ/J`、ratio comparison 和 aplanar/nonideal-neutron geometry。
+- 2026-08-11：加入 Bark 2024 restricted-versus-realistic configuration-space test 与 same-configuration multi-band pairing limitation。

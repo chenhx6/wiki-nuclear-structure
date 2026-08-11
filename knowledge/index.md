@@ -2,7 +2,7 @@
 type: system-index
 graph-excluded: true
 created: 2026-07-01
-updated: 2026-07-15
+updated: 2026-08-11
 ---
 
 # Wiki Index
@@ -12,7 +12,27 @@ updated: 2026-07-15
 - [[alwaleedi-2013-band-structures-131ce]] - `131Ce` Bands 1–7 的 Gammasphere 纲图、crossing/alignment、组态图与带 `δ=0` 假设的 `B(M1)/B(E2)` 基线。
 - [[singh-2016-lifetime-131ce-133pr]] - `131Ce/133Pr` yrast 带寿命、`Q_t` 与 γ-soft/TRS 解释；2016 当前值与 2004 依赖行分层。
 - [[li-2004-lifetimes-131ce]] - `131Ce` 正负宇称序列的早期 DSAM 寿命与 `Q_t` 原始谱系。
-- [[petrache-1998-highly-deformed-lifetimes-131ce-nd]] - `131Ce` 独立高度形变带 `Q0`、side feeding 与 CHFB 比较。
+- [[petrache-1998-highly-deformed-lifetimes-131ce-nd]] - `134Nd` 三带及 `135Nd/131Ce` HD bands 的 shared-systematics DSAM `Q0/Q_sf` 与 cranked-Strutinsky shrinking/polarization 比较。
+- [[klemme-1999-lifetimes-134nd-neighbors]] - `134Nd` 12-state coincidence-RDDS/DDCM strength map、六邻核通道 lifetimes 与 `135Nd` D1/ASYR 历史基线。
+- [[hecht-2001-chiral-symmetry-breaking-136pm-138eu]] - `136Pm/138Eu` linked yrast/new-band pairs、DCO/selected polarization、共同组态指认与 3D TAC aplanar candidate evidence；结论保持 candidate 层级。
+- [[hecht-2003-chirality-shape-coexistence-140eu]] - `140Eu` five-band scheme、Bands 1/2 与 3/4 candidate pairs，以及 chirality/`γ≈±25°` shape-coexistence 未决竞争。
+- [[timar-2007-high-spin-105ag-chiral-search]] - `105Ag` corrected A–G scheme、Band-E sensitivity-bounded null 与 natural-parity D/G candidate/mixing ambiguity。
+- [[suzuki-2008-lifetimes-103rh-104rh]] - `103,104Rh` inverse-kinematics RDDS lifetimes、absolute `B(M1)/B(E2)` 与 one-sided partner-band evidence boundary。
+- [[luo-2009-chirality-evolution-ru]] - even-even `108,110,112Ru` fission structures、branching fingerprints and planar-TAC/RPA soft-chiral-vibration interpretation。
+- [[musangu-2021-chiral-vibrations-104mo-106mo]] - `104,106Mo` collective schemes、angular correlations and TPSM soft-chiral-vibration candidates；predicted connecting E2 and geometry boundaries explicit。
+- [[peng-chen-2022-chiral-rotation-rhodium-isotopes]] - `102-107Rh` PC-PK1 3D-TAC CDFT `omega_crit` systematics；separates mean-field aplanar onset from imported doublets and missing tunnelling/side bands。
+- [[guo-2022-possible-chiral-multiple-chiral-thallium-isotopes]] - `192-200Tl` PK1 constrained-RMF candidate-minimum map；separates predicted MχD counts, secondary bands and `199,200Tl` null controls。
+- [[xiao-2022-chirality-octupole-correlations-74as]] - `74As` Bands 1/2 five-link chiral candidate 与 Band 3→1 E1/octupole-correlation evidence；保留 fitted geometry、spin/gap 和 stable-deformation 边界。
+- [[wang-2023-experimental-studies-nuclear-chirality-china]] - 中国团队 23-nucleus/三质量区 nuclear-chirality 二级综述；保存 `106Ag` lifetime counterexample、DSAM uncertainty warning、Br octupole hypothesis 与 probable `82Ge→82Se` table error。
+- [[bark-2024-investigations-nuclear-chirality-ithembalabs]] - iThemba A≈80/100/190 programme 综述；保存 realistic-QTR fingerprint boundary、`106Ag`/Tl counterexamples、`82Se` reconciliation 与 polarization Eq.(5) source error。
+- [[wang-2013-high-spin-104ag]] - `104Ag` revised A-F coexistence scheme、A/B chiral candidate and electric-/magnetic-rotation references。
+- [[kuti-2014-multiple-chiral-doublets-103rh]] - `103Rh` positive pair plus two negative same-configuration MχD candidates；保留 band-number crosswalk、parity assumption 与 PRM energy/alignment discrepancies。
+- [[petrache-2018-chiral-bands-even-even-136nd]] - `136Nd` five-pair even-even chirality case；D5 partner-ratio evidence、four weak candidates and D3-only 3D-TAC geometry 分层。
+- [[xiong-wang-2019-nuclear-chiral-doublet-data-tables]] - 59 reported doublets/47 nuclei/8 MχD candidates 的 2019 历史 census；作为查表与原始来源入口，不增加独立证据。
+- [[guo-2020-pseudospin-chiral-quartet-131ba]] - `131Ba` D3-D6 pseudospin-chiral quartet、D7/D8 negative pair 与 direct E1 octupole-correlation network；保留 pairing/geometry/lifetime 边界。
+- [[wang-2020-recent-progress-multiple-chiral-doublets]] - distinct-/same-configuration MχD taxonomy、实验/预测表与 ideal-PRM linking rules；保留二级证据、模型条件和 `136Nd (5n)` 表错。
+- [[starosta-2001-n75-chiral-vibrations]] - `130Cs/132La/134Pr/136Pm` doublet systematics、mixed links、soft chiral-vibration/island interpretation 与五同中子素 3D TAC；保留 reaction/independence conflict。
+- [[petrache-1996-rotational-bands-134pr]] - `134Pr` four-band 纲图、DCO、alignment/TRS 与 Band 1/Band 2 unresolved signature/shape/`γ`-phonon alternatives；后续手征解释的历史前驱而非直接手征指认。
 - [[meng-2010-open-problems-nuclear-chirality]] - 核手征几何、TAC/PRM 边界、fingerprint ambiguity 与 MχD/shape-coexistence 的 theory/review 背景。
 - [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] - `133Ce` 两对 MχD 候选的 Gammasphere/DCO/角分布事实及 RMF+TPRM 支持链。
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]] - `78Br` 两对 MχD、ADO/偏振、八条 E1 links 与 octupole-soft MDC-CDFT/TPRM 证据链。
@@ -71,7 +91,24 @@ updated: 2026-07-15
 
 ## Nuclei
 
+- [[74as]] - A≈80 odd-odd nucleus；Bands 1/2 chiral candidate、Band 1/3 octupole correlations、revised spins and unresolved low-energy gap。
 - [[131ce]] - N=73 奇中子核；当前以 Bands 1–7 的高自旋组态、crossing 与集体模式判别为重点。
+- [[134pr]] - N=75 odd-odd nucleus；当前保存 Petrache 1996 four-band 高自旋基线与后续 chirality reinterpretation 的证据边界。
+- [[134nd]] - N=74 even-even nucleus；当前保存 yrast/excited HD 与 Band 3 的 DSAM `Q0` 及 one- versus two-`Q0` fit ambiguity。
+- [[136pm]] / [[138eu]] - N=75 odd-odd isotones；Hecht 2001 的 early chiral-twin candidate pairs、实验判据与 TAC/量子混合边界。
+- [[130cs]] / [[132la]] - N=75 odd-odd isotones；Starosta 2001 的 linked yrast/sideband structures 与 soft chiral-vibration candidates。
+- [[140eu]] - N=77 odd-odd nucleus；Hecht 2003 的双 candidate-pair、shape-coexistence alternative 与 lifetime discriminator。
+- [[105ag]] - A≈104 odd-A nucleus；Timár 2007 Band-E null-search reference 与 D/G chiral/mixing candidate。
+- [[103rh]] / [[104rh]] - A≈100 odd-A/odd-odd candidate doublets；Suzuki 2008 只测一个 member 的 lifetime/absolute-strength baseline，Kuti 2014 adds two negative-parity pairs in `103Rh`。
+- [[102rh]] / [[105rh]] / [[106rh]] / [[107rh]] - Rh isotope-chain controls/predictions；从 planar `102Rh` 到 `107Rh` theory-only low-`omega_crit` endpoint，实验与模型证据分层。
+- [[192tl]] / [[193tl]] / [[194tl]] / [[195tl]] / [[196tl]] / [[197tl]] / [[198tl]] - Guo 2022 constrained-RMF candidate-minimum chain；预测 pair counts 与既有实验带分层。
+- [[106ag]] - Bark 2024 二级重构的 DSAM/alignment configuration counterexample；Band 1 two-quasiparticle 与 Bands 2/3 four-quasiparticle，原始 Lieder 2014 尚待摄入。
+- [[199tl]] / [[200tl]] - 同一 Tl screening 中无合适三轴极小值的 model-specific null controls。
+- [[108ru]] / [[110ru]] / [[112ru]] - even-even Ru evolution；γ-soft unresolved control to soft chiral-vibration candidates with RPA-breakdown boundary。
+- [[104mo]] / [[106mo]] - even-even Mo soft-chiral-vibration candidates；separate observed close bands from TPSM configuration, connecting-E2 and component-geometry claims。
+- [[104ag]] - `N=57` odd-odd particle-hole nucleus；A/B candidate plus C/D/E/F single-particle and collective-mode coexistence。
+- [[133pr]] - N=74 odd-proton nucleus；`πh11/2` yrast lifetime and pre-crossing near-prolate shape-polarization control。
+- [[136nd]] - even-even `N=76` nucleus；同时保存 Petrache 2018 multiquasiparticle chiral candidates 与 Lv 2022 two-quasiproton wobbling test。
 - [[78br]] - A≈80 odd-odd nucleus；当前聚焦正/负宇称 MχD 候选与 octupole correlations/softness。
 - [[131xe]] - N=77 奇 A 核，当前聚焦 νh11/2 signature partners 与 wobbling 反证。
 - [[131ba]] - N=75 奇中子核，聚焦 `νg7/2[404]7/2+` 强耦合带。
@@ -85,8 +122,24 @@ updated: 2026-07-15
 
 ## Bands
 
+- [[74as-bands-1-2-chiral-doublet-candidate]] / [[74as-band-3-octupole-correlated-negative-parity]] - five-link positive pair and three-E1 opposite-parity correlation structure；no absolute strengths/stable deformation。
+- [[131ce-negative-parity-yrast-reference-sequence]] / [[131ce-positive-parity-reference-sequence]] - Li 2004 两条 opposite-parity DSAM reference sequences；保留 finite/limit semantics，不作为 chiral pair。
+- [[133pr-negative-parity-yrast-reference-sequence]] - Singh 2016 low-Ω `πh11/2` RDDS reference；singles/long-feeding and pre-crossing boundaries。
 - [[133ce-positive-parity-mchd-pair]] / [[133ce-negative-parity-mchd-pair]] - Ayangeakaa 2013 标签体系中的 Bands 2–3 与 5–6，保留 MχD candidate 和 lifetime gap。
 - [[78br-positive-parity-mchd-pair]] / [[78br-negative-parity-mchd-pair]] - Liu 2016 Bands 1–2 与 3–4；后者 configuration tentative。
+- [[136pm-chiral-twin-candidate-pair]] / [[138eu-chiral-twin-candidate-pair]] - Hecht 2001 yrast/new `ΔI=1` pairs；共同组态与 chirality 为作者/模型候选解释。
+- [[130cs-chiral-vibration-doublet-candidate]] / [[132la-chiral-vibration-doublet-candidate]] - Starosta 2001 的 nondegenerate soft-vibration candidates。
+- [[134pr-chiral-doublet-candidate-pair]] - Petrache Bands 1/2 到 Starosta 2001 central chiral-restored candidate 的 retrospective crosswalk。
+- [[140eu-bands-1-2-doublet-candidate]] / [[140eu-bands-3-4-doublet-candidate]] - Hecht 2003 negative-/positive-parity pairs；chirality 与 triaxial shape coexistence 均保持候选。
+- [[105ag-band-e-three-quasiparticle-reference]] / [[105ag-bands-d-g-chiral-doublet-candidate]] - intended configuration 的 null-search reference 与另一组 natural-parity candidate，二者不合并。
+- [[103rh-chiral-doublet-candidate]] / [[104rh-chiral-doublet-candidate]] - one-sided lifetime-constrained candidates；partner-band 电磁相同性尚未测量。
+- [[103rh-negative-parity-yrast-chiral-doublet]] / [[103rh-negative-parity-excited-chiral-doublet]] - Kuti 2014 Bands 3/4 与 6/5；同组态 MχD 为 CDFT/TAC-CDFT/PRM-supported candidate。
+- [[136nd-d5-chiral-doublet]] - Petrache 2018 中唯一有两带近似相同 experimental ratios 的 strongest even-even pair。
+- [[136nd-d1-chiral-doublet-candidate]] / [[136nd-d2-chiral-doublet-candidate]] / [[136nd-d3-chiral-doublet-candidate]] / [[136nd-d4-chiral-doublet-candidate]] - four weak MχD candidates；D3 alone has explicit 3D aplanar TAC example。
+- [[108ru-negative-parity-doublet-structures]] / [[110ru-chiral-vibration-doublet-candidate]] / [[112ru-chiral-vibration-doublet-candidate]] - even-even composite sequences，分离 unresolved γ-soft、planar-TAC vibration 与 crossing-instability cases。
+- [[104mo-bands-4-5-soft-chiral-vibration-candidate]] / [[106mo-bands-4-5-soft-chiral-vibration-candidate]] - Musangu 2021 Bands 4/5 pairs；约 `60` 与 `100-140 keV` splitting plus TPSM/missing-link boundaries。
+- [[104ag-bands-a-b-chiral-doublet-candidate]] / [[104ag-bands-d-e-electric-quadrupole-rotation]] / [[104ag-band-f-magnetic-rotation]] - candidate confidence conflict 与 electric/magnetic rotation controls 分层。
+- [[131ba-positive-parity-pseudospin-chiral-quartet]] / [[131ba-negative-parity-chiral-doublet-candidate]] - Guo 2020 D3-D6 same-parity four-band manifold 与 D7/D8 opposite-parity candidate；pairing、E1/octupole 与 geometry 分层。
 
 - [[131xe-nu-h11-2-favored-sequence]] - `131Xe` νh11/2 favored 负宇称基准序列。
 - [[131xe-negative-parity-yrare-sequence]] - 被提出为 unfavoured signature partner 的 yrare 序列。
@@ -107,6 +160,7 @@ updated: 2026-07-15
 - [[triaxial-shape-coexistence]] - 多个三轴形变/组态候选与实验带对应的模型—实验联合解释。
 - [[octupole-correlation]] / [[octupole-softness]] / [[octupole-deformation]] - 八极关联、软势能面与稳定八极形变的分层边界。
 - [[reflection-symmetry-breaking]] / [[chirality-parity-quartet-band]] - 内禀反射对称性与未观测 quartet future proposal。
+- [[pseudospin-chiral-quartet-bands]] - 同宇称四带中 pseudospin 与 chiral splittings 共同作用；与 chirality-parity quartet 明确区分。
 - [[direct-feeding]] - 与 side feeding 区分的离散 gamma feeding component；在 Ionescu 1981 的 feeding-aware population model 中是关键项。
 
 - [[triaxial-deformation]] - 三轴形状与更强结构解释的层级关系。
@@ -126,6 +180,9 @@ updated: 2026-07-15
 
 ## Experiments
 
+- [[ithembalabs-afrodite-74as-he4-58-62mev]] - `74Ge(4He,1p3n)74As` at `58.6/62.6 MeV`；AFRODITE+LEPS coincidence/ADO/polarization dataset。
+- [[ciae-hi13-131ce-f19-95mev]] - 95 MeV `116Sn(19F,p3n)131Ce`、11-HPGe γ-γ coincidence/DSAM lifetime 数据集。
+- [[iuac-gda-131ce-o16-rdds-dsam]] / [[iuac-gda-133pr-f19-rdds]] - Singh 2016 的 `131Ce` dual-run RDDS/DSAM 与 `133Pr` multiplicity-gated-singles plunger data sets。
 - [[atlas-gammasphere-131ce-s36-165mev]] - 165 MeV `100Mo(36S,5nγ)131Ce`、101-detector Gammasphere 数据集。
 - [[ithembalabs-afrodite-diamant-78br-c12-60-65mev]] - 60/65 MeV `70Zn(12C,p3n)78Br`、AFRODITE clovers、DIAMANT charged-particle tagging。
 - [[vecc-131xe-alpha-38mev]] - `130Te(4He,3nγ)131Xe`、38 MeV、INGA 数据集。
@@ -141,6 +198,21 @@ updated: 2026-07-15
 - [[atlas-gammasphere-187au-f19-105-115mev]] - Sensharma 2020 的 `187Au` 符合与 angular-distribution 数据。
 - [[hirfl-187au-o18-108mev]] - Guo 2022 的 `175Lu(18O,6n)187Au`、`R_ac` 与线偏振数据。
 - [[jurogam2-135nd-ar40-152mev]] - 152 MeV `100Mo(40Ar,5n)135Nd`、JUROGAM II coincidence/`R_DCO`/`R_ac`/polarization 数据集。
+- [[jyfl-jurogam2-136nd-ar40-152mev]] - same-beam `100Mo(40Ar,4n)136Nd`、`5.1×10^10` high-fold JUROGAM II partial doublet-scheme 数据集。
+- [[lnl-134pr-sn119-f19-87mev]] - 87 MeV `119Sn(19F,4n)134Pr` 的早期 LNL γ-γ coincidence 数据集。
+- [[lnl-gasp-134pr-pd110-si28-130mev]] - 130 MeV `110Pd(28Si,p3n)134Pr`、early GASP high-fold coincidence 与 DCO 数据集。
+- [[lnl-gasp-isis-pd110-si28-132mev]] - 132 MeV `110Pd(28Si,xnyα)`、GASP+ISIS 多通道 HD-band DSAM 数据集。
+- [[lnl-gasp-ii-plunger-pd110-si28-125mev]] - 125 MeV `110Pd(28Si,xny p)`、22-distance GASP-II coincidence-plunger/DDCM 数据集。
+- [[yale-yrast-ball-136pm-mg24-130-135mev]] - 130/135 MeV `116Sn(24Mg,p3n)136Pm`、YRAST Ball DCO/selected clover-polarization 数据集。
+- [[daresbury-eurogam-138eu-cl35-150mev]] - 150 MeV `106Cd(35Cl,2pn)138Eu`、Eurogam Phase I high-statistics reanalysis 数据集。
+- [[stony-brook-linac-130cs-b10-47mev]] / [[stony-brook-linac-132la-c13-64mev]] - Starosta 2001 的 47/64-MeV Stony Brook coincidence/angular-correlation data sets。
+- [[yale-yrast-ball-140eu-v51-205mev]] - 205 MeV `92Mo(51V,2pn)140Eu`、YRAST Ball coincidence/angular-distribution/DCO/polarization 数据集。
+- [[stony-brook-linac-105ag-b10-58-64mev]] - 58/64 MeV `100Mo(10B,5n)105Ag`、six-HPGe/BGO γ-γ coincidence 与 DCO 数据集。
+- [[atlas-gammasphere-rdds-103rh-104rh-zr96-330mev]] - 330 MeV inverse-kinematics `96Zr+11B`、Gammasphere+Cologne plunger/degrader DDCM 数据集。
+- [[lbnl-gammasphere-103rh-b11-40mev]] - 40 MeV `96Zr(11B,4n)103Rh`、Gammasphere high-fold coincidence/DCO 数据集。
+- [[gammasphere-cf252-fission-ru108-112]] - `62 μCi 252Cf`、`5.7×10^11` high-fold Gammasphere coincidences 与 angle-sorted correlations。
+- [[lbnl-gammasphere-cf252-fission-mo104-106]] - same-descriptor `252Cf` high-fold dataset 的 `104,106Mo` scheme/angular-correlation analysis；not counted as independent replication of the Ru lineage。
+- [[ciae-hi13-104ag-b11-50mev]] - 50 MeV `97Mo(11B,4n)104Ag`、13 suppressed-HPGe γ-γ/ADO 数据集。
 - [[atlas-gretina-152dy-ca48-191mev]] - Lauritsen 2025 Appendix B.1 的 `108Pd(48Ca,4n)152Dy` GRETINA/LaBr2 数据集。
 
 ## Models
@@ -181,6 +253,8 @@ updated: 2026-07-15
 
 ## Methods
 
+- [[recoil-distance-doppler-shift]] - RDDS/coincidence-plunger 的 DDCM `τ(x)`、feeding/deorientation control 与 finite-stopping boundary。
+- [[doppler-shift-attenuation-method]] - Doppler-broadened line-shape lifetimes、stopping-power/side-feeding systematics and limit semantics。
 - [[angular-distribution]] - 完整角分布与 ADO ratio 的阵列特定 multipolarity calibration；可与偏振联合使用。
 - [[gamma-gamma-coincidence]] - 建立级联与能级纲图。
 - [[angular-correlation]] - γ/particle-γ angular correlation 的 alignment、multipolarity 与 deorientation correction 入口。

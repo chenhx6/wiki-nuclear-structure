@@ -39,6 +39,8 @@ tags: [chirality, tunneling, symmetry-restoration]
 
 [[meng-2010-open-problems-nuclear-chirality]] 强调仍需要能同时描述 [[chiral-vibration]]、量子隧穿主导的 static chirality 及二者平滑演化的理论。近简并本身不足以唯一确定该区域。
 
+[[peng-chen-2022-chiral-rotation-rhodium-isotopes]] operationalizes a mean-field onset through finite `±phi` Routhian minima and a critical frequency. This labels an intrinsic aplanar solution, not restored laboratory doublet states: the calculation explicitly lacks tunnelling and side-band splitting. A higher/wider barrier is therefore only an inferred suppression of tunnelling.
+
 ## Our Current Position
 
 仅在模型角动量几何和核素特定实验 observables 共同支持时使用该术语，并保留有限隧穿边界。
@@ -47,7 +49,9 @@ tags: [chirality, tunneling, symmetry-restoration]
 
 - [[frauendorf-meng-1997-tilted-rotation-chirality]]
 - [[meng-2010-open-problems-nuclear-chirality]]
+- [[peng-chen-2022-chiral-rotation-rhodium-isotopes]]
 
 ## Evolution Log
 
 - 2026-07-13：建立有限隧穿与振动-静态演化边界。
+- 2026-08-11: added the 3D-TAC critical-frequency/aplanar-minimum definition and retained the missing-tunnelling boundary.

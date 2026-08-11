@@ -3,7 +3,7 @@ type: concept
 title: 手征—宇称四重带
 aliases: [chirality-parity quartet bands, chiral-parity quartet]
 created: 2026-07-13
-updated: 2026-07-13
+updated: 2026-08-11
 status: active
 review_status: unreviewed
 concept_type: predicted-band-multiplet
@@ -35,6 +35,10 @@ Liu 2016 将 `78Br` 中 MχD 与 octupole correlations 的联合解释视为 nuc
 
 `78Br` 不是 stable-octupole case；Liu 2016 没有把当前四条双带直接指认为一个已建立的 quartet。两对双带加 E1 links 提供未来搜索动机，但不自动完成 quartet assignment。
 
+[[guo-2020-pseudospin-chiral-quartet-131ba]] 的 D3-D6 是同宇称 [[pseudospin-chiral-quartet-bands]]，不是本页所指的 chirality-parity quartet。其相反宇称 D7/D8 通过 E1 连接 D3-D6，形成更大的六带候选体系，但论文没有把四条特定的相反宇称带整理成一个 chirality-parity quartet。
+
+[[wang-2020-recent-progress-multiple-chiral-doublets]] 明确记录 2020 年截止时 CPQ 尚未被实验观测，并把同时具有三轴与八极 PES minima 的 Se/Ba/Ra 偶偶核及其邻核列为 future-search cores。这是模型搜索地图，不是 CPQ band observation。
+
 ## Related Nuclei and Bands
 
 - [[78br]] 提供 MχD 与 octupole correlations 共存的 future-search motivation。
@@ -46,8 +50,11 @@ Liu 2016 将 `78Br` 中 MχD 与 octupole correlations 的联合解释视为 nuc
 ## Sources
 
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]]
+- [[wang-2020-recent-progress-multiple-chiral-doublets]]
 
 ## Evolution Log
 
 - 2026-07-13：建立“预测/未来搜索，不是本文观测”的边界。
 - 2026-07-13：按用户审核澄清 `78Br` 展示的是 MχD+octupole correlations 共存及单核 quartet 的未来观测可能性，而非当前 quartet assignment。
+- 2026-08-11：加入与 `131Ba` pseudospin-chiral quartet 的术语区分；不把六带体系机械压成 chirality-parity quartet。
+- 2026-08-11：加入 Wang 2020 “CPQ not yet observed” cutoff 与 PES candidate-core perspective。

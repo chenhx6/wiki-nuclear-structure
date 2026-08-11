@@ -36,6 +36,8 @@ tags: [multipolarity, electric-magnetic-character]
 
 不对称量符号依实验定义，必须引用原文校准。
 
+[[bark-2024-investigations-nuclear-chirality-ithembalabs]] 的 Eq.(5) 把 `A_p` 分子与分母都印成同一个 minus-form expression，代数上会恒等于 1，并与紧随其后的 `A_p=Q(Eγ)P(θ)` 不相容。该公式作为 source error 隔离，不据此修改本页定义；AFRODITE-specific sign/efficiency convention 应回到原始 calibration source。
+
 不要把所有“asymmetry”默认理解为同一种 in-beam clover Compton polarimetry。[[rusev-2009-multipole-mixing-ratios-11b]] 测量的是 linearly polarized photon beam 激发后，发射 gamma rays 在水平/垂直平面的 azimuthal asymmetry；它与 clover Compton scattering asymmetry 共享“偏振相关”这一物理思想，但实验量和系统项不同。
 
 [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]] treats tracking-array linear polarization as a continuous-angle response-function problem. For in-beam single-gamma polarization, its Eq.35 expands the angular-distribution expression with a `P_pm cos(2 zeta)` term and includes mixed transitions. Its `152Dy` 432-keV example shows why angular distribution, DCO and linear polarization may all be needed to resolve `M1/E2` versus `E1/M2` ambiguity.
@@ -66,6 +68,7 @@ The special `|P|=1` cases in Jones 2002 require particular alignment and pure tr
 - [[rusev-2009-multipole-mixing-ratios-11b]]
 - [[lauritsen-2025-gamma-angular-formalism-tracking-arrays]]
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]]
+- [[bark-2024-investigations-nuclear-chirality-ithembalabs]]
 
 ## Evolution Log
 
@@ -74,3 +77,4 @@ The special `|P|=1` cases in Jones 2002 require particular alignment and pure tr
 - 2026-07-04：加入 Guo 2022 的联合 `P-R_ac` 选解与偏振误差低估风险。
 - 2026-07-12：加入 Rusev 2009 的 polarized-photon asymmetry 技术与双解边界。
 - 2026-07-13：加入 Liu 2016 AFRODITE ADO+polarization linking-transition 案例。
+- 2026-08-11：记录 Bark 2024 Eq.(5) 的 algebraic source error；禁止传播为 polarimeter formula。

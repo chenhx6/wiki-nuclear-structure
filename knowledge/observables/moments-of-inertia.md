@@ -22,6 +22,8 @@ tags: [rotation, backbending, band-crossing, alignment]
 
 由同一能带中已定自旋的相邻 γ 跃迁能量构造转动频率，再按原文约定计算 \(J^{(1)}\) 与 \(J^{(2)}\)。[[de-voigt-dudek-szymanski-1983-high-spin-phenomena]] 在 pp.974-975 给出连续形式和 aligned-angular-momentum 参照。
 
+For a `Delta I=1` doublet sequence, [[peng-chen-2022-chiral-rotation-rhodium-isotopes]] uses `J^(1)=2I/[E_gamma(I+1→I)+E_gamma(I→I-1)]`, `J^(2)=2/[E_gamma(I+1→I)-E_gamma(I-1→I-2)]`, and `hbar omega_exp` equal to half the first denominator. This source-specific finite-difference convention must not be mixed with a `Delta I=2` formula.
+
 ## Diagnostic Use
 
 用于识别转动响应、[[backbending]]、band crossing、[[angular-momentum-alignment]] 与可能的配对变化。
@@ -36,11 +38,15 @@ tags: [rotation, backbending, band-crossing, alignment]
 
 [[domscheit-1999-triaxial-superdeformation-163lu]] 的 Fig.4 给出具体限制：SD1 低频 `J^(2)` 的强波动可由同自旋宇称 SD-ND 态混合造成；校正约 5 keV 的能级排斥后曲线更平滑。SD2 的 `J^(1)` 还依赖最低自旋 `39/2` 的暂定假设。两带相近的转动惯量支持相近形变，但不能单独确定三轴性或 wobbling。
 
+Peng and Chen 2022 provides another failure mode: its mean-field `J^(2)` curves are smooth while imported Rh data oscillate, tentatively attributed to normal-deformed-band mixing. Similar yrast/side `J^(1)` and convergence of calculated `J^(1),J^(2)` above `omega_crit` are supportive rotational-response patterns, not unique chirality tests.
+
 ## Sources
 
 - [[de-voigt-dudek-szymanski-1983-high-spin-phenomena]]
 - [[domscheit-1999-triaxial-superdeformation-163lu]]
+- [[peng-chen-2022-chiral-rotation-rhodium-isotopes]]
 
 ## Evolution Log
 
 - 2026-07-03：加入 `163Lu` 的带混合校正和自旋假设依赖案例。
+- 2026-08-11: added the `Delta I=1` Rh finite-difference convention and smooth-theory/oscillatory-data mixing boundary.

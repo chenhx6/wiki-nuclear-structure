@@ -3,7 +3,7 @@ type: concept
 title: 八极形变
 aliases: [octupole deformation, stable octupole deformation]
 created: 2026-07-13
-updated: 2026-07-13
+updated: 2026-08-11
 status: active
 review_status: unreviewed
 concept_type: nuclear-shape
@@ -29,24 +29,27 @@ tags: [octupole, reflection-asymmetry, deformation]
 
 ## Supporting Evidence
 
-本轮没有来源把 `78Br` 建立为 stable octupole-deformed nucleus。
+当前来源没有把 `74As` 或 `78Br` 建立为 stable octupole-deformed nucleus。
 
 ## Counter-evidence and Competing Interpretations
 
-Liu 2016 的 `78Br` ratios/`delta E` 明显不同于 `224Th`，PES 为 [[octupole-softness]]。
+Liu 2016 的 `78Br` ratios/`delta E` 明显不同于 `224Th`，PES 为 [[octupole-softness]]。Xiao 2022 的 `74As` relative `B(E1)/B(E2)`/`δE` 同样接近 `78Br` 而偏离 `224Th`，且没有 lifetime/absolute E1 evidence。
 
 ## Related Nuclei and Bands
 
 - [[78br]] 仅作为 correlations/softness 的边界案例。
+- [[74as]] 仅作为 correlations 的边界案例。
 
 ## Our Current Position
 
-不得将 `78Br` 的八极关联改写为 stable octupole deformation。
+不得将 `74As/78Br` 的八极关联改写为 stable octupole deformation。
 
 ## Sources
 
 - [[liu-2016-octupole-correlations-multiple-chiral-doublet-bands-78br]]
+- [[xiao-2022-chirality-octupole-correlations-74as]]
 
 ## Evolution Log
 
 - 2026-07-13：建立 stable-deformation 排除边界。
+- 2026-08-11：加入 `74As` 对 `78Br/224Th` 的 comparison；relative ratios 不升级为 static deformation。

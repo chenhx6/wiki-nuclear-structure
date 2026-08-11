@@ -140,20 +140,20 @@ Wiki 项目级 `wiki_l3` 允许维护整个 `E:\imp\wiki`，外部仅可读和�
 
 本节只说明使用接口，不记录用户的具体学位论文题目、具体实验反应道或具体核素作为个人经历。
 
-### WIP ingest → review → final
+### Rolling WIP ingest → Agent self-audit → final
 
 摄入主体完成且检查通过后，默认流程是：
 
-1. Codex 显式暂存本轮摄入文件，创建本地 `WIP ingest: <paper> for user review`；
-2. WIP 不 push，也不代表页面或 claims 已人工复核；
-3. 用户继续通过 Codex 内置 Markdown 渲染查看文件并给出审核报告；
-4. Codex 只按报告修改明确项目，并推荐 review commit message；
-5. Codex 使用 `git commit --amend` 把 WIP 转成落实本轮审核意见的 review/final commit，避免临时 commits 累积；
-6. commit 通过检查后，只有用户允许才 push。
+1. 长任务或中断时，Codex 显式暂存本轮摄入文件，创建/更新单一 rolling `WIP ingest:`；
+2. Codex 逐篇回查全文、locator、claim kind、证据层、竞争解释和 P0/P1；WIP 不 push，也不代表页面或 claims 已人工复核；
+3. 摄入完整、检查通过且没有未隔离 hard P0 时，Codex 使用 `git commit --amend` 把 rolling WIP 转为 final ingest commit，不创建第二个 final commit；
+4. Agent 自审不写 Human Review Record/history，不把页面升级为 `human-reviewed`，也不自行清除 `needs_review`；
+5. 用户已经为普通 ingest 建立持续 push 授权；除非当前指令明确要求不 push，Codex 在 H3、fresh fetch、remote ancestry 和精确 refspec dry-run 通过后使用同一 refspec 非 force push；
+6. 认证、远端漂移、检查失败或未隔离 hard P0 均 safe suspend。后续问答、研究和论文证据采用时，再按具体 claim 由用户审核证据陈述。
 
 同一分支最多保留一个 active WIP。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若要禁止所有本地 commit，需明确写“禁止本地 WIP commit”。Safe suspend 遇到大量 Markdown diff 时也优先采用本地 WIP checkpoint，减少 Codex、Git、编辑器或文件监听的持续 CPU 占用；checkpoint 绝不自动 push。
 
-默认推荐完成当前文献摄入的人工审核、amend finalization 后再开始下一篇，这能减少共享 nucleus、concept、project、synthesis 和 index 的未审核重叠；这是推荐流程，不是并行工作的硬性禁令。若暂时没时间审核，可以保留多个 pending WIP，但新任务第一次写入前必须读取相关 queue 条目并比较预期文件：无重叠可建立独立 WIP；同一审核范围应继续并 amend 原 WIP；依赖上游未 final 内容时建立 dependent WIP 并记录依赖；两个独立任务需要同一共享文件时，先 final 上游或暂缓该文件。不得静默创建两个独立且修改同一文件的 WIP。
+默认按主题连续逐篇摄入，在自然批次完成 Agent 自审后统一 final/push；不再逐篇等待人工审核。多个 pending WIP 仍需在新任务第一次写入前比较预期文件：无重叠可独立；同一范围继续并 amend 原 WIP；依赖上游未 final 内容时记录 dependent WIP；两个独立任务需要同一共享文件时，先 final 上游或暂缓该文件。不得静默创建两个独立且修改同一文件的 WIP。
 
 任何写任务第一次写入前建立 dirty baseline，区分本轮授权、明确承接 WIP、受保护的任务前修改和 unresolved overlap。后续发现新的必要关联文件时，只在该文件第一次写入前执行 file-entry gate；不要求每次编辑后重跑全量脚本。跨会话或 safe suspend 恢复时重新建立 baseline，并用 handoff、queue、分支/commit 和实际 diff 恢复归属。
 

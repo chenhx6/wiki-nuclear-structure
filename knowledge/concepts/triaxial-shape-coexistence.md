@@ -3,7 +3,7 @@ type: concept
 title: 三轴形状共存
 aliases: [triaxial shape coexistence]
 created: 2026-07-13
-updated: 2026-07-13
+updated: 2026-08-11
 status: active
 review_status: unreviewed
 concept_type: nuclear-shape-coexistence
@@ -31,6 +31,8 @@ tags: [triaxiality, shape-coexistence, multiple-chiral-doublet]
 
 [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] 的 RMF 为 `133Ce` states a/b 给出不同三轴形变与组态，TPRM 对相应双带作比较；论文据此解释为 triaxial shape coexistence。
 
+[[guo-2022-possible-chiral-multiple-chiral-thallium-isotopes]] 的 PK1 constrained RMF 在 `192-198Tl` 中得到多个局域三轴极小值，并把它们称为 triaxial shape coexistence 的例子；`199,200Tl` 没有合适的三轴极小值。这里的 coexistence 是单一 mean-field landscape 的模型结果，尚未由 band-to-minimum mapping 或绝对 E2 observables 独立约束。
+
 ## Counter-evidence and Competing Interpretations
 
 单一模型的多个极小、拟合能量或近简并带不能排除 gamma softness、带混合和不同组态但相近形变等解释。
@@ -38,16 +40,19 @@ tags: [triaxiality, shape-coexistence, multiple-chiral-doublet]
 ## Related Nuclei and Bands
 
 - [[133ce]]；[[133ce-positive-parity-mchd-pair]]、[[133ce-negative-parity-mchd-pair]]。
+- [[192tl]]、[[193tl]]、[[194tl]]、[[195tl]]、[[196tl]]、[[197tl]]、[[198tl]]；[[199tl]] 与 [[200tl]] 为模型 null controls。
 
 ## Our Current Position
 
-保留为 author/model-supported interpretation；缺 `133Ce` 本文候选带的 lifetime/absolute transition-probability 独立约束。
+保留为 author/model-supported interpretation；`133Ce` 缺本文候选带的 lifetime/absolute transition-probability 独立约束，Tl 链还缺预测极小值到逐条实验带的映射与转动量子计算。
 
 ## Sources
 
 - [[meng-2010-open-problems-nuclear-chirality]]
 - [[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]]
+- [[guo-2022-possible-chiral-multiple-chiral-thallium-isotopes]]
 
 ## Evolution Log
 
 - 2026-07-13：由 Meng 2010 理论背景与 Ayangeakaa 2013 实验—模型链建立。
+- 2026-08-11：加入 Guo 2022 `192-200Tl` 多极小值/无极小值系统学，并保留单一 mean-field 与未建立 band mapping 的边界。

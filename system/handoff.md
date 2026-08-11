@@ -8,28 +8,28 @@ updated: 2026-08-11
 ## Active handoff
 
 Current active task:
-Resume the rolling nuclear-chirality corpus ingest as commit 2 after the Zotero duplicate-key gate is cleared.
+The full 23-paper nuclear-chirality corpus ingest is complete and Agent-self-reviewed. The rolling WIP has been amended to the final corpus commit; the authorized two-commit remote publication preflight is now in progress.
 
 Current branch / local commit:
-Branch `codex/weekly-self-test-20260810-131ce-band5-configuration`; current branch HEAD is local final `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity` and is the intended parent of the corpus branch.
+Branch `codex/nuclear-chirality-corpus`; current branch HEAD is final `Ingest 23-paper nuclear chirality corpus`, based on the local Band 5 final parent `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity`.
 
 Last task status:
-Commit 1 is locally finalized. AW13-12/AW13-13 retain `e⊗AE → e⊗AEFG` and `f⊗AE → e⊗AEFG` exactly as printed, and the Agent's `f⊗AEFG` reconstruction is withdrawn. QMD refresh, tests, Wiki lint, H2 and post-commit H3 passed. No push was attempted.
+Papers 1-23 are complete. Bark et al. 2024 was fully read and all 32 PDF pages were visually checked. Its source, a lightweight secondary `106Ag` counterexample page and updates to `193,194,198Tl`, chiral/MχD/model/method pages and the corpus project were added. The final REFLECT separates evidence layers, nulls/counterexamples, realistic fingerprint limits, band-manifold/pair mapping and provenance independence. Bark Table 1 prints `82Se`, reconciling Wang 2023's `82Ge` conflict within the related-review lineage; Bark Eq.(5) is algebraically misprinted and quarantined. QMD update/embed/status completed with 357 indexed documents and 2390 vectors; targeted Bark/Wang searches succeeded. Wiki lint passed with zero errors, 69 warnings and 576 review infos. No remote action was attempted.
 
 Unfinished items:
-The user-managed Zotero export still contains duplicate aliases `h.amro_2024_EvidenceChiral` and `frauendorf_2024_Firstevidencea`; this hard gate blocks the first corpus knowledge write. After re-export removes them, create the corpus branch from current HEAD, ingest Petrache 1996 first, and amend one rolling `WIP ingest:` commit after each paper. Do not push until the corpus commit is complete and finalized.
+Run H3 for the reconciled final commit. Retain the local Band-5 final as commit 1 and the corpus final as commit 2; run fresh fetch, remote ancestry, exact-refspec dry-run and non-force push to `origin/main`. Safe suspend on authentication, remote drift or check failure.
 
 P0/P1 review focus:
-P0: none identified. P1: AW13-12/AW13-13 resolved by user review; the repeated high-spin label remains an unresolved source boundary, not a corrected mapping.
+P0: none identified for papers 1-23 after Agent self-audit. P1 is not a publication blocker; it remains the future claim-specific verification queue for Q&A/research use, prioritizing evidence/provenance independence; strict ideal versus realistic QTR fingerprints; `106Ag` two-/four-quasiparticle counterexample; `193,194Tl` three-observed/four-calculated non-unique pairing; Wang `82Ge` versus Bark `82Se` related-review reconciliation; Bark polarization Eq.(5) source error; and the un-ingested original/Bayesian-DSAM dependencies.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Corpus ingestion must not begin until `h.amro_2024_EvidenceChiral` and `frauendorf_2024_Firstevidencea` disappear from the Zotero export. Do not publish commit 1 alone.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged at SHA-256 `037EA133DE204270AD36961CA66B3AB36C0913B7D472B45F8FD013C8293BE5BE`. Preserve exactly the two intended local commits and do not publish either alone. Agent self-audit must not be recorded as Human review, must not promote pages to `human-reviewed`, and must not clear `needs_review`. Safe suspend if execution margin or checks become unsafe.
 
 Next prompt / continuation phrase:
-`wiki-inbox.bib 已重新导出并去重；继续核手征 corpus ingest，从 Petrache 1996 开始`
+`继续核手征 23-paper corpus finalization：保持两提交边界，从 H3 / fresh fetch / exact-refspec dry-run 恢复；异常即 safe suspend`
 
 Recent user decisions:
-The user rejected the `f⊗AEFG` reconstruction, authorized the two-commit local plan, and deferred the only push attempt until both commits are complete.
+The user required continuous ingestion through all 23 papers, retained the single rolling WIP and two-commit publication plan, and clarified the durable review boundary: ordinary ingest is read, self-audited and pushed by the Agent; the user reviews claim/evidence statements when they are later used in Q&A or research. Agent self-audit is not Human review. Authentication, remote drift or check failure requires safe suspension.
 
 ## Previous active handoff (superseded 2026-08-07)
 

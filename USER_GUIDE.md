@@ -128,11 +128,11 @@ SORT file.name ASC
 
 ### 本地 WIP 检查点
 
-普通文献摄入完成并通过检查后，默认创建一个仅保存在本地的 `WIP ingest: ... for user review` commit；project、synthesis 或跨来源综合等待审核时使用 `WIP review: ... for user review`。二者都不 push，只是减少未提交 diff、降低 Codex/Git/文件监听 CPU 负担的审核检查点，不表示科学内容已经人工复核；你仍可使用 Codex 内置 Markdown 渲染查看文件并提交审核意见。
+普通文献摄入像研究生自行读文献：Codex 逐篇完成全文回查、locator/claim kind、证据分层、竞争解释与 P0/P1 自审。长任务可保留一个本地 rolling `WIP ingest:`；完成且没有未隔离 hard P0 时 amend 为 final，并按仓库的持续 ingest 授权完成 H3、fresh fetch、精确 refspec dry-run 和非 force push。Agent 自审或 final/push 都不等于人工审核，不会自动把页面升级为 `human-reviewed` 或清除 `needs_review`。独立 project、synthesis、跨来源研究结论等待审核时仍使用 `WIP review: ... for user review`。
 
 审核后，Codex 根据报告修改明确项目，并使用 `git commit --amend` 把对应 WIP 转为落实本轮审核意见的 review commit / final commit；不得保留独立 WIP 后再增加 final commit。你指定 review commit message 时原样使用；未指定时由 Codex 推荐与本轮内容直接相关的 message，并在最终报告中说明。只有你允许时才 push。同一分支不累积多个 active WIP。仓库存在对应 WIP、你已完成审核并要求 final commit/push 时，这本身就是仓库流程对 amend 的明确授权。旧式“不 commit/push，等待审核”表示不 final commit、不 push，但允许本地 WIP；若确实不希望任何本地 commit，请明确写“禁止本地 WIP commit”。
 
-推荐完成当前文献摄入的人工审核和 finalization 后再开始下一篇，以减少 nucleus、concept、project、synthesis、index 等共享页的未审核重叠。暂时无法审核时仍可保留多个 pending WIP：无文件重叠可建立独立 WIP；同一范围应继续并 amend 原 WIP；依赖未 final 内容时建立 dependent WIP；共享文件无法安全隔离时暂缓修改。不得静默创建两个独立且同时修改同一文件的 WIP。Codex 会把等待审核、未 push checkpoint 或 push 状态 uncertain 的短恢复索引记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动。
+多篇文献仍逐篇摄入并优先在同一主题 rolling WIP 中连续完成，以减少 nucleus、concept、project、synthesis、index 等共享页重叠；不再逐篇等待人工审核。存在多个 pending WIP 时仍需按文件 overlap 处理：无重叠可独立；同一范围继续并 amend 原 WIP；依赖未 final 内容时记录 dependent WIP；共享文件无法安全隔离时暂缓修改。Codex 会把中断、未隔离 hard P0、未 push checkpoint 或 push 状态 uncertain 的短恢复索引记录到 `system/wip-queue.md`，Active handoff 只保留最近一次活动。
 
 写任务第一次修改文件前、创建 WIP/final commit 前及 push 前，Codex 会按 `check.md` 运行仅限 LF/CRLF 行尾格式差异的清理入口。用户也可手动运行：
 
@@ -143,7 +143,7 @@ powershell -ExecutionPolicy Bypass -File system/scripts/clean_knowledge_eol_dirt
 
 脚本只清理未暂存且可证明为 LF/CRLF-only 的 tracked `knowledge/**/*.md`；普通行尾空格、Markdown 双空格和 Tab 都视为 substantive 并保留。脚本不触碰 staged 内容、不处理其它目录，并保留 substantive/mixed 状态。exit code `1` 只表示仍需由 Codex 按授权范围、入口 baseline 和 WIP 归属分类；完全属于当前授权任务的 substantive diff 不会因此被无条件阻断。
 
-`system/review-history.md` 单独记录已经明确结束的人工审核轮次。两者可以同时保留同一任务：history 记录“这一轮已经审完”，queue 记录“这项工作还要继续处理什么”。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”。未审核 WIP 不应 push 到 `main`。
+`system/review-history.md` 单独记录已经明确结束的人工审核轮次；Agent 的 ingest 自审不会写入这里。两者可以同时保留同一任务：history 记录“这一轮人类审核已经审完”，queue 记录“这项工作还要继续处理什么”。之后可以说“列出 pending WIP”“继续审核 Sigma-over-I alignment sources”“列出最近完成的 reviews”或“哪些 review 已完成但还没写入论文？”。WIP 不应 push 到 `main`；Agent 自审通过的 final ingest 可以按授权流程发布，但仍保持未发生人工审核的状态标记。
 
 审核完成时可以直接写简短结论，例如：
 

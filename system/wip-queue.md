@@ -11,24 +11,24 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 ## Active entries
 
 ### Weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity
-- status: user review completed; local final created; publication deferred as commit 1 of the two-commit plan
+- status: user review completed; local final is commit 1 of the authorized two-commit publication lineage
 - branch: `codex/weekly-self-test-20260810-131ce-band5-configuration`
-- commit: current branch HEAD final `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity`
+- commit: local final `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity`, now the parent of the corpus final
 - files: Alwaleedi 2013 source; `131Ce` nucleus; collective-mode project; Guo 2024 source hash metadata; weekly report; handoff/log/review-history/queue
 - review needed: none for AW13-12/AW13-13; user retained the literal table mappings and withdrew the `f⊗AEFG` reconstruction
 - overview/QMD: no overview trigger; QMD update/embed/status completed
-- next action: retain this local final as the parent of the rolling corpus WIP; do not push it separately
+- next action: publish only together with the corpus final after exact-refspec preflight; do not push it separately
 - risks: repeated high-spin `e⊗AEFG` lacks independent explanation; protected BibTeX must remain unstaged
 
 ### Nuclear-chirality corpus ingest: 23-paper sequence
-- status: safe-suspended before first knowledge write; Zotero duplicate-key hard gate remains open
-- branch: not yet created; must branch from the Band 5 local final above
-- commit: none yet; planned rolling subject `WIP ingest: nuclear chirality corpus for user review`
-- files: none written for this corpus yet
-- review needed: source-level scientific review after the rolling corpus ingest reaches a stable checkpoint
-- overview/QMD: deferred until corpus pages exist; refresh at batch checkpoints and finalization
-- next action: user re-exports `raw/zotero/wiki-inbox.bib` without `h.amro_2024_EvidenceChiral` and `frauendorf_2024_Firstevidencea`; then start with Petrache 1996
-- risks: never edit or stage the user-managed BibTeX; preserve one active rolling WIP; do not push until both local commits are complete
+- status: all 23 papers through Bark 2024 are completed; final thematic REFLECT, QMD refresh and Agent self-audit are complete; local final created and authorized two-commit publication preflight is in progress
+- branch: `codex/nuclear-chirality-corpus`
+- commit: current branch HEAD final `Ingest 23-paper nuclear chirality corpus`
+- files: twenty-three source pages; selective nuclei including new secondary `106Ag` and updated `193,194,198Tl`; thirty-four corpus candidate/reference-band pages; twenty corpus experiment pages; RDDS/DDCM and DSAM methods, chiral/static/MχD/shape-coexistence/octupole/quartet concepts, TAC/CDFT/TPRM and moments-of-inertia pages; nuclear-chirality project with N=75 and final-corpus REFLECT; index/overview; handoff/log/queue
+- review needed: no publication-blocking hard P0; P1 remains as claim-specific verification priority for later Q&A/research use, including provenance independence, realistic fingerprint limits, `106Ag` configuration counterexample, Tl non-unique pairing, `82Ge/82Se` review-lineage correction, Bark Eq.(5) error and un-ingested original-method dependencies
+- overview/QMD: final snapshot added; QMD update/embed/status completed at 357 documents/2390 vectors and targeted Bark/Wang searches passed
+- next action: preserve this as commit 2 after the Band-5 final, then run H3, fresh fetch, ancestry, exact-refspec dry-run and non-force push
+- risks: never edit or stage the user-managed BibTeX; do not promote Agent self-audit to Human review or clear `needs_review`; do not push either local commit alone
 
 ## Legacy completed entries
 

@@ -7,6 +7,25 @@ updated: 2026-07-28
 
 # Knowledge Base Health Dashboard
 
+## Current Snapshot: 2026-08-11 Nuclear-chirality 23-paper corpus WIP
+
+The ordered corpus from Petrache 1996 through Bark 2024 is fully ingested in one local rolling `WIP ingest:` commit. Each of the 23 target PDFs has a source page with citation key, raw hash, reading coverage, locator-level claims, analytical reconstruction and Human review triage. The corpus remains unreviewed working knowledge: completing ingest does not promote candidate chirality, MχD, octupole/pseudospin coupling or model geometry to confirmed claims.
+
+| metric | current value | note |
+|---|---:|---|
+| source pages | 94 | Added 23 ordered corpus source pages; reviews/censuses remain secondary evidence and are not counted as replications. |
+| nucleus / band / experiment pages | 56 / 58 / 36 | Selective structure pages only; review tables did not trigger mechanical page generation. |
+| concept / method / model / observable pages | 41 / 19 / 15 / 19 | Added RDDS/DDCM and DSAM coverage and updated chirality/MχD/octupole/TPRM boundaries. |
+| project / synthesis pages | 9 / 7 | Final 23-paper REFLECT is persisted inside the existing nuclear-chirality project; no duplicate synthesis page. |
+| source pages unreviewed | 34 | The 23 corpus sources remain source-level unreviewed unless an earlier source already had an independent review state. |
+| claim-level `needs_review: true` | 576 | Includes corpus source/AR/project/REFLECT claims plus pre-existing review queues. |
+| claim missing locator / kind | 0 / 0 | Current lint result. |
+| raw hash coverage | 94/94 | All source raw hashes match; protected `wiki-inbox.bib` remains user-managed and unstaged. |
+| automated lint | 0 errors / 69 warnings / 576 info | Warnings are existing reaction/element/orphan notices plus the protected raw BibTeX dirty signal. |
+| corpus review boundary | local WIP; user review pending | Priority review: provenance independence, realistic fingerprint limits, `106Ag` counterexample, `193/194Tl` pairing ambiguity, source-table/formula errors and all source P1 triage. |
+
+The final evidence architecture separates stable experimental band/link identities, partner-resolved absolute strengths, model geometry, counterexamples/nulls and source independence. Wang 2023's charge-inconsistent `82Ge` rows are reconciled to `82Se` only at the related-review level by Bark 2024; Bark's own polarization Eq.(5) is algebraically inconsistent and quarantined. QMD was refreshed after this snapshot so the full 23-paper WIP is locally searchable.
+
 ## Current Snapshot: 2026-07-28 Continuous Research-Learning v2 candidate
 
 This snapshot records the locally validated v2 architecture and the completed-provisional `131Ce` L3/L4 pilot. Li 2004 claims LI04-1–4 passed claim-level human visual review; the source page, LI04-5, band mapping and collective-mode conclusions remain unreviewed or provisional as recorded. Remote main/tag publication is not claimed while Git push authentication is blocked.

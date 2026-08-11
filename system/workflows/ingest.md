@@ -190,25 +190,27 @@ A source outside the current main research anchor may still justify lightweight 
 - QMD refresh 不是普通单篇摄入固定收尾成本；可只运行轻量状态检查，或写明 `QMD refresh deferred`、原因和建议补跑时机。批量摄入、多篇文献完成、用户明确要求或大型 project/synthesis 依赖最新检索时，再运行 `qmd update` / `qmd embed`。
 - 检查是否推进 `knowledge/questions.md` 中的开放问题；不为形式完整而新增重复问题。
 - 向 `system/log.md` 追加简短 ingest 记录，更新 `system/handoff.md` 的 Active handoff；用户不需要每次手动要求 handoff/log 收尾。
-- 摄入结束但用户未审核时，创建本地 WIP ingest commit、不 push，并在 `system/wip-queue.md` 写入或更新 pending entry；queue 只保留继续审核所需的最新 branch/commit/next action，overview/QMD 可按规则 deferred 到 review-finalization。
+- 普通摄入结束后由 Agent 完成全文、locator、claim kind、证据层、竞争解释和 P0/P1 自审；不存在未隔离 hard P0 且检查通过时，可把 rolling WIP amend 为 final，并按用户已建立的普通 ingest 持续授权进入 H3 与非 force push。Agent 自审不改变页面级 `unreviewed` 或 claim-level `needs_review`，也不写入 Human Review Record/history。
+- 摄入尚未完成、存在未隔离 hard P0、检查失败、远端异常，或用户明确要求先审核时，创建/保留本地 WIP ingest commit、不 push，并在 `system/wip-queue.md` 写入或更新 pending entry；queue 只保留继续处理所需的最新 branch/commit/next action，overview/QMD 可按规则 deferred。
 - handoff/log 不保存长复盘；Active handoff 记录任务状态、commit/push 状态、未完成事项、P0/P1 审核重点、风险和下一步。
 - 执行 `check.md` 中与本次摄入相关的项目。
 - 最终复盘采用 compact final recap：Result status、commit/push、关键文件、Human review triage、checks、next action。
 - 最终复盘必须按 `system/workflows/ingest-strategies.md` 输出 Human review triage。所有 P0 都必须逐项可读、可审核，可分批展示但不得聚合隐藏、降级或遗漏；P1 可分组展示但仍须呈现实际判断、证据、Agent inference 和审核目的。多篇摄入必须按每篇分别列 P0/P1。
 
-### 7.1 Ingest completion
+### 7.1 Ingest completion and Agent self-audit
 
 摄入主体完成后：
 
 1. 运行 `git status --short`、`git diff --stat`、`git diff --check`；
 2. 运行 `python system/scripts/wiki_lint.py --fail-on error`；
-3. 检查通过且用户未明确禁止任何本地 commit 时，显式暂存本轮摄入相关文件，不使用 `git add .`；
-4. 创建本地 `WIP ingest: <paper short name> for user review` commit；
-5. 不 push；
-6. 更新 `system/wip-queue.md` 的 pending entry，列出短 task name、branch、commit、review needed、overview/QMD deferred 和 next action；若后续 amend/rebase 改变 WIP commit hash，只更新到最新 commit；
-7. 最终复盘列出 WIP hash、message、未 push、待审核文件、待审核 claim ID 和 Human review triage。
+3. 回查每篇全文与 source-specific triage，确认核心 claim 有可用 locator、事实/作者解释/模型/Agent synthesis 分层明确、竞争解释与反证未被抹平；P0 必须逐项处置，P1 保留为未来证据采用时的复核优先级；
+4. Agent 自审通过且不存在未隔离 hard P0 时，显式暂存本轮摄入相关文件，不使用 `git add .`；若 HEAD 是本任务 rolling WIP，则 amend 为与实际范围相符的 final commit，否则直接创建 final commit；
+5. 不把 Agent 自审记为 Human review，不写 `system/review-history.md`，不将 `review_status` 升为 `human-reviewed`，不自行把 `needs_review: true` 改为 `false`；
+6. 若用户未明确要求不 push，则当前仓库对普通 ingest 的持续发布授权生效：完成 H3、fresh fetch、remote ancestry、精确 refspec dry-run，再以同一 refspec 非 force push；认证、远端漂移或检查失败立即 safe suspend；
+7. 尚未完成、存在未隔离 hard P0、检查失败或用户明确要求先审核时，创建/保留 `WIP ingest: <paper short name> for user review`，更新 pending queue，不 push；
+8. 最终复盘列出 final/WIP hash、message、push 状态、关键文件、Agent self-audit 结果、Human review triage 与未来 claim 复核重点。
 
-WIP ingest 只表示等待用户审核的本地检查点，不表示科学内容已人工复核。若用户明确禁止本地 WIP，保留工作树 diff，并在 diff 较大时提示可能产生 Codex、Git 或文件监听的持续 CPU 负担。
+WIP ingest 是长任务、中断、hard P0 或用户明确审核请求下的本地检查点，不表示科学内容已人工复核。普通 ingest 的 final/push 也只表示 Agent 已完成摄入自审和工程检查，不表示页面或 claims 已经人类复核。若用户明确禁止本地 WIP，保留工作树 diff，并在 diff 较大时提示可能产生 Codex、Git 或文件监听的持续 CPU 负担。
 
 ### 7.2 Review finalization
 

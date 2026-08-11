@@ -181,7 +181,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 用户数据解释、competing interpretation、innovation candidate 和 paper-level candidate 被列为 P0/P1。
 - [ ] 多篇逐篇摄入没有粗略批处理；每篇文献分别列 source-level / claim-level 审核重点和 P0/P1。
 - [ ] Project/synthesis 任务列出主结论段落、evidence matrix 和跨来源解释的审核优先级。
-- [ ] P0 未审核前不建议 final amend 或 push，默认保留 WIP 等待用户确认。
+- [ ] 普通 ingest 的 P0 已由 Agent 逐项回证据处置；未隔离 hard P0 会阻止 final/push，P1 与已隔离/降级项目保留为未来问答、研究或论文证据采用时的核验优先级，不机械等待用户逐篇审核。
 
 ### 中英文术语归一化
 
@@ -207,15 +207,15 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 
 ### WIP ingest/review 与 safe suspend checkpoint
 
-- [ ] 文献摄入完成后，若用户未明确禁止本地 commit，HEAD 存在且仅存在一个 active `WIP ingest:` commit。
-- [ ] WIP commit 只包含本轮摄入相关文件，message 以 `WIP ingest:` 开头。
+- [ ] 文献摄入长任务、中断、未隔离 hard P0 或用户明确要求先审核时，HEAD 存在且仅存在一个 active `WIP ingest:` commit；正常完成且 Agent 自审通过时已 amend/创建 final commit。
+- [ ] WIP/final commit 只包含本轮摄入及直接必要同步文件；WIP message 以 `WIP ingest:` 开头，final message 与实际范围相符。
 - [ ] Project、synthesis 或跨来源综合完成并等待人工审核时，HEAD 存在且仅存在一个 active `WIP review:` commit。
-- [ ] WIP commit 只保存在本地，没有 push。
+- [ ] WIP commit 只保存在本地，没有 push；普通 ingest final 只有在 H3、fresh fetch、ancestry 和精确 refspec dry-run 通过后才使用同一 refspec 非 force push。
 - [ ] 已判断当前是否存在 pending WIP，以及本轮任务是否需要更新 `system/wip-queue.md`。
 - [ ] 若存在 pending WIP、等待审核、safe-suspended task 或未 push checkpoint，`system/wip-queue.md` 已新增或更新短 entry。
 - [ ] Pending WIP queue 只记录恢复索引，没有写入 raw 内容、source claim 正文或长复盘。
 - [ ] Pending WIP queue 只保留继续审核所需的最新 branch / commit / next action，没有频繁追踪每个临时 commit/push 状态。
-- [ ] WIP 结束时 overview/QMD deferred 状态已在 queue 和最终复盘中说明；未把未审核 WIP push 到 `main`。
+- [ ] WIP 结束时 overview/QMD deferred 状态已在 queue 和最终复盘中说明；未把 WIP push 到 `main`，且没有把 Agent 自审后的 final/push 伪装成人类审核。
 - [ ] 本轮是否存在用户已经完成的实质性人工审核，以及是否可以无歧义地判断本轮审核已经结束。
 - [ ] Review history 触发判断没有机械依赖固定关键词；存在歧义时未擅自创建 Review history entry。
 - [ ] Review history 由审核完成语义触发，而不是由 commit、push、merge、overview 或 QMD 触发。
@@ -234,7 +234,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 存在 unresolved P0、locator gaps、审核意见无法唯一映射或 WIP 归属不明时，未强行 finalization，已 safe suspend 或报告阻塞。
 - [ ] framework setup 或普通维护没有回填旧 review history，除非用户明确要求历史审计。
 - [ ] HEAD 已是 active WIP ingest/review/suspend 时，没有开始下一篇摄入、下一项综合或创建第二个 WIP。
-- [ ] 用户审核后通过 `git commit --amend` 把对应 WIP 转为 final commit，没有保留独立 WIP 或累积额外 review/final commits。
+- [ ] 普通 ingest 自审完成或用户审核完成后，均通过 `git commit --amend` 把对应 rolling WIP 转为 final commit，没有保留独立 WIP 或累积额外 review/final commits；只有真实 human-review completion event 才写 review history 或改变用户明确确认范围内的 review 状态。
 - [ ] 用户指定本轮提交 message 时已原样使用；未指定时由 Codex 根据实际修改推荐直接相关的 message，并在最终报告中说明。
 - [ ] 对应 active WIP + 用户审核完成 + final commit/push 指令已按仓库内明确 amend 授权处理，没有错误套用通用“不主动 amend”约束。
 - [ ] WIP/final commit 均未包含 `.obsidian/graph.json`、`raw/zotero/wiki-inbox.bib`、未经本轮授权的 raw PDF、论文、数据、图片、`PLAN.md` 或无关文件；获准进入 `raw/papers/gpt/**` / `raw/zotero/gpt.bib` 的文件已逐项核验并显式暂存。
@@ -245,7 +245,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 旧式“不 commit/push，等待审核”已解释为“不 final commit / 不 push，但允许本地 WIP”。
 - [ ] 只有用户明确禁止任何本地 commit 时，才不创建 WIP checkpoint，并已提示大 diff 的 CPU 风险。
 - [ ] HEAD 已是当前任务相关 WIP 时使用 amend 更新；归属不明时已停止并询问用户。
-- [ ] WIP ingest/review 最终复盘列出 hash、message、未 push、待审核文件和 claim ID/段落。
+- [ ] Ingest/review 最终复盘列出 hash、message、push 状态、关键文件、Agent self-audit/Human review 边界，以及后续需按 claim 回证据核验的 ID/段落。
 
 ## H. Git write-entry / commit / push preflight
 
@@ -268,7 +268,7 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 创建或 amend WIP、或创建 final commit 前，已重新运行清理脚本、`git status -sb`、`git status --short`、`git diff --stat`，并以入口 baseline 核对本轮变化。
 - [ ] staged-only knowledge 文件被脚本保留且没有被误判为清理失败；substantive、mixed 或 unsafe 状态已按授权范围和 WIP 归属处理。
 - [ ] pending WIP 的预期文件已检查 overlap：无重叠可独立；同一范围继续并 amend；依赖关系写入 queue；共享文件无法隔离时先 final 上游或暂缓，没有静默创建两个独立冲突 WIP。
-- [ ] 科学内容、摄入、project/synthesis 和 claim-review 默认创建本地 WIP、不 push；方案已确认且检查通过的治理、框架、脚本和说明任务可直接 final commit。
+- [ ] 普通摄入按 rolling WIP（如需要）→ Agent 自审 → final → 已授权 push；独立 project/synthesis、跨来源研究结论和 claim-review 默认创建本地 WIP、不 push；方案已确认且检查通过的治理、框架、脚本和说明任务可直接 final commit。
 - [ ] 没有使用 `git add .` 或其它宽泛 stage；只显式 stage 本轮实际修改且用户授权的文件。
 - [ ] commit 前已运行 `git diff --cached --name-only`、`git diff --cached --stat` 和 `git diff --cached --check`，完整 index 不含无关 `knowledge/`、`.obsidian/`、未授权 `raw/` 或历史 staged 文件。
 - [ ] 提交前若 handoff/queue/report 需要描述尚未发生的 commit，只使用 `commit target` / `checkpoint commit message`；没有把 `planned`、`will create` 或 `expected checkpoint` 留作最终实际状态。

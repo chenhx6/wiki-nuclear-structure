@@ -885,3 +885,146 @@ updated: 2026-07-15
 - AW13-12/AW13-13 and directly propagated nucleus/project/report wording are the only scientific review scope; unrelated claims remain unchanged.
 - The weekly WIP was amended to local final `Finalize weekly self-test 2026-08-10: 131Ce Band 5 configuration continuity` as commit 1 of the two-commit plan. Guo 2024's current local PDF identity was reverified and its source hash metadata synchronized without modifying raw evidence or scientific claims.
 - Publication remains deferred. Corpus write-entry is safe-suspended until the user-managed Zotero export removes the two duplicate alias keys.
+
+## [2026-08-11] ingest | Petrache 1996 `134Pr` rotational bands
+
+- The user re-exported the protected BibTeX; both deprecated duplicate keys disappeared while the canonical Guo/Frauendorf keys remained unique.
+- Deep-read and visually checked the 21-page Petrache 1996 paper; created the `134Pr` source/nucleus and two experiment entries, and added a bounded historical-precursor relation to the nuclear-chirality project.
+- Preserved the paper's explicit unresolved Band 1/Band 2 alternatives and did not back-project nuclear chirality into the 1996 author interpretation. The corpus remains one rolling local WIP and is not pushed.
+
+## [2026-08-11] ingest | Petrache 1998 `134,135Nd/131Ce` HD-band lifetimes
+
+- Re-read and visually checked all five pages; expanded the old `131Ce`-only card into the full shared-systematics DSAM comparison of five bands in three nuclei.
+- Added `134Nd` and the common GASP+ISIS experiment entry, updated `135Nd/131Ce`, and corrected the old CHFB label to the source's paired cranked-Strutinsky calculation.
+- Preserved the `134Nd` Band 3 fit ambiguity, the `135Nd Q_sf` Table/prose conflict and the absence of any band crosswalk to later chiral partners. The paper is deformation control context, not direct chirality evidence.
+
+## [2026-08-11] ingest | Klemme 1999 `134Nd` and neighbor lifetimes
+
+- Deep-read and visually checked all ten pages; captured 12 `134Nd` and 12 neighboring-state coincidence-RDDS lifetimes, the DDCM diagnostic/error chain and the g.s.b./γ/S1/S2 strength comparison.
+- Created the GASP-II plunger experiment and reusable RDDS/DDCM method pages; crosswalked the `135Nd [514]9/2` low-spin sequence to later D1 as high-confidence provisional.
+- Kept `134Pr 9+` level-only and separated measured lifetimes/`Q_t` from O(6), TRS, rigid-triaxial and ASYR interpretations. No direct chirality evidence was assigned.
+
+## [2026-08-11] ingest | Hecht 2001 `136Pm/138Eu` chiral-twin candidates
+
+- Deep-read and visually checked all four pages, including both partial level schemes, the `138Eu` spectrum, `136Pm` polarization asymmetry, experimental ratios and 3D TAC table.
+- Created two nucleus, two experiment and two stable candidate-pair entries; connected the direct candidate evidence to the nuclear-chirality project without promoting it to model-independent proof.
+- Preserved the stronger-title versus “good candidates” conclusion, systematics-dependent bandhead spins/common-configuration inference, and the boundary that 3D TAC cannot calculate the observed quantum doublet mixing. The user authorized continuation through all 23 corpus targets; no remote action occurred.
+
+## [2026-08-11] ingest | Starosta 2001 N=75 chiral vibrations
+
+- Deep-read and visually checked all four pages; added `130Cs/132La` experiments, nuclei and candidate pairs, plus a retrospective `134Pr` Bands 1/2 crosswalk without rewriting Petrache 1996.
+- Preserved the charge-inconsistent printed `116Sn(24Mg,4n)136Pm` channel, the detector-description conflict and the non-independent Starosta/Hecht evidence lineage instead of silently normalizing metadata or double-counting support.
+- Completed a project-level 1996-2001 N=75 thematic REFLECT: linked bands plus electromagnetic assignments and aplanar TAC are the reusable advance, while “chiral vibration” remains an uncalculated dynamical interpretation of band displacement. No remote action occurred.
+
+## [2026-08-11] ingest | Hecht 2003 `140Eu` chirality/shape coexistence
+
+- Deep-read and visually checked all 14 pages; created the `140Eu` source/nucleus/YRAST experiment and stable Bands 1/2 and Bands 3/4 candidate-pair pages.
+- Preserved the title question mark and the source's unresolved chirality-versus-`γ≈±25°` shape-coexistence alternatives; common configurations, missing signature partners and the Band-5 20.5-keV link remain explicitly indirect/unobserved.
+- Recorded the Compton-asymmetry convention opposite to Hecht 2001 and the lifetime/absolute-strength discriminator. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Li 2004 `131Ce` lifetimes
+
+- Re-read and visually checked all three pages; expanded the existing source while retaining the user's accepted LI04-1–4 Table-1 transcriptions and their claim-level review state.
+- Added the CIAE HI-13 experiment and separate negative-/positive-parity lifetime reference pages; preserved finite lifetimes, `19/2−` lower limit and feeding-uncorrected `31/2−/25/2+` effective upper limits.
+- Classified the source as normal-deformed collectivity/shape-driving control rather than a same-parity partner or chirality measurement. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Timár 2007 `105Ag` chiral search
+
+- Deep-read and visually checked all 11 pages; created the `105Ag` source/nucleus/Stony-Brook experiment, corrected Band-E reference and D/G candidate-pair pages.
+- Separated the intended Band-E partner null at ≈0.1 population sensitivity from the distinct natural-parity D/G candidate with ≈70-keV separation, smooth `S(I)` and similar staggered branching ratios.
+- Preserved corrected `+2ℏ` Band-E spins, absent dedicated D/G TAC/PRM, tentative high-spin assignments, configuration-mixing alternative and assumed-`Q0` octupole exclusion. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Suzuki 2008 `103,104Rh` lifetimes
+
+- Deep-read and visually checked all five pages; created the `103,104Rh` source/nuclei, inverse-kinematics Gammasphere-plunger experiment and two stable candidate-pair pages, and extended the RDDS method.
+- Captured the one-member lifetimes/absolute strengths and the result that weak ratio staggering is driven by `B(E2)` while `B(M1)` decreases with spin.
+- Preserved the missing partner-band lifetimes, pure-M1/prior-branching dependencies, recoupling-versus-shape ambiguity and the paper's explicit future decision rule. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Luo 2009 even-even Ru chirality evolution
+
+- Deep-read and visually checked all six pages; created the `108,110,112Ru` source/nuclei, `252Cf` Gammasphere experiment and three stable composite-structure pages, and extended the chiral-vibration concept/project.
+- Kept `108Ru` as an unresolved γ-soft control and `110,112Ru` as soft zero-/one-phonon candidates with similar `S(I)` and branching-derived ratios.
+- Preserved pure-M1 assumptions, planar `φ=0°` TAC/no static chirality, the unobserved calculated shape change and the `112Ru` RPA-breakdown/large-amplitude requirement. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Wang 2013 `104Ag` high-spin structure
+
+- Deep-read and visually checked all nine pages; created the `104Ag` source/nucleus/CIAE experiment and separate A/B candidate, D/E electric-rotation and F magnetic-rotation pages.
+- Preserved the revised A-F scheme, A/B fingerprint chain and coexistence of single-particle, electric-quadrupole and magnetic rotation.
+- Kept the local “true partners” phrase subordinate to the candidate conclusion, and recorded missing lifetime/polarization/dedicated model, provisional `N=57` border and systematics-dependent configurations. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Kuti 2014 same-configuration MχD in `103Rh`
+
+- Deep-read and visually checked all five pages; created the source/LBNL experiment and two negative-parity pair pages, and updated `103Rh`, its positive-pair page, the MχD concept and chirality project.
+- Reserved the same-configuration MχD claim for negative Bands 3/4 and 6/5; kept Suzuki's positive-pair lifetime member separate because the band-number crosswalk is not explicit.
+- Preserved the parity assumption, nonabsolute-ratio boundary, deferred TAC detail, ≈200-keV PRM energy excess and missed Bands 5/6 alignment jump. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Singh 2016 `131Ce/133Pr` lifetime control
+
+- Re-read and visually checked all eleven pages; preserved the prior reviewed `131Ce` claims and completed the omitted `133Pr` half with a nucleus/band, two IUAC experiment pages and a DSAM method page.
+- Retained the independent Li/Singh lineage and `131Ce` 0.64σ null trend; persisted exact `133Pr` lifetimes/limits and the positive-parity feeding constraint.
+- Classified the high-Ω neutron versus low-Ω proton comparison as TRS-assisted shape polarization, not direct chirality; kept singles-only statistics, roughly 1-ns side feeding and pre-crossing validity explicit. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Petrache 2018 even-even chirality in `136Nd`
+
+- Deep-read and visually checked the repository cover plus all six journal pages; created the source/JUROGAM-II experiment and five stable pair identities, and updated `136Nd`, MχD and the chirality project.
+- Separated the D5/D5-chiral partner-ratio evidence from four weak candidates without partner ratios; retained D3 as the only explicit 3D planar-to-aplanar TAC example.
+- Preserved deferred angular-correlation details, unobserved weak dipoles, model-space configuration inference, backbend/ratio failures and undocumented MQ-PRM summary wording. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Xiong-Wang 2019 chiral-doublet data tables
+
+- Deep-read and visually checked all 33 pages, including the full 47-nucleus level/ratio table and the smaller absolute-`B(M1)`/`B(E2)` table; created a census source and updated MχD/project/index boundaries.
+- Retained 59 reported doublets, 47 nuclei and eight reported/suggested MχD nuclei as a historical literature census rather than confirmations, and persisted the table-label/precision conventions.
+- Preserved heterogeneous ratio provenance, sparse lifetime-based strengths, named crossings/backbends and other fingerprint exceptions; no nucleus/band/experiment pages were mechanically created from the secondary compilation. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Guo 2020 pseudospin-chiral quartet in `131Ba`
+
+- Deep-read and visually checked all six pages; created the source, a pseudospin-chiral concept, the D3-D6 positive four-band page and D7/D8 negative-pair page, and updated `131Ba`, GALILEO, concepts, project and index.
+- Preserved D3-D6 as one stable experimental manifold because energies/links do not uniquely select two pairs; separated the RAT-PRM pseudospin/chiral decomposition from direct observables.
+- Recorded direct E1 octupole-correlation evidence without stable-deformation promotion, plus assumed weak-line δ, no lifetimes, tentative β3, D5 feeding mismatch and deferred angular-momentum geometry. Wiki lint passed with zero errors after schema/index repair; no remote action occurred.
+
+## [2026-08-11] ingest | Wang 2020 review of multiple chiral doublets
+
+- Deep-read and visually checked all nine pages; created the review source and updated the MχD, chirality-parity-quartet, pseudospin-chiral-quartet, project and index pages.
+- Preserved the observed-candidate census and predicted-minimum map as secondary review products, and recorded the printed `136Nd` `(5n)` reaction as inconsistent with mass balance and the original `(4n)` experiment.
+- Kept ideal `gamma=90°` PRM fingerprints, the approximate two-band interaction estimate and proposed chiral-wobbler/quartet extensions model-conditional or prospective. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Musangu 2021 `104,106Mo` soft chiral-vibration candidates
+
+- Deep-read and visually checked all sixteen PDF pages; created the source, two nuclei, two stable Bands-4/5 candidate pages and a Mo-specific shared-lineage Gammasphere analysis page.
+- Separated observed close bands/angular correlations from extended-TPSM configuration, predicted connecting E2 strengths and `104Mo` component geometry; retained the nonabsolute-ratio/lifetime gaps.
+- Preserved unobserved connecting links, `106Mo` upper-limit tension, fixed-deformation discrepancies, unpublished generalized-TPSM detail and the `gamma=100°` axis-order workaround. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Peng-Chen 2022 `102-107Rh` chiral-rotation evolution
+
+- Deep-read and visually checked all eight pages; created the theory source and lightweight `102/105/106/107Rh` pages, and updated `103/104Rh`, TAC/CDFT, static/chiral-vibration, moments, project and index.
+- Preserved finite `103-107Rh` mean-field critical frequencies separately from the unconverged planar `102Rh >0.75-MeV` suggestion and recorded the `(gd)`-neutron component mechanism.
+- Kept imported experimental data secondary, exposed no-pairing `102/104Rh` discrepancies, and retained the inability of mean-field TAC to calculate partner bands, tunnelling or splitting. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Guo 2022 `192-200Tl` chiral/MχD screening
+
+- Deep-read and visually checked all ten PDF pages; created the theory source and lightweight `192-200Tl` pages, and updated MχD, triaxial shape coexistence, CDFT, project and index.
+- Preserved the `192-198Tl` favorable-minimum map and `199,200Tl` null controls as constrained-RMF results, not rotational doublets or handed geometries.
+- Kept Fig.4 evidence secondary, `(fp)` unresolved, pairing omitted and `195Tl` five-quasiparticle states outside the model space. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Xiao 2022 `74As` chirality and octupole correlations
+
+- Deep-read and visually checked all nine PDF pages; created the source, `74As`, two band pages and the iThemba-AFRODITE experiment, and updated chirality/octupole/TPRM concepts, project and index.
+- Preserved Bands 1/2 as a five-link, `≈400-keV`, fitted-TPRM candidate with total-I aplanarity but neutron three-axis mixing; no lifetimes or absolute strengths were measured.
+- Separated the three Band-3→1 E1 links from the additional low-lying E1 and retained the `1ℏ` spin revision, `≈11.8-keV` gap, tentative Band-3 orbit and correlation-versus-stable-deformation boundary. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Wang 2023 experimental nuclear-chirality studies in China
+
+- Deep-read and visually checked all 17 PDF pages; created a topical-review source and updated DSAM, nuclear chirality, octupole correlation, the corpus project and index.
+- Kept the 23-nucleus/three-region census as a secondary original-source router and preserved the `106Ag` absolute-strength counterexample, sparse partner-lifetime coverage and correlated-DSAM-uncertainty warning.
+- Quarantined the charge-inconsistent `82Ge` targets printed/extracted for the `82Br/81Kr` rows and retained the Br octupole/chirality trend as a reflection-symmetric-model, cross-source hypothesis rather than causal fact. Wiki lint passed with zero errors; no remote action occurred.
+
+## [2026-08-11] ingest | Bark 2024 iThemba LABS nuclear-chirality review and corpus closure
+
+- Deep-read and visually checked all 32 PDF pages; created the review source and lightweight secondary `106Ag` page, and updated `193,194,198Tl`, chirality/MχD/TPRM/DSAM/polarization pages, project, index and overview.
+- Persisted the restricted-versus-realistic QTR fingerprint boundary, `106Ag` two-/four-quasiparticle counterexample and `193,194Tl` three-observed/four-calculated pairing ambiguity; repeated `74As/78Br` evidence was not counted independently.
+- Reconciled Wang 2023's charge-inconsistent `82Ge` rows to Bark's `82Se` at the related-review level, quarantined Bark Eq.(5)'s algebraic error, and completed a six-claim final thematic REFLECT. QMD refreshed to 357 documents/2390 vectors; lint passed with zero errors. All 23 target papers are ingested; no remote action occurred.
+
+## [2026-08-11] governance-finalization | ordinary ingest self-review and publication boundary clarified
+
+- User clarified that ordinary literature ingest is completed like a graduate student's own reading: the Agent performs full-text/locator/evidence-layer/P0-P1 self-audit and publishes without waiting for per-paper human review. Agent self-audit does not create Human Review history, promote `review_status`, or clear `needs_review`; claim/evidence statements are reviewed later when used in Q&A or research.
+- The completed 23-paper nuclear-chirality rolling WIP has no unresolved hard P0 and was amended to current branch HEAD final `Ingest 23-paper nuclear chirality corpus`, preserving the Band-5 final as commit 1 and corpus final as commit 2 before exact-refspec publication preflight.
