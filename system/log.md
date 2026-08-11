@@ -1034,3 +1034,8 @@ updated: 2026-07-15
 - Added runtime token user/group SID reporting and SID-normalized token-matching versus nonmatching explicit DENY diagnostics; real root/`.git` probes and protected reads remain the only capability gate.
 - Confirmed the current `.git` stale DENY entries are nonmatching and do not block schema-2 exit `0`; added a temporary ACL regression test and synchronized push/network/authentication failure routing without changing ACLs, project config, Skills, credentials or protected BibTeX.
 - Governance final commit and non-force publication remain pending H2/H3 reconciliation.
+
+## [2026-08-11] governance | schema-3 weekly automation state-drift repair
+
+- Replaced the persistent `wiki-inbox.bib` hash gate with a per-run schema-3 baseline and same-run stability checks; independent Zotero updates now establish a fresh baseline. The two stale `.git` guardian DENY ACEs were removed by the user outside Codex and are being rechecked as diagnostics only.
+- Bounded weekly self-test scope to at most two important active problems, with no fixed literature count, finite relevant batches, isotope/isotone comparison, deferred-issue recording and nonblocking L4 readiness reports. Governance finalization and non-force publication remain pending H2/H3.

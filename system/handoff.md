@@ -8,28 +8,28 @@ updated: 2026-08-11
 ## Active handoff
 
 Current active task:
-Wiki push-DENY minimal governance hardening is in progress on the dedicated repair branch. The reviewed Band-5 weekly self-test and 23-paper corpus are already published; this task only changes the schema-2 gate, failure classification, and related governance text.
+Repair Wiki automation state drift and rebuild the bounded weekly self-test automation. The reviewed Band-5 weekly self-test and 23-paper corpus are already published; this task changes only governance, preflight semantics, and automation instructions.
 
 Current branch / local commit:
-Branch `codex/wiki-push-deny-hardening`, based on published commit `eda271b` (`Ingest 23-paper nuclear chirality corpus`). Commit target: `Harden Wiki push preflight against stale sandbox DENY`.
+Branch `codex/wiki-governance-clean`; current local final HEAD subject is `Repair Wiki automation state and BibTeX baseline` (parent `d98975a`, exact current hash belongs only in the task receipt).
 
 Last task status:
-The preflight script now records runtime user/group SIDs, classifies explicit DENY entries as token-matching or nonmatching diagnostics, and keeps real write probes/protected reads authoritative. Governance text and a temporary nonmatching-DENY test are being added; no ACL, project config, Skill, raw file, credential or global setting is changed.
+The external user-run ACL repair removed the two known stale DENY ACEs from `E:\imp\wiki\.git`; a read-only check now reports zero explicit DENY and the exact ACL backup remains until successful H3 publication. The schema-3 preflight and bounded weekly self-test rules are included in the current local final commit. Unit tests, lint, QMD, H2 cleaning, explicit staging and cached audits passed; no ACL, project config, Skill, PLAN, raw file or credential was changed.
 
 Unfinished items:
-Run the full unit/lint/diff and staged audits, create the final governance commit, then run H3 with a fresh preflight before exact-refspec dry-run and non-force push. After publication, the user should fully exit and cold-start Codex for the read-only acceptance preflight/dry-run.
+Run H3 with the run-local baseline before exact-refspec dry-run and non-force push, fast-forward `E:\imp\wiki` without touching the protected BibTeX, then recreate automation ID `wiki` through the Codex automation function. Delete the ACL backup only after remote verification and confirm the stale DENY entries remain absent.
 
 P0/P1 review focus:
-P0: none for the already published corpus. P1: confirm that this governance change preserves exit-code compatibility, does not treat nonmatching DENY as a gate, and distinguishes network/authentication errors from a real `.git` Access denied probe.
+P0: none for the already published corpus. P1: confirm schema-3 exit semantics, same-run BibTeX stability, no protected-file staging, no status drift, no more than two active research issues, and correct L4 nonblocking behavior.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged at SHA-256 `037EA133DE204270AD36961CA66B3AB36C0913B7D472B45F8FD013C8293BE5BE`. Do not edit project config, repository Skills, PLAN, ACLs, credentials or host automation. Never auto-run `/remove:d`; safe-suspend only when a real `.git` write probe reports Access denied or H3 finds authentication, remote drift or another blocking failure.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged; this run's baseline is established by schema 3 and must not become a durable configuration hash. Do not edit project config, repository Skills, PLAN, ACLs, credentials or host automation memory. Never auto-run `/remove:d`; safe-suspend only when a real `.git` write probe reports Access denied or H3 finds authentication, remote drift or another blocking failure. The temporary `.governance-worktree` is agent-created and must be removed only after successful push/fast-forward.
 
 Next prompt / continuation phrase:
-`继续 Wiki push-DENY hardening：从单元测试、H2 staged 审计和 H3 fresh fetch 恢复；真实 .git Access denied 或远端漂移即 safe suspend`
+`继续 Wiki automation governance：从 H2 staged 审计和 H3 schema-3 fresh fetch 恢复；真实 .git Access denied、远端漂移或 automation API 失败即 safe suspend`
 
 Recent user decisions:
-The user selected minimal governance: retain `wiki_l3` and the elevated sandbox, do not reset ACLs or rebuild the host, and let schema-2 write probes/protected reads—not DENY count—decide capability. The current BibTeX hash is explicitly confirmed as `037EA133DE204270AD36961CA66B3AB36C0913B7D472B45F8FD013C8293BE5BE`; final publication is authorized as a non-force push after H3.
+The user authorized the governance repair and non-force publication, confirmed the external precise ACL cleanup, chose a run-local BibTeX baseline instead of a persistent SHA-256, limited each weekly run to two active important problems with no fixed literature count, requested isotope/isotone comparison and L3/L4 expansion within bounds, and selected GPT-5.6-Codex with interface reasoning label Extra high for the replacement Monday 19:20 Asia/Shanghai automation. The automation itself must never push.
 
 ## Previous active handoff (superseded 2026-08-07)
 

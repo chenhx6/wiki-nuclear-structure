@@ -6,7 +6,11 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$ExpectedProfile,
 
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $false)]
+    [ValidatePattern('^[0-9A-Fa-f]{64}$')]
+    [string]$BaselineBibHash,
+
+    [Parameter(Mandatory = $false)]
     [ValidatePattern('^[0-9A-Fa-f]{64}$')]
     [string]$ProtectedBibHash
 )
@@ -14,7 +18,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $result = [ordered]@{
-    schema_version = 2
+    schema_version = 3
     ok = $false
     root = $Root
     cwd = $null
@@ -29,8 +33,10 @@ $result = [ordered]@{
     warnings = @()
     protected_bib = [ordered]@{
         path = 'raw/zotero/wiki-inbox.bib'
-        expected_sha256 = $ProtectedBibHash.ToUpperInvariant()
+        baseline_sha256 = if ([string]::IsNullOrWhiteSpace($BaselineBibHash)) { $null } else { $BaselineBibHash.ToUpperInvariant() }
         actual_sha256 = $null
+        baseline_source = if ([string]::IsNullOrWhiteSpace($BaselineBibHash)) { 'run_start' } else { 'supplied_run_baseline' }
+        baseline_status = 'pending'
         ok = $false
     }
     write_probes = @()
@@ -46,6 +52,13 @@ $result = [ordered]@{
         acl_diagnostics_only = $true
     }
     error = $null
+}
+
+if (-not [string]::IsNullOrWhiteSpace($ProtectedBibHash)) {
+    $result.warnings += [ordered]@{
+        code = 'legacy_expected_hash_ignored'
+        message = 'ProtectedBibHash is deprecated and does not block this run; use the run-local baseline returned by schema 3'
+    }
 }
 
 $exitCode = 1
@@ -220,14 +233,22 @@ try {
         $bibPath = Join-Path $resolvedRoot 'raw\zotero\wiki-inbox.bib'
         $actualHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $bibPath -ErrorAction Stop).Hash.ToUpperInvariant()
         $result.protected_bib.actual_sha256 = $actualHash
-        $result.protected_bib.ok = [string]::Equals(
-            $actualHash,
-            $result.protected_bib.expected_sha256,
-            [StringComparison]::OrdinalIgnoreCase
-        )
+
+        if ([string]::IsNullOrWhiteSpace($BaselineBibHash)) {
+            $result.protected_bib.baseline_sha256 = $actualHash
+            $result.protected_bib.baseline_status = 'created'
+            $result.protected_bib.ok = $true
+        } else {
+            $result.protected_bib.baseline_status = if ([string]::Equals(
+                $actualHash,
+                $result.protected_bib.baseline_sha256,
+                [StringComparison]::OrdinalIgnoreCase
+            )) { 'matched' } else { 'mismatch' }
+            $result.protected_bib.ok = $result.protected_bib.baseline_status -eq 'matched'
+        }
 
         if (-not $result.protected_bib.ok) {
-            Add-ErrorRecord 'protected_hash_mismatch' "protected BibTeX hash does not match the expected value"
+            Add-ErrorRecord 'protected_hash_changed_since_baseline' "protected BibTeX hash changed from the run-local baseline"
         } else {
             $writeTargets = @(
                 $resolvedRoot,
@@ -353,6 +374,24 @@ try {
                         Add-ErrorRecord 'protected_read_failed' "protected sentinel '$($target.sentinel)' is not readable: $readError"
                         break
                     }
+                }
+            }
+
+            if (-not $cleanupFailed -and -not $gateFailed) {
+                $endHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $bibPath -ErrorAction Stop).Hash.ToUpperInvariant()
+                $result.protected_bib.actual_sha256 = $endHash
+                if (-not [string]::Equals(
+                    $endHash,
+                    $result.protected_bib.baseline_sha256,
+                    [StringComparison]::OrdinalIgnoreCase
+                )) {
+                    $result.protected_bib.baseline_status = 'changed_during_preflight'
+                    $result.protected_bib.ok = $false
+                    $gateFailed = $true
+                    Add-ErrorRecord 'protected_file_changed_during_preflight' 'protected BibTeX changed while the preflight was running'
+                } else {
+                    $result.protected_bib.baseline_status = 'stable'
+                    $result.protected_bib.ok = $true
                 }
             }
 

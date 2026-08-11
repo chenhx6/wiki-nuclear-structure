@@ -140,19 +140,25 @@ L4 必须同时包含：
 
 ### 目标与动态边界
 
-自测用于校正知识、检查跨页一致性/证据独立性、发现过强表述和遗漏反证，并主动形成研究问题。高价值问题可自然进入 L3；发现 L4 candidate 时执行手动启动关口。
+自测用于校正知识、检查跨页一致性/证据独立性、发现过强表述和遗漏反证，并主动形成研究问题。每次最多选择两个重要问题进入主动研究；问题必须至少满足一个硬条件（关键事实/解释存在实质来源冲突、缺失原始证据可能改变结论或 human-review、分析不可复现且影响推断、同位素/同中子素比较可区分竞争解释，或新高质量证据可能显著限制现有结论）。措辞、格式、别名和低影响元数据不得升级为 L3/L4。
 
-不预设题目数、检索数、全文数或 L3 深度。继续、暂停或升级由问题重要性、证据充分度、预期信息增益、资源消耗、权限边界和实质进展决定，避免机械浅尝和无价值无限扩张。
+文献总量不设固定上限，但每批必须是去重、题名/DOI 明确且直接服务于两个问题之一的有限清单；在批次间按独立证据、关键 locator、竞争解释和信息增益重新评估。证据饱和、信息增益下降、验证/时间余量不足、需要用户获取全文或超出两个问题时收敛或建立 WIP。未入选的重要问题写入报告 `Deferred important issues`，记录页面、证据缺口、建议路径及下次周测续研/用户主动开启。已开始并改动文件的任务才进入 WIP。
+
+核素问题原则上比较至少一个适用同位素和一个同中子素；物理上不适用或没有可靠资料时说明原因，不机械创建页面。L3 可按 Nature-first 路由检索、合法获取、核验 locator、摄入 `raw/papers/gpt/**` 和 `raw/zotero/gpt.bib`；关键数据/方法只在补充信息中时可获取 SI。`raw/zotero/wiki-inbox.bib` 始终只读、不得暂存。无法获得全文时记录 DOI、访问路线和用户所需动作，不循环登录或把 HTML 当 PDF。
+
+L4 只生成 readiness audit，不假定用户已有实验数据。检查 Wiki 已有文献、能级纲图、ADO、线偏振、分析产物及 NNDC 等公共数据，输出来源、可复现程度、缺失 observable/locator 和 `ready`/`partial`/`not-ready` 到 `outputs/l4/<issue>-<date>/report.md`。`partial`/`not-ready` 只结束该问题本轮扩展，不停用周测。继续、暂停或升级仍由重要性、证据充分度、信息增益、资源、权限和实质进展决定，避免机械浅尝和无价值无限扩张。
 
 ### Git 安全门
 
-每次运行先检查 Git/远端、dirty baseline、WIP queue、protected `wiki-inbox.bib` 哈希和文件 overlap：
+每次运行先检查 Git/远端、dirty baseline、WIP queue、运行内 `wiki-inbox.bib` 基线和文件 overlap；独立运行之间的 Zotero 正常更新不阻断新运行：
 
 - active weekly/L3 WIP 优先续跑；
 - completed-but-awaiting-review weekly WIP 不叠加第二个未经审核的科学 commit；
 - 无法区分归属或存在 overlap 时只读检查并 safe suspend；
 - 无实质发现不创建分支或 commit；
 - 第一次需要写入时，从已核验 main 创建 `codex/weekly-self-test-YYYYMMDD-<topic>`。
+
+周测 automation 本身只产生经过审计的本地结果，绝不自动 push；无实质变化时只输出可核验回执，不制造空提交。
 
 ### 审核报告与 checkpoint
 

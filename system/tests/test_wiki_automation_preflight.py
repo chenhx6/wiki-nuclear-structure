@@ -37,25 +37,32 @@ class WikiAutomationPreflightTests(unittest.TestCase):
     def tearDown(self) -> None:
         shutil.rmtree(self.tmp_root, ignore_errors=True)
 
-    def invoke(self, *, profile: str | None = "wiki_l3", expected_hash: str | None = None):
+    def invoke(
+        self,
+        *,
+        profile: str | None = "wiki_l3",
+        baseline_hash: str | None = None,
+        legacy_hash: str | None = None,
+    ):
         env = os.environ.copy()
         if profile is None:
             env.pop("CODEX_PERMISSION_PROFILE", None)
         else:
             env["CODEX_PERMISSION_PROFILE"] = profile
+        script_path = str(SCRIPT).replace("'", "''")
+        root_path = str(self.tmp_root).replace("'", "''")
+        ps_args = f"-Root '{root_path}' -ExpectedProfile 'wiki_l3'"
+        if baseline_hash is not None:
+            ps_args += f" -BaselineBibHash '{baseline_hash}'"
+        if legacy_hash is not None:
+            ps_args += f" -ProtectedBibHash '{legacy_hash}'"
         command = [
             str(POWERSHELL),
             "-NoProfile",
             "-ExecutionPolicy",
             "Bypass",
-            "-File",
-            str(SCRIPT),
-            "-Root",
-            str(self.tmp_root),
-            "-ExpectedProfile",
-            "wiki_l3",
-            "-ProtectedBibHash",
-            expected_hash or self.bib_hash,
+            "-Command",
+            f"& {{ & '{script_path}' {ps_args}; exit $LASTEXITCODE }}",
         ]
         completed = subprocess.run(
             command,
@@ -106,18 +113,23 @@ class WikiAutomationPreflightTests(unittest.TestCase):
         )
         self.assertEqual(completed.returncode, 0, completed.stderr or completed.stdout)
 
-    def test_schema_2_success_checks_permission_matrix_and_leaves_no_files(self) -> None:
+    def test_schema_3_success_creates_run_baseline_and_leaves_no_files(self) -> None:
         protected_before = self.protected_tree_snapshot()
 
         completed, payload = self.invoke()
 
         self.assertEqual(completed.returncode, 0, completed.stderr)
-        self.assertEqual(payload["schema_version"], 2)
+        self.assertEqual(payload["schema_version"], 3)
         self.assertTrue(payload["ok"])
         self.assertEqual(payload["profile_attestation"]["config_default"], "wiki_l3")
         self.assertTrue(payload["profile_attestation"]["config_matches"])
         self.assertEqual(payload["profile_attestation"]["marker_status"], "matched")
         self.assertEqual(payload["warnings"], [])
+        self.assertEqual(payload["protected_bib"]["baseline_sha256"], self.bib_hash)
+        self.assertEqual(payload["protected_bib"]["actual_sha256"], self.bib_hash)
+        self.assertEqual(payload["protected_bib"]["baseline_source"], "run_start")
+        self.assertEqual(payload["protected_bib"]["baseline_status"], "stable")
+        self.assertTrue(payload["protected_bib"]["ok"])
         self.assertEqual(
             payload["capability_policy"],
             {
@@ -235,14 +247,42 @@ class WikiAutomationPreflightTests(unittest.TestCase):
         self.assertEqual(payload["write_probes"], [])
         self.assertEqual(payload["protected_read_checks"], [])
 
-    def test_protected_hash_mismatch_fails_before_probes(self) -> None:
-        completed, payload = self.invoke(expected_hash="0" * 64)
+    def test_run_local_baseline_mismatch_fails_before_probes(self) -> None:
+        completed, payload = self.invoke(baseline_hash="0" * 64)
 
         self.assertEqual(completed.returncode, 1)
         self.assertFalse(payload["ok"])
-        self.assertEqual(payload["error"]["code"], "protected_hash_mismatch")
+        self.assertEqual(payload["error"]["code"], "protected_hash_changed_since_baseline")
+        self.assertEqual(payload["protected_bib"]["baseline_source"], "supplied_run_baseline")
+        self.assertEqual(payload["protected_bib"]["baseline_status"], "mismatch")
         self.assertEqual(payload["write_probes"], [])
         self.assertEqual(payload["protected_read_checks"], [])
+
+    def test_legacy_hash_is_ignored_with_warning(self) -> None:
+        completed, payload = self.invoke(legacy_hash="0" * 64)
+
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertTrue(payload["ok"])
+        self.assertEqual(
+            [item["code"] for item in payload["warnings"]],
+            ["legacy_expected_hash_ignored"],
+        )
+        self.assertEqual(payload["protected_bib"]["baseline_sha256"], self.bib_hash)
+        self.assertEqual(payload["protected_bib"]["baseline_source"], "run_start")
+
+    def test_independent_run_accepts_new_bibtex_hash(self) -> None:
+        bib_path = self.tmp_root / "raw" / "zotero" / "wiki-inbox.bib"
+        bib_path.write_bytes(b"@article{probe2, title={new probe}}\n")
+        new_hash = hashlib.sha256(bib_path.read_bytes()).hexdigest().upper()
+        self.assertNotEqual(new_hash, self.bib_hash)
+
+        completed, payload = self.invoke()
+
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertTrue(payload["ok"])
+        self.assertEqual(payload["protected_bib"]["baseline_sha256"], new_hash)
+        self.assertEqual(payload["protected_bib"]["actual_sha256"], new_hash)
+        self.assertEqual(payload["protected_bib"]["baseline_source"], "run_start")
 
     def test_missing_git_fails_without_leaving_probe(self) -> None:
         shutil.rmtree(self.tmp_root / ".git")

@@ -52,11 +52,13 @@ updated: 2026-08-11
 
 Every Wiki local-project cron run must begin in `E:\imp\wiki` by invoking
 `system/scripts/wiki_automation_preflight.ps1` with `-ExpectedProfile wiki_l3`
-and the protected `raw/zotero/wiki-inbox.bib` SHA-256 supplied by the current
-task prompt or by an explicitly user-confirmed value in the Active handoff.
-The hash is a run input, not a repository constant: if it is missing or
-conflicts with the current user confirmation, stop before the preflight.
-The script is the schema-2 permission gate. It must perform real
+and no fixed BibTeX hash. The schema-3 JSON result creates a
+run-local `protected_bib.baseline_sha256`; keep that value only in the current
+run's output/continuation state and pass it back as `-BaselineBibHash` at H1,
+H2 and H3. A change between two independent runs is accepted and creates a
+new baseline. The legacy `-ProtectedBibHash` argument is accepted only for
+compatibility, emits a deprecation warning, and never blocks a run.
+The script is the schema-3 permission gate. It must perform real
 create/read/delete probes only in the Wiki root and `.git`, then open
 `.codex/config.toml` and `.agents/skills/wiki-evidence-query/SKILL.md` for
 read-only sentinel checks. It must never create a file in `.codex` or `.agents`.
@@ -86,7 +88,7 @@ change ACLs. A failed root/`.git` write probe or protected-sentinel read is a
 permission-gate failure; DENY counts alone never change the exit code. Probe
 files must be unique and absent after every run.
 
-For Git write operations, schema-2 preflight is the single entry gate: run it
+For Git write operations, schema-3 preflight is the single entry gate: run it
 once before the first branch/commit and again in H3 immediately before fresh
 fetch. After exit `0`, continue fetch, dry-run and non-force push even when
 nonmatching DENY entries remain. Only an explicit `.git` probe `Access denied`
@@ -102,6 +104,39 @@ internal persistence is not a task write grant. Recovery state is reported
 through task output and Wiki `handoff`/WIP/Git artifacts; it must not be inferred
 from host memory. Automation changes, including a failure pause, are made only
 through the Codex automation function.
+
+## Wiki weekly self-test and bounded research expansion
+
+The weekly automation checks evidence quality, internal consistency, P0/P1
+risks and human-review boundaries. It may actively research at most two
+important problems per run. The total number of papers is not capped, but each
+download must belong to a deduplicated, finite, directly relevant batch; stop
+when evidence saturates, information gain falls, time/validation margin is
+low, or user access is required. Do not widen the scientific scope merely to
+fill the two slots. Other important findings go in the report's
+`Deferred important issues` section with pages, evidence gaps, a suggested
+L3/L4 route and whether the next run or the user should continue them. Only a
+task that has actually started and changed files enters WIP.
+
+For a nuclear-structure question, compare at least one applicable isotope and
+one isotone when reliable evidence exists; explain when a comparison is not
+physical or not available. L3 may search, obtain lawful full text, audit
+locators and ingest evidence through the Nature-first search/downloader
+routes. Candidate PDFs enter `raw/papers/gpt/_incoming/<run-id>/`, are verified
+before promotion to `raw/papers/gpt/`, and Agent-managed BibTeX goes only to
+`raw/zotero/gpt.bib`; `raw/zotero/wiki-inbox.bib` is read-only and never staged.
+Download supplementary information only when a key datum or method is there.
+If full text needs login, CAPTCHA or user access, record the DOI, route and
+handoff instead of looping or treating HTML as PDF.
+
+L4 is a readiness audit, not an automatic experiment. Check existing Wiki
+literature/data, level schemes, ADO, linear-polarization information, analyses
+and authoritative public data such as NNDC; report the sources, reproducibility,
+missing observables/locators and `ready`, `partial` or `not-ready` in
+`outputs/l4/<issue>-<date>/report.md`. `partial` or `not-ready` ends only that
+issue's expansion; it does not stop the weekly run or disable the automation.
+The task never pushes automatically. With no substantive change it emits only
+a verified run receipt and creates no empty commit.
 
 ## Safe suspend
 
