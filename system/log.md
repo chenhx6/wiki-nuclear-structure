@@ -1050,3 +1050,9 @@ updated: 2026-07-15
 - The WSL `bash scripts/update-codex-skills.sh` route failed before synchronization because the Windows checkout was CRLF and WSL parsed `set -o pipefail` incorrectly; no Wiki file was affected.
 - The user then ran the PowerShell-compatible update: `C:\Users\22721\ai-skills\nature-skills` fast-forwarded from `8d674eb` to `d1fb103c635e63288c0f2174460276b1ab7582d8`, and `C:\Users\22721\.codex\skills` was synchronized with all 19 Nature directories.
 - The install manifest records `d1fb103`; source/target content hashes match. The strict Robocopy check only reported target-side `__pycache__` directories under `nature-academic-search` and `nature-downloader`, which are runtime caches excluded from skill content. The user restarted Codex; API keys remain intentionally unconfigured, and Nature Skills remain subordinate to Wiki evidence rules.
+
+## [2026-08-13] tooling | double-click Nature Skills updater implemented
+
+- Added `system/scripts/update_nature_skills.cmd`, `system/scripts/update_nature_skills.ps1` and `system/scripts/README.md`; the CMD entry is the recommended user-facing update path.
+- The PowerShell engine keeps the fixed upstream and existing install paths, performs fast-forward-only Git checks, discovers all top-level `SKILL.md` directories, blocks removals/reparse points/submodules/dangerous binaries and oversized files, stages and hashes before activation, preserves a previous backup, supports `-CheckOnly`/`-Rollback`/`-NoPull`, and leaves unrelated Codex skills untouched.
+- Fixture tests passed for first install, read-only check, update, backup, rollback, skill-removal blocking, dangerous-file blocking and preservation of a non-Nature directory. The current environment's Defender command returned `0x80004005`; the updater reports this as a warning and continues structural/hash validation, while threat-like output remains a hard stop.

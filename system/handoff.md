@@ -1,7 +1,7 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-08-11
+updated: 2026-08-13
 ---
 
 # 跨会话交接
@@ -11,9 +11,11 @@ Current active task:
 Repair Wiki automation state drift and rebuild the bounded weekly self-test automation — completed and published. The reviewed Band-5 weekly self-test and 23-paper corpus remain published; this round changed only governance, preflight semantics, and automation instructions.
 
 Current branch / local commit:
-Publication target/main checkout branch `codex/wiki-push-deny-hardening`; current reconciliation commit subject is `Reconcile Wiki automation completion state` (the prior governance commit is its parent; exact current hash belongs only in the task receipt).
+Current branch is `main`; this task's local commit subject is `Add double-click Nature Skills updater` (exact hash belongs only in the task receipt).
 
 Last task status:
+
+This task added the double-click Nature Skills updater `system/scripts/update_nature_skills.cmd`, its PowerShell engine and README. The implementation is committed on `main` under the current task subject. Fixture tests passed for install, check, update, backup, rollback, skill-removal blocking, dangerous-file blocking and preservation of a non-Nature directory.
 The external user-run ACL repair removed the two known stale DENY ACEs from `E:\imp\wiki\.git`; post-push schema-3 H3 reports zero `.git` explicit DENY, root/`.git` probes and protected reads pass, and the exact ACL backup was removed only after remote verification. The schema-3 preflight and bounded weekly self-test rules are published; the main checkout fast-forwarded without touching the protected BibTeX. The replacement automation `wiki-replacement` is active under the Wiki project at Monday 19:20 Asia/Shanghai with the name “Wiki 每周自主知识自测”; old ID `wiki` is deleted. Unit tests, lint, QMD, H2 cleaning, explicit staging and cached audits passed; no ACL, project config, Skill, PLAN, raw file or credential was changed. A subsequent user-directed Nature Skills update completed through Windows PowerShell: the clone and Codex global install now both point to `d1fb103`; the user restarted Codex, and the updated skills are available. The two-directory strict-check warning was cache-only and content hashes matched.
 
 Unfinished items:
@@ -29,6 +31,7 @@ Next prompt / continuation phrase:
 `开始下一次 Wiki 每周自主知识自测：先运行 schema-3 preflight，读取 Active handoff，恢复明确允许的 WIP，并最多选择两个重要问题`
 
 Recent user decisions:
+The user requested a double-click updater for Nature Skills and authorized committing/pushing its Wiki implementation after validation.
 The user authorized the governance repair and non-force publication, confirmed the external precise ACL cleanup, chose a run-local BibTeX baseline instead of a persistent SHA-256, limited each weekly run to two active important problems with no fixed literature count, requested isotope/isotone comparison and L3/L4 expansion within bounds, and selected GPT-5.6-Codex with interface reasoning label Extra high for the replacement Monday 19:20 Asia/Shanghai automation. The automation itself must never push. The user also completed the Nature Skills update outside the Wiki using the PowerShell-compatible route and restarted Codex; API keys remain intentionally unconfigured.
 
 ## Previous active handoff (superseded 2026-08-07)
