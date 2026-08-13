@@ -11,14 +11,14 @@ Current active task:
 Review the local Nature Skills updater change that replaces the non-authoritative Microsoft Defender path with a Huorong custom-scan gate, explicit human confirmation and post-scan SHA-256 verification.
 
 Current branch / local commit:
-Current branch is `main`; this task's local commit subject is `Use Huorong human-confirmed Nature Skills scan` (exact hash belongs only in the task receipt), with push authorized after H3 validation.
+Current branch is `main`; this task was published to `origin/main` under the subject `Use Huorong human-confirmed Nature Skills scan` (exact hash belongs only in the task receipt).
 
 Last task status:
 
 This task changed only `system/scripts/update_nature_skills.ps1` and `system/scripts/README.md`: Defender commands and the continue-on-warning fallback were removed; the updater now resolves the fixed `HipsMain.exe` path, runs `-s` on the whole staging directory, waits up to 12 hours for the scan process, fails closed on launch/wait/nonzero errors, requires exact `Y/y` confirmation of completed/zero-risk GUI results, and performs root plus per-skill post-scan SHA-256 checks before the existing activation. The terminal's `Y/N` prompt itself waits until input or window close. The rollback transaction, staging cleanup, final digest and all other safety checks remain in place. PowerShell parsing, read-only `-CheckOnly` (19/19 matches), targeted static checks, `git diff --check` and Wiki lint passed with 0 errors; lint reported the existing 69 warnings and 576 review infos. No real pull/update/install or Huorong scan was run.
 
 Unfinished items:
-User review of the local Huorong gate and a later decision about local commit/push remain pending. Do not modify the protected `raw/zotero/wiki-inbox.bib` change.
+The user-run real Huorong GUI test and result feedback remain pending. Commit/push for the updater change is complete. Do not modify the protected `raw/zotero/wiki-inbox.bib` change.
 
 P0/P1 review focus:
 P0: none identified in the targeted script review. P1: confirm interactive `Y/y` behavior in the user's double-clicked Windows session and the expected Huorong GUI lifecycle; the process timeout is now 12 hours.
