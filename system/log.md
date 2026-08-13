@@ -1044,3 +1044,9 @@ updated: 2026-07-15
 
 - Published the schema-3/run-local-baseline governance repair by exact-refspec non-force fast-forward; the main checkout retained only the protected user BibTeX modification, and the two known `.git` guardian DENY SIDs remained absent after H3.
 - Rebuilt the Wiki Monday 19:20 Asia/Shanghai local cron as `wiki-replacement`, enabled it with the bounded two-problem/no-fixed-literature-count/L3-L4 readiness contract, and removed the stale `wiki` automation ID. No scientific content or raw evidence was changed.
+
+## [2026-08-13] tooling | Nature Skills PowerShell update completed
+
+- The WSL `bash scripts/update-codex-skills.sh` route failed before synchronization because the Windows checkout was CRLF and WSL parsed `set -o pipefail` incorrectly; no Wiki file was affected.
+- The user then ran the PowerShell-compatible update: `C:\Users\22721\ai-skills\nature-skills` fast-forwarded from `8d674eb` to `d1fb103c635e63288c0f2174460276b1ab7582d8`, and `C:\Users\22721\.codex\skills` was synchronized with all 19 Nature directories.
+- The install manifest records `d1fb103`; source/target content hashes match. The strict Robocopy check only reported target-side `__pycache__` directories under `nature-academic-search` and `nature-downloader`, which are runtime caches excluded from skill content. The user restarted Codex; API keys remain intentionally unconfigured, and Nature Skills remain subordinate to Wiki evidence rules.
