@@ -1,38 +1,36 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-08-13
+updated: 2026-08-14
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Repair Wiki automation state drift and rebuild the bounded weekly self-test automation — completed and published. The reviewed Band-5 weekly self-test and 23-paper corpus remain published; this round changed only governance, preflight semantics, and automation instructions.
+Review the local Nature Skills updater change that replaces the non-authoritative Microsoft Defender path with a Huorong custom-scan gate, explicit human confirmation and post-scan SHA-256 verification.
 
 Current branch / local commit:
-Current branch is `main`; this task's local commit subject is `Add double-click Nature Skills updater` (exact hash belongs only in the task receipt).
+Current branch is `main`; this task's local commit subject is `Use Huorong human-confirmed Nature Skills scan` (exact hash belongs only in the task receipt), with push authorized after H3 validation.
 
 Last task status:
 
-This task added the double-click Nature Skills updater `system/scripts/update_nature_skills.cmd`, its PowerShell engine and README. The implementation is committed on `main` under the current task subject. Fixture tests passed for install, check, update, backup, rollback, skill-removal blocking, dangerous-file blocking and preservation of a non-Nature directory.
-The external user-run ACL repair removed the two known stale DENY ACEs from `E:\imp\wiki\.git`; post-push schema-3 H3 reports zero `.git` explicit DENY, root/`.git` probes and protected reads pass, and the exact ACL backup was removed only after remote verification. The schema-3 preflight and bounded weekly self-test rules are published; the main checkout fast-forwarded without touching the protected BibTeX. The replacement automation `wiki-replacement` is active under the Wiki project at Monday 19:20 Asia/Shanghai with the name “Wiki 每周自主知识自测”; old ID `wiki` is deleted. Unit tests, lint, QMD, H2 cleaning, explicit staging and cached audits passed; no ACL, project config, Skill, PLAN, raw file or credential was changed. A subsequent user-directed Nature Skills update completed through Windows PowerShell: the clone and Codex global install now both point to `d1fb103`; the user restarted Codex, and the updated skills are available. The two-directory strict-check warning was cache-only and content hashes matched.
+This task changed only `system/scripts/update_nature_skills.ps1` and `system/scripts/README.md`: Defender commands and the continue-on-warning fallback were removed; the updater now resolves the fixed `HipsMain.exe` path, runs `-s` on the whole staging directory, waits up to 12 hours for the scan process, fails closed on launch/wait/nonzero errors, requires exact `Y/y` confirmation of completed/zero-risk GUI results, and performs root plus per-skill post-scan SHA-256 checks before the existing activation. The terminal's `Y/N` prompt itself waits until input or window close. The rollback transaction, staging cleanup, final digest and all other safety checks remain in place. PowerShell parsing, read-only `-CheckOnly` (19/19 matches), targeted static checks, `git diff --check` and Wiki lint passed with 0 errors; lint reported the existing 69 warnings and 576 review infos. No real pull/update/install or Huorong scan was run.
 
 Unfinished items:
-None for this governance round. The next weekly run should begin with the schema-3 preflight, establish a new run-local BibTeX baseline, and resume only explicitly allowed self-test/WIP work.
+User review of the local Huorong gate and a later decision about local commit/push remain pending. Do not modify the protected `raw/zotero/wiki-inbox.bib` change.
 
 P0/P1 review focus:
-P0: none for the already published corpus. P1: future weekly runs must preserve schema-3 same-run BibTeX stability, no protected-file staging, no more than two active research issues, deferred-issue recording and nonblocking L4 readiness.
+P0: none identified in the targeted script review. P1: confirm interactive `Y/y` behavior in the user's double-clicked Windows session and the expected Huorong GUI lifecycle; the process timeout is now 12 hours.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged; future runs establish their own schema-3 baseline and must not persist a fixed hash. Do not edit project config, repository Skills, PLAN, ACLs, credentials or host automation memory. Never auto-run `/remove:d`; safe-suspend only when a real `.git` write probe reports Access denied or H3 finds authentication or remote drift. The stale `.git` guardian DENY issue is resolved for the two known SIDs; host `.codex`/`.agents` DENY diagnostics remain nonmatching protection behavior and are not a push gate.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not restore Defender, bypass the Huorong gate, infer safety from `HipsMain.exe` exit code `0`, or run a real update during review. Huorong scanning and human confirmation do not prove that Markdown, Python or JavaScript content is free of malicious logic.
 
 Next prompt / continuation phrase:
-`开始下一次 Wiki 每周自主知识自测：先运行 schema-3 preflight，读取 Active handoff，恢复明确允许的 WIP，并最多选择两个重要问题`
+`请在 Codex 外双击 update_nature_skills.cmd，完成一次真实火绒扫描并把窗口/终端结果发回`
 
 Recent user decisions:
-The user requested a double-click updater for Nature Skills and authorized committing/pushing its Wiki implementation after validation.
-The user authorized the governance repair and non-force publication, confirmed the external precise ACL cleanup, chose a run-local BibTeX baseline instead of a persistent SHA-256, limited each weekly run to two active important problems with no fixed literature count, requested isotope/isotone comparison and L3/L4 expansion within bounds, and selected GPT-5.6-Codex with interface reasoning label Extra high for the replacement Monday 19:20 Asia/Shanghai automation. The automation itself must never push. The user also completed the Nature Skills update outside the Wiki using the PowerShell-compatible route and restarted Codex; API keys remain intentionally unconfigured.
+The user requested a local-only replacement of the updater's Defender scan with Huorong `HipsMain.exe -s`, a 12-hour process wait, human GUI confirmation and a second SHA-256 check, and authorized commit/push after validation. Existing Nature Skills clone/install and the protected BibTeX must remain untouched.
 
 ## Previous active handoff (superseded 2026-08-07)
 

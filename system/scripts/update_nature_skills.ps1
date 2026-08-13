@@ -22,6 +22,7 @@ $script:TransactionPromoted = $false
 $script:ActivatedNames = New-Object 'System.Collections.Generic.List[string]'
 $script:LockPath = $null
 $script:LockOwned = $false
+$script:HuorongScanTimeoutSeconds = 12 * 60 * 60
 
 function Stop-Update {
     param(
@@ -644,49 +645,127 @@ function Restore-Transaction {
     }
 }
 
-function Invoke-DefenderScan {
+function Get-HuorongExecutable {
+    $programFilesX86 = [Environment]::GetEnvironmentVariable('ProgramFiles(x86)')
+    if ([string]::IsNullOrWhiteSpace($programFilesX86)) {
+        Stop-Update 'Huorong antivirus executable was not found. ProgramFiles(x86) is unavailable.' 3
+    }
+
+    $candidate = Join-Path $programFilesX86 'Huorong\Sysdiag\bin\HipsMain.exe'
+    if (-not (Test-Path -LiteralPath $candidate -PathType Leaf)) {
+        Stop-Update 'Huorong antivirus executable was not found.' 3
+    }
+    return (Resolve-FullPath $candidate)
+}
+
+function Invoke-HuorongScanAndConfirm {
     param([Parameter(Mandatory = $true)][string]$Path)
 
-    $mpCmdRun = $null
-    if (-not [string]::IsNullOrWhiteSpace($env:ProgramFiles)) {
-        $candidate = Join-Path $env:ProgramFiles 'Windows Defender\MpCmdRun.exe'
-        if (Test-Path -LiteralPath $candidate -PathType Leaf) { $mpCmdRun = $candidate }
-    }
-    if (-not $mpCmdRun) {
-        $command = Get-Command MpCmdRun.exe -ErrorAction SilentlyContinue
-        if ($command) { $mpCmdRun = $command.Source }
-    }
-    if ($mpCmdRun) {
-        Write-Host 'Running Microsoft Defender scan on the staging directory ...'
-        $output = @(& $mpCmdRun '-Scan' '-ScanType' '3' '-File' $Path 2>&1 | ForEach-Object { $_.ToString() })
-        $exitCode = $LASTEXITCODE
-        if ($exitCode -ne 0) {
-            $tail = ($output | Select-Object -Last 5) -join ' | '
-            $threat = ($tail -match '(?i)(malware|virus|ransomware|infected|quarantin|threat\s+(found|detected)|found\s+\d+\s+threat)')
-            if ($threat) {
-                Stop-Update ("Microsoft Defender reported a possible threat (exit {0}): {1}" -f $exitCode, $tail) 3
-            }
-            Write-Host ("WARNING: Microsoft Defender scan was unavailable or failed (exit {0}): {1}" -f $exitCode, $tail) -ForegroundColor Yellow
-            return
-        }
-        Write-Host 'Microsoft Defender scan completed.'
-        return
+    $scanPath = Resolve-FullPath $Path
+    if (-not (Test-Path -LiteralPath $scanPath -PathType Container)) {
+        Stop-Update ("Huorong scan staging directory is missing or inaccessible: {0}" -f $scanPath) 3
     }
 
-    if (Get-Command Start-MpScan -ErrorAction SilentlyContinue) {
+    $huorongExe = Get-HuorongExecutable
+    $process = $null
+    try {
+        Write-Host ("Starting Huorong Custom Scan for: {0}" -f $scanPath)
+        $process = Start-Process `
+            -FilePath $huorongExe `
+            -ArgumentList @('-s', ('"{0}"' -f $scanPath)) `
+            -PassThru `
+            -ErrorAction Stop
+    }
+    catch {
+        Stop-Update ("Huorong custom scan could not be started: {0}" -f $_.Exception.Message) 3
+    }
+
+    try {
+        $completed = $process.WaitForExit($script:HuorongScanTimeoutSeconds * 1000)
+    }
+    catch {
+        $waitException = $_.Exception
         try {
-            Write-Host 'Running Microsoft Defender scan on the staging directory ...'
-            Start-MpScan -ScanPath $Path -ScanType CustomScan -ErrorAction Stop
-            Write-Host 'Microsoft Defender scan completed.'
-            return
+            if (-not $process.HasExited) {
+                $process.Kill()
+                [void]$process.WaitForExit(5000)
+            }
         }
-        catch {
-            Write-Host ("WARNING: Microsoft Defender could not be invoked: {0}" -f $_.Exception.Message) -ForegroundColor Yellow
-            return
-        }
+        catch { }
+        $process.Dispose()
+        Stop-Update ("Could not wait for the Huorong custom scan to finish: {0}" -f $waitException.Message) 3
     }
 
-    Write-Host 'WARNING: Microsoft Defender command was not found; structural and hash checks will continue.' -ForegroundColor Yellow
+    if (-not $completed) {
+        try {
+            if (-not $process.HasExited) {
+                $process.Kill()
+                [void]$process.WaitForExit(5000)
+            }
+        }
+        catch { }
+        $process.Dispose()
+        Stop-Update ("Huorong custom scan timed out after {0} hours." -f ($script:HuorongScanTimeoutSeconds / 3600)) 3
+    }
+
+    $exitCode = $process.ExitCode
+    Write-Host ("Huorong HipsMain returned exit code {0}. This is diagnostic only; it is not a clean/malware result." -f $exitCode)
+    if ($exitCode -ne 0) {
+        $process.Dispose()
+        Stop-Update ("Huorong custom scan returned non-zero exit code ({0}); treating the scan as failed closed." -f $exitCode) 3
+    }
+    $process.Dispose()
+
+    Write-Host ''
+    Write-Host 'Huorong antivirus scan has returned.' -ForegroundColor Yellow
+    Write-Host 'Please check the Huorong "Custom Scan" window now.' -ForegroundColor Yellow
+    Write-Host 'Enter Y ONLY if Huorong explicitly shows:' -ForegroundColor Yellow
+    Write-Host '  - Scan completed' -ForegroundColor Yellow
+    Write-Host '  - 0 risks found' -ForegroundColor Yellow
+    Write-Host 'Enter N if any risk was found, the result is unclear, the window did not appear,' -ForegroundColor Yellow
+    Write-Host 'the scan did not complete normally, or you are unsure.' -ForegroundColor Yellow
+
+    try {
+        $answer = Read-Host '[Y/N] (default: N)'
+    }
+    catch {
+        Stop-Update ("Huorong antivirus review could not be confirmed: {0}" -f $_.Exception.Message) 3
+    }
+
+    if ($answer -cne 'Y' -and $answer -cne 'y') {
+        Stop-Update 'Huorong antivirus review was not approved by the user. Report the threat name/path shown by Huorong to Codex for review.' 3
+    }
+    Write-Host 'User confirmed that Huorong shows scan completed with 0 risks.' -ForegroundColor Yellow
+}
+
+function Assert-PostHuorongDigests {
+    param(
+        [Parameter(Mandatory = $true)]$Skills,
+        [Parameter(Mandatory = $true)]$ExpectedDigests,
+        [Parameter(Mandatory = $true)]$ExpectedStageDigest
+    )
+
+    if (-not (Test-Path -LiteralPath $script:StageRoot -PathType Container)) {
+        Stop-Update 'Staging disappeared before the post-Huorong SHA-256 verification.' 3
+    }
+    $postScanStageDigest = Get-DirectoryDigest $script:StageRoot
+    if (-not (Test-DigestMatch `
+            -Expected $ExpectedStageDigest `
+            -Actual $postScanStageDigest `
+            -Label 'post-huorong/staging-root')) {
+        Stop-Update 'Staging content changed during Huorong antivirus scanning.' 3
+    }
+    foreach ($skill in @($Skills)) {
+        $stageSkill = Join-Path $script:StageRoot $skill.Name
+        $postScanDigest = Get-DirectoryDigest $stageSkill
+        if (-not (Test-DigestMatch `
+                -Expected $ExpectedDigests[$skill.Name] `
+                -Actual $postScanDigest `
+                -Label ("post-huorong/{0}" -f $skill.Name))) {
+            Stop-Update ("Staging content changed during Huorong antivirus scanning for {0}." -f $skill.Name) 3
+        }
+    }
+    Write-Host 'Post-Huorong SHA-256 integrity verification passed; staging content is unchanged.' -ForegroundColor Yellow
 }
 
 function Promote-PreviousBackup {
@@ -934,7 +1013,9 @@ try {
         }
         $digests[$skill.Name] = $sourceDigest
     }
-    Invoke-DefenderScan -Path $script:StageRoot
+    $stagingDigest = Get-DirectoryDigest $script:StageRoot
+    Invoke-HuorongScanAndConfirm -Path $script:StageRoot
+    Assert-PostHuorongDigests -Skills $skills -ExpectedDigests $digests -ExpectedStageDigest $stagingDigest
 
     foreach ($skill in @($skills)) {
         $stageSkill = Join-Path $script:StageRoot $skill.Name

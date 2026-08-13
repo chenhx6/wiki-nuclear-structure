@@ -1056,3 +1056,8 @@ updated: 2026-07-15
 - Added `system/scripts/update_nature_skills.cmd`, `system/scripts/update_nature_skills.ps1` and `system/scripts/README.md`; the CMD entry is the recommended user-facing update path.
 - The PowerShell engine keeps the fixed upstream and existing install paths, performs fast-forward-only Git checks, discovers all top-level `SKILL.md` directories, blocks removals/reparse points/submodules/dangerous binaries and oversized files, stages and hashes before activation, preserves a previous backup, supports `-CheckOnly`/`-Rollback`/`-NoPull`, and leaves unrelated Codex skills untouched.
 - Fixture tests passed for first install, read-only check, update, backup, rollback, skill-removal blocking, dangerous-file blocking and preservation of a non-Nature directory. The current environment's Defender command returned `0x80004005`; the updater reports this as a warning and continues structural/hash validation, while threat-like output remains a hard stop.
+
+## [2026-08-14] tooling | Nature Skills updater Huorong safety gate
+
+- Replaced the updater's Microsoft Defender scan/fallback with fixed-path Huorong `HipsMain.exe -s "<absolute staging path>"`, a 12-hour process wait, nonzero/launch/timeout fail-closed handling and explicit `Y/y` confirmation of the Huorong GUI's completed/zero-risk result. The terminal confirmation prompt itself waits for user input without a 12-hour countdown.
+- Added post-confirmation whole-staging and per-skill SHA-256 checks before the existing `Move-Item` activation; rollback, cleanup and final verification remain unchanged. Updated `system/scripts/README.md`; no real update, Huorong scan, commit or push was performed.
