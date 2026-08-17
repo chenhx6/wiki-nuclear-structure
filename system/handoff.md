@@ -1,36 +1,35 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-08-14
+updated: 2026-08-17
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Review the local Nature Skills updater change that replaces the non-authoritative Microsoft Defender path with a Huorong custom-scan gate, explicit human confirmation and post-scan SHA-256 verification.
+Focused human review of the 2026-08-17 weekly self-test on configuration-specific N=73 isotone evidence for `131Ce`.
 
 Current branch / local commit:
-Current branch is `main`; this task was published to `origin/main` under the subject `Use Huorong human-confirmed Nature Skills scan` (exact hash belongs only in the task receipt).
+Current branch is `codex/weekly-self-test-20260817-131ce-n73-isotones`; current branch HEAD is local WIP `WIP review: weekly self-test 2026-08-17 for user review`.
 
 Last task status:
-
-This task changed only `system/scripts/update_nature_skills.ps1` and `system/scripts/README.md`: Defender commands and the continue-on-warning fallback were removed; the updater now resolves the fixed `HipsMain.exe` path, runs `-s` on the whole staging directory, waits up to 12 hours for the scan process, fails closed on launch/wait/nonzero errors, requires exact `Y/y` confirmation of completed/zero-risk GUI results, and performs root plus per-skill post-scan SHA-256 checks before the existing activation. The terminal's `Y/N` prompt itself waits until input or window close. The rollback transaction, staging cleanup, final digest and all other safety checks remain in place. PowerShell parsing, read-only `-CheckOnly` (19/19 matches), targeted static checks, `git diff --check` and Wiki lint passed with 0 errors; lint reported the existing 69 warnings and 576 review infos. No real pull/update/install or Huorong scan was run.
+One hard-threshold issue was investigated. Ding 2021 p.9/Fig.6 supplies an under-extracted N=73 `129Ba/131Ce/133Nd` `[404]7/2+` comparison; `127Xe/129Ba` provide configuration-distinct `h11/2` wobbling controls. Direct PDF renders and recorded hashes were checked. The project ranking remains unchanged, and no L4 or new literature ingest was started.
 
 Unfinished items:
-The user-run real Huorong GUI test and result feedback remain pending. Commit/push for the updater change is complete. Do not modify the protected `raw/zotero/wiki-inbox.bib` change.
+Focused review is required for D21-8 and the two new project evidence rows. QMD refresh, final amend and any publication remain deferred until review. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
 
 P0/P1 review focus:
-P0: none identified in the targeted script review. P1: confirm interactive `Y/y` behavior in the user's double-clicked Windows session and the expected Huorong GUI lifecycle; the process timeout is now 12 hours.
+P0: none identified. P1: confirm that Ding's N=73 row is contextual reuse of prior experiments, that `[404]7/2+` and `h11/2` comparisons remain configuration-specific, and that neighbor wobbling labels are not transferred to `131Ce`.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not restore Defender, bypass the Huorong gate, infer safety from `HipsMain.exe` exit code `0`, or run a real update during review. Huorong scanning and human confirmation do not prove that Markdown, Python or JavaScript content is free of malicious logic.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not count compiled N=73 systematics as a new independent Ding experiment, infer a unique γ from signature splitting, or upgrade `131Ce` wobbling without target δ/polarization/absolute-strength evidence.
 
 Next prompt / continuation phrase:
-`请在 Codex 外双击 update_nature_skills.cmd，完成一次真实火绒扫描并把窗口/终端结果发回`
+`审核 2026-08-17 131Ce N=73 同中子素周测`
 
 Recent user decisions:
-The user requested a local-only replacement of the updater's Defender scan with Huorong `HipsMain.exe -s`, a 12-hour process wait, human GUI confirmation and a second SHA-256 check, and authorized commit/push after validation. Existing Nature Skills clone/install and the protected BibTeX must remain untouched.
+The weekly automation may investigate at most two hard-threshold issues, may create an audited local WIP, must never auto-push, and must keep `raw/zotero/wiki-inbox.bib` read-only and unstaged.
 
 ## Previous active handoff (superseded 2026-08-07)
 
