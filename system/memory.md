@@ -1,7 +1,7 @@
 ---
 type: system-memory
 graph-excluded: true
-updated: 2026-08-13
+updated: 2026-08-18
 ---
 
 # 长期记忆
@@ -41,6 +41,7 @@ updated: 2026-08-13
 - 本仓库采用 bounded initiative：允许与当前任务直接相关的必要最小同步，禁止非必要顺手优化；PowerShell 的 `PATH` 找不到 Git 时，必须先定位 Git 可执行文件并完成同等检查。
 - 中文科学页面中专业术语首次出现时保留英文名称或标准缩写；可能指向不同物理对象的简称必须写明具体对象，例如 two-band mixing 必须说明是哪两条带，避免后续查询只按中文词面误配。
 - 讨论多声子 wobbling 的 anharmonicity 时，必须区分能带能量与 successive phonon spacing，并写清参与差分的能带和自旋；不得把“第二声子增量较低”简写成含义不同的“TW2 能量低于 TW1 的两倍”。
+- 2026-08-18 Nature Skills 已由用户通过 `system/scripts/update_nature_skills.cmd` 成功更新：clone 与 `%USERPROFILE%\.codex\skills` 安装均对应提交 `44defbcce0b8534f9a0a4734f56c40e4f703bbf4`，manifest 记录 20 个顶层 skills（含 `nature-image2ppt`），随后 Windows PowerShell 5.1 的 `-CheckOnly` 对全部技能返回 `MATCH`。本次曾因 `nature-academic-search\mcp-server` 被运行中的 MCP/Python/uv 进程占用而安全回滚，关闭占用进程后更新成功；后续仍遵循火绒自定义查杀、用户明确 `Y`、扫描后二次 SHA-256 和 Wiki evidence policy 优先原则。
 
 ## 用户纠正记录
 

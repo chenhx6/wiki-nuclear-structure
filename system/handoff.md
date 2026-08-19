@@ -1,36 +1,36 @@
 ---
 type: system-handoff
 graph-excluded: true
-updated: 2026-08-14
+updated: 2026-08-19
 ---
 
 # 跨会话交接
 ## Active handoff
 
 Current active task:
-Review the local Nature Skills updater change that replaces the non-authoritative Microsoft Defender path with a Huorong custom-scan gate, explicit human confirmation and post-scan SHA-256 verification.
+Nature Skills updater maintenance and global installation verification are complete; the updater uses the Huorong human-confirmed custom-scan gate.
 
 Current branch / local commit:
-Current branch is `main`; this task was published to `origin/main` under the subject `Use Huorong human-confirmed Nature Skills scan` (exact hash belongs only in the task receipt).
+Current branch is `main`; the current task commit subject is `Maintain Nature Skills updater safety and compatibility` (exact hash belongs only in the task receipt).
 
 Last task status:
 
-This task changed only `system/scripts/update_nature_skills.ps1` and `system/scripts/README.md`: Defender commands and the continue-on-warning fallback were removed; the updater now resolves the fixed `HipsMain.exe` path, runs `-s` on the whole staging directory, waits up to 12 hours for the scan process, fails closed on launch/wait/nonzero errors, requires exact `Y/y` confirmation of completed/zero-risk GUI results, and performs root plus per-skill post-scan SHA-256 checks before the existing activation. The terminal's `Y/N` prompt itself waits until input or window close. The rollback transaction, staging cleanup, final digest and all other safety checks remain in place. PowerShell parsing, read-only `-CheckOnly` (19/19 matches), targeted static checks, `git diff --check` and Wiki lint passed with 0 errors; lint reported the existing 69 warnings and 576 review infos. No real pull/update/install or Huorong scan was run.
+The updater keeps the fixed Huorong `HipsMain.exe -s` scan, explicit `Y/y` confirmation, post-scan SHA-256 checks, rollback and final verification. This maintenance also handles normal Git fetch stderr in Windows PowerShell 5.1, hashes through .NET without module auto-loading, and reports locked Nature Skills directories without deleting them. The user completed a real Huorong scan with 642 files and 0 risks; source and global installation match commit `44defbcce0b8534f9a0a4734f56c40e4f703bbf4`, with 20 skills verified by `-CheckOnly`. PowerShell parsing, Wiki lint and `git diff --check` passed.
 
 Unfinished items:
-The user-run real Huorong GUI test and result feedback remain pending. Commit/push for the updater change is complete. Do not modify the protected `raw/zotero/wiki-inbox.bib` change.
+No Nature Skills updater item remains. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
 
 P0/P1 review focus:
-P0: none identified in the targeted script review. P1: confirm interactive `Y/y` behavior in the user's double-clicked Windows session and the expected Huorong GUI lifecycle; the process timeout is now 12 hours.
+P0: none. P1: if a future update reports a lock, close Codex and the specific Nature Skills MCP/Python/uv process before retrying; never infer clean status from the HipsMain exit code.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not restore Defender, bypass the Huorong gate, infer safety from `HipsMain.exe` exit code `0`, or run a real update during review. Huorong scanning and human confirmation do not prove that Markdown, Python or JavaScript content is free of malicious logic.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not restore Defender, bypass the Huorong gate, infer safety from `HipsMain.exe` exit code `0`, or treat antivirus scanning as proof that Markdown, Python or JavaScript content has no malicious logic.
 
 Next prompt / continuation phrase:
-`请在 Codex 外双击 update_nature_skills.cmd，完成一次真实火绒扫描并把窗口/终端结果发回`
+需要更新时双击 `system/scripts/update_nature_skills.cmd`；出现安全阻断时把完整终端结果交给 Codex 审核。
 
 Recent user decisions:
-The user requested a local-only replacement of the updater's Defender scan with Huorong `HipsMain.exe -s`, a 12-hour process wait, human GUI confirmation and a second SHA-256 check, and authorized commit/push after validation. Existing Nature Skills clone/install and the protected BibTeX must remain untouched.
+The user requested the Huorong safety gate and then authorized committing and pushing the Nature Skills updater maintenance to `main`. Nature Skills update `44defbcce0b8534f9a0a4734f56c40e4f703bbf4` was completed after the active MCP/Python/uv lock was released; the source and global installation match, with 20 skills verified by `-CheckOnly`.
 
 ## Previous active handoff (superseded 2026-08-07)
 

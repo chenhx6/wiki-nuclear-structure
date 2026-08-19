@@ -35,6 +35,13 @@ function Stop-Update {
     throw $exception
 }
 
+function Test-IsPathLockError {
+    param([Parameter(Mandatory = $true)]$ErrorRecord)
+
+    $message = [string]$ErrorRecord.Exception.Message
+    return $message -match '(?i)being used by another process|used by another process|sharing violation|another process.*access|另一进程使用|另一个进程使用|其他进程使用'
+}
+
 function Resolve-FullPath {
     param([Parameter(Mandatory = $true)][string]$Path)
 
@@ -88,6 +95,22 @@ function Test-IgnoredRelativePath {
     return $extension -eq '.pyc' -or $extension -eq '.pyo'
 }
 
+function Get-FileSha256 {
+    param([Parameter(Mandatory = $true)][string]$Path)
+
+    $sha = [Security.Cryptography.SHA256]::Create()
+    $stream = $null
+    try {
+        # Use .NET directly so hashing does not depend on PowerShell module auto-loading.
+        $stream = [IO.File]::OpenRead($Path)
+        return ([BitConverter]::ToString($sha.ComputeHash($stream))).Replace('-', '').ToUpperInvariant()
+    }
+    finally {
+        if ($null -ne $stream) { $stream.Dispose() }
+        $sha.Dispose()
+    }
+}
+
 function Get-DirectoryDigest {
     param([Parameter(Mandatory = $true)][string]$Path)
 
@@ -101,7 +124,7 @@ function Get-DirectoryDigest {
     foreach ($file in $files) {
         $relative = $file.FullName.Substring($root.Length).TrimStart('\').Replace('\', '/')
         if (Test-IgnoredRelativePath $relative) { continue }
-        $map[$relative] = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash.ToUpperInvariant()
+        $map[$relative] = Get-FileSha256 -Path $file.FullName
     }
 
     $lines = @($map.Keys | Sort-Object | ForEach-Object { "{0}|{1}" -f $_, $map[$_] })
@@ -156,14 +179,45 @@ function Test-DigestMatch {
     return $false
 }
 
+function Invoke-GitCapture {
+    param(
+        [Parameter(Mandatory = $true)][string[]]$Arguments
+    )
+
+    if (-not (Test-Path -LiteralPath $script:GitExe -PathType Leaf)) {
+        Stop-Update ("Git executable is no longer available: {0}" -f $script:GitExe) 2
+    }
+
+    $output = @()
+    $exitCode = $null
+    $previousErrorActionPreference = $ErrorActionPreference
+    try {
+        # Git writes normal progress, including fetch summaries, to stderr. In
+        # Windows PowerShell 5.1, ErrorAction Stop would treat that as an exception.
+        $ErrorActionPreference = 'Continue'
+        $output = @(& $script:GitExe @Arguments 2>&1 | ForEach-Object { $_.ToString() })
+        $exitCode = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $previousErrorActionPreference
+    }
+
+    if ($null -eq $exitCode) {
+        Stop-Update ("Git process could not be started: {0}" -f $script:GitExe) 2
+    }
+
+    return [pscustomobject]@{ ExitCode = $exitCode; Output = $output }
+}
+
 function Invoke-GitStandalone {
     param(
         [Parameter(Mandatory = $true)][string[]]$Arguments,
         [switch]$AllowFailure
     )
 
-    $output = @(& $script:GitExe @Arguments 2>&1 | ForEach-Object { $_.ToString() })
-    $exitCode = $LASTEXITCODE
+    $result = Invoke-GitCapture -Arguments $Arguments
+    $output = $result.Output
+    $exitCode = $result.ExitCode
     if (-not $AllowFailure -and $exitCode -ne 0) {
         $tail = ($output | Select-Object -Last 5) -join ' | '
         Stop-Update ("Git command failed ({0}): {1}" -f $exitCode, $tail) 2
@@ -179,8 +233,9 @@ function Invoke-Git {
 
     $safeRepo = $script:RepoPath.Replace('\', '/')
     $gitArguments = @('-c', "safe.directory=$safeRepo", '-C', $script:RepoPath) + $Arguments
-    $output = @(& $script:GitExe @gitArguments 2>&1 | ForEach-Object { $_.ToString() })
-    $exitCode = $LASTEXITCODE
+    $result = Invoke-GitCapture -Arguments $gitArguments
+    $output = $result.Output
+    $exitCode = $result.ExitCode
     if (-not $AllowFailure -and $exitCode -ne 0) {
         $tail = ($output | Select-Object -Last 5) -join ' | '
         Stop-Update ("Git command failed ({0}): {1}" -f $exitCode, $tail) 2
@@ -590,10 +645,12 @@ function New-Transaction {
         ManifestBackedUp = $false
     }
     $script:Transaction = $transaction
+    $movingPath = $null
     try {
         foreach ($skill in @($Skills)) {
             $destination = Join-Path $script:DestinationPath $skill.Name
             if (Test-Path -LiteralPath $destination) {
+                $movingPath = $destination
                 $item = Get-Item -LiteralPath $destination -Force
                 if (($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) {
                     Stop-Update ("Existing destination is a reparse point/symlink: {0}" -f $destination) 3
@@ -611,8 +668,13 @@ function New-Transaction {
         return $transaction
     }
     catch {
+        $failure = $_
         try { Restore-Transaction $transaction } catch { }
-        throw
+        if (Test-IsPathLockError -ErrorRecord $failure) {
+            $locked = if ($movingPath) { $movingPath } else { 'the existing Nature Skills installation' }
+            Stop-Update ("A Nature Skills directory is locked by another process: {0}`nClose Codex and any Nature Skills MCP/Python/uv process, then run update_nature_skills.cmd again." -f $locked) 2
+        }
+        throw $failure
     }
 }
 

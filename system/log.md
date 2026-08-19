@@ -1061,3 +1061,14 @@ updated: 2026-07-15
 
 - Replaced the updater's Microsoft Defender scan/fallback with fixed-path Huorong `HipsMain.exe -s "<absolute staging path>"`, a 12-hour process wait, nonzero/launch/timeout fail-closed handling and explicit `Y/y` confirmation of the Huorong GUI's completed/zero-risk result. The terminal confirmation prompt itself waits for user input without a 12-hour countdown.
 - Added post-confirmation whole-staging and per-skill SHA-256 checks before the existing `Move-Item` activation; rollback, cleanup and final verification remain unchanged. Updated `system/scripts/README.md`; no real update, Huorong scan, commit or push was performed.
+
+## [2026-08-18] tooling | Nature Skills update verified
+
+- User completed the double-click Nature Skills update after closing the process that held `nature-academic-search\mcp-server`.
+- Source and global Codex installation now match commit `44defbcce0b8534f9a0a4734f56c40e4f703bbf4`; the manifest records 20 skills, and read-only `-CheckOnly` returned `MATCH` for all 20.
+- No Wiki scientific content or protected `raw/zotero/wiki-inbox.bib` was modified by the update; no commit or push was performed in this sync.
+
+## [2026-08-19] tooling | Nature Skills updater maintenance
+
+- Fixed Windows PowerShell 5.1 handling of normal Git fetch stderr, removed the `Get-FileHash` module auto-loading dependency by using .NET SHA-256, and added a fail-closed diagnostic for locked Nature Skills directories.
+- The maintenance is limited to the updater and its usage records; no Nature Skills content, scientific Wiki content or protected BibTeX was changed.
