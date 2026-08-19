@@ -3,7 +3,7 @@ type: source
 title: "Signature splitting of the g7/2[404]7/2+ bands in 131Ba and 133Ce"
 aliases: []
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-08-17
 status: active
 review_status: human-reviewed
 source_type: journal-article-experiment-and-model
@@ -30,7 +30,7 @@ experiments: [galileo-131ba-c13-65mev, afrodite-133ce-c12-57mev]
 models: [cranked-shell-model, triaxial-particle-rotor-model]
 observables: [signature-splitting]
 methods: [gamma-gamma-coincidence, two-point-angular-correlation-ratio]
-tags: [a130, signature-splitting, strong-coupling, in-beam-spectroscopy, n75]
+tags: [a130, signature-splitting, strong-coupling, in-beam-spectroscopy, n73-systematics, n75]
 ---
 
 # Ding 等（2021）：`131Ba` 与 `133Ce` 的 νg7/2[404]7/2+ 旋称劈裂
@@ -46,6 +46,8 @@ Physical Review C 104, 064304 (2021)，DOI `10.1103/PhysRevC.104.064304`。本�
 ## Summary
 
 作者在 N=75 同中子异位素 `131Ba` 和 `133Ce` 中建立强耦合正宇称 band 2，并指认为 `νg7/2[404]7/2+`。两条带的 signature splitting 明显大于奇质子 Ta/Re 类比，模型分析表明劈裂不是单一 γ 形变刻度：近邻 `νs1/2[400]1/2+` 的 Coriolis 混合可在较小 γ 下产生 staggering，而较强非轴形变也会增强其幅度。
+
+同一论文还汇编 N=73 `129Ba`、`131Ce`、`133Nd` 的既有 `νg7/2[404]7/2+` 带数据作为组态系统学。该层是对旧实验的 contextual comparison，不是 Ding 2021 对三核开展的新测量，也不增加独立 `131Ce` 实验谱系。
 
 ## Experimental or Theoretical Setup
 
@@ -80,6 +82,7 @@ configuration-constrained PES、cranked shell model（CSM）和 quasiparticle-pl
 | D21-5 | QTR 用 γ=10° 描述 `133Ce`、γ=15° 描述 `131Ba` 的 S(I)，同时波函数含有近邻 `s1/2[400]1/2+` 小分量。 | model-result | direct | PDF pp.11-12, Figs.8-9 | false |
 | D21-6 | 衰减 Coriolis 耦合后，γ≤15° 的计算几乎不产生 staggering，而 γ>15° 仍可产生显著劈裂；作者据此认为低-j 混合和非轴性是两个竞争机制。 | model-result | direct | PDF p.12, Figs.8-9 | false |
 | D21-7 | PES 对 7/2+ 候选给出 `131Ba: β2=0.180, γ=9.1°`，`133Ce: β2=0.195, γ=-10.5°`；这些是模型极小值，不是直接实验形变。 | model-result | direct | PDF p.13, Table III | false |
+| D21-8 | 作者把 N=73 `129Ba`、`131Ce`、`133Nd` 的 `νg7/2[404]7/2+` 带作系统比较：首次 up-bending 前的 initial alignment 和 `J^(2)` 相近，且三带分别延伸到 `55/2+`、`51/2+`、`67/2+`，被解释为共同组态的 contextual support。 | author-interpretation | contextual | PDF p.9, Fig.6 and paragraph below | true |
 
 ## Nuclear Structure Information
 
@@ -88,6 +91,7 @@ configuration-constrained PES、cranked shell model（CSM）和 quasiparticle-pl
 - `131Ba` 7/2+ band 2 与 band 3 的 7/2+ 态仅差约 18 keV，存在组态混合；
 - `133Ce` 类似近简并出现在 13/2+ 态附近；
 - 作者估计这种局部近简并混合本身对整体 splitting 幅度贡献较小，但 QTR 中与 `s1/2` 轨道的全局 Coriolis 混合很关键。
+- N=73 `129Ba/131Ce/133Nd` 的高自旋 `[404]7/2+` 系统学来自引用文献的既有数据；本页只把它作为 configuration comparison，不把它计为新的独立实验。
 
 ## Authors' Interpretation
 
@@ -106,6 +110,7 @@ configuration-constrained PES、cranked shell model（CSM）和 quasiparticle-pl
 - `S(I)` 对 γ、Coriolis mixing、近邻轨道、配对和转动惯量均敏感；
 - QTR 的 γ=10°/15° 是最佳描述输入，不构成 γ-rigid 证据；
 - 两实验使用不同阵列和 `R_ac` 标定值，比较弱跃迁时需保留装置系统差异。
+- D21-8 的 N=73 比较依赖论文引用的旧能级和 alignment 数据；若用于精确 band crosswalk 或论文主张，仍需回到 `129Ba/131Ce/133Nd` 原始来源逐核核验。
 
 ## Extracted Pages
 
@@ -117,6 +122,34 @@ configuration-constrained PES、cranked shell model（CSM）和 quasiparticle-pl
 - Observables: [[signature-splitting]]
 - Methods: [[gamma-gamma-coincidence]], [[two-point-angular-correlation-ratio]]
 - Synthesis: [[signature-splitting-mechanisms]]
+
+## Knowledge Impact and Learning Decision
+
+- Existing Wiki understanding: 本页此前主要承载 N=75 `131Ba/133Ce` 新实验与 splitting 机制。
+- Effect of this on-touch check: revises the project relation, not the paper conclusion.
+- Reason: PDF p.9/Fig.6 还包含直接相关的 N=73 `129Ba/131Ce/133Nd` 组态系统学，但它是引用旧实验的 contextual evidence。
+- Persistence decision: add D21-8 and connect it to the `131Ce` project while preserving the independence limit.
+- Review state: page-level `human-reviewed` remains unchanged; D21-8 starts as `needs_review: true`.
+
+## Related Knowledge and Project Relations
+
+| Relation type | Target | Specific relation |
+|---|---|---|
+| supports | [[131ce-collective-mode-discrimination]] | N=73 `[404]7/2+` systematics strengthen a configuration-specific comparison for the positive-parity `131Ce` sequence, but do not supply new target-nucleus electromagnetic evidence. |
+
+## Human Review Triage
+
+### P0
+
+- None identified.
+
+### P1
+
+- `D21-8`, PDF p.9/Fig.6 — verify that the compiled `129Ba/131Ce/133Nd` alignment and spin-extension comparison is accurately bounded as contextual support from prior experiments. Risk if skipped: a useful isotone comparison could be miscounted as an independent Ding 2021 measurement or generalized to unrelated `h11/2` bands.
+
+### P2/P3
+
+- P2: the new project relation and N=73 tag. P3: date/navigation metadata.
 
 ## Personal Notes
 

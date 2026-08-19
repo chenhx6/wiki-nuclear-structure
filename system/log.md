@@ -1062,6 +1062,12 @@ updated: 2026-07-15
 - Replaced the updater's Microsoft Defender scan/fallback with fixed-path Huorong `HipsMain.exe -s "<absolute staging path>"`, a 12-hour process wait, nonzero/launch/timeout fail-closed handling and explicit `Y/y` confirmation of the Huorong GUI's completed/zero-risk result. The terminal confirmation prompt itself waits for user input without a 12-hour countdown.
 - Added post-confirmation whole-staging and per-skill SHA-256 checks before the existing `Move-Item` activation; rollback, cleanup and final verification remain unchanged. Updated `system/scripts/README.md`; no real update, Huorong scan, commit or push was performed.
 
+## [2026-08-17] weekly-self-test | `131Ce` N=73 isotone discrimination
+
+- Recovered Ding 2021's under-extracted N=73 `129Ba/131Ce/133Nd` `[404]7/2+` systematics and bounded it as contextual reuse of prior experiments rather than a new independent `131Ce` dataset.
+- Compared the configuration-distinct `127Xe/129Ba` `h11/2` wobbling candidates, including delta/polarization coverage, contamination and legacy-data dependence; they establish mechanism feasibility but do not supply target-nucleus evidence.
+- The `131Ce` hypothesis ranking is unchanged; the new source/project claims await focused human review, and no L4 research was started.
+
 ## [2026-08-18] tooling | Nature Skills update verified
 
 - User completed the double-click Nature Skills update after closing the process that held `nature-academic-search\mcp-server`.
@@ -1072,3 +1078,8 @@ updated: 2026-07-15
 
 - Fixed Windows PowerShell 5.1 handling of normal Git fetch stderr, removed the `Get-FileHash` module auto-loading dependency by using .NET SHA-256, and added a fail-closed diagnostic for locked Nature Skills directories.
 - The maintenance is limited to the updater and its usage records; no Nature Skills content, scientific Wiki content or protected BibTeX was changed.
+
+## [2026-08-19] workflow | weekly self-test WIP published to main
+
+- Preserved the original `955ddc9094ada187aa183b0c19427d3128cbbfac` WIP commit and connected it to `main` for traceability; the scientific review remains pending.
+- The merge touched only the weekly self-test knowledge/output/queue records and system handoff/log updates; protected `raw/zotero/wiki-inbox.bib` remained untouched and unstaged.

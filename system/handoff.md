@@ -8,29 +8,29 @@ updated: 2026-08-19
 ## Active handoff
 
 Current active task:
-Nature Skills updater maintenance and global installation verification are complete; the updater uses the Huorong human-confirmed custom-scan gate.
+Focused human review of the 2026-08-17 weekly self-test on configuration-specific N=73 isotone evidence for `131Ce`; the WIP is preserved in `main` history for traceability.
 
 Current branch / local commit:
-Current branch is `main`; the current task commit subject is `Maintain Nature Skills updater safety and compatibility` (exact hash belongs only in the task receipt).
+Current branch is `main`; the current task merge subject is `Merge weekly self-test 2026-08-17 into main` (exact hash belongs only in the task receipt).
 
 Last task status:
 
-The updater keeps the fixed Huorong `HipsMain.exe -s` scan, explicit `Y/y` confirmation, post-scan SHA-256 checks, rollback and final verification. This maintenance also handles normal Git fetch stderr in Windows PowerShell 5.1, hashes through .NET without module auto-loading, and reports locked Nature Skills directories without deleting them. The user completed a real Huorong scan with 642 files and 0 risks; source and global installation match commit `44defbcce0b8534f9a0a4734f56c40e4f703bbf4`, with 20 skills verified by `-CheckOnly`. PowerShell parsing, Wiki lint and `git diff --check` passed.
+One hard-threshold issue was investigated. Ding 2021 p.9/Fig.6 supplies an under-extracted N=73 `129Ba/131Ce/133Nd` `[404]7/2+` comparison; `127Xe/129Ba` provide configuration-distinct `h11/2` wobbling controls. Direct PDF renders and recorded hashes were checked, and the project ranking remains unchanged. The original WIP commit `955ddc9094ada187aa183b0c19427d3128cbbfac` is being published on `main`; this does not mean the scientific review is complete. The previously published Nature Skills updater and 20-skill installation verification remain intact.
 
 Unfinished items:
-No Nature Skills updater item remains. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
+Focused review is required for D21-8 and the two new project evidence rows. QMD refresh and scientific finalization remain deferred. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
 
 P0/P1 review focus:
-P0: none. P1: if a future update reports a lock, close Codex and the specific Nature Skills MCP/Python/uv process before retrying; never infer clean status from the HipsMain exit code.
+P0: none identified. P1: confirm that Ding's N=73 row is contextual reuse of prior experiments, that `[404]7/2+` and `h11/2` comparisons remain configuration-specific, and that neighbor wobbling labels are not transferred to `131Ce`.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not restore Defender, bypass the Huorong gate, infer safety from `HipsMain.exe` exit code `0`, or treat antivirus scanning as proof that Markdown, Python or JavaScript content has no malicious logic.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not count compiled N=73 systematics as a new independent Ding experiment, infer a unique gamma from signature splitting, or upgrade `131Ce` wobbling without target delta/polarization/absolute-strength evidence.
 
 Next prompt / continuation phrase:
-需要更新时双击 `system/scripts/update_nature_skills.cmd`；出现安全阻断时把完整终端结果交给 Codex 审核。
+`审核 2026-08-17 131Ce N=73 同中子素周测`
 
 Recent user decisions:
-The user requested the Huorong safety gate and then authorized committing and pushing the Nature Skills updater maintenance to `main`. Nature Skills update `44defbcce0b8534f9a0a4734f56c40e4f703bbf4` was completed after the active MCP/Python/uv lock was released; the source and global installation match, with 20 skills verified by `-CheckOnly`.
+The user directed that this WIP be pushed to `main` for traceability and that future ordinary commits target `main` unless a concrete technical constraint prevents it; do not create task branches automatically. Nature Skills update `44defbcce0b8534f9a0a4734f56c40e4f703bbf4` remains verified, and the protected BibTeX stays read-only and unstaged.
 
 ## Previous active handoff (superseded 2026-08-07)
 

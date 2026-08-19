@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-08-11
+updated: 2026-08-17
 ---
 
 # Pending WIP queue
@@ -10,7 +10,15 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-No pending ingest or review WIP remains. The reviewed Band-5 final and 23-paper corpus final were published together before this governance branch was created.
+### Weekly self-test: `131Ce` N=73 isotone discrimination
+- status: scientific update complete; awaiting focused human review
+- branch: `codex/weekly-self-test-20260817-131ce-n73-isotones`
+- commit: current branch HEAD `WIP review: weekly self-test 2026-08-17 for user review`
+- files: Ding 2021 source; `131Ce` project/nucleus; weekly report; handoff/log/queue
+- review needed: D21-8 and the two new project evidence rows; verify independence counting and configuration-specific transfer boundaries
+- overview/QMD: overview/index unchanged; QMD deferred until review finalization
+- next action: review the report P1 items, then amend the same WIP to `Finalize weekly self-test 2026-08-17: 131Ce N=73 isotone discrimination`; push only with explicit user authorization
+- risks: protected `raw/zotero/wiki-inbox.bib` remains unstaged; no neighbor wobbling label may be transferred to `131Ce`
 
 ## Legacy completed entries
 
