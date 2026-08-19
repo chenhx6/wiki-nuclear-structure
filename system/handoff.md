@@ -8,29 +8,29 @@ updated: 2026-08-19
 ## Active handoff
 
 Current active task:
-Focused human review of the 2026-08-17 weekly self-test on configuration-specific N=73 isotone evidence for `131Ce`; the WIP is preserved in `main` history for traceability.
+Focused human review of D21-8 and the two N=73 project evidence rows after the 2026-08-19 locator/source-lineage audit.
 
 Current branch / local commit:
-Current branch is `main`; the current task merge subject is `Merge weekly self-test 2026-08-17 into main` (exact hash belongs only in the task receipt).
+Current branch is `main`; current main HEAD subject is `Audit 131Ce N=73 evidence lineage` (exact hash belongs only in the task receipt).
 
 Last task status:
 
-One hard-threshold issue was investigated. Ding 2021 p.9/Fig.6 supplies an under-extracted N=73 `129Ba/131Ce/133Nd` `[404]7/2+` comparison; `127Xe/129Ba` provide configuration-distinct `h11/2` wobbling controls. Direct PDF renders and recorded hashes were checked, and the project ranking remains unchanged. The original WIP commit `955ddc9094ada187aa183b0c19427d3128cbbfac` is being published on `main`; this does not mean the scientific review is complete. The previously published Nature Skills updater and 20-skill installation verification remain intact.
+The pending weekly scope was rechecked against direct PDF renders. D21-8 was scientifically accurate but its locator omitted Figs.4-5 and the refs.46-48 experimental lineages. The source/project locators and workflow state were corrected; `127Xe/129Ba` remain configuration-distinct controls and the `131Ce` ranking is unchanged. No new L3/L4 scope or raw evidence was opened.
 
 Unfinished items:
-Focused review is required for D21-8 and the two new project evidence rows. QMD refresh and scientific finalization remain deferred. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
+Focused review remains required for D21-8 and the two project evidence rows. Byrne 1992, Palacz 1991 and Bazzacco 1998 have not been read; obtain them only if the exact band crosswalk becomes decision-relevant. QMD refresh and scientific finalization remain deferred. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
 
 P0/P1 review focus:
-P0: none identified. P1: confirm that Ding's N=73 row is contextual reuse of prior experiments, that `[404]7/2+` and `h11/2` comparisons remain configuration-specific, and that neighbor wobbling labels are not transferred to `131Ce`.
+P0: none identified. P1: confirm the expanded Figs.4-6 locator and refs.46-48 lineage, that `[404]7/2+` and `h11/2` comparisons remain configuration-specific, and that neighbor wobbling labels are not transferred to `131Ce`.
 
 Risks:
-Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not count compiled N=73 systematics as a new independent Ding experiment, infer a unique gamma from signature splitting, or upgrade `131Ce` wobbling without target delta/polarization/absolute-strength evidence.
+Keep `raw/zotero/wiki-inbox.bib` protected and unstaged. Do not treat Ding's citation crosswalk as full verification of refs.46-48, count compiled N=73 systematics as a new independent experiment, infer a unique gamma from signature splitting, or upgrade `131Ce` wobbling without target delta/polarization/absolute-strength evidence.
 
 Next prompt / continuation phrase:
-`审核 2026-08-17 131Ce N=73 同中子素周测`
+`审核 2026-08-19 131Ce D21-8 locator 与来源谱系`
 
 Recent user decisions:
-The user directed that this WIP be pushed to `main` for traceability and that future ordinary commits target `main` unless a concrete technical constraint prevents it; do not create task branches automatically. Nature Skills update `44defbcce0b8534f9a0a4734f56c40e4f703bbf4` remains verified, and the protected BibTeX stays read-only and unstaged.
+Normal commits target `main` and may be pushed after the repository publication checks; do not create a task branch without a concrete technical constraint. The protected BibTeX stays read-only and unstaged, and no host automation/global/sandbox state belongs to the Wiki task.
 
 ## Previous active handoff (superseded 2026-08-07)
 

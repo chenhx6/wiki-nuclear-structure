@@ -1083,3 +1083,9 @@ updated: 2026-07-15
 
 - Preserved the original `955ddc9094ada187aa183b0c19427d3128cbbfac` WIP commit and connected it to `main` for traceability; the scientific review remains pending.
 - The merge touched only the weekly self-test knowledge/output/queue records and system handoff/log updates; protected `raw/zotero/wiki-inbox.bib` remained untouched and unstaged.
+
+## [2026-08-19] weekly-self-test | `131Ce` D21-8 locator and lineage audit
+
+- Rechecked Ding 2021, `127Xe` 2020 and `129Ba` 2024 by direct PDF render; no scientific P0 or ranking change was found.
+- Expanded D21-8 to Figs.4-6 and made the `129Ba/131Ce/133Nd` refs.46/47/48 experimental lineages explicit while retaining the original-full-text and evidence-independence limits.
+- Reconciled the active queue/report with the already-published `main` history; focused scientific review and QMD refresh remain pending.

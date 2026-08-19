@@ -1,7 +1,7 @@
 ---
 type: system-wip-queue
 graph-excluded: true
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # Pending WIP queue
@@ -11,13 +11,13 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 ## Active entries
 
 ### Weekly self-test: `131Ce` N=73 isotone discrimination
-- status: scientific update complete; awaiting focused human review
-- branch: `codex/weekly-self-test-20260817-131ce-n73-isotones`
-- commit: current branch HEAD `WIP review: weekly self-test 2026-08-17 for user review`
-- files: Ding 2021 source; `131Ce` project/nucleus; weekly report; handoff/log/queue
-- review needed: D21-8 and the two new project evidence rows; verify independence counting and configuration-specific transfer boundaries
+- status: published to `main` for traceability; focused scientific review remains pending
+- branch: `main`
+- commit: current main HEAD `Audit 131Ce N=73 evidence lineage`
+- files: Ding 2021 source; `131Ce` project/nucleus; 2026-08-17 and 2026-08-19 weekly reports; handoff/log/queue
+- review needed: D21-8 and the two project evidence rows; verify independence counting, refs.46-48 source lineage and configuration-specific transfer boundaries
 - overview/QMD: overview/index unchanged; QMD deferred until review finalization
-- next action: review the report P1 items, then amend the same WIP to `Finalize weekly self-test 2026-08-17: 131Ce N=73 isotone discrimination`; push only with explicit user authorization
+- next action: review the report P1 items; if manuscript-level use is planned, read Byrne 1992, Palacz 1991 and Bazzacco 1998 before admitting the exact band crosswalk
 - risks: protected `raw/zotero/wiki-inbox.bib` remains unstaged; no neighbor wobbling label may be transferred to `131Ce`
 
 ## Legacy completed entries

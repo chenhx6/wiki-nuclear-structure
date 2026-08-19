@@ -3,7 +3,7 @@ type: project
 title: 131Ce/133Ce 集体模式判别
 aliases: [131Ce collective-mode discrimination]
 created: 2026-07-27
-updated: 2026-08-17
+updated: 2026-08-19
 status: active
 review_status: unreviewed
 project_stage: l4-milestone-awaiting-review
@@ -19,6 +19,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4, n73-isotones]
 - 当前排序不变：`131Ce` Bands 1–7 仍以 signature/configuration coupling 为首选，γ-soft core response 是模型辅助背景，wobbling/chirality 未获目标核电磁闭合链支持。
 - 2026-08-17 同中子素核验补入两个配置特异控制：Ding 2021 的 N=73 `129Ba/131Ce/133Nd` `[404]7/2+` 系统学支持正宇称组态连续性；`127Xe/129Ba` 的 `h11/2` wobbling 候选只证明邻核机制可行。
 - 关键独立性边界：Ding 的 N=73 行是旧实验汇编；`129Ba` 是 legacy-data reanalysis 且沿用 `127Xe` 判据，均不能计为新的 `131Ce` 实验。
+- 2026-08-19 locator audit 将 Ding 的 N=73 证据定位到 Figs.4-6，并确认 `129Ba/131Ce/133Nd` 数据分别来自 refs.46/47/48；三篇原始全文仍未进入本轮核验。
 - 下一决定性步骤仍是 `131Ce` 连接跃迁的 measured `δ`/偏振、多带寿命和 absolute strengths。
 
 ## Research Question
@@ -54,7 +55,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4, n73-isotones]
 | `133Ce` 两组候选伙伴带的同宇称 links、S(I)、relative `B(M1)/B(E2)` 与 RMF+TPRM | chirality 和不同三轴极小/shape coexistence 的作者解释 | 无 lifetime；TPRM 有 moment-of-inertia 调整和 Coriolis attenuation；模型未完全再现 staggering | 同一数据集的实验+模型链，不是独立多源确认；[[ayangeakaa-2013-evidence-multiple-chiral-doublet-bands-133ce]] A13-3–13 |
 | `133Ce` 2016 完整中高自旋谱学地图 | 多组态竞争、显著三轴模型背景、不同轴/倾斜轴转动 | 旧 Q5/Q7 近简并 signature-partner 解释被新 links 推翻；弱带头和模型匹配非唯一 | 结构更新价值高，但部分复用 2013 数据；[[ayangeakaa-2016-133ce-in-beam]] A16-1–6 |
 | `131Ba/133Ce` N=75 signature splitting 的 PES/CSM/QTR | 非轴形变与低-j Coriolis mixing 可共同产生 splitting | S(I) 不是 γ 的单值测量；模型 γ 约定与 attenuation 依赖 | 对机制有直接比较价值，但对 `131Ce` 仅同位素/邻核迁移；[[ding-2021-131ba-133ce-signature-splitting]] D21-1–7 |
-| N=73 `129Ba/131Ce/133Nd` 的 `νg7/2[404]7/2+` 系统学 | 正宇称序列的 similar initial alignment/`J^(2)` 与高自旋延伸支持 configuration continuity | 该比较不测得 `131Ce` orbital content，也不把 splitting 反演为唯一 γ；三核原始 band crosswalk 仍需逐来源核验 | Ding 2021 汇编旧实验，属于 target-relevant contextual evidence，不增加独立 `131Ce` 数据集；[[ding-2021-131ba-133ce-signature-splitting]] D21-8, PDF p.9/Fig.6 |
+| N=73 `129Ba/131Ce/133Nd` 的 `νg7/2[404]7/2+` 系统学 | 正宇称序列的 similar initial alignment/`J^(2)` 与高自旋延伸支持 configuration continuity | 该比较不测得 `131Ce` orbital content，也不把 splitting 反演为唯一 γ；三核原始 band crosswalk 仍需逐来源核验 | Ding 2021 汇编旧实验，属于 target-relevant contextual evidence，不增加独立 `131Ce` 数据集；[[ding-2021-131ba-133ce-signature-splitting]] D21-8, PDF pp.5-6/Figs.4-5, p.9/Fig.6；三核分别归于 refs.46/47/48 |
 | N=73 `127Xe/129Ba` 的 `νh11/2` wobbling 候选 | 证明同中子素链中 wobbling 机制可行，并给出 E2-dominant link 应满足的必要判据 | `127Xe` 二声子链有异常 decay topology，651/652-keV 区域受污染；`129Ba` 只有 365-keV link 的 A22/A44/偏振闭合较强，其余 links 缺 A44/完整偏振且作者要求新测量 | 两核实验数据不同，但 `129Ba` 是 legacy-data reanalysis、沿用 `127Xe` 指纹和相近作者解释谱系；只能作机制控制，不能替代 `131Ce` target links；[[chakraborty-2020-multiphonon-longitudinal-wobbling-127xe]] CH20-2–7；[[chakraborty-2024-possibility-wobbling-129ba]] CH24-2–6 |
 | `131Xe` wobbling vs unfavoured signature partner 反例 | 小 δ/M1-dominant links 可排除具体 wobbling assignment；建立电磁优先判据 | 不能证明整个核区无 wobbling；弱 transition δ 有系统误差 | 邻核方法学反证；[[chakraborty-2023-131xe-wobbling-origin]]、[[wobbling-vs-signature-partner]] |
 | γ-soft IBFM 对若干 odd-A 非 yrast bands 的替代解释 | γ-soft particle-core coupling 不需预设 wobbling phonon即可生成低能带 | 模型参数、band matching 与部分异常 δ 敏感；没有新实验 | 理论替代机制，不能单独裁决目标核；[[nomura-2022-questioning-wobbling-ibfm]] |
@@ -66,7 +67,7 @@ tags: [l3, a130, collective-modes, evidence-map, candidate-l4, n73-isotones]
 3. `131Ce` thesis 的 configuration map 与 `B(M1)/B(E2)` comparison 共享模型输入，不能当作两条完全独立证据。
 4. `131Xe/131Ba/133Ce` 同量异位素/同位素比较只检验机制可行性；它不能替代目标核的电磁 observable。
 5. 模型给出的 γ 值使用不同参数化、轴约定和可调量，不能直接平均为“真实 γ”。
-6. Ding 2021 的 N=73 `129Ba/131Ce/133Nd` 行直接涉及目标核，但来自旧实验汇编；证据内容有用，独立实验计数不增加。
+6. Ding 2021 的 N=73 `129Ba/131Ce/133Nd` 行直接涉及目标核，但来自 refs.46/47/48 的旧实验汇编；证据内容有用，独立实验计数不增加。当前只核对 Ding 的引用归属，不等于三篇原始论文已完成 claim-level verification。
 7. `127Xe` 与 `129Ba` 是不同 N=73 数据集，但 2024 `129Ba` 工作复用旧数据并显式借用 `127Xe` 的 fingerprint/QTR comparison；实验谱系与解释谱系必须分开计数。
 
 ### 可区分预测矩阵
