@@ -8,17 +8,17 @@ updated: 2026-08-19
 ## Active handoff
 
 Current active task:
-Focused human review of D21-8 and the two N=73 project evidence rows after the 2026-08-19 locator/source-lineage audit.
+Global weekly-learning scheduler repair is complete; focused human review of D21-8 and the two N=73 project evidence rows remains pending.
 
 Current branch / local commit:
 Current branch is `main`; current main HEAD subject is `Audit 131Ce N=73 evidence lineage` (exact hash belongs only in the task receipt).
 
 Last task status:
 
-The pending weekly scope was rechecked against direct PDF renders. D21-8 was scientifically accurate but its locator omitted Figs.4-5 and the refs.46-48 experimental lineages. The source/project locators and workflow state were corrected; `127Xe/129Ba` remain configuration-distinct controls and the `131Ce` ranking is unchanged. No new L3/L4 scope or raw evidence was opened.
+The weekly workflow now separates `weekly-learning`, `continuation-audit` and `maintenance`, selects a global novelty slot from recent repository-local coverage history, applies source/nucleus cooldowns, and records a Selection audit. The 2026-08-19 report is classified as continuation-only; no scientific ranking or raw evidence changed.
 
 Unfinished items:
-Focused review remains required for D21-8 and the two project evidence rows. Byrne 1992, Palacz 1991 and Bazzacco 1998 have not been read; obtain them only if the exact band crosswalk becomes decision-relevant. QMD refresh and scientific finalization remain deferred. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
+Focused review remains required for D21-8 and the two project evidence rows. Byrne 1992, Palacz 1991 and Bazzacco 1998 have not been read; obtain them only if the exact band crosswalk becomes decision-relevant. QMD refresh and scientific finalization remain deferred. The next true weekly-learning novelty slot must leave the `131Ce`/Ding/`127Xe`/`129Ba` source cluster unless a hard exception is recorded. Do not modify or stage the protected `raw/zotero/wiki-inbox.bib` change.
 
 P0/P1 review focus:
 P0: none identified. P1: confirm the expanded Figs.4-6 locator and refs.46-48 lineage, that `[404]7/2+` and `h11/2` comparisons remain configuration-specific, and that neighbor wobbling labels are not transferred to `131Ce`.

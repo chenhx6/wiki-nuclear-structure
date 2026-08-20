@@ -43,10 +43,13 @@ python -m unittest discover -s system/tests -p "test_*.py" -v
 - [ ] 本次规则修改已同步到 `AGENTS.md`、`check.md` 和相应工作流。
 - [ ] L0-L4 完整定义只存在于 `system/workflows/autonomous-research.md`；AGENTS/query/reflect/ingest/Skill 仅保留短路由，没有复制漂移或堆积第二套规则。
 - [ ] ordinary Q&A 未误触发写入；授权 ingest/reflect/project/synthesis 默认运行 L2；高价值问题进入 L3 时有明确 scope/milestone；L4 已形成 candidate、safe suspend 并由用户确认数据后手动启动。
-- [ ] 每周自测每次最多主动研究两个满足硬重要性门槛的问题；文献总数不设固定上限，但批次有限、去重、直接相关并在证据饱和/信息增益下降/验证余量不足时收敛；其它重要问题写入 `Deferred important issues`，不为了填满名额而升级。
+- [ ] 每周自测先分为 `weekly-learning`、`continuation-audit` 或 `maintenance`；只有 `weekly-learning` 计入轮次，定位符/状态/重复核验没有新的决策信息时不得冒充新知周测。
+- [ ] `weekly-learning` 每次最多主动研究两个满足硬重要性门槛的问题，并在具体取证前完成 Wiki 内全局候选筛选：保留温故槽和新知槽；只要有合格候选，新知槽来自非重叠覆盖区域；无合格候选时不为填槽升级低价值问题。
+- [ ] 选题从最近八次仓库内 `weekly-learning` 报告重建覆盖债务；同一核素/project 不连续占据新知槽，同一核心来源冷却两个学习周期；hard P0、新独立原始证据、实质冲突或用户明确要求的例外已记录，并只在同等级候选间使用可复现随机 tie-break。
+- [ ] 每份实质周测报告有 `Selection audit`，记录运行类型、是否计入轮次、候选覆盖类别、两个槽位、核心来源指纹/重叠、冷却或 deferred 原因、新增知识和 belief revision；其它重要问题写入 `Deferred important issues`。
 - [ ] 核素问题在适用时比较同位素和同中子素；L3 只使用合法、可核验的 Nature-first 获取路径和 Agent 管理的 `raw/papers/gpt/**`、`raw/zotero/gpt.bib`；关键 SI 才下载，`wiki-inbox.bib` 永不修改/暂存。
 - [ ] L4 只生成 `outputs/l4/<issue>-<date>/report.md` readiness（`ready`/`partial`/`not-ready`）；`partial`/`not-ready` 不停用周测，不假定用户已有实验数据。
-- [ ] 有实质变化的每周自测生成 `outputs/self-tests/` P0/P1 报告和本地 WIP；用户审核前未 push，无实质变化时未制造空 commit。
+- [ ] pending review 只阻止重叠写入，不阻止全局只读选题或无重叠的新知任务；有实质变化的周测生成 `outputs/self-tests/` P0/P1 报告和相应 WIP/final 状态，push 仅按当前任务明确授权并在 H3/发布检查通过后执行，无实质变化时未制造空 commit。
 - [ ] Wiki 会话实际加载项目级 `wiki_l3 + approval_policy=never`，机器级 `requirements.toml` 不存在；普通项目仍使用全局 `:workspace + on-request`。Wiki 外部写入被直接拒绝且没有提权入口；宿主自身日志与 sandbox 状态已作为运行数据例外单独识别。
 - [ ] Wiki 外仅执行已确认零外部写入的程序；工作目录、TEMP/TMP、缓存、日志、配置和输出均约束到 Wiki，未调用安装器、系统管理工具或会修改外部状态的 GUI 程序。
 - [ ] Wiki 任务未调用 Computer Use；浏览器下载要么显式输出到 Wiki，要么交接用户，未触发默认外部 Downloads。

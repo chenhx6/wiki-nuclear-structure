@@ -10,11 +10,12 @@ This page tracks pending local WIP/review tasks that still need follow-up work. 
 
 ## Active entries
 
-### Weekly self-test: `131Ce` N=73 isotone discrimination
+### Review pending: `131Ce` N=73 isotone discrimination
 - status: published to `main` for traceability; focused scientific review remains pending
 - branch: `main`
 - commit: current main HEAD `Audit 131Ce N=73 evidence lineage`
-- files: Ding 2021 source; `131Ce` project/nucleus; 2026-08-17 and 2026-08-19 weekly reports; handoff/log/queue
+- files: Ding 2021 source; `131Ce` project/nucleus; 2026-08-17 weekly-learning report; 2026-08-19 continuation-audit report; handoff/log/queue
+- scheduler note: the 2026-08-19 continuation audit does not count as a learning cycle; the next true novelty slot must use a non-overlapping coverage area unless a hard exception is recorded
 - review needed: D21-8 and the two project evidence rows; verify independence counting, refs.46-48 source lineage and configuration-specific transfer boundaries
 - overview/QMD: overview/index unchanged; QMD deferred until review finalization
 - next action: review the report P1 items; if manuscript-level use is planned, read Byrne 1992, Palacz 1991 and Bazzacco 1998 before admitting the exact band crosswalk

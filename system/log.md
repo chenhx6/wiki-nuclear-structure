@@ -1089,3 +1089,8 @@ updated: 2026-07-15
 - Rechecked Ding 2021, `127Xe` 2020 and `129Ba` 2024 by direct PDF render; no scientific P0 or ranking change was found.
 - Expanded D21-8 to Figs.4-6 and made the `129Ba/131Ce/133Nd` refs.46/47/48 experimental lineages explicit while retaining the original-full-text and evidence-independence limits.
 - Reconciled the active queue/report with the already-published `main` history; focused scientific review and QMD refresh remain pending.
+
+## [2026-08-20] governance | global weekly-learning scheduler repair
+
+- Separated `weekly-learning`, `continuation-audit` and `maintenance`; added a global candidate pool, continuity/novelty slots, repository-local eight-cycle coverage history, two-cycle source cooldown and ISO-week tie-break rules.
+- Reclassified the 2026-08-19 D21-8 run as continuation-only and added Selection audits to the four historical self-test reports; the next novelty slot must leave the current `131Ce`/Ding/`127Xe`/`129Ba` cluster unless a hard exception is recorded.

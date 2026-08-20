@@ -79,7 +79,7 @@ Codex 可以执行与当前任务直接相关、低风险、可解释、可回�
 
 ## Research autonomy / L0-L4
 
-L0-L4、P0/P1 状态、每周自测和人类保留关口由 `system/workflows/autonomous-research.md` 统一维护。ordinary Q&A 仍只读；已授权的 ingest/reflect/project/synthesis 默认运行 L2，高价值问题可按该 workflow 自然进入 L3。每周自测每次最多主动研究两个满足硬重要性门槛的问题，文献总数不设固定上限但按去重、直接相关和证据饱和收敛；其它重要问题写入 deferred 区块，核素问题适用时比较同位素/同中子素。L4 必须形成 candidate、safe suspend 和 readiness 报告，并由用户确认数据后手动启动；`partial`/`not-ready` 不停用周测。不得在本文件或其它 workflow 复制第二套完整定义。
+L0-L4、P0/P1 状态、每周自测和人类保留关口由 `system/workflows/autonomous-research.md` 统一维护。ordinary Q&A 仍只读；已授权的 ingest/reflect/project/synthesis 默认运行 L2，高价值问题可按该 workflow 自然进入 L3。每周自测分为 `weekly-learning`、`continuation-audit` 和 `maintenance`；前者最多主动研究两个满足硬重要性门槛的问题，并通过全局覆盖、近期来源冷却和 Selection audit 保留新知槽，后两者不冒充新知轮次。文献总数不设固定上限但按去重、直接相关和证据饱和收敛；其它重要问题写入 deferred 区块，核素问题适用时比较同位素/同中子素。L4 必须形成 candidate、safe suspend 和 readiness 报告，并由用户确认数据后手动启动；`partial`/`not-ready` 不停用周测。不得在本文件或其它 workflow 复制第二套完整定义。
 
 ## Windows PowerShell Git PATH fallback
 

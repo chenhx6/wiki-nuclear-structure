@@ -1,14 +1,23 @@
 ---
 type: output
-title: "Weekly self-test: 131Ce D21-8 locator and lineage audit"
+title: "Continuation audit: 131Ce D21-8 locator and lineage"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-20
 status: awaiting-review
 review_status: unreviewed
-tags: [weekly-self-test, 131ce, n73, evidence-independence, locator-audit]
+tags: [continuation-audit, 131ce, n73, evidence-independence, locator-audit]
 ---
 
-# Weekly self-test: `131Ce` D21-8 locator and lineage audit
+# Continuation audit: `131Ce` D21-8 locator and lineage
+
+## Selection audit
+
+- Run type: `continuation-audit`; counted as a `weekly-learning` cycle: no.
+- Continuity slot: used to reconcile the already-published weekly WIP and complete the D21-8 locator/source-lineage audit; this was a review continuation, not a new scientific question.
+- Novelty slot: not used. The run opened no new hypothesis, downloaded no new evidence and produced no new decision-relevant observable.
+- Candidate/deferred coverage: the global novelty pool was not evaluated under the old scheduler; the next true learning cycle must exclude `131Ce`, Ding 2021, `127Xe` 2020 and `129Ba` 2024 unless a hard exception is recorded.
+- Core sources/overlap: Ding 2021, `127Xe` 2020 and `129Ba` 2024; complete overlap with the 2026-08-17 lineage audit and therefore subject to the two-cycle source cooldown.
+- New knowledge/belief revision: improved locators and lineage accounting, but did not change the `131Ce` ranking or the wobbling boundary.
 
 ## Scope
 

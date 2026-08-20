@@ -2,13 +2,22 @@
 type: output
 title: "Weekly self-test: 131Ce N=73 isotone discrimination"
 created: 2026-08-17
-updated: 2026-08-19
+updated: 2026-08-20
 status: awaiting-review
 review_status: unreviewed
 tags: [weekly-self-test, 131ce, n73, signature, wobbling, evidence-independence]
 ---
 
 # Weekly self-test: `131Ce` N=73 isotone discrimination
+
+## Selection audit
+
+- Run type: `weekly-learning`; counted as a learning cycle: yes.
+- Continuity slot: none; no earlier hard P1 required to be resumed before selection.
+- Novelty slot: selected the N=73 isotone comparison after the hard-importance gate because it could distinguish configuration/signature coupling from wobbling; the candidate was still inside the `131Ce` coverage area because the pre-rotation policy had no novelty slot or cooldown ledger.
+- Candidate/deferred coverage: neighboring `127Xe/129Ba` controls were used as bounded comparison evidence, while target electromagnetic matrix and original refs.46–48 were deferred.
+- Core sources/overlap: Ding 2021, `127Xe` 2020 and `129Ba` 2024; the report explicitly separated compiled lineage from independent experiments.
+- New knowledge/belief revision: N=73 systematics were recovered as contextual lineage, but the `131Ce` ranking did not change and neighbor wobbling labels were not transferred.
 
 ## Scope
 

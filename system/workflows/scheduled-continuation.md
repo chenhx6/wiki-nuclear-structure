@@ -108,15 +108,48 @@ through the Codex automation function.
 ## Wiki weekly self-test and bounded research expansion
 
 The weekly automation checks evidence quality, internal consistency, P0/P1
-risks and human-review boundaries. It may actively research at most two
-important problems per run. The total number of papers is not capped, but each
-download must belong to a deduplicated, finite, directly relevant batch; stop
-when evidence saturates, information gain falls, time/validation margin is
-low, or user access is required. Do not widen the scientific scope merely to
-fill the two slots. Other important findings go in the report's
-`Deferred important issues` section with pages, evidence gaps, a suggested
-L3/L4 route and whether the next run or the user should continue them. Only a
-task that has actually started and changed files enters WIP.
+risks and human-review boundaries. Classify each run before opening detailed
+evidence as `weekly-learning`, `continuation-audit`, or `maintenance`. Only
+`weekly-learning` counts toward the learning cadence; a locator repair, status
+reconciliation or repeated verification is a `continuation-audit` unless it
+produces new decision-relevant information.
+
+For `weekly-learning`, build a Wiki-local read-only candidate pool before
+selecting papers or writing pages. Candidates must pass the hard importance
+gate and span coverage dimensions such as nucleus/mass region, physical
+mechanism, method/observable, evidence type and human-review risk. Use two
+slots: a continuity slot for a hard P0/P1, new independent evidence or a
+decision-changing unresolved issue, and a novelty slot that must use a
+non-overlapping coverage area whenever any eligible candidate exists. If no
+eligible novelty candidate exists, emit a verified receipt instead of filling
+the slot with low-value work. Pending review does not suppress read-only
+global scouting or non-overlapping novelty work; it only blocks overlapping
+writes.
+
+Reconstruct coverage from the latest eight repository-local
+`weekly-learning` reports, never from Codex host memory/global/sandbox state.
+Do not let the same nucleus/project occupy the novelty slot in consecutive
+learning cycles, and cool the same core-source fingerprint for two learning
+cycles. Hard P0, new independent primary evidence, substantive source
+conflict or an explicit user request may override the cooldown only when the
+report records the exception. Rank eligible candidates by scientific impact,
+coverage debt, time since last touch, independence gap and expected
+information gain; use an ISO-week-seeded random tie-break only among equivalent
+candidates. During the migration cycle, the next novelty slot excludes
+`131Ce`, Ding 2021, `127Xe` 2020 and `129Ba` 2024 unless an exception is
+recorded.
+
+It may actively research at most two important problems per run. The total
+number of papers is not capped, but each download must belong to a deduplicated,
+finite, directly relevant batch; stop when evidence saturates, information
+gain falls, time/validation margin is low, or user access is required. Other
+important findings go in the report's `Deferred important issues` section with
+pages, evidence gaps, a suggested L3/L4 route and whether the next run or the
+user should continue them. Every substantive report contains a `Selection
+audit` listing the run type, cadence status, candidates/coverage, slot
+decisions, source fingerprints and overlap, cooldown exceptions, deferred
+reasons, new knowledge and belief revision. Only a task that has actually
+started and changed files enters WIP.
 
 For a nuclear-structure question, compare at least one applicable isotope and
 one isotone when reliable evidence exists; explain when a comparison is not
@@ -135,8 +168,10 @@ and authoritative public data such as NNDC; report the sources, reproducibility,
 missing observables/locators and `ready`, `partial` or `not-ready` in
 `outputs/l4/<issue>-<date>/report.md`. `partial` or `not-ready` ends only that
 issue's expansion; it does not stop the weekly run or disable the automation.
-The task never pushes automatically. With no substantive change it emits only
-a verified run receipt and creates no empty commit.
+The task never force-pushes. It may perform a normal push only when the current
+task explicitly authorizes publication and H3/repository checks pass. With no
+substantive change it emits only a verified run receipt and creates no empty
+commit.
 
 ## Safe suspend
 

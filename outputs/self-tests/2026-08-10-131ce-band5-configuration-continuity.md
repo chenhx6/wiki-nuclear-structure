@@ -2,13 +2,21 @@
 type: output
 title: "Weekly self-test: 131Ce Band 5 configuration continuity"
 created: 2026-08-10
-updated: 2026-08-11
+updated: 2026-08-20
 status: completed
 review_status: human-reviewed
 tags: [weekly-self-test, 131ce, band5, configuration, signature]
 ---
 
 # Weekly self-test: `131Ce` Band 5 configuration continuity
+
+## Selection audit
+
+- Run type: `weekly-learning`; counted as a learning cycle: yes (retrospective classification).
+- Continuity slot: used for a hard source-consistency P1 because the Band 5 mapping could affect configuration continuity and the user later withdrew the proposed reconstruction.
+- Novelty slot: not used under the pre-rotation policy; no global candidate pool or source-cooldown ledger was recorded at that time.
+- Core sources/overlap: Alwaleedi thesis Tables 5.2–5.3 and the existing `131Ce` pages; same-project overlap was explicit and no independent source was claimed.
+- New knowledge/belief revision: retained the printed `e⊗AE→e⊗AEFG` / `f⊗AE→e⊗AEFG` text and withdrew the unsupported relabeling.
 
 ## Scope
 

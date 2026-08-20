@@ -2,13 +2,21 @@
 type: output
 title: "Weekly self-test: 131Ce lifetime and gamma-soft evidence boundary"
 created: 2026-08-04
-updated: 2026-08-04
+updated: 2026-08-20
 status: reviewed
 review_status: human-reviewed
 tags: [weekly-self-test, 131ce, lifetime, gamma-softness, evidence-boundary]
 ---
 
 # Weekly self-test: `131Ce` lifetime and γ-soft evidence boundary
+
+## Selection audit
+
+- Run type: `weekly-learning`; counted as a learning cycle: yes (retrospective classification).
+- Continuity slot: used for the unresolved `131Ce` lifetime/collective-mode question because the finite `Q_t` trend could change the strength of the γ-soft interpretation.
+- Novelty slot: not used under the pre-rotation policy; no global candidate pool or source-cooldown ledger was recorded at that time.
+- Core sources/overlap: Singh 2016, the existing `131Ce` project and its L4 package; high overlap with the then-active `131Ce` scope.
+- New knowledge/belief revision: separated measured lifetime/`Q_t` evidence from author-level shape language and the Wiki reanalysis; the hypothesis ranking remained bounded.
 
 ## Scope
 
