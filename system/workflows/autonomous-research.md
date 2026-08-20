@@ -189,7 +189,7 @@ L4 只生成 readiness audit，不假定用户已有实验数据。检查 Wiki �
 
 WIP 创建或 amend 成功后，即使不准备 push，也必须按 `check.md` H3 完成 post-commit reconciliation：用实际 branch + subject（subject 取自 HEAD）核对报告、Active handoff 和 WIP queue，把提交前的 `planned` / `expected checkpoint` 未来时态改为实际本地 WIP 状态；需要修正时 amend 同一个 WIP 一次并重跑 H3。WIP 自身不得在其包含的文件中记录自己的精确 hash；最终 hash 只在任务回执中报告。
 
-用户审核完成后，落实意见、隔离 hard P0、刷新 QMD 和检查，将 WIP amend 为 `Finalize weekly self-test YYYY-MM-DD: <topic>`；远端无漂移时 fast-forward main 并 push。未审核、存在 hard P0、权限异常或正式结论越级时不得 push。
+用户审核完成后，落实意见、隔离 hard P0、刷新 QMD 和检查，将 WIP amend 为 `Finalize weekly self-test YYYY-MM-DD: <topic>`；远端无漂移时 fast-forward main 并 push。未审核或存在 hard P0 时不得把内容标为 final、不得宣称科学定案或越过 human-review；只有当前任务明确授权且 H3/发布检查通过时，才可将明确标注为 awaiting-review 的 WIP/continuation 结果正常非 force push。
 
 ## 共同停止条件
 
